@@ -28,7 +28,7 @@ func (c *MessageCore) MessageGetLastTwoPinnedMessageId(in *message.TLMessageGetL
 		dialogId := mtproto.MakeDialogId(in.UserId, in.PeerType, in.PeerId)
 		idList, _ = c.svcCtx.Dao.MessagesDAO.SelectLastTwoPinnedList(c.ctx, in.UserId, dialogId.A, dialogId.B)
 	case mtproto.PEER_CHANNEL:
-		logx.Errorf("- method not impl.")
+		logx.Errorf("message.getLastTwoPinnedMessageId - method not impl.")
 	}
 
 	return &message.Vector_Int{

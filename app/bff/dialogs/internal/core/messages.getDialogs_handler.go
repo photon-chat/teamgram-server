@@ -114,7 +114,7 @@ func (c *DialogsCore) MessagesGetDialogs(in *mtproto.TLMessagesGetDialogs) (*mtp
 				if !id2.Peer.IsChannel() {
 					msgIdList = append(msgIdList, id2.TopMessage)
 				} else {
-					c.Logger.Errorf("- method not impl.")
+					c.Logger.Errorf("messages.getDialogs - method not impl.")
 				}
 			}
 			if len(msgIdList) > 0 {
@@ -146,7 +146,7 @@ func (c *DialogsCore) MessagesGetDialogs(in *mtproto.TLMessagesGetDialogs) (*mtp
 			return chats.GetChatListByIdList(c.MD.UserId, id...)
 		},
 		func(ctx context.Context, selfUserId int64, id ...int64) []*mtproto.Chat {
-			c.Logger.Errorf("- method not impl.")
+			c.Logger.Errorf("messages.getDialogs - method not impl.")
 			return []*mtproto.Chat{}
 		})
 
