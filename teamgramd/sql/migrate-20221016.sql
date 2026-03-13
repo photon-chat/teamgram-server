@@ -1,1 +1,1 @@
-ALTER TABLE `chats` ADD `available_reactions_type` INT NOT NULL DEFAULT '0' AFTER `migrated_to_access_hash`;
+-- Already merged into 1_teamgram.sql

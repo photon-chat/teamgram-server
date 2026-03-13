@@ -69,7 +69,7 @@ CREATE TABLE `auth_keys` (
 --
 
 CREATE TABLE `auth_key_infos` (
-  `id` bigint(20) NOT NULL,
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `auth_key_id` bigint(20) NOT NULL,
   `auth_key_type` int(11) NOT NULL,
   `perm_auth_key_id` bigint(20) NOT NULL DEFAULT '0',
@@ -120,6 +120,7 @@ CREATE TABLE `auth_users` (
   `ip` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `country` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `region` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `state` int(11) NOT NULL DEFAULT '0',
   `deleted` tinyint(1) NOT NULL DEFAULT '0',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
@@ -181,7 +182,11 @@ CREATE TABLE `chats` (
   `default_banned_rights` bigint(20) NOT NULL DEFAULT '0',
   `migrated_to_id` bigint(20) NOT NULL DEFAULT '0',
   `migrated_to_access_hash` bigint(20) NOT NULL DEFAULT '0',
+  `available_reactions_type` int(11) NOT NULL DEFAULT '0',
+  `available_reactions` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `deactivated` tinyint(1) NOT NULL DEFAULT '0',
+  `noforwards` tinyint(1) NOT NULL DEFAULT '0',
+  `ttl_period` int(11) NOT NULL DEFAULT '0',
   `version` int(11) NOT NULL DEFAULT '1',
   `date` bigint(20) NOT NULL DEFAULT '0',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -223,6 +228,7 @@ CREATE TABLE `chat_invites` (
 
 CREATE TABLE `chat_invite_participants` (
   `id` bigint(20) NOT NULL,
+  `chat_id` bigint(20) NOT NULL DEFAULT '0',
   `link` varchar(32) COLLATE utf8mb4_bin NOT NULL,
   `user_id` bigint(20) NOT NULL,
   `date2` bigint(20) NOT NULL,
@@ -249,6 +255,9 @@ CREATE TABLE `chat_participants` (
   `invited_at` bigint(20) NOT NULL DEFAULT '0',
   `kicked_at` bigint(20) NOT NULL DEFAULT '0',
   `left_at` bigint(20) NOT NULL DEFAULT '0',
+  `groupcall_default_join_as_peer_type` int(11) NOT NULL DEFAULT '0',
+  `groupcall_default_join_as_peer_id` bigint(20) NOT NULL DEFAULT '0',
+  `is_bot` tinyint(1) NOT NULL DEFAULT '0',
   `state` int(11) NOT NULL DEFAULT '0',
   `date2` bigint(20) NOT NULL DEFAULT '0',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -302,6 +311,8 @@ CREATE TABLE `dialogs` (
   `folder_id` int(11) NOT NULL DEFAULT '0',
   `folder_pinned` bigint(20) NOT NULL DEFAULT '0',
   `has_scheduled` tinyint(1) NOT NULL DEFAULT '0',
+  `ttl_period` int(11) NOT NULL DEFAULT '0',
+  `theme_emoticon` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `date2` bigint(20) NOT NULL,
   `deleted` tinyint(1) NOT NULL DEFAULT '0',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -337,7 +348,7 @@ CREATE TABLE `documents` (
   `access_hash` bigint(20) NOT NULL,
   `dc_id` int(11) NOT NULL,
   `file_path` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_size` int(11) NOT NULL,
+  `file_size` bigint(20) NOT NULL,
   `uploaded_file_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `ext` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `mime_type` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -361,7 +372,7 @@ CREATE TABLE `encrypted_files` (
   `encrypted_file_id` bigint(20) NOT NULL,
   `access_hash` bigint(20) NOT NULL,
   `dc_id` int(11) NOT NULL,
-  `file_size` int(11) NOT NULL,
+  `file_size` bigint(20) NOT NULL,
   `key_fingerprint` int(11) NOT NULL,
   `md5_checksum` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `file_path` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -423,7 +434,12 @@ CREATE TABLE `messages` (
   `mentioned` tinyint(1) NOT NULL DEFAULT '0',
   `media_unread` tinyint(1) NOT NULL DEFAULT '0',
   `pinned` tinyint(1) NOT NULL DEFAULT '0',
+  `has_reaction` tinyint(1) NOT NULL DEFAULT '0',
+  `reaction` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `reaction_date` bigint(20) NOT NULL DEFAULT '0',
+  `reaction_unread` tinyint(1) NOT NULL DEFAULT '0',
   `date2` bigint(20) NOT NULL DEFAULT '0',
+  `ttl_period` int(11) NOT NULL DEFAULT '0',
   `deleted` tinyint(1) NOT NULL DEFAULT '0',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
@@ -478,15 +494,12 @@ CREATE TABLE `photo_sizes` (
   `id` bigint(20) NOT NULL,
   `photo_size_id` bigint(20) NOT NULL,
   `size_type` char(1) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `volume_id` bigint(20) NOT NULL,
-  `local_id` int(11) NOT NULL,
-  `secret` bigint(20) NOT NULL,
   `width` int(11) NOT NULL,
   `height` int(11) NOT NULL,
   `file_size` int(11) NOT NULL,
   `file_path` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `has_stripped` tinyint(1) NOT NULL DEFAULT '0',
-  `stripped_bytes` varchar(4096) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `cached_type` int(11) NOT NULL DEFAULT '0',
+  `cached_bytes` varchar(4096) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -578,6 +591,7 @@ CREATE TABLE `users` (
   `support` tinyint(1) NOT NULL DEFAULT '0',
   `scam` tinyint(1) NOT NULL DEFAULT '0',
   `fake` tinyint(1) NOT NULL DEFAULT '0',
+  `premium` tinyint(1) NOT NULL DEFAULT '0',
   `about` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `state` int(11) NOT NULL DEFAULT '0',
   `is_bot` tinyint(1) NOT NULL DEFAULT '0',
@@ -586,6 +600,8 @@ CREATE TABLE `users` (
   `restricted` tinyint(1) NOT NULL DEFAULT '0',
   `restriction_reason` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `archive_and_mute_new_noncontact_peers` tinyint(1) NOT NULL DEFAULT '0',
+  `emoji_status_document_id` bigint(20) NOT NULL DEFAULT '0',
+  `emoji_status_until` int(11) NOT NULL DEFAULT '0',
   `deleted` tinyint(1) NOT NULL DEFAULT '0',
   `delete_reason` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -777,9 +793,6 @@ CREATE TABLE `video_sizes` (
   `id` bigint(20) NOT NULL,
   `video_size_id` bigint(20) NOT NULL,
   `size_type` char(1) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `volume_id` bigint(20) NOT NULL,
-  `local_id` int(11) NOT NULL,
-  `secret` bigint(20) NOT NULL,
   `width` int(11) NOT NULL,
   `height` int(11) NOT NULL,
   `file_size` int(11) NOT NULL DEFAULT '0',
@@ -893,14 +906,15 @@ ALTER TABLE `dialogs`
 -- 表的索引 `dialog_filters`
 --
 ALTER TABLE `dialog_filters`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `user_dialog_filter` (`user_id`,`dialog_filter_id`);
 
 --
 -- 表的索引 `documents`
 --
 ALTER TABLE `documents`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `document_id` (`document_id`);
+  ADD UNIQUE KEY `document_id` (`document_id`);
 
 --
 -- 表的索引 `encrypted_files`
@@ -954,8 +968,7 @@ ALTER TABLE `photos`
 ALTER TABLE `photo_sizes`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `photo_size_id` (`photo_size_id`,`size_type`),
-  ADD KEY `photo_id` (`photo_size_id`),
-  ADD KEY `volume_id` (`volume_id`,`local_id`);
+  ADD KEY `photo_id` (`photo_size_id`);
 
 --
 -- 表的索引 `popular_contacts`
@@ -999,7 +1012,8 @@ ALTER TABLE `users`
 --
 ALTER TABLE `user_contacts`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `owner_user_id` (`owner_user_id`,`contact_user_id`);
+  ADD UNIQUE KEY `owner_user_id` (`owner_user_id`,`contact_user_id`),
+  ADD KEY `owner_user_id_2` (`owner_user_id`);
 
 --
 -- 表的索引 `user_global_privacy_settings`
@@ -1072,7 +1086,6 @@ ALTER TABLE `user_settings`
 ALTER TABLE `video_sizes`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `video_size_id` (`video_size_id`,`size_type`),
-  ADD KEY `volume_id` (`volume_id`,`local_id`),
   ADD KEY `video_size_id_2` (`video_size_id`);
 
 --

@@ -1,1 +1,1 @@
-ALTER TABLE `auth_key_infos` CHANGE `id` `id` BIGINT(20) NOT NULL AUTO_INCREMENT;
+-- Already merged into 1_teamgram.sql

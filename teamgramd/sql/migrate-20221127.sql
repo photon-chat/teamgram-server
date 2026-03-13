@@ -1,1 +1,1 @@
-ALTER TABLE `video_sizes` DROP `volume_id`, DROP `local_id`, DROP `secret`;
+-- Already merged into 1_teamgram.sql
