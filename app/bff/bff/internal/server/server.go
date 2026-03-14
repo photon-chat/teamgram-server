@@ -20,6 +20,7 @@ package server
 
 import (
 	"flag"
+
 	"github.com/teamgram/proto/mtproto"
 	account_helper "github.com/teamgram/teamgram-server/app/bff/account"
 	authorization_helper "github.com/teamgram/teamgram-server/app/bff/authorization"
@@ -40,6 +41,7 @@ import (
 	premium_helper "github.com/teamgram/teamgram-server/app/bff/premium"
 	qrcode_helper "github.com/teamgram/teamgram-server/app/bff/qrcode"
 	sponsoredmessages_helper "github.com/teamgram/teamgram-server/app/bff/sponsoredmessages"
+	stickers_helper "github.com/teamgram/teamgram-server/app/bff/stickers"
 	tos_helper "github.com/teamgram/teamgram-server/app/bff/tos"
 	updates_helper "github.com/teamgram/teamgram-server/app/bff/updates"
 	usernames_helper "github.com/teamgram/teamgram-server/app/bff/usernames"
@@ -304,6 +306,20 @@ func (s *Server) Initialize() error {
 				ChatClient:     c.BizServiceClient,
 				SyncClient:     c.SyncClient,
 			}, nil))
+
+		// stickers_helper
+		if c.TelegramBotToken != "" {
+			mtproto.RegisterRPCStickersServer(
+				grpcServer,
+				stickers_helper.New(stickers_helper.Config{
+					RpcServerConf:    c.RpcServerConf,
+					TelegramBotToken: c.TelegramBotToken,
+					Mysql:            c.StickersMysql,
+					IdgenClient:      c.IdgenClient,
+					MediaClient:      c.MediaClient,
+					DfsClient:        c.DfsClient,
+				}))
+		}
 	})
 
 	// logx.Must(err)

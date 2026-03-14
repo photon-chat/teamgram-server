@@ -1321,3 +1321,51 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+-- --------------------------------------------------------
+-- teamgram_stickers 数据库
+-- --------------------------------------------------------
+
+CREATE DATABASE IF NOT EXISTS teamgram_stickers;
+USE teamgram_stickers;
+
+CREATE TABLE IF NOT EXISTS `sticker_sets` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `set_id` bigint(20) NOT NULL,
+  `access_hash` bigint(20) NOT NULL DEFAULT '0',
+  `short_name` varchar(128) NOT NULL,
+  `title` varchar(256) NOT NULL DEFAULT '',
+  `sticker_type` varchar(32) NOT NULL DEFAULT 'regular',
+  `is_animated` tinyint(1) NOT NULL DEFAULT '0',
+  `is_video` tinyint(1) NOT NULL DEFAULT '0',
+  `is_masks` tinyint(1) NOT NULL DEFAULT '0',
+  `is_emojis` tinyint(1) NOT NULL DEFAULT '0',
+  `is_official` tinyint(1) NOT NULL DEFAULT '0',
+  `sticker_count` int(11) NOT NULL DEFAULT '0',
+  `hash` int(11) NOT NULL DEFAULT '0',
+  `thumb_doc_id` bigint(20) NOT NULL DEFAULT '0',
+  `data_json` mediumtext NOT NULL,
+  `fetched_at` bigint(20) NOT NULL DEFAULT '0',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `idx_short_name` (`short_name`),
+  UNIQUE KEY `idx_set_id` (`set_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS `sticker_set_documents` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `set_id` bigint(20) NOT NULL,
+  `document_id` bigint(20) NOT NULL,
+  `sticker_index` int(11) NOT NULL DEFAULT '0',
+  `emoji` varchar(64) NOT NULL DEFAULT '',
+  `bot_file_id` varchar(512) NOT NULL DEFAULT '',
+  `bot_file_unique_id` varchar(256) NOT NULL DEFAULT '',
+  `bot_thumb_file_id` varchar(512) NOT NULL DEFAULT '',
+  `document_data` mediumtext NOT NULL,
+  `file_downloaded` tinyint(1) NOT NULL DEFAULT '0',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `idx_set_id` (`set_id`),
+  UNIQUE KEY `idx_document_id` (`document_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
