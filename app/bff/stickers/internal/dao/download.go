@@ -12,6 +12,7 @@ import (
 	"github.com/gogo/protobuf/types"
 	"github.com/teamgram/proto/mtproto"
 	"github.com/teamgram/teamgram-server/app/service/dfs/dfs"
+	"github.com/teamgram/teamgram-server/app/service/media/media"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )
@@ -133,29 +134,36 @@ func (d *Dao) downloadAndUploadOne(ctx context.Context, input *StickerDownloadIn
 		}
 	}
 
-	// 4. Finalize to MinIO via DfsUploadDocumentFileV2
+	// 4. Finalize to MinIO and register in documents table via media service
 	ext := path.Ext(fileInfo.FilePath)
 	if ext == "" {
 		ext = ".dat"
 	}
 
-	dfsDoc, err := d.DfsClient.DfsUploadDocumentFileV2(ctx, &dfs.TLDfsUploadDocumentFileV2{
-		Creator: tempFileId,
-		Media: mtproto.MakeTLInputMediaUploadedDocument(&mtproto.InputMedia{
-			File: mtproto.MakeTLInputFile(&mtproto.InputFile{
-				Id:    tempFileId,
-				Parts: totalParts,
-				Name:  input.BotFileUniqueId + ext,
-			}).To_InputFile(),
-			MimeType:   input.MimeType,
-			Attributes: input.Attributes,
-		}).To_InputMedia(),
+	inputMedia := mtproto.MakeTLInputMediaUploadedDocument(&mtproto.InputMedia{
+		File: mtproto.MakeTLInputFile(&mtproto.InputFile{
+			Id:    tempFileId,
+			Parts: totalParts,
+			Name:  input.BotFileUniqueId + ext,
+		}).To_InputFile(),
+		MimeType:   input.MimeType,
+		Attributes: input.Attributes,
+	}).To_InputMedia()
+
+	messageMedia, err := d.MediaClient.MediaUploadedDocumentMedia(ctx, &media.TLMediaUploadedDocumentMedia{
+		OwnerId: tempFileId,
+		Media:   inputMedia,
 	})
 	if err != nil {
-		return nil, fmt.Errorf("DfsUploadDocumentFileV2: %w", err)
+		return nil, fmt.Errorf("MediaUploadedDocumentMedia: %w", err)
 	}
 
-	log.Infof("downloadAndUploadOne - %s → dfs %d (%d bytes, %d parts)",
+	dfsDoc := messageMedia.GetDocument()
+	if dfsDoc == nil {
+		return nil, fmt.Errorf("MediaUploadedDocumentMedia returned nil document")
+	}
+
+	log.Infof("downloadAndUploadOne - %s → doc %d (%d bytes, %d parts)",
 		input.BotFileUniqueId, dfsDoc.GetId(), len(data), totalParts)
 
 	return dfsDoc, nil
