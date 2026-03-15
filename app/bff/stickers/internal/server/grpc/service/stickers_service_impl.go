@@ -33,22 +33,27 @@ func (s *Service) MessagesGetStickers(ctx context.Context, request *mtproto.TLMe
 }
 
 func (s *Service) MessagesGetAllStickers(ctx context.Context, request *mtproto.TLMessagesGetAllStickers) (*mtproto.Messages_AllStickers, error) {
-	return mtproto.MakeTLMessagesAllStickers(&mtproto.Messages_AllStickers{
-		Hash: 0,
-		Sets: []*mtproto.StickerSet{},
-	}).To_Messages_AllStickers(), nil
+	c := core.New(ctx, s.svcCtx)
+	c.Logger.Debugf("messages.getAllStickers - metadata: %s, request: %s", c.MD, request)
+	return c.MessagesGetAllStickers(request)
 }
 
 func (s *Service) MessagesInstallStickerSet(ctx context.Context, request *mtproto.TLMessagesInstallStickerSet) (*mtproto.Messages_StickerSetInstallResult, error) {
-	return mtproto.MakeTLMessagesStickerSetInstallResultSuccess(&mtproto.Messages_StickerSetInstallResult{}).To_Messages_StickerSetInstallResult(), nil
+	c := core.New(ctx, s.svcCtx)
+	c.Logger.Debugf("messages.installStickerSet - metadata: %s, request: %s", c.MD, request)
+	return c.MessagesInstallStickerSet(request)
 }
 
 func (s *Service) MessagesUninstallStickerSet(ctx context.Context, request *mtproto.TLMessagesUninstallStickerSet) (*mtproto.Bool, error) {
-	return mtproto.BoolTrue, nil
+	c := core.New(ctx, s.svcCtx)
+	c.Logger.Debugf("messages.uninstallStickerSet - metadata: %s, request: %s", c.MD, request)
+	return c.MessagesUninstallStickerSet(request)
 }
 
 func (s *Service) MessagesReorderStickerSets(ctx context.Context, request *mtproto.TLMessagesReorderStickerSets) (*mtproto.Bool, error) {
-	return mtproto.BoolTrue, nil
+	c := core.New(ctx, s.svcCtx)
+	c.Logger.Debugf("messages.reorderStickerSets - metadata: %s, request: %s", c.MD, request)
+	return c.MessagesReorderStickerSets(request)
 }
 
 func (s *Service) MessagesGetFeaturedStickers(ctx context.Context, request *mtproto.TLMessagesGetFeaturedStickers) (*mtproto.Messages_FeaturedStickers, error) {

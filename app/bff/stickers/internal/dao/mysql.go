@@ -11,14 +11,16 @@ type Mysql struct {
 	*mysql_dao.StickerSetDocumentsDAO
 	*mysql_dao.UserRecentStickersDAO
 	*mysql_dao.UserFavedStickersDAO
+	*mysql_dao.UserInstalledStickerSetsDAO
 }
 
 func newMysqlDao(db *sqlx.DB) *Mysql {
 	return &Mysql{
-		DB:                     db,
-		StickerSetsDAO:         mysql_dao.NewStickerSetsDAO(db),
-		StickerSetDocumentsDAO: mysql_dao.NewStickerSetDocumentsDAO(db),
-		UserRecentStickersDAO:  mysql_dao.NewUserRecentStickersDAO(db),
-		UserFavedStickersDAO:   mysql_dao.NewUserFavedStickersDAO(db),
+		DB:                          db,
+		StickerSetsDAO:              mysql_dao.NewStickerSetsDAO(db),
+		StickerSetDocumentsDAO:      mysql_dao.NewStickerSetDocumentsDAO(db),
+		UserRecentStickersDAO:       mysql_dao.NewUserRecentStickersDAO(db),
+		UserFavedStickersDAO:        mysql_dao.NewUserFavedStickersDAO(db),
+		UserInstalledStickerSetsDAO: mysql_dao.NewUserInstalledStickerSetsDAO(db),
 	}
 }

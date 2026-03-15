@@ -1,7 +1,6 @@
 package core
 
 import (
-	"hash/fnv"
 	"time"
 
 	"github.com/teamgram/proto/mtproto"
@@ -9,6 +8,15 @@ import (
 	"github.com/teamgram/teamgram-server/app/bff/stickers/internal/dao"
 	mediapb "github.com/teamgram/teamgram-server/app/service/media/media"
 )
+
+// telegramCombineInt64Hash is the Telegram-standard hash algorithm used by all clients.
+// It must match the client's combineInt64Hash exactly for NotModified to work.
+func telegramCombineInt64Hash(acc *uint64, value uint64) {
+	*acc ^= (*acc >> 21)
+	*acc ^= (*acc << 35)
+	*acc ^= (*acc >> 4)
+	*acc += value
+}
 
 // MessagesGetRecentStickers handles the messages.getRecentStickers TL method.
 func (c *StickersCore) MessagesGetRecentStickers(in *mtproto.TLMessagesGetRecentStickers) (*mtproto.Messages_RecentStickers, error) {
@@ -217,46 +225,30 @@ func extractStickerEmoji(doc *mtproto.Document) string {
 	return ""
 }
 
-// computeRecentStickersHash computes a hash over recent sticker document IDs for NotModified support.
+// computeRecentStickersHash computes the Telegram-standard hash over recent sticker document IDs.
+// Recent stickers use normal order (not reversed).
 func computeRecentStickersHash(rows []dataobject.UserRecentStickersDO) int64 {
 	if len(rows) == 0 {
 		return 0
 	}
-	h := fnv.New64a()
+	var acc uint64
 	for _, r := range rows {
-		b := make([]byte, 8)
-		b[0] = byte(r.DocumentId >> 56)
-		b[1] = byte(r.DocumentId >> 48)
-		b[2] = byte(r.DocumentId >> 40)
-		b[3] = byte(r.DocumentId >> 32)
-		b[4] = byte(r.DocumentId >> 24)
-		b[5] = byte(r.DocumentId >> 16)
-		b[6] = byte(r.DocumentId >> 8)
-		b[7] = byte(r.DocumentId)
-		h.Write(b)
+		telegramCombineInt64Hash(&acc, uint64(r.DocumentId))
 	}
-	return int64(h.Sum64())
+	return int64(acc)
 }
 
-// computeFavedStickersHash computes a hash over faved sticker document IDs for NotModified support.
+// computeFavedStickersHash computes the Telegram-standard hash over faved sticker document IDs.
+// Faved stickers use reverse order (reverseHashOrder: true on iOS client).
 func computeFavedStickersHash(rows []dataobject.UserFavedStickersDO) int64 {
 	if len(rows) == 0 {
 		return 0
 	}
-	h := fnv.New64a()
-	for _, r := range rows {
-		b := make([]byte, 8)
-		b[0] = byte(r.DocumentId >> 56)
-		b[1] = byte(r.DocumentId >> 48)
-		b[2] = byte(r.DocumentId >> 40)
-		b[3] = byte(r.DocumentId >> 32)
-		b[4] = byte(r.DocumentId >> 24)
-		b[5] = byte(r.DocumentId >> 16)
-		b[6] = byte(r.DocumentId >> 8)
-		b[7] = byte(r.DocumentId)
-		h.Write(b)
+	var acc uint64
+	for i := len(rows) - 1; i >= 0; i-- {
+		telegramCombineInt64Hash(&acc, uint64(rows[i].DocumentId))
 	}
-	return int64(h.Sum64())
+	return int64(acc)
 }
 
 // buildUserStickerPacks groups recent stickers by emoji into StickerPack objects.

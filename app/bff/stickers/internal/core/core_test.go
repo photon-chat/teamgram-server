@@ -438,7 +438,45 @@ func TestComputeRecentStickersHash(t *testing.T) {
 		t.Error("different order should produce different hash")
 	}
 
-	t.Logf("computeRecentStickersHash: PASS (h1=%d, h3=%d)", h1, h3)
+	// Verify Telegram hash algorithm manually for single element:
+	// acc=0, combine(0,100): acc^=0>>21=0, acc^=0<<35=0, acc^=0>>4=0, acc+=100 → acc=100
+	singleRow := []dataobject.UserRecentStickersDO{{DocumentId: 100}}
+	hSingle := computeRecentStickersHash(singleRow)
+	if hSingle != 100 {
+		t.Errorf("single element hash: got %d, want 100", hSingle)
+	}
+
+	t.Logf("computeRecentStickersHash (telegramHash): PASS (h1=%d, h3=%d)", h1, h3)
+}
+
+// TestComputeFavedStickersHashReversed verifies faved stickers hash uses reversed order.
+func TestComputeFavedStickersHashReversed(t *testing.T) {
+	rows := []dataobject.UserFavedStickersDO{
+		{DocumentId: 100},
+		{DocumentId: 200},
+	}
+	hNormal := computeFavedStickersHash(rows)
+
+	rowsReversed := []dataobject.UserFavedStickersDO{
+		{DocumentId: 200},
+		{DocumentId: 100},
+	}
+	hReversed := computeFavedStickersHash(rowsReversed)
+
+	// faved hash reverses internally, so rows=[100,200] hashes as [200,100]
+	// and rowsReversed=[200,100] hashes as [100,200]
+	// They should NOT be equal since both get reversed differently
+	if hNormal == hReversed {
+		t.Error("faved hashes should differ for different input order")
+	}
+
+	// Verify: hash of [A] reversed = hash of [A] (single element)
+	single := []dataobject.UserFavedStickersDO{{DocumentId: 42}}
+	if computeFavedStickersHash(single) != 42 {
+		t.Errorf("single faved element hash: got %d, want 42", computeFavedStickersHash(single))
+	}
+
+	t.Logf("computeFavedStickersHash (reversed): PASS (hNormal=%d, hReversed=%d)", hNormal, hReversed)
 }
 
 // TestBuildUserStickerPacks tests emoji→documentId grouping for recent stickers.
@@ -493,4 +531,83 @@ func TestBuildFavedStickerPacks(t *testing.T) {
 	}
 
 	t.Log("buildFavedStickerPacks: PASS")
+}
+
+func TestSetTypeFromFlags(t *testing.T) {
+	if st := setTypeFromFlags(false, false); st != 0 {
+		t.Errorf("expected 0 (regular), got %d", st)
+	}
+	if st := setTypeFromFlags(true, false); st != 1 {
+		t.Errorf("expected 1 (masks), got %d", st)
+	}
+	if st := setTypeFromFlags(false, true); st != 2 {
+		t.Errorf("expected 2 (emojis), got %d", st)
+	}
+	// masks takes priority
+	if st := setTypeFromFlags(true, true); st != 1 {
+		t.Errorf("expected 1 (masks priority), got %d", st)
+	}
+	t.Log("setTypeFromFlags: PASS")
+}
+
+func TestComputeInstalledSetsHash(t *testing.T) {
+	// empty → 0
+	h0 := computeInstalledSetsHash(nil)
+	if h0 != 0 {
+		t.Errorf("expected 0, got %d", h0)
+	}
+
+	rows := []dataobject.UserInstalledStickerSetsDO{
+		{SetId: 111},
+		{SetId: 222},
+		{SetId: 333},
+	}
+	h1 := computeInstalledSetsHash(rows)
+	if h1 == 0 {
+		t.Error("expected non-zero hash")
+	}
+
+	// Same input → same hash (deterministic)
+	h2 := computeInstalledSetsHash(rows)
+	if h1 != h2 {
+		t.Errorf("hashes differ: %d vs %d", h1, h2)
+	}
+
+	// Different order → different hash
+	rows2 := []dataobject.UserInstalledStickerSetsDO{
+		{SetId: 222},
+		{SetId: 111},
+		{SetId: 333},
+	}
+	h3 := computeInstalledSetsHash(rows2)
+	if h1 == h3 {
+		t.Error("different order should produce different hash")
+	}
+
+	// Verify single element matches Telegram algorithm
+	single := []dataobject.UserInstalledStickerSetsDO{{SetId: 777}}
+	if computeInstalledSetsHash(single) != 777 {
+		t.Errorf("single element hash: got %d, want 777", computeInstalledSetsHash(single))
+	}
+
+	t.Logf("computeInstalledSetsHash (telegramHash): PASS (h1=%d, h3=%d)", h1, h3)
+}
+
+func TestStickerSetType(t *testing.T) {
+	regular := &dataobject.StickerSetsDO{IsMasks: false, IsEmojis: false}
+	if stickerSetType(regular) != 0 {
+		t.Error("expected 0 for regular")
+	}
+
+	masks := &dataobject.StickerSetsDO{IsMasks: true}
+	if stickerSetType(masks) != 1 {
+		t.Error("expected 1 for masks")
+	}
+
+	emojis := &dataobject.StickerSetsDO{IsEmojis: true}
+	if stickerSetType(emojis) != 2 {
+		t.Error("expected 2 for emojis")
+	}
+
+	t.Log("stickerSetType: PASS")
 }

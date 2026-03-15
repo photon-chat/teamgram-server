@@ -71,3 +71,19 @@ CREATE TABLE IF NOT EXISTS user_faved_stickers (
   UNIQUE KEY idx_user_document (user_id, document_id),
   KEY idx_user_id (user_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS user_installed_sticker_sets (
+  id             BIGINT NOT NULL AUTO_INCREMENT,
+  user_id        BIGINT NOT NULL,
+  set_id         BIGINT NOT NULL,
+  set_type       TINYINT(1) NOT NULL DEFAULT 0,
+  order_num      INT NOT NULL DEFAULT 0,
+  installed_date BIGINT NOT NULL DEFAULT 0,
+  archived       TINYINT(1) NOT NULL DEFAULT 0,
+  deleted        TINYINT(1) NOT NULL DEFAULT 0,
+  created_at     TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at     TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (id),
+  UNIQUE KEY idx_user_set (user_id, set_id),
+  KEY idx_user_type (user_id, set_type)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

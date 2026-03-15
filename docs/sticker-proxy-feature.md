@@ -128,6 +128,77 @@ CREATE TABLE user_faved_stickers (
 UPDATE user_recent_stickers SET deleted=1 WHERE user_id=? AND deleted=0
 ```
 
+## 安装 & 排序贴纸包
+
+### 功能概述
+
+实现了 4 个 MTProto 方法，支持客户端的「安装/卸载贴纸包」和「排序我的贴纸」功能：
+
+| 方法 | 功能 |
+|------|------|
+| `messages.installStickerSet` | 安装贴纸包（新增到用户列表顶部，或归档） |
+| `messages.uninstallStickerSet` | 卸载贴纸包（软删除） |
+| `messages.reorderStickerSets` | 按客户端指定的顺序重新排列贴纸包 |
+| `messages.getAllStickers` | 获取用户已安装的所有贴纸包（支持 NotModified） |
+
+### 数据模型
+
+```sql
+CREATE TABLE user_installed_sticker_sets (
+  user_id        BIGINT NOT NULL,
+  set_id         BIGINT NOT NULL,
+  set_type       TINYINT(1),        -- 0=regular, 1=masks, 2=emojis
+  order_num      INT,               -- 排序序号，越小越靠前
+  installed_date BIGINT,            -- unix timestamp
+  archived       TINYINT(1),        -- 归档标志
+  deleted        TINYINT(1),        -- 软删除标志
+  UNIQUE KEY (user_id, set_id),
+  KEY (user_id, set_type)
+);
+```
+
+### 请求/响应流程
+
+**installStickerSet**:
+```
+1. 解析 InputStickerSet → set_id + set_type
+2. archived=true → 直接 upsert（archived=1）
+3. archived=false:
+   a. 所有同类 set 的 order_num +1（腾出 0 号位）
+   b. Upsert 新 set（order_num=0, archived=0）
+4. 返回 StickerSetInstallResultSuccess
+```
+
+**uninstallStickerSet**:
+```
+1. 解析 InputStickerSet → set_id
+2. UPDATE SET deleted=1 (软删除)
+3. 返回 BoolTrue
+```
+
+**reorderStickerSets**:
+```
+1. 根据 Masks/Emojis flag 确定 set_type
+2. 按客户端发来的 Order 数组，逐个 UPDATE order_num = 数组下标
+3. 返回 BoolTrue
+```
+
+**getAllStickers**:
+```
+1. 查询 user_installed_sticker_sets WHERE set_type=0 AND deleted=0 AND archived=0
+2. 计算 hash（fnv64a over set IDs）
+3. request.hash == hash → 返回 AllStickersNotModified
+4. 否则 JOIN sticker_sets 获取完整元数据，设置 InstalledDate，返回 AllStickers
+```
+
+### 关键文件
+
+| 文件 | 用途 |
+|------|------|
+| `app/bff/stickers/internal/core/messages.installedStickerSets_handler.go` | 4 个方法的核心逻辑 |
+| `app/bff/stickers/internal/dal/dao/mysql_dao/user_installed_sticker_sets_dao.go` | 安装贴纸包 DAO |
+| `app/bff/stickers/internal/dal/dataobject/user_installed_sticker_sets_do.go` | 安装贴纸包数据对象 |
+
 ### NotModified 支持
 
 客户端发送上次收到的 `hash` 值，服务端计算当前 hash（对所有 documentId 做 fnv64a），如果相等返回 `messagesRecentStickersNotModified` / `messagesFavedStickersNotModified`，节省带宽。
@@ -148,7 +219,7 @@ UPDATE user_recent_stickers SET deleted=1 WHERE user_id=? AND deleted=0
 |------|------|
 | `app/bff/stickers/internal/core/messages.getStickerSet_handler.go` | 主处理器：获取/缓存/返回贴纸集 |
 | `app/bff/stickers/internal/dao/download.go` | 下载 & 上传逻辑，序列化/反序列化 |
-| `app/bff/stickers/internal/dal/dao/mysql_dao/` | MySQL DAO（sticker_sets, sticker_set_documents, user_recent/faved_stickers） |
+| `app/bff/stickers/internal/dal/dao/mysql_dao/` | MySQL DAO（sticker_sets, sticker_set_documents, user_recent/faved_stickers, user_installed_sticker_sets） |
 | `app/service/dfs/internal/core/dfs.uploadDocumentFileV2_handler.go` | DFS 通用文件上传处理器 |
 | `app/service/dfs/internal/core/dfs.downloadFile_handler.go` | DFS 文件下载处理器 |
 | `app/service/dfs/internal/model/image_util.go` | 文件类型映射（扩展名 → storage.FileType） |
@@ -282,6 +353,22 @@ CREATE TABLE user_recent_stickers (   -- user_faved_stickers 结构相同
   deleted TINYINT(1) DEFAULT 0,       -- 软删除标志
   UNIQUE KEY (user_id, document_id),
   KEY (user_id)
+);
+```
+
+### user_installed_sticker_sets
+```sql
+CREATE TABLE user_installed_sticker_sets (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  user_id BIGINT NOT NULL,
+  set_id BIGINT NOT NULL,
+  set_type TINYINT(1) DEFAULT 0,      -- 0=regular, 1=masks, 2=emojis
+  order_num INT DEFAULT 0,            -- 排序序号
+  installed_date BIGINT DEFAULT 0,    -- unix timestamp
+  archived TINYINT(1) DEFAULT 0,      -- 归档标志
+  deleted TINYINT(1) DEFAULT 0,       -- 软删除标志
+  UNIQUE KEY (user_id, set_id),
+  KEY (user_id, set_type)
 );
 ```
 
