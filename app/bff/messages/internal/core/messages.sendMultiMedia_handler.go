@@ -173,6 +173,12 @@ func (c *MessagesCore) MessagesSendMultiMedia(in *mtproto.TLMessagesSendMultiMed
 			c.Logger.Errorf("messages.sendMultiMedia: %v", err)
 			return nil, err
 		}
+
+		// Auto-save sticker to recent stickers (server-side tracking)
+		if c.svcCtx.Plugin != nil {
+			c.maybeRecordRecentSticker(outMessage.Media)
+		}
+
 		outMessage, _ = c.fixMessageEntities(c.MD.UserId, peer, true, outMessage, hasBot)
 		outboxMultiMedia = append(outboxMultiMedia, msgpb.MakeTLOutboxMessage(&msgpb.OutboxMessage{
 			NoWebpage:    true,

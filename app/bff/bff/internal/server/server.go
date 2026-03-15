@@ -34,6 +34,7 @@ import (
 	drafts_helper "github.com/teamgram/teamgram-server/app/bff/drafts"
 	files_helper "github.com/teamgram/teamgram-server/app/bff/files"
 	messages_helper "github.com/teamgram/teamgram-server/app/bff/messages"
+	messages_plugin "github.com/teamgram/teamgram-server/app/bff/messages/plugin"
 	miscellaneous_helper "github.com/teamgram/teamgram-server/app/bff/miscellaneous"
 	notification_helper "github.com/teamgram/teamgram-server/app/bff/notification"
 	nsfw_helper "github.com/teamgram/teamgram-server/app/bff/nsfw"
@@ -225,6 +226,10 @@ func (s *Server) Initialize() error {
 			}))
 
 		// messages_helper
+		var mp messages_plugin.MessagesPlugin
+		if c.StickersMysql.DSN != "" {
+			mp = newMessagesPlugin(c.StickersMysql)
+		}
 		mtproto.RegisterRPCMessagesServer(
 			grpcServer,
 			messages_helper.New(messages_helper.Config{
@@ -238,7 +243,7 @@ func (s *Server) Initialize() error {
 				MediaClient:    c.MediaClient,
 				UsernameClient: c.BizServiceClient,
 				SyncClient:     c.SyncClient,
-			}, nil))
+			}, mp))
 
 		// notification_helper
 		mtproto.RegisterRPCNotificationServer(

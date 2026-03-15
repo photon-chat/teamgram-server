@@ -156,6 +156,11 @@ func (c *MessagesCore) MessagesSendMedia(in *mtproto.TLMessagesSendMedia) (*mtpr
 		return nil, err
 	}
 
+	// Auto-save sticker to recent stickers (server-side tracking)
+	if c.svcCtx.Plugin != nil {
+		c.maybeRecordRecentSticker(outMessage.Media)
+	}
+
 	outMessage, _ = c.fixMessageEntities(c.MD.UserId, peer, true, outMessage, hasBot)
 	rUpdate, err := c.svcCtx.Dao.MsgClient.MsgSendMessage(c.ctx, &msgpb.TLMsgSendMessage{
 		UserId:    c.MD.UserId,

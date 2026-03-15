@@ -27,4 +27,5 @@ type MessagesPlugin interface {
 	GetWebpagePreview(ctx context.Context, url string) (*mtproto.WebPage, error)
 	GetMessageMedia(ctx context.Context, ownerId int64, media *mtproto.InputMedia) (*mtproto.MessageMedia, error)
 	// RebuildMessageEntities(ctx context.Context, fromId int64, peer *mtproto.PeerUtil, noWebpage bool, message *mtproto.Message, hasBot bool) (*mtproto.Message, error)
+	SaveRecentSticker(ctx context.Context, userId int64, doc *mtproto.Document)
 }

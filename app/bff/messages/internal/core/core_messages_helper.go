@@ -22,6 +22,8 @@ import (
 	"github.com/teamgram/teamgram-server/pkg/mention"
 	"github.com/teamgram/teamgram-server/pkg/phonenumber"
 
+	"github.com/zeromicro/go-zero/core/contextx"
+	"github.com/zeromicro/go-zero/core/threading"
 	"mvdan.cc/xurls/v2"
 )
 
@@ -410,4 +412,27 @@ func (c *MessagesCore) fixMessageEntities(fromId int64, peer *mtproto.PeerUtil, 
 	sort.Sort(entities)
 	message.Entities = entities
 	return message, nil
+}
+
+// maybeRecordRecentSticker checks if the media is a sticker and asynchronously
+// saves it to the user's recent stickers list (server-side auto-tracking).
+func (c *MessagesCore) maybeRecordRecentSticker(media *mtproto.MessageMedia) {
+	if media == nil || media.GetPredicateName() != mtproto.Predicate_messageMediaDocument {
+		return
+	}
+	doc := media.GetDocument()
+	if doc == nil {
+		return
+	}
+
+	for _, attr := range doc.GetAttributes() {
+		if attr.GetPredicateName() == mtproto.Predicate_documentAttributeSticker {
+			userId := c.MD.UserId
+			ctx := contextx.ValueOnlyFrom(c.ctx)
+			threading.GoSafe(func() {
+				c.svcCtx.Plugin.SaveRecentSticker(ctx, userId, doc)
+			})
+			return
+		}
+	}
 }
