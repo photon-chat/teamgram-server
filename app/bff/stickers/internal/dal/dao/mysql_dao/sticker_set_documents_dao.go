@@ -112,7 +112,7 @@ func (dao *StickerSetDocumentsDAO) SelectBySetIdsAndEmoji(ctx context.Context, s
 	placeholders := strings.Repeat("?,", len(setIds))
 	placeholders = placeholders[:len(placeholders)-1]
 	query := fmt.Sprintf(
-		"select id, set_id, document_id, sticker_index, emoji, bot_file_id, bot_file_unique_id, bot_thumb_file_id, document_data, file_downloaded from sticker_set_documents where set_id in (%s) and emoji = ? order by set_id, sticker_index asc",
+		"select id, set_id, document_id, sticker_index, emoji, bot_file_id, bot_file_unique_id, bot_thumb_file_id, document_data, file_downloaded from sticker_set_documents where set_id in (%s) and emoji COLLATE utf8mb4_bin = ? order by set_id, sticker_index asc limit 20",
 		placeholders,
 	)
 	args := make([]interface{}, 0, len(setIds)+1)

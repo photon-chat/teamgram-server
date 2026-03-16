@@ -42,19 +42,31 @@ func (c *StickersCore) MessagesSearchStickerSets(in *mtproto.TLMessagesSearchSti
 		}).To_Messages_FoundStickerSets(), nil
 	}
 
-	// 3. Build StickerSetCovered for each result
-	setIds := make([]int64, len(searchResults))
+	// 3. Exclude user's installed sets to avoid stableId collision on iOS
+	installedSetIds := c.getInstalledSetIdMap()
+
+	setIds := make([]int64, 0, len(searchResults))
 	for i := range searchResults {
-		setIds[i] = searchResults[i].SetId
+		if !installedSetIds[searchResults[i].SetId] {
+			setIds = append(setIds, searchResults[i].SetId)
+		}
 	}
 
+	if len(setIds) == 0 {
+		return mtproto.MakeTLMessagesFoundStickerSets(&mtproto.Messages_FoundStickerSets{
+			Hash: 0,
+			Sets: []*mtproto.StickerSetCovered{},
+		}).To_Messages_FoundStickerSets(), nil
+	}
+
+	// 4. Build StickerSetCovered for each result
 	sets, err := c.buildStickerSetsCovered(setIds)
 	if err != nil {
 		c.Logger.Errorf("messages.searchStickerSets - buildStickerSetsCovered error: %v", err)
 		return nil, mtproto.ErrInternelServerError
 	}
 
-	// 4. Compute hash
+	// 5. Compute hash
 	var hashAcc uint64
 	for _, s := range sets {
 		if s.Set != nil {
@@ -63,7 +75,7 @@ func (c *StickersCore) MessagesSearchStickerSets(in *mtproto.TLMessagesSearchSti
 	}
 	hash := int64(hashAcc)
 
-	// 5. Check NotModified
+	// 6. Check NotModified
 	if in.Hash != 0 && in.Hash == hash {
 		return mtproto.MakeTLMessagesFoundStickerSetsNotModified(nil).To_Messages_FoundStickerSets(), nil
 	}

@@ -22,7 +22,16 @@ func (c *StickersCore) MessagesGetFeaturedStickers(in *mtproto.TLMessagesGetFeat
 		popularSetIds = c.supplementWithConfiguredSets(popularSetIds, int(featuredLimit))
 	}
 
-	if len(popularSetIds) == 0 {
+	// 3. Exclude user's installed sets to avoid stableId collision on iOS
+	installedSetIds := c.getInstalledSetIdMap()
+	filteredIds := make([]int64, 0, len(popularSetIds))
+	for _, id := range popularSetIds {
+		if !installedSetIds[id] {
+			filteredIds = append(filteredIds, id)
+		}
+	}
+
+	if len(filteredIds) == 0 {
 		return mtproto.MakeTLMessagesFeaturedStickers(&mtproto.Messages_FeaturedStickers{
 			Count:  0,
 			Hash:   0,
@@ -31,14 +40,14 @@ func (c *StickersCore) MessagesGetFeaturedStickers(in *mtproto.TLMessagesGetFeat
 		}).To_Messages_FeaturedStickers(), nil
 	}
 
-	// 3. Build StickerSetCovered for each set
-	sets, err := c.buildStickerSetsCovered(popularSetIds)
+	// 4. Build StickerSetCovered for each set
+	sets, err := c.buildStickerSetsCovered(filteredIds)
 	if err != nil {
 		c.Logger.Errorf("messages.getFeaturedStickers - buildStickerSetsCovered error: %v", err)
 		return nil, mtproto.ErrInternelServerError
 	}
 
-	// 4. Compute hash over set IDs
+	// 5. Compute hash over set IDs
 	var hashAcc uint64
 	for _, s := range sets {
 		if s.Set != nil {
@@ -47,7 +56,7 @@ func (c *StickersCore) MessagesGetFeaturedStickers(in *mtproto.TLMessagesGetFeat
 	}
 	hash := int64(hashAcc)
 
-	// 5. Check NotModified
+	// 6. Check NotModified
 	if in.Hash != 0 && in.Hash == hash {
 		return mtproto.MakeTLMessagesFeaturedStickersNotModified(nil).To_Messages_FeaturedStickers(), nil
 	}
@@ -106,6 +115,20 @@ func (c *StickersCore) supplementWithConfiguredSets(existingIds []int64, maxLen 
 	}
 
 	return result
+}
+
+// getInstalledSetIdMap returns the current user's installed set_ids as a map for fast lookup.
+func (c *StickersCore) getInstalledSetIdMap() map[int64]bool {
+	installedRows, err := c.svcCtx.Dao.UserInstalledStickerSetsDAO.SelectByUserAndType(c.ctx, c.MD.UserId, 0)
+	if err != nil {
+		c.Logger.Errorf("getInstalledSetIdMap - error: %v", err)
+		return nil
+	}
+	m := make(map[int64]bool, len(installedRows))
+	for _, r := range installedRows {
+		m[r.SetId] = true
+	}
+	return m
 }
 
 // buildStickerSetsCovered builds StickerSetCovered objects from a list of set_ids.
