@@ -42,4 +42,5 @@ type Config struct {
 	SignInMessage             []conf.MessageEntityConfig `json:",optional"`
 	TelegramBotToken          string                     `json:",optional"`
 	StickersMysql             sqlx.Config                `json:",optional"`
+	FeaturedStickerSets       []string                   `json:",optional"`
 }

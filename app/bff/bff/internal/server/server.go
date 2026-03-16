@@ -317,12 +317,13 @@ func (s *Server) Initialize() error {
 			mtproto.RegisterRPCStickersServer(
 				grpcServer,
 				stickers_helper.New(stickers_helper.Config{
-					RpcServerConf:    c.RpcServerConf,
-					TelegramBotToken: c.TelegramBotToken,
-					Mysql:            c.StickersMysql,
-					IdgenClient:      c.IdgenClient,
-					MediaClient:      c.MediaClient,
-					DfsClient:        c.DfsClient,
+					RpcServerConf:       c.RpcServerConf,
+					TelegramBotToken:    c.TelegramBotToken,
+					FeaturedStickerSets: c.FeaturedStickerSets,
+					Mysql:               c.StickersMysql,
+					IdgenClient:         c.IdgenClient,
+					MediaClient:         c.MediaClient,
+					DfsClient:           c.DfsClient,
 				}))
 		}
 	})
