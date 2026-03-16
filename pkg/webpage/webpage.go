@@ -47,6 +47,11 @@ type OGMeta struct {
 	Type        string
 	Image       string
 	ImageData   []byte // populated only for direct image URLs
+	EmbedURL    string // og:video or og:video:url
+	EmbedType   string // og:video:type (e.g. "text/html", "video/mp4")
+	EmbedWidth  string // og:video:width
+	EmbedHeight string // og:video:height
+	Author      string // article:author or og:article:author
 }
 
 // NormalizeURL ensures the URL has a scheme and is valid.
@@ -150,6 +155,18 @@ func ParseOGMeta(r io.Reader) (*OGMeta, error) {
 					og.Type = content
 				case prop == "og:image" && content != "":
 					og.Image = content
+				case (prop == "og:video" || prop == "og:video:url" || prop == "og:video:secure_url") && content != "" && og.EmbedURL == "":
+					og.EmbedURL = content
+				case prop == "og:video:type" && content != "":
+					og.EmbedType = content
+				case prop == "og:video:width" && content != "":
+					og.EmbedWidth = content
+				case prop == "og:video:height" && content != "":
+					og.EmbedHeight = content
+				case (prop == "article:author" || prop == "og:article:author") && content != "" && og.Author == "":
+					og.Author = content
+				case name == "author" && content != "" && og.Author == "":
+					og.Author = content
 				case name == "description" && content != "" && og.Description == "":
 					og.Description = content
 				}

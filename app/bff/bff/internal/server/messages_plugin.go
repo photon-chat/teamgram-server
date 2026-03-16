@@ -7,6 +7,7 @@ import (
 	"math"
 	"net/url"
 	"path"
+	"strconv"
 	"time"
 
 	"github.com/gogo/protobuf/proto"
@@ -205,6 +206,29 @@ func (p *messagesPluginImpl) GetWebpagePreview(ctx context.Context, rawURL strin
 		Date:        int32(time.Now().Unix()),
 	}).To_WebPage()
 
+	// Embed fields (YouTube, Vimeo, etc.)
+	if og.EmbedURL != "" {
+		wp.EmbedUrl = mtproto.MakeFlagsString(og.EmbedURL)
+		if og.EmbedType != "" {
+			wp.EmbedType = mtproto.MakeFlagsString(og.EmbedType)
+		}
+		if og.EmbedWidth != "" {
+			if w, err := strconv.Atoi(og.EmbedWidth); err == nil {
+				wp.EmbedWidth = mtproto.MakeFlagsInt32(int32(w))
+			}
+		}
+		if og.EmbedHeight != "" {
+			if h, err := strconv.Atoi(og.EmbedHeight); err == nil {
+				wp.EmbedHeight = mtproto.MakeFlagsInt32(int32(h))
+			}
+		}
+	}
+
+	// Author
+	if og.Author != "" {
+		wp.Author = mtproto.MakeFlagsString(og.Author)
+	}
+
 	// If og:image is present, download and attach as Photo (graceful degradation on failure)
 	if og.Image != "" {
 		imageURL := webpage.ResolveImageURL(rawURL, og.Image)
@@ -214,6 +238,11 @@ func (p *messagesPluginImpl) GetWebpagePreview(ctx context.Context, rawURL strin
 			photo := p.downloadAndUploadPhoto(ctx, imageURL)
 			if photo != nil {
 				wp.Photo = photo
+				// article 类型默认小图(54×54 inline)，只有媒体类 type 才设大图
+				switch pageType {
+				case "photo", "video", "embed", "gif", "document", "telegram_album":
+					wp.HasLargeMedia = true
+				}
 			}
 		}
 	}
