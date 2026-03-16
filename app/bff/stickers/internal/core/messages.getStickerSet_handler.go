@@ -33,7 +33,7 @@ func (c *StickersCore) MessagesGetStickerSet(in *mtproto.TLMessagesGetStickerSet
 		if setDO == nil {
 			return nil, mtproto.ErrStickerIdInvalid
 		}
-		return c.buildStickerSetFromCache(setDO)
+		return c.buildStickerSetFromCache(setDO, in.GetHash())
 	case mtproto.Predicate_inputStickerSetAnimatedEmoji:
 		shortName = "AnimatedEmojies"
 	case mtproto.Predicate_inputStickerSetAnimatedEmojiAnimations:
@@ -61,7 +61,7 @@ func (c *StickersCore) MessagesGetStickerSet(in *mtproto.TLMessagesGetStickerSet
 	}
 
 	if setDO != nil {
-		return c.buildStickerSetFromCache(setDO)
+		return c.buildStickerSetFromCache(setDO, in.GetHash())
 	}
 
 	// 2. Not cached — fetch from Bot API and download all files synchronously
@@ -79,11 +79,20 @@ func (c *StickersCore) MessagesGetStickerSet(in *mtproto.TLMessagesGetStickerSet
 }
 
 // buildStickerSetFromCache reconstructs the Messages_StickerSet from cached DB data.
-func (c *StickersCore) buildStickerSetFromCache(setDO *dataobject.StickerSetsDO) (*mtproto.Messages_StickerSet, error) {
+// requestHash is the client's cached hash; if non-zero and matching, returns stickerSetNotModified.
+func (c *StickersCore) buildStickerSetFromCache(setDO *dataobject.StickerSetsDO, requestHash int32) (*mtproto.Messages_StickerSet, error) {
 	docDOs, err := c.svcCtx.Dao.StickerSetDocumentsDAO.SelectBySetId(c.ctx, setDO.SetId)
 	if err != nil {
 		c.Logger.Errorf("buildStickerSetFromCache - SelectBySetId error: %v", err)
 		return nil, mtproto.ErrInternelServerError
+	}
+
+	// Compute hash from document IDs
+	hash := computeStickerSetHash(docDOs)
+
+	// NotModified: client already has the latest version
+	if requestHash != 0 && requestHash == hash {
+		return mtproto.MakeTLMessagesStickerSetNotModified(nil).To_Messages_StickerSet(), nil
 	}
 
 	documents := make([]*mtproto.Document, 0, len(docDOs))
@@ -98,6 +107,7 @@ func (c *StickersCore) buildStickerSetFromCache(setDO *dataobject.StickerSetsDO)
 
 	packs := buildStickerPacks(docDOs)
 	stickerSet := makeStickerSetFromDO(setDO)
+	stickerSet.Hash = hash
 
 	// Check if the current user has this set installed and set InstalledDate
 	installRow, err := c.svcCtx.Dao.UserInstalledStickerSetsDAO.SelectByUserAndSetId(c.ctx, c.MD.UserId, setDO.SetId)
@@ -195,6 +205,15 @@ func (c *StickersCore) fetchAndCacheStickerSet(shortName string) (*mtproto.Messa
 	isMasks := botResult.StickerType == "mask"
 	isEmojis := botResult.StickerType == "custom_emoji"
 
+	// Set ThumbDocId to first document for set-level thumbnail (triggers flags bit 8)
+	thumbDocId := int64(0)
+	if len(dfsDocs) > 0 && dfsDocs[0] != nil {
+		thumbDocId = dfsDocs[0].GetId()
+	}
+
+	// Compute hash from DFS document IDs
+	setHash := computeStickerSetHashFromDocs(dfsDocs)
+
 	setDO := &dataobject.StickerSetsDO{
 		SetId:        setId,
 		AccessHash:   setAccessHash,
@@ -207,8 +226,8 @@ func (c *StickersCore) fetchAndCacheStickerSet(shortName string) (*mtproto.Messa
 		IsEmojis:     isEmojis,
 		IsOfficial:   false,
 		StickerCount: int32(len(botResult.Stickers)),
-		Hash:         0,
-		ThumbDocId:   0,
+		Hash:         setHash,
+		ThumbDocId:   thumbDocId,
 		DataJson:     string(dataJson),
 		FetchedAt:    now,
 	}
@@ -227,7 +246,7 @@ func (c *StickersCore) fetchAndCacheStickerSet(shortName string) (*mtproto.Messa
 			c.Logger.Errorf("fetchAndCacheStickerSet - fallback SelectByShortName(%s) error: %v", shortName, err2)
 			return nil, mtproto.ErrInternelServerError
 		}
-		return c.buildStickerSetFromCache(cachedDO)
+		return c.buildStickerSetFromCache(cachedDO, 0)
 	}
 
 	for _, docDO := range stickerDocDOs {
@@ -352,6 +371,26 @@ var systemBuiltInPredicates = map[string]string{
 func isSystemBuiltInPredicate(predicate string) bool {
 	_, ok := systemBuiltInPredicates[predicate]
 	return ok
+}
+
+// computeStickerSetHash computes the Telegram-standard hash for a StickerSet from its document DOs.
+func computeStickerSetHash(docDOs []dataobject.StickerSetDocumentsDO) int32 {
+	var acc uint64
+	for _, d := range docDOs {
+		telegramCombineInt64Hash(&acc, uint64(d.DocumentId))
+	}
+	return int32(acc)
+}
+
+// computeStickerSetHashFromDocs computes the hash from DFS Document objects (used during initial fetch).
+func computeStickerSetHashFromDocs(docs []*mtproto.Document) int32 {
+	var acc uint64
+	for _, doc := range docs {
+		if doc != nil {
+			telegramCombineInt64Hash(&acc, uint64(doc.GetId()))
+		}
+	}
+	return int32(acc)
 }
 
 // makeEmptyStickerSet returns a valid but empty Messages_StickerSet for system built-in sets

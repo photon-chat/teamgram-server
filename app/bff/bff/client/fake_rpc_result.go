@@ -220,6 +220,16 @@ func (c *BFFProxyClient) TryReturnFakeRpcResult(object mtproto.TLObject) (mtprot
 			Hash:      0,
 			Reactions: []*mtproto.AvailableReaction{},
 		}).To_Messages_AvailableReactions(), nil
+	case "TLMessagesGetRecentReactions":
+		return mtproto.MakeTLMessagesReactions(&mtproto.Messages_Reactions{
+			Hash:      0,
+			Reactions: []*mtproto.Reaction{},
+		}).To_Messages_Reactions(), nil
+	case "TLMessagesGetTopReactions":
+		return mtproto.MakeTLMessagesReactions(&mtproto.Messages_Reactions{
+			Hash:      0,
+			Reactions: []*mtproto.Reaction{},
+		}).To_Messages_Reactions(), nil
 
 	// folders
 	case "TLMessagesGetDialogFilters":
@@ -295,6 +305,116 @@ func (c *BFFProxyClient) TryReturnFakeRpcResult(object mtproto.TLObject) (mtprot
 			Authorizations: []*mtproto.WebAuthorization{},
 			Users:          []*mtproto.User{},
 		}).To_Account_WebAuthorizations(), nil
+
+	// emoji groups / custom emojis
+	case "TLMessagesGetEmojiGroups":
+		return mtproto.MakeTLMessagesEmojiGroups(&mtproto.Messages_EmojiGroups{
+			Hash:   0,
+			Groups: []*mtproto.EmojiGroup{},
+		}).To_Messages_EmojiGroups(), nil
+	case "TLMessagesGetEmojiStatusGroups":
+		return mtproto.MakeTLMessagesEmojiGroups(&mtproto.Messages_EmojiGroups{
+			Hash:   0,
+			Groups: []*mtproto.EmojiGroup{},
+		}).To_Messages_EmojiGroups(), nil
+	case "TLMessagesGetEmojiProfilePhotoGroups":
+		return mtproto.MakeTLMessagesEmojiGroups(&mtproto.Messages_EmojiGroups{
+			Hash:   0,
+			Groups: []*mtproto.EmojiGroup{},
+		}).To_Messages_EmojiGroups(), nil
+	case "TLMessagesGetEmojiStickers":
+		return mtproto.MakeTLMessagesAllStickers(&mtproto.Messages_AllStickers{
+			Hash: 0,
+			Sets: []*mtproto.StickerSet{},
+		}).To_Messages_AllStickers(), nil
+	case "TLMessagesGetFeaturedEmojiStickers":
+		return mtproto.MakeTLMessagesFeaturedStickers(&mtproto.Messages_FeaturedStickers{
+			Count:  0,
+			Hash:   0,
+			Sets:   []*mtproto.StickerSetCovered{},
+			Unread: []int64{},
+		}).To_Messages_FeaturedStickers(), nil
+
+	// emoji statuses
+	case "TLAccountGetRecentEmojiStatuses":
+		return mtproto.MakeTLAccountEmojiStatuses(&mtproto.Account_EmojiStatuses{
+			Hash:     0,
+			Statuses: []*mtproto.EmojiStatus{},
+		}).To_Account_EmojiStatuses(), nil
+	case "TLAccountGetDefaultEmojiStatuses":
+		return mtproto.MakeTLAccountEmojiStatuses(&mtproto.Account_EmojiStatuses{
+			Hash:     0,
+			Statuses: []*mtproto.EmojiStatus{},
+		}).To_Account_EmojiStatuses(), nil
+
+	// default profile/group photo emojis
+	case "TLAccountGetDefaultProfilePhotoEmojis":
+		return mtproto.MakeTLEmojiList(&mtproto.EmojiList{
+			Hash:       0,
+			DocumentId: []int64{},
+		}).To_EmojiList(), nil
+	case "TLAccountGetDefaultGroupPhotoEmojis":
+		return mtproto.MakeTLEmojiList(&mtproto.EmojiList{
+			Hash:       0,
+			DocumentId: []int64{},
+		}).To_EmojiList(), nil
+
+	// ringtones
+	case "TLAccountGetSavedRingtones":
+		return mtproto.MakeTLAccountSavedRingtones(&mtproto.Account_SavedRingtones{
+			Hash:      0,
+			Ringtones: []*mtproto.Document{},
+		}).To_Account_SavedRingtones(), nil
+
+	// premium
+	case "TLHelpGetPremiumPromo":
+		return mtproto.MakeTLHelpPremiumPromo(&mtproto.Help_PremiumPromo{
+			StatusText:     "",
+			StatusEntities: []*mtproto.MessageEntity{},
+			VideoSections:  []string{},
+			Videos:         []*mtproto.Document{},
+			Users:          []*mtproto.User{},
+		}).To_Help_PremiumPromo(), nil
+
+	// default history TTL
+	case "TLMessagesGetDefaultHistoryTTL":
+		return mtproto.MakeTLDefaultHistoryTTL(&mtproto.DefaultHistoryTTL{
+			Period: 0,
+		}).To_DefaultHistoryTTL(), nil
+
+	// attach menu bots
+	case "TLMessagesGetAttachMenuBots":
+		return mtproto.MakeTLAttachMenuBots(&mtproto.AttachMenuBots{
+			Hash:  0,
+			Bots:  []*mtproto.AttachMenuBot{},
+			Users: []*mtproto.User{},
+		}).To_AttachMenuBots(), nil
+
+	// suggested dialog filters
+	case "TLMessagesGetSuggestedDialogFilters":
+		return &mtproto.Vector_DialogFilterSuggested{
+			Datas: []*mtproto.DialogFilterSuggested{},
+		}, nil
+
+	// scheduled messages
+	case "TLMessagesGetScheduledHistory":
+		return mtproto.MakeTLMessagesMessages(&mtproto.Messages_Messages{
+			Messages: []*mtproto.Message{},
+			Chats:    []*mtproto.Chat{},
+			Users:    []*mtproto.User{},
+		}).To_Messages_Messages(), nil
+
+	// recent locations
+	case "TLMessagesGetRecentLocations":
+		return mtproto.MakeTLMessagesMessages(&mtproto.Messages_Messages{
+			Messages: []*mtproto.Message{},
+			Chats:    []*mtproto.Chat{},
+			Users:    []*mtproto.User{},
+		}).To_Messages_Messages(), nil
+
+	// help test
+	case "TLHelpTest":
+		return mtproto.BoolTrue, nil
 	}
 
 	logx.Errorf("%s - method not impl.", rt.Name())

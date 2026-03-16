@@ -1134,3 +1134,51 @@ func containsCI(s, substr string) bool {
 		len(s) >= len(substr) &&
 		strings.Contains(strings.ToLower(s), strings.ToLower(substr))
 }
+
+// TestComputeStickerSetHash verifies StickerSet hash computation.
+func TestComputeStickerSetHash(t *testing.T) {
+	// Empty set → hash 0
+	emptyHash := computeStickerSetHash(nil)
+	if emptyHash != 0 {
+		t.Errorf("empty set should have hash 0, got %d", emptyHash)
+	}
+
+	// Non-empty set → non-zero hash
+	docDOs := []dataobject.StickerSetDocumentsDO{
+		{DocumentId: 1001},
+		{DocumentId: 1002},
+		{DocumentId: 1003},
+	}
+	hash := computeStickerSetHash(docDOs)
+	if hash == 0 {
+		t.Error("non-empty set should have non-zero hash")
+	}
+
+	// Deterministic
+	hash2 := computeStickerSetHash(docDOs)
+	if hash != hash2 {
+		t.Errorf("hash not deterministic: %d vs %d", hash, hash2)
+	}
+
+	// computeStickerSetHashFromDocs should match
+	docs := []*mtproto.Document{
+		{Id: 1001},
+		{Id: 1002},
+		{Id: 1003},
+	}
+	hashFromDocs := computeStickerSetHashFromDocs(docs)
+	if hash != hashFromDocs {
+		t.Errorf("hash mismatch: fromDOs=%d, fromDocs=%d", hash, hashFromDocs)
+	}
+
+	// Different docs → different hash
+	docDOs2 := []dataobject.StickerSetDocumentsDO{
+		{DocumentId: 9999},
+	}
+	hash3 := computeStickerSetHash(docDOs2)
+	if hash == hash3 {
+		t.Error("different docs should produce different hash")
+	}
+
+	t.Logf("computeStickerSetHash: PASS (hash=%d, hash3=%d)", hash, hash3)
+}
