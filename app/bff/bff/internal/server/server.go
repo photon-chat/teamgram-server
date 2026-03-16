@@ -228,7 +228,7 @@ func (s *Server) Initialize() error {
 		// messages_helper
 		var mp messages_plugin.MessagesPlugin
 		if c.StickersMysql.DSN != "" {
-			mp = newMessagesPlugin(c.StickersMysql, c.MediaClient, c.DfsClient, c.IdgenClient)
+			mp = newMessagesPlugin(c.StickersMysql, c.MediaClient, c.DfsClient, c.IdgenClient, c.BizServiceClient)
 		}
 		mtproto.RegisterRPCMessagesServer(
 			grpcServer,

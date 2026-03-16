@@ -3,11 +3,13 @@ package server
 import (
 	"context"
 	"encoding/base64"
+	"fmt"
 	"hash/fnv"
 	"math"
 	"net/url"
 	"path"
 	"strconv"
+	"strings"
 	"time"
 
 	"github.com/gogo/protobuf/proto"
@@ -15,6 +17,12 @@ import (
 	"github.com/teamgram/marmota/pkg/net/rpcx"
 	"github.com/teamgram/marmota/pkg/stores/sqlx"
 	"github.com/teamgram/proto/mtproto"
+	chat_client "github.com/teamgram/teamgram-server/app/service/biz/chat/client"
+	"github.com/teamgram/teamgram-server/app/service/biz/chat/chat"
+	user_client "github.com/teamgram/teamgram-server/app/service/biz/user/client"
+	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
+	username_client "github.com/teamgram/teamgram-server/app/service/biz/username/client"
+	"github.com/teamgram/teamgram-server/app/service/biz/username/username"
 	dfs_client "github.com/teamgram/teamgram-server/app/service/dfs/client"
 	"github.com/teamgram/teamgram-server/app/service/dfs/dfs"
 	idgen_client "github.com/teamgram/teamgram-server/app/service/idgen/client"
@@ -32,18 +40,25 @@ const (
 )
 
 type messagesPluginImpl struct {
-	db           *sqlx.DB
-	mediaClient  media_client.MediaClient
-	dfsClient    dfs_client.DfsClient
-	idgenClient2 idgen_client.IDGenClient2
+	db             *sqlx.DB
+	mediaClient    media_client.MediaClient
+	dfsClient      dfs_client.DfsClient
+	idgenClient2   idgen_client.IDGenClient2
+	usernameClient username_client.UsernameClient
+	userClient     user_client.UserClient
+	chatClient     chat_client.ChatClient
 }
 
-func newMessagesPlugin(mysqlConf sqlx.Config, mediaConf, dfsConf, idgenConf zrpc.RpcClientConf) *messagesPluginImpl {
+func newMessagesPlugin(mysqlConf sqlx.Config, mediaConf, dfsConf, idgenConf, bizServiceConf zrpc.RpcClientConf) *messagesPluginImpl {
+	bizConn := rpcx.GetCachedRpcClient(bizServiceConf)
 	return &messagesPluginImpl{
-		db:           sqlx.NewMySQL(&mysqlConf),
-		mediaClient:  media_client.NewMediaClient(rpcx.GetCachedRpcClient(mediaConf)),
-		dfsClient:    dfs_client.NewDfsClient(rpcx.GetCachedRpcClient(dfsConf)),
-		idgenClient2: idgen_client.NewIDGenClient2(rpcx.GetCachedRpcClient(idgenConf)),
+		db:             sqlx.NewMySQL(&mysqlConf),
+		mediaClient:    media_client.NewMediaClient(rpcx.GetCachedRpcClient(mediaConf)),
+		dfsClient:      dfs_client.NewDfsClient(rpcx.GetCachedRpcClient(dfsConf)),
+		idgenClient2:   idgen_client.NewIDGenClient2(rpcx.GetCachedRpcClient(idgenConf)),
+		usernameClient: username_client.NewUsernameClient(bizConn),
+		userClient:     user_client.NewUserClient(bizConn),
+		chatClient:     chat_client.NewChatClient(bizConn),
 	}
 }
 
@@ -129,6 +144,258 @@ func (p *messagesPluginImpl) downloadAndUploadPhoto(ctx context.Context, imageUR
 }
 
 // ============================================================================
+// isTelegramHost — check if hostname is t.me or telegram.me
+// ============================================================================
+
+func isTelegramHost(hostname string) bool {
+	h := strings.ToLower(hostname)
+	return h == "t.me" || h == "telegram.me"
+}
+
+// ============================================================================
+// makePageId — generate stable page ID from URL
+// ============================================================================
+
+func makePageId(rawURL string) int64 {
+	h := fnv.New64a()
+	h.Write([]byte(rawURL))
+	return int64(h.Sum64())
+}
+
+// ============================================================================
+// handleTelegramURL — resolve t.me/* internal links
+// ============================================================================
+
+func (p *messagesPluginImpl) handleTelegramURL(ctx context.Context, rawURL string, parsed *url.URL) (*mtproto.WebPage, error) {
+	log := logx.WithContext(ctx)
+
+	pathStr := strings.TrimPrefix(parsed.Path, "/")
+	pathStr = strings.TrimSuffix(pathStr, "/")
+	if pathStr == "" {
+		return nil, nil
+	}
+	segments := strings.Split(pathStr, "/")
+
+	pageId := makePageId(rawURL)
+	displayUrl := parsed.Host + parsed.Path
+
+	// t.me/addstickers/{setname}
+	if len(segments) == 2 && segments[0] == "addstickers" {
+		return p.buildStickerSetPage(ctx, pageId, rawURL, displayUrl, segments[1], false)
+	}
+
+	// t.me/addemoji/{setname}
+	if len(segments) == 2 && segments[0] == "addemoji" {
+		return p.buildStickerSetPage(ctx, pageId, rawURL, displayUrl, segments[1], true)
+	}
+
+	// t.me/+{hash} — invite link
+	if len(segments) == 1 && strings.HasPrefix(segments[0], "+") {
+		return p.buildInvitePage(ctx, pageId, rawURL, displayUrl)
+	}
+
+	// t.me/c/{channelId}/{msgId} — private channel message
+	if len(segments) >= 3 && segments[0] == "c" {
+		return p.buildMessagePage(pageId, rawURL, displayUrl), nil
+	}
+
+	// t.me/{username}/{msgId} — public channel/group message
+	if len(segments) == 2 {
+		if _, err := strconv.ParseInt(segments[1], 10, 64); err == nil {
+			// second segment is a number -> message link
+			return p.buildMessagePage(pageId, rawURL, displayUrl), nil
+		}
+	}
+
+	// t.me/{username} — resolve username to user/channel/chat
+	if len(segments) == 1 {
+		name := segments[0]
+		// skip known reserved paths
+		reserved := map[string]bool{
+			"bg": true, "addtheme": true, "addlist": true,
+			"boost": true, "share": true, "proxy": true, "socks": true,
+		}
+		if reserved[strings.ToLower(name)] {
+			return nil, nil
+		}
+		return p.buildUsernamePage(ctx, pageId, rawURL, displayUrl, name, log)
+	}
+
+	return nil, nil
+}
+
+func (p *messagesPluginImpl) buildStickerSetPage(ctx context.Context, pageId int64, rawURL, displayUrl, setName string, isEmoji bool) (*mtproto.WebPage, error) {
+	wpType := "telegram_stickerset"
+	title := "Stickers"
+	if isEmoji {
+		title = "Emoji"
+	}
+	wp := mtproto.MakeTLWebPage(&mtproto.WebPage{
+		Id:          pageId,
+		Url_STRING:  rawURL,
+		DisplayUrl:  displayUrl,
+		Hash:        int32(time.Now().Unix()),
+		Type:        mtproto.MakeFlagsString(wpType),
+		SiteName:    mtproto.MakeFlagsString("Telegram"),
+		Title:       mtproto.MakeFlagsString(title),
+		Description: mtproto.MakeFlagsString(setName),
+		Date:        int32(time.Now().Unix()),
+	}).To_WebPage()
+	_ = ctx
+	return wp, nil
+}
+
+func (p *messagesPluginImpl) buildInvitePage(ctx context.Context, pageId int64, rawURL, displayUrl string) (*mtproto.WebPage, error) {
+	wp := mtproto.MakeTLWebPage(&mtproto.WebPage{
+		Id:          pageId,
+		Url_STRING:  rawURL,
+		DisplayUrl:  displayUrl,
+		Hash:        int32(time.Now().Unix()),
+		Type:        mtproto.MakeFlagsString("telegram_chat_request"),
+		SiteName:    mtproto.MakeFlagsString("Telegram"),
+		Title:       mtproto.MakeFlagsString("Invite Link"),
+		Date:        int32(time.Now().Unix()),
+	}).To_WebPage()
+	_ = ctx
+	return wp, nil
+}
+
+func (p *messagesPluginImpl) buildMessagePage(pageId int64, rawURL, displayUrl string) *mtproto.WebPage {
+	return mtproto.MakeTLWebPage(&mtproto.WebPage{
+		Id:          pageId,
+		Url_STRING:  rawURL,
+		DisplayUrl:  displayUrl,
+		Hash:        int32(time.Now().Unix()),
+		Type:        mtproto.MakeFlagsString("telegram_message"),
+		SiteName:    mtproto.MakeFlagsString("Telegram"),
+		Title:       mtproto.MakeFlagsString("Message"),
+		Date:        int32(time.Now().Unix()),
+	}).To_WebPage()
+}
+
+func (p *messagesPluginImpl) buildUsernamePage(ctx context.Context, pageId int64, rawURL, displayUrl, name string, log logx.Logger) (*mtproto.WebPage, error) {
+	peer, err := p.usernameClient.UsernameResolveUsername(ctx, &username.TLUsernameResolveUsername{
+		Username: name,
+	})
+	if err != nil || peer == nil {
+		log.Infof("handleTelegramURL - username %q not found: %v", name, err)
+		return nil, nil
+	}
+
+	switch peer.GetPredicateName() {
+	case mtproto.Predicate_peerUser:
+		return p.buildUserPage(ctx, pageId, rawURL, displayUrl, peer.GetUserId(), log)
+	case mtproto.Predicate_peerChat:
+		return p.buildChatPage(ctx, pageId, rawURL, displayUrl, peer.GetChatId(), log)
+	case mtproto.Predicate_peerChannel:
+		return p.buildChannelPage(ctx, pageId, rawURL, displayUrl, peer.GetChannelId(), log)
+	default:
+		return nil, nil
+	}
+}
+
+func (p *messagesPluginImpl) buildUserPage(ctx context.Context, pageId int64, rawURL, displayUrl string, userId int64, log logx.Logger) (*mtproto.WebPage, error) {
+	immUser, err := p.userClient.UserGetImmutableUser(ctx, &userpb.TLUserGetImmutableUser{
+		Id: userId,
+	})
+	if err != nil || immUser == nil || immUser.GetUser() == nil {
+		log.Infof("handleTelegramURL - user %d not found: %v", userId, err)
+		return nil, nil
+	}
+	ud := immUser.GetUser()
+	displayName := strings.TrimSpace(ud.GetFirstName() + " " + ud.GetLastName())
+	if displayName == "" {
+		displayName = ud.GetUsername()
+	}
+
+	desc := ""
+	if ud.GetAbout() != nil {
+		desc = ud.GetAbout().GetValue()
+	}
+
+	wp := mtproto.MakeTLWebPage(&mtproto.WebPage{
+		Id:          pageId,
+		Url_STRING:  rawURL,
+		DisplayUrl:  displayUrl,
+		Hash:        int32(time.Now().Unix()),
+		Type:        mtproto.MakeFlagsString("telegram_user"),
+		SiteName:    mtproto.MakeFlagsString("Telegram"),
+		Title:       mtproto.MakeFlagsString(displayName),
+		Date:        int32(time.Now().Unix()),
+	}).To_WebPage()
+
+	if desc != "" {
+		wp.Description = mtproto.MakeFlagsString(desc)
+	}
+
+	return wp, nil
+}
+
+func (p *messagesPluginImpl) buildChatPage(ctx context.Context, pageId int64, rawURL, displayUrl string, chatId int64, log logx.Logger) (*mtproto.WebPage, error) {
+	mutableChat, err := p.chatClient.ChatGetMutableChat(ctx, &chat.TLChatGetMutableChat{
+		ChatId: chatId,
+	})
+	if err != nil || mutableChat == nil || mutableChat.GetChat() == nil {
+		log.Infof("handleTelegramURL - chat %d not found: %v", chatId, err)
+		return nil, nil
+	}
+	chatData := mutableChat.GetChat()
+
+	desc := chatData.GetAbout()
+	if desc == "" {
+		desc = fmt.Sprintf("%d members", chatData.GetParticipantsCount())
+	}
+
+	wp := mtproto.MakeTLWebPage(&mtproto.WebPage{
+		Id:          pageId,
+		Url_STRING:  rawURL,
+		DisplayUrl:  displayUrl,
+		Hash:        int32(time.Now().Unix()),
+		Type:        mtproto.MakeFlagsString("telegram_chat"),
+		SiteName:    mtproto.MakeFlagsString("Telegram"),
+		Title:       mtproto.MakeFlagsString(chatData.GetTitle()),
+		Description: mtproto.MakeFlagsString(desc),
+		Date:        int32(time.Now().Unix()),
+	}).To_WebPage()
+
+	return wp, nil
+}
+
+func (p *messagesPluginImpl) buildChannelPage(ctx context.Context, pageId int64, rawURL, displayUrl string, channelId int64, log logx.Logger) (*mtproto.WebPage, error) {
+	// In teamgram, channels are also stored as chats
+	mutableChat, err := p.chatClient.ChatGetMutableChat(ctx, &chat.TLChatGetMutableChat{
+		ChatId: channelId,
+	})
+	if err != nil || mutableChat == nil || mutableChat.GetChat() == nil {
+		log.Infof("handleTelegramURL - channel %d not found: %v", channelId, err)
+		return nil, nil
+	}
+	chatData := mutableChat.GetChat()
+
+	// TODO: distinguish channel vs megagroup if chat metadata provides that info
+	wpType := "telegram_channel"
+
+	desc := chatData.GetAbout()
+	if desc == "" {
+		desc = fmt.Sprintf("%d members", chatData.GetParticipantsCount())
+	}
+
+	wp := mtproto.MakeTLWebPage(&mtproto.WebPage{
+		Id:          pageId,
+		Url_STRING:  rawURL,
+		DisplayUrl:  displayUrl,
+		Hash:        int32(time.Now().Unix()),
+		Type:        mtproto.MakeFlagsString(wpType),
+		SiteName:    mtproto.MakeFlagsString("Telegram"),
+		Title:       mtproto.MakeFlagsString(chatData.GetTitle()),
+		Description: mtproto.MakeFlagsString(desc),
+		Date:        int32(time.Now().Unix()),
+	}).To_WebPage()
+
+	return wp, nil
+}
+
+// ============================================================================
 // GetWebpagePreview — fetch URL and extract OG meta tags to build a WebPage
 // ============================================================================
 
@@ -146,10 +413,13 @@ func (p *messagesPluginImpl) GetWebpagePreview(ctx context.Context, rawURL strin
 		return nil, nil
 	}
 
+	// t.me / telegram.me internal links — route to internal resolver
+	if isTelegramHost(parsed.Hostname()) {
+		return p.handleTelegramURL(ctx, rawURL, parsed)
+	}
+
 	// Generate a stable ID from URL
-	h := fnv.New64a()
-	h.Write([]byte(rawURL))
-	pageId := int64(h.Sum64())
+	pageId := makePageId(rawURL)
 
 	displayUrl := parsed.Host + parsed.Path
 	if len(displayUrl) > 80 {

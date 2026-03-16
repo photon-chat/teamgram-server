@@ -136,7 +136,55 @@ defaultWebpageImageSizeIsSmall(webpage):
 | 1 | `document` | 嵌入视频的实际文件（需下载 + 上传为 Document） | 高 |
 | 2 | `cached_page` (Instant View) | Telegram 独有的 IV 页面缓存 | 极高（需 IV 引擎） |
 | 3 | `duration` | 视频时长（og:video 没有标准 meta，需其他方式获取） | 中 |
-| 4 | 特殊 type 处理 | `telegram_channel`、`telegram_user` 等需要内部逻辑 | 各不相同 |
+
+---
+
+## 5.1 telegram_* 内部链接 type — 架构说明
+
+### 关键结论
+
+**`type` 字段完全由服务端设置**，客户端只读取它来决定 UI 布局和按钮文案。
+
+iOS 代码确认链路：
+1. 客户端发消息时提取 URL → 调用 `messages.getWebPagePreview(message: url)`
+2. 服务端返回 `webPage` TL 对象，其中 `type` 字段直接传递（`TelegramMediaWebpage.swift:47`）
+3. 客户端读取 type → `ChatMessageWebpageBubbleContentNode` 决定按钮文案和布局
+
+### t.me URL → type 映射表
+
+| URL 模式 | type | Action Button |
+|----------|------|---------------|
+| `t.me/{username}` (频道) | `telegram_channel` | "View Channel" |
+| `t.me/{username}` (超级群) | `telegram_megagroup` | "View Group" |
+| `t.me/{username}` (普通群) | `telegram_chat` | "View Group" |
+| `t.me/{username}` (用户) | `telegram_user` | "Send Message" |
+| `t.me/{username}?profile` | `telegram_user` | "Open Profile" |
+| `t.me/{channel}/{msgId}` | `telegram_message` | "View Message" |
+| `t.me/c/{channelId}/{msgId}` | `telegram_message` | "View Message" |
+| `t.me/addstickers/{setname}` | `telegram_stickerset` | "View Stickers" |
+| `t.me/addemoji/{setname}` | `telegram_stickerset` | "View Emojis" |
+| `t.me/bg/{slug}` | `telegram_background` | "View Background" |
+| `t.me/addtheme/{name}` | `telegram_theme` | "View Theme" |
+| `t.me/{bot}/{app}` | `telegram_botapp` | "Open Bot App" |
+| `t.me/{username}/s/{id}` | `telegram_story` | "Open Story" |
+| `t.me/addlist/{slug}` | `telegram_chatlist` | "Open Chat Folder" |
+| `t.me/boost/{channel}` | `telegram_channel_boost` | "Boost Channel" |
+| `t.me/{channel}?voicechat` | `telegram_voicechat` | 语音聊天 |
+| `t.me/+{hash}` (频道邀请) | `telegram_channel_request` | "Request to Join" |
+| `t.me/+{hash}` (群邀请) | `telegram_chat_request` | "Request to Join" |
+
+### 实现方案
+
+在 `GetWebpagePreview` 中先检查是否为 t.me URL，如果是则走内部路由：
+1. 解析 URL path 确定链接类型
+2. 查询内部服务（username 解析、频道/用户/贴纸包信息）
+3. 构造带正确 type 的 WebPage 返回
+
+需要的内部服务：
+- `UsernameClient` — 解析 username → peer (user/channel/chat)
+- `UserClient` — 获取用户信息（名称、头像）
+- `ChatClient` — 获取群/频道信息（标题、头像、成员数）
+- `StickerSetsDAO` — 获取贴纸包信息
 
 ---
 
