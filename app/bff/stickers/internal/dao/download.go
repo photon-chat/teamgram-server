@@ -20,7 +20,7 @@ import (
 
 const (
 	filePartSize    = 512 * 1024 // 512KB per part
-	downloadWorkers = 3          // conservative concurrency to smooth CPU/memory usage
+	downloadWorkers = 10
 )
 
 // StickerDownloadInput holds the info needed to download one sticker file and upload it to DFS.
