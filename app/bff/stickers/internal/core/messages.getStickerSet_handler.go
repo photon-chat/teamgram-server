@@ -34,6 +34,16 @@ func (c *StickersCore) MessagesGetStickerSet(in *mtproto.TLMessagesGetStickerSet
 			return nil, mtproto.ErrStickerIdInvalid
 		}
 		return c.buildStickerSetFromCache(setDO)
+	case mtproto.Predicate_inputStickerSetAnimatedEmoji:
+		shortName = "AnimatedEmojies"
+	case mtproto.Predicate_inputStickerSetAnimatedEmojiAnimations:
+		shortName = "EmojiAnimations"
+	case mtproto.Predicate_inputStickerSetEmojiGenericAnimations:
+		shortName = "EmojiGenericAnimations"
+	case mtproto.Predicate_inputStickerSetEmojiDefaultStatuses:
+		shortName = "StatusPack"
+	case mtproto.Predicate_inputStickerSetEmojiDefaultTopicIcons:
+		shortName = "Topics"
 	default:
 		c.Logger.Errorf("messages.getStickerSet - unsupported predicate: %s", stickerSet.GetPredicateName())
 		return nil, mtproto.ErrStickerIdInvalid
@@ -55,7 +65,17 @@ func (c *StickersCore) MessagesGetStickerSet(in *mtproto.TLMessagesGetStickerSet
 	}
 
 	// 2. Not cached — fetch from Bot API and download all files synchronously
-	return c.fetchAndCacheStickerSet(shortName)
+	result, err := c.fetchAndCacheStickerSet(shortName)
+	if err != nil {
+		// For system built-in sets, return an empty set instead of an error
+		// so the client can silently handle it (instead of crashing on STICKER_ID_INVALID)
+		if isSystemBuiltInPredicate(stickerSet.GetPredicateName()) {
+			c.Logger.Infof("messages.getStickerSet - system set %s fetch failed, returning empty set: %v", shortName, err)
+			return c.makeEmptyStickerSet(shortName), nil
+		}
+		return nil, err
+	}
+	return result, nil
 }
 
 // buildStickerSetFromCache reconstructs the Messages_StickerSet from cached DB data.
@@ -119,12 +139,18 @@ func (c *StickersCore) fetchAndCacheStickerSet(shortName string) (*mtproto.Messa
 	// Build download inputs for each sticker
 	inputs := make([]dao.StickerDownloadInput, 0, len(botResult.Stickers))
 	for _, sticker := range botResult.Stickers {
-		inputs = append(inputs, dao.StickerDownloadInput{
+		input := dao.StickerDownloadInput{
 			BotFileId:       sticker.FileId,
 			BotFileUniqueId: sticker.FileUniqueId,
 			MimeType:        stickerMimeType(sticker),
 			Attributes:      buildDocumentAttributes(sticker, setId, setAccessHash),
-		})
+		}
+		if sticker.Thumbnail != nil {
+			input.ThumbFileId = sticker.Thumbnail.FileId
+			input.ThumbWidth = sticker.Thumbnail.Width
+			input.ThumbHeight = sticker.Thumbnail.Height
+		}
+		inputs = append(inputs, input)
 	}
 
 	// Download all files and upload to DFS synchronously
@@ -312,6 +338,37 @@ func buildStickerPacks2(docDOs []*dataobject.StickerSetDocumentsDO) []*mtproto.S
 		}).To_StickerPack())
 	}
 	return packs
+}
+
+// systemBuiltInPredicates maps system built-in sticker set predicates to their shortNames.
+var systemBuiltInPredicates = map[string]string{
+	mtproto.Predicate_inputStickerSetAnimatedEmoji:             "AnimatedEmojies",
+	mtproto.Predicate_inputStickerSetAnimatedEmojiAnimations:   "EmojiAnimations",
+	mtproto.Predicate_inputStickerSetEmojiGenericAnimations:    "EmojiGenericAnimations",
+	mtproto.Predicate_inputStickerSetEmojiDefaultStatuses:      "StatusPack",
+	mtproto.Predicate_inputStickerSetEmojiDefaultTopicIcons:    "Topics",
+}
+
+func isSystemBuiltInPredicate(predicate string) bool {
+	_, ok := systemBuiltInPredicates[predicate]
+	return ok
+}
+
+// makeEmptyStickerSet returns a valid but empty Messages_StickerSet for system built-in sets
+// that cannot be fetched from Bot API. This prevents the client from receiving STICKER_ID_INVALID.
+func (c *StickersCore) makeEmptyStickerSet(shortName string) *mtproto.Messages_StickerSet {
+	return mtproto.MakeTLMessagesStickerSet(&mtproto.Messages_StickerSet{
+		Set: mtproto.MakeTLStickerSet(&mtproto.StickerSet{
+			Id:        0,
+			Title:     shortName,
+			ShortName: shortName,
+			Count:     0,
+			Hash:      0,
+		}).To_StickerSet(),
+		Packs:     []*mtproto.StickerPack{},
+		Keywords:  []*mtproto.StickerKeyword{},
+		Documents: []*mtproto.Document{},
+	}).To_Messages_StickerSet()
 }
 
 func makeStickerSetFromDO(setDO *dataobject.StickerSetsDO) *mtproto.StickerSet {

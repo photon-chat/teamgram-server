@@ -112,18 +112,12 @@ func (c *DfsCore) DfsUploadDocumentFileV2(in *dfs.TLDfsUploadDocumentFileV2) (*m
 	if isThumb {
 		var (
 			thumb image.Image
-			// photoId = idgen.GetUUID()
-			// ext2     = ".jpg"
-			// extType2 = model.GetStorageFileTypeConstructor(ext2)
-			// secretId = int64(extType2)<<32 | int64(rand.Uint32())
 		)
 
 		cacheData, err = r.ReadAll(c.ctx)
 		if err != nil {
 			c.Logger.Errorf("dfs.uploadDocumentFile - %v", err)
 			return nil, mtproto.ErrWallpaperFileInvalid
-		} else {
-			// log.Debugf("cacheData: %s", hex.EncodeToString(cacheData))
 		}
 
 		// build photoStrippedSize
@@ -147,10 +141,8 @@ func (c *DfsCore) DfsUploadDocumentFileV2(in *dfs.TLDfsUploadDocumentFileV2) (*m
 			)
 			if thumb.Bounds().Dx() >= thumb.Bounds().Dy() {
 				mThumb = imaging.Resize(thumb, 320, 0)
-				// err = imaging.Encode(mThumbData, mThumb, 80)
 			} else {
 				mThumb = imaging.Resize(thumb, 0, 320)
-				// err = imaging.Encode(mThumbData, imaging.Resize(thumb, 0, 320), 80)
 			}
 
 			err = imaging.EncodeJpeg(mThumbData, mThumb)
@@ -161,7 +153,6 @@ func (c *DfsCore) DfsUploadDocumentFileV2(in *dfs.TLDfsUploadDocumentFileV2) (*m
 
 			// upload thumb
 			path := fmt.Sprintf("%s/%d.dat", mtproto.PhotoSZMediumType, documentId)
-			// upload
 			c.svcCtx.Dao.PutPhotoFile(c.ctx, path, mThumbData.Bytes())
 
 			document.Thumbs = []*mtproto.PhotoSize{
@@ -177,10 +168,62 @@ func (c *DfsCore) DfsUploadDocumentFileV2(in *dfs.TLDfsUploadDocumentFileV2) (*m
 				}).To_PhotoSize(),
 			}
 		} else {
-			// ioutil.WriteFile("./t.jpg", cacheData, 0644)
 			c.Logger.Errorf("dfs.uploadDocumentFile - error: %v", err)
-			// return nil, err
 			isThumb = false
+		}
+	}
+
+	// Handle externally-provided thumbnail (e.g. sticker thumbnails from Bot API)
+	if !isThumb && in.GetMedia().GetThumb() != nil {
+		thumbFile := in.GetMedia().GetThumb()
+		thumbR, thumbErr := c.svcCtx.Dao.OpenFile(c.ctx, in.GetCreator(), thumbFile.Id, thumbFile.Parts)
+		if thumbErr == nil {
+			thumbData, thumbErr2 := thumbR.ReadAll(c.ctx)
+			if thumbErr2 == nil && len(thumbData) > 0 {
+				thumbImg, thumbErr3 := imaging.Decode(bytes.NewReader(thumbData))
+				if thumbErr3 == nil {
+					// Generate stripped size
+					stripped := bytes2.NewBuffer(make([]byte, 0, 4096))
+					if thumbImg.Bounds().Dx() >= thumbImg.Bounds().Dy() {
+						thumbErr3 = imaging.EncodeStripped(stripped, imaging.Resize(thumbImg, 40, 0), 30)
+					} else {
+						thumbErr3 = imaging.EncodeStripped(stripped, imaging.Resize(thumbImg, 0, 40), 30)
+					}
+
+					if thumbErr3 == nil {
+						// Encode thumb as JPEG for storage
+						mThumbData := bytes2.NewBuffer(make([]byte, 0, len(thumbData)))
+						var mThumb image.Image
+						if thumbImg.Bounds().Dx() >= thumbImg.Bounds().Dy() {
+							mThumb = imaging.Resize(thumbImg, 128, 0)
+						} else {
+							mThumb = imaging.Resize(thumbImg, 0, 128)
+						}
+
+						if encErr := imaging.EncodeJpeg(mThumbData, mThumb); encErr == nil {
+							path := fmt.Sprintf("%s/%d.dat", mtproto.PhotoSZMediumType, documentId)
+							c.svcCtx.Dao.PutPhotoFile(c.ctx, path, mThumbData.Bytes())
+
+							document.Thumbs = []*mtproto.PhotoSize{
+								mtproto.MakeTLPhotoStrippedSize(&mtproto.PhotoSize{
+									Type:  mtproto.PhotoSZStrippedType,
+									Bytes: stripped.Bytes(),
+								}).To_PhotoSize(),
+								mtproto.MakeTLPhotoSize(&mtproto.PhotoSize{
+									Type:  mtproto.PhotoSZMediumType,
+									W:     int32(mThumb.Bounds().Dx()),
+									H:     int32(mThumb.Bounds().Dy()),
+									Size2: int32(len(mThumbData.Bytes())),
+								}).To_PhotoSize(),
+							}
+							isThumb = true
+							c.Logger.Infof("dfs.uploadDocumentFile - generated thumb from external thumbnail for doc %d", documentId)
+						}
+					}
+				} else {
+					c.Logger.Infof("dfs.uploadDocumentFile - cannot decode external thumbnail: %v", thumbErr3)
+				}
+			}
 		}
 	}
 

@@ -29,6 +29,9 @@ type StickerDownloadInput struct {
 	BotFileUniqueId string
 	MimeType        string
 	Attributes      []*mtproto.DocumentAttribute
+	ThumbFileId     string // Bot API thumbnail file_id (optional)
+	ThumbWidth      int32
+	ThumbHeight     int32
 }
 
 // DownloadAndUploadStickerFiles downloads sticker files from Telegram Bot API and uploads them
@@ -160,6 +163,16 @@ func (d *Dao) downloadAndUploadOne(ctx context.Context, input *StickerDownloadIn
 		Attributes: input.Attributes,
 	}).To_InputMedia()
 
+	// 5. Download and upload thumbnail if available
+	if input.ThumbFileId != "" {
+		thumbInputFile, thumbErr := d.downloadAndUploadThumb(ctx, input.ThumbFileId, tempFileId)
+		if thumbErr != nil {
+			log.Infof("downloadAndUploadOne - thumb download failed (non-fatal): %v", thumbErr)
+		} else if thumbInputFile != nil {
+			inputMedia.Thumb = thumbInputFile
+		}
+	}
+
 	messageMedia, err := d.MediaClient.MediaUploadedDocumentMedia(ctx, &media.TLMediaUploadedDocumentMedia{
 		OwnerId: tempFileId,
 		Media:   inputMedia,
@@ -197,4 +210,66 @@ func DeserializeStickerDoc(s string) (*mtproto.Document, error) {
 	}
 	doc := &mtproto.Document{}
 	return doc, proto.Unmarshal(data, doc)
+}
+
+// downloadAndUploadThumb downloads a thumbnail from Bot API and uploads to SSDB.
+// Returns an InputFile that can be set on InputMedia.Thumb.
+func (d *Dao) downloadAndUploadThumb(ctx context.Context, thumbFileId string, creatorId int64) (*mtproto.InputFile, error) {
+	log := logx.WithContext(ctx)
+
+	// 1. Get file path from Bot API
+	fileInfo, err := d.BotAPI.GetFile(ctx, thumbFileId)
+	if err != nil {
+		return nil, fmt.Errorf("GetFile(thumb): %w", err)
+	}
+
+	// 2. Download the thumb bytes
+	data, err := d.BotAPI.DownloadFile(ctx, fileInfo.FilePath)
+	if err != nil {
+		return nil, fmt.Errorf("DownloadFile(thumb): %w", err)
+	}
+
+	if len(data) == 0 {
+		return nil, fmt.Errorf("thumb file is empty")
+	}
+
+	// 3. Upload to SSDB
+	thumbTempFileId := d.IDGenClient2.NextId(ctx)
+	thumbParts := int32(math.Ceil(float64(len(data)) / float64(filePartSize)))
+	if thumbParts == 0 {
+		thumbParts = 1
+	}
+
+	for part := int32(0); part < thumbParts; part++ {
+		start := int(part) * filePartSize
+		end := start + filePartSize
+		if end > len(data) {
+			end = len(data)
+		}
+		_, err = d.DfsClient.DfsWriteFilePartData(ctx, &dfs.TLDfsWriteFilePartData{
+			Creator:        creatorId,
+			FileId:         thumbTempFileId,
+			FilePart:       part,
+			Bytes:          data[start:end],
+			Big:            false,
+			FileTotalParts: &types.Int32Value{Value: thumbParts},
+		})
+		if err != nil {
+			return nil, fmt.Errorf("DfsWriteFilePartData(thumb, part=%d): %w", part, err)
+		}
+	}
+
+	ext := path.Ext(fileInfo.FilePath)
+	if ext == "" {
+		ext = ".webp"
+	}
+
+	log.Infof("downloadAndUploadThumb - uploaded thumb %s (%d bytes, %d parts)",
+		thumbFileId, len(data), thumbParts)
+
+	return mtproto.MakeTLInputFile(&mtproto.InputFile{
+		Id:    thumbTempFileId,
+		Parts: thumbParts,
+		Name:  fmt.Sprintf("thumb_%d%s", thumbTempFileId, ext),
+	}).To_InputFile(), nil
 }
