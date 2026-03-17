@@ -22,8 +22,8 @@ import (
 
 const (
 	filePartSize    = 512 * 1024 // 512KB per part
-	downloadWorkers = 2          // per-request concurrency (also capped by globalDownloadSem)
-	downloadBatch   = 20         // process stickers in batches to limit memory
+	downloadWorkers = 1          // sequential download to minimize memory
+	downloadBatch   = 10         // process stickers in small batches to limit memory
 )
 
 // StickerDownloadInput holds the info needed to download one sticker file and upload it to DFS.

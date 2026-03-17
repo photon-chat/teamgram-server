@@ -21,6 +21,7 @@ services:
       - "20420:20420"
     networks:
       - teamgram_net
+    mem_limit: 1024m
 
 networks:
   teamgram_net:
