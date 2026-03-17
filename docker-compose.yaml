@@ -1,4 +1,4 @@
-version: "3"
+version: "2.4"
 
 services:
   teamgram:
@@ -22,6 +22,9 @@ services:
     networks:
       - teamgram_net
     mem_limit: 1024m
+    environment:
+      - GOMEMLIMIT=900MiB
+      - GOGC=50
 
 networks:
   teamgram_net:
