@@ -6,6 +6,12 @@ package media
 import (
 	context "context"
 	fmt "fmt"
+	io "io"
+	math "math"
+	math_bits "math/bits"
+	reflect "reflect"
+	strings "strings"
+
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 	types "github.com/gogo/protobuf/types"
@@ -13,11 +19,6 @@ import (
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
-	io "io"
-	math "math"
-	math_bits "math/bits"
-	reflect "reflect"
-	strings "strings"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -749,6 +750,8 @@ type TLMediaUploadedDocumentMedia struct {
 	Constructor          TLConstructor       `protobuf:"varint,1,opt,name=constructor,proto3,enum=media.TLConstructor" json:"constructor,omitempty"`
 	OwnerId              int64               `protobuf:"varint,3,opt,name=owner_id,json=ownerId,proto3" json:"owner_id,omitempty"`
 	Media                *mtproto.InputMedia `protobuf:"bytes,4,opt,name=media,proto3" json:"media,omitempty"`
+	FileData             []byte              `protobuf:"bytes,5,opt,name=file_data,proto3" json:"file_data,omitempty"`
+	ThumbData            []byte              `protobuf:"bytes,6,opt,name=thumb_data,proto3" json:"thumb_data,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}            `json:"-"`
 	XXX_unrecognized     []byte              `json:"-"`
 	XXX_sizecache        int32               `json:"-"`
@@ -3108,6 +3111,20 @@ func (m *TLMediaUploadedDocumentMedia) MarshalToSizedBuffer(dAtA []byte) (int, e
 		i -= len(m.XXX_unrecognized)
 		copy(dAtA[i:], m.XXX_unrecognized)
 	}
+	if len(m.ThumbData) > 0 {
+		i -= len(m.ThumbData)
+		copy(dAtA[i:], m.ThumbData)
+		i = encodeVarintMediaTl(dAtA, i, uint64(len(m.ThumbData)))
+		i--
+		dAtA[i] = 0x32
+	}
+	if len(m.FileData) > 0 {
+		i -= len(m.FileData)
+		copy(dAtA[i:], m.FileData)
+		i = encodeVarintMediaTl(dAtA, i, uint64(len(m.FileData)))
+		i--
+		dAtA[i] = 0x2a
+	}
 	if m.Media != nil {
 		{
 			size, err := m.Media.MarshalToSizedBuffer(dAtA[:i])
@@ -3944,6 +3961,14 @@ func (m *TLMediaUploadedDocumentMedia) Size() (n int) {
 	}
 	if m.Media != nil {
 		l = m.Media.Size()
+		n += 1 + l + sovMediaTl(uint64(l))
+	}
+	l = len(m.FileData)
+	if l > 0 {
+		n += 1 + l + sovMediaTl(uint64(l))
+	}
+	l = len(m.ThumbData)
+	if l > 0 {
 		n += 1 + l + sovMediaTl(uint64(l))
 	}
 	if m.XXX_unrecognized != nil {
@@ -5637,6 +5662,74 @@ func (m *TLMediaUploadedDocumentMedia) Unmarshal(dAtA []byte) error {
 			}
 			if err := m.Media.Unmarshal(dAtA[iNdEx:postIndex]); err != nil {
 				return err
+			}
+			iNdEx = postIndex
+		case 5:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field FileData", wireType)
+			}
+			var byteLen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowMediaTl
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				byteLen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if byteLen < 0 {
+				return ErrInvalidLengthMediaTl
+			}
+			postIndex := iNdEx + byteLen
+			if postIndex < 0 {
+				return ErrInvalidLengthMediaTl
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.FileData = append(m.FileData[:0], dAtA[iNdEx:postIndex]...)
+			if m.FileData == nil {
+				m.FileData = []byte{}
+			}
+			iNdEx = postIndex
+		case 6:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field ThumbData", wireType)
+			}
+			var byteLen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowMediaTl
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				byteLen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if byteLen < 0 {
+				return ErrInvalidLengthMediaTl
+			}
+			postIndex := iNdEx + byteLen
+			if postIndex < 0 {
+				return ErrInvalidLengthMediaTl
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.ThumbData = append(m.ThumbData[:0], dAtA[iNdEx:postIndex]...)
+			if m.ThumbData == nil {
+				m.ThumbData = []byte{}
 			}
 			iNdEx = postIndex
 		default:

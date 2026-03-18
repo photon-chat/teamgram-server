@@ -20,6 +20,7 @@ package imaging
 
 import (
 	"image"
+	"image/color"
 	"io"
 
 	"github.com/disintegration/imaging"
@@ -138,4 +139,9 @@ func Resize(img image.Image, width, height int) *image.NRGBA {
 
 func EncodeJpeg(w io.Writer, img image.Image) error {
 	return imaging.Encode(w, img, imaging.JPEG)
+}
+
+func FlattenToWhite(img image.Image) *image.NRGBA {
+	bg := imaging.New(img.Bounds().Dx(), img.Bounds().Dy(), color.White)
+	return imaging.Paste(bg, img, image.Pt(0, 0))
 }

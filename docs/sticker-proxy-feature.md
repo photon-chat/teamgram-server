@@ -35,11 +35,12 @@
 1. BFF 收到 inputStickerSetShortName("AP_DI2")
 2. 查 MySQL 缓存 → 没有
 3. 调用 Bot API getStickerSet → 获取贴纸列表和元数据
-4. 并发下载所有贴纸文件（10 worker）：
+4. 并发下载所有贴纸文件（10 per batch）：
    a. Bot API getFile → 获取 file_path
    b. Bot API downloadFile → 下载原始文件字节
-   c. DfsWriteFilePartData → 写入 SSDB 临时存储
-   d. MediaUploadedDocumentMedia → 上传到 MinIO + 注册到 documents 表
+   c. MediaUploadedDocumentMedia(FileData=bytes, ThumbData=thumbBytes)
+      → 直接传递文件字节，跳过 SSDB
+      → DFS 写入 MinIO + 注册到 documents 表
 5. 存储到 MySQL: sticker_sets + sticker_set_documents
 6. 返回 messages.StickerSet 响应（包含 DFS 分配的 document ID）
 ```
@@ -273,6 +274,32 @@ CREATE TABLE user_installed_sticker_sets (
 
 **注意**: 经 iOS 客户端代码验证，iOS 识别视频贴纸不依赖此属性（只看 `mimeType == "video/webm"` + `.Sticker` 属性），但其他客户端可能需要。
 
+### Bug 6: MinIO 写入 0 字节（SSDBReader size=-1）
+
+**现象**: 贴纸文件下载几小时后变为空白（`bytes: <null>`）。MinIO `documents` 桶中文件大小为 0。
+
+**原因**: `PutDocumentFile` 使用 `SSDBReader` 作为 `io.Reader`，MinIO SDK 的 `PutObject(reader, -1)` 对未知大小的流写入 0 字节。SSDB 缓存过期（2-3h）后回退到 MinIO，但 MinIO 文件为空。
+
+**修复**: 先用 `ReadAll()` 将所有数据从 SSDB 读到内存，再用 `bytes.NewReader(cacheData)` 以已知大小上传。同时将 MinIO 写入改为同步（不再使用后台 goroutine），写入失败时返回错误。
+
+### Bug 7: 贴纸缩略图黑底/格式错误
+
+**现象**: 缩略图背景为黑色，或格式不对。
+
+**原因**: WebP 缩略图（含透明通道）被转为 JPEG，alpha 通道丢失。
+
+**修复**: 外部缩略图（Bot API 下载的）直接以原始 WebP 格式存储，保留透明度。内部图片缩略图（isThumb=true 的情况）使用 `FlattenToWhite()` 将透明区域填充为白色后再编码为 JPEG。
+
+### Bug 8: 贴纸下载内存飙涨（SSDB 绕行优化）
+
+**现象**: Bot API 下载贴纸包时内存飙升，每个 sticker 文件经过 5 次内存拷贝。
+
+**原因**: 下载链路经过 `Bot API → BFF → gRPC(DfsWriteFilePartData) → SSDB 写入 → SSDB 读回 → DFS → MinIO`，SSDB 往返完全不必要。
+
+**修复**: 新增 `FileData`/`ThumbData` 字段到 `TLMediaUploadedDocumentMedia` 和 `TLDfsUploadDocumentFileV2` proto 结构体。当这些字段有值时，DFS 直接使用传入的字节写入 MinIO，完全跳过 SSDB。内存拷贝从 5 次减少到 2 次。
+
+**向后兼容**: 字段为空时走原有 SSDB 流程，不影响非贴纸文件上传。
+
 ## 已知限制
 
 ### 视频贴纸（WebM）依赖客户端 VP9 解码能力
@@ -290,17 +317,17 @@ CREATE TABLE user_installed_sticker_sets (
 
 **结论**: 这是客户端解码器问题，不是服务端问题。需要客户端支持 VP9/WebM 解码。
 
-### DFS 后台写入 MinIO
+### ~~DFS 后台写入 MinIO~~ (已修复)
 
-`DfsUploadDocumentFileV2` 使用 `threading2.WrapperGoFunc` 在后台 goroutine 写入 MinIO，函数立即返回 Document。在 MinIO 写入完成前，文件通过 SSDB 缓存提供服务（2h TTL）。
+~~`DfsUploadDocumentFileV2` 使用 `threading2.WrapperGoFunc` 在后台 goroutine 写入 MinIO~~
 
-**风险**:
-- 服务重启时后台 goroutine 可能未完成 → MinIO 无文件 → SSDB 过期后文件丢失
-- MinIO 写入失败只记日志，不重试
+**修复**: MinIO 写入改为同步，在返回 Document 之前完成。直接模式（FileData 字段）更是完全跳过 SSDB，文件字节直接从 gRPC 请求写入 MinIO。
 
-### 无缩略图
+### ~~无缩略图~~ (已修复)
 
-视频贴纸（video/webm）在 DFS 层不生成缩略图（`IsMimeAcceptedForPhotoVideoAlbum("video/webm")` 返回 false）。Document 的 `thumbs` 和 `videoThumbs` 为 nil，`flags: 0`。经 iOS 代码验证，缺少缩略图不影响渲染。
+~~视频贴纸（video/webm）在 DFS 层不生成缩略图~~
+
+**修复**: 支持外部缩略图（ThumbData 字段），Bot API 下载的缩略图以原始 WebP 格式存储到 MinIO `photos` 桶，保留透明度。Document 的 `thumbs` 包含 `photoStrippedSize` + `photoSize(m)` 两级缩略图。
 
 ## 数据库 Schema
 
@@ -415,6 +442,8 @@ docker exec -i <mysql-container> mysql -u root -p teamgram_stickers -e "
 | `file_{creator}_{fileId}` | 3h | 文件分片数据 |
 | `file_info_{creator}_{fileId}` | 3h | 文件元数据 |
 | `cache_file_info_{documentId}` | 2h | docId → 原始文件映射 |
+
+**注意**: 贴纸下载使用直接模式（FileData 字段），完全跳过 SSDB，上述缓存不再适用于贴纸文件。普通文件上传仍使用 SSDB 流程。
 
 ## Docker 配置
 

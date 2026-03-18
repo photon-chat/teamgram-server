@@ -63,8 +63,10 @@ func (c *MediaCore) MediaUploadedDocumentMedia(in *media.TLMediaUploadedDocument
 		c.svcCtx.Dao.SaveDocumentV2(c.ctx, media.GetFile().GetName(), document)
 	} else {
 		document, err = c.svcCtx.Dao.DfsClient.DfsUploadDocumentFileV2(c.ctx, &dfs.TLDfsUploadDocumentFileV2{
-			Creator: ownerId,
-			Media:   media,
+			Creator:   ownerId,
+			Media:     media,
+			FileData:  in.FileData,
+			ThumbData: in.ThumbData,
 		})
 		if err != nil {
 			c.Logger.Errorf("media.uploadedDocumentMedia - error: %v", err)
