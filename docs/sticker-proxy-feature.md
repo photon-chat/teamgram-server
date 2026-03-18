@@ -300,6 +300,59 @@ CREATE TABLE user_installed_sticker_sets (
 
 **向后兼容**: 字段为空时走原有 SSDB 流程，不影响非贴纸文件上传。
 
+**普通图片/视频上传不受影响**:
+- 客户端上传图片/视频时，`FileData`/`ThumbData` 字段为空（proto 空字段不序列化，零开销）
+- `DfsUploadDocumentFileV2` 检测到 `len(in.FileData) == 0`，走 `else` 分支：`OpenFile(SSDB)` → `SetCacheFileInfo` → `ReadAll` → MinIO 写入，与修改前逻辑完全一致
+- 外部缩略图处理：先检查 `ThumbData`（为空），再检查 `InputMedia.Thumb`（原有 SSDB 流程），向后兼容
+- `media.uploadedDocumentMedia_handler.go` 中 GIF（`isGif`）和 MP4 分支不传递 `FileData`/`ThumbData`，完全不受影响
+- 唯一的差异：isThumb 路径的 `ReadAll` 时机从缩略图生成时提前到入口处，功能上等价；MinIO 写入统一增加了 size mismatch 校验（更安全）
+
+### Bug 9: 缩略图下载返回 fileJpeg 而非 fileWebp
+
+**现象**: 缩略图文件内容已经是 WebP（`RIFF` 头），但 `upload.File.type` 返回 `storage.FileType.fileJpeg`。
+
+**原因**: `dfs.downloadFile_handler.go` 中 `inputDocumentFileLocation`（thumbSize 非空）、`inputPeerPhotoFileLocation`、`inputStickerSetThumb` 三处硬编码 `sType = CRC32_storage_fileJpeg`，不检测实际文件格式。
+
+**修复**: 新增 `model.DetectStorageFileType(data)` 函数，根据文件头魔数（magic bytes）自动检测：
+- `RIFF....WEBP` → `storage_fileWebp`
+- `FF D8 FF` → `storage_fileJpeg`
+- `89 PNG` → `storage_filePng`
+- `GIF8` → `storage_fileGif`
+- 其他 → fallback `storage_fileJpeg`
+
+替换了三处硬编码 `fileJpeg`。
+
+### Bug 10: 容器内存飙涨至 1200MB（GOMEMLIMIT 配置错误）
+
+**现象**: 下载贴纸包时，即使只有 20 个贴纸（每个 ~100KB），Docker 容器内存也会从 ~200MB 飙涨到 1200MB（接近 `mem_limit: 1280m`）。
+
+**原因**: `docker-compose.yaml` 设置了 `GOMEMLIMIT=1100MiB` 作为环境变量，被容器内 **11 个独立 Go 进程** 继承。每个进程的 GC scavenger 认为自己可以安全持有 1100MiB 的内存页，不急于归还给 OS。
+
+- 11 个进程 × 1100MiB = 12.1 GiB 理论上限，但容器只有 1280MB
+- Go GC 收集对象后，页面标记为空闲但 **不归还 OS**（因为 scavenger 认为 usage << 1100MiB）
+- 贴纸下载时 BFF/Media/DFS 三个进程快速分配和释放 gRPC 缓冲区，Runtime 持有的页面累积
+- 最终容器总 RSS 撑到 cgroup 限制
+
+**修复**:
+1. `docker-compose.yaml`: `GOMEMLIMIT=1100MiB` → `GOMEMLIMIT=100MiB`（全局兜底值）
+2. `runall-docker.sh`: 每个进程独立设置 GOMEMLIMIT（BFF=150MiB, DFS=200MiB, Media=100MiB, 其他=50-80MiB）
+3. 总预算 ~1000MiB，给 OS/page cache 留 280MiB
+
+**GOMEMLIMIT 分配**:
+| 进程 | GOMEMLIMIT | 理由 |
+|------|-----------|------|
+| dfs | 200MiB | 文件 I/O + 图片处理 + MinIO 上传 |
+| bff | 150MiB | 贴纸下载 + gRPC 调用 |
+| session | 100MiB | 会话状态管理 |
+| gateway | 100MiB | 连接管理 |
+| media | 100MiB | gRPC 中转 |
+| authsession | 80MiB | 认证会话 |
+| biz | 80MiB | 业务逻辑 |
+| msg | 80MiB | 消息处理 |
+| sync | 80MiB | 同步 |
+| idgen | 50MiB | ID 生成（轻量） |
+| status | 50MiB | 状态查询（轻量） |
+
 ## 已知限制
 
 ### 视频贴纸（WebM）依赖客户端 VP9 解码能力
@@ -401,6 +454,28 @@ CREATE TABLE user_installed_sticker_sets (
 
 ## 调试指南
 
+### pprof 性能分析
+
+go-zero 内置 DevServer 支持 pprof，已在 BFF/DFS/Media 的 YAML 配置中启用：
+
+| 服务 | pprof 端口 | URL |
+|------|-----------|-----|
+| BFF | 6061 | `http://localhost:6061/debug/pprof/` |
+| DFS | 6062 | `http://localhost:6062/debug/pprof/` |
+| Media | 6063 | `http://localhost:6063/debug/pprof/` |
+
+```bash
+# 查看堆内存分配 top 20
+go tool pprof http://localhost:6061/debug/pprof/heap
+
+# 保存并分析 heap profile
+curl -o /tmp/bff-heap.prof http://localhost:6061/debug/pprof/heap
+go tool pprof -http=:8080 /tmp/bff-heap.prof
+
+# Docker 容器内查看各进程内存
+docker exec <container> ps aux --sort=-rss | head -20
+```
+
 ### 服务端日志
 ```bash
 docker exec -it <container> tail -f /app/logs/bff/error.log      # BFF 处理器
@@ -446,6 +521,16 @@ docker exec -i <mysql-container> mysql -u root -p teamgram_stickers -e "
 **注意**: 贴纸下载使用直接模式（FileData 字段），完全跳过 SSDB，上述缓存不再适用于贴纸文件。普通文件上传仍使用 SSDB 流程。
 
 ## Docker 配置
+
+### GOMEMLIMIT
+
+容器内 11 个 Go 进程共享 `mem_limit: 1280m`。`GOMEMLIMIT` 是**进程级**别的环境变量：
+
+- `docker-compose.yaml` 的 `GOMEMLIMIT=100MiB` 是全局兜底值
+- `runall-docker.sh` 中每个进程有独立的 `GOMEMLIMIT=XMiB`（覆盖全局值）
+- 总预算 ~1000MiB，留 280MiB 给 OS、page cache、非 Go 内存
+
+**⚠️ 注意**: 不要把 GOMEMLIMIT 设置为接近容器 mem_limit 的值（如 1100MiB），否则每个 Go 进程的 scavenger 都不会积极归还内存页，导致容器 RSS 接近限制。
 
 ### entrypoint.sh
 

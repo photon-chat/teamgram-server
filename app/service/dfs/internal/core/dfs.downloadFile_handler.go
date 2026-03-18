@@ -87,7 +87,7 @@ func (c *DfsCore) DfsDownloadFile(in *dfs.TLDfsDownloadFile) (*mtproto.Upload_Fi
 				sType = int32(mtproto.CRC32_storage_fileMp4)
 			} else {
 				bytes, err = c.svcCtx.Dao.GetFile(c.ctx, "photos", path, offset, limit)
-				sType = int32(mtproto.CRC32_storage_fileJpeg)
+				sType = model.DetectStorageFileType(bytes)
 			}
 			if err != nil {
 				c.Logger.Errorf("download file: %v", err)
@@ -150,7 +150,7 @@ func (c *DfsCore) DfsDownloadFile(in *dfs.TLDfsDownloadFile) (*mtproto.Upload_Fi
 			err = nil
 			bytes = []byte{}
 		}
-		sType = int32(mtproto.CRC32_storage_fileJpeg)
+		sType = model.DetectStorageFileType(bytes)
 	case mtproto.Predicate_inputStickerSetThumb:
 		//inputStickerSetThumb#9d84f3db stickerset:InputStickerSet thumb_version:int = InputFileLocation;
 
@@ -163,7 +163,7 @@ func (c *DfsCore) DfsDownloadFile(in *dfs.TLDfsDownloadFile) (*mtproto.Upload_Fi
 			bytes = []byte{}
 		}
 		// sType = int32(location.GetAccessHash() >> 32)
-		sType = int32(mtproto.CRC32_storage_fileJpeg)
+		sType = model.DetectStorageFileType(bytes)
 	case mtproto.Predicate_inputGroupCallStream:
 		//inputGroupCallStream#bba51639 call:InputGroupCall time_ms:long scale:int = InputFileLocation;
 

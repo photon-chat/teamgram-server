@@ -19,11 +19,14 @@ services:
       - "20120:20120"
       - "20670:20670"
       - "20420:20420"
+      - "6061:6061"
+      - "6062:6062"
+      - "6063:6063"
     networks:
       - teamgram_net
     mem_limit: 1280m
     environment:
-      - GOMEMLIMIT=1100MiB
+      - GOMEMLIMIT=100MiB
       - GOGC=50
 
 networks:

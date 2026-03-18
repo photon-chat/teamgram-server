@@ -164,3 +164,21 @@ func GetMimeTypeByStorageFileTyp(t *mtproto.Storage_FileType) string {
 
 	return mtproto.GuessMimeTypeByFileExtension(ext)
 }
+
+// DetectStorageFileType detects the storage file type from the file content magic bytes.
+// Falls back to storage_fileJpeg for unrecognized formats.
+func DetectStorageFileType(data []byte) int32 {
+	if len(data) >= 12 && string(data[0:4]) == "RIFF" && string(data[8:12]) == "WEBP" {
+		return int32(mtproto.CRC32_storage_fileWebp)
+	}
+	if len(data) >= 3 && data[0] == 0xFF && data[1] == 0xD8 && data[2] == 0xFF {
+		return int32(mtproto.CRC32_storage_fileJpeg)
+	}
+	if len(data) >= 8 && string(data[0:8]) == "\x89PNG\r\n\x1a\n" {
+		return int32(mtproto.CRC32_storage_filePng)
+	}
+	if len(data) >= 4 && string(data[0:4]) == "GIF8" {
+		return int32(mtproto.CRC32_storage_fileGif)
+	}
+	return int32(mtproto.CRC32_storage_fileJpeg)
+}

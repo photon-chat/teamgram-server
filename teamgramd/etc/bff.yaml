@@ -5,6 +5,11 @@ Etcd:
     - 127.0.0.1:2379
   Key: bff.bff
 Timeout: 0
+DevServer:
+  Enabled: true
+  Port: 6061
+  EnablePprof: true
+  EnableMetrics: true
 Log:
   Mode: file
   Path: ../logs/bff
