@@ -34,6 +34,7 @@ import (
 	"github.com/teamgram/teamgram-server/app/service/biz/updates/updates"
 	user_helper "github.com/teamgram/teamgram-server/app/service/biz/user"
 	"github.com/teamgram/teamgram-server/app/service/biz/user/user"
+	"github.com/teamgram/teamgram-server/app/service/biz/user/user_password"
 	username_helper "github.com/teamgram/teamgram-server/app/service/biz/username"
 	"github.com/teamgram/teamgram-server/app/service/biz/username/username"
 
@@ -119,6 +120,16 @@ func (s *Server) Initialize() error {
 		user.RegisterRPCUserServer(
 			grpcServer,
 			user_helper.New(user_helper.Config{
+				RpcServerConf: c.RpcServerConf,
+				Mysql:         c.Mysql,
+				Cache:         c.Cache,
+				MediaClient:   c.MediaClient,
+			}))
+
+		// user_password_helper
+		user_password.RegisterUserPasswordServiceServer(
+			grpcServer,
+			user_helper.NewUserPasswordService(user_helper.Config{
 				RpcServerConf: c.RpcServerConf,
 				Mysql:         c.Mysql,
 				Cache:         c.Cache,

@@ -51,3 +51,7 @@ var (
 func New(c Config) *service.Service {
 	return service.New(svc.NewServiceContext(c))
 }
+
+func NewUserPasswordService(c Config) *service.UserPasswordService {
+	return service.NewUserPasswordService(svc.NewServiceContext(c))
+}
