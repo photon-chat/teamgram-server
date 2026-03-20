@@ -19,24 +19,21 @@ func NewUserPasswordService(svcCtx *svc.ServiceContext) *UserPasswordService {
 
 func (s *UserPasswordService) SaveUserPassword(ctx context.Context, req *user_password.SaveUserPasswordReq) (*user_password.SaveUserPasswordResp, error) {
 	c := core.New(ctx, s.svcCtx)
-	c.Logger.Debugf("user_password.saveUserPassword - request: %v", req)
+	c.Logger.Debugf("user_password.saveUserPassword - userId: %d", req.UserId)
 	r, err := c.UserSavePassword(req)
-	c.Logger.Debugf("user_password.saveUserPassword - reply: %v", r)
 	return r, err
 }
 
 func (s *UserPasswordService) GetUserPassword(ctx context.Context, req *user_password.GetUserPasswordReq) (*user_password.GetUserPasswordResp, error) {
 	c := core.New(ctx, s.svcCtx)
-	c.Logger.Debugf("user_password.getUserPassword - request: %v", req)
+	c.Logger.Debugf("user_password.getUserPassword - userId: %d", req.UserId)
 	r, err := c.UserGetPassword(req)
-	c.Logger.Debugf("user_password.getUserPassword - reply: %v", r)
 	return r, err
 }
 
 func (s *UserPasswordService) GetUserPasswordByPhone(ctx context.Context, req *user_password.GetUserPasswordByPhoneReq) (*user_password.GetUserPasswordByPhoneResp, error) {
 	c := core.New(ctx, s.svcCtx)
-	c.Logger.Debugf("user_password.getUserPasswordByPhone - request: %v", req)
+	c.Logger.Debugf("user_password.getUserPasswordByPhone - phone: %s", req.Phone)
 	r, err := c.UserGetPasswordByPhone(req)
-	c.Logger.Debugf("user_password.getUserPasswordByPhone - reply: %v", r)
 	return r, err
 }

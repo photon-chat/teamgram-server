@@ -15,7 +15,7 @@ type userPasswordByPhoneDO struct {
 
 // SaveUserPassword 存储用户密码哈希
 func (d *Dao) SaveUserPassword(ctx context.Context, userId int64, passwordHash string) error {
-	query := "INSERT INTO user_passwords (user_id, password_hash) VALUES (?, ?) ON DUPLICATE KEY UPDATE password_hash = VALUES(password_hash), updated_at = NOW()"
+	query := "INSERT INTO user_passwords (user_id, password_hash, deleted) VALUES (?, ?, 0) ON DUPLICATE KEY UPDATE password_hash = VALUES(password_hash), deleted = 0, updated_at = NOW()"
 	_, err := d.DB.Exec(ctx, query, userId, passwordHash)
 	return err
 }
