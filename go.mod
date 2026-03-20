@@ -134,6 +134,6 @@ require (
 	sigs.k8s.io/yaml v1.3.0 // indirect
 )
 
-replace github.com/teamgram/proto => ../proto
+replace github.com/teamgram/proto => ./proto
 
 replace github.com/zeromicro/go-zero v1.6.0 => github.com/teamgram/go-zero v1.6.0-teamgram
