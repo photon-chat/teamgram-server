@@ -25,8 +25,18 @@ import (
 	"github.com/zeromicro/go-zero/zrpc"
 )
 
+// AuthMethodUsernamePassword 用户名+密码
+const AuthMethodUsernamePassword = "username_password"
+
+// AuthMethodPhoneSmsCode 手机号+验证码
+const AuthMethodPhoneSmsCode = "phone_sms_code"
+
+// AuthMethodPhonePassword 手机号+密码
+const AuthMethodPhonePassword = "phone_password"
+
 type Config struct {
 	zrpc.RpcServerConf
+	AuthMethods               []string `json:",optional"` // 认证方式列表，如 ["username_password", "phone_sms_code"]
 	KV                        kv.KvConf
 	Code                      *conf.SmsVerifyCodeConfig
 	UserClient                zrpc.RpcClientConf
@@ -38,4 +48,12 @@ type Config struct {
 	SyncClient                *kafka.KafkaProducerConf
 	SignInServiceNotification []conf.MessageEntityConfig `json:",optional"`
 	SignInMessage             []conf.MessageEntityConfig `json:",optional"`
+}
+
+// GetAuthMethods 获取配置的认证方式列表，默认返回 ["username_password", "phone_sms_code"]
+func (c *Config) GetAuthMethods() []string {
+	if len(c.AuthMethods) == 0 {
+		return []string{AuthMethodUsernamePassword, AuthMethodPhoneSmsCode}
+	}
+	return c.AuthMethods
 }

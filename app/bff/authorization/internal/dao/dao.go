@@ -20,6 +20,7 @@ package dao
 
 import (
 	"flag"
+
 	"github.com/oschwald/geoip2-golang"
 	kafka "github.com/teamgram/marmota/pkg/mq"
 	"github.com/teamgram/marmota/pkg/net/rpcx"
@@ -47,6 +48,7 @@ type Dao struct {
 	MMDB *geoip2.Reader
 	authsession_client.AuthsessionClient
 	user_client.UserClient
+	user_client.UserPasswordClient
 	sync_client.SyncClient
 	chat_client.ChatClient
 	status_client.StatusClient
@@ -63,6 +65,7 @@ func New(c config.Config) *Dao {
 		kv:                kv.NewStore(c.KV),
 		MMDB:              MMDB,
 		UserClient:        user_client.NewUserClient(rpcx.GetCachedRpcClient(c.UserClient)),
+		UserPasswordClient: user_client.NewUserPasswordClient(rpcx.GetCachedRpcClient(c.UserClient)),
 		AuthsessionClient: authsession_client.NewAuthsessionClient(rpcx.GetCachedRpcClient(c.AuthsessionClient)),
 		ChatClient:        chat_client.NewChatClient(rpcx.GetCachedRpcClient(c.ChatClient)),
 		SyncClient:        sync_client.NewSyncMqClient(kafka.MustKafkaProducer(c.SyncClient)),

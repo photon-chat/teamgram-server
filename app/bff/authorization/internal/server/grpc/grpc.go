@@ -12,6 +12,7 @@ package grpc
 
 import (
 	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/bff/authorization/auth_username"
 	"github.com/teamgram/teamgram-server/app/bff/authorization/internal/server/grpc/service"
 	"github.com/teamgram/teamgram-server/app/bff/authorization/internal/svc"
 
@@ -24,6 +25,8 @@ import (
 func New(ctx *svc.ServiceContext, c zrpc.RpcServerConf) *zrpc.RpcServer {
 	s, err := zrpc.NewServer(c, func(grpcServer *grpc.Server) {
 		mtproto.RegisterRPCAuthorizationServer(grpcServer, service.New(ctx))
+		// 注册用户名密码认证服务
+		auth_username.RegisterAuthUsernameServiceServer(grpcServer, service.NewAuthUsernameService(ctx))
 	})
 	logx.Must(err)
 	return s

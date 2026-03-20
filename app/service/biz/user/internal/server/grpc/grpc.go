@@ -13,6 +13,7 @@ import (
 	"github.com/teamgram/teamgram-server/app/service/biz/user/internal/server/grpc/service"
 	"github.com/teamgram/teamgram-server/app/service/biz/user/internal/svc"
 	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
+	"github.com/teamgram/teamgram-server/app/service/biz/user/user_password"
 
 	"github.com/zeromicro/go-zero/core/logx"
 	"github.com/zeromicro/go-zero/zrpc"
@@ -23,6 +24,7 @@ import (
 func New(ctx *svc.ServiceContext, c zrpc.RpcServerConf) *zrpc.RpcServer {
 	s, err := zrpc.NewServer(c, func(grpcServer *grpc.Server) {
 		userpb.RegisterRPCUserServer(grpcServer, service.New(ctx))
+		user_password.RegisterUserPasswordServiceServer(grpcServer, service.NewUserPasswordService(ctx))
 	})
 	logx.Must(err)
 	return s

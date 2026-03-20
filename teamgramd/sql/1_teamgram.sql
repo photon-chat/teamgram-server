@@ -786,6 +786,21 @@ CREATE TABLE `user_settings` (
 -- --------------------------------------------------------
 
 --
+-- 表的结构 `user_passwords`
+--
+
+CREATE TABLE `user_passwords` (
+  `id` bigint(20) NOT NULL,
+  `user_id` bigint(20) NOT NULL COMMENT '用户ID',
+  `password_hash` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '密码哈希（bcrypt）',
+  `deleted` tinyint(1) NOT NULL DEFAULT '0',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- 表的结构 `video_sizes`
 --
 
@@ -1084,6 +1099,13 @@ ALTER TABLE `user_settings`
   ADD UNIQUE KEY `user_id` (`user_id`,`key2`);
 
 --
+-- 表的索引 `user_passwords`
+--
+ALTER TABLE `user_passwords`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `idx_user_id` (`user_id`,`deleted`);
+
+--
 -- 表的索引 `video_sizes`
 --
 ALTER TABLE `video_sizes`
@@ -1310,6 +1332,12 @@ ALTER TABLE `user_pts_updates`
 --
 ALTER TABLE `user_settings`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- 使用表AUTO_INCREMENT `user_passwords`
+--
+ALTER TABLE `user_passwords`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
 -- 使用表AUTO_INCREMENT `video_sizes`

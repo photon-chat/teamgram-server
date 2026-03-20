@@ -421,3 +421,78 @@ func (s *Service) AuthToggleBan(ctx context.Context, request *mtproto.TLAuthTogg
 	c.Logger.Debugf("auth.toggleBan - reply: %s", r.DebugString())
 	return r, err
 }
+
+// AuthGetAuthMethods
+// auth.getAuthMethods = Auth_AuthMethods;
+func (s *Service) AuthGetAuthMethods(ctx context.Context, request *mtproto.TLAuthGetAuthMethods) (*mtproto.Auth_AuthMethods, error) {
+	c := core.New(ctx, s.svcCtx)
+	c.Logger.Debugf("auth.getAuthMethods - metadata: %s, request: %s", c.MD.DebugString(), request.DebugString())
+
+	r, err := c.AuthGetAuthMethods(request)
+	if err != nil {
+		return nil, err
+	}
+
+	c.Logger.Debugf("auth.getAuthMethods - reply: %s", r.DebugString())
+	return r, err
+}
+
+// AuthUsernameRegister
+// auth.usernameRegister username:string password:string first_name:string = Auth_Authorization;
+func (s *Service) AuthUsernameRegister(ctx context.Context, request *mtproto.TLAuthUsernameRegister) (*mtproto.Auth_Authorization, error) {
+	c := core.New(ctx, s.svcCtx)
+	c.Logger.Debugf("auth.usernameRegister - metadata: %s, request: %s", c.MD.DebugString(), request.DebugString())
+
+	r, err := c.AuthUsernameRegister(request)
+	if err != nil {
+		return nil, err
+	}
+
+	c.Logger.Debugf("auth.usernameRegister - reply: %s", r.DebugString())
+	return r, err
+}
+
+// AuthUsernameSignIn
+// auth.usernameSignIn username:string password:string = Auth_Authorization;
+func (s *Service) AuthUsernameSignIn(ctx context.Context, request *mtproto.TLAuthUsernameSignIn) (*mtproto.Auth_Authorization, error) {
+	c := core.New(ctx, s.svcCtx)
+	c.Logger.Debugf("auth.usernameSignIn - metadata: %s, request: %s", c.MD.DebugString(), request.DebugString())
+
+	r, err := c.AuthUsernameSignIn(request)
+	if err != nil {
+		return nil, err
+	}
+
+	c.Logger.Debugf("auth.usernameSignIn - reply: %s", r.DebugString())
+	return r, err
+}
+
+// AuthPhonePasswordRegister
+// auth.phonePasswordRegister phone:string password:string first_name:string = Auth_Authorization;
+func (s *Service) AuthPhonePasswordRegister(ctx context.Context, request *mtproto.TLAuthPhonePasswordRegister) (*mtproto.Auth_Authorization, error) {
+	c := core.New(ctx, s.svcCtx)
+	c.Logger.Debugf("auth.phonePasswordRegister - metadata: %s, request: %s", c.MD.DebugString(), request.DebugString())
+
+	r, err := c.AuthPhonePasswordRegister(request)
+	if err != nil {
+		return nil, err
+	}
+
+	c.Logger.Debugf("auth.phonePasswordRegister - reply: %s", r.DebugString())
+	return r, err
+}
+
+// AuthPhonePasswordSignIn
+// auth.phonePasswordSignIn phone:string password:string = Auth_Authorization;
+func (s *Service) AuthPhonePasswordSignIn(ctx context.Context, request *mtproto.TLAuthPhonePasswordSignIn) (*mtproto.Auth_Authorization, error) {
+	c := core.New(ctx, s.svcCtx)
+	c.Logger.Debugf("auth.phonePasswordSignIn - metadata: %s, request: %s", c.MD.DebugString(), request.DebugString())
+
+	r, err := c.AuthPhonePasswordSignIn(request)
+	if err != nil {
+		return nil, err
+	}
+
+	c.Logger.Debugf("auth.phonePasswordSignIn - reply: %s", r.DebugString())
+	return r, err
+}
