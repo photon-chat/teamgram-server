@@ -42,7 +42,7 @@ func (c *AuthorizationCore) AuthUsernameRegister(in *mtproto.TLAuthUsernameRegis
 		return nil, mtproto.ErrInternelServerError
 	}
 
-	// 4. create user
+	// 4. create user (用户名注册不需要手机号)
 	user, err := c.svcCtx.Dao.UserClient.UserCreateNewUser(c.ctx, &userpb.TLUserCreateNewUser{
 		Phone:     "",
 		FirstName: in.FirstName,
