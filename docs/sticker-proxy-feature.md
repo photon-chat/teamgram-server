@@ -39,9 +39,8 @@
    a. Bot API getFile → 获取 file_path
    b. Bot API DownloadFileStream → HTTP resp.Body (io.ReadCloser)
    c. MinIO PutObject(documents/{docId}.dat, resp.Body) — 流式零拷贝，跳过 DFS gRPC
-   d. 缩略图: Bot API DownloadFile(thumb) → MinIO PutObject(photos/m/{docId}.dat)
-   e. 缩略图处理: DecodeWebp → Resize(40px) → EncodeStripped → PhotoStrippedSize
-   f. BFF 本地构建 Document protobuf (IDGen 生成 docId，本地计算 accessHash)
+   d. 缩略图: Bot API DownloadFileStream(thumb) → MinIO PutObject(photos/m/{docId}.dat) — 同样流式零拷贝
+   e. BFF 本地构建 Document protobuf (IDGen 生成 docId，本地计算 accessHash)
 5. 存储到 MySQL: sticker_sets + sticker_set_documents
 6. 返回 messages.StickerSet 响应（包含本地生成的 document ID）
 ```
@@ -224,7 +223,7 @@ CREATE TABLE user_installed_sticker_sets (
 | `app/bff/stickers/internal/dao/botapi.go` | Bot API HTTP 客户端（连接池，DownloadFileStream 流式下载） |
 | `app/bff/stickers/internal/dao/dao.go` | Dao 聚合（MySQL + IDGen + MinIO Client + BotAPI） |
 | `app/bff/stickers/internal/dal/dao/mysql_dao/` | MySQL DAO（sticker_sets, sticker_set_documents, user_recent/faved_stickers, user_installed_sticker_sets） |
-| `pkg/imaging/` | 共享图片处理包（DecodeWebp, Resize, EncodeStripped） |
+| `pkg/imaging/` | 共享图片处理包（DecodeWebp, Resize 等，贴纸模块当前未使用） |
 | `app/service/dfs/internal/core/dfs.downloadFile_handler.go` | DFS 文件下载处理器（客户端通过 DFS 读取 MinIO 文件） |
 
 ## 已修复的 Bug
@@ -285,7 +284,7 @@ CREATE TABLE user_installed_sticker_sets (
 
 **原因**: WebP 缩略图（含透明通道）被转为 JPEG，alpha 通道丢失。
 
-**修复**: 外部缩略图（Bot API 下载的）直接以原始 WebP 格式存储，保留透明度。内部图片缩略图（isThumb=true 的情况）使用 `FlattenToWhite()` 将透明区域填充为白色后再编码为 JPEG。
+**修复**: 外部缩略图（Bot API 下载的）直接以原始 WebP 格式流式存储到 MinIO，保留透明度。内部图片缩略图（isThumb=true 的情况）使用 `FlattenToWhite()` 将透明区域填充为白色后再编码为 JPEG。
 
 ### Bug 8: 贴纸下载内存飙涨 + 速度慢
 
@@ -300,8 +299,7 @@ CREATE TABLE user_installed_sticker_sets (
 - 5 个并发 worker + 全局信号量限制总并发
 - 每批 10 个处理完后触发 `runtime.GC()` + `debug.FreeOSMemory()` 回收内存
 - Document protobuf 在 BFF 本地构建（IDGen 生成 docId，本地计算 accessHash）
-- 缩略图（小文件）仍使用 `[]byte` 缓冲，下载后直接写入 MinIO `photos` 桶
-- 缩略图处理使用 `pkg/imaging` 共享包：DecodeWebp → Resize(40px) → EncodeStripped → PhotoStrippedSize
+- 缩略图同样使用 `DownloadFileStream` 流式直传 MinIO `photos` 桶，不缓冲到内存
 
 ### Bug 9: 缩略图下载返回 fileJpeg 而非 fileWebp
 
@@ -376,7 +374,7 @@ CREATE TABLE user_installed_sticker_sets (
 
 ~~视频贴纸（video/webm）在 DFS 层不生成缩略图~~
 
-**修复**: 支持外部缩略图（ThumbData 字段），Bot API 下载的缩略图以原始 WebP 格式存储到 MinIO `photos` 桶，保留透明度。Document 的 `thumbs` 包含 `photoStrippedSize` + `photoSize(m)` 两级缩略图。
+**修复**: 支持外部缩略图（ThumbData 字段），Bot API 下载的缩略图以原始 WebP 格式流式存储到 MinIO `photos` 桶，保留透明度。Document 的 `thumbs` 包含 `photoSize(m)` 缩略图。
 
 ## 数据库 Schema
 

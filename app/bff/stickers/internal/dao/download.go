@@ -1,7 +1,6 @@
 package dao
 
 import (
-	"bytes"
 	"context"
 	"encoding/base64"
 	"fmt"
@@ -15,7 +14,6 @@ import (
 	"github.com/gogo/protobuf/proto"
 	"github.com/minio/minio-go/v7"
 	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/pkg/imaging"
 	"github.com/zeromicro/go-zero/core/jsonx"
 
 	"github.com/zeromicro/go-zero/core/logx"
@@ -172,65 +170,40 @@ func (d *Dao) downloadAndUploadOne(ctx context.Context, input *StickerDownloadIn
 	tUpload := time.Since(start)
 	fileSize := uploadInfo.Size
 
-	// 5. Handle thumbnail (small enough to buffer in memory)
+	// 5. Handle thumbnail — stream directly to MinIO like the main file
 	var thumbs []*mtproto.PhotoSize
 	if input.ThumbFileId != "" {
-		thumbData, thumbErr := d.downloadThumbBytes(ctx, input.ThumbFileId)
-		if thumbErr == nil && len(thumbData) > 0 {
-			// Store thumbnail to MinIO photos bucket
-			thumbPath := fmt.Sprintf("m/%d.dat", documentId)
-			_, thumbErr = d.MinIO.Client.PutObject(
-				ctx,
-				"photos",
-				thumbPath,
-				bytes.NewReader(thumbData),
-				int64(len(thumbData)),
-				minio.PutObjectOptions{ContentType: "image/webp"},
-			)
+		thumbFileInfo, thumbErr := d.BotAPI.GetFile(ctx, input.ThumbFileId)
+		if thumbErr == nil {
+			thumbBody, thumbContentLength, thumbErr := d.BotAPI.DownloadFileStream(ctx, thumbFileInfo.FilePath)
 			if thumbErr == nil {
-				thumbs = []*mtproto.PhotoSize{
-					mtproto.MakeTLPhotoSize(&mtproto.PhotoSize{
-						Type:  "m",
-						W:     input.ThumbWidth,
-						H:     input.ThumbHeight,
-						Size2: int32(len(thumbData)),
-					}).To_PhotoSize(),
-				}
-
-				// Generate PhotoStrippedSize from the thumbnail data
-				// Sticker thumbnails are WebP with alpha channel, use DecodeWebp explicitly
-				thumbImg, decErr := imaging.DecodeWebp(bytes.NewReader(thumbData))
-				if decErr != nil {
-					// Fallback to generic decode for non-WebP thumbnails
-					thumbImg, decErr = imaging.Decode(bytes.NewReader(thumbData))
-				}
-				if decErr == nil {
-					var resized = thumbImg
-					if thumbImg.Bounds().Dx() >= thumbImg.Bounds().Dy() {
-						resized = imaging.Resize(thumbImg, 40, 0)
-					} else {
-						resized = imaging.Resize(thumbImg, 0, 40)
+				defer thumbBody.Close()
+				thumbPath := fmt.Sprintf("m/%d.dat", documentId)
+				thumbUploadInfo, thumbErr := d.MinIO.Client.PutObject(
+					ctx,
+					"photos",
+					thumbPath,
+					thumbBody,
+					thumbContentLength,
+					minio.PutObjectOptions{ContentType: "image/webp"},
+				)
+				if thumbErr == nil {
+					thumbs = []*mtproto.PhotoSize{
+						mtproto.MakeTLPhotoSize(&mtproto.PhotoSize{
+							Type:  "m",
+							W:     input.ThumbWidth,
+							H:     input.ThumbHeight,
+							Size2: int32(thumbUploadInfo.Size),
+						}).To_PhotoSize(),
 					}
-					// Flatten transparency to white background before JPEG encoding.
-					// WebP sticker thumbnails have alpha; stripped JPEG has no alpha support,
-					// so transparent pixels would render as black/garbled without flattening.
-					flattened := imaging.FlattenToWhite(resized)
-					stripped := &bytes.Buffer{}
-					if encErr := imaging.EncodeStripped(stripped, flattened, 30); encErr == nil {
-						// Prepend stripped size before the "m" PhotoSize
-						thumbs = append([]*mtproto.PhotoSize{
-							mtproto.MakeTLPhotoStrippedSize(&mtproto.PhotoSize{
-								Type:  "i",
-								Bytes: stripped.Bytes(),
-							}).To_PhotoSize(),
-						}, thumbs...)
-					}
+				} else {
+					log.Infof("downloadAndUploadOne - thumb upload failed (non-fatal): %v", thumbErr)
 				}
 			} else {
-				log.Infof("downloadAndUploadOne - thumb upload failed (non-fatal): %v", thumbErr)
+				log.Infof("downloadAndUploadOne - thumb download failed (non-fatal): %v", thumbErr)
 			}
-		} else if thumbErr != nil {
-			log.Infof("downloadAndUploadOne - thumb download failed (non-fatal): %v", thumbErr)
+		} else {
+			log.Infof("downloadAndUploadOne - thumb GetFile failed (non-fatal): %v", thumbErr)
 		}
 	}
 
@@ -320,27 +293,6 @@ func DeserializeStickerDoc(s string) (*mtproto.Document, error) {
 	return doc, proto.Unmarshal(data, doc)
 }
 
-// downloadThumbBytes downloads a thumbnail from Bot API and returns the raw bytes.
-func (d *Dao) downloadThumbBytes(ctx context.Context, thumbFileId string) ([]byte, error) {
-	// 1. Get file path from Bot API
-	fileInfo, err := d.BotAPI.GetFile(ctx, thumbFileId)
-	if err != nil {
-		return nil, fmt.Errorf("GetFile(thumb): %w", err)
-	}
-
-	// 2. Download the thumb bytes (small, ok to buffer)
-	data, err := d.BotAPI.DownloadFile(ctx, fileInfo.FilePath)
-	if err != nil {
-		return nil, fmt.Errorf("DownloadFile(thumb): %w", err)
-	}
-
-	if len(data) == 0 {
-		return nil, fmt.Errorf("thumb file is empty")
-	}
-
-	return data, nil
-}
-
 // registerDocumentInMedia writes a Document record into the media service's `teamgram.documents`
 // table (and `teamgram.photo_sizes` for thumbnails) via cross-database INSERT.
 // This ensures that when a client sends a sticker as a message, `MediaGetDocument(id)` can
@@ -368,9 +320,10 @@ func (d *Dao) registerDocumentInMedia(ctx context.Context, doc *mtproto.Document
 		fileSize = int64(doc.Size2_INT32)
 	}
 
-	// INSERT into teamgram.documents (cross-database)
+	// INSERT or UPDATE teamgram.documents (cross-database)
+	// Use ON DUPLICATE KEY UPDATE to ensure thumb_id and attributes are always current.
 	_, err := d.DB.Exec(ctx,
-		"INSERT IGNORE INTO teamgram.documents(document_id, access_hash, dc_id, file_path, file_size, uploaded_file_name, ext, mime_type, thumb_id, video_thumb_id, attributes, date2) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+		"INSERT INTO teamgram.documents(document_id, access_hash, dc_id, file_path, file_size, uploaded_file_name, ext, mime_type, thumb_id, video_thumb_id, attributes, date2) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE thumb_id=VALUES(thumb_id), file_size=VALUES(file_size), attributes=VALUES(attributes)",
 		doc.Id,
 		doc.AccessHash,
 		doc.DcId,
@@ -388,7 +341,7 @@ func (d *Dao) registerDocumentInMedia(ctx context.Context, doc *mtproto.Document
 		return fmt.Errorf("insert documents: %w", err)
 	}
 
-	// INSERT photo_sizes for thumbnails
+	// INSERT or UPDATE photo_sizes for thumbnails
 	for _, sz := range doc.GetThumbs() {
 		var (
 			cachedType  int32
@@ -396,16 +349,16 @@ func (d *Dao) registerDocumentInMedia(ctx context.Context, doc *mtproto.Document
 		)
 		switch sz.GetPredicateName() {
 		case mtproto.Predicate_photoStrippedSize:
-			cachedType = 1 // CachedTypeStrippedSize
+			cachedType = 2 // CachedTypeStrippedSize (media/internal/dao/vars.go)
 			cachedBytes = base64.RawStdEncoding.EncodeToString(sz.Bytes)
 		case mtproto.Predicate_photoSize:
-			cachedType = 4 // CachedTypeSize
+			cachedType = 0 // CachedTypeSize (media/internal/dao/vars.go)
 		default:
 			continue
 		}
 
 		_, err = d.DB.Exec(ctx,
-			"INSERT IGNORE INTO teamgram.photo_sizes(photo_size_id, size_type, width, height, file_size, file_path, cached_type, cached_bytes) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+			"INSERT INTO teamgram.photo_sizes(photo_size_id, size_type, width, height, file_size, file_path, cached_type, cached_bytes) VALUES (?, ?, ?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE width=VALUES(width), height=VALUES(height), file_size=VALUES(file_size), file_path=VALUES(file_path), cached_type=VALUES(cached_type), cached_bytes=VALUES(cached_bytes)",
 			doc.Id,
 			sz.Type,
 			sz.W,
@@ -419,6 +372,11 @@ func (d *Dao) registerDocumentInMedia(ctx context.Context, doc *mtproto.Document
 			log.Errorf("registerDocumentInMedia - insert photo_sizes type=%s error: %v", sz.Type, err)
 		}
 	}
+
+	// Note: media service caches Document in Redis with key "document_{id}".
+	// If this document was previously cached without thumbs, the stale cache
+	// will persist until it expires or the service is restarted.
+	// To force a refresh, clear the Redis key: DEL document_{docId}
 
 	return nil
 }

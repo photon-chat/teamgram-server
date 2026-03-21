@@ -165,8 +165,7 @@ DownloadAndUploadStickerFiles (并发 5 workers, 10 per batch):
   ├─ Bot API getFile → file_path
   ├─ Bot API DownloadFileStream → io.ReadCloser (HTTP resp.Body)
   ├─ MinIO PutObject(documents/{docId}.dat, resp.Body) — 流式零拷贝
-  ├─ 缩略图: Bot API DownloadFile(thumb) → MinIO PutObject(photos/m/{docId}.dat)
-  └─ 缩略图处理: DecodeWebp → Resize(40px) → EncodeStripped → PhotoStrippedSize
+  ├─ 缩略图: Bot API DownloadFileStream(thumb) → MinIO PutObject(photos/m/{docId}.dat) — 流式零拷贝
         │
         ▼
 BFF 本地构建 Document protobuf (IDGen 生成 docId，本地计算 accessHash)
@@ -232,9 +231,9 @@ ALTER TABLE teamgram_stickers.sticker_set_documents
 
 1. **Bot Token 安全**: Token 配置在 `bff.yaml` 中，不要提交到公开仓库
 2. **ID 体系独立**: 本地 `set_id` 和 `document_id` 均由 IDGen 生成（BFF 直接调用），与 Telegram 官方 ID 无关
-3. **不写 media 的 documents 表**: Document 序列化后直接存在 `sticker_set_documents.document_data`，不依赖 media 服务持久化
+3. **跨库写入 media documents 表**: 下载完成后通过 `registerDocumentInMedia` 跨库 INSERT 到 `teamgram.documents` 和 `teamgram.photo_sizes`，确保 `MediaGetDocument(id)` 能找到贴纸 Document（避免 `documentEmpty`）
 4. **首次请求较慢**: 因为需要流式下载所有贴纸文件（HTTP → MinIO），首次请求耗时取决于贴纸数量和网络，但已优化为 5 并发 + 流式传输
 5. **贴纸集不会自动刷新**: 一旦缓存了某个贴纸集，后续请求始终返回缓存数据。如需刷新，需手动删除 `sticker_sets` 中对应的行
 6. **并发安全**: 多个客户端同时请求同一个未缓存的贴纸集时，使用 `StickerSetFlight` singleflight + `INSERT IGNORE` 机制，只有一个请求会完成下载
 7. **内存优化**: 流式下载直接写入 MinIO（跳过 DFS gRPC 链路），避免文件数据在内存中多次拷贝。每批 10 个贴纸处理完后触发 GC 回收内存
-8. **缩略图**: 使用 `pkg/imaging` 包（共享包）解码 WebP 缩略图，生成 PhotoStrippedSize（40px stripped JPEG）内联到 Document protobuf
+8. **缩略图**: 缩略图同样使用 `DownloadFileStream` 流式直传 MinIO `photos` 桶，不缓冲到内存，不生成内联预览（无 PhotoStrippedSize / PhotoPathSize）。客户端通过异步下载 "m" 缩略图作为占位图

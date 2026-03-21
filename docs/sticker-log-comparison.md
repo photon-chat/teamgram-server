@@ -103,7 +103,7 @@
 | 字段 | Telegram | OwnPod (修复前) | OwnPod (修复后) | 说明 |
 |------|----------|-----------------|-----------------|------|
 | `fileReference` | 非空 bytes | `<null>` | ⚠️ 不改 | proto3 序列化/反序列化 `[]byte{}` → `nil`，服务端不校验，无实际影响 |
-| `thumbs` | `[photoPathSize, photoSize(128x128)]` | nil | ✅ 已修复 | Bot API thumbnail → SSDB → DFS 解码 webp → `photoStrippedSize` + `photoSize(128x128)` |
+| `thumbs` | `[photoPathSize, photoSize(128x128)]` | nil | ✅ 已修复 | Bot API thumbnail → 流式直传 MinIO → `photoSize("m")` |
 | `flags` | 1 (有 thumbs) | 0 | ✅ 自动修复 | 有 thumbs 后 flags 自动包含 bit 0 |
 
 **Telegram sticker Document thumbs 格式**:
@@ -117,12 +117,11 @@ thumbs: [
 **OwnPod 修复后 Document thumbs 格式**:
 ```
 thumbs: [
-  photoStrippedSize(type: "i", bytes: ...),  ← JPEG 缩略预览 (~100-200 bytes, 内联)
   photoSize(type: "m", w: 128, h: 128, size: ~3-5KB)  ← MinIO photos/m/{docId}.dat
 ]
 ```
 
-> 差异：Telegram 用 `photoPathSize` (SVG path)，我们用 `photoStrippedSize` (stripped JPEG)。两者作用相同 — 提供内联的极小预览。`photoPathSize` 生成需要 SVG 路径提取算法，`photoStrippedSize` 用标准 JPEG 编码更易实现。客户端两者都支持。
+> 差异：Telegram 用 `photoPathSize` (SVG path) 提供内联极小预览，我们不生成内联预览。客户端会通过 `previewRepresentations` 异步下载 "m" 缩略图作为占位图。
 
 ---
 
@@ -144,10 +143,9 @@ thumbs: [
 **缩略图实现流程（当前 — 流式直传）**:
 ```
 Bot API sticker.thumbnail.file_id
-  → BFF: downloadThumbBytes → []byte (小文件，内存缓冲)
-  → BFF: MinIO PutObject(photos/m/{docId}.dat, thumbData)
-  → BFF: imaging.DecodeWebp(thumbData) → Resize(40px) → EncodeStripped
-  → Document.Thumbs = [photoStrippedSize("i"), photoSize("m")]
+  → BFF: Bot API GetFile → DownloadFileStream → io.ReadCloser
+  → BFF: MinIO PutObject(photos/m/{docId}.dat, resp.Body) — 流式零拷贝
+  → Document.Thumbs = [photoSize("m")]
   → serialize to DB (document_data)
 ```
 
