@@ -31,8 +31,8 @@
 267;BW;XX XXX XXX;Botswana
 375;BY;XX XXX XXXX;Belarus
 501;BZ;;Belize
-1;US;XXX XXX XXXX;United States
 1;CA;XXX XXX XXXX;Canada
+1;US;XXX XXX XXXX;United States
 243;CD;XX XXX XXXX;Congo (Dem. Rep.)
 236;CF;XX XX XX XX;Central African Rep.
 242;CG;XX XXX XXXX;Congo (Rep.)
@@ -113,8 +113,8 @@
 82;KR;XX XXXX XXX;South Korea
 965;KW;XXXX XXXX;Kuwait
 1345;KY;XXX XXXX;Cayman Islands
-7;RU;XXX XXX XXXX;Russian Federation
 7;KZ;XXX XXX XX XX;Kazakhstan
+7;RU;XXX XXX XXXX;Russian Federation
 856;LA;XX XX XXX XXX;Laos
 961;LB;;Lebanon
 1758;LC;XXX XXXX;Saint Lucia
