@@ -68,11 +68,12 @@ func (d *Dao) GetCityAndLocaleByIp(ip string) (cityName string, locale string) {
 
 	r, err := d.MMDB.City(net.ParseIP(ip))
 	if err != nil {
-		logx.Errorf("GetCityAndLocaleByIp - error: %v", err)
+		logx.Errorf("GetCityAndLocaleByIp - ip: %s, error: %v", ip, err)
 		return "", "en"
 	}
 
 	countryCode := r.Country.IsoCode
+	logx.Infof("GetCityAndLocaleByIp - ip: %s, country: %s, city: %v", ip, countryCode, r.City.Names)
 	locale = "en"
 	if l, ok := countryToLocale[countryCode]; ok {
 		locale = l

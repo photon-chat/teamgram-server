@@ -27,6 +27,8 @@ func (c *AuthorizationCore) autoJoinGroups(ctx context.Context, userId int64, fi
 
 	systemAdminId := c.svcCtx.Dao.SystemAdminUserId
 
+	c.Logger.Infof("autoJoinGroups: userId=%d, clientAddr=%s", userId, clientAddr)
+
 	// 1. Join general group
 	c.joinAutoGroup(ctx, userId, firstName, systemAdminId, dao.AutoGroupTypeGeneral, "", "en")
 
@@ -59,7 +61,7 @@ func (c *AuthorizationCore) joinAutoGroup(
 		}
 
 		if currentGroup == nil {
-			// No active group exists — this user becomes the creator of a new group
+			// No active group exists — system admin creates a new group, user joins as member
 			chatId, err := c.createAutoGroupChat(ctx, userId, systemAdminId, groupType, groupKey, locale, 1)
 			if err != nil {
 				c.Logger.Errorf("joinAutoGroup: createAutoGroupChat error: %v", err)
@@ -73,7 +75,7 @@ func (c *AuthorizationCore) joinAutoGroup(
 				GroupKey:         groupKey,
 				SequenceNum:      1,
 				ChatId:           chatId,
-				CreatorUserId:    userId,
+				CreatorUserId:    systemAdminId,
 				ParticipantCount: 1,
 			})
 			if err != nil {
@@ -95,7 +97,7 @@ func (c *AuthorizationCore) joinAutoGroup(
 				c.Logger.Errorf("joinAutoGroup: ChatAddChatUser error: %v", err)
 				// If the chat is full, create a new group for this user
 				if isGroupFullError(err) {
-					c.handleGroupFull(ctx, tx, userId, systemAdminId, groupType, groupKey, locale, currentGroup)
+					c.handleGroupFull(ctx, tx, userId, firstName, systemAdminId, groupType, groupKey, locale, currentGroup)
 					return
 				}
 				result.Err = err
@@ -135,6 +137,7 @@ func (c *AuthorizationCore) handleGroupFull(
 	ctx context.Context,
 	tx *sqlx.Tx,
 	userId int64,
+	firstName string,
 	systemAdminId int64,
 	groupType int32,
 	groupKey string,
@@ -166,18 +169,22 @@ func (c *AuthorizationCore) handleGroupFull(
 		GroupKey:         groupKey,
 		SequenceNum:      newSeq,
 		ChatId:           chatId,
-		CreatorUserId:    userId,
+		CreatorUserId:    systemAdminId,
 		ParticipantCount: 1,
 	})
 	if err != nil {
 		c.Logger.Errorf("handleGroupFull: CreateAutoGroupTx error: %v", err)
+		return
 	}
+
+	// Send welcome message so the creator sees the new group in their dialog list
+	c.sendAutoGroupWelcome(ctx, systemAdminId, chatId, userId, firstName, groupType, groupKey, locale)
 }
 
-// createAutoGroupChat creates a new chat group with the user as creator and system admin as a member.
+// createAutoGroupChat creates a new chat group with system admin as owner and the user as a member.
 func (c *AuthorizationCore) createAutoGroupChat(
 	ctx context.Context,
-	creatorUserId int64,
+	userId int64,
 	systemAdminId int64,
 	groupType int32,
 	groupKey string,
@@ -187,8 +194,8 @@ func (c *AuthorizationCore) createAutoGroupChat(
 	title := makeGroupTitle(groupType, groupKey, locale, sequenceNum)
 
 	chat, err := c.svcCtx.Dao.ChatClient.ChatCreateChat2(ctx, &chatpb.TLChatCreateChat2{
-		CreatorId:  creatorUserId,
-		UserIdList: []int64{systemAdminId},
+		CreatorId:  systemAdminId,
+		UserIdList: []int64{userId},
 		Title:      title,
 	})
 	if err != nil {
