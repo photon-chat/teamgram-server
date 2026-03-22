@@ -53,4 +53,6 @@ type Config struct {
 	FeaturedStickerSets       []string                   `json:",optional"`
 	AutoGroupMySQL            *sqlx.Config               `json:",optional"`
 	SystemAdminUserId         int64                      `json:",default=777001"`
+	TestCityName              string                     `json:",optional"`
+	TestCityLocale            string                     `json:",optional"`
 }

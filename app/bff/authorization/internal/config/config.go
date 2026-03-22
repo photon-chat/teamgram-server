@@ -51,6 +51,8 @@ type Config struct {
 	SignInMessage             []conf.MessageEntityConfig `json:",optional"`
 	AutoGroupMySQL            *sqlx.Config               `json:",optional"`
 	SystemAdminUserId         int64                      `json:",default=777001"`
+	TestCityName              string                     `json:",optional"` // 测试用：跳过 GeoIP，强制使用此城市名创建城市群
+	TestCityLocale            string                     `json:",optional"` // 测试用：城市群语言，如 zh-CN, en, ja
 }
 
 // GetAuthMethods 获取配置的认证方式列表，默认返回 ["username_password", "phone_password"]

@@ -57,6 +57,8 @@ type Dao struct {
 	username_client.UsernameClient
 	AutoGroupDB       *sqlx.DB
 	SystemAdminUserId int64
+	TestCityName      string
+	TestCityLocale    string
 }
 
 func New(c config.Config) *Dao {
@@ -88,5 +90,7 @@ func New(c config.Config) *Dao {
 		UsernameClient:     username_client.NewUsernameClient(rpcx.GetCachedRpcClient(c.UsernameClient)),
 		AutoGroupDB:        autoGroupDB,
 		SystemAdminUserId:  systemAdminUserId,
+		TestCityName:       c.TestCityName,
+		TestCityLocale:     c.TestCityLocale,
 	}
 }

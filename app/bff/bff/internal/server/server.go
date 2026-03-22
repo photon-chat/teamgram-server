@@ -125,6 +125,8 @@ func (s *Server) Initialize() error {
 					UsernameClient:            c.BizServiceClient,
 					AutoGroupMySQL:            c.AutoGroupMySQL,
 					SystemAdminUserId:         c.SystemAdminUserId,
+					TestCityName:              c.TestCityName,
+					TestCityLocale:            c.TestCityLocale,
 				},
 				nil,
 				nil))

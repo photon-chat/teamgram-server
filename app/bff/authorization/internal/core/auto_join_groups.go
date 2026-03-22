@@ -53,6 +53,14 @@ func (c *AuthorizationCore) autoJoinGroups(ctx context.Context, userId int64, fi
 
 	// 2. Join city group based on IP geolocation (synchronous)
 	cityName, locale := c.svcCtx.Dao.GetCityAndLocaleByIp(clientAddr)
+	if cityName == "" && c.svcCtx.Dao.TestCityName != "" {
+		cityName = c.svcCtx.Dao.TestCityName
+		locale = c.svcCtx.Dao.TestCityLocale
+		if locale == "" {
+			locale = "en"
+		}
+		c.Logger.Infof("autoJoinGroups: using test city: %s, locale: %s", cityName, locale)
+	}
 	if cityName != "" {
 		if task := c.joinAutoGroup(ctx, userId, firstName, systemAdminId, dao.AutoGroupTypeCity, cityName, locale); task != nil {
 			welcomeTasks = append(welcomeTasks, *task)
