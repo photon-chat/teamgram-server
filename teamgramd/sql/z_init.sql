@@ -11,6 +11,10 @@ INSERT INTO users (id, user_type, access_hash, secret_key_id, first_name, last_n
 INSERT INTO user_passwords (user_id, password_hash) VALUES
 (777001, '$2a$10$pkvW5JPKWVVcU4RwyfHFiO6JYzYzLAOvOwv1/ZvFQ2cMZjc36Akzm');
 
+-- 群助手在线状态（避免客户端显示异常的上线时间）
+INSERT INTO user_presences (id, user_id, last_seen_at, expires) VALUES
+(777001, 777001, 1774051200, 0);
+
 -- 群助手用户名注册
 INSERT INTO username (peer_type, peer_id, username) VALUES
 (2, 777001, 'group_assistant');
