@@ -18,7 +18,7 @@
 | 系统 | Windows/macOS (Docker Desktop) | 原生 Linux 服务器 |
 | 网络模式 | bridge（默认） | host |
 | 客户端 IP | Docker 内网 IP（城市群不可用） | 真实 IP（城市群可用） |
-| 启动命令 | `docker-compose up -d` | `docker-compose -f docker-compose.yaml -f docker-compose.prod.yaml up -d` |
+| 启动命令 | `docker-compose up -d` | `docker-compose -f docker-compose.prod.yaml up -d` |
 
 > **注意**：`network_mode: host` 仅在原生 Linux 上有效。Docker Desktop (Windows/macOS) 的 host 模式指向虚拟机，无法访问宿主机服务。
 
