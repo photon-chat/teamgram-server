@@ -25,7 +25,8 @@ export APNS_PRODUCTION=${APNS_PRODUCTION:-"false"}
 createConfigs() {
   CONFIG_TARGET_DIR=/app/etc2
   CONFIG_TEMPLATES_DIR=/app/etc
-  for file in `ls $CONFIG_TEMPLATES_DIR`; do
+  for filepath in $CONFIG_TEMPLATES_DIR/*.yaml; do
+    file=$(basename "$filepath")
     cat $CONFIG_TEMPLATES_DIR/$file \
       | sed 's#ListenOn: 127.0.0.1#ListenOn: '"$TEAMGRAM_HOST"'#g' \
       | sed "s#127.0.0.1:2379#$ETCD_URL#g" \

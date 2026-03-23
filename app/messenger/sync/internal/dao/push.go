@@ -10,7 +10,7 @@ import (
 )
 
 type DeviceInfo struct {
-	AuthKeyId  int64 `db:"auth_key_id"`
+	AuthKeyId  int64  `db:"auth_key_id"`
 	Token      string `db:"token"`
 	AppSandbox bool   `db:"app_sandbox"`
 	NoMuted    bool   `db:"no_muted"`
