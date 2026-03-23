@@ -96,12 +96,13 @@ func (d *Dao) GetAuthorizations(ctx context.Context, userId int64, excludeAuthKe
 		},
 		func(item interface{}) {
 			idx := item.(idxId)
-			//kId := item.(int64)
+			authUserDO := doList[idx.idx]
+
+			var authorization *mtproto.Authorization
 			cData, _ := d.GetCacheAuthData(ctx, idx.id)
 			if cData != nil {
 				country, region := d.getCountryAndRegionByIp(cData.ClientIp())
-				// TODO(@benqi): fill plat_form, app_name, (country, region)
-				authorization := mtproto.MakeTLAuthorization(&mtproto.Authorization{
+				authorization = mtproto.MakeTLAuthorization(&mtproto.Authorization{
 					Current:         false,
 					OfficialApp:     true,
 					PasswordPending: false,
@@ -118,14 +119,34 @@ func (d *Dao) GetAuthorizations(ctx context.Context, userId int64, excludeAuthKe
 					Country:         country,
 					Region:          region,
 				}).To_Authorization()
+			} else {
+				// auths table has no data for this key, build from auth_users
+				country, region := d.getCountryAndRegionByIp(authUserDO.Ip)
+				authorization = mtproto.MakeTLAuthorization(&mtproto.Authorization{
+					Current:         false,
+					OfficialApp:     true,
+					PasswordPending: false,
+					Hash:            authUserDO.Hash,
+					DeviceModel:     authUserDO.DeviceModel,
+					Platform:        authUserDO.Platform,
+					SystemVersion:   authUserDO.SystemVersion,
+					ApiId:           authUserDO.ApiId,
+					AppName:         authUserDO.AppName,
+					AppVersion:      authUserDO.AppVersion,
+					DateCreated:     int32(authUserDO.DateCreated),
+					DateActive:      int32(authUserDO.DateActived),
+					Ip:              authUserDO.Ip,
+					Country:         country,
+					Region:          region,
+				}).To_Authorization()
+			}
 
-				if idx.id == excludeAuthKeyId {
-					authorization.Current = true
-					authorization.Hash = 0
-					authorizations[0] = authorization
-				} else {
-					authorizations[idx.idx+1] = authorization
-				}
+			if idx.id == excludeAuthKeyId {
+				authorization.Current = true
+				authorization.Hash = 0
+				authorizations[0] = authorization
+			} else {
+				authorizations[idx.idx+1] = authorization
 			}
 		})
 

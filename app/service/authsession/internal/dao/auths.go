@@ -312,6 +312,7 @@ func (d *Dao) SetLayer(ctx context.Context, in *authsession.TLAuthsessionSetLaye
 }
 
 func (d *Dao) SetInitConnection(ctx context.Context, i *authsession.TLAuthsessionSetInitConnection) error {
+	now := time.Now().Unix()
 	_, _, err := d.CachedConn.Exec(
 		ctx,
 		func(ctx context.Context, conn *sqlx.DB) (int64, int64, error) {
@@ -327,7 +328,7 @@ func (d *Dao) SetInitConnection(ctx context.Context, i *authsession.TLAuthsessio
 				ClientIp:       i.GetIp(),
 				Proxy:          i.GetProxy(),
 				Params:         i.GetParams(),
-				DateActive:     time.Now().Unix(),
+				DateActive:     now,
 			}
 			if do.Params == "" {
 				do.Params = "null"
@@ -336,7 +337,26 @@ func (d *Dao) SetInitConnection(ctx context.Context, i *authsession.TLAuthsessio
 		},
 		genAuthDataCacheKey(i.GetAuthKeyId()))
 
-	return err
+	if err != nil {
+		return err
+	}
+
+	// Also update device info in auth_users so GetAuthorizations fallback has real data
+	d.AuthUsersDAO.UpdateDeviceInfo(
+		ctx,
+		0, // layer is not available in SetInitConnection
+		i.GetDeviceModel(),
+		"",
+		i.GetSystemVersion(),
+		i.GetApiId(),
+		i.GetLangPack(), // app_name uses lang_pack
+		i.GetAppVersion(),
+		i.GetIp(),
+		now,
+		i.GetAuthKeyId(),
+	)
+
+	return nil
 }
 
 func (d *Dao) GetCacheAuthData(ctx context.Context, authKeyId int64) (*CacheAuthData, error) {

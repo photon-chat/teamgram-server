@@ -227,11 +227,11 @@ func (dao *AuthUsersDAO) DeleteByHashListTx(tx *sqlx.Tx, idList []int64) (rowsAf
 }
 
 // SelectListByUserId
-// select id, auth_key_id, user_id, hash, date_created, date_actived from auth_users where user_id = :user_id and deleted = 0
+// select id, auth_key_id, user_id, hash, layer, device_model, platform, system_version, api_id, app_name, app_version, date_created, date_actived, ip, country, region from auth_users where user_id = :user_id and deleted = 0
 // TODO(@benqi): sqlmap
 func (dao *AuthUsersDAO) SelectListByUserId(ctx context.Context, user_id int64) (rList []dataobject.AuthUsersDO, err error) {
 	var (
-		query  = "select id, auth_key_id, user_id, hash, date_created, date_actived from auth_users where user_id = ? and deleted = 0"
+		query  = "select id, auth_key_id, user_id, hash, layer, device_model, platform, system_version, api_id, app_name, app_version, date_created, date_actived, ip, country, region from auth_users where user_id = ? and deleted = 0"
 		values []dataobject.AuthUsersDO
 	)
 	err = dao.db.QueryRowsPartial(ctx, &values, query, user_id)
@@ -247,11 +247,11 @@ func (dao *AuthUsersDAO) SelectListByUserId(ctx context.Context, user_id int64) 
 }
 
 // SelectListByUserIdWithCB
-// select id, auth_key_id, user_id, hash, date_created, date_actived from auth_users where user_id = :user_id and deleted = 0
+// select id, auth_key_id, user_id, hash, layer, device_model, platform, system_version, api_id, app_name, app_version, date_created, date_actived, ip, country, region from auth_users where user_id = :user_id and deleted = 0
 // TODO(@benqi): sqlmap
 func (dao *AuthUsersDAO) SelectListByUserIdWithCB(ctx context.Context, user_id int64, cb func(i int, v *dataobject.AuthUsersDO)) (rList []dataobject.AuthUsersDO, err error) {
 	var (
-		query  = "select id, auth_key_id, user_id, hash, date_created, date_actived from auth_users where user_id = ? and deleted = 0"
+		query  = "select id, auth_key_id, user_id, hash, layer, device_model, platform, system_version, api_id, app_name, app_version, date_created, date_actived, ip, country, region from auth_users where user_id = ? and deleted = 0"
 		values []dataobject.AuthUsersDO
 	)
 	err = dao.db.QueryRowsPartial(ctx, &values, query, user_id)
@@ -313,6 +313,28 @@ func (dao *AuthUsersDAO) DeleteTx(tx *sqlx.Tx, auth_key_id int64, user_id int64)
 	rowsAffected, err = rResult.RowsAffected()
 	if err != nil {
 		logx.WithContext(tx.Context()).Errorf("rowsAffected in Delete(_), error: %v", err)
+	}
+
+	return
+}
+
+// UpdateDeviceInfo
+// update auth_users set layer = ?, device_model = ?, platform = ?, system_version = ?, api_id = ?, app_name = ?, app_version = ?, ip = ?, date_actived = ? where auth_key_id = ? and deleted = 0
+func (dao *AuthUsersDAO) UpdateDeviceInfo(ctx context.Context, layer int32, deviceModel string, platform string, systemVersion string, apiId int32, appName string, appVersion string, ip string, dateActived int64, authKeyId int64) (rowsAffected int64, err error) {
+	var (
+		query   = "update auth_users set layer = ?, device_model = ?, platform = ?, system_version = ?, api_id = ?, app_name = ?, app_version = ?, ip = ?, date_actived = ? where auth_key_id = ? and deleted = 0"
+		rResult sql.Result
+	)
+	rResult, err = dao.db.Exec(ctx, query, layer, deviceModel, platform, systemVersion, apiId, appName, appVersion, ip, dateActived, authKeyId)
+
+	if err != nil {
+		logx.WithContext(ctx).Errorf("exec in UpdateDeviceInfo(_), error: %v", err)
+		return
+	}
+
+	rowsAffected, err = rResult.RowsAffected()
+	if err != nil {
+		logx.WithContext(ctx).Errorf("rowsAffected in UpdateDeviceInfo(_), error: %v", err)
 	}
 
 	return

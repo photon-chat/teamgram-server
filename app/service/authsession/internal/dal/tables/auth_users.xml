@@ -52,7 +52,7 @@
     <operation name="SelectListByUserId" result_set="list">
         <sql>
             SELECT
-                id, auth_key_id, user_id, hash, date_created, date_actived
+                id, auth_key_id, user_id, hash, layer, device_model, platform, system_version, api_id, app_name, app_version, date_created, date_actived, ip, country, region
             FROM
                 auth_users
             WHERE
@@ -79,6 +79,17 @@
                 deleted = 1, date_actived = 0
             WHERE
                 user_id = :user_id
+        </sql>
+    </operation>
+
+    <operation name="UpdateDeviceInfo">
+        <sql>
+            UPDATE
+                auth_users
+            SET
+                layer = :layer, device_model = :device_model, platform = :platform, system_version = :system_version, api_id = :api_id, app_name = :app_name, app_version = :app_version, ip = :ip, date_actived = :date_actived
+            WHERE
+                auth_key_id = :auth_key_id AND deleted = 0
         </sql>
     </operation>
 
