@@ -23,5 +23,7 @@ func (c *AccountCore) AccountGetAuthorizations(in *mtproto.TLAccountGetAuthoriza
 		return nil, err
 	}
 
+	rValue.AuthorizationTtlDays = c.svcCtx.Dao.GetAuthorizationTTLDays(c.ctx, c.MD.UserId)
+
 	return rValue, nil
 }

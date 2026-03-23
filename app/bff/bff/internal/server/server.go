@@ -291,6 +291,7 @@ func (s *Server) Initialize() error {
 		// account_helper
 		accountSvc := account_helper.New(account_helper.Config{
 			RpcServerConf:     c.RpcServerConf,
+			KV:                c.KV,
 			UserClient:        c.BizServiceClient,
 			AuthsessionClient: c.AuthSessionClient,
 			ChatClient:        c.BizServiceClient,

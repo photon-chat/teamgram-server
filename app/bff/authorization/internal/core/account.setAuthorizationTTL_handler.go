@@ -25,10 +25,19 @@ import (
 // AccountSetAuthorizationTTL
 // account.setAuthorizationTTL#bf899aa0 authorization_ttl_days:int = Bool;
 func (c *AuthorizationCore) AccountSetAuthorizationTTL(in *mtproto.TLAccountSetAuthorizationTTL) (*mtproto.Bool, error) {
-	// TODO: persist authorization TTL days per user
-	// Currently there is no storage for per-user authorization TTL.
-	// Accept the request and return success to unblock the client.
-	c.Logger.Infof("account.setAuthorizationTTL - authorization_ttl_days: %d", in.AuthorizationTtlDays)
+	days := in.AuthorizationTtlDays
+	if days < 1 {
+		days = 1
+	} else if days > 365 {
+		days = 365
+	}
+
+	c.Logger.Infof("account.setAuthorizationTTL - userId: %d, authorization_ttl_days: %d", c.MD.UserId, days)
+
+	if err := c.svcCtx.Dao.SetAuthorizationTTLDays(c.ctx, c.MD.UserId, days); err != nil {
+		c.Logger.Errorf("account.setAuthorizationTTL - SetAuthorizationTTLDays error: %v", err)
+		return nil, err
+	}
 
 	return mtproto.BoolTrue, nil
 }

@@ -28,9 +28,11 @@ import (
 
 	// report_client "github.com/teamgram/teamgram-server/app/service/biz/report/client"
 	user_client "github.com/teamgram/teamgram-server/app/service/biz/user/client"
+	"github.com/zeromicro/go-zero/core/stores/kv"
 )
 
 type Dao struct {
+	kv kv.Store
 	authsession_client.AuthsessionClient
 	user_client.UserClient
 	sync_client.SyncClient
@@ -38,10 +40,14 @@ type Dao struct {
 }
 
 func New(c config.Config) *Dao {
-	return &Dao{
+	d := &Dao{
 		UserClient:        user_client.NewUserClient(rpcx.GetCachedRpcClient(c.UserClient)),
 		AuthsessionClient: authsession_client.NewAuthsessionClient(rpcx.GetCachedRpcClient(c.AuthsessionClient)),
 		ChatClient:        chat_client.NewChatClient(rpcx.GetCachedRpcClient(c.ChatClient)),
 		SyncClient:        sync_client.NewSyncMqClient(kafka.MustKafkaProducer(c.SyncClient)),
 	}
+	if len(c.KV) > 0 {
+		d.kv = kv.NewStore(c.KV)
+	}
+	return d
 }
