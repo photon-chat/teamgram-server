@@ -86,13 +86,6 @@ func (c *BFFProxyClient) TryReturnFakeRpcResult(object mtproto.TLObject) (mtprot
 			//
 		}).To_MessageMedia(), nil
 
-	// wallpaper
-	case "TLAccountGetWallPapers":
-		return mtproto.MakeTLAccountWallPapers(&mtproto.Account_WallPapers{
-			Hash:       0,
-			Wallpapers: []*mtproto.WallPaper{},
-		}).To_Account_WallPapers(), nil
-
 	// twofa
 	case "TLAccountGetPassword":
 		return mtproto.MakeTLAccountPassword(&mtproto.Account_Password{
@@ -116,18 +109,6 @@ func (c *BFFProxyClient) TryReturnFakeRpcResult(object mtproto.TLObject) (mtprot
 		return mtproto.MakeTLHelpTermsOfServiceUpdateEmpty(&mtproto.Help_TermsOfServiceUpdate{
 			Expires: int32(time.Now().Unix() + 3600),
 		}).To_Help_TermsOfServiceUpdate(), nil
-
-	// themes
-	case "TLAccountGetThemes":
-		return mtproto.MakeTLAccountThemes(&mtproto.Account_Themes{
-			Hash:   0,
-			Themes: []*mtproto.Theme{},
-		}).To_Account_Themes(), nil
-	case "TLAccountGetChatThemes":
-		return mtproto.MakeTLAccountThemes(&mtproto.Account_Themes{
-			Hash:   0,
-			Themes: []*mtproto.Theme{},
-		}).To_Account_Themes(), nil
 
 	// stickers
 	case "TLMessagesGetAllStickers":

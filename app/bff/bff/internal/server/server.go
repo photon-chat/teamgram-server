@@ -44,10 +44,12 @@ import (
 	qrcode_helper "github.com/teamgram/teamgram-server/app/bff/qrcode"
 	sponsoredmessages_helper "github.com/teamgram/teamgram-server/app/bff/sponsoredmessages"
 	stickers_helper "github.com/teamgram/teamgram-server/app/bff/stickers"
+	themes_helper "github.com/teamgram/teamgram-server/app/bff/themes"
 	tos_helper "github.com/teamgram/teamgram-server/app/bff/tos"
 	updates_helper "github.com/teamgram/teamgram-server/app/bff/updates"
 	usernames_helper "github.com/teamgram/teamgram-server/app/bff/usernames"
 	users_helper "github.com/teamgram/teamgram-server/app/bff/users"
+	wallpapers_helper "github.com/teamgram/teamgram-server/app/bff/wallpapers"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/logx"
@@ -345,6 +347,20 @@ func (s *Server) Initialize() error {
 		mtproto.RegisterRPCLangpackServer(
 			grpcServer,
 			langpack_helper.New(langpack_helper.Config{
+				RpcServerConf: c.RpcServerConf,
+			}))
+
+		// themes_helper
+		mtproto.RegisterRPCThemesServer(
+			grpcServer,
+			themes_helper.New(themes_helper.Config{
+				RpcServerConf: c.RpcServerConf,
+			}))
+
+		// wallpapers_helper
+		mtproto.RegisterRPCWallpapersServer(
+			grpcServer,
+			wallpapers_helper.New(wallpapers_helper.Config{
 				RpcServerConf: c.RpcServerConf,
 			}))
 	})
