@@ -10,16 +10,17 @@
 package dao
 
 import (
+	apns2 "github.com/sideshow/apns2"
+	"github.com/sideshow/apns2/token"
 	kafka "github.com/teamgram/marmota/pkg/mq"
 	"github.com/teamgram/marmota/pkg/net/rpcx"
 	"github.com/teamgram/marmota/pkg/stores/sqlx"
 	sync_client "github.com/teamgram/teamgram-server/app/messenger/sync/client"
 	"github.com/teamgram/teamgram-server/app/messenger/sync/internal/config"
 	chat_client "github.com/teamgram/teamgram-server/app/service/biz/chat/client"
+	user_client "github.com/teamgram/teamgram-server/app/service/biz/user/client"
 	idgen_client "github.com/teamgram/teamgram-server/app/service/idgen/client"
 	status_client "github.com/teamgram/teamgram-server/app/service/status/client"
-	apns2 "github.com/sideshow/apns2"
-	"github.com/sideshow/apns2/token"
 	"github.com/zeromicro/go-zero/core/logx"
 	"github.com/zeromicro/go-zero/core/stores/kv"
 	"github.com/zeromicro/go-zero/zrpc"
@@ -33,6 +34,7 @@ type Dao struct {
 	idgen_client.IDGenClient2
 	status_client.StatusClient
 	chat_client.ChatClient
+	UserClient   user_client.UserClient
 	PushClient   sync_client.SyncClient
 	APNsClient   *apns2.Client
 	APNsBundleID string
@@ -49,6 +51,9 @@ func New(c config.Config) *Dao {
 		IDGenClient2:   idgen_client.NewIDGenClient2(zrpc.MustNewClient(c.IdgenClient)),
 		StatusClient:   status_client.NewStatusClient(zrpc.MustNewClient(c.StatusClient)),
 		ChatClient:     chat_client.NewChatClient(rpcx.GetCachedRpcClient(c.ChatClient)),
+	}
+	if c.UserClient.Etcd.Key != "" {
+		d.UserClient = user_client.NewUserClient(zrpc.MustNewClient(c.UserClient))
 	}
 	if c.PushClient != nil {
 		d.PushClient = sync_client.NewSyncMqClient(kafka.MustKafkaProducer(c.PushClient))

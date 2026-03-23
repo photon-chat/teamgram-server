@@ -17,9 +17,11 @@ import (
 	"github.com/teamgram/teamgram-server/app/interface/session/session"
 	"github.com/teamgram/teamgram-server/app/messenger/sync/internal/svc"
 	"github.com/teamgram/teamgram-server/app/messenger/sync/sync"
+	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
 	"github.com/teamgram/teamgram-server/app/service/status/status"
 
 	"github.com/zeromicro/go-zero/core/logx"
+	"github.com/zeromicro/go-zero/core/threading"
 )
 
 type SyncType int
@@ -227,12 +229,30 @@ func (c *SyncCore) pushUpdatesToSession(syncType SyncType, userId, authKeyId, cl
 		}
 
 		if syncType == syncTypeUser {
-			if c.svcCtx.Dao.PushClient != nil {
-				c.Logger.Infof("push PushClient...")
-				c.svcCtx.Dao.PushClient.SyncPushUpdatesIfNot(c.ctx, &sync.TLSyncPushUpdatesIfNot{
-					UserId:   userId,
-					Excludes: pushExcludeList,
-					Updates:  pushData,
+			// APNs push to offline devices directly
+			if c.svcCtx.Dao.APNsClient != nil {
+				// Check if user reported offline via account.updateStatus
+				// (iOS sends offline=true when going to background, but socket stays
+				// alive for ~30s. During this window the session is still "online" in
+				// status service, but the user can't see messages. We must push APNs.)
+				apnsExcludeList := pushExcludeList
+				if c.svcCtx.Dao.UserClient != nil {
+					lastSeen, err := c.svcCtx.Dao.UserClient.UserGetLastSeen(c.ctx, &userpb.TLUserGetLastSeen{
+						Id: userId,
+					})
+					if err == nil && lastSeen != nil && lastSeen.Expires == 0 {
+						// User reported offline (account.updateStatus offline=true)
+						// Don't exclude any devices — push to all APNs devices
+						c.Logger.Infof("pushUpdatesToSession - user %d reported offline, clearing exclude list for APNs push", userId)
+						apnsExcludeList = nil
+					}
+				}
+				threading.RunSafe(func() {
+					c.SyncPushUpdatesIfNot(&sync.TLSyncPushUpdatesIfNot{
+						UserId:   userId,
+						Excludes: apnsExcludeList,
+						Updates:  pushData,
+					})
 				})
 			}
 		}

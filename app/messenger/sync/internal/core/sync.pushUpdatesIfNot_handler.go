@@ -52,12 +52,17 @@ func (c *SyncCore) SyncPushUpdatesIfNot(in *sync.TLSyncPushUpdatesIfNot) (*mtpro
 		return mtproto.EmptyVoid, nil
 	}
 
-	// 4. Send push to each offline APNs device
+	// 4. Send push to each offline APNs device, deduplicate by token
+	pushedTokens := make(map[string]bool)
 	for _, dev := range devices {
 		if excludeMap[dev.AuthKeyId] {
 			c.Logger.Infof("sync.pushUpdatesIfNot - skip online device authKeyId: %d", dev.AuthKeyId)
 			continue
 		}
+		if pushedTokens[dev.Token] {
+			continue
+		}
+		pushedTokens[dev.Token] = true
 
 		c.Logger.Infof("sync.pushUpdatesIfNot - sending APNs push to device token: %s...", dev.Token[:min(8, len(dev.Token))])
 		if err := c.svcCtx.Dao.SendAPNsPush(c.ctx, dev.Token, pushPayload); err != nil {

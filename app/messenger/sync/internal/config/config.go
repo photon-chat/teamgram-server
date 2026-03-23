@@ -52,7 +52,8 @@ type Config struct {
 	IdgenClient   zrpc.RpcClientConf
 	StatusClient  zrpc.RpcClientConf
 	ChatClient    zrpc.RpcClientConf
+	UserClient    zrpc.RpcClientConf       `json:",optional"`
 	PushClient    *kafka.KafkaProducerConf `json:",optional"`
-	APNs          *APNsConfig             `json:",optional"`
-	DevicesMySQL  *sqlx.Config            `json:",optional"`
+	APNs          *APNsConfig              `json:",optional"`
+	DevicesMySQL  *sqlx.Config             `json:",optional"`
 }
