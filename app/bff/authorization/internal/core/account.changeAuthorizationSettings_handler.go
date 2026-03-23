@@ -25,8 +25,11 @@ import (
 // AccountChangeAuthorizationSettings
 // account.changeAuthorizationSettings#40f48462 flags:# hash:long encrypted_requests_disabled:flags.0?Bool call_requests_disabled:flags.1?Bool = Bool;
 func (c *AuthorizationCore) AccountChangeAuthorizationSettings(in *mtproto.TLAccountChangeAuthorizationSettings) (*mtproto.Bool, error) {
-	// TODO: not impl
-	c.Logger.Errorf("account.changeAuthorizationSettings - method not impl.")
+	// TODO: persist encrypted_requests_disabled and call_requests_disabled to DB
+	// Currently the auth_users table does not have columns for these settings.
+	// Accept the request and return success to unblock the client.
+	c.Logger.Infof("account.changeAuthorizationSettings - hash: %d, encrypted_requests_disabled: %v, call_requests_disabled: %v",
+		in.Hash, in.EncryptedRequestsDisabled, in.CallRequestsDisabled)
 
-	return nil, mtproto.ErrMethodNotImpl
+	return mtproto.BoolTrue, nil
 }

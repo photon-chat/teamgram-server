@@ -287,15 +287,17 @@ func (s *Server) Initialize() error {
 			}))
 
 		// account_helper
-		mtproto.RegisterRPCAccountServer(
-			grpcServer,
-			account_helper.New(account_helper.Config{
-				RpcServerConf:     c.RpcServerConf,
-				UserClient:        c.BizServiceClient,
-				AuthsessionClient: c.AuthSessionClient,
-				ChatClient:        c.BizServiceClient,
-				SyncClient:        c.SyncClient,
-			}))
+		accountSvc := account_helper.New(account_helper.Config{
+			RpcServerConf:     c.RpcServerConf,
+			UserClient:        c.BizServiceClient,
+			AuthsessionClient: c.AuthSessionClient,
+			ChatClient:        c.BizServiceClient,
+			SyncClient:        c.SyncClient,
+		})
+		mtproto.RegisterRPCAccountServer(grpcServer, accountSvc)
+
+		// passport (account.getAuthorizations)
+		mtproto.RegisterRPCPassportServer(grpcServer, accountSvc)
 
 		// photos_helper
 		mtproto.RegisterRPCPhotosServer(

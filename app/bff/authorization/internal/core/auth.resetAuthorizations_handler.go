@@ -20,13 +20,38 @@ package core
 
 import (
 	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/messenger/sync/sync"
+	"github.com/teamgram/teamgram-server/app/service/authsession/authsession"
 )
 
 // AuthResetAuthorizations
 // auth.resetAuthorizations#9fab0d1a = Bool;
 func (c *AuthorizationCore) AuthResetAuthorizations(in *mtproto.TLAuthResetAuthorizations) (*mtproto.Bool, error) {
-	// TODO: not impl
-	c.Logger.Errorf("auth.resetAuthorizations - method not impl.")
+	// hash=0 means reset all other authorizations (keep current session)
+	tKeyIdList, err := c.svcCtx.Dao.AuthsessionClient.AuthsessionResetAuthorization(c.ctx, &authsession.TLAuthsessionResetAuthorization{
+		UserId:    c.MD.UserId,
+		AuthKeyId: c.MD.AuthId,
+		Hash:      0,
+	})
+	if err != nil {
+		c.Logger.Errorf("auth.resetAuthorizations - error: %v", err)
+		return nil, err
+	}
 
-	return nil, mtproto.ErrMethodNotImpl
+	for _, id := range tKeyIdList.Datas {
+		c.svcCtx.Dao.SyncClient.SyncUpdatesMe(
+			c.ctx,
+			&sync.TLSyncUpdatesMe{
+				UserId:    c.MD.UserId,
+				AuthKeyId: id,
+				ServerId:  "",
+				SessionId: nil,
+				Updates: mtproto.MakeTLUpdateAccountResetAuthorization(&mtproto.Updates{
+					UserId:    c.MD.UserId,
+					AuthKeyId: id,
+				}).To_Updates(),
+			})
+	}
+
+	return mtproto.BoolTrue, nil
 }

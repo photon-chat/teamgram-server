@@ -268,12 +268,6 @@ func (c *BFFProxyClient) TryReturnFakeRpcResult(object mtproto.TLObject) (mtprot
 			Data: "{}",
 		}).To_DataJSON(), nil
 
-	case "TLAccountGetAuthorizations":
-		return mtproto.MakeTLAccountAuthorizations(&mtproto.Account_Authorizations{
-			AuthorizationTtlDays: 0,
-			Authorizations:       []*mtproto.Authorization{},
-		}).To_Account_Authorizations(), nil
-
 	case "TLAccountGetWebAuthorizations":
 		return mtproto.MakeTLAccountWebAuthorizations(&mtproto.Account_WebAuthorizations{
 			Authorizations: []*mtproto.WebAuthorization{},
