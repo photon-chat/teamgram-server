@@ -443,13 +443,13 @@
 "Login.InvalidLastNameError" = "죄송합니다. 본 성을 사용하실 수 없습니다.";
 
 "Login.InvalidPhoneEmailSubject" = "올바르지 않는 전화번호입니다: %@";
-"Login.InvalidPhoneEmailBody" = "I'm trying to use my mobile phone number: %1$@\nBut Telegram says it's invalid. Please help.\n\nApp version: %2$@\nOS version: %3$@\nLocale: %4$@\nMNC: %5$@";
+"Login.InvalidPhoneEmailBody" = "I'm trying to use my mobile phone number: %1$@\nBut PChat says it's invalid. Please help.\n\nApp version: %2$@\nOS version: %3$@\nLocale: %4$@\nMNC: %5$@";
 
 "Login.PhoneBannedEmailSubject" = "차단된 전화번호입니다: %@";
 "Login.PhoneBannedEmailBody" = "제 휴대전화 번호를 사용하려고 합니다: %1$@\n하지만 텔레그램에서 번호가 차단되었다고 합니다. 도와주세요.\n\n앱 버전: %2$@\nOS 버전: %3$@\n로캘: %4$@\nMNC: %5$@";
 
 "Login.PhoneGenericEmailSubject" = "텔레그램 iOS 오류: %@";
-"Login.PhoneGenericEmailBody" = "I'm trying to use my mobile phone number: %1$@\nBut Telegram shows an error. Please help.\n\nError: %2$@\nApp version: %3$@\nOS version: %4$@\nLocale: %5$@\nMNC: %6$@";
+"Login.PhoneGenericEmailBody" = "I'm trying to use my mobile phone number: %1$@\nBut PChat shows an error. Please help.\n\nError: %2$@\nApp version: %3$@\nOS version: %4$@\nLocale: %5$@\nMNC: %6$@";
 
 
 
@@ -496,7 +496,7 @@
 "Contacts.AccessDeniedHelpLandscape" = "회원님의 %@ 설정 > 개인 정보 보호 > 연락처에서\n텔레그램을 \"켬\"으로 설정하세요.";
 "Contacts.AccessDeniedHelpPortrait" = "회원님 %@의 설정 > 개인 정보 > 연락처에서 텔레그램을 켬으로 설정해 주세요.";
 "Contacts.AccessDeniedHelpON" = "활성화";
-"Contacts.InviteToTelegram" = "텔레그램으로 초대";
+"Contacts.InviteToPChat" = "텔레그램으로 초대";
 "Contacts.InviteFriends" = "친구 초대";
 "Contacts.SelectAll" = "모두 선택";
 
@@ -532,7 +532,7 @@
 "Conversation.Contact" = "연락처";
 "Conversation.BlockUser" = "사용자 차단";
 "Conversation.UnblockUser" = "사용자 차단 해제";
-"Conversation.UnsupportedMedia" = "이 메시지는 현재 사용하고 있는 텔레그램 버전에서 지원되지 않습니다.\n메시지를 보시려면 http://telegram.org/update 에서 앱을 업데이트하세요.";
+"Conversation.UnsupportedMedia" = "이 메시지는 현재 사용하고 있는 텔레그램 버전에서 지원되지 않습니다.\n메시지를 보시려면 http://p.chat/update 에서 앱을 업데이트하세요.";
 "Conversation.EncryptionWaiting" = "%@ 님을 기다리는 중...";
 "Conversation.EncryptionProcessing" = "암호화 키 교환 중...";
 "Conversation.EmptyPlaceholder" = "메시지가 없습니다...";
@@ -717,7 +717,7 @@
 
 // Encryption Key
 "EncryptionKey.Title" = "암호화 키";
-"EncryptionKey.Description" = "이 이미지와 문자는 %1$@ 님과의 비밀 대화에 사용된 암호화 키에서 파생되었습니다.\n\n이 이미지와 문자가 %2$@ 님의 휴대전화에서 똑같이 보인다면, 단대단 암호화가 보장됩니다.\n\ntelegram.org에서 자세히 알아보세요.";
+"EncryptionKey.Description" = "이 이미지와 문자는 %1$@ 님과의 비밀 대화에 사용된 암호화 키에서 파생되었습니다.\n\n이 이미지와 문자가 %2$@ 님의 휴대전화에서 똑같이 보인다면, 단대단 암호화가 보장됩니다.\n\np.chat에서 자세히 알아보세요.";
 
 // Conversation media
 "ConversationMedia.Title" = "미디어";
@@ -754,7 +754,7 @@
 "Settings.ChatBackground" = "대화방 배경화면";
 "Settings.Support" = "질문하기";
 "Settings.FAQ" = "자주 묻는 질문";
-"Settings.FAQ_URL" = "https://telegram.org/faq/ko#325188137";
+"Settings.FAQ_URL" = "https://p.chat/faq/ko#325188137";
 "Settings.FAQ_Intro" = "텔레그램 지원은 자원봉사자들이 처리합니다. 신속하게 응답해 드리고자 노력하지만, 다소 시간이 걸릴 수 있습니다.\n\n자주 묻는 질문을 확인해 보세요. 문제 해결을 위한 중요한 조언과 주요 질문에 대한 답변이 있습니다.";
 "Settings.FAQ_Button" = "자주 묻는 질문";
 "Settings.SaveIncomingPhotos" = "받은 사진 저장";
@@ -1214,7 +1214,7 @@
 "DialogList.SearchSectionGlobal" = "전체 검색";
 "DialogList.SearchSectionMessages" = "메시지";
 
-"Username.LinkHint" = "아래 링크로 회원님과의 대화방이 열립니다:[\nhttps://t.me/%@]";
+"Username.LinkHint" = "아래 링크로 회원님과의 대화방이 열립니다:[\nhttps://p.chat/%@]";
 "Username.LinkCopied" = "링크가 클립보드에 복사되었습니다.";
 
 
@@ -1277,7 +1277,7 @@
 
 "AccessDenied.CameraRestricted" = "텔레그램의 카메라 접근이 제한되어 있습니다.\n\n설정 > 일반 > 접근 제한 > 카메라에서 텔레그램을 켬으로 설정해 주세요.";
 
-"AccessDenied.CameraDisabled" = "카메라의 모든 접근이 제한되어 있습니다.\n\n'설정' - '일반' - '접근 제한' - '마이크'로 가서 Telegram을 활성화하세요.";
+"AccessDenied.CameraDisabled" = "카메라의 모든 접근이 제한되어 있습니다.\n\n'설정' - '일반' - '접근 제한' - '마이크'로 가서 PChat을 활성화하세요.";
 
 "AccessDenied.PhotosAndVideos" = "텔레그램이 사진 및 동영상을 보내기 위해 사진 라이브러리에 대한 접근 권한을 필요로 합니다.\n\n회원님 기기에서 설정 > 개인 정보 보호 > 사진으로 가서 텔레그램을 활성화 하세요.";
 
@@ -1601,7 +1601,7 @@
 
 "Channel.Username.Title" = "링크";
 "Channel.Username.Help" = "**텔레그램**에서 채널명을 정하실 수 있습니다. 다른 사람들이 이 이름으로 회원님의 채널을 찾을 수 있습니다.\n\n**a부터 z 사이 글자**, **0부터 9 사이 숫자**와 밑줄을 사용하실 수 있습니다. 최소 길이는 **다섯** 자입니다.";
-"Channel.Username.LinkHint" = "아래 링크로 채널이 열립니다:[\nhttps://t.me/%@]";
+"Channel.Username.LinkHint" = "아래 링크로 채널이 열립니다:[\nhttps://p.chat/%@]";
 "Channel.Username.InvalidTooShort" = "공개 링크는 5자 이상이어야 합니다.";
 "Channel.Username.InvalidStartsWithNumber" = "공개 링크는 숫자로 시작할 수 없습니다.";
 "Channel.Username.InvalidCharacters" = "올바른 이름을 입력하세요.";
@@ -1772,7 +1772,7 @@
 
 "Group.Management.AddModeratorHelp" = "채널 관리를 도울 관리자를 추가하실 수 있습니다. ";
 
-"Watch.AppName" = "Telegram";
+"Watch.AppName" = "PChat";
 "Watch.Compose.AddContact" = "연락처 선택";
 "Watch.Compose.CreateMessage" = "메시지 작성";
 "Watch.Compose.CurrentLocation" = "현재 위치";
@@ -2608,8 +2608,8 @@ Unused sets are archived when you add more.";
 "Conversation.HoldForAudio" = "꾹 눌러 녹음하세요. 살짝 눌러 동영상으로 전환하세요.";
 "Conversation.HoldForVideo" = "꾹 눌러 녹화하세요. 살짝 눌러 음성으로 전환하세요.";
 
-"UserInfo.TelegramCall" = "텔레그램 전화";
-"UserInfo.TelegramVideoCall" = "텔레그램 영상 통화";
+"UserInfo.PChatCall" = "텔레그램 전화";
+"UserInfo.PChatVideoCall" = "텔레그램 영상 통화";
 "UserInfo.PhoneCall" = "통화";
 
 "SharedMedia.CategoryMedia" = "미디어";
@@ -2796,7 +2796,7 @@ Unused sets are archived when you add more.";
 
 "Contacts.PhoneNumber" = "전화번호";
 "Contacts.AddPhoneNumber" = "%@ 추가";
-"Contacts.ShareTelegram" = "텔레그램 공유하기";
+"Contacts.SharePChat" = "텔레그램 공유하기";
 
 "Conversation.ViewChannel" = "채널 보기";
 "Conversation.ViewGroup" = "공개 그룹";
@@ -2895,7 +2895,7 @@ Unused sets are archived when you add more.";
 "SocksProxySetup.UseForCalls" = "통화에 사용";
 "SocksProxySetup.UseForCallsHelp" = "프록시 서버는 통화 품질을 저하시킬 수 있습니다.";
 
-"InviteText.URL" = "https://telegram.org/dl";
+"InviteText.URL" = "https://p.chat/dl";
 "InviteText.SingleContact" = "안녕하세요, 전 텔레그램이라는 메신저를 사용하고 있어요. 함께 사용해요! 여기서 다운로드하실 수 있어요. %@";
 
 
@@ -3247,7 +3247,7 @@ Unused sets are archived when you add more.";
 "AuthSessions.LoggedIn" = "웹 사이트";
 "AuthSessions.LogOutApplications" = "모든 웹 사이트 연결 끊기";
 "AuthSessions.LogOutApplicationsHelp" = "텔레그램으로 로그인하기를 지원하는 웹 사이트에 로그인하실 수 있습니다.";
-"AuthSessions.LoggedInWithTelegram" = "텔레그램으로 로그인된 웹 사이트";
+"AuthSessions.LoggedInWithPChat" = "텔레그램으로 로그인된 웹 사이트";
 "AuthSessions.LogOut" = "로그아웃";
 "AuthSessions.Message" = "%@에 로그인할 때 이 봇이 회원님에게 메시지를 보내도록 허용하셨습니다.";
 
@@ -3283,7 +3283,7 @@ Unused sets are archived when you add more.";
 
 "SocksProxySetup.ProxyType" = "유형";
 "SocksProxySetup.ProxySocks5" = "SOCKS5";
-"SocksProxySetup.ProxyTelegram" = "MTProto";
+"SocksProxySetup.ProxyPChat" = "MTProto";
 "SocksProxySetup.HostnamePlaceholder" = "서버";
 "SocksProxySetup.PortPlaceholder" = "포트";
 "SocksProxySetup.UsernamePlaceholder" = "사용자명";
@@ -3346,7 +3346,7 @@ Unused sets are archived when you add more.";
 "Passport.InfoTitle" = "텔레그램 패스포트가 무엇인가요?";
 "Passport.InfoText" = "**텔레그램 패스포트**와 함께라면 본인 확인이 필요한 웹 사이트와 서비스에 손쉽게 가입하실 수 있습니다.\n\n회원님의 정보와 개인 데이터, 서류는 단대단 암호화로 보호됩니다. 텔레그램을 포함하여 그 누구도 회원님의 승인 없이 이들에 접근할 수 없습니다.";
 "Passport.InfoLearnMore" = "더 알아보기";
-"Passport.InfoFAQ_URL" = "https://telegram.org/faq/ko#1660002760";
+"Passport.InfoFAQ_URL" = "https://p.chat/faq/ko#1660002760";
 
 "Passport.PassportInformation" = "패스포트 정보";
 "Passport.RequestedInformation" = "요청 받은 정보 ";
@@ -3496,15 +3496,15 @@ Unused sets are archived when you add more.";
 "Passport.Address.ScansHelp" = "서류에 회원님의 성명과 거주지 주소, 인장 / 바코드 / QR 코드 / 로고, 3개월 이내의 발급일이 포함되어야 합니다.";
 
 "Passport.Phone.Title" = "전화번호";
-"Passport.Phone.UseTelegramNumber" = "%@ 사용";
-"Passport.Phone.UseTelegramNumberHelp" = "텔레그램에 있는 것과 같은 전화번호를 사용하세요.";
+"Passport.Phone.UsePChatNumber" = "%@ 사용";
+"Passport.Phone.UsePChatNumberHelp" = "텔레그램에 있는 것과 같은 전화번호를 사용하세요.";
 "Passport.Phone.EnterOtherNumber" = "아니면 새 전화번호를 입력하세요";
 "Passport.Phone.Help" = "참고: 입력하신 전화번호로 인증 코드를 보내 드립니다.";
 "Passport.Phone.Delete" = "전화번호 삭제";
 
 "Passport.Email.Title" = "이메일";
-"Passport.Email.UseTelegramEmail" = "%@ 사용";
-"Passport.Email.UseTelegramEmailHelp" = "텔레그램에 있는 것과 같은 주소를 사용하세요";
+"Passport.Email.UsePChatEmail" = "%@ 사용";
+"Passport.Email.UsePChatEmailHelp" = "텔레그램에 있는 것과 같은 주소를 사용하세요";
 "Passport.Email.EnterOtherEmail" = "아니면 새 이메일 주소를 입력하세요";
 "Passport.Email.EmailPlaceholder" = "이메일 주소를 입력해주세요";
 "Passport.Email.Help" = "입력하신 이메일로 인증 코드를 보내 드립니다.";
@@ -3985,7 +3985,7 @@ Unused sets are archived when you add more.";
 "AttachmentMenu.WebSearch" = "웹 검색";
 
 "Conversation.UnsupportedMediaPlaceholder" = "이 메시지는 현재 텔레그램 버전에서 지원되지 않습니다. 최신 버전으로 업데이트해 주세요.";
-"Conversation.UpdateTelegram" = "텔레그램 업데이트";
+"Conversation.UpdatePChat" = "텔레그램 업데이트";
 
 "Cache.LowDiskSpaceText" = "휴대전화의 저장 공간이 부족합니다. 미디어를 다운로드하거나 업로드하려면 공간을 확보해 주세요.";
 
@@ -4050,7 +4050,7 @@ Unused sets are archived when you add more.";
 "EmptyGroupInfo.Subtitle" = "그룹은";
 "EmptyGroupInfo.Line1" = "200,000명까지 참가할 수 있습니다";
 "EmptyGroupInfo.Line2" = "대화 내용이 보존됩니다";
-"EmptyGroupInfo.Line3" = "공개 링크를 t.me/제목으로 둘 수 있습니다";
+"EmptyGroupInfo.Line3" = "공개 링크를 p.chat/제목으로 둘 수 있습니다";
 "EmptyGroupInfo.Line4" = "여러 권한의 관리자를 세울 수 있습니다";
 
 "WallpaperPreview.Title" = "배경화면 미리보기";
@@ -4428,7 +4428,7 @@ Unused sets are archived when you add more.";
 
 "Undo.ChatDeletedForBothSides" = "서로에게서 대화방을 삭제했습니다.";
 
-"AppUpgrade.Running" = "Optimizing Telegram...
+"AppUpgrade.Running" = "Optimizing PChat...
 This may take a while, depending on the size of the database. Please keep the app open until the process is finished.
 
 Sorry for the inconvenience.";
@@ -5116,7 +5116,7 @@ Sorry for the inconvenience.";
 "AuthSessions.AddDevice.ScanTitle" = "QR 코드 스캔";
 "AuthSessions.AddDevice.InvalidQRCode" = "올바른 QR 코드를 사용하세요";
 "AuthSessions.AddDeviceIntro.Title" = "QR 코드로 로그인";
-"AuthSessions.AddDeviceIntro.Text1" = "컴퓨터에 텔레그램을 다운로드하세요\n[desktop.telegram.org]()";
+"AuthSessions.AddDeviceIntro.Text1" = "컴퓨터에 텔레그램을 다운로드하세요\n[desktop.p.chat]()";
 "AuthSessions.AddDeviceIntro.Text2" = "컴퓨터에서 텔레그램을 실행해 QR 코드를 받으세요";
 "AuthSessions.AddDeviceIntro.Text3" = "QR 코드를 스캔해 회원님의 계정을 연결하세요";
 "AuthSessions.AddDeviceIntro.Action" = "QR 코드 스캔";
@@ -5432,11 +5432,11 @@ Sorry for the inconvenience.";
 "FeaturedStickers.OtherSection" = "다른 스티커";
 
 "ChatList.GenericPsaAlert" = "대화 목록에서 공공 서비스 발표를 제공드립니다.";
-"ChatList.PsaAlert.covid" = "이 메시지는 세계적 유행 중인 감염 질환에 관한 공공 서비스 발표를 제공드립니다. 아래 링크에서 관련 정보를 더 알아보세요.\nhttps://telegram.org/blog/coronavirus";
+"ChatList.PsaAlert.covid" = "이 메시지는 세계적 유행 중인 감염 질환에 관한 공공 서비스 발표를 제공드립니다. 아래 링크에서 관련 정보를 더 알아보세요.\nhttps://p.chat/blog/coronavirus";
 "ChatList.GenericPsaLabel" = "공공발표";
 "ChatList.PsaLabel.covid" = "코로나19";
 "Chat.GenericPsaTooltip" = "공공 서비스 발표입니다";
-"Chat.PsaTooltip.covid" = "이 메시지는 세계적 유행 중인 감염 질환에 관한 공공 서비스 발표를 제공드립니다. 아래 링크에서 이 계획에 대해 더 알아보세요.\nhttps://telegram.org/blog/coronavirus";
+"Chat.PsaTooltip.covid" = "이 메시지는 세계적 유행 중인 감염 질환에 관한 공공 서비스 발표를 제공드립니다. 아래 링크에서 이 계획에 대해 더 알아보세요.\nhttps://p.chat/blog/coronavirus";
 
 "Message.GenericForwardedPsa" = "공공 서비스 발표\n출처: %@";
 "Message.ForwardedPsa.covid" = "코로나바이러스감염증-19 알림\n출처: %@";
@@ -6648,7 +6648,7 @@ Sorry for the inconvenience.";
 "Privacy.PaymentsClear.AllInfoCleared" = "결제 및  배송 정보가 초기화되었습니다.";
 
 "Settings.Tips" = "텔레그램 기능 소개";
-"Settings.TipsUsername" = "TelegramTipsko";
+"Settings.TipsUsername" = "PChatTipsko";
 
 "Calls.NoVoiceAndVideoCallsPlaceholder" = "최근 음성 및 영상 통화가\n여기에 표시됩니다.";
 "Calls.StartNewCall" = "통화 시작하기";
@@ -6930,9 +6930,9 @@ Sorry for the inconvenience.";
 
 "SponsoredMessageMenu.Info" = "스폰서 메시지가\n뭔가요?";
 "SponsoredMessageInfoScreen.Title" = "스폰서 메시지는 무엇인가요?";
-"SponsoredMessageInfoScreen.MarkdownText" = "다른 앱과는 달리, 텔레그램은 절대 여러분의 개인 정보 데이터를 타겟 광고에 이용하지 않습니다. [개인정보 보호에 대해 자세히 알아보기](https://telegram.org/privacy#5-6-no-ads-based-on-user-data)\n\n이 메시지는 누군가가 공개채널을 홍보하기 위한 공간으로 선택하였기 때문에 표시가 됩니다. \n\n다른 앱과는 다르게, 텔레그램은 사용자의 활동분석을 통한 프로파일링과 어떤 스폰서 메시지에 반응했는지 추적을 하지 않습니다. 또한 스폰서 메시지에 외부 링크를 제한하여 제3자가 저희 회원들을 염탐할 수 없도록 조취를 취하고 있습니다. 저희는 누구나 개인 정보에 대한 권리를 가지고 있으며 테크 플랫폼은 이를 존중해야 된다고 믿고 있습니다.\n\n텔레그램은 수억 명의 사용자에게 무료이면서 무제한 서비스를 제공하기 위해 상당한 서버 및 트래픽 비용이 발생합니다. 독립성을 유지함과 동시에 본연의 가치를 지키기 위해 텔레그램은 개인 정보 보호를 고려한 유료 홍보 메시지 툴을 개발하였습니다. 책임감 있는 광고주들은 언제든지 다음으로의 연락을 환영합니다:\n[url]\n광고가 더 이상 사용자 개인 정보 침해와 동일시 되는 일은 없어져야 합니다. 테크회사가 어떻게 운영을 해야 하는지 모두 함께 재정의 해나갑시다.";
+"SponsoredMessageInfoScreen.MarkdownText" = "다른 앱과는 달리, 텔레그램은 절대 여러분의 개인 정보 데이터를 타겟 광고에 이용하지 않습니다. [개인정보 보호에 대해 자세히 알아보기](https://p.chat/privacy#5-6-no-ads-based-on-user-data)\n\n이 메시지는 누군가가 공개채널을 홍보하기 위한 공간으로 선택하였기 때문에 표시가 됩니다. \n\n다른 앱과는 다르게, 텔레그램은 사용자의 활동분석을 통한 프로파일링과 어떤 스폰서 메시지에 반응했는지 추적을 하지 않습니다. 또한 스폰서 메시지에 외부 링크를 제한하여 제3자가 저희 회원들을 염탐할 수 없도록 조취를 취하고 있습니다. 저희는 누구나 개인 정보에 대한 권리를 가지고 있으며 테크 플랫폼은 이를 존중해야 된다고 믿고 있습니다.\n\n텔레그램은 수억 명의 사용자에게 무료이면서 무제한 서비스를 제공하기 위해 상당한 서버 및 트래픽 비용이 발생합니다. 독립성을 유지함과 동시에 본연의 가치를 지키기 위해 텔레그램은 개인 정보 보호를 고려한 유료 홍보 메시지 툴을 개발하였습니다. 책임감 있는 광고주들은 언제든지 다음으로의 연락을 환영합니다:\n[url]\n광고가 더 이상 사용자 개인 정보 침해와 동일시 되는 일은 없어져야 합니다. 테크회사가 어떻게 운영을 해야 하는지 모두 함께 재정의 해나갑시다.";
 "SponsoredMessageInfo.Action" = "더 알아보기";
-"SponsoredMessageInfo.Url" = "https://promote.telegram.org";
+"SponsoredMessageInfo.Url" = "https://promote.p.chat";
 
 "Chat.NavigationNoChannels" = "안 읽은 채널이 없습니다";
 
@@ -7225,7 +7225,7 @@ Sorry for the inconvenience.";
 
 "AuthSessions.HeaderInfo" = "QR 코드를 스캔하여 [텔레그램 데스크톱](desktop) 혹은 [텔레그램 웹](web)에 연결하세요";
 "AuthSessions.LinkDesktopDevice" = "데스크탑 기기 연결";
-"AuthSessions.AddDevice.ScanInstallInfo" = "QR 코드를 얻으려면, [getdesktop.telegram.org](desktop) 혹은 [web.telegram.org](web)을 방문하세요";
+"AuthSessions.AddDevice.ScanInstallInfo" = "QR 코드를 얻으려면, [getdesktop.p.chat](desktop) 혹은 [web.p.chat](web)을 방문하세요";
 
 "Channel.AdminLog.MessageSent" = "%@ 님이 보낸 메시지:";
 
@@ -7426,7 +7426,7 @@ Sorry for the inconvenience.";
 
 "Attachment.DeselectedItems_any" = "항목 %@개가 선택 해제되었습니다.";
 
-"PrivacyPhoneNumberSettings.CustomPublicLink" = "회원님의 전화번호를 저장한 상대방도 텔레그램에서 볼 수 있게 됩니다.\n\n회원님과의 대화 공개 링크:\n[https://t.me/%@]()";
+"PrivacyPhoneNumberSettings.CustomPublicLink" = "회원님의 전화번호를 저장한 상대방도 텔레그램에서 볼 수 있게 됩니다.\n\n회원님과의 대화 공개 링크:\n[https://p.chat/%@]()";
 
 "DownloadList.DownloadingHeader" = "다운로드 중";
 "DownloadList.DownloadedHeader" = "최근 다운로드";
@@ -7533,7 +7533,7 @@ Sorry for the inconvenience.";
 "WebApp.RemoveConfirmationText" = "첨부파일 메뉴에서 **%@**을(를) 제거하겠습니까?";
 
 "Notifications.SystemTones" = "시스템음";
-"Notifications.TelegramTones" = "텔레그램음";
+"Notifications.PChatTones" = "텔레그램음";
 
 "Notifications.UploadSound" = "소리 업로드";
 "Notifications.MessageSoundInfo" = "대화에서 짧은 음성 메모나 MP3 파일을 꾹 누르고 \"알림음으로 저장\"을 선택하시면, 여기에 표시됩니다.";
@@ -7755,8 +7755,8 @@ Sorry for the inconvenience.";
 "Conversation.CopyProtectionSavingDisabledSecret" = "저장이 제한됨";
 "Conversation.CopyProtectionForwardingDisabledSecret" = "전달이 제한됨";
 
-"Settings.Terms_URL" = "https://telegram.org/tos";
-"Settings.PrivacyPolicy_URL" = "https://telegram.org/privacy";
+"Settings.Terms_URL" = "https://p.chat/tos";
+"Settings.PrivacyPolicy_URL" = "https://p.chat/privacy";
 
 "Stickers.PremiumPackInfoText" = "이 묶음은 이와 같이 프리미엄 스티커가 포함되어 있습니다.";
 "Stickers.PremiumPackView" = "보기";
@@ -7781,7 +7781,7 @@ Sorry for the inconvenience.";
 
 "Premium.Limits.GroupsAndChannelsInfo" = "최대 1000개의 채널과 대형 그룹에 들어갈 수 있어요";
 "Premium.Limits.PinnedChatsInfo" = "메인 대화 목록에 최대 10개의 대화방을 고정할 수 있어요";
-"Premium.Limits.PublicLinksInfo" = "최대 20개의 [t.me/username]() 링크를 마련할 수 있어요";
+"Premium.Limits.PublicLinksInfo" = "최대 20개의 [p.chat/username]() 링크를 마련할 수 있어요";
 "Premium.Limits.SavedGifsInfo" = "즐겨찾는 GIF에 최대 400개의 GIF를 저장할 수 있어요";
 "Premium.Limits.FavedStickersInfo" = "즐겨찾는 스티커에 최대 10개의 스티커를 저장할 수 있어요";
 "Premium.Limits.BioInfo" = "자기소개에 더욱 많은 글자를 추가하고 링크를 사용할 수 있어요";
@@ -7871,7 +7871,7 @@ Sorry for the inconvenience.";
 "DeleteAccount.MessageHistoryTitle" = "내 메시지 이력";
 "DeleteAccount.MessageHistoryText" = "대화 상대는 비밀대화를 포함하여, 회원님과 주고 받은 메시지를 가지고 있습니다.\n\n회원님은 언제든지 상호간의 메시지를 언제든지 삭제할 수 있지만, 계정을 삭제하실 경우 불가능해집니다.";
 
-"DeleteAccount.DeleteMessagesURL" = "https://telegram.org/faq#q-can-i-delete-my-messages";
+"DeleteAccount.DeleteMessagesURL" = "https://p.chat/faq#q-can-i-delete-my-messages";
 
 "DeleteAccount.EnterPhoneNumber" = "전화번호를 입력해주세요";
 "DeleteAccount.InvalidPhoneNumberError" = "올바르지 않은 전화번호입니다. 다시 시도해주세요.";
@@ -8074,8 +8074,8 @@ Sorry for the inconvenience.";
 "Login.EnterCodeSMSTitle" = "코드를 입력해주세요";
 "Login.EnterCodeSMSText" = "휴대번호 **%@**으로 활성화 코드를 SMS로 전송했습니다.";
 "Login.SendCodeAsSMS" = "코드를 SMS로 전송하기";
-"Login.EnterCodeTelegramTitle" = "코드 입력";
-"Login.EnterCodeTelegramText" = "회원님의 다른 기기에 %@에 대한 코드를 **텔레그램**앱으로 전송했습니다.";
+"Login.EnterCodePChatTitle" = "코드 입력";
+"Login.EnterCodePChatText" = "회원님의 다른 기기에 %@에 대한 코드를 **텔레그램**앱으로 전송했습니다.";
 "Login.AddEmailTitle" = "로그인에 사용할 이메일 선택";
 "Login.AddEmailText" = "문자가 아닌 이메일을 통해 텔레그램 로그인 코드를 받게 됩니다. 접근 권한이 있는 이메일 주소를 입력하세요.";
 "Login.AddEmailPlaceholder" = "이메일을 입력해주세요";
@@ -9935,7 +9935,7 @@ Sorry for the inconvenience.";
 "WebApp.DisclaimerText" = "회원님은 텔레그램과 무관한 독립적인 제3자가 운영하는 미니 앱을 사용하려고 합니다. 계속하려면 이용약관에 동의해주셔야 합니다.";
 "WebApp.DisclaimerAgree" = "[이용약관]()에 동의합니다";
 "WebApp.DisclaimerContinue" = "계속";
-"WebApp.Disclaimer_URL" = "https://telegram.org/tos/mini-apps";
+"WebApp.Disclaimer_URL" = "https://p.chat/tos/mini-apps";
 
 "WebApp.ShortcutsAdded" = "첨부 매뉴에 **%@** 바로가기가 추가되었습니다.";
 "WebApp.ShortcutsSettingsAdded" = "첨부 및 사이드 매뉴에 **%@** 바로가기가 추가되었습니다.";
@@ -10437,7 +10437,7 @@ Sorry for the inconvenience.";
 "GiftLink.Date" = "날짜";
 "GiftLink.NoRecipient" = "수신자 없음";
 
-"GiftLink.TelegramPremium_any" = "텔레그램 프리미엄 %@개월";
+"GiftLink.PChatPremium_any" = "텔레그램 프리미엄 %@개월";
 "GiftLink.LinkHidden" = "수신자만 링크를 볼 수 있습니다.";
 
 "ChannelBoost.EnableColors" = "색상 활성화";
@@ -11650,7 +11650,7 @@ Sorry for the inconvenience.";
 
 
 "WebApp.TermsOfUse" = "이용약관";
-"WebApp.TermsOfUse_URL" = "https://telegram.org/tos/mini-apps";
+"WebApp.TermsOfUse_URL" = "https://p.chat/tos/mini-apps";
 
 "Privacy.Birthday" = "생일";
 "Privacy.Birthday.WhoCanSeeMyBio" = "내 생일을 볼 수 있는 사람";
@@ -12606,7 +12606,7 @@ Sorry for the inconvenience.";
 
 
 "WebBrowser.ClearCookies" = "쿠키 삭제";
-"WebBrowser.ClearCookies.Info" = "Telegram 앱 내 브라우저의 쿠키를 모두 삭제합니다. 이 동작은 대부분의 웹사이트에서 로그아웃 시킵니다.";
+"WebBrowser.ClearCookies.Info" = "PChat 앱 내 브라우저의 쿠키를 모두 삭제합니다. 이 동작은 대부분의 웹사이트에서 로그아웃 시킵니다.";
 
 
 "WebBrowser.Exceptions.Title" = "앱 내 브라우저로 절대 열지 않기";
@@ -15975,7 +15975,7 @@ Error: %8$@";
 
 
 
-/* new from translations.telegram.org */
+/* new from translations.p.chat */
 
 "AUTH_REGION" = "새로운 %1$@ 기기로 로그인되었습니다. 위치: %2$@";
 "AUTH_REGION_SEPARATED" = "새로운 로그인|확인되지 않은 기기 %1$@, 위치: %2$@";
@@ -16180,7 +16180,7 @@ Error: %8$@";
 "InviteText.ContactsCount_any" = "안녕하세요, %@명의 친구와 텔레그램이라는 메신저를 사용하고 있어요. 함께 사용해요! 여기서 다운로드하세요: %@";
 "LOCKED_MESSAGE" = "새로운 메시지가 왔습니다%1$@";
 "Login.CallRequestState1" = "%d:%.2d 뒤에 텔레그램에서 전화합니다";
-"Login.PRIVACY_URL" = "https://telegram.org/privacy";
+"Login.PRIVACY_URL" = "https://p.chat/privacy";
 "Login.SmsRequestState1" = "%d:%.2d 뒤에 SMS를 보냅니다";
 "MESSAGES" = "%1$@ 님이 메시지 %2$@개를 보냈습니다";
 "MESSAGES_SEPARATED" = "%1$@|sent you %2$@ messages";
@@ -16303,10 +16303,10 @@ Error: %8$@";
 "PUSH_MESSAGE_ROUNDS_any" = "%1$@|📺 동영상 메시지 %2$d개";
 "PUSH_MESSAGE_VIDEOS_any" = "%1$@|📹 동영상 %2$d개";
 "Passport.Scans" = "스캔본";
-"PassportKit.Button.GetTelegramAlertInstall" = "설치";
-"PassportKit.Button.GetTelegramAlertMessage" = "텔레그램 패스포트를 사용하려면 텔레그램 메신저를 설치하셔야 합니다";
-"PassportKit.Button.GetTelegramAlertNotNow" = "지금 안 함";
-"PassportKit.Button.GetTelegramAlertTitle" = "텔레그램 메신저를 받으세요";
+"PassportKit.Button.GetPChatAlertInstall" = "설치";
+"PassportKit.Button.GetPChatAlertMessage" = "텔레그램 패스포트를 사용하려면 텔레그램 메신저를 설치하셔야 합니다";
+"PassportKit.Button.GetPChatAlertNotNow" = "지금 안 함";
+"PassportKit.Button.GetPChatAlertTitle" = "텔레그램 메신저를 받으세요";
 "PassportKit.Button.Title" = "텔레그램으로 로그인";
 "Peer.DeletedUser" = "삭제된 사용자";
 "PeerInfo.PaneVoice" = "동영상 메시지";
@@ -16318,8 +16318,8 @@ Error: %8$@";
 "ScheduleVoiceChatChannel.Title" = "영상 대화 예약";
 "Settings.EditProfileMedia" = "수정";
 "SocksProxySetup.UseSocks5" = "SOCKS5 프록시 사용";
-"SponsoredMessageInfo.ActionUrl" = "https://telegram.org";
-"SponsoredMessageInfo.Text" = "https://telegram.org 방문하기";
+"SponsoredMessageInfo.ActionUrl" = "https://p.chat";
+"SponsoredMessageInfo.Text" = "https://p.chat 방문하기";
 "SponsoredMessageInfoScreen.Text" = "다른 앱과는 달리, 텔레그램은 절대 여러분의 개인 정보 데이터를 타겟 광고에 이용하지 않습니다. 텔레그램의 스폰서 메시지는 오로지 해당 메시지가 표시되는 공개 채널의 주제를 기반으로 합니다. 이는 곧 광고를 표시하기 위해 사용자 데이터를 채굴하거나 분석하지 않으며, 텔레그램 채널을 보는 모든 사용자들이 동일한 스폰서 메시지를 보게 된다는 뜻입니다.\n\n다른 앱과는 달리, 텔레그램은 여러분이 스폰서 메시지를 탭했는가의 여부를 추적하지 않으며, 여러분의 활동을 기반으로 프로파일링 역시 하지 않습니다. 또한, 제3자가 우리 플랫폼의 사용자를 감시하지 못하도록 스폰서 메시지에 외부 링크를 차단하고 있습니다. 저희는 모든 사람이 개인 정보에 대한 권리를 가지고 있으며, 기술 플랫폼은 이를 존중해야 한다고 믿습니다.\n\n텔레그램은 전세계 수억 명의 사용자들에게 무료이면서 제한 없는 서비스를 제공하기 위해 상당한 서버 및 트래픽 비용을 감당하고 있습니다. 독립성을 유지하고 그 가치에 충실하기 위해, 텔레그램은 사용자 개인 정보를 염두에 두며 메시지를 홍보할 수 있는 유료 툴을 개발하였습니다. 책임감 있는 광고주분들을 환영합니다:\n[url]\n스폰서 메시지는 현재 테스트 모드에 있습니다. 정식 출시가 되고 텔레그램이 기초 비용을 충당할 수 있게 되면, 스폰서 메시지가 표시되는 공개 채널의 소유자분들과 광고 수익을 공유할 예정입니다.\n\n온라인 광고가 더 이상 사용자 개인 정보 남용의 동의어가 되어서는 안 됩니다. 테크 기업의 운영 방식을 재정의해 나가겠습니다. 여러분과 함께 말이죠.";
 "StickerPacksSettings.ArchivedMasks.Info" = "마스크 묶음을 200개까지 추가하실 수 있습니다. \n사용하지 않는 마스크는 새로운 묶음을 추가하실 때 보관됩니다.";
 "Story.Editor.TooltipPremiumMore" = "더보기";

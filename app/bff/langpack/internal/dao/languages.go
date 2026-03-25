@@ -56,7 +56,7 @@ func makeLang(name, nativeName, langCode, baseLangCode, pluralCode string, strin
 		PluralCode:      pluralCode,
 		StringsCount:    stringsCount,
 		TranslatedCount: translatedCount,
-		TranslationsUrl: "https://translations.telegram.org/" + langCode + "/",
+		TranslationsUrl: "https://p.chat/translations/" + langCode + "/",
 	}
 	if baseLangCode != "" {
 		lang.BaseLangCode = &types.StringValue{Value: baseLangCode}

@@ -496,7 +496,7 @@
 "Contacts.AccessDeniedHelpLandscape" = "لطفاً به قسمت Settings > Privacy > Contacts در %@ خود مراجعه کنید.\nسپس گزینه فعال را برای تلگرام انتخاب نمایید.";
 "Contacts.AccessDeniedHelpPortrait" = "لطفاً به قسمت Settings > Privacy > Contacts در %@ خود مراجعه کرده و تلگرام را بر روی حالت فعال قرار دهید.";
 "Contacts.AccessDeniedHelpON" = "فعال";
-"Contacts.InviteToTelegram" = "دعوت به تلگرام";
+"Contacts.InviteToPChat" = "دعوت به تلگرام";
 "Contacts.InviteFriends" = "دعوت از دوستان";
 "Contacts.SelectAll" = "انتخاب همه";
 
@@ -532,7 +532,7 @@
 "Conversation.Contact" = "مخاطب";
 "Conversation.BlockUser" = "مسدود کردن کاربر";
 "Conversation.UnblockUser" = "رفع مسدودیت کاربر";
-"Conversation.UnsupportedMedia" = "این پیام توسط نسخه فعلی تلگرام شما پشتیبانی نمی‌شود. برای مشاهده، برنامه را به‌روزرسانی کنید:\nhttp://telegram.org/update";
+"Conversation.UnsupportedMedia" = "این پیام توسط نسخه فعلی تلگرام شما پشتیبانی نمی‌شود. برای مشاهده، برنامه را به‌روزرسانی کنید:\nhttp://p.chat/update";
 "Conversation.EncryptionWaiting" = "در انتظار آنلاین شدن %@...";
 "Conversation.EncryptionProcessing" = "در حال تبادل کلید‌های رمزگذاری...";
 "Conversation.EmptyPlaceholder" = "هنوز پیامی در اینجا وجود ندارد...";
@@ -717,7 +717,7 @@
 
 // Encryption Key
 "EncryptionKey.Title" = "کلید رمزگذاری";
-"EncryptionKey.Description" = "این تصویر و متن از کلید رمزگذاری این گفتگوی محرمانه با %1$@ گرفته شده است.\n\n اگر تصویر و متن در دستگاه %2$@ با این تصویر و متن یکسان باشد، رمزگذاری سرتاسر تضمین شده است. \n\n برای اطلاعات بیشتر به telegram.org مراجعه کنید.";
+"EncryptionKey.Description" = "این تصویر و متن از کلید رمزگذاری این گفتگوی محرمانه با %1$@ گرفته شده است.\n\n اگر تصویر و متن در دستگاه %2$@ با این تصویر و متن یکسان باشد، رمزگذاری سرتاسر تضمین شده است. \n\n برای اطلاعات بیشتر به p.chat مراجعه کنید.";
 
 // Conversation media
 "ConversationMedia.Title" = "رسانه‌ها";
@@ -754,7 +754,7 @@
 "Settings.ChatBackground" = "پس‌زمینه گفتگو";
 "Settings.Support" = "پرسیدن سؤال";
 "Settings.FAQ" = "پرسش‌های متداول تلگرام";
-"Settings.FAQ_URL" = "https://telegram.org/faq/fa#a";
+"Settings.FAQ_URL" = "https://p.chat/faq/fa#a";
 "Settings.FAQ_Intro" = "لطفاً توجه داشته باشید که پشتیبانی تلگرام توسط داوطلبان انجام می‌شود. ما سعی می‌کنیم هر چه سریع‌تر پاسخگو باشیم، اما ممکن است مدتی طول بکشد.\n\nلطفاً به صفحه پرسش‌های متداول تلگرام سری بزنید: این بخش حاوی توصیه‌های مهمی برای عیب‌یابی و پاسخ به اکثر پرسش‌ها است.";
 "Settings.FAQ_Button" = "پرسش‌های متداول";
 "Settings.SaveIncomingPhotos" = "ذخیره کردن عکس‌های دریافتی";
@@ -1214,7 +1214,7 @@
 "DialogList.SearchSectionGlobal" = "جستجوی سراسری";
 "DialogList.SearchSectionMessages" = "پیام‌ها";
 
-"Username.LinkHint" = "این لینک گفتگویی را با خودتان باز می‌کند:[\nhttps://t.me/%@]";
+"Username.LinkHint" = "این لینک گفتگویی را با خودتان باز می‌کند:[\nhttps://p.chat/%@]";
 "Username.LinkCopied" = "لینک در حافظه کپی شد.";
 
 "SharedMedia.DeleteItemsConfirmation_1" = "فایل رسانه‌ای حذف شود؟";
@@ -1601,7 +1601,7 @@
 
 "Channel.Username.Title" = "لینک";
 "Channel.Username.Help" = "شما می‌توانید **در تلگرام** برای کانال خود نامی انتخاب کنید. با این کار، سایر افراد می‌توانند کانال شما را از طریق این نام پیدا کنند.\n\nشما می‌توانید از کاراکترهای **9–0**، **a–z** و _ استفاده کنید. حداقل طول مجاز **5** کاراکتر است.";
-"Channel.Username.LinkHint" = "این لینک کانال شما را باز می‌کند:[\nhttps://t.me/%@]";
+"Channel.Username.LinkHint" = "این لینک کانال شما را باز می‌کند:[\nhttps://p.chat/%@]";
 "Channel.Username.InvalidTooShort" = "لینک‌های عمومی باید حداقل 5 کاراکتر داشته باشند.";
 "Channel.Username.InvalidStartsWithNumber" = "لینک‌های عمومی نمی‌توانند با عدد شروع شوند.";
 "Channel.Username.InvalidCharacters" = "متأسفانه این نام نامعتبر است.";
@@ -2608,8 +2608,8 @@ Unused sets are archived when you add more.";
 "Conversation.HoldForAudio" = "برای ضبط صدا نگه دارید. برای تغییر به ویدیو، بزنید.";
 "Conversation.HoldForVideo" = "برای ضبط ویدیو نگه دارید. برای تغییر به صدا، بزنید.";
 
-"UserInfo.TelegramCall" = "تماس تلگرامی";
-"UserInfo.TelegramVideoCall" = "تماس ویدیویی تلگرامی";
+"UserInfo.PChatCall" = "تماس تلگرامی";
+"UserInfo.PChatVideoCall" = "تماس ویدیویی تلگرامی";
 "UserInfo.PhoneCall" = "تماس تلفنی";
 
 "SharedMedia.CategoryMedia" = "رسانه‌ها";
@@ -2796,7 +2796,7 @@ Unused sets are archived when you add more.";
 
 "Contacts.PhoneNumber" = "شماره تلفن";
 "Contacts.AddPhoneNumber" = "افزودن %@";
-"Contacts.ShareTelegram" = "به اشتراک گذاشتن تلگرام";
+"Contacts.SharePChat" = "به اشتراک گذاشتن تلگرام";
 
 "Conversation.ViewChannel" = "مشاهده کانال";
 "Conversation.ViewGroup" = "مشاهده گروه";
@@ -2895,7 +2895,7 @@ Unused sets are archived when you add more.";
 "SocksProxySetup.UseForCalls" = "استفاده برای تماس‌ها";
 "SocksProxySetup.UseForCallsHelp" = "سرورهای پروکسی ممکن است کیفیت تماس‌های شما را کاهش دهند.";
 
-"InviteText.URL" = "https://telegram.org/dl";
+"InviteText.URL" = "https://p.chat/dl";
 "InviteText.SingleContact" = "سلام، من از تلگرام برای گفتگو استفاده می‌کنم. به من بپیوند! تلگرام را از اینجا دانلود کن: %@";
 "InviteText.ContactsCountText_1" = "سلام، من از تلگرام برای گفتگو استفاده می‌کنم. به من بپیوند! تلگرام را از اینجا دانلود کن: {url}";
 
@@ -3247,7 +3247,7 @@ Unused sets are archived when you add more.";
 "AuthSessions.LoggedIn" = "وبسایت‌ها";
 "AuthSessions.LogOutApplications" = "قطع اتصال تمامی وبسایت‌ها";
 "AuthSessions.LogOutApplicationsHelp" = "شما می‌توانید در وبسایت‌هایی که از ورود با حساب کاربری تلگرام پشتیبانی می‌کنند، وارد شوید.";
-"AuthSessions.LoggedInWithTelegram" = "وارد شده با حساب کاربری تلگرام";
+"AuthSessions.LoggedInWithPChat" = "وارد شده با حساب کاربری تلگرام";
 "AuthSessions.LogOut" = "خروج از حساب کاربری";
 "AuthSessions.Message" = "هنگامی که در %@ وارد حساب کاربری خود شدید، به این ربات اجازه دادید تا برای شما پیام ارسال کند.";
 
@@ -3283,7 +3283,7 @@ Unused sets are archived when you add more.";
 
 "SocksProxySetup.ProxyType" = "نوع";
 "SocksProxySetup.ProxySocks5" = "SOCKS5";
-"SocksProxySetup.ProxyTelegram" = "MTProto";
+"SocksProxySetup.ProxyPChat" = "MTProto";
 "SocksProxySetup.HostnamePlaceholder" = "سرور";
 "SocksProxySetup.PortPlaceholder" = "درگاه";
 "SocksProxySetup.UsernamePlaceholder" = "نام کاربری";
@@ -3346,7 +3346,7 @@ Unused sets are archived when you add more.";
 "Passport.InfoTitle" = "پاسپورت تلگرام چیست؟";
 "Passport.InfoText" = "با **پاسپورت تلگرام**، شما می‌توانید به راحتی در وبسایت‌ها و سرویس‌هایی که به تأیید هویت شما نیاز دارند، ثبت نام کنید.\n\nاطلاعات، داده‌های شخصی، و سندهای شما با رمزگذاری سرتاسر محافظت می‌شوند. هیچ‌کس، حتی تلگرام، نمی‌تواند بدون اجازه شما به آن‌ها دسترسی پیدا کند.";
 "Passport.InfoLearnMore" = "بیشتر بدانید";
-"Passport.InfoFAQ_URL" = "https://telegram.org/faq#passport";
+"Passport.InfoFAQ_URL" = "https://p.chat/faq#passport";
 
 "Passport.PassportInformation" = "اطلاعات پاسپورت";
 "Passport.RequestedInformation" = "اطلاعات درخواستی";
@@ -3496,15 +3496,15 @@ Unused sets are archived when you add more.";
 "Passport.Address.ScansHelp" = "سند باید حاوی نام کامل و آدرس محل سکونت شما، به همراه یک مهر/بارکد/کد QR/لوگو و تاریخ صدورباشد. این مدارک نباید از سه ماه قدیمی‌تر باشند.";
 
 "Passport.Phone.Title" = "شماره تلفن";
-"Passport.Phone.UseTelegramNumber" = "استفاده از %@";
-"Passport.Phone.UseTelegramNumberHelp" = "از شماره تلفن استفاده شده در تلگرام استفاده کنید.";
+"Passport.Phone.UsePChatNumber" = "استفاده از %@";
+"Passport.Phone.UsePChatNumberHelp" = "از شماره تلفن استفاده شده در تلگرام استفاده کنید.";
 "Passport.Phone.EnterOtherNumber" = "یا شماره تلفن جدیدی را وارد کنید";
 "Passport.Phone.Help" = "توجه: شما کد تأییدی را در شماره تلفنی که ارائه می‌کنید دریافت خواهید کرد.";
 "Passport.Phone.Delete" = "حذف شماره تلفن";
 
 "Passport.Email.Title" = "ایمیل";
-"Passport.Email.UseTelegramEmail" = "استفاده از %@";
-"Passport.Email.UseTelegramEmailHelp" = "از آدرس استفاده شده در تلگرام استفاده کنید.";
+"Passport.Email.UsePChatEmail" = "استفاده از %@";
+"Passport.Email.UsePChatEmailHelp" = "از آدرس استفاده شده در تلگرام استفاده کنید.";
 "Passport.Email.EnterOtherEmail" = "یا آدرس ایمیل جدیدی وارد کنید";
 "Passport.Email.EmailPlaceholder" = "آدرس ایمیل خود را وارد کنید";
 "Passport.Email.Help" = "یک کد تأیید به آدرس ایمیلی که ارائه می‌کنید ارسال خواهد شد.";
@@ -3985,7 +3985,7 @@ Unused sets are archived when you add more.";
 "AttachmentMenu.WebSearch" = "جستجو در اینترنت";
 
 "Conversation.UnsupportedMediaPlaceholder" = "این پیام توسط نسخه تلگرام شما پشتیبانی نمی‌شود. لطفاً برنامه را به آخرین نسخه به‌روزرسانی کنید.";
-"Conversation.UpdateTelegram" = "به‌روزرسانی تلگرام";
+"Conversation.UpdatePChat" = "به‌روزرسانی تلگرام";
 
 "Cache.LowDiskSpaceText" = "فضای ذخیره‌سازی در دسترس تلفن همراه شما به پایان رسیده است. لطفاً جهت دانلود یا آپلود رسانه، برخی از فضای ذخیره‌سازی را آزاد کنید.";
 
@@ -4050,7 +4050,7 @@ Unused sets are archived when you add more.";
 "EmptyGroupInfo.Subtitle" = "گروه‌ها می‌توانند دارای موارد زیر باشند:";
 "EmptyGroupInfo.Line1" = "تا سقف 200,000 عضو";
 "EmptyGroupInfo.Line2" = "تاریخچه گفتگوی دائم";
-"EmptyGroupInfo.Line3" = "لینک‌های عمومی مانند t.me/title";
+"EmptyGroupInfo.Line3" = "لینک‌های عمومی مانند p.chat/title";
 "EmptyGroupInfo.Line4" = "مدیرانی با اختیارات متفاوت";
 
 "WallpaperPreview.Title" = "پیش‌نمایش پس‌زمینه";
@@ -4428,7 +4428,7 @@ Unused sets are archived when you add more.";
 
 "Undo.ChatDeletedForBothSides" = "گفتگو برای هر دو طرف حذف شد.";
 
-"AppUpgrade.Running" = "Optimizing Telegram...
+"AppUpgrade.Running" = "Optimizing PChat...
 This may take a while, depending on the size of the database. Please keep the app open until the process is finished.
 
 Sorry for the inconvenience.";
@@ -5116,7 +5116,7 @@ Sorry for the inconvenience.";
 "AuthSessions.AddDevice.ScanTitle" = "اسکن کد QR";
 "AuthSessions.AddDevice.InvalidQRCode" = "کد QR نامعتبر است";
 "AuthSessions.AddDeviceIntro.Title" = "ورود به حساب کاربری از طریق کد QR";
-"AuthSessions.AddDeviceIntro.Text1" = "تلگرام را از [desktop.telegram.org]() برای کامپیوتر خود دانلود کنید";
+"AuthSessions.AddDeviceIntro.Text1" = "تلگرام را از [desktop.p.chat]() برای کامپیوتر خود دانلود کنید";
 "AuthSessions.AddDeviceIntro.Text2" = "برای دریافت کد QR تلگرام را در کامپیوتر خود اجرا کنید";
 "AuthSessions.AddDeviceIntro.Text3" = "برای اتصال به حساب کاربری خود کد QR را اسکن کنید";
 "AuthSessions.AddDeviceIntro.Action" = "اسکن کد QR";
@@ -5432,11 +5432,11 @@ Sorry for the inconvenience.";
 "FeaturedStickers.OtherSection" = "سایر استیکرها";
 
 "ChatList.GenericPsaAlert" = "این پیام اطلاعیه‌های خدمات عمومی را در لیست گفتگوهای شما ارائه می‌دهد.";
-"ChatList.PsaAlert.covid" = "این پیام، اطلاعیه خدمات عمومی مربوط به بیماری فراگیر کووید-19 (کرونا)‌ کنونی را به شما ارائه می‌دهد. برای اطلاعات بیشتر درباره این نوآوری به لینک زیر مراجعه کنید:\nhttps://telegram.org/blog/coronavirus";
+"ChatList.PsaAlert.covid" = "این پیام، اطلاعیه خدمات عمومی مربوط به بیماری فراگیر کووید-19 (کرونا)‌ کنونی را به شما ارائه می‌دهد. برای اطلاعات بیشتر درباره این نوآوری به لینک زیر مراجعه کنید:\nhttps://p.chat/blog/coronavirus";
 "ChatList.GenericPsaLabel" = "PSA";
 "ChatList.PsaLabel.covid" = "کووید-19 (کرونا)";
 "Chat.GenericPsaTooltip" = "این یک اطلاعیه خدمات عمومی است";
-"Chat.PsaTooltip.covid" = "این پیام، اعلان خدمات عمومی مربوط به بیماری فراگیر کووید-19 (کرونا)‌ کنونی را به شما ارائه می‌دهد. برای اطلاعات بیشتر درباره این نوآوری به لینک زیر مراجعه کنید:\nhttps://telegram.org/blog/coronavirus";
+"Chat.PsaTooltip.covid" = "این پیام، اعلان خدمات عمومی مربوط به بیماری فراگیر کووید-19 (کرونا)‌ کنونی را به شما ارائه می‌دهد. برای اطلاعات بیشتر درباره این نوآوری به لینک زیر مراجعه کنید:\nhttps://p.chat/blog/coronavirus";
 
 "Message.GenericForwardedPsa" = "اطلاعیه خدمات عمومی\nاز طرف: %@";
 "Message.ForwardedPsa.covid" = "اعلان کووید-19 (کرونا)\nاز: %@";
@@ -6648,7 +6648,7 @@ Sorry for the inconvenience.";
 "Privacy.PaymentsClear.AllInfoCleared" = "اطلاعات پرداخت و ارسال پاک شدند.";
 
 "Settings.Tips" = "قابلیت‌های تلگرام";
-"Settings.TipsUsername" = "TelegramTipsFA";
+"Settings.TipsUsername" = "PChatTipsFA";
 
 "Calls.NoVoiceAndVideoCallsPlaceholder" = "تماس‌های صوتی و ویدیویی اخیر شما در اینجا نمایش داده خواهند شد.";
 "Calls.StartNewCall" = "شروع تماس جدید";
@@ -6930,9 +6930,9 @@ Sorry for the inconvenience.";
 
 "SponsoredMessageMenu.Info" = "پیام‌های حمایت شده\nچه هستند؟";
 "SponsoredMessageInfoScreen.Title" = "پیام‌های حمایت شده چه هستند؟";
-"SponsoredMessageInfoScreen.MarkdownText" = "برخلاف سایر برنامه‌ها، تلگرام هرگز از اطلاعات خصوصی شما برای اهداف تبلیغاتی استفاده نمی‌کند. برای اطلاعات بیشتر به سیاست حریم خصوصی مراجعه کنید](https://telegram.org/privacy#5-6-no-ads-based-on-user-data)\nشما این پیام را فقط به این دلیل مشاهده می‌کنید که شخصی این کانال عمومی یک به چند را به عنوان فضایی برای تبلیغ پیام‌های خود انتخاب کرده است. این یعنی اطلاعات کاربران برای نمایش تبلیغات، مورد داده‌کاوی یا تحلیل قرار نمی‌گیرد، و هر کاربری که در حال مشاهده کانالی در تلگرام باشد، یک پیام حمایت شده یکسان را می‌بیند.\n\nبرخلاف سایر برنامه‌ها، تلگرام اینکه شما بر روی یک پیام حمایت شده زده‌اید یا نه را ردیابی نمی‌کند و بر اساس فعالیت شما برایتان پروفایل‌سازی نمی‌کند. ما همچنین از لینک‌های خارجی در پیام‌های حمایت شده جلوگیری می‌کنیم تا اطمینان حاصل کنیم که اشخاص ثالث قادر به جاسوسی از کاربران ما نباشند. ما باور داریم که همه افراد حق داشتن حریم خصوصی را دارند، و پلتفرم‌های آنلاین باید به این حق احترام بگذارند.\n\nتلگرام به صدها میلیون کاربر خدمات رایگان و نامحدودی را ارائه می‌کند که هزینه‌های قابل توجهی برای سرور و ترافیک را شامل می‌شود. تلگرام برای اینکه مستقل باقی مانده و به ارزش‌های خود وفادار بماند، ابزار پرداخت شده‌ای را برای تبلیغ پیام‌ها با حفظ حریم خصوصی کاربر توسعه داده است. ما از تبلیغ کنندگان مربوطه در آدرس زیر استقبال می‌کنیم:\n[url]\nتبلیغات آنلاین دیگر نباید به معنی سوء استفاده از حریم خصوصی کاربر باشند. بیایید با هم دوباره تعریف کنیم که یک شرکت فناوری باید چگونه فعالیت کند.";
+"SponsoredMessageInfoScreen.MarkdownText" = "برخلاف سایر برنامه‌ها، تلگرام هرگز از اطلاعات خصوصی شما برای اهداف تبلیغاتی استفاده نمی‌کند. برای اطلاعات بیشتر به سیاست حریم خصوصی مراجعه کنید](https://p.chat/privacy#5-6-no-ads-based-on-user-data)\nشما این پیام را فقط به این دلیل مشاهده می‌کنید که شخصی این کانال عمومی یک به چند را به عنوان فضایی برای تبلیغ پیام‌های خود انتخاب کرده است. این یعنی اطلاعات کاربران برای نمایش تبلیغات، مورد داده‌کاوی یا تحلیل قرار نمی‌گیرد، و هر کاربری که در حال مشاهده کانالی در تلگرام باشد، یک پیام حمایت شده یکسان را می‌بیند.\n\nبرخلاف سایر برنامه‌ها، تلگرام اینکه شما بر روی یک پیام حمایت شده زده‌اید یا نه را ردیابی نمی‌کند و بر اساس فعالیت شما برایتان پروفایل‌سازی نمی‌کند. ما همچنین از لینک‌های خارجی در پیام‌های حمایت شده جلوگیری می‌کنیم تا اطمینان حاصل کنیم که اشخاص ثالث قادر به جاسوسی از کاربران ما نباشند. ما باور داریم که همه افراد حق داشتن حریم خصوصی را دارند، و پلتفرم‌های آنلاین باید به این حق احترام بگذارند.\n\nتلگرام به صدها میلیون کاربر خدمات رایگان و نامحدودی را ارائه می‌کند که هزینه‌های قابل توجهی برای سرور و ترافیک را شامل می‌شود. تلگرام برای اینکه مستقل باقی مانده و به ارزش‌های خود وفادار بماند، ابزار پرداخت شده‌ای را برای تبلیغ پیام‌ها با حفظ حریم خصوصی کاربر توسعه داده است. ما از تبلیغ کنندگان مربوطه در آدرس زیر استقبال می‌کنیم:\n[url]\nتبلیغات آنلاین دیگر نباید به معنی سوء استفاده از حریم خصوصی کاربر باشند. بیایید با هم دوباره تعریف کنیم که یک شرکت فناوری باید چگونه فعالیت کند.";
 "SponsoredMessageInfo.Action" = "بیشتر بدانید";
-"SponsoredMessageInfo.Url" = "https://ads.telegram.org";
+"SponsoredMessageInfo.Url" = "https://ads.p.chat";
 
 "Chat.NavigationNoChannels" = "شما کانال خوانده نشده‌ای ندارید";
 
@@ -7225,7 +7225,7 @@ Sorry for the inconvenience.";
 
 "AuthSessions.HeaderInfo" = "با اسکن کد QR، به [تلگرام دسکتاپ](desktop) یا [تلگرام وب](web) متصل شوید.";
 "AuthSessions.LinkDesktopDevice" = "اتصال دستگاه دسکتاپ";
-"AuthSessions.AddDevice.ScanInstallInfo" = "برای دریافت کد QR به [getdesktop.telegram.org](desktop) یا [web.telegram.org](web) مراجعه کنید";
+"AuthSessions.AddDevice.ScanInstallInfo" = "برای دریافت کد QR به [getdesktop.p.chat](desktop) یا [web.p.chat](web) مراجعه کنید";
 
 "Channel.AdminLog.MessageSent" = "%@ این پیام را ارسال کرد:";
 
@@ -7426,7 +7426,7 @@ Sorry for the inconvenience.";
 "Attachment.DeselectedItems_1" = "%@ مورد لغو انتخاب شد.";
 "Attachment.DeselectedItems_any" = "%@ مورد لغو انتخاب شدند.";
 
-"PrivacyPhoneNumberSettings.CustomPublicLink" = "کاربرانی که شماره شما را در مخاطبین خود ذخیره کرده باشند، آن را در تلگرام نیز مشاهده خواهند کرد.\n\nاین لینک گفتگویی را با خودتان باز می‌کند:\n[https://t.me/%@]()";
+"PrivacyPhoneNumberSettings.CustomPublicLink" = "کاربرانی که شماره شما را در مخاطبین خود ذخیره کرده باشند، آن را در تلگرام نیز مشاهده خواهند کرد.\n\nاین لینک گفتگویی را با خودتان باز می‌کند:\n[https://p.chat/%@]()";
 
 "DownloadList.DownloadingHeader" = "در حال دانلود";
 "DownloadList.DownloadedHeader" = "دانلودهای اخیر";
@@ -7533,7 +7533,7 @@ Sorry for the inconvenience.";
 "WebApp.RemoveConfirmationText" = "**%@** از منوی پیوست حذف شود؟";
 
 "Notifications.SystemTones" = "زنگ‌های سیستم";
-"Notifications.TelegramTones" = "زنگ‌های تلگرام";
+"Notifications.PChatTones" = "زنگ‌های تلگرام";
 
 "Notifications.UploadSound" = "آپلود صدا";
 "Notifications.MessageSoundInfo" = "بر روی هر یادداشت صوتی یا فایل MP3 کوتاه در هر گفتگویی بزنید و نگه دارید و گزینه «ذخیره برای اعلان» را انتخاب کنید. آن فایل صوتی در اینجا نمایش داده خواهد شد.";
@@ -7633,7 +7633,7 @@ Sorry for the inconvenience.";
 "Premium.AppIcons.Proceed" = "دسترسی به آیکون‌های پرمیوم";
 "Premium.NoAds.Proceed" = "درباره تلگرام پرمیوم";
 
-"AccessDenied.LocationPreciseDenied" = "برای به اشتراک گذاری موقعیت مکانی دقیق خود در این گفتگو، لطفاً به Settings > Privacy > Location Services > Telegram مراجعه کرده و گزینه Precise Location را بر روی حالت فعال قرار دهید.";
+"AccessDenied.LocationPreciseDenied" = "برای به اشتراک گذاری موقعیت مکانی دقیق خود در این گفتگو، لطفاً به Settings > Privacy > Location Services > PChat مراجعه کرده و گزینه Precise Location را بر روی حالت فعال قرار دهید.";
 
 "Chat.MultipleTypingPair" = "%@ و %@";
 "Chat.MultipleTypingMore" = "%@ و %@ نفر دیگر";
@@ -7755,8 +7755,8 @@ Sorry for the inconvenience.";
 "Conversation.CopyProtectionSavingDisabledSecret" = "ذخیره کردن محدود شده است";
 "Conversation.CopyProtectionForwardingDisabledSecret" = "فوروارد کردن، محدود شده است";
 
-"Settings.Terms_URL" = "https://telegram.org/tos";
-"Settings.PrivacyPolicy_URL" = "https://telegram.org/privacy";
+"Settings.Terms_URL" = "https://p.chat/tos";
+"Settings.PrivacyPolicy_URL" = "https://p.chat/privacy";
 
 "Stickers.PremiumPackInfoText" = "این بسته حاوی استیکرهای پرمیومی مشابه این استیکر است.";
 "Stickers.PremiumPackView" = "مشاهده";
@@ -7781,7 +7781,7 @@ Sorry for the inconvenience.";
 
 "Premium.Limits.GroupsAndChannelsInfo" = "به حداکثر 1000 کانال و گروه بزرگ بپیوندید";
 "Premium.Limits.PinnedChatsInfo" = "تا 10 گفتگو را در لیست اصلی گفتگوهای خود سنجاق کنید";
-"Premium.Limits.PublicLinksInfo" = "تا 20 لینک [t.me/username]() را رزرو کنید";
+"Premium.Limits.PublicLinksInfo" = "تا 20 لینک [p.chat/username]() را رزرو کنید";
 "Premium.Limits.SavedGifsInfo" = "تا 400 گیف را در قسمت گیف‌های مورد علاقه خود ذخیره کنید";
 "Premium.Limits.FavedStickersInfo" = "تا 10 استیکر را در قسمت استیکرهای مورد علاقه خود ذخیره کنید";
 "Premium.Limits.BioInfo" = "از کاراکترهای بیشتر و لینک‌ها در بیوگرافی خود استفاده کنید";
@@ -7871,7 +7871,7 @@ Sorry for the inconvenience.";
 "DeleteAccount.MessageHistoryTitle" = "تاریخچه پیام‌های شما";
 "DeleteAccount.MessageHistoryText" = "مخاطبین گفتگوهای شما همچنان به تاریخچه پیام‌هایشان با شما، از جمله پیام‌هایی که در گفتگوهای محرمانه با آن‌ها به اشتراک گذاشته‌اید، دسترسی خواهند داشت.\n\nشما می‌توانید هر پیامی را برای هر دو طرف در هر زمانی حذف کنید، اما این کار در صورت حذف حساب کاربری شما امکان‌پذیر نخواهد بود.";
 
-"DeleteAccount.DeleteMessagesURL" = "https://telegram.org/faq#q-can-i-delete-my-messages";
+"DeleteAccount.DeleteMessagesURL" = "https://p.chat/faq#q-can-i-delete-my-messages";
 
 "DeleteAccount.EnterPhoneNumber" = "شماره تلفن خود را وارد کنید";
 "DeleteAccount.InvalidPhoneNumberError" = "شماره تلفن نامعتبر است. لطفاً دوباره تلاش کنید.";
@@ -8074,8 +8074,8 @@ Sorry for the inconvenience.";
 "Login.EnterCodeSMSTitle" = "کد را وارد کنید";
 "Login.EnterCodeSMSText" = "ما پیامکی حاوی کد فعال‌سازی به شماره تلفن شما **%@** ارسال کرده‌ایم.";
 "Login.SendCodeAsSMS" = "ارسال کد به صورت پیامک";
-"Login.EnterCodeTelegramTitle" = "کد را وارد کنید";
-"Login.EnterCodeTelegramText" = "ما کد را به **برنامه تلگرام** برای شماره تلفن %@ در دستگاه دیگرتان ارسال کرده‌ایم.";
+"Login.EnterCodePChatTitle" = "کد را وارد کنید";
+"Login.EnterCodePChatText" = "ما کد را به **برنامه تلگرام** برای شماره تلفن %@ در دستگاه دیگرتان ارسال کرده‌ایم.";
 "Login.AddEmailTitle" = "یک ایمیل برای ورود به حساب کاربری انتخاب کنید";
 "Login.AddEmailText" = "شما کدهای ورود به حساب کاربری تلگرام را به جای پیامک، از طریق ایمیل دریافت خواهید کرد. لطفاً آدرس ایمیلی که به آن دسترسی دارید را وارد نمایید.";
 "Login.AddEmailPlaceholder" = "ایمیل خود را وارد کنید";
@@ -9199,7 +9199,7 @@ Sorry for the inconvenience.";
 "WebApp.LaunchMoreInfo" = "اطلاعات بیشتر درباره این ربات";
 "WebApp.LaunchConfirmation" = "برای باز کردن این برنامه وب، به وبسایت آن متصل خواهید شد.";
 "WebApp.LaunchTermsConfirmation" = "با باز کردن این مینی‌برنامه، شما با [شرایط و ضوابط خدمات مینی‌برنامه‌ها]() موافقت می‌کنید.";
-"WebApp.LaunchTermsConfirmation_URL" = "https://telegram.org/tos/mini-apps";
+"WebApp.LaunchTermsConfirmation_URL" = "https://p.chat/tos/mini-apps";
 "WebApp.LaunchOpenApp" = "اجرا";
 
 "WallpaperPreview.PreviewInNightMode" = "پیش‌نمایش این پس‌زمینه در حالت شب";
@@ -9935,7 +9935,7 @@ Sorry for the inconvenience.";
 "WebApp.DisclaimerText" = "شما می‌خواهید از یک مینی‌برنامه استفاده کنید که توسط شخص یا شرکت مستقلی اداره می‌شود که به تلگرام وابسته نیست. باید برای ادامه، با شرایط و ضوابط استفاده از مینی‌برنامه‌ها موافقت کنید.";
 "WebApp.DisclaimerAgree" = "من با [شرایط و ضوابط استفاده]() موافقت می‌کنم";
 "WebApp.DisclaimerContinue" = "ادامه";
-"WebApp.Disclaimer_URL" = "https://telegram.org/tos/mini-apps";
+"WebApp.Disclaimer_URL" = "https://p.chat/tos/mini-apps";
 
 "WebApp.ShortcutsAdded" = "میان‌بر **%@** به منوی پیوست اضافه شد.";
 "WebApp.ShortcutsSettingsAdded" = "میان‌برهای **%@** به منوی پیوست و تنظیمات اضافه شد.";
@@ -10436,8 +10436,8 @@ Sorry for the inconvenience.";
 "GiftLink.Reason.Unclaimed" = "قرعه‌کشی ناتمام";
 "GiftLink.Date" = "تاریخ";
 "GiftLink.NoRecipient" = "بدون دریافت کننده";
-"GiftLink.TelegramPremium_1" = "تلگرام پرمیوم به مدت %@ ماه";
-"GiftLink.TelegramPremium_any" = "تلگرام پرمیوم به مدت %@ ماه";
+"GiftLink.PChatPremium_1" = "تلگرام پرمیوم به مدت %@ ماه";
+"GiftLink.PChatPremium_any" = "تلگرام پرمیوم به مدت %@ ماه";
 "GiftLink.LinkHidden" = "فقط دریافت کننده می‌تواند لینک را مشاهده کند.";
 
 "ChannelBoost.EnableColors" = "فعال کردن رنگ‌ها";
@@ -11609,7 +11609,7 @@ Sorry for the inconvenience.";
 
 "ChatbotSetup.TitleItem" = "ربات‌های گفتگو";
 "ChatbotSetup.Text" = "رباتی را به حساب کاربری خود اضافه کنید تا به شما کمک کند به صورت خودکار به پیام‌های دریافتی رسیدگی کرده و پاسخ دهید. [بیشتر بدانید >]()";
-"ChatbotSetup.TextLink" = "https://telegram.org/blog/telegram-business/fa#543352452";
+"ChatbotSetup.TextLink" = "https://p.chat/blog/telegram-business/fa#543352452";
 
 "ChatbotSetup.BotSearchPlaceholder" = "نام کاربری ربات";
 "ChatbotSetup.BotSectionFooter" = "نام کاربری یا URL ربات تلگرامی که می‌خواهید به صورت خودکار به گفتگوهای شما رسیدگی کند را وارد کنید.";
@@ -11650,7 +11650,7 @@ Sorry for the inconvenience.";
 "ChannelBoost.EnableNoAdsLevelText" = "کانال شما باید به **سطح %1$@** برسد تا بتوانید تبلیغات را غیرفعال کنید.";
 
 "WebApp.TermsOfUse" = "شرایط و ضوابط استفاده";
-"WebApp.TermsOfUse_URL" = "https://telegram.org/tos/mini-apps";
+"WebApp.TermsOfUse_URL" = "https://p.chat/tos/mini-apps";
 
 "Privacy.Birthday" = "تاریخ تولد";
 "Privacy.Birthday.WhoCanSeeMyBio" = "چه کسانی می‌توانند تاریخ تولد مرا مشاهده کنند";
@@ -11712,7 +11712,7 @@ Sorry for the inconvenience.";
 "Monetization.Balance.AvailableInfo" = "شما می‌توانید پاداش خود را با استفاده از Fragment دریافت کنید. Fragment یک پلتفرم شخص ثالث است که تبلیغ کنندگان برای پرداخت تبلیغات از آن استفاده می‌کنند. [شرایط و ضوابط >]()";
 "Monetization.Balance.ComingLaterInfo" = "در هفته‌های آتی، شما قادر خواهید بود پاداش را با استفاده از Fragment دریافت کنید. Fragment یک پلتفرم شخص ثالث است که تبلیغ کنندگان برای پرداخت تبلیغات از آن استفاده می‌کنند. [بیشتر بدانید >]()";
 
-"Monetization.BalanceInfo_URL" = "https://telegram.org/tos/content-creator-rewards";
+"Monetization.BalanceInfo_URL" = "https://p.chat/tos/content-creator-rewards";
 "Monetization.BalanceWithdraw" = "جمع‌آوری از طریق Fragment";
 "Monetization.TransactionsTitle" = "تاریخچه تراکنش";
 
@@ -11762,13 +11762,13 @@ Sorry for the inconvenience.";
 
 "Monetization.Intro.Info.Title" = "#TON چیست؟";
 "Monetization.Intro.Info.Text" = "TON یک پلتفرم بلاکچین و رمزارز است که تلگرام از آن به دلیل سرعت بالا و کارمزد پایین تراکنش‌هایش استفاده می‌کند. [بیشتر بدانید >]()";
-"Monetization.Intro.Info.Text_URL" = "https://telegram.org/blog/monetization-for-channels/fa";
+"Monetization.Intro.Info.Text_URL" = "https://p.chat/blog/monetization-for-channels/fa";
 
 "Monetization.Intro.Understood" = "متوجه شدم";
 
 "ReportAd.Title" = "گزارش تبلیغ";
 "ReportAd.Help" = "درباره [سیاست‌ها و دستورالعمل‌های تبلیغات تلگرام]() بیشتر بدانید.";
-"ReportAd.Help_URL" = "https://ads.telegram.org/guidelines";
+"ReportAd.Help_URL" = "https://ads.p.chat/guidelines";
 "ReportAd.Reported" = "ما این تبلیغ را بررسی می‌کنیم تا اطمینان حاصل کنیم که با [سیاست‌ها و دستورالعمل‌های تبلیغات]() ما مطابقت داشته باشد.";
 "ReportAd.Hidden" = "شما دیگر تبلیغاتی از طرف تلگرام مشاهده نخواهید کرد.";
 
@@ -11788,7 +11788,7 @@ Sorry for the inconvenience.";
 "AdsInfo.Launch.Title" = "آیا من می‌توانم تبلیغی اجرا کنم؟";
 "AdsInfo.Launch.Text" = "هر کسی می‌تواند با کمترین هزینه، تبلیغی را برای نمایش در این کانال ایجاد کند. برای جزئیات بیشتر، پلتفرم تبلیغات تلگرام را بررسی کنید. [بیشتر بدانید >]()";
 "AdsInfo.Bot.Launch.Text" = "هر کسی می‌تواند با کمترین هزینه، تبلیغی را برای نمایش در این ربات ایجاد کند. برای جزئیات بیشتر، پلتفرم تبلیغات تلگرام را بررسی کنید. [بیشتر بدانید >]()";
-"AdsInfo.Launch.Text_URL" = "https://ads.telegram.org";
+"AdsInfo.Launch.Text_URL" = "https://ads.p.chat";
 
 "AdsInfo.Understood" = "متوجه شدم";
 
@@ -11860,9 +11860,9 @@ Sorry for the inconvenience.";
 "Business.Links.CreateAction" = "ایجاد لینکی به گفتگو";
 "Business.Links.LinksSectionHeader" = "لینک‌های گفتگو";
 
-"Business.Links.SimpleLinkInfoUsernamePhone" = "شما همچنین می‌توانید از لینک ساده‌ای برای گفتگو با خود استفاده کنید؛ [t.me/%1$@](username) یا [t.me/⁠+⁠%2$@](phone).";
-"Business.Links.SimpleLinkInfoUsername" = "شما همچنین می‌توانید از لینک ساده‌ای برای گفتگو با خود استفاده کنید؛ [t.me/%@](username)";
-"Business.Links.SimpleLinkInfoPhone" = "شما همچنین می‌توانید از لینک ساده‌ای برای گفتگو با خود استفاده کنید؛ [t.me/⁠+⁠%@](phone).";
+"Business.Links.SimpleLinkInfoUsernamePhone" = "شما همچنین می‌توانید از لینک ساده‌ای برای گفتگو با خود استفاده کنید؛ [p.chat/%1$@](username) یا [p.chat/⁠+⁠%2$@](phone).";
+"Business.Links.SimpleLinkInfoUsername" = "شما همچنین می‌توانید از لینک ساده‌ای برای گفتگو با خود استفاده کنید؛ [p.chat/%@](username)";
+"Business.Links.SimpleLinkInfoPhone" = "شما همچنین می‌توانید از لینک ساده‌ای برای گفتگو با خود استفاده کنید؛ [p.chat/⁠+⁠%@](phone).";
 
 "Business.Links.LinkNameTitle" = "نام لینک";
 "Business.Links.LinkNameText" = "نامی برای این لینک اضافه کنید که فقط خودتان آن را خواهید دید.";
@@ -11928,7 +11928,7 @@ Sorry for the inconvenience.";
 "Business.AdsTitle" = "تبلیغات در کانال‌ها";
 "Business.DontHideAds" = "تبلیغات پنهان نشوند";
 "Business.AdsInfo" = "به عنوان یک مشترک پرمیوم، شما تبلیغاتی در تلگرام مشاهده نخواهید کرد، اما می‌توانید به عنوان مثال، برای مشاهده تبلیغات خودتان که در [پلتفرم تبلیغات تلگرام]() راه‌اندازی کردید، آن‌ها را فعال کنید.";
-"Business.AdsInfo_URL" = "https://ads.telegram.org";
+"Business.AdsInfo_URL" = "https://ads.p.chat";
 
 "ChatList.PremiumGraceTitle" = "⚠️ دسترسی خود را به تلگرام پرمیوم از دست ندهید!";
 "ChatList.PremiumGraceText" = "مزایای انحصاری شما در حال منقضی شدن است.";
@@ -12231,19 +12231,19 @@ Sorry for the inconvenience.";
 "Chat.Context.Phone.CreateNewContact" = "ایجاد مخاطب جدید";
 "Chat.Context.Phone.AddToExistingContact" = "افزودن به مخاطب موجود";
 "Chat.Context.Phone.SendMessage" = "ارسال پیام";
-"Chat.Context.Phone.TelegramVoiceCall" = "تماس صوتی تلگرام";
-"Chat.Context.Phone.TelegramVideoCall" = "تماس ویدیویی تلگرامی";
-"Chat.Context.Phone.InviteToTelegram" = "دعوت به تلگرام";
+"Chat.Context.Phone.PChatVoiceCall" = "تماس صوتی تلگرام";
+"Chat.Context.Phone.PChatVideoCall" = "تماس ویدیویی تلگرامی";
+"Chat.Context.Phone.InviteToPChat" = "دعوت به تلگرام";
 "Chat.Context.Phone.CallViaCarrier" = "تماس از طریق شبکه تلفن همراه";
 "Chat.Context.Phone.CopyNumber" = "کپی کردن شماره";
-"Chat.Context.Phone.NotOnTelegram" = "این شماره در تلگرام نیست.";
+"Chat.Context.Phone.NotOnPChat" = "این شماره در تلگرام نیست.";
 "Chat.Context.Phone.ViewProfile" = "مشاهده پروفایل";
 
 "Chat.Context.Username.SendMessage" = "ارسال پیام";
 "Chat.Context.Username.OpenGroup" = "باز کردن گروه";
 "Chat.Context.Username.OpenChannel" = "باز کردن کانال";
 "Chat.Context.Username.Copy" = "کپی کردن نام کاربری";
-"Chat.Context.Username.NotOnTelegram" = "این کاربر در تلگرام وجود ندارد.";
+"Chat.Context.Username.NotOnPChat" = "این کاربر در تلگرام وجود ندارد.";
 
 "Chat.Context.Hashtag.Search" = "جستجو";
 "Chat.Context.Hashtag.Copy" = "کپی کردن هشتگ";
@@ -12288,8 +12288,8 @@ Sorry for the inconvenience.";
 "Stars.Intro.Transaction.FragmentTopUp.Subtitle" = "از طریق Fragment";
 "Stars.Intro.Transaction.FragmentWithdrawal.Title" = "برداشت";
 "Stars.Intro.Transaction.FragmentWithdrawal.Subtitle" = "از طریق Fragment";
-"Stars.Intro.Transaction.TelegramAds.Title" = "برداشت";
-"Stars.Intro.Transaction.TelegramAds.Subtitle" = "از طریق تبلیغات تلگرام";
+"Stars.Intro.Transaction.PChatAds.Title" = "برداشت";
+"Stars.Intro.Transaction.PChatAds.Subtitle" = "از طریق تبلیغات تلگرام";
 "Stars.Intro.Transaction.Gift" = "هدیه";
 "Stars.Intro.Transaction.ConvertedGift" = "هدیه تبدیل شده";
 "Stars.Intro.Transaction.Unsupported.Title" = "پشتیبانی نشده";
@@ -12315,7 +12315,7 @@ Sorry for the inconvenience.";
 "Stars.Purchase.Stars_any" = "%@ ستاره";
 "Stars.Purchase.ShowMore" = "نمایش گزینه‌های بیشتر";
 "Stars.Purchase.Info" = "با ادامه دادن و خریداری ستاره‌ها، شما با [شرایط و ضوابط]() موافقت می‌کنید.";
-"Stars.Purchase.Terms_URL" = "https://telegram.org/tos/stars";
+"Stars.Purchase.Terms_URL" = "https://p.chat/tos/stars";
 
 "Stars.Transaction.Via" = "از طریق";
 "Stars.Transaction.To" = "به";
@@ -12324,7 +12324,7 @@ Sorry for the inconvenience.";
 "Stars.Transaction.Id" = "شناسه تراکنش";
 "Stars.Transaction.Date" = "تاریخ";
 "Stars.Transaction.Terms" = "[شرایط و ضوابط خدمات]() ستاره‌ها را بررسی کنید.";
-"Stars.Transaction.Terms_URL" = "https://telegram.org/tos/stars";
+"Stars.Transaction.Terms_URL" = "https://p.chat/tos/stars";
 "Stars.Transaction.CopiedId" = "شناسه تراکنش در حافظه کپی شد.";
 
 "Stars.Transaction.MediaPurchase" = "خریداری رسانه";
@@ -12338,8 +12338,8 @@ Sorry for the inconvenience.";
 "Stars.Transaction.FragmentTopUp.Subtitle" = "Fragment";
 "Stars.Transaction.FragmentWithdrawal.Title" = "برداشت ستاره";
 "Stars.Transaction.FragmentWithdrawal.Subtitle" = "Fragment";
-"Stars.Transaction.TelegramAds.Title" = "برداشت ستاره";
-"Stars.Transaction.TelegramAds.Subtitle" = "تبلیغات تلگرام";
+"Stars.Transaction.PChatAds.Title" = "برداشت ستاره";
+"Stars.Transaction.PChatAds.Subtitle" = "تبلیغات تلگرام";
 "Stars.Transaction.Unsupported.Title" = "پشتیبانی نشده";
 "Stars.Transaction.Refund" = "بازپرداخت";
 
@@ -12422,7 +12422,7 @@ Sorry for the inconvenience.";
 "Stars.BotRevenue.Withdraw.WithdrawShort" = "برداشت";
 "Stars.BotRevenue.Withdraw.BuyAds" = "خریداری تبلیغات";
 "Stars.BotRevenue.Withdraw.Info" = "شما می‌توانید پاداش‌های ستاره را با استفاده از Fragment جمع‌آوری نموده، یا از ستاره‌ها برای تبلیغ ربات خود استفاده کنید. نمی‌توانید کمتر از 1000 ستاره برداشت کنید. [بیشتر بدانید >]()";
-"Stars.BotRevenue.Withdraw.Info_URL" = "https://telegram.org/tos/bot-developers#6-2-2-tpa-balance";
+"Stars.BotRevenue.Withdraw.Info_URL" = "https://p.chat/tos/bot-developers#6-2-2-tpa-balance";
 
 "Stars.BotRevenue.Transactions.Title" = "تاریخچه تراکنش";
 
@@ -12441,7 +12441,7 @@ Sorry for the inconvenience.";
 "Stars.PaidContent.AmountTitle" = "هزینه دسترسی را وارد کنید";
 "Stars.PaidContent.AmountPlaceholder" = "تعداد ستاره‌ها برای دسترسی";
 "Stars.PaidContent.AmountInfo" = "کاربران باید برای مشاهده این رسانه، این تعداد ستاره را به کانال شما انتقال دهند.\n[اطلاعات بیشتر درباره ستاره‌ها >]()";
-"Stars.PaidContent.AmountInfo_URL" = "https://telegram.org/tos/stars";
+"Stars.PaidContent.AmountInfo_URL" = "https://p.chat/tos/stars";
 "Stars.PaidContent.Create" = "این رسانه را پولی کنید";
 
 "MediaEditor.AddLink" = "لینک";
@@ -12480,7 +12480,7 @@ Sorry for the inconvenience.";
 "Monetization.BalanceStarsWithdrawShort" = "برداشت";
 "Monetization.BalanceStarsBuyAds" = "خریداری تبلیغات";
 "Monetization.Balance.StarsInfo" = "شما می‌توانید پاداش‌های ستاره را با استفاده از Fragment جمع‌آوری نموده، یا از ستاره‌ها برای تبلیغ کانال خود استفاده کنید. نمی‌توانید کمتر از 1000 ستاره برداشت کنید. [بیشتر بدانید >]()";
-"Monetization.Balance.StarsInfo_URL" = "https://telegram.org/tos/stars";
+"Monetization.Balance.StarsInfo_URL" = "https://p.chat/tos/stars";
 
 "Monetization.StarsProceeds.Title" = "نمای کلی پاداش";
 "Monetization.StarsProceeds.Available" = "موجودی قابل دسترس";
@@ -12557,7 +12557,7 @@ Sorry for the inconvenience.";
 "Browser.ContextMenu.CopyLink" = "کپی لینک";
 "Browser.ContextMenu.Share" = "به اشتراک گذاری";
 
-"WebBrowser.Telegram" = "تلگرام";
+"WebBrowser.PChat" = "تلگرام";
 
 "Monetization.Proceeds.Ton.Info" = "TONهای موجودی کل شما می‌توانند 3 روز پس از دریافت شدن، برای تبلیغات یا برداشت به عنوان پاداش استفاده شوند. نمی‌توانید کمتر از 10 TON برداشت کنید.";
 "Monetization.Proceeds.Stars.Info" = "ستاره‌های موجودی کل شما می‌توانند 21 روز پس از دریافت شدن، برای تبلیغات یا برداشت به عنوان پاداش استفاده شوند.";
@@ -12658,8 +12658,8 @@ Sorry for the inconvenience.";
 
 "PeerInfo.PaneBotPreviews" = "پیش‌نمایش";
 "PeerInfo.OpenAppButton" = "باز کردن برنامه";
-"PeerInfo.AppFooterAdmin" = "با انتشار این مینی‌برنامه، شما با [شرایط و ضوابط خدمات توسعه‌دهنگان](https://telegram.org/tos/bot-developers) موافقت می‌کنید.";
-"PeerInfo.AppFooter" = "با اجرای این مینی‌برنامه، شما با [شرایط و ضوابط خدمات مینی‌برنامه‌ها](https://telegram.org/tos/mini-apps) موافقت می‌کنید.";
+"PeerInfo.AppFooterAdmin" = "با انتشار این مینی‌برنامه، شما با [شرایط و ضوابط خدمات توسعه‌دهنگان](https://p.chat/tos/bot-developers) موافقت می‌کنید.";
+"PeerInfo.AppFooter" = "با اجرای این مینی‌برنامه، شما با [شرایط و ضوابط خدمات مینی‌برنامه‌ها](https://p.chat/tos/mini-apps) موافقت می‌کنید.";
 "BotPreviews.MenuAddPreview" = "افزودن پیش‌نمایش";
 "BotPreviews.MenuReorder" = "تغییر ترتیب";
 "BotPreviews.MenuDeleteLanguage" = "حذف %@";
@@ -12719,7 +12719,7 @@ Sorry for the inconvenience.";
 "InviteLink.ShareShort" = "به اشتراک گذاری";
 
 "Stars.Subscription.Terms" = "در صورت اشتراک، شما با [شرایط و ضوابط خدمات]() موافقت می‌کنید.";
-"Stars.Subscription.Terms_URL" = "https://telegram.org/tos/stars";
+"Stars.Subscription.Terms_URL" = "https://p.chat/tos/stars";
 
 "Stars.Transaction.Reaction.Title" = "واکنش ستاره";
 "Stars.Transaction.Reaction.Post" = "پست";
@@ -12804,7 +12804,7 @@ Sorry for the inconvenience.";
 "InviteLink.Create.FeeEditInfo" = "برای تغییر هزینه اشتراک، لینک دعوت جدیدی را با قیمت متفاوت ایجاد کنید.";
 "InviteLink.Create.RequestApprovalFeeUnavailable" = "نمی‌توانید موافقت مدیر را برای لینک‌هایی که نیازمند هزینه ماهانه هستند، فعال کنید.";
 
-"WebApp.PrivacyPolicy_URL" = "https://telegram.org/privacy-tpa";
+"WebApp.PrivacyPolicy_URL" = "https://p.chat/privacy-tpa";
 
 "ChatList.SubscriptionsLowBalance.Stars_1" = "به %@ ستاره نیاز است";
 "ChatList.SubscriptionsLowBalance.Stars_any" = "به %@ ستاره نیاز است";
@@ -12830,10 +12830,10 @@ Sorry for the inconvenience.";
 "SendStarReactions.SectionTop" = "ارسال کنندگان برتر";
 "SendStarReactions.ShowMyselfInTop" = "مرا در ارسال کنندگان برتر نمایش بده";
 "SendStarReactions.SendButtonTitle" = "ارسال # %@";
-"SendStarReactions.TermsOfServiceFooter" = "با ارسال ستاره، شما با [شرایط و ضوابط خدمات](https://telegram.org/tos/stars) موافقت می‌کنید.";
+"SendStarReactions.TermsOfServiceFooter" = "با ارسال ستاره، شما با [شرایط و ضوابط خدمات](https://p.chat/tos/stars) موافقت می‌کنید.";
 
 "PeerInfo.AllowedReactions.StarReactions" = "فعال کردن واکنش‌های پولی";
-"PeerInfo.AllowedReactions.StarReactionsFooter" = "این گزینه را فعال کنید تا به مشترکین خود امکان واکنش به پست‌ها با استفاده از ستاره‌های تلگرام را بدهید. شما می‌توانید این ستاره‌ها را در قالب TON برداشت کنید. [بیشتر بدانید >](https://telegram.org/tos/content-creator-rewards#2-3-subscriber-donations)";
+"PeerInfo.AllowedReactions.StarReactionsFooter" = "این گزینه را فعال کنید تا به مشترکین خود امکان واکنش به پست‌ها با استفاده از ستاره‌های تلگرام را بدهید. شما می‌توانید این ستاره‌ها را در قالب TON برداشت کنید. [بیشتر بدانید >](https://p.chat/tos/content-creator-rewards#2-3-subscriber-donations)";
 
 "Chat.ToastStarsSent.Title_1" = "ستاره ارسال شد!";
 "Chat.ToastStarsSent.Title_any" = "ستاره‌ها ارسال شدند!";
@@ -13149,16 +13149,16 @@ Sorry for the inconvenience.";
 "ChatList.Search.TopAppsInfo" = "چه برنامه‌هایی در اینجا شامل شده‌اند؟ [بدانید >]()";
 
 "TopApps.Info.Title" = "مینی‌برنامه‌های برتر";
-"TopApps.Info.Text" = "این کاتالوگ، مینی‌برنامه‌ها را بر اساس درآمد روزانه آن‌ها در واحد ستاره رتبه‌بندی می‌کند. برای لیست شدن، توسعه دهندگان باید مینی‌برنامه اصلی خود را در [@botfather]() (همان‌طور که در [اینجا](https://core.telegram.org/bots/webapps#launching-the-main-mini-app) توصیف شده است) ثبت کنند، بیش از **1,000** کاربر روزانه داشته باشند، و درآمد روزانه بیش از **1,000** ستاره بر اساس میانگین هفتگی کسب کنند.";
+"TopApps.Info.Text" = "این کاتالوگ، مینی‌برنامه‌ها را بر اساس درآمد روزانه آن‌ها در واحد ستاره رتبه‌بندی می‌کند. برای لیست شدن، توسعه دهندگان باید مینی‌برنامه اصلی خود را در [@botfather]() (همان‌طور که در [اینجا](https://core.p.chat/bots/webapps#launching-the-main-mini-app) توصیف شده است) ثبت کنند، بیش از **1,000** کاربر روزانه داشته باشند، و درآمد روزانه بیش از **1,000** ستاره بر اساس میانگین هفتگی کسب کنند.";
 "TopApps.Info.Done" = "متوجه شدم";
 
-"Stars.Intro.Transaction.TelegramBotApi.Title" = "اطلاع‌رسانی پولی";
-"Stars.Intro.Transaction.TelegramBotApi.Messages_1" = "%@ پیام";
-"Stars.Intro.Transaction.TelegramBotApi.Messages_any" = "%@ پیام";
+"Stars.Intro.Transaction.PChatBotApi.Title" = "اطلاع‌رسانی پولی";
+"Stars.Intro.Transaction.PChatBotApi.Messages_1" = "%@ پیام";
+"Stars.Intro.Transaction.PChatBotApi.Messages_any" = "%@ پیام";
 
-"Stars.Transaction.TelegramBotApi.Title" = "اطلاع‌رسانی پولی";
-"Stars.Transaction.TelegramBotApi.Messages_1" = "%@ پیام";
-"Stars.Transaction.TelegramBotApi.Messages_any" = "%@ پیام";
+"Stars.Transaction.PChatBotApi.Title" = "اطلاع‌رسانی پولی";
+"Stars.Transaction.PChatBotApi.Messages_1" = "%@ پیام";
+"Stars.Transaction.PChatBotApi.Messages_any" = "%@ پیام";
 
 "Monetization.Bot.Header" = "50% درآمد حاصل از تبلیغاتی که در ربات شما نمایش داده می‌شود، به عنوان پاداش به تلگرام تعلق می‌گیرد. [بیشتر بدانید >]()";
 "Monetization.Bot.BalanceTitle" = "موجودی قابل دسترس";
@@ -13350,7 +13350,7 @@ Sorry for the inconvenience.";
 "AffiliateSetup.StartTitle" = "شروع برنامه همکاری در فروش";
 "AffiliateSetup.UpdateTitle" = "به‌روزرسانی برنامه همکاری در فروش";
 
-"AffiliateSetup.TermsFooter" = "با ایجاد برنامه همکاری در فروش، شما با [شرایط و ضوابط](https://telegram.org/terms) برنامه‌های همکاری در فروش موافقت می‌کنید.";
+"AffiliateSetup.TermsFooter" = "با ایجاد برنامه همکاری در فروش، شما با [شرایط و ضوابط](https://p.chat/terms) برنامه‌های همکاری در فروش موافقت می‌کنید.";
 
 "AffiliateSetup.ProgramMenu.OpenBot" = "باز کردن ربات";
 "AffiliateSetup.ProgramMenu.OpenApp" = "باز کردن برنامه";
@@ -13403,7 +13403,7 @@ Sorry for the inconvenience.";
 "AffiliateProgram.PeerTypeSelf" = "حساب کاربری شخصی";
 
 "AffiliateProgram.JoinTitle" = "برنامه همکاری در فروش";
-"AffiliateProgram.JoinTerms" = "با پیوستن به این برنامه، شما با [شرایط و ضوابط](https://telegram.org/tos/affiliate-program) برنامه‌های همکاری در فروش موافقت می‌کنید.";
+"AffiliateProgram.JoinTerms" = "با پیوستن به این برنامه، شما با [شرایط و ضوابط](https://p.chat/tos/affiliate-program) برنامه‌های همکاری در فروش موافقت می‌کنید.";
 "AffiliateProgram.DailyRevenueText" = "میانگین درآمد روزانه برنامه به ازای کاربر: #**%@**";
 
 "AffiliateProgram.LinkTitle" = "لینک ارجاع";
@@ -13803,7 +13803,7 @@ Sorry for the inconvenience.";
 "Gift.Convert.Success.ChannelText.Stars_any" = "**%@ ستاره**";
 
 "Stars.Transfer.Terms" = "در صورت خریداری، شما با [شرایط و ضوابط خدمات]() موافقت می‌کنید.";
-"Stars.Transfer.Terms_URL" = "https://telegram.org/tos/stars";
+"Stars.Transfer.Terms_URL" = "https://p.chat/tos/stars";
 
 "AvatarEditor.PremiumNeeded.Background" = "با خرید اشتراک تلگرام پرمیوم، از این پس‌زمینه استفاده کنید.";
 "AvatarEditor.PremiumNeeded.Emoji" = "با خرید اشتراک تلگرام پرمیوم، این اموجی را انتخاب کنید.";
@@ -13849,7 +13849,7 @@ Sorry for the inconvenience.";
 "Notification.PaidMessageYouMany" = "شما %1$@ برای ارسال %2$@ پرداخت کردید";
 
 "Stars.Transfer.Terms" = "در صورت خریداری، شما با [شرایط و ضوابط خدمات]() موافقت می‌کنید.";
-"Stars.Transfer.Terms_URL" = "https://telegram.org/tos/stars";
+"Stars.Transfer.Terms_URL" = "https://p.chat/tos/stars";
 
 "StarsTransaction.Commission" = "کمیسیون";
 
@@ -13863,11 +13863,11 @@ Sorry for the inconvenience.";
 "Stars.Intro.Transaction.PaidMessage_1" = "هزینه %@ پیام";
 "Stars.Intro.Transaction.PaidMessage_any" = "هزینه %@ پیام";
 
-"Stars.Transaction.TelegramPremium_1" = "اشتراک پرمیوم به مدت %@ ماه";
-"Stars.Transaction.TelegramPremium_any" = "اشتراک پرمیوم به مدت %@ ماه";
+"Stars.Transaction.PChatPremium_1" = "اشتراک پرمیوم به مدت %@ ماه";
+"Stars.Transaction.PChatPremium_any" = "اشتراک پرمیوم به مدت %@ ماه";
 
-"Stars.Intro.Transaction.TelegramPremium_1" = "اشتراک پرمیوم به مدت %@ ماه";
-"Stars.Intro.Transaction.TelegramPremium_any" = "اشتراک پرمیوم به مدت %@ ماه";
+"Stars.Intro.Transaction.PChatPremium_1" = "اشتراک پرمیوم به مدت %@ ماه";
+"Stars.Intro.Transaction.PChatPremium_any" = "اشتراک پرمیوم به مدت %@ ماه";
 
 "Stars.Purchase.SendMessageInfo" = "با خرید ستاره، به **%@** پیام ارسال کنید.";
 "Stars.Purchase.SendGroupMessageInfo" = "با خرید ستاره، در **%@** پیام ارسال کنید.";
@@ -14296,7 +14296,7 @@ Sorry for the inconvenience.";
 "Premium.CreateMultipleStories" = "ایجاد چند استوری";
 
 "FrozenAccount.Violation.TextNew" = "حساب کاربری شما به دلیل نقض [شرایط و ضوابط]() تلگرام مسدود شده است.";
-"FrozenAccount.Violation.TextNew_URL" = "https://telegram.org/tos";
+"FrozenAccount.Violation.TextNew_URL" = "https://p.chat/tos";
 
 "Stars.Purchase.BuyStarGiftInfo" = "با خرید ستاره، یک کلکسیونی منحصر به فرد دریافت کنید.";
 
@@ -14955,8 +14955,8 @@ Sorry for the inconvenience.";
 "Ton.LifetimeProceeds" = "مجموع سود";
 
 "Ton.WithdrawViaFragment" = "برداشت از طریق Fragment";
-"Ton.WithdrawViaFragment.Info" = "TON خود را با استفاده از Fragment جمع‌آوری کنید. [بیشتر بدانید >](telegram.org)";
-"Ton.WithdrawViaFragment.Info_URL" = "https://telegram.org/tos/bot-developers#6-2-2-tpa-balance";
+"Ton.WithdrawViaFragment.Info" = "TON خود را با استفاده از Fragment جمع‌آوری کنید. [بیشتر بدانید >](p.chat)";
+"Ton.WithdrawViaFragment.Info_URL" = "https://p.chat/tos/bot-developers#6-2-2-tpa-balance";
 
 
 
@@ -14965,7 +14965,7 @@ Sorry for the inconvenience.";
 
 "Gift.Value.DescriptionAveragePrice" = "این میانگین قیمت فروش هدیه‌های **%@** در تلگرام و Fragment، در طول ماه گذشته است.";
 "Gift.Value.DescriptionLastPriceFragment" = "**%@** آخرین بار با این قیمت در Fragment فروخته شده است.";
-"Gift.Value.DescriptionLastPriceTelegram" = "**%@** آخرین بار با این قیمت در تلگرام فروخته شده است.";
+"Gift.Value.DescriptionLastPricePChat" = "**%@** آخرین بار با این قیمت در تلگرام فروخته شده است.";
 
 "Gift.Value.LastPriceInfo" = "هدیه‌های %1$@، آخرین بار با قیمت **%2$@** در تلگرام و Fragment لیست شده‌اند.";
 "Gift.Value.MinimumPriceInfo" = "**%1$@**، قیمت پایه هدیه‌های %2$@ است که در تلگرام و Fragment لیست شده‌اند.";
@@ -14977,7 +14977,7 @@ Sorry for the inconvenience.";
 "Gift.Value.LastPrice" = "آخرین قیمت";
 "Gift.Value.MinimumPrice" = "حداقل قیمت";
 "Gift.Value.AveragePrice" = "میانگین قیمت";
-"Gift.Value.ForSaleOnTelegram" = "برای فروش در تلگرام";
+"Gift.Value.ForSaleOnPChat" = "برای فروش در تلگرام";
 "Gift.Value.ForSaleOnFragment" = "برای فروش در Fragment";
 
 "Gift.View.Context.SetAsTheme" = "تنظیم به عنوان پوسته در...";
@@ -15198,7 +15198,7 @@ Error: %8$@";
 "Gift.Auction.TimeLeftMinutes" = "{m}:{s} باقی مانده";
 "Gift.Auction.ItemsBought_1" = "مورد خریداری شده";
 "Gift.Auction.ItemsBought_any" = "موارد خریداری شده";
-"Gift.Auction.ForSaleOnTelegram" = "برای فروش در تلگرام";
+"Gift.Auction.ForSaleOnPChat" = "برای فروش در تلگرام";
 "Gift.Auction.ForSaleOnFragment" = "برای فروش در Fragment";
 "Gift.Auction.AveragePriceInfo" = "**%1$@**، میانگین قیمت فروش هدیه‌های %2$@ است.";
 "Gift.Auction.Stars_1" = "%@ ستاره";
@@ -15975,7 +15975,7 @@ Error: %8$@";
 
 
 
-/* new from translations.telegram.org */
+/* new from translations.p.chat */
 
 "AUTH_REGION" = "ورود به حساب کاربری از یک دستگاه جدید %1$@، موقعیت مکانی: %2$@";
 "AUTH_REGION_SEPARATED" = "ورود جدید|از دستگاه ناشناخته %1$@، موقعیت مکانی: %2$@";
@@ -16126,7 +16126,7 @@ Error: %8$@";
 "InviteText.ContactsCount_any" = "سلام، من و همچنین %@ نفر دیگر از مخاطبین ما از تلگرام برای گفتگو استفاده می‌کنیم. به ما بپیوند! تلگرام را از اینجا دانلود کن: %@";
 "LOCKED_MESSAGE" = "شما یک پیام جدید دارید%1$@";
 "Login.CallRequestState1" = "تلگرام ظرف %d:%.2d با شما تماس خواهد گرفت";
-"Login.PRIVACY_URL" = "https://telegram.org/privacy";
+"Login.PRIVACY_URL" = "https://p.chat/privacy";
 "Login.SmsRequestState1" = "ظرف مدت %d:%.2d برای شما پیامکی ارسال خواهیم کرد";
 "MESSAGES" = "%1$@ برای شما %2$@ پیام ارسال کرد";
 "MESSAGES_SEPARATED" = "%1$@|برای شما %2$@ پیام ارسال کرد";
@@ -16278,10 +16278,10 @@ Error: %8$@";
 "PUSH_MESSAGE_VIDEOS_any" = "%1$@|📹 %2$d ویدیو";
 "PUSH_REACT_STORY_NAME" = "%1$@|%3$@ %2$@ به استوری شما";
 "Passport.Scans" = "اسکن‌ها";
-"PassportKit.Button.GetTelegramAlertInstall" = "نصب";
-"PassportKit.Button.GetTelegramAlertMessage" = "برای استفاده از پاسپورت تلگرامی شما باید پیام‌رسان تلگرام را نصب کنید";
-"PassportKit.Button.GetTelegramAlertNotNow" = "الان نه";
-"PassportKit.Button.GetTelegramAlertTitle" = "دریافت پیام‌رسان تلگرام";
+"PassportKit.Button.GetPChatAlertInstall" = "نصب";
+"PassportKit.Button.GetPChatAlertMessage" = "برای استفاده از پاسپورت تلگرامی شما باید پیام‌رسان تلگرام را نصب کنید";
+"PassportKit.Button.GetPChatAlertNotNow" = "الان نه";
+"PassportKit.Button.GetPChatAlertTitle" = "دریافت پیام‌رسان تلگرام";
 "PassportKit.Button.Title" = "ورود با حساب کاربری تلگرام";
 "Peer.DeletedUser" = "کاربر حذف شده";
 "PeerInfo.PaneVoice" = "پیام‌های صوتی";
@@ -16293,8 +16293,8 @@ Error: %8$@";
 "ScheduleVoiceChatChannel.Title" = "زمان‌بندی پیام ویدیویی";
 "Settings.EditProfileMedia" = "ویرایش";
 "SocksProxySetup.UseSocks5" = "استفاده از پروکسی SOCKS5";
-"SponsoredMessageInfo.ActionUrl" = "https://ads.telegram.org";
-"SponsoredMessageInfo.Text" = "به https://telegram.org مراجعه کنید";
+"SponsoredMessageInfo.ActionUrl" = "https://ads.p.chat";
+"SponsoredMessageInfo.Text" = "به https://p.chat مراجعه کنید";
 "SponsoredMessageInfoScreen.Text" = "برخلاف سایر برنامه‌ها، تلگرام هرگز از اطلاعات خصوصی شما برای اهداف تبلیغاتی استفاده نمی‌کند. پیام‌های حمایت شده در تلگرام فقط مرتبط به موضوع کانال‌های عمومی هستند که در آن‌ها نمایش داده می‌شوند. این یعنی اطلاعات کاربران برای نمایش تبلیغات، مورد داده‌کاوی یا تحلیل قرار نمی‌گیرد، و هر کاربری که در حال مشاهده کانالی در تلگرام باشد، یک پیام حمایت شده یکسان را می‌بیند.\n\nبرخلاف سایر برنامه‌ها، تلگرام اینکه شما بر روی یک پیام حمایت شده زده‌اید یا نه را ردیابی نمی‌کند و بر اساس فعالیت شما برایتان پروفایل‌سازی نمی‌کند. ما همچنین از لینک‌های خارجی در پیام‌های حمایت شده جلوگیری می‌کنیم تا اطمینان حاصل کنیم که اشخاص ثالث قادر به جاسوسی از کاربران ما نباشند. ما باور داریم که همه افراد حق داشتن حریم خصوصی را دارند، و پلتفرم‌های مربوط به تکنولوژی باید به این حق احترام بگذارند.\n\nتلگرام به صدها میلیون کاربر خدمات رایگان و نامحدودی را ارائه می‌کند که هزینه‌های قابل توجهی برای سرور و ترافیک را شامل می‌شود. تلگرام برای اینکه مستقل باقی مانده و به ارزش‌های خود وفادار بماند، ابزار پرداخت شده‌ای را برای تبلیغ پیام‌ها با حفظ حریم خصوصی کاربر توسعه داده است. ما از تبلیغ کنندگان مربوطه در آدرس زیر استقبال می‌کنیم:\n[url]\nپیام‌های حمایت شده در حال حاضر در حالت آزمایشی قرار دارند. هنگامی که به طور کامل راه‌اندازی شوند و به تلگرام امکان پوشش هزینه‌های پایه خود را بدهند، ما درآمد حاصل از تبلیغات را با مالکان کانال‌های عمومی که تبلیغات حمایت شده در آن‌ها نمایش داده می‌شوند، به اشتراک می‌گذاریم.\n\nتبلیغات آنلاین دیگر نباید به معنی سوء استفاده از حریم خصوصی کاربر باشند. بیایید با هم دوباره تعریف کنیم که یک شرکت فناوری باید چگونه فعالیت کند.";
 "Stars.SendMessage.AdjustmentSectionFooterEmpty" = "شما **80%** را دریافت خواهید کرد.";
 "StickerPacksSettings.ArchivedMasks.Info" = "شما می‌توانید تا سقف 200 بسته ماسک اضافه کنید.\nدر صورت افزودن بسته‌های بیشتر، بسته‌های استفاده نشده بایگانی می‌شوند.";

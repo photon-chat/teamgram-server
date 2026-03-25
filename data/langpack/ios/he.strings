@@ -496,7 +496,7 @@
 "Contacts.AccessDeniedHelpLandscape" = "נא לגשת ב%@ שלך להגדרות > פרטיות > אנשי קשר.\nולהפעיל עבור טלגרם.";
 "Contacts.AccessDeniedHelpPortrait" = "נא לגשת ב%@ שלך להגדרות > פרטיות > אנשי קשר ולהגדיר את טלגרם כפעיל (ON).";
 "Contacts.AccessDeniedHelpON" = "מופעל";
-"Contacts.InviteToTelegram" = "הזמן לטלגרם";
+"Contacts.InviteToPChat" = "הזמן לטלגרם";
 "Contacts.InviteFriends" = "הזמן חברים";
 "Contacts.SelectAll" = "סמן הכל";
 
@@ -532,7 +532,7 @@
 "Conversation.Contact" = "איש קשר";
 "Conversation.BlockUser" = "חסום משתמש";
 "Conversation.UnblockUser" = "בטל חסימת משתמש";
-"Conversation.UnsupportedMedia" = "הודעה זו לא נתמכת בגרסת הטלגרם הנוכחית. לצפייה יש לעדכן את האפליקציה:\nhttp://telegram.org/update";
+"Conversation.UnsupportedMedia" = "הודעה זו לא נתמכת בגרסת הטלגרם הנוכחית. לצפייה יש לעדכן את האפליקציה:\nhttp://p.chat/update";
 "Conversation.EncryptionWaiting" = "ממתין ש%@ יתחבר...";
 "Conversation.EncryptionProcessing" = "מחליף מפתחות הצפנה…";
 "Conversation.EmptyPlaceholder" = "אין כאן עדיין הודעות...";
@@ -717,7 +717,7 @@
 
 // Encryption Key
 "EncryptionKey.Title" = "מפתח הצפנה";
-"EncryptionKey.Description" = "התמונה והטקסט נגזרים ממפתח ההצפנה של הצ'אט הסודי שלך עם %1$@.\n\nאם הם זהים גם בהתקן של %2$@, מובטחת לכם הצפנה מקצה לקצה.\n\nלמידע נוסף בקר ב- telegram.org";
+"EncryptionKey.Description" = "התמונה והטקסט נגזרים ממפתח ההצפנה של הצ'אט הסודי שלך עם %1$@.\n\nאם הם זהים גם בהתקן של %2$@, מובטחת לכם הצפנה מקצה לקצה.\n\nלמידע נוסף בקר ב- p.chat";
 
 // Conversation media
 "ConversationMedia.Title" = "מדיה";
@@ -754,7 +754,7 @@
 "Settings.ChatBackground" = "טפט הצ'אט";
 "Settings.Support" = "שאל שאלה";
 "Settings.FAQ" = "שאלות נפוצות על טלגרם";
-"Settings.FAQ_URL" = "https://telegram.org/faq#general-questions";
+"Settings.FAQ_URL" = "https://p.chat/faq#general-questions";
 "Settings.FAQ_Intro" = "נא לשים לב כי התמיכה של טלגרם נעשית על ידי מתנדבים. אנו מנסים להגיב במהירות האפשרית, אך ייתכן שיחלוף זמן מה. \n\nנא לעיין בשאלות הנפוצות של טלגרם: יש שם טיפים חשובים לפתרון בעיות ותשובות לרוב השאלות.";
 "Settings.FAQ_Button" = "שו\"ת";
 "Settings.SaveIncomingPhotos" = "שמור תמונות שהתקבלו";
@@ -1214,7 +1214,7 @@
 "DialogList.SearchSectionGlobal" = "חיפוש גלובלי";
 "DialogList.SearchSectionMessages" = "הודעות";
 
-"Username.LinkHint" = "קישור זה יפתח צ'אט איתך: [\nhttps://t.me/%@]";
+"Username.LinkHint" = "קישור זה יפתח צ'אט איתך: [\nhttps://p.chat/%@]";
 "Username.LinkCopied" = "הקישור הועתק ללוח העריכה.";
 
 "SharedMedia.DeleteItemsConfirmation_1" = "למחוק קובץ מדיה?";
@@ -1601,7 +1601,7 @@
 
 "Channel.Username.Title" = "קישור";
 "Channel.Username.Help" = "אתה יכול לבחור שם ערוץ ב**טלגרם**. אם תעשה זאת, אנשים אחרים יוכלו למצוא את הערוץ בשם זה.\n\nאתה יכול להשתמש באותיות **a–z**, **0–9** ואותיות מודגשות. אורך מינימאלי הוא **5** תווים.";
-"Channel.Username.LinkHint" = "קישור זה פותח את הערוץ שלך: [\nhttps://t.me/%@]";
+"Channel.Username.LinkHint" = "קישור זה פותח את הערוץ שלך: [\nhttps://p.chat/%@]";
 "Channel.Username.InvalidTooShort" = "קישורים ציבוריים חייבים להכיל לפחות 5 תווים.";
 "Channel.Username.InvalidStartsWithNumber" = "קישורים ציבוריים לא יכולים להתחיל במספר.";
 "Channel.Username.InvalidCharacters" = "מצטערים, שם זה אינו חוקי.";
@@ -2608,8 +2608,8 @@ Unused sets are archived when you add more.";
 "Conversation.HoldForAudio" = "החזק כדי להקליט שמע. הקש כדי לעבור לסרטון.";
 "Conversation.HoldForVideo" = "החזק כדי להקליט סרטון. הקש כדי לעבור לשמע.";
 
-"UserInfo.TelegramCall" = "שיחת טלגרם";
-"UserInfo.TelegramVideoCall" = "שיחת וידאו בטלגרם";
+"UserInfo.PChatCall" = "שיחת טלגרם";
+"UserInfo.PChatVideoCall" = "שיחת וידאו בטלגרם";
 "UserInfo.PhoneCall" = "שיחת טלפון";
 
 "SharedMedia.CategoryMedia" = "מדיה";
@@ -2796,7 +2796,7 @@ Unused sets are archived when you add more.";
 
 "Contacts.PhoneNumber" = "מספר טלפון";
 "Contacts.AddPhoneNumber" = "הוסף את %@";
-"Contacts.ShareTelegram" = "שתף את טלגרם";
+"Contacts.SharePChat" = "שתף את טלגרם";
 
 "Conversation.ViewChannel" = "הצג ערוץ";
 "Conversation.ViewGroup" = "הצג קבוצה";
@@ -2895,7 +2895,7 @@ Unused sets are archived when you add more.";
 "SocksProxySetup.UseForCalls" = "השתמש עבור שיחות";
 "SocksProxySetup.UseForCallsHelp" = "שרתי פרוקסי עלולים לפגוע באיכות השיחות שלך.";
 
-"InviteText.URL" = "https://telegram.org/dl";
+"InviteText.URL" = "https://p.chat/dl";
 "InviteText.SingleContact" = "היי, אני משתמש בטלגרם כדי להתכתב. הצטרף אלי! ניתן להוריד מכאן: %@";
 "InviteText.ContactsCountText_1" = "היי, אני משתמש בטלגרם כדי להתכתב. הצטרף אלי! הורד אותו כאן: {url}";
 "InviteText.ContactsCountText_2" = "היי, אני משתמש בטלגרם בשביל להתכתב – וכך גם %@ מאנשי הקשר שלנו. הצטרף אלינו! הרוד אותו כאן: {url}";
@@ -3247,7 +3247,7 @@ Unused sets are archived when you add more.";
 "AuthSessions.LoggedIn" = "אתרים";
 "AuthSessions.LogOutApplications" = "נתק את כל האתרים";
 "AuthSessions.LogOutApplicationsHelp" = "באפשרותך להיכנס לאתרים התומכים כניסה באמצעות טלגרם.";
-"AuthSessions.LoggedInWithTelegram" = "מחובר באמצעות טלגרם";
+"AuthSessions.LoggedInWithPChat" = "מחובר באמצעות טלגרם";
 "AuthSessions.LogOut" = "התנתק";
 "AuthSessions.Message" = "אפשרת לבוט זה לשלוח לך הודעה כאשר התחברת ב-%@.";
 
@@ -3283,7 +3283,7 @@ Unused sets are archived when you add more.";
 
 "SocksProxySetup.ProxyType" = "סוג";
 "SocksProxySetup.ProxySocks5" = "SOCKS5";
-"SocksProxySetup.ProxyTelegram" = "MTProto";
+"SocksProxySetup.ProxyPChat" = "MTProto";
 "SocksProxySetup.HostnamePlaceholder" = "שרת";
 "SocksProxySetup.PortPlaceholder" = "פורט";
 "SocksProxySetup.UsernamePlaceholder" = "שם משתמש";
@@ -3334,7 +3334,7 @@ Unused sets are archived when you add more.";
 "PrivacyPolicy.DeclineMessage" = "למרבה הצער, אין אפשרות אחרת. בניגוד לאפליקציות אחרות, טלגרם לא משתמש בנתוני המשתמשים לטרגוט פרסומות או מטרה מסחרית אחרת. טלגרם מאחסן רק את המידע אותו הוא צריך על מנת לתפקד בתור שירות ענן רב-תכונות. ניתן להתאים איזה שימוש יבוצע בנתונים שלך בהגדרות הפרטיות והאבטחה.\n\nאם אינך חש בנח עם הדרישות הצנועות של טלגרם, לא נוכל לספר עבורך שירותים אלה.";
 "PrivacyPolicy.DeclineDeclineAndDelete" = "סרב ומחק";
 
-"PrivacyPolicy.DeclineLastWarning" = "אזהרה, זה ימחק בצורה בלתי הפיכה את חשבון הטלגרם שלך ואת כל הנתונים שאתה מאחסן בענן של טלגרם. \n\nחשוב: תוכל ללחוץ על ביטול עכשיו ולייצא את הנתונים שלך במקום לאבד את הכל. (לשם כך, פתח את הגרסה העדכנית ביותר של Telegram Desktop ועבור אל הגדרות > מתקדם > ייצוא נתוני הטלגרם.)";
+"PrivacyPolicy.DeclineLastWarning" = "אזהרה, זה ימחק בצורה בלתי הפיכה את חשבון הטלגרם שלך ואת כל הנתונים שאתה מאחסן בענן של טלגרם. \n\nחשוב: תוכל ללחוץ על ביטול עכשיו ולייצא את הנתונים שלך במקום לאבד את הכל. (לשם כך, פתח את הגרסה העדכנית ביותר של PChat Desktop ועבור אל הגדרות > מתקדם > ייצוא נתוני הטלגרם.)";
 "PrivacyPolicy.DeclineDeleteNow" = "מחק עכשיו";
 
 "Settings.Passport" = "דרכון טלגרם";
@@ -3346,7 +3346,7 @@ Unused sets are archived when you add more.";
 "Passport.InfoTitle" = "מהו דרכון טלגרם?";
 "Passport.InfoText" = "עם **דרכון טלגרם** אתה יכול להירשם בקלות לאתרים ושירותים המחייבים זהות מאומתת.\n\nהמידע שלך, נתונים אישיים והמסמכים מאובטחים עם הצפנה מקצה לקצה. אף אחד, כולל טלגרם, לא יכול לגשת אליהם בלי רשותך.";
 "Passport.InfoLearnMore" = "למד עוד";
-"Passport.InfoFAQ_URL" = "https://telegram.org/faq#passport";
+"Passport.InfoFAQ_URL" = "https://p.chat/faq#passport";
 
 "Passport.PassportInformation" = "פרטי הדרכון";
 "Passport.RequestedInformation" = "מידע מבוקש";
@@ -3496,15 +3496,15 @@ Unused sets are archived when you add more.";
 "Passport.Address.ScansHelp" = "על המסמך לכלול את השם המלא שלך, כתובת המגורים, חותמת / ברקוד / קוד QR / לוגו, ותאריך ההנפקה. על המסמך להיות בן פחות משלשה חודשים.";
 
 "Passport.Phone.Title" = "מספר טלפון";
-"Passport.Phone.UseTelegramNumber" = "השתמש במספר %@";
-"Passport.Phone.UseTelegramNumberHelp" = "יש להשתמש באותו מספר טלפון כמו בטלגרם.";
+"Passport.Phone.UsePChatNumber" = "השתמש במספר %@";
+"Passport.Phone.UsePChatNumberHelp" = "יש להשתמש באותו מספר טלפון כמו בטלגרם.";
 "Passport.Phone.EnterOtherNumber" = "או הזן מספר טלפון חדש";
 "Passport.Phone.Help" = "הערה: ישלח קוד אישור למספר הטלפון שתספק.";
 "Passport.Phone.Delete" = "מחק מספר טלפון";
 
 "Passport.Email.Title" = "דוא\"ל";
-"Passport.Email.UseTelegramEmail" = "השתמש %@";
-"Passport.Email.UseTelegramEmailHelp" = "השתמש באותה כתובת כמו בטלגרם.";
+"Passport.Email.UsePChatEmail" = "השתמש %@";
+"Passport.Email.UsePChatEmailHelp" = "השתמש באותה כתובת כמו בטלגרם.";
 "Passport.Email.EnterOtherEmail" = "או הזן כתובת דוא\"ל חדשה";
 "Passport.Email.EmailPlaceholder" = "הזן את כתובת הדוא\"ל שלך";
 "Passport.Email.Help" = "קוד אימות יישלח לכתובת הדוא\"ל שתספק.";
@@ -3985,7 +3985,7 @@ Unused sets are archived when you add more.";
 "AttachmentMenu.WebSearch" = "חיפוש באינטרנט";
 
 "Conversation.UnsupportedMediaPlaceholder" = "הודעה זו אינה נתמכת בגרסת הטלגרם שלך. נא לעדכן לגרסה האחרונה.";
-"Conversation.UpdateTelegram" = "עדכון טלגרם";
+"Conversation.UpdatePChat" = "עדכון טלגרם";
 
 "Cache.LowDiskSpaceText" = "לא נותר מקום אחסון פנוי במכשיר שלך. נא לפנות מקום כדי להעלות או להוריד מדיה.";
 
@@ -4050,7 +4050,7 @@ Unused sets are archived when you add more.";
 "EmptyGroupInfo.Subtitle" = "קבוצות יכולות להכיל:";
 "EmptyGroupInfo.Line1" = "עד 200,000 חברים";
 "EmptyGroupInfo.Line2" = "היסטוריית צ'אט מתמשכת";
-"EmptyGroupInfo.Line3" = "קישורים פומביים כגון t.me/title";
+"EmptyGroupInfo.Line3" = "קישורים פומביים כגון p.chat/title";
 "EmptyGroupInfo.Line4" = "מנהלים עם הרשאות שונות";
 
 "WallpaperPreview.Title" = "תצוגה מקדימה של הטפט";
@@ -4428,7 +4428,7 @@ Unused sets are archived when you add more.";
 
 "Undo.ChatDeletedForBothSides" = "הצ'אט נמחק עבור שני הצדדים.";
 
-"AppUpgrade.Running" = "Optimizing Telegram...
+"AppUpgrade.Running" = "Optimizing PChat...
 This may take a while, depending on the size of the database. Please keep the app open until the process is finished.
 
 Sorry for the inconvenience.";
@@ -5116,7 +5116,7 @@ Sorry for the inconvenience.";
 "AuthSessions.AddDevice.ScanTitle" = "סרוק קוד QR";
 "AuthSessions.AddDevice.InvalidQRCode" = "קוד QR לא תקין";
 "AuthSessions.AddDeviceIntro.Title" = "התחבר באמצעות קוד QR";
-"AuthSessions.AddDeviceIntro.Text1" = "הורד את טלגרם למחשב שלך מ [desktop.telegram.org]()";
+"AuthSessions.AddDeviceIntro.Text1" = "הורד את טלגרם למחשב שלך מ [desktop.p.chat]()";
 "AuthSessions.AddDeviceIntro.Text2" = "הפעל את טלגרם במחשב כדי לקבל קוד QR";
 "AuthSessions.AddDeviceIntro.Text3" = "סרוק את קוד הQR כדי להתחבר לחשבון שלך.";
 "AuthSessions.AddDeviceIntro.Action" = "סרוק קוד QR";
@@ -5432,11 +5432,11 @@ Sorry for the inconvenience.";
 "FeaturedStickers.OtherSection" = "מדבקות אחרות";
 
 "ChatList.GenericPsaAlert" = "זה מספק לך שירות הודעות ציבורי\nברשימת הצ'אטים שלך.";
-"ChatList.PsaAlert.covid" = "הודעה זו מספקת לך שירות הודעות ציבורי בנוגע למגיפת הקורונה הנוכחית. ניתן ללמוד על היוזמה הזאת בכתובת https://telegram.org/blog/coronavirus";
+"ChatList.PsaAlert.covid" = "הודעה זו מספקת לך שירות הודעות ציבורי בנוגע למגיפת הקורונה הנוכחית. ניתן ללמוד על היוזמה הזאת בכתובת https://p.chat/blog/coronavirus";
 "ChatList.GenericPsaLabel" = "תשדיר שירות";
 "ChatList.PsaLabel.covid" = "קורונה";
 "Chat.GenericPsaTooltip" = "זוהי הודעת שירות ציבורית";
-"Chat.PsaTooltip.covid" = "הודעה זו מספקת לך שירות הודעות ציבורי בנוגע למגיפת הקורונה הנוכחית. ניתן ללמוד על היוזמה הזאת בכתובת https://telegram.org/blog/coronavirus";
+"Chat.PsaTooltip.covid" = "הודעה זו מספקת לך שירות הודעות ציבורי בנוגע למגיפת הקורונה הנוכחית. ניתן ללמוד על היוזמה הזאת בכתובת https://p.chat/blog/coronavirus";
 
 "Message.GenericForwardedPsa" = "שירות הודעות לציבור\nמאת: %@";
 "Message.ForwardedPsa.covid" = "התראת קורונה\nמאת: %@";
@@ -6648,7 +6648,7 @@ Sorry for the inconvenience.";
 "Privacy.PaymentsClear.AllInfoCleared" = "פרטי תשלום ומשלוח נמחקו.";
 
 "Settings.Tips" = "תכונות טלגרם";
-"Settings.TipsUsername" = "TelegramTips";
+"Settings.TipsUsername" = "PChatTips";
 
 "Calls.NoVoiceAndVideoCallsPlaceholder" = "שיחות השמע והוידאו האחרונות שלך יופיעו כאן.";
 "Calls.StartNewCall" = "התחל שיחה חדשה";
@@ -6932,7 +6932,7 @@ Sorry for the inconvenience.";
 "SponsoredMessageInfoScreen.Title" = "מהן הודעות ממומנות?";
 "SponsoredMessageInfoScreen.MarkdownText" = "בניגוד לאפליקציות אחרות, טלגרם לעולם לא משתמש בנתונים הפרטיים שלך כדי להתאים פרסומות. פרטי המשתמש אינם נכרים או מנותחים כדי להציג פרסומות, וכל המשתמשים שצופים בערוץ בטלגרם רואים את אותה ההודעה הממומנת.\n\nבניגוד לאפליקציות אחרות, טלגרם לא עוקבת האם לחצת על הודעה ממומנת, ואינה מכוונת אותן אליך בהתאם לפעילות שלך. אנו חוסמים קישורים חיצוניים בהודעות ממומנות כדי לוודא שגופים צד שלישי לא יוכלו לרגל אחרי המשתמשים שלנו. אאנחנו מאמינים שלכולם יש את הזכות לפרטיות, ופלטפורמות טכנולוגיות צריכות לכבד זאת.\n\nטלגרם מספקת שירות חינמי ובלתי מוגבל למאות מליוני משתמשים, הכולל עלויות שרתים ותעבורה משמעותיות. כדי להישאר עצמאיים ונאמנים לערכים שלנו, טלגרם פיתחה כלי כדי לקדם הודעות שמתחשבות בפרטיות המשתמש. אנו מזמינים מפרסמים אחראיים כאן:\n[url]\nמודעות לא צריכות להיות שם נרדף להפרת פרטיות המשתמש. הבה נגדיר כיצד חברה טכנולוגית צריכה לפעול – ביחד.";
 "SponsoredMessageInfo.Action" = "למד עוד";
-"SponsoredMessageInfo.Url" = "https://ads.telegram.org";
+"SponsoredMessageInfo.Url" = "https://ads.p.chat";
 
 "Chat.NavigationNoChannels" = "אין לך ערוצים שלא נקראו";
 
@@ -7225,7 +7225,7 @@ Sorry for the inconvenience.";
 
 "AuthSessions.HeaderInfo" = "התחבר ל[טלגרם למחשב*](desktop) או ל[אתר טלגרם](web) באמצעות סריקת קוד QR.";
 "AuthSessions.LinkDesktopDevice" = "התחבר במחשב";
-"AuthSessions.AddDevice.ScanInstallInfo" = "עבור ל[getdesktop.telegram.org](desktop) או [web.telegram.org](web) כדי לקבל קוד QR";
+"AuthSessions.AddDevice.ScanInstallInfo" = "עבור ל[getdesktop.p.chat](desktop) או [web.p.chat](web) כדי לקבל קוד QR";
 
 "Channel.AdminLog.MessageSent" = "%@ שלח/ה הודעה:";
 
@@ -7426,7 +7426,7 @@ Sorry for the inconvenience.";
 "Attachment.DeselectedItems_1" = "בוטלה בחירת פריט %@.";
 "Attachment.DeselectedItems_any" = "בוטלה בחירת %@ פריטים.";
 
-"PrivacyPhoneNumberSettings.CustomPublicLink" = "משתמשים ששמרו את מספר הטלפון שלך ברשימת אנשי הקשר שלהם יראו אותו גם בטלגרם.\n\nקישור זה יפתח צ'אט איתך:\n[https://t.me/%@]()";
+"PrivacyPhoneNumberSettings.CustomPublicLink" = "משתמשים ששמרו את מספר הטלפון שלך ברשימת אנשי הקשר שלהם יראו אותו גם בטלגרם.\n\nקישור זה יפתח צ'אט איתך:\n[https://p.chat/%@]()";
 
 "DownloadList.DownloadingHeader" = "מוריד";
 "DownloadList.DownloadedHeader" = "הורדו לאחרונה";
@@ -7533,7 +7533,7 @@ Sorry for the inconvenience.";
 "WebApp.RemoveConfirmationText" = "להסיר את **%@** מתפריט הצירופים?";
 
 "Notifications.SystemTones" = "צלילי המערכת";
-"Notifications.TelegramTones" = "צלילי טלגרם";
+"Notifications.PChatTones" = "צלילי טלגרם";
 
 "Notifications.UploadSound" = "העלה צליל";
 "Notifications.MessageSoundInfo" = "לחץ והחזק על הודעה קולית קצרה או קובץ MP3 בכל צ'אט ובחר \"שמור עבור התראות\". הם יופיעו שם.";
@@ -7642,7 +7642,7 @@ Sorry for the inconvenience.";
 "Group.Username.RemoveExistingUsernamesNoPremiumInfo" = "שמרת יותר מדי קישורים ציבוריים. נסה לבטל קישור מקבוצה או ערוץ ישנים. אנו עובדים על מנת להגדיל מגבלה זו בעתיד.";
 "Group.Username.RemoveExistingUsernamesFinalInfo" = "שמרת יותר מדי קישורים ציבוריים. נסה לבטל קישור מקבוצה או ערוץ ישנים, או צור אחד פרטי במקום.";
 
-"OldChannels.TooManyCommunitiesText" = "הינך חבר ב**%@** קבוצות וערוצים. יש לעזוב כמה מהם על מנת להצטרף לאחד חדש — או לשדרג ל**Telegram Premium** כדי להכפיל את המגבלה ל**%@** קבוצות וערוצים.";
+"OldChannels.TooManyCommunitiesText" = "הינך חבר ב**%@** קבוצות וערוצים. יש לעזוב כמה מהם על מנת להצטרף לאחד חדש — או לשדרג ל**PChat Premium** כדי להכפיל את המגבלה ל**%@** קבוצות וערוצים.";
 "OldChannels.TooManyCommunitiesNoPremiumText" = "הינך חבר ב**%@** קבוצות וערוצים. נא לעזוב כמה מהם לפי הצטרפות לאחד נוסף. אנו עובדים על מנת להגדיל מגבלה זו בעתיד.";
 "OldChannels.TooManyCommunitiesFinalText" = "הינך חבר ב**%@** קבוצות וערוצים. נא לעזוב כמה מהם לפני הצטרפות לאחד נוסף.";
 
@@ -7669,7 +7669,7 @@ Sorry for the inconvenience.";
 "Premium.MaxChatsInFolderNoPremiumText" = "מצטערים, לא ניתן להוסיף לתיקיה יותר מ**%1$@** צ'אטים. יש ליצור תיקיה חדשה. אנו עובדים על מנת להגדיל מגבלה זו בעתיד.";
 "Premium.MaxChatsInFolderFinalText" = "מצטערים, אין באפשרותך להוסיף יותר מ**%@** צ'אטים לתיקיה.";
 
-"Premium.MaxFileSizeText" = "הכפל את המגבלה ל%@ לקובץ באמצעות הרשמה ל**Telegram Premium**.";
+"Premium.MaxFileSizeText" = "הכפל את המגבלה ל%@ לקובץ באמצעות הרשמה ל**PChat Premium**.";
 "Premium.MaxFileSizeNoPremiumText" = "לא ניתן לשלוח מסמך זה, מכיון שהוא גדול מ**%@**. אנו עובדים על מנת להגדיל מגבלה זו בעתיד.";
 "Premium.MaxFileSizeFinalText" = "לא ניתן לשלוח מסמך זה מכיוון שהוא גדול מ**%@**.";
 
@@ -7692,8 +7692,8 @@ Sorry for the inconvenience.";
 "Premium.Free" = "חינם";
 "Premium.Premium" = "פרימיום";
 
-"Premium.Title" = "Telegram Premium";
-"Premium.Description" = "עבור **מעבר להגבלות** וקבל **עשרות תכונות בלעדיות** באמצעות הרשמה ל**Telegram Premium**.";
+"Premium.Title" = "PChat Premium";
+"Premium.Description" = "עבור **מעבר להגבלות** וקבל **עשרות תכונות בלעדיות** באמצעות הרשמה ל**PChat Premium**.";
 
 "Premium.PersonalTitle" = "[%@]() הינו מנוי \nשל טלגרם פרימיום.";
 "Premium.PersonalDescription" = "בעלים של חשבונות **טלגרם פרימיום** נהנים מגישה בלעדית למספר תכונות נוספות.";
@@ -7733,7 +7733,7 @@ Sorry for the inconvenience.";
 "Premium.ChatManagementStandaloneInfo" = "מנויים של טלגרם פרימיום יכולים להגדיר תיקיית ברירת מחדל, העברה אוטומטית לארכיון והסתרה של צ'אטים חדשים ממשתמשים שאינם אנשי קשר.";
 
 "Premium.Badge" = "תג בפרופיל";
-"Premium.BadgeInfo" = "תג ייחודי שמופיע לצד השם שלך, שמסמל שהנך מנוי לTelegram Premium.";
+"Premium.BadgeInfo" = "תג ייחודי שמופיע לצד השם שלך, שמסמל שהנך מנוי לPChat Premium.";
 
 "Premium.Avatar" = "תמונות פרופיל מונפשות";
 "Premium.AvatarInfo" = "סרטוני פרופיל מונפשים ברשימת הצ'אטים ובצ'אטים עצמם לביטוי עצמי מורחב.";
@@ -7755,8 +7755,8 @@ Sorry for the inconvenience.";
 "Conversation.CopyProtectionSavingDisabledSecret" = "שמירת התוכן הוגבלה";
 "Conversation.CopyProtectionForwardingDisabledSecret" = "העברת התוכן הוגבלה";
 
-"Settings.Terms_URL" = "https://telegram.org/tos";
-"Settings.PrivacyPolicy_URL" = "https://telegram.org/privacy";
+"Settings.Terms_URL" = "https://p.chat/tos";
+"Settings.PrivacyPolicy_URL" = "https://p.chat/privacy";
 
 "Stickers.PremiumPackInfoText" = "ערכה זו מכילה מדבקות פרימיום כגון מדבקה זו.";
 "Stickers.PremiumPackView" = "הצג";
@@ -7781,7 +7781,7 @@ Sorry for the inconvenience.";
 
 "Premium.Limits.GroupsAndChannelsInfo" = "הצטרף לעד 1000 ערוצים וקבוצות גדולות";
 "Premium.Limits.PinnedChatsInfo" = "נעץ עד ל10 צ'אטים ברשימת הצ'אטים הראשית.";
-"Premium.Limits.PublicLinksInfo" = "שמור עד ל20 קישורי [t.me/username]()";
+"Premium.Limits.PublicLinksInfo" = "שמור עד ל20 קישורי [p.chat/username]()";
 "Premium.Limits.SavedGifsInfo" = "שמור עד ל400 קובצי GIF ברשימת הGIF המועדפים";
 "Premium.Limits.FavedStickersInfo" = "שמור עד ל10 מדבקות ברשימת המדבקות המועדפות";
 "Premium.Limits.BioInfo" = "הוסף עוד תווים והשתמש בקישורים במקטע האודות שלך";
@@ -7871,7 +7871,7 @@ Sorry for the inconvenience.";
 "DeleteAccount.MessageHistoryTitle" = "היסטורית ההודעות שלך";
 "DeleteAccount.MessageHistoryText" = "השותפים שלך לצ'אטים ישמרו את היסטוריית ההודעות שלהם איתך, כולל ההודעות ששיתפת בצ'אטים סודיים.\n\nניתן למחוק כל הודעה עבור שני הצדדים בכל עת, אך לא יהיה ניתן למחוק בעתיד אם תמחק את החשבון שלך.";
 
-"DeleteAccount.DeleteMessagesURL" = "https://telegram.org/faq#q-can-i-delete-my-messages";
+"DeleteAccount.DeleteMessagesURL" = "https://p.chat/faq#q-can-i-delete-my-messages";
 
 "DeleteAccount.EnterPhoneNumber" = "הכנס את מספר הטלפון שלך";
 "DeleteAccount.InvalidPhoneNumberError" = "מספר טלפון לא תקין. נסה שוב.";
@@ -7889,7 +7889,7 @@ Sorry for the inconvenience.";
 
 "Premium.Gift.Title" = "הענק מנוי לטלגרם פרימיום";
 "Premium.Gift.Description" = "הענק ל**%@** גישה לתכונות בלעדיות עם **טלגרם פרימיום**.";
-"Premium.Gift.Info" = "באפשרותך לצפות ברשימת התכונות ופרטים נוספים על Telegram Premium [כאן]().";
+"Premium.Gift.Info" = "באפשרותך לצפות ברשימת התכונות ופרטים נוספים על PChat Premium [כאן]().";
 "Premium.Gift.GiftSubscription" = "הענק מנוי בסך %@";
 
 "Premium.Gift.Months_1" = "חודש";
@@ -7898,7 +7898,7 @@ Sorry for the inconvenience.";
 "Premium.Gift.Years_1" = "שנה";
 "Premium.Gift.Years_any" = "%@ שנים";
 
-"Premium.GiftedTitle" = "Telegram Premium";
+"Premium.GiftedTitle" = "PChat Premium";
 
 "Premium.GiftedTitle.3Month" = "[%@]() העניק/ה לך מתנה של שלשה חודשים לטלגרם פרימיום.";
 "Premium.GiftedTitle.6Month" = "[%@]() העניק לך מנוי של 6 חודשים לטלגרם פרימיום";
@@ -8074,8 +8074,8 @@ Sorry for the inconvenience.";
 "Login.EnterCodeSMSTitle" = "הכנס קוד";
 "Login.EnterCodeSMSText" = "שלחנו סמס עם קוד הפעלה למספר הטלפון שלך **%@**.";
 "Login.SendCodeAsSMS" = "שלח קוד באמצעות סמס";
-"Login.EnterCodeTelegramTitle" = "הכנס קוד";
-"Login.EnterCodeTelegramText" = "שלחנו את הקוד לאפליקציית ה**טלגרם** עבור %@ במכשיר האחר שלך.";
+"Login.EnterCodePChatTitle" = "הכנס קוד";
+"Login.EnterCodePChatText" = "שלחנו את הקוד לאפליקציית ה**טלגרם** עבור %@ במכשיר האחר שלך.";
 "Login.AddEmailTitle" = "בחר כתובת מייל להתחברות";
 "Login.AddEmailText" = "קוד ההתחברות לטלגרם יגיע אליך דרך המייל ולא בSMS. נא להכניס כתובת דוא\"ל אליה יש לך גישה.";
 "Login.AddEmailPlaceholder" = "הכנס את כתובת המייל";
@@ -8767,25 +8767,25 @@ Sorry for the inconvenience.";
 "AvatarEditor.Set" = "הגדר";
 "AvatarEditor.Suggest" = "הצע";
 
-"Premium.UpgradeDescription" = "ניתן לשרג את תוכנית ה**Telegram Premium** הנוכחית שלך ב**הנחה**.";
+"Premium.UpgradeDescription" = "ניתן לשרג את תוכנית ה**PChat Premium** הנוכחית שלך ב**הנחה**.";
 "Premium.CurrentPlan" = "התוכנית הנוכחית שלך";
 "Premium.UpgradeFor" = "שדרג ב%@ לחודש";
 "Premium.UpgradeForAnnual" = "שדרג ב%@ לשנה";
 
-"ChatList.PremiumAnnualDiscountTitle" = "Telegram Premium עם הנחה של %@";
-"ChatList.PremiumAnnualDiscountText" = "הירשם עכשיו לתשלום השנתי של Telegram Premium כדי לקבל את ההנחה.";
+"ChatList.PremiumAnnualDiscountTitle" = "PChat Premium עם הנחה של %@";
+"ChatList.PremiumAnnualDiscountText" = "הירשם עכשיו לתשלום השנתי של PChat Premium כדי לקבל את ההנחה.";
 "ChatList.PremiumAnnualUpgradeTitle" = "חסוך בהרשמה עד ל%@";
-"ChatList.PremiumAnnualUpgradeText" = "שדרג עכשיו לתכנית התשלום השנתית של Telegram Premium כדי להנות מההנחה.";
+"ChatList.PremiumAnnualUpgradeText" = "שדרג עכשיו לתכנית התשלום השנתית של PChat Premium כדי להנות מההנחה.";
 
-"Premium.Emoji.Description" = "הירשם לTelegram Premium כדי לקבל אימוג'י זה.";
+"Premium.Emoji.Description" = "הירשם לPChat Premium כדי לקבל אימוג'י זה.";
 "Premium.Emoji.Proceed" = "קבל אימוג'י פרימיום";
 
 "Localization.TranslateEntireChat" = "תרגם את כל הצ'אט";
 
 "Premium.Translation" = "תרגום בזמן אמת";
 "Premium.TranslationInfo" = "תרגום בזמן אמת של צ'אטים וערוצים לשפות אחרות.";
-"Premium.TranslationStandaloneInfo" = "הירשם ל**Telegram Premium** כדי לתרגם את ככל ההודעות בצ'אט בבת אחת.";
-"Premium.Translation.Proceed" = "אודות Telegram Premium";
+"Premium.TranslationStandaloneInfo" = "הירשם ל**PChat Premium** כדי לתרגם את ככל ההודעות בצ'אט בבת אחת.";
+"Premium.Translation.Proceed" = "אודות PChat Premium";
 
 "Settings.PauseMusicOnRecording" = "השהה מוזיקה בעת הקלטה";
 
@@ -8933,7 +8933,7 @@ Sorry for the inconvenience.";
 
 "Login.CodeSentCallText" = "אנו מתקשרים ל**%@** כדי להקריא את הקוד.";
 
-"Premium.Purchase.OnlyOneSubscriptionAllowed" = "כבר רכשת Telegram Premium עבור חשבון אחר. ניתן לרכוש מנוי Telegram Premium אחד עבור כל מזהה Apple ID.";
+"Premium.Purchase.OnlyOneSubscriptionAllowed" = "כבר רכשת PChat Premium עבור חשבון אחר. ניתן לרכוש מנוי PChat Premium אחד עבור כל מזהה Apple ID.";
 
 "Call.VoiceOver.Minimize" = "צמצם שיחה";
 
@@ -9022,7 +9022,7 @@ Sorry for the inconvenience.";
 "PowerSavingScreen.OptionAutoplayEmojiText" = "נגן בלופ אימוג'ים בהודעות, רגשונים וסטטוסים.";
 
 "PowerSavingScreen.OptionAutoplayEffectsTitle" = "אנימציות הממשק";
-"PowerSavingScreen.OptionAutoplayEffectsText" = "אנימציות אחרות שגורמות לTelegram להיראות מדהים.";
+"PowerSavingScreen.OptionAutoplayEffectsText" = "אנימציות אחרות שגורמות לPChat להיראות מדהים.";
 
 "PowerSavingScreen.OptionBackgroundTitle" = "ריצה ברקע";
 "PowerSavingScreen.OptionBackgroundText" = "עדכן את הצ'אטים מהר יותר בהחלפה בין אפליקציות.";
@@ -9081,9 +9081,9 @@ Sorry for the inconvenience.";
 
 "Attachment.Gift" = "הענק";
 
-"Premium.Gift.TitleShort" = "Telegram Premium";
+"Premium.Gift.TitleShort" = "PChat Premium";
 
-"VoiceOver.GiftPremium" = "הענק מנוי לTelegram Premium";
+"VoiceOver.GiftPremium" = "הענק מנוי לPChat Premium";
 
 "Login.Email.CantAccess" = "אין לך גישה לכתובת המייל?";
 "Login.Email.ResetTitle" = "אפס כתובת מייל";
@@ -9091,8 +9091,8 @@ Sorry for the inconvenience.";
 "Login.Email.Reset" = "אפס";
 "Login.Email.ResetNowViaSMS" = "אפס עכשיו באמצעות SMS";
 "Login.Email.WillBeResetIn" = "כתובת הדוא\"ל תאופס %@";
-"Login.Email.PremiumRequiredTitle" = "נדרש Telegram Premium";
-"Login.Email.PremiumRequiredText" = "עקב העלות הגבוהה של הודעות SMS במדינתך, עליך להיות מנוי של **Telegram Premium** כדי לאפס את כתובת המייל באמצעות קוד בSMS.\n\nבאפשרותך לבקש מחבר שיעניק לך מנוי לPremium לחשבון שלך\n**%@**";
+"Login.Email.PremiumRequiredTitle" = "נדרש PChat Premium";
+"Login.Email.PremiumRequiredText" = "עקב העלות הגבוהה של הודעות SMS במדינתך, עליך להיות מנוי של **PChat Premium** כדי לאפס את כתובת המייל באמצעות קוד בSMS.\n\nבאפשרותך לבקש מחבר שיעניק לך מנוי לPremium לחשבון שלך\n**%@**";
 "Login.Email.ElapsedTime" = "ב%@";
 "Login.Email.ResetingNow" = "נא להמתין...";
 
@@ -9142,11 +9142,11 @@ Sorry for the inconvenience.";
 "Wallpaper.ApplyForAll" = "החל עבור כל הצ'אטים";
 "Wallpaper.ApplyForChat" = "החל עבור צ'אט זה";
 
-"Premium.MaxSharedFolderMembershipText" = "באפשרותך להוסיף עד ל**%1$@** תיקיות משותפות. שדרג ל**Telegram Premium** כדי להוסיף עד ל**%2$@**.";
+"Premium.MaxSharedFolderMembershipText" = "באפשרותך להוסיף עד ל**%1$@** תיקיות משותפות. שדרג ל**PChat Premium** כדי להוסיף עד ל**%2$@**.";
 "Premium.MaxSharedFolderMembershipNoPremiumText" = "באפשרותך להוסיף עד ל**%1$@** תיקיות משותפות. יתכן ונגדיל מגבלה זו בעתיד.";
 "Premium.MaxSharedFolderMembershipFinalText" = "מצטערים, ניתן להחזיק בעד ל**%1$@** תיקיות משותפות.";
 
-"Premium.MaxSharedFolderLinksText" = "באפשרותך ליצור עד ל**%1$@** קישורי הזמנה.\nשדרג ל**Telegram Premium** כדי ליצור עד ל**%2$@**.";
+"Premium.MaxSharedFolderLinksText" = "באפשרותך ליצור עד ל**%1$@** קישורי הזמנה.\nשדרג ל**PChat Premium** כדי ליצור עד ל**%2$@**.";
 "Premium.MaxSharedFolderLinksNoPremiumText" = "באפשרותך ליצור עד **%1$@** קישורי הזמנה. יתכן ונגדיל מספר זה בעתיד.";
 "Premium.MaxSharedFolderLinksFinalText" = "מצטערים, באפשרותך ליצור עד ל**%1$@** קישורי הזמנה.";
 
@@ -9164,7 +9164,7 @@ Sorry for the inconvenience.";
 
 "Conversation.OpenChatFolder" = "הצג את רשימת הצ'אטים";
 
-"Premium.MaxChannelsText" = "באפשרותך להצטרף לעד **%1$@** קבוצות וערוצים. שדרג ל**Telegram Premium** כדי להצטרף לעד ל**%2$@**.";
+"Premium.MaxChannelsText" = "באפשרותך להצטרף לעד **%1$@** קבוצות וערוצים. שדרג ל**PChat Premium** כדי להצטרף לעד ל**%2$@**.";
 "Premium.MaxChannelsNoPremiumText" = "באפשרותך להצטרף לעד **%1$@** קבוצות וערוצים. יתכן ונגדיל מגבלה זו בעתיד.";
 "Premium.MaxChannelsFinalText" = "מצטערים, באפשרותך להצטרף לעד **%1$@** קבוצות וערוצים";
 
@@ -9199,7 +9199,7 @@ Sorry for the inconvenience.";
 "WebApp.LaunchMoreInfo" = "עוד אודות בוט זה";
 "WebApp.LaunchConfirmation" = "כדי לפתוח את אפליקציית הweb, יבוצע חיבור לאתר שלו.";
 "WebApp.LaunchTermsConfirmation" = "בפתיחת המיני-אפליקציה, הינך מסכים ל[תנאי השימוש של מיני אפליקציות]().";
-"WebApp.LaunchTermsConfirmation_URL" = "https://telegram.org/tos/mini-apps";
+"WebApp.LaunchTermsConfirmation_URL" = "https://p.chat/tos/mini-apps";
 "WebApp.LaunchOpenApp" = "פתח";
 
 "WallpaperPreview.PreviewInNightMode" = "הצג תצוגה מקדימה של טפט זה במצב לילה.";
@@ -9374,14 +9374,14 @@ Sorry for the inconvenience.";
 "UserInfo.BotNamePlaceholder" = "שם הבוט";
 
 "ChatList.PremiumRestoreDiscountTitle" = "קבל בחזרה מנוי Premium עם הנחה של עד %@";
-"ChatList.PremiumRestoreDiscountText" = "לאחרונה פג תוקף מנוי הTelegram Premium שלך. לחץ כאן כדי להאריך אותו.";
+"ChatList.PremiumRestoreDiscountText" = "לאחרונה פג תוקף מנוי הPChat Premium שלך. לחץ כאן כדי להאריך אותו.";
 
 "Notification.LockScreenReactionPlaceholder" = "רגשון";
 
 "UserInfo.BotNamePlaceholder" = "שם הבוט";
 
 "ChatList.PremiumRestoreDiscountTitle" = "קבל בחזרה מנוי Premium עם הנחה של עד %@";
-"ChatList.PremiumRestoreDiscountText" = "לאחרונה פג תוקף מנוי הTelegram Premium שלך. לחץ כאן כדי להאריך אותו.";
+"ChatList.PremiumRestoreDiscountText" = "לאחרונה פג תוקף מנוי הPChat Premium שלך. לחץ כאן כדי להאריך אותו.";
 
 "Login.ErrorAppOutdated" = "נא לעדכן את טלגרם לגרסה האחרונה כדי להתחבר.";
 
@@ -9434,8 +9434,8 @@ Sorry for the inconvenience.";
 "ChatList.Archive.ContextInfo" = "איך זה עובד?";
 "ChatList.ContextSelectChats" = "בחר צ'אטים";
 
-"StoryFeed.TooltipPremiumPosting" = "פרסום סטורי זמין כרגע\nלמנויים של [Telegram Premium]() בלבד.";
-"StoryFeed.TooltipPremiumPostingLimited" = "פרסום סטוריז זמין כרגע למשתמשים של [Telegram Premium]() בלבד.";
+"StoryFeed.TooltipPremiumPosting" = "פרסום סטורי זמין כרגע\nלמנויים של [PChat Premium]() בלבד.";
+"StoryFeed.TooltipPremiumPostingLimited" = "פרסום סטוריז זמין כרגע למשתמשים של [PChat Premium]() בלבד.";
 "StoryFeed.TooltipStoryLimitValue_1" = "סטורי %d";
 "StoryFeed.TooltipStoryLimitValue_any" = "%d סטוריז";
 "StoryFeed.TooltipStoryLimit" = "לא ניתן לפרסם יותר מ**%@** ב**24 שעות**.";
@@ -9473,7 +9473,7 @@ Sorry for the inconvenience.";
 
 "ArchiveSettings.KeepArchived" = "השאר תמיד בארכיון";
 "ArchiveSettings.AutomaticallyArchive" = "העבר אוטומטית לארכיון";
-"ArchiveSettings.TooltipPremiumRequired" = "הגדרה זו זמינה למנויי [Telegram Premium]() בלבד.";
+"ArchiveSettings.TooltipPremiumRequired" = "הגדרה זו זמינה למנויי [PChat Premium]() בלבד.";
 
 "NotificationSettings.Stories.ShowAll" = "הצג את כל ההתראות";
 "NotificationSettings.Stories.ShowImportant" = "הצג התראות חשובות";
@@ -9646,7 +9646,7 @@ Sorry for the inconvenience.";
 "Story.Editor.ExpirationValue_1" = "שעה %d";
 "Story.Editor.ExpirationValue_any" = "%d שעות";
 
-"Story.Editor.TooltipPremiumExpiration" = "הירשם ל[Telegram Premium]() כדי לגרום לסטוריז שלך להיעלם אחרי 6, 12 או 48 שעות.";
+"Story.Editor.TooltipPremiumExpiration" = "הירשם ל[PChat Premium]() כדי לגרום לסטוריז שלך להיעלם אחרי 6, 12 או 48 שעות.";
 
 "Story.Editor.InputPlaceholderAddCaption" = "הוסף כותרת...";
 
@@ -9746,11 +9746,11 @@ Sorry for the inconvenience.";
 "Chat.OpenStory" = "הצג סטורי";
 
 "Story.Editor.TooltipPremiumCaptionLimitTitle" = "הגעת לאורך המקסימלי";
-"Story.Editor.TooltipPremiumCaptionLimitText" = "הגדל מגבלה זו פי 10 ל2048 תווים באמצעות הרשמה ל[Telegram Premium]().";
+"Story.Editor.TooltipPremiumCaptionLimitText" = "הגדל מגבלה זו פי 10 ל2048 תווים באמצעות הרשמה ל[PChat Premium]().";
 
-"Story.Editor.TooltipPremiumCaptionEntities" = "הירשם ל[Telegram Premium]() כדי להוסיף קישורים ועיצוב לכותרות הסטוריז שלך.";
+"Story.Editor.TooltipPremiumCaptionEntities" = "הירשם ל[PChat Premium]() כדי להוסיף קישורים ועיצוב לכותרות הסטוריז שלך.";
 
-"Story.Context.TooltipPremiumSaveStories" = "הירשם ל[Telegram Premium]() כדי לשמור סטוריז שאינם מוגנים מהעתקה.";
+"Story.Context.TooltipPremiumSaveStories" = "הירשם ל[PChat Premium]() כדי לשמור סטוריז שאינם מוגנים מהעתקה.";
 
 "Story.Privacy.GroupTooLarge" = "הקבוצה גדולה מדי";
 "Story.Privacy.GroupParticipantsLimit" = "באפשרותך לבחור קבוצות עם עד ל200 חברים.";
@@ -9811,11 +9811,11 @@ Sorry for the inconvenience.";
 "Premium.Stories.Format.Title" = "קישורים ועיצוב";
 "Premium.Stories.Format.Text" = "הוסף קישורים ועיצוב לכותרות הסטוריז שלך.";
 
-"Premium.MaxStoriesWeeklyText" = "באפשרותך לפרסם **%@** סיפורים בשבוע. הירשם ל**Telegram Premium** כדי להגדיל את המגבלה ל**%@**.";
+"Premium.MaxStoriesWeeklyText" = "באפשרותך לפרסם **%@** סיפורים בשבוע. הירשם ל**PChat Premium** כדי להגדיל את המגבלה ל**%@**.";
 "Premium.MaxStoriesWeeklyNoPremiumText" = "הגעת למגבלה של **%@** סטוריז בשבוע.";
 "Premium.MaxStoriesWeeklyFinalText" = "הגעת למגבלה של **%@** סטוריז בשבוע.";
 
-"Premium.MaxStoriesMonthlyText" = "באפשרותך לפרסם **%@** סיפורים בחודש.\nהירשם ל**Telegram Premium** כדי להגדיל את המגבלה ל**%@**.";
+"Premium.MaxStoriesMonthlyText" = "באפשרותך לפרסם **%@** סיפורים בחודש.\nהירשם ל**PChat Premium** כדי להגדיל את המגבלה ל**%@**.";
 "Premium.MaxStoriesMonthlyNoPremiumText" = "הגעת למגבלה של **%@** סטוריז בחודש.";
 "Premium.MaxStoriesMonthlyFinalText" = "הגעת למגבלה של **%@** סטוריז בחודש.";
 
@@ -9831,7 +9831,7 @@ Sorry for the inconvenience.";
 "Story.ContextDeleteContact" = "מחק איש קשר";
 "Story.ToastDeletedContact" = "**%@** הוסר מרשימת אנשי הקשר שלך.";
 "Story.ToastUserBlocked" = "**%@** נחסם.";
-"Story.ToastPremiumSaveToGallery" = "הירשם ל[Telegram Premium]() כדי לשמור סטוריז לא מוגנים של משתמשים אחרים.";
+"Story.ToastPremiumSaveToGallery" = "הירשם ל[PChat Premium]() כדי לשמור סטוריז לא מוגנים של משתמשים אחרים.";
 "Story.PremiumUpgradeStoriesButton" = "שדרג את הסטוריז";
 "Story.ContextStealthMode" = "הסתר את הצפיה שלי";
 "Story.AlertStealthModeActiveTitle" = "הינך במצב התגנבות עכשיו";
@@ -9842,9 +9842,9 @@ Sorry for the inconvenience.";
 "Story.ToastStealthModeActivatedTitle" = "מצב התגנבות פועל";
 "Story.ToastStealthModeActivatedText" = "היוצרים של סטוריז שצפית ב**%1$@** האחרונות או שתצפה ב**%2$@** הבאות לא יראו אותך ברשימת הצופים.";
 
-"Story.ViewList.PremiumUpgradeText" = "רשימת הצפיות נעלמת 24 שעות אחרי שפג תוקף הסטורי.\n\nכדי להציג את רשימת הצופים עבור סטוריז שפג תוקפם וסטוריז שפורסמו, הירשם ל[Telegram Premium]().";
+"Story.ViewList.PremiumUpgradeText" = "רשימת הצפיות נעלמת 24 שעות אחרי שפג תוקף הסטורי.\n\nכדי להציג את רשימת הצופים עבור סטוריז שפג תוקפם וסטוריז שפורסמו, הירשם ל[PChat Premium]().";
 "Story.ViewList.PremiumUpgradeAction" = "למד עוד";
-"Story.ViewList.PremiumUpgradeInlineText" = "כדי לצפות ברשימת הצופים של סטוריז שפורסמו או סטוריז שפג תוקפם, הירשם ל[Telegram Premium]().";
+"Story.ViewList.PremiumUpgradeInlineText" = "כדי לצפות ברשימת הצופים של סטוריז שפורסמו או סטוריז שפג תוקפם, הירשם ל[PChat Premium]().";
 "Story.ViewList.NotFullyRecorded" = "לא הוקלט מידע אודות שאר הצפיות.";
 "Story.ViewList.EmptyTextSearch" = "לא נמצאו צפיות";
 "Story.ViewList.EmptyTextContacts" = "אף אחד מאנשי הקשר שלך לא צפה בסטורי.";
@@ -9860,7 +9860,7 @@ Sorry for the inconvenience.";
 "Story.Footer.ViewCount_any" = "|%d| צפיות";
 "Story.StealthMode.Title" = "Stealth Mode";
 "Story.StealthMode.ControlText" = "הפעל את מצב ההתגנבות כדי לצפות בסטוריז מבלי להופיע ברשימת הצופים.";
-"Story.StealthMode.UpgradeText" = "הירשם לTelegram Premium כדי לצפות בסטוריז מבלי להופיע ברשימת הצופים.";
+"Story.StealthMode.UpgradeText" = "הירשם לPChat Premium כדי לצפות בסטוריז מבלי להופיע ברשימת הצופים.";
 "Story.StealthMode.RecentTitle" = "הסתר צפיות אחרונות";
 "Story.StealthMode.RecentText" = "הסתר את הצפיות שלי מ**%@** האחרונות.";
 "Story.StealthMode.NextTitle" = "הסתר את הצפיות הבאות";
@@ -9888,7 +9888,7 @@ Sorry for the inconvenience.";
 "Story.Privacy.KeepOnChannelPage" = "פרסם לעמודהערוץ";
 "Story.Privacy.KeepOnChannelPageInfo" = "השאר את הסטורי בעמוד הערוץ גם אחרי שיפוג התוקף בעוד %@.";
 
-"Story.Editor.TooltipPremiumReaction" = "הירשם ל[Telegram Premium]() כדי להשתמש ברגשון זה.";
+"Story.Editor.TooltipPremiumReaction" = "הירשם ל[PChat Premium]() כדי להשתמש ברגשון זה.";
 
 "Story.Privacy.TooltipStoryArchivedChannel" = "משתמשים יראו את הסטורי בעמוד הערוץ גם אחרי שיפוג התוקף.";
 
@@ -9923,7 +9923,7 @@ Sorry for the inconvenience.";
 "Story.Editor.TooltipPremiumReactionLimitValue_any" = "**%@** מדבקות רגשון";
 
 "Story.Editor.TooltipPremiumReactionLimitTitle" = "הגדל מגבלה";
-"Story.Editor.TooltipPremiumReactionLimitText" = "הירשם ל[Telegram Premium]() כדי להוסיף עד ל%@ לסטורי.";
+"Story.Editor.TooltipPremiumReactionLimitText" = "הירשם ל[PChat Premium]() כדי להוסיף עד ל%@ לסטורי.";
 
 "Story.Editor.TooltipReachedReactionLimitTitle" = "הגעת למגבלה";
 "Story.Editor.TooltipReachedReactionLimitText" = "לא ניתן להוסיף יותר מ%@ לסטורי.";
@@ -9935,7 +9935,7 @@ Sorry for the inconvenience.";
 "WebApp.DisclaimerText" = "הינך עומד להשתמש באפליקציית מיני שמופעלת על ידי גורם בלתי תלוי שאינו שותף לטלגרם. עליך להסכים לתנאי השימוש באפלקציות מיני כדי להמשיך.";
 "WebApp.DisclaimerAgree" = "אני מסכים ל[תנאי השימוש]()";
 "WebApp.DisclaimerContinue" = "המשך";
-"WebApp.Disclaimer_URL" = "https://telegram.org/tos/mini-apps";
+"WebApp.Disclaimer_URL" = "https://p.chat/tos/mini-apps";
 
 "WebApp.ShortcutsAdded" = "הקישור ל**%@** התווסף לתפריט הצרופות.";
 "WebApp.ShortcutsSettingsAdded" = "קיצורי הדרך של **%@** התווספו לתפריט הצרופות ולתפריט הצד.";
@@ -10087,9 +10087,9 @@ Sorry for the inconvenience.";
 "ChannelBoost.Error.BoostTooOftenTitle" = "הענקת בוסט תכופה מדי!";
 "ChannelBoost.Error.BoostTooOftenText" = "ניתן לשנות את הערוץ אליו אתה מעניק בוסט רק פעם ביום. תוכל להעניק בוסט בעוד **%@**.";
 "ChannelBoost.Error.PremiumNeededTitle" = "נדרש Premium";
-"ChannelBoost.Error.PremiumNeededText" = "רק מנויי **Telegram Premium** יכולים להעניק בוסט לערוצים. להירשם ל**Telegram Premium**?";
+"ChannelBoost.Error.PremiumNeededText" = "רק מנויי **PChat Premium** יכולים להעניק בוסט לערוצים. להירשם ל**PChat Premium**?";
 "ChannelBoost.Error.GiftedPremiumNotAllowedTitle" = "לא ניתן להעניק בוסט באמצעות חשבון Premium ששודרג כמתנה";
-"ChannelBoost.Error.GiftedPremiumNotAllowedText" = "כיוון שמנוי ה**Telegram Premium** שלך ניתן לך כמתנה, אין ביכולתך להשתמש בו כדי להעניק בוסט לערוצים.";
+"ChannelBoost.Error.GiftedPremiumNotAllowedText" = "כיוון שמנוי ה**PChat Premium** שלך ניתן לך כמתנה, אין ביכולתך להשתמש בו כדי להעניק בוסט לערוצים.";
 
 "Chat.ErrorFolderLinkExpired" = "פג תוקף קישור התיקיה.";
 
@@ -10123,7 +10123,7 @@ Sorry for the inconvenience.";
 
 "Notification.GiftLink" = "קיבלת מתנה.";
 
-"MESSAGE_GIFTCODE" = "%1$@ שלח/ה לך קוד מתנה עבור %2$@ חודשים של Telegram Premium.";
+"MESSAGE_GIFTCODE" = "%1$@ שלח/ה לך קוד מתנה עבור %2$@ חודשים של PChat Premium.";
 "MESSAGE_GIVEAWAY" = "%1$@ שלח/ה לך קוד מתנה עבור %2$@X %3$@ חודשי מינוי Premium";
 "CHANNEL_MESSAGE_GIVEAWAY" = "%1$@ פרסם הגרלה של %2$@x %3$@ חודשי מינוי Premium";
 "CHAT_MESSAGE_GIVEAWAY" = "%1$@ שלח/ה הגרלה של %2$@x %3$@ חודשי מינוי Premium בקבוצה %4$@";
@@ -10131,7 +10131,7 @@ Sorry for the inconvenience.";
 "REACT_GIVEAWAY" = "%1$@ הגיב/ה עם %2$@ להגרלה שלך";
 "CHAT_REACT_GIVEAWAY" = "%1$@ הגיב/ה עם %3$@ בקבוצה %2$@ להגרלה שלך";
 
-"Notification.GiveawayStarted" = "%1$@ התחיל הגרלה של מינויי Telegram Premium לעוקבים שלו.";
+"Notification.GiveawayStarted" = "%1$@ התחיל הגרלה של מינויי PChat Premium לעוקבים שלו.";
 
 "Appearance.NameColor" = "צבע השם שלך";
 
@@ -10152,7 +10152,7 @@ Sorry for the inconvenience.";
 "NameColor.ApplyColor" = "החל צבע";
 "NameColor.ApplyColorAndBackgroundEmoji" = "החל צבע וסמל";
 
-"NameColor.TooltipPremium.Account" = "הירשם ל[Telegram Premium]() כדי לבחור צבע מותאם אישית עבור השם שלך.";
+"NameColor.TooltipPremium.Account" = "הירשם ל[PChat Premium]() כדי לבחור צבע מותאם אישית עבור השם שלך.";
 
 "NameColor.BackgroundEmoji.Title" = "הוסף סמלים לתגובות";
 "NameColor.BackgroundEmoji.Remove" = "הסר סמל";
@@ -10170,7 +10170,7 @@ Sorry for the inconvenience.";
 "Chat.ErrorQuoteOutdatedActionEdit" = "ערוך";
 
 "Premium.BoostByGiftDescription" = "";
-"Premium.BoostByGiftDescription2" = "הגבר את הבוסט לערוץ שלך באמצעות הענקת Telegram Premium למנויים שלך. [קבל בוסט >]()";
+"Premium.BoostByGiftDescription2" = "הגבר את הבוסט לערוץ שלך באמצעות הענקת PChat Premium למנויים שלך. [קבל בוסט >]()";
 
 "ChatContextMenu.QuoteSelectionTip" = "החזק מילה, וגרור את הסמן כדי לבחור עוד| טקסט לציטוט.";
 
@@ -10221,11 +10221,11 @@ Sorry for the inconvenience.";
 "Stats.Boosts.ShowMoreBoosts_any" = "הצג %@ בוסט נוספים";
 
 "ReassignBoost.Title" = "הענק מחדש בוסט";
-"ReassignBoost.Description" = "כדי להעניק בוסט ל**%1$@**, יש להעביר בוסט קודם או להעניק לחבר **Telegram Premium** כדי לקבל עוד **%2$@** בוסט.";
+"ReassignBoost.Description" = "כדי להעניק בוסט ל**%1$@**, יש להעביר בוסט קודם או להעניק לחבר **PChat Premium** כדי לקבל עוד **%2$@** בוסט.";
 "ReassignBoost.ReassignBoosts" = "העבר בוסט";
 "ReassignBoost.AvailableIn" = "זמין בעוד %@";
 "ReassignBoost.ExpiresOn" = "הבוסט יפוג ב%@";
-"ReassignBoost.WaitForCooldown" = "יש להמתין עד שהבוסט יהיה זמין או לקבל עוד **%1$@** בוסט באמצעות הענקת מינוי **Telegram Premium**.";
+"ReassignBoost.WaitForCooldown" = "יש להמתין עד שהבוסט יהיה זמין או לקבל עוד **%1$@** בוסט באמצעות הענקת מינוי **PChat Premium**.";
 
 "ReassignBoost.Success" = "%1$@ מ%2$@.";
 "ReassignBoost.Boosts_1" = "בוסט %@ הועבר מחדש";
@@ -10238,14 +10238,14 @@ Sorry for the inconvenience.";
 "ReassignBoost.OtherGroupsAndChannels_any" = "%@ קבוצות וערוצים";
 
 "ChannelBoost.MoreBoosts.Title" = "דרושים בוסט נוספים";
-"ChannelBoost.MoreBoosts.Text" = "כדי להעניק בוסט ל**%1$@**, יש להעניק לחבר **Telegram Premium** כדי לקבל עוד **%2$@** בוסט.";
+"ChannelBoost.MoreBoosts.Text" = "כדי להעניק בוסט ל**%1$@**, יש להעניק לחבר **PChat Premium** כדי לקבל עוד **%2$@** בוסט.";
 "ChannelBoost.MoreBoosts.Gift" = "הענק Premium";
 
 "BoostGift.Title" = "בוסט באמצעות מתנות";
 "BoostGift.Description" = "קבל עוד בוסט לערוץ באמצעות\nהענקת Premium למנויים שלך.";
 "BoostGift.PrepaidGiveawayTitle" = "הגרלה ששולמה מראש";
-"BoostGift.PrepaidGiveawayCount_1" = "\n%@ Telegram Premium";
-"BoostGift.PrepaidGiveawayCount_any" = "%@ Telegram Premium";
+"BoostGift.PrepaidGiveawayCount_1" = "\n%@ PChat Premium";
+"BoostGift.PrepaidGiveawayCount_any" = "%@ PChat Premium";
 "BoostGift.PrepaidGiveawayMonths" = "%@ חודשי מינוי";
 "BoostGift.CreateGiveaway" = "צור הגרלה";
 "BoostGift.CreateGiveawayInfo" = "הזוכים נבחרים באקראי";
@@ -10271,11 +10271,11 @@ Sorry for the inconvenience.";
 "BoostGift.LimitSubscribersInfo" = "בחר אם ברצונך להגביל את ההגרלה רק למשתמשים שהצטרפו לערוץ אחרי תחילת ההגרלה או למשתמשים ממדינות מסוימות.";
 "BoostGift.DateTitle" = "תאריך סיום ההגרלה";
 "BoostGift.DateEnds" = "סיום";
-"BoostGift.DateInfo" = "בחר מתי %1$@ מהערוץ שלך ייבחרו אקראית לקבל Telegram Premium.";
+"BoostGift.DateInfo" = "בחר מתי %1$@ מהערוץ שלך ייבחרו אקראית לקבל PChat Premium.";
 "BoostGift.DateInfoSubscribers_1" = "מנוי %@";
 "BoostGift.DateInfoSubscribers_any" = "%@ מנויים";
 "BoostGift.DurationTitle" = "משך מינוי הPremium";
-"BoostGift.PremiumInfo" = "ניתן לעבור על רשימת התכונות ופרטים נוספים על Telegram Premium [כאן]().";
+"BoostGift.PremiumInfo" = "ניתן לעבור על רשימת התכונות ופרטים נוספים על PChat Premium [כאן]().";
 "BoostGift.GiftPremium" = "הענק Premium";
 "BoostGift.StartGiveaway" = "התחל הגרלה";
 "BoostGift.ReduceQuantity.Title" = "הקטן כמות";
@@ -10308,8 +10308,8 @@ Sorry for the inconvenience.";
 "BoostGift.Channels.Save" = "שמור ערוץ";
 
 "Stats.Boosts.PrepaidGiveawaysTitle" = "הגרלות ששולמו מראש";
-"Stats.Boosts.PrepaidGiveawayCount_1" = "%@ Telegram Premium";
-"Stats.Boosts.PrepaidGiveawayCount_any" = "%@ Telegram Premium";
+"Stats.Boosts.PrepaidGiveawayCount_1" = "%@ PChat Premium";
+"Stats.Boosts.PrepaidGiveawayCount_any" = "%@ PChat Premium";
 "Stats.Boosts.PrepaidGiveawayMonths" = "%@ חודשי מינוי";
 "Stats.Boosts.PrepaidGiveawaysInfo" = "בחר הגרלה שכבר שילמת עליה כדי להגדיר אותה.";
 "Stats.Boosts.ShortMonth" = "%@ ד'";
@@ -10326,9 +10326,9 @@ Sorry for the inconvenience.";
 "Stats.Boosts.TooltipToBeDistributed" = "הנמען יבחר כשההגרלה תסתיים.";
 
 "Notification.PremiumPrize.Title" = "ברכות!";
-"Notification.PremiumPrize.UnclaimedText" = "יש לך פרס שלא פתחת מהגרלה של **%1$@**.\n\nהפרס הוא מינוי של **Telegram Premium** למשך %2$@.";
-"Notification.PremiumPrize.GiveawayText" = "זכית בפרס בהגרלה שאורגנה על ידי **%1$@**.\n\nהפרס שלך הוא מנוי **Telegram Premium** למשך %2$@.";
-"Notification.PremiumPrize.GiftText" = "קיבלת מתנה מ**%1$@**.\n\nהמתנה שלך היא מנוי **Telegram Premium** למשך %2$@.";
+"Notification.PremiumPrize.UnclaimedText" = "יש לך פרס שלא פתחת מהגרלה של **%1$@**.\n\nהפרס הוא מינוי של **PChat Premium** למשך %2$@.";
+"Notification.PremiumPrize.GiveawayText" = "זכית בפרס בהגרלה שאורגנה על ידי **%1$@**.\n\nהפרס שלך הוא מנוי **PChat Premium** למשך %2$@.";
+"Notification.PremiumPrize.GiftText" = "קיבלת מתנה מ**%1$@**.\n\nהמתנה שלך היא מנוי **PChat Premium** למשך %2$@.";
 "Notification.PremiumPrize.Months_1" = "חודש **%@**";
 "Notification.PremiumPrize.Months_any" = "**%@** חודשים";
 "Notification.PremiumPrize.View" = "פתח קישור מתנה";
@@ -10369,8 +10369,8 @@ Sorry for the inconvenience.";
 "Chat.Giveaway.Info.ParticipatingMany" = "הינך משתתף בהגרלה מפני שהצטרפת לערוץ **%1$@** (ול**%2$@** ערוצים אחרים ברשימה).";
 "Chat.Giveaway.Info.OtherChannels_1" = "ערוץ **%@** אחר ברשימה";
 "Chat.Giveaway.Info.OtherChannels_any" = "**%@** ערוצים אחרים ברשימה";
-"Chat.Giveaway.Info.Subscriptions_1" = "מינוי **Telegram Premium %@**";
-"Chat.Giveaway.Info.Subscriptions_any" = "**%@** מינויי **Telegram Premium**";
+"Chat.Giveaway.Info.Subscriptions_1" = "מינוי **PChat Premium %@**";
+"Chat.Giveaway.Info.Subscriptions_any" = "**%@** מינויי **PChat Premium**";
 "Chat.Giveaway.Info.RandomUsers_1" = "משתמש אקראי **%@**";
 "Chat.Giveaway.Info.RandomUsers_any" = "**%@** משתמשים אקראיים";
 "Chat.Giveaway.Info.RandomSubscribers_1" = "משתמש אקראי **%@**";
@@ -10396,10 +10396,10 @@ Sorry for the inconvenience.";
 
 "Chat.Giveaway.Message.PrizeTitle" = "פרסי ההגרלה";
 "Chat.Giveaway.Message.PrizeText" = "%1$@ למשך %2$@.";
-"Chat.Giveaway.Message.Subscriptions_1" = "מינוי **Telegram Premium** %@";
-"Chat.Giveaway.Message.Subscriptions_any" = "%@ מינויי **Telegram Premium**";
-"Chat.Giveaway.Message.WithSubscriptions_1" = "מינוי Telegram Premium **%@**";
-"Chat.Giveaway.Message.WithSubscriptions_any" = "**%@** מינויי Telegram Premium";
+"Chat.Giveaway.Message.Subscriptions_1" = "מינוי **PChat Premium** %@";
+"Chat.Giveaway.Message.Subscriptions_any" = "%@ מינויי **PChat Premium**";
+"Chat.Giveaway.Message.WithSubscriptions_1" = "מינוי PChat Premium **%@**";
+"Chat.Giveaway.Message.WithSubscriptions_any" = "**%@** מינויי PChat Premium";
 "Chat.Giveaway.Message.Months_1" = "חודש **%@**";
 "Chat.Giveaway.Message.Months_any" = "**%@** חודשים";
 "Chat.Giveaway.Message.ParticipantsTitle" = "משתתפים";
@@ -10418,11 +10418,11 @@ Sorry for the inconvenience.";
 
 "GiftLink.Title" = "קישור למתנה";
 "GiftLink.UsedTitle" = "קישור מתנה משומש";
-"GiftLink.Description" = "קישור זה מאפשר לך להפעיל מינוי של **Telegram Premium**.";
-"GiftLink.UsedDescription" = "נעשה שימוש בקישור זה כדי להפעיל מינוי של **Telegram Premium**.";
-"GiftLink.PersonalDescription" = "קישור זה מאפשר ל**%@** להפעיל מינוי **Telegram Premium**.";
-"GiftLink.PersonalUsedDescription" = "קישור זה איפשר ל**%@** להפעיל מינוי **Telegram Premium**.";
-"GiftLink.UnclaimedDescription" = "קישור זה יאפשר לכל אחד להפעיל מינוי **Telegram Premium**.";
+"GiftLink.Description" = "קישור זה מאפשר לך להפעיל מינוי של **PChat Premium**.";
+"GiftLink.UsedDescription" = "נעשה שימוש בקישור זה כדי להפעיל מינוי של **PChat Premium**.";
+"GiftLink.PersonalDescription" = "קישור זה מאפשר ל**%@** להפעיל מינוי **PChat Premium**.";
+"GiftLink.PersonalUsedDescription" = "קישור זה איפשר ל**%@** להפעיל מינוי **PChat Premium**.";
+"GiftLink.UnclaimedDescription" = "קישור זה יאפשר לכל אחד להפעיל מינוי **PChat Premium**.";
 "GiftLink.Footer" = "באפשרותך גם [לשלוח קישור זה]() לחבר כמתנה.";
 "GiftLink.UsedFooter" = "נעשה שימוש בקישור זה ב%@.";
 "GiftLink.NotUsedFooter" = "לא נעשה עדיין שימוש בקישור זה.";
@@ -10436,8 +10436,8 @@ Sorry for the inconvenience.";
 "GiftLink.Reason.Unclaimed" = "הגרלה שלא הושלמה";
 "GiftLink.Date" = "תאריך";
 "GiftLink.NoRecipient" = "ללא נמענים";
-"GiftLink.TelegramPremium_1" = "Telegram Premium למשך חודש %@";
-"GiftLink.TelegramPremium_any" = "Telegram Premium למשך %@ חודשים";
+"GiftLink.PChatPremium_1" = "PChat Premium למשך חודש %@";
+"GiftLink.PChatPremium_any" = "PChat Premium למשך %@ חודשים";
 "GiftLink.LinkHidden" = "רק הנמען יכול לראות את הקישור הזה.";
 
 "ChannelBoost.EnableColors" = "הפעל צבעים";
@@ -10496,7 +10496,7 @@ Sorry for the inconvenience.";
 
 "Conversation.FreeTranscriptionCooldownTooltip_1" = "השתמשת בתמלול החינמי שלך החודש.";
 "Conversation.FreeTranscriptionCooldownTooltip_any" = "השתמשת ב**%@** התמלולים החינמיים שלך החודש.";
-"Conversation.FreeTranscriptionWaitOrSubscribe" = "נא להמתין עד **%@** או להירשם עכשיו ל[Telegram Premium]().";
+"Conversation.FreeTranscriptionWaitOrSubscribe" = "נא להמתין עד **%@** או להירשם עכשיו ל[PChat Premium]().";
 
 "Notification.GiveawayResults_1" = "זוכה **%@** בהגרלה נבחר אקראית על ידי טלגרם וקיבל קוד למתנה בהודעה פרטית.";
 "Notification.GiveawayResults_any" = "**%@** זוכים בהגרלה נבחרו אקראית על ידי טלגרם וקיבלו קודים למתנות בהודעות פרטיות.";
@@ -10524,9 +10524,9 @@ Sorry for the inconvenience.";
 "Wallpaper.ApplyForMe" = "החל עבורי";
 "Wallpaper.ApplyForBoth" = "החל עבורי ועבור %@";
 
-"Premium.VoiceToText.Proceed" = "אודות Telegram Premium";
-"Premium.Wallpaper.Proceed" = "אודות Telegram Premium";
-"Premium.Colors.Proceed" = "אודות Telegram Premium";
+"Premium.VoiceToText.Proceed" = "אודות PChat Premium";
+"Premium.Wallpaper.Proceed" = "אודות PChat Premium";
+"Premium.Colors.Proceed" = "אודות PChat Premium";
 
 "Notification.YouChangedWallpaperBoth" = "הגדרת טפט חדש עבורך ועבור %@";
 
@@ -10571,7 +10571,7 @@ Sorry for the inconvenience.";
 "Stats.ReactionsPerStory" = "רגשונים לסטורי";
 
 "Channel.SimilarChannels.ShowMore" = "הצג ערוצים נוספים";
-"Channel.SimilarChannels.ShowMoreInfo" = "הירשם ל[Telegram Premium]() כדי לקבל עד ל**100** ערוצים דומים.";
+"Channel.SimilarChannels.ShowMoreInfo" = "הירשם ל[PChat Premium]() כדי לקבל עד ל**100** ערוצים דומים.";
 
 "Premium.Colors" = "שם וצבע הפרופיל";
 "Premium.ColorsInfo" = "בחר צבע וסמל עבור הפרופיל שלך ותגובות להודעות שלך.";
@@ -10582,7 +10582,7 @@ Sorry for the inconvenience.";
 "MediaEditor.VideoRemovalConfirmation" = "למחוק את הודעת הוידאו?";
 "MediaEditor.HoldToRecordVideo" = "החזק כדי להקליט סרטון";
 
-"Chat.ChannelRecommendation.PremiumTooltip" = "הירשם ל[Telegram Premium]() כדי לקבל **100** ערוצים דומים.";
+"Chat.ChannelRecommendation.PremiumTooltip" = "הירשם ל[PChat Premium]() כדי לקבל **100** ערוצים דומים.";
 
 "Story.ForwardAuthorHiddenTooltip" = "החשבון הוסתר על ידי המשתמש";
 
@@ -10627,7 +10627,7 @@ Sorry for the inconvenience.";
 "Chat.InputPlaceholderReplyInTopic" = "הגב ב%1$@";
 "Chat.InputPlaceholderMessageInTopic" = "שלח הודעה ב%1$@";
 
-"Chat.Reactions.MultiplePremiumTooltip" = "ניתן לשלוח מספר רגשונים עם [Telegram Premium]().";
+"Chat.Reactions.MultiplePremiumTooltip" = "ניתן לשלוח מספר רגשונים עם [PChat Premium]().";
 
 "Notification.Wallpaper.Remove" = "הסר";
 "Chat.RemoveWallpaper.Title" = "הסר טפט";
@@ -10647,11 +10647,11 @@ Sorry for the inconvenience.";
 "BoostGift.AdditionalPrizesInfoOff" = "יש להפעיל אם ברצונך להעניק לזוכים פרסים משלך נוסף על מינויי הPremium.";
 "BoostGift.AdditionalPrizesInfoOn" = "כל הפרסים: **%1$@** %2$@ %3$@.";
 
-"BoostGift.AdditionalPrizesInfoSubscriptions_1" = "מינוי Telegram Premium %@";
-"BoostGift.AdditionalPrizesInfoSubscriptions_any" = "%@ מינויי Telegram Premium";
+"BoostGift.AdditionalPrizesInfoSubscriptions_1" = "מינוי PChat Premium %@";
+"BoostGift.AdditionalPrizesInfoSubscriptions_any" = "%@ מינויי PChat Premium";
 
-"BoostGift.AdditionalPrizesInfoWithSubscriptions_1" = "עם מינוי Telegram Premium %@";
-"BoostGift.AdditionalPrizesInfoWithSubscriptions_any" = "עם %@ מינויי Telegram Premium";
+"BoostGift.AdditionalPrizesInfoWithSubscriptions_1" = "עם מינוי PChat Premium %@";
+"BoostGift.AdditionalPrizesInfoWithSubscriptions_any" = "עם %@ מינויי PChat Premium";
 
 "BoostGift.AdditionalPrizesInfoForMonths_1" = "למשך חודש **%@**";
 "BoostGift.AdditionalPrizesInfoForMonths_any" = "למשך**%@** חודשים";
@@ -10679,7 +10679,7 @@ Sorry for the inconvenience.";
 
 "Story.ViewList.ContextSortChannelInfo" = "בחר את סדר רשימת הרגשונים.";
 
-"Premium.Gift.MultipleDescription" = "הענק ל%1$@%2$@ גישה לתכונות ייחודיות עם **Telegram Premium**.";
+"Premium.Gift.MultipleDescription" = "הענק ל%1$@%2$@ גישה לתכונות ייחודיות עם **PChat Premium**.";
 
 "Premium.Gift.NamesAndMore_1" = "ועוד %@ נוסף";
 "Premium.Gift.NamesAndMore_any" = " ועוד %@ נוספים";
@@ -10708,7 +10708,7 @@ Sorry for the inconvenience.";
 
 "Story.ViewMessage" = "הצג הודעה";
 
-"Premium.Gift.Terms" = "בהענקת Telegram Premium הנך מסכים ל[תנאי השימוש](terms) ול[מדיניות הפרטיות](privacy).";
+"Premium.Gift.Terms" = "בהענקת PChat Premium הנך מסכים ל[תנאי השימוש](terms) ול[מדיניות הפרטיות](privacy).";
 "Premium.Gift.Sent.One.Title" = "המתנה נשלחה!";
 "Premium.Gift.Sent.One.Text" = "%@ קיבל הודעה אודות המתנה שרכשת.\n\nיש לו כעת גישה לתכונות נוספות.";
 "Premium.Gift.Sent.Multiple.Title" = "המתנות נשלחו!";
@@ -10717,11 +10717,11 @@ Sorry for the inconvenience.";
 "Premium.Gift.Sent.Close" = "סגור";
 
 "Premium.Gift.ApplyLink" = "החל בחינם";
-"Premium.Gift.ApplyLink.AlreadyHasPremium.Title" = "כבר יש לך Telegram Premium";
+"Premium.Gift.ApplyLink.AlreadyHasPremium.Title" = "כבר יש לך PChat Premium";
 "Premium.Gift.ApplyLink.AlreadyHasPremium.Text" = "באפשרותך להפעיל קוד מתנה זה אחרי %@ או [להעביר את הקישור]() לחבר.";
 
-"Premium.Gift.Link.Text" = "קישור זה יאפשר לך או [לכל משתמש שתבחר]() להפעיל מינוי **Telegram Premium**.";
-"Premium.Gift.UsedLink.Text" = "נעשה שימוש בקישור זה כדי להפעיל מינוי **Telegram Premium**.";
+"Premium.Gift.Link.Text" = "קישור זה יאפשר לך או [לכל משתמש שתבחר]() להפעיל מינוי **PChat Premium**.";
+"Premium.Gift.UsedLink.Text" = "נעשה שימוש בקישור זה כדי להפעיל מינוי **PChat Premium**.";
 
 "Premium.WhatsIncluded" = "מה כלול?";
 
@@ -10796,7 +10796,7 @@ Sorry for the inconvenience.";
 "ChatList.PremiumXmasGiftTitle" = "🎁 מתנות מסנופ דוג 👑";
 "ChatList.PremiumXmasGiftText" = "שלח פריטי אספנות במהדורה מוגבלת לחברים!";
 
-"ReassignBoost.DescriptionWithLink" = "כדי להעניק בוסט ל**%1$@**, העבר בוסט קיים או [הענק Telegram Premium]() לחבר כדי לקבל **%2$@** בוסטים נוספים.";
+"ReassignBoost.DescriptionWithLink" = "כדי להעניק בוסט ל**%1$@**, העבר בוסט קיים או [הענק PChat Premium]() לחבר כדי לקבל **%2$@** בוסטים נוספים.";
 
 "Channel.AdminLog.ChannelChangedNameColorAndIcon" = "%1$@ שינה/תה את צבע השם וסמל הקישור ל%2$@ %3$@";
 "Channel.AdminLog.ChannelChangedNameColor" = "%1$@ שינה/תה את צבע שם הערוץ ל%2$@";
@@ -10884,7 +10884,7 @@ Sorry for the inconvenience.";
 "Chat.ConfirmationDeleteFromSavedMessages" = "מחק מההודעות השמורות";
 "Chat.ConfirmationRemoveFromSavedMessages" = "מחק מההודעות השמורות";
 
-"Premium.MaxSavedPinsText" = "מצטערים, לא ניתן לנעוץ יותר מ**%1$@** צ'אטים ללמעלה. בטל נעיצה של כמה צ'אטים נעוצים, או הירשם ל**Telegram Premium**כדי להכפיל את הכמות ל**%2$@** צ'אטים.";
+"Premium.MaxSavedPinsText" = "מצטערים, לא ניתן לנעוץ יותר מ**%1$@** צ'אטים ללמעלה. בטל נעיצה של כמה צ'אטים נעוצים, או הירשם ל**PChat Premium**כדי להכפיל את הכמות ל**%2$@** צ'אטים.";
 "Premium.MaxSavedPinsNoPremiumText" = "מצטערים, לא ניתן לנעוץ יותר מ**%@** צ'אטים ללמעלה. בטל נעיצה של כמה צ'אטים נעוצים.";
 "Premium.MaxSavedPinsFinalText" = "מצטערים, לא ניתן לנעוץ יותר מ**%@** צ'אטים ללמעלה. בטל נעיצה של כמה צ'אטים נעוצים.";
 
@@ -10930,9 +10930,9 @@ Sorry for the inconvenience.";
 "Privacy.Messages.ValueEveryone" = "כולם";
 "Privacy.Messages.ValueContactsAndPremium" = "אנשי הקשר שלי ומשתמשי Premium";
 "Privacy.Messages.SectionFooter" = "באפשרותך להגביל שליחת הודעות ממשתמשים שאינם ברשימת אנשי הקשר שלך ושלא שלחת להם עדיין הודעה.";
-"Privacy.Messages.PremiumInfoFooter" = "[מה זה Telegram Premium?]()";
+"Privacy.Messages.PremiumInfoFooter" = "[מה זה PChat Premium?]()";
 "Privacy.Messages.PremiumToast.Title" = "נדרש Premium";
-"Privacy.Messages.PremiumToast.Text" = "הירשם ל**Telegram Premium** כדי לבחור אפשרות זו.";
+"Privacy.Messages.PremiumToast.Text" = "הירשם ל**PChat Premium** כדי לבחור אפשרות זו.";
 "Privacy.Messages.PremiumToast.Action" = "הוסף";
 
 "Settings.Privacy.Messages" = "הודעות";
@@ -10945,8 +10945,8 @@ Sorry for the inconvenience.";
 "Settings.Privacy.LastSeenRevealedToast" = "זמן הנראה לאחרונה שלך גלוי עכשיו.";
 "Settings.Privacy.MessageReadTimeRevealedToast" = "זמני הקריאה שלך גלויים עכשיו.";
 
-"Settings.Privacy.ReadTimePremium" = "הירשם לTelegram Premium";
-"Settings.Privacy.ReadTimePremiumFooter" = "אם תירשם לTelegram Premium, תוכל לראות מתי משתמשים אחרים נראו לאחרונה ואת זמני הקריאה שלהם אפילו אם תסתיר את שלך מהם (אלא אם הם הגבילו את האפשרות במיוחד).";
+"Settings.Privacy.ReadTimePremium" = "הירשם לPChat Premium";
+"Settings.Privacy.ReadTimePremiumFooter" = "אם תירשם לPChat Premium, תוכל לראות מתי משתמשים אחרים נראו לאחרונה ואת זמני הקריאה שלהם אפילו אם תסתיר את שלך מהם (אלא אם הם הגבילו את האפשרות במיוחד).";
 
 "Chat.ToastMessagingRestrictedToPremium.Text" = "**%@** מקבל/ת הודעות רק מאנשי קשר וממשתמשי **Premium**.";
 "Chat.ToastMessagingRestrictedToPremium.Action" = "הצג";
@@ -10973,7 +10973,7 @@ Sorry for the inconvenience.";
 "Chat.SearchTagsPlaceholder" = "חפש הודעות או תגיות";
 
 "PrivacyInfo.UpgradeToPremium.Title" = "שדרג לPremium";
-"PrivacyInfo.UpgradeToPremium.ButtonTitle" = "הירשם לTelegram Premium";
+"PrivacyInfo.UpgradeToPremium.ButtonTitle" = "הירשם לPChat Premium";
 
 "PrivacyInfo.ShowLastSeen.Title" = "הצג את הנראה לאחרונה שלך";
 "PrivacyInfo.ShowLastSeen.Text" = "כדי להציג את הנראה לאחרונה של **%@**, התחל להציג את זמן הנראה לאחרונה שלך...";
@@ -10994,10 +10994,10 @@ Sorry for the inconvenience.";
 "Chat.PrivateMessageSeenTimestamp.TodayAt" = "נקרא היום ב%@";
 "Chat.PrivateMessageSeenTimestamp.YesterdayAt" = "נקרא אתמול ב%@";
 
-"Settings.Privacy.ReadTimePremiumActive" = "הירשם לTelegram Premium";
-"Settings.Privacy.ReadTimePremiumActiveFooter" = "מכיוון שהנך מנוי לTelegram Premium, תוכל לראות מתי משתמשים אחרים נראו לאחרונה ואת זמני הקריאה שלהם – אפילו אם שלך מוסתרים.";
+"Settings.Privacy.ReadTimePremiumActive" = "הירשם לPChat Premium";
+"Settings.Privacy.ReadTimePremiumActiveFooter" = "מכיוון שהנך מנוי לPChat Premium, תוכל לראות מתי משתמשים אחרים נראו לאחרונה ואת זמני הקריאה שלהם – אפילו אם שלך מוסתרים.";
 
-"Privacy.VoiceMessages.NonPremiumHelp" = "הירשם לTelegram Premium כדי להגביל מי יכול לשלוח לך הודעה קולית או וידאו.\n\n[מה זה Telegram Premium?]()";
+"Privacy.VoiceMessages.NonPremiumHelp" = "הירשם לPChat Premium כדי להגביל מי יכול לשלוח לך הודעה קולית או וידאו.\n\n[מה זה PChat Premium?]()";
 
 "ChatList.DeleteSavedPeerMyNotesConfirmation" = "למחוק את כל ההודעות מ%@?";
 "ChatList.DeleteSavedPeerMyNotesConfirmationTitle" = "ההערות שלי";
@@ -11044,7 +11044,7 @@ Sorry for the inconvenience.";
 "BoostGift.Group.OnlyNewMembers" = "רק חברים חדשים";
 
 "BoostGift.Group.LimitMembersInfo" = "בחר האם להגביל את ההגרלה רק למשתמשים שהצטרפו לקבוצה אחרי שההגרלה החלה.";
-"BoostGift.Group.DateInfo" = "בחר מתי %1$@ בקבוצה ייבחרו אקראית לקבל Telegram Premium.";
+"BoostGift.Group.DateInfo" = "בחר מתי %1$@ בקבוצה ייבחרו אקראית לקבל PChat Premium.";
 "BoostGift.Group.DateInfoMembers_1" = "חבר %@";
 "BoostGift.Group.DateInfoMembers_any" = "%@ חברים";
 
@@ -11066,7 +11066,7 @@ Sorry for the inconvenience.";
 "ChannelBoost.Table.Group.Wallpaper_any" = "%@ רקעי קבוצה";
 "ChannelBoost.Table.Group.CustomWallpaper" = "רקע קבוצה מותאם אישית";
 
-"Premium.Group.BoostByGiftDescription" = "הגבר את הבוסט לקבוצה באמצעות הענקת **Telegram Premium** לחברים בה. [קבל בוסט>]()";
+"Premium.Group.BoostByGiftDescription" = "הגבר את הבוסט לקבוצה באמצעות הענקת **PChat Premium** לחברים בה. [קבל בוסט>]()";
 
 "Conversation.BoostGroup" = "בוסט";
 
@@ -11075,7 +11075,7 @@ Sorry for the inconvenience.";
 
 "Premium.MessageTags" = "תגיות להודעות";
 "Premium.MessageTagsInfo" = "נהל את ההודעות השמורות שלך עם תגיות לגישה מהירה יותר.";
-"Premium.MessageTags.Proceed" = "אודות Telegram Premium";
+"Premium.MessageTags.Proceed" = "אודות PChat Premium";
 
 "Chat.SavedMessagesTabInfoText" = "הודעות ששלחת ל**הודעות שמורות**";
 
@@ -11131,7 +11131,7 @@ Sorry for the inconvenience.";
 
 "Conversation.SendMessageErrorNonPremiumForbidden" = "רק משתמשי Premium  יכולים לשלוח ל%@ הודעות";
 
-"Notification.GiveawayStartedGroup" = "%1$@ התחילה הגרלה על מינויי Telegram Premium עבור החברים בקבוצה.";
+"Notification.GiveawayStartedGroup" = "%1$@ התחילה הגרלה על מינויי PChat Premium עבור החברים בקבוצה.";
 
 "Chat.Giveaway.Info.Group.RandomMembers_1" = "משתמש אקראי **%@**";
 "Chat.Giveaway.Info.Group.RandomMembers_any" = "**%@** משתמשים אקראיים";
@@ -11141,11 +11141,11 @@ Sorry for the inconvenience.";
 
 "Premium.LastSeen" = "זמני נראה לאחרונה";
 "Premium.LastSeenInfo" = "הצג מתי משתמשים אחרים נראו לאחרונה ואת זמני הקריאה שלהם אפילו אם תסתיר את שלך מהם.";
-"Premium.LastSeen.Proceed" = "אודות Telegram Premium";
+"Premium.LastSeen.Proceed" = "אודות PChat Premium";
 
 "Premium.MessagePrivacy" = "פרטיות ההודעה";
 "Premium.MessagePrivacyInfo" = "הגבל הודעות מזרים או חייב אותם עבור הודעות נכנסות.";
-"Premium.MessagePrivacy.Proceed" = "אודות Telegram Premium";
+"Premium.MessagePrivacy.Proceed" = "אודות PChat Premium";
 
 "BoostGift.GroupsAndChannelsTitle" = "קבוצות וערוצים שנכללים";
 "BoostGift.GroupsAndChannelsInfo" = "ניתן לבחור עוד קבוצות וערוצים אליהם משתמשים יהיו חייבים להירשם כדי להשתתף בהגרלה.";
@@ -11214,7 +11214,7 @@ Sorry for the inconvenience.";
 "BoostGift.GroupsOrChannels.Save" = "שמור קבוצות וערוצים";
 
 "Group.Emoji.Title" = "ערכת האימוג'ים של הקבוצה";
-"Group.Emoji.Info" = "כל החברים יוכלו להשתמש באימוג'ים אלה בקבוצה, אפילו אם אין להם Telegram Premium.";
+"Group.Emoji.Info" = "כל החברים יוכלו להשתמש באימוג'ים אלה בקבוצה, אפילו אם אין להם PChat Premium.";
 "Group.Emoji.YourEmoji" = "בחר ערכת אימוג'ים";
 "Group.Emoji.Placeholder" = "emojiset";
 
@@ -11266,7 +11266,7 @@ Sorry for the inconvenience.";
 "Message.GiveawayStartedGroup" = "הקבוצה התחילה הגרלה";
 
 "GroupBoost.Error.BoostTooOftenText" = "ניתן לשנות את הקבוצות להם הינך מעניק בוסט פעם ביום. פעם הבאה שתוכל לשנות את הבוסט תהיה בעוד **%@**.";
-"GroupBoost.Error.PremiumNeededText" = "רק מנויי **Telegram Premium** יכולים להעניק בוסט לקבוצות. להירשם ל**Telegram Premium**?";
+"GroupBoost.Error.PremiumNeededText" = "רק מנויי **PChat Premium** יכולים להעניק בוסט לקבוצות. להירשם ל**PChat Premium**?";
 
 "Notification.GroupChangedWallpaper" = "הקבוצה הגדירה טפט חדש";
 "Notification.YouChangedGroupWallpaper" = "הגדרת טפט חדש לקבוצה";
@@ -11351,9 +11351,9 @@ Sorry for the inconvenience.";
 "ChannelBoost.Header.Features" = "תכונות";
 
 "Premium.FolderTags" = "תגיות לתיקיות";
-"Premium.FolderTagsInfo" = "הוסף תגיות צבעוניות לצ'אטים עבור גישה מהירה עם Telegram Premium.";
-"Premium.FolderTagsStandaloneInfo" = "הוסף תגיות צבעוניות לצ'אטים עבור גישה מהירה עם Telegram Premium.";
-"Premium.FolderTags.Proceed" = "אודות Telegram Premium";
+"Premium.FolderTagsInfo" = "הוסף תגיות צבעוניות לצ'אטים עבור גישה מהירה עם PChat Premium.";
+"Premium.FolderTagsStandaloneInfo" = "הוסף תגיות צבעוניות לצ'אטים עבור גישה מהירה עם PChat Premium.";
+"Premium.FolderTags.Proceed" = "אודות PChat Premium";
 
 "Premium.Business" = "טלגרם לעסקים";
 "Premium.BusinessInfo" = "שדרג את החשבון שלך עם תכונות עסקיות כמו מיקום, שעות פתיחה ותגובות מהירות.";
@@ -11383,7 +11383,7 @@ Sorry for the inconvenience.";
 "Premium.Business.Chatbots.Text" = "הוסף צ'אטבוטים של צד שלישי שיעבדו אינטראקציות עם לקוחות.";
 
 "Business.Title" = "טלגרם לעסקים";
-"Business.Description" = "הפוך את החשבון שלך ל**עמוד עסקי** עם תכונות נוספות אלה בהרשמה ל**Telegram Premium**.";
+"Business.Description" = "הפוך את החשבון שלך ל**עמוד עסקי** עם תכונות נוספות אלה בהרשמה ל**PChat Premium**.";
 "Business.SubscribedDescription" = "קיבלת את תכונות טלגרם לעסקים. תכונות אלה **נכללות זמנית** במנוי הPremium שלך.";
 
 "Business.Location" = "מיקום";
@@ -11444,7 +11444,7 @@ Sorry for the inconvenience.";
 "ChatListFilter.TagLabelPremiumExpired" = "פג תוקף הPremium";
 "ChatListFilter.TagSectionTitle" = "צבע תיקיה";
 "ChatListFilter.TagSectionFooter" = "צבע זה ישמש עבור תגית התיקיה ברשימת הצ'אטים";
-"ChatListFilter.TagPremiumRequiredTooltipText" = "הירשם ל**Telegram Premium** כדי לבחור צבע לתיקיה.";
+"ChatListFilter.TagPremiumRequiredTooltipText" = "הירשם ל**PChat Premium** כדי לבחור צבע לתיקיה.";
 "ChatListFilterList.ShowTags" = "הצג את תגיות התיקיות";
 "ChatListFilterList.ShowTagsFooter" = "הצג את שמות התיקיות עבור כל צ'אט ברשימת הצ'אטים הראשית.";
 
@@ -11609,7 +11609,7 @@ Sorry for the inconvenience.";
 
 "ChatbotSetup.TitleItem" = "צ'אטבוטים";
 "ChatbotSetup.Text" = "הוסף לחשבון שלך בוט שיעזור לך לנהל אוטומטית הודעות שתקבל. [למד עוד >]()";
-"ChatbotSetup.TextLink" = "https://telegram.org/blog/telegram-business/he#39";
+"ChatbotSetup.TextLink" = "https://p.chat/blog/telegram-business/he#39";
 
 "ChatbotSetup.BotSearchPlaceholder" = "שם משתמש הבוט";
 "ChatbotSetup.BotSectionFooter" = "הכנס קישור לבוט הטלגרם שברצונך שיעבד אוטומטית את הצ'אטים שלך.";
@@ -11650,7 +11650,7 @@ Sorry for the inconvenience.";
 "ChannelBoost.EnableNoAdsLevelText" = "הערוץ שלך צריך להגיע ל**רמה %1$@** כדי לכבות מודעות.";
 
 "WebApp.TermsOfUse" = "תנאי השימוש";
-"WebApp.TermsOfUse_URL" = "https://telegram.org/tos/mini-apps";
+"WebApp.TermsOfUse_URL" = "https://p.chat/tos/mini-apps";
 
 "Privacy.Birthday" = "יום הולדת";
 "Privacy.Birthday.WhoCanSeeMyBio" = "מי יכול לראות את יום ההולדת שלי";
@@ -11712,7 +11712,7 @@ Sorry for the inconvenience.";
 "Monetization.Balance.AvailableInfo" = "באפשרותך לאסוף את התגמול שלך באמצעות Fragment, פלטפורמת צד שלישי המשמשת מפרסמים לתשלום עבור מודעות. [מדיניות ותנאים >]()";
 "Monetization.Balance.ComingLaterInfo" = "בשבועות הקרובים תוכל לאסוף את התגמול שלך באמצעות Fragment, פלטפורמת צד שלישי המשמשת מפרסמים לתשלום פרסומות. [למד עוד >]()";
 
-"Monetization.BalanceInfo_URL" = "https://telegram.org/tos/content-creator-rewards";
+"Monetization.BalanceInfo_URL" = "https://p.chat/tos/content-creator-rewards";
 "Monetization.BalanceWithdraw" = "איסוף באמצעות Fragment";
 "Monetization.TransactionsTitle" = "היסטוריית עסקאות";
 
@@ -11762,13 +11762,13 @@ Sorry for the inconvenience.";
 
 "Monetization.Intro.Info.Title" = "מה זה #TON?";
 "Monetization.Intro.Info.Text" = "**TON** היא פלטפורמת בלוקצ'יין ומטבע קריפטוגרפי שטלגרם משתמשת בה בגלל המהירות הגבוהה והעמלות הנמוכות שלה על עסקאות. [למד עוד >]()";
-"Monetization.Intro.Info.Text_URL" = "https://telegram.org/blog/monetization-for-channels/he";
+"Monetization.Intro.Info.Text_URL" = "https://p.chat/blog/monetization-for-channels/he";
 
 "Monetization.Intro.Understood" = "הבנתי";
 
 "ReportAd.Title" = "דווח על מודעה";
 "ReportAd.Help" = "למידע נוסף על [מדיניות המודעות וההנחיות]().";
-"ReportAd.Help_URL" = "https://ads.telegram.org/guidelines";
+"ReportAd.Help_URL" = "https://ads.p.chat/guidelines";
 "ReportAd.Reported" = "אנו נבדוק מודעה זו כדי לוודא שהיא תואמת את [מדיניות המודעות וההנחיות שלנו]().";
 "ReportAd.Hidden" = "לא תראה יותר מודעות מטלגרם.";
 
@@ -11782,13 +11782,13 @@ Sorry for the inconvenience.";
 "AdsInfo.Bot.Split.Title" = "עוזרות ליוצר הבוט";
 "AdsInfo.Bot.Split.Text" = "50% מההכנסות ממודעות טלגרם עוברות למפתח הבוט שבו הן מוצגות.";
 "AdsInfo.Ads.Title" = "ניתנות להסרה";
-"AdsInfo.Ads.Text" = "באפשרותך לכבות מודעות על ידי הרשמה ל[Telegram Premium](), וערוצים ברמה %@ יכולים להסיר אותם עבור המנויים שלהם.";
-"AdsInfo.Bot.Ads.Text" = "באפשרותך לכבות מודעות באמצעות הרשמה ל[Telegram Premium]().";
+"AdsInfo.Ads.Text" = "באפשרותך לכבות מודעות על ידי הרשמה ל[PChat Premium](), וערוצים ברמה %@ יכולים להסיר אותם עבור המנויים שלהם.";
+"AdsInfo.Bot.Ads.Text" = "באפשרותך לכבות מודעות באמצעות הרשמה ל[PChat Premium]().";
 
 "AdsInfo.Launch.Title" = "האם אני יכול להשיק מודעה?";
 "AdsInfo.Launch.Text" = "כל אחד יכול ליצור מודעה שתוצג בערוץ הזה - בתקציבים מינימליים. בדוק את פלטפורמת המודעות של טלגרם לפרטים. [למד עוד >]()";
 "AdsInfo.Bot.Launch.Text" = "כל אחד יכול ליצור מודעות להצגה בבוט הזה - בתקציב מינימלי. בדוק את פלטפורמת המודעות של טלגרם לפרטים. [למידע נוסף >]()";
-"AdsInfo.Launch.Text_URL" = "https://ads.telegram.org";
+"AdsInfo.Launch.Text_URL" = "https://ads.p.chat";
 
 "AdsInfo.Understood" = "הבנתי";
 
@@ -11840,7 +11840,7 @@ Sorry for the inconvenience.";
 "SendInviteLink.ChannelTextContactsAndPremiumMultipleUsers_1" = "{user_list}, ועוד משתמש **%d** מקבלים הזמנות לערוצים רק מאנשי קשר ומשתמשי **Premium**.";
 "SendInviteLink.ChannelTextContactsAndPremiumMultipleUsers_any" = "{user_list}, ועוד **%d** משתמשים מקבלים הזמנות לערוצים רק מאנשי קשר ומשתמשי **Premium**.";
 
-"SendInviteLink.SubscribeToPremiumButton" = "הירשם לTelegram Premium";
+"SendInviteLink.SubscribeToPremiumButton" = "הירשם לPChat Premium";
 "SendInviteLink.PremiumOrSendSectionSeparator" = "או";
 
 "SendInviteLink.TextSendInviteLink" = "באפשרותך לשלוח קישור הזמנה במקום.";
@@ -11860,9 +11860,9 @@ Sorry for the inconvenience.";
 "Business.Links.CreateAction" = "צור קישור לצ'אט";
 "Business.Links.LinksSectionHeader" = "קישורים לצ'אט";
 
-"Business.Links.SimpleLinkInfoUsernamePhone" = "באפשרותך גם להשתמש בקישור פשוט לצ'אט איתך - [t.me/%1$@](username) או [t.me/+%2$@](phone).";
-"Business.Links.SimpleLinkInfoUsername" = "באפשרותך גם להשתמש בקישור פשוט לצ'אט איתך - [t.me/%@](username)";
-"Business.Links.SimpleLinkInfoPhone" = "באפשרותך להשתמש בקישור פשוט לצ'אט איתך - [t.me/⁠+⁠%@](phone).";
+"Business.Links.SimpleLinkInfoUsernamePhone" = "באפשרותך גם להשתמש בקישור פשוט לצ'אט איתך - [p.chat/%1$@](username) או [p.chat/+%2$@](phone).";
+"Business.Links.SimpleLinkInfoUsername" = "באפשרותך גם להשתמש בקישור פשוט לצ'אט איתך - [p.chat/%@](username)";
+"Business.Links.SimpleLinkInfoPhone" = "באפשרותך להשתמש בקישור פשוט לצ'אט איתך - [p.chat/⁠+⁠%@](phone).";
 
 "Business.Links.LinkNameTitle" = "שם הקישור";
 "Business.Links.LinkNameText" = "הוסף שם לקישור הזה שרק אתה תראה.";
@@ -11900,10 +11900,10 @@ Sorry for the inconvenience.";
 "Chat.ToastPhoneNumberCopied" = "מספר הטלפון הועתק ללוח העריכה";
 
 "Chat.SpeedLimitAlert.Download.Title" = "מהירות ההורדה הוגבלה";
-"Chat.SpeedLimitAlert.Download.Text" = "הירשם ל[Telegram Premium]() כדי להגביר את מהירות ההורדה פי %@.";
+"Chat.SpeedLimitAlert.Download.Text" = "הירשם ל[PChat Premium]() כדי להגביר את מהירות ההורדה פי %@.";
 
 "Chat.SpeedLimitAlert.Upload.Title" = "מהירות ההעלאה הוגבלה";
-"Chat.SpeedLimitAlert.Upload.Text" = "הירשם ל[Telegram Premium]() כדי להגדיל את מהירות ההעלאה פי %@.";
+"Chat.SpeedLimitAlert.Upload.Text" = "הירשם ל[PChat Premium]() כדי להגדיל את מהירות ההעלאה פי %@.";
 
 "Chat.BusinessBotMessageTooltip" = "רק אתה תוכל לראות\nשההודעה נשלחה על ידי בוט.";
 
@@ -11928,7 +11928,7 @@ Sorry for the inconvenience.";
 "Business.AdsTitle" = "מודעות בערוצים";
 "Business.DontHideAds" = "אל תסתיר מודעות";
 "Business.AdsInfo" = "כמנוי Premium, לא תראה מודעות בטלגרם, אך באפשרותך להפעיל אותם, לדוגמא בשביל להציג את המודעות שלך שהשקת ב[פלטפורמת המודעות של טלגרם>]()";
-"Business.AdsInfo_URL" = "https://ads.telegram.org";
+"Business.AdsInfo_URL" = "https://ads.p.chat";
 
 "ChatList.PremiumGraceTitle" = "⚠️ אל תאבד גישה לתכונות בלעדיות.";
 "ChatList.PremiumGraceText" = "ההטבות הבלעדיות שלך עומדות לפוג.";
@@ -12231,19 +12231,19 @@ Sorry for the inconvenience.";
 "Chat.Context.Phone.CreateNewContact" = "צור איש קשר חדש";
 "Chat.Context.Phone.AddToExistingContact" = "הוסף לאיש קשר קיים";
 "Chat.Context.Phone.SendMessage" = "שלח הודעה";
-"Chat.Context.Phone.TelegramVoiceCall" = "שיחת טלפון בטלגרם";
-"Chat.Context.Phone.TelegramVideoCall" = "שיחת וידאו בטלגרם";
-"Chat.Context.Phone.InviteToTelegram" = "הזמן לטלגרם";
+"Chat.Context.Phone.PChatVoiceCall" = "שיחת טלפון בטלגרם";
+"Chat.Context.Phone.PChatVideoCall" = "שיחת וידאו בטלגרם";
+"Chat.Context.Phone.InviteToPChat" = "הזמן לטלגרם";
 "Chat.Context.Phone.CallViaCarrier" = "התקשר באמצעות הספק";
 "Chat.Context.Phone.CopyNumber" = "העתק מספר";
-"Chat.Context.Phone.NotOnTelegram" = "מספר זה לא קיים בטלגרם.";
+"Chat.Context.Phone.NotOnPChat" = "מספר זה לא קיים בטלגרם.";
 "Chat.Context.Phone.ViewProfile" = "הצג פרופיל";
 
 "Chat.Context.Username.SendMessage" = "שלח הודעה";
 "Chat.Context.Username.OpenGroup" = "פתח קבוצה";
 "Chat.Context.Username.OpenChannel" = "פתח ערוץ";
 "Chat.Context.Username.Copy" = "העתק שם משתמש";
-"Chat.Context.Username.NotOnTelegram" = "משתמש זה לא קיים בטלגרם.";
+"Chat.Context.Username.NotOnPChat" = "משתמש זה לא קיים בטלגרם.";
 
 "Chat.Context.Hashtag.Search" = "חיפוש";
 "Chat.Context.Hashtag.Copy" = "העתק האשטאג";
@@ -12288,8 +12288,8 @@ Sorry for the inconvenience.";
 "Stars.Intro.Transaction.FragmentTopUp.Subtitle" = "באמצעות Fragment";
 "Stars.Intro.Transaction.FragmentWithdrawal.Title" = "משיכה";
 "Stars.Intro.Transaction.FragmentWithdrawal.Subtitle" = "דרך Fragment";
-"Stars.Intro.Transaction.TelegramAds.Title" = "משיכה";
-"Stars.Intro.Transaction.TelegramAds.Subtitle" = "דרך מודעות טלגרם";
+"Stars.Intro.Transaction.PChatAds.Title" = "משיכה";
+"Stars.Intro.Transaction.PChatAds.Subtitle" = "דרך מודעות טלגרם";
 "Stars.Intro.Transaction.Gift" = "מתנה";
 "Stars.Intro.Transaction.ConvertedGift" = "מתנה שהומרה";
 "Stars.Intro.Transaction.Unsupported.Title" = "לא נתמך";
@@ -12315,7 +12315,7 @@ Sorry for the inconvenience.";
 "Stars.Purchase.Stars_any" = "%@ כוכבים";
 "Stars.Purchase.ShowMore" = "הצג אפשרויות נוספות";
 "Stars.Purchase.Info" = "על ידי המשך ורכישת כוכבים, הינך מסכים ל[תנאים ולהגבלות]().";
-"Stars.Purchase.Terms_URL" = "https://telegram.org/tos/stars";
+"Stars.Purchase.Terms_URL" = "https://p.chat/tos/stars";
 
 "Stars.Transaction.Via" = "באמצעות";
 "Stars.Transaction.To" = "אל";
@@ -12324,7 +12324,7 @@ Sorry for the inconvenience.";
 "Stars.Transaction.Id" = "מזהה עסקה";
 "Stars.Transaction.Date" = "תאריך";
 "Stars.Transaction.Terms" = "צפה ב[תנאי השימוש]() של הכוכבים.";
-"Stars.Transaction.Terms_URL" = "https://telegram.org/tos/stars";
+"Stars.Transaction.Terms_URL" = "https://p.chat/tos/stars";
 "Stars.Transaction.CopiedId" = "מזהה העסקה הועתק ללוח העריכה.";
 
 "Stars.Transaction.MediaPurchase" = "קנית מדיה";
@@ -12338,8 +12338,8 @@ Sorry for the inconvenience.";
 "Stars.Transaction.FragmentTopUp.Subtitle" = "Fragment";
 "Stars.Transaction.FragmentWithdrawal.Title" = "משיכת כוכבים";
 "Stars.Transaction.FragmentWithdrawal.Subtitle" = "Fragment";
-"Stars.Transaction.TelegramAds.Title" = "משיכת כוכבים";
-"Stars.Transaction.TelegramAds.Subtitle" = "מודעות טלגרם";
+"Stars.Transaction.PChatAds.Title" = "משיכת כוכבים";
+"Stars.Transaction.PChatAds.Subtitle" = "מודעות טלגרם";
 "Stars.Transaction.Unsupported.Title" = "לא נתמך";
 "Stars.Transaction.Refund" = "החזר";
 
@@ -12382,7 +12382,7 @@ Sorry for the inconvenience.";
 "Chat.MessageEffectMenu.SectionMessageEffects" = "אפקטים";
 "Chat.SendMessageMenu.MoveCaptionUp" = "הזז את הכותרת למעלה";
 "Chat.SendMessageMenu.MoveCaptionDown" = "הזז את הכותרת למטה";
-"Chat.SendMessageMenu.ToastPremiumRequired.Text" = "הירשם ל[Telegram Premium]() כדי להוסיף אפקט מונפש זה.";
+"Chat.SendMessageMenu.ToastPremiumRequired.Text" = "הירשם ל[PChat Premium]() כדי להוסיף אפקט מונפש זה.";
 
 "BusinessLink.AlertTextLimitText" = "מגבלת הטקסט בהודעה זו היא 4096 תווים";
 
@@ -12422,7 +12422,7 @@ Sorry for the inconvenience.";
 "Stars.BotRevenue.Withdraw.WithdrawShort" = "משוך";
 "Stars.BotRevenue.Withdraw.BuyAds" = "קנה מודעות";
 "Stars.BotRevenue.Withdraw.Info" = "באפשרותך למשוך כוכבים באמצעות Fragment, או להשתמש בכוכבים כדי לפרסם את הבוט שלך. לא ניתן למשוך פחות מ1000 כוכבים. [למד עוד >]()";
-"Stars.BotRevenue.Withdraw.Info_URL" = "https://telegram.org/tos/bot-developers#6-2-2-tpa-balance";
+"Stars.BotRevenue.Withdraw.Info_URL" = "https://p.chat/tos/bot-developers#6-2-2-tpa-balance";
 
 "Stars.BotRevenue.Transactions.Title" = "היסטוריית עסקאות";
 
@@ -12441,7 +12441,7 @@ Sorry for the inconvenience.";
 "Stars.PaidContent.AmountTitle" = "הכנס מחיר לפתיחה";
 "Stars.PaidContent.AmountPlaceholder" = "כוכבים לפתיחה";
 "Stars.PaidContent.AmountInfo" = "משתמשים יצטרכו להעביר את כמות הכוכבים הזו לערוץ שלך כדי לצפות במדיה זו. [למד עוד >]()";
-"Stars.PaidContent.AmountInfo_URL" = "https://telegram.org/tos/stars";
+"Stars.PaidContent.AmountInfo_URL" = "https://p.chat/tos/stars";
 "Stars.PaidContent.Create" = "הפוך למדיה בתשלום";
 
 "MediaEditor.AddLink" = "קישור";
@@ -12453,7 +12453,7 @@ Sorry for the inconvenience.";
 "MediaEditor.Link.LinkName.Title" = "שם הקישור (רשות)";
 "MediaEditor.Link.LinkName.Placeholder" = "הכנס שם";
 
-"Story.Editor.TooltipLinkPremium" = "הירשם ל[Telegram Premium]() כדי להוסיף קישורים.";
+"Story.Editor.TooltipLinkPremium" = "הירשם ל[PChat Premium]() כדי להוסיף קישורים.";
 
 "Story.Editor.TooltipLinkLimitValue_1" = "קישור **%@**";
 "Story.Editor.TooltipLinkLimitValue_any" = "**%@** קישורים";
@@ -12480,7 +12480,7 @@ Sorry for the inconvenience.";
 "Monetization.BalanceStarsWithdrawShort" = "משוך";
 "Monetization.BalanceStarsBuyAds" = "קנה מודעות";
 "Monetization.Balance.StarsInfo" = "באפשרותך לאסוף רווחים עבור כוכבים באמצעות Fragment, או להשתמש בכוכבים כדי לפרסם את הערוץ שלך. לא ניתן למשוך פחות מ1000 כוכבים. [למד עוד >]()";
-"Monetization.Balance.StarsInfo_URL" = "https://telegram.org/tos/stars";
+"Monetization.Balance.StarsInfo_URL" = "https://p.chat/tos/stars";
 
 "Monetization.StarsProceeds.Title" = "סקירת תגמולים";
 "Monetization.StarsProceeds.Available" = "יתרה זמינה";
@@ -12557,7 +12557,7 @@ Sorry for the inconvenience.";
 "Browser.ContextMenu.CopyLink" = "העתק קישור";
 "Browser.ContextMenu.Share" = "שתף";
 
-"WebBrowser.Telegram" = "טלגרם";
+"WebBrowser.PChat" = "טלגרם";
 
 "Monetization.Proceeds.Ton.Info" = "ניתן להשתמש בTON מהיתרה הכוללת שלך לפרסומות או למשוך כתגמולים 3 ימים לאחר הרווחתם.לא ניתן למשוך פחות מ10 TON.";
 "Monetization.Proceeds.Stars.Info" = "ניתן להשתמש בכוכבים מהיתרה הכוללת שלך למודעות או למשוך אותם כפרסים 21 יום לאחר הרווחתם.";
@@ -12658,8 +12658,8 @@ Sorry for the inconvenience.";
 
 "PeerInfo.PaneBotPreviews" = "תצוגה מקדימה";
 "PeerInfo.OpenAppButton" = "פתח אפליקציה";
-"PeerInfo.AppFooterAdmin" = "ידי פרסום המיני אפליקציה הזו, הינך מסכים ל[תנאים ולהגבלות של טלגרם למפתחים](https://telegram.org/tos/bot-developers).";
-"PeerInfo.AppFooter" = "בפתיחת מיני-אפליקציה זו, הינך מסכים ל[תנאי השימוש של מיני-אפליקציות](https://telegram.org/tos/mini-apps).";
+"PeerInfo.AppFooterAdmin" = "ידי פרסום המיני אפליקציה הזו, הינך מסכים ל[תנאים ולהגבלות של טלגרם למפתחים](https://p.chat/tos/bot-developers).";
+"PeerInfo.AppFooter" = "בפתיחת מיני-אפליקציה זו, הינך מסכים ל[תנאי השימוש של מיני-אפליקציות](https://p.chat/tos/mini-apps).";
 "BotPreviews.MenuAddPreview" = "הוסף תצוגה מקדימה";
 "BotPreviews.MenuReorder" = "סדר מחדש";
 "BotPreviews.MenuDeleteLanguage" = "מחק %@";
@@ -12719,7 +12719,7 @@ Sorry for the inconvenience.";
 "InviteLink.ShareShort" = "שתף";
 
 "Stars.Subscription.Terms" = "על ידי הרשמה הינך מסכים ל[תנאים ולהגבלות]().";
-"Stars.Subscription.Terms_URL" = "https://telegram.org/tos/stars";
+"Stars.Subscription.Terms_URL" = "https://p.chat/tos/stars";
 
 "Stars.Transaction.Reaction.Title" = "רגשון כוכבים";
 "Stars.Transaction.Reaction.Post" = "פוסט";
@@ -12804,7 +12804,7 @@ Sorry for the inconvenience.";
 "InviteLink.Create.FeeEditInfo" = "כדי לשנות את דמי המנוי, צור קישור הזמנה חדש עם מחיר שונה.";
 "InviteLink.Create.RequestApprovalFeeUnavailable" = "לא ניתן להפעיל אישור מנהל עבור קישורים הדורשים תשלום חודשי.";
 
-"WebApp.PrivacyPolicy_URL" = "https://telegram.org/privacy-tpa";
+"WebApp.PrivacyPolicy_URL" = "https://p.chat/privacy-tpa";
 
 "ChatList.SubscriptionsLowBalance.Stars_1" = "דרוש כוכב %@";
 "ChatList.SubscriptionsLowBalance.Stars_any" = "דרושים %@ כוכבים";
@@ -12830,10 +12830,10 @@ Sorry for the inconvenience.";
 "SendStarReactions.SectionTop" = "השולחים המובילים";
 "SendStarReactions.ShowMyselfInTop" = "הצג אותי ברשימת השולחים המובילים";
 "SendStarReactions.SendButtonTitle" = "שלח # %@";
-"SendStarReactions.TermsOfServiceFooter" = "באמצעות שליחת כוכבים הינך מסכים ל[תנאי השימוש](https://telegram.org/tos/stars).";
+"SendStarReactions.TermsOfServiceFooter" = "באמצעות שליחת כוכבים הינך מסכים ל[תנאי השימוש](https://p.chat/tos/stars).";
 
 "PeerInfo.AllowedReactions.StarReactions" = "אפשר רגשונים בתשלום";
-"PeerInfo.AllowedReactions.StarReactionsFooter" = "הפעל כפתור זה כדי לאפשר למנויים להגיב להודעות עם רגשונים של כוכבי טלגרם, אשר תוכל למשוך מאוחר יותר כTON. [למד עוד >](https://telegram.org/tos/content-creator-rewards#2-3-subscriber-donations)";
+"PeerInfo.AllowedReactions.StarReactionsFooter" = "הפעל כפתור זה כדי לאפשר למנויים להגיב להודעות עם רגשונים של כוכבי טלגרם, אשר תוכל למשוך מאוחר יותר כTON. [למד עוד >](https://p.chat/tos/content-creator-rewards#2-3-subscriber-donations)";
 
 "Chat.ToastStarsSent.Title_1" = "הכוכב נשלח!";
 "Chat.ToastStarsSent.Title_any" = "הכוכבים נשלחו!";
@@ -12891,7 +12891,7 @@ Sorry for the inconvenience.";
 "BoostGift.NewDescriptionGroup" = "קבל עוד בוסט וחברים עבור\nהקבוצה שלך על ידי הענקת פרסים.";
 "BoostGift.NewDescription" = "קבל עוד בוסט ומנויים עבור\nהערוץ שלך על ידי הענקת פרסים.";
 "BoostGift.Prize" = "פרס";
-"BoostGift.Prize.Premium" = "Telegram Premium";
+"BoostGift.Prize.Premium" = "PChat Premium";
 "BoostGift.Prize.Stars" = "כוכבי טלגרם";
 "BoostGift.Stars.Title" = "כוכבים לחלק";
 "BoostGift.Stars.Boosts_1" = "בוסט %@";
@@ -12914,8 +12914,8 @@ Sorry for the inconvenience.";
 "BoostGift.Group.StarsDateInfo" = "בחר מתי %@ מהקבוצה שלך יבחרו אקראית לקבל כוכבים.";
 "BoostGift.StarsDateInfo" = "בחר מתי %@ מהערוץ שלך יבחרו אקראית לקבל כוכבים.";
 
-"BoostGift.PrepaidGiveawayStarsCount_1" = "Telegram Premium %@";
-"BoostGift.PrepaidGiveawayStarsCount_any" = "%@ Telegram Premium";
+"BoostGift.PrepaidGiveawayStarsCount_1" = "PChat Premium %@";
+"BoostGift.PrepaidGiveawayStarsCount_any" = "%@ PChat Premium";
 "BoostGift.PrepaidGiveawayStarsMonths" = "מנוי %@ חודשים";
 
 "WebBrowser.ShowInstantView" = "הצג תצוגה מיידית";
@@ -13038,7 +13038,7 @@ Sorry for the inconvenience.";
 "Gift.Convert.Success.Text.Stars_any" = "%@ כוכבים";
 
 "Gift.Options.Premium.Title" = "הענק Premium";
-"Gift.Options.Premium.Text" = "הענק ל**%@** גישה לתכונות ייחודיות עם Telegram Premium. [ראה תכונות]()";
+"Gift.Options.Premium.Text" = "הענק ל**%@** גישה לתכונות ייחודיות עם PChat Premium. [ראה תכונות]()";
 "Gift.Options.Premium.Months_1" = "חודש-%@";
 "Gift.Options.Premium.Months_any" = "%@-חודשים";
 "Gift.Options.Premium.Years_1" = "שנה %@";
@@ -13149,16 +13149,16 @@ Sorry for the inconvenience.";
 "ChatList.Search.TopAppsInfo" = "אילו אפליקציות נכללות כאן? [למד עוד >]()";
 
 "TopApps.Info.Title" = "מיני אפליקציות מובילות";
-"TopApps.Info.Text" = "קטלוג זה מדרג מיני אפליקציות על סמך ההכנסות היומיות שלהן, הנמדדות בכוכבים.  כדי להופיע ברשימה, מפתחים חייבים להגדיר את האפליקציות המיני העיקריות שלהם ב[@botfather]() (כמתואר [כאן](https://core.telegram.org/bots/webapps#launching-the-main-mini-app)), להחזיק יותר מ**1,000** משתמשים יומיים ולהרוויח הכנסה יומית של מעל **1,000** כוכבים, בהתבסס על הממוצע השבועי.";
+"TopApps.Info.Text" = "קטלוג זה מדרג מיני אפליקציות על סמך ההכנסות היומיות שלהן, הנמדדות בכוכבים.  כדי להופיע ברשימה, מפתחים חייבים להגדיר את האפליקציות המיני העיקריות שלהם ב[@botfather]() (כמתואר [כאן](https://core.p.chat/bots/webapps#launching-the-main-mini-app)), להחזיק יותר מ**1,000** משתמשים יומיים ולהרוויח הכנסה יומית של מעל **1,000** כוכבים, בהתבסס על הממוצע השבועי.";
 "TopApps.Info.Done" = "הבנתי";
 
-"Stars.Intro.Transaction.TelegramBotApi.Title" = "שידור בתשלום";
-"Stars.Intro.Transaction.TelegramBotApi.Messages_1" = "הודעה %@";
-"Stars.Intro.Transaction.TelegramBotApi.Messages_any" = "%@ הודעות";
+"Stars.Intro.Transaction.PChatBotApi.Title" = "שידור בתשלום";
+"Stars.Intro.Transaction.PChatBotApi.Messages_1" = "הודעה %@";
+"Stars.Intro.Transaction.PChatBotApi.Messages_any" = "%@ הודעות";
 
-"Stars.Transaction.TelegramBotApi.Title" = "שידור בתשלום";
-"Stars.Transaction.TelegramBotApi.Messages_1" = "הודעה %@";
-"Stars.Transaction.TelegramBotApi.Messages_any" = "%@ הודעות";
+"Stars.Transaction.PChatBotApi.Title" = "שידור בתשלום";
+"Stars.Transaction.PChatBotApi.Messages_1" = "הודעה %@";
+"Stars.Transaction.PChatBotApi.Messages_any" = "%@ הודעות";
 
 "Monetization.Bot.Header" = "טלגרם חולקת כתגמולים 50% מהרווחים ממודעות שמוצגים בבוט שלך. [למד עוד >]()";
 "Monetization.Bot.BalanceTitle" = "יתרה זמינה";
@@ -13350,7 +13350,7 @@ Sorry for the inconvenience.";
 "AffiliateSetup.StartTitle" = "התחל תוכנית שותפים";
 "AffiliateSetup.UpdateTitle" = "עדכן תוכנית שותפים";
 
-"AffiliateSetup.TermsFooter" = "על ידי יצירת תוכנית שותפים, הינך מסכים ל[תנאים ולהגבלות](https://telegram.org/terms) של תוכניות שותפים.";
+"AffiliateSetup.TermsFooter" = "על ידי יצירת תוכנית שותפים, הינך מסכים ל[תנאים ולהגבלות](https://p.chat/terms) של תוכניות שותפים.";
 
 "AffiliateSetup.ProgramMenu.OpenBot" = "פתח בוט";
 "AffiliateSetup.ProgramMenu.OpenApp" = "פתח אפליקציה";
@@ -13403,7 +13403,7 @@ Sorry for the inconvenience.";
 "AffiliateProgram.PeerTypeSelf" = "חשבון פרטי";
 
 "AffiliateProgram.JoinTitle" = "תוכנית שותפים";
-"AffiliateProgram.JoinTerms" = "על ידי הצטרפות לתוכנית, הינך מסכים ל[תנאים ולהגדרות](https://telegram.org/tos/affiliate-program) של תוכניות שותפים.";
+"AffiliateProgram.JoinTerms" = "על ידי הצטרפות לתוכנית, הינך מסכים ל[תנאים ולהגדרות](https://p.chat/tos/affiliate-program) של תוכניות שותפים.";
 "AffiliateProgram.DailyRevenueText" = "ההכנסה היומית הממוצעת למשתמש: #**%@**";
 
 "AffiliateProgram.LinkTitle" = "קישור הפניה";
@@ -13675,7 +13675,7 @@ Sorry for the inconvenience.";
 "Gift.View.PutOn" = "לבשת את %@";
 "Gift.View.TookOff" = "הורדת את %@";
 
-"Gift.View.TooltipPremiumWearing" = "הירשם ל[Telegram Premium]() כדי ללבוש פריטי אספנות.";
+"Gift.View.TooltipPremiumWearing" = "הירשם ל[PChat Premium]() כדי ללבוש פריטי אספנות.";
 
 "Conversation.AddToContactsLong" = "הוסף לאנשי הקשר";
 
@@ -13692,7 +13692,7 @@ Sorry for the inconvenience.";
 "SharedMedia.SimilarBot.Users_any" = "%@ משתמשים חודשיים";
 
 "PeerInfo.SimilarBots.ShowMore" = "הצג בוטים נוספים";
-"PeerInfo.SimilarBots.ShowMoreInfo" = "הירשם ל[Telegram Premium]() כדי לקבל עד ל**100** בוטים דומים.";
+"PeerInfo.SimilarBots.ShowMoreInfo" = "הירשם ל[PChat Premium]() כדי לקבל עד ל**100** בוטים דומים.";
 
 "PeerInfo.VerifyAccounts" = "אמת חשבונות";
 
@@ -13803,11 +13803,11 @@ Sorry for the inconvenience.";
 "Gift.Convert.Success.ChannelText.Stars_any" = "**%@ כוכבים** נשלחו";
 
 "Stars.Transfer.Terms" = "בעצם הרכישה הינך מסכים ל[תנאי השימוש]().";
-"Stars.Transfer.Terms_URL" = "https://telegram.org/tos/stars";
+"Stars.Transfer.Terms_URL" = "https://p.chat/tos/stars";
 
-"AvatarEditor.PremiumNeeded.Background" = "הירשם לTelegram Premium כדי להשתמש ברקע זה.";
-"AvatarEditor.PremiumNeeded.Emoji" = "הירשם לTelegram Premium כדי לבחור באימוג'י זה.";
-"AvatarEditor.PremiumNeeded.Sticker" = "הירשם לTelegram Premium כדי לבחור במדבקה זו.";
+"AvatarEditor.PremiumNeeded.Background" = "הירשם לPChat Premium כדי להשתמש ברקע זה.";
+"AvatarEditor.PremiumNeeded.Emoji" = "הירשם לPChat Premium כדי לבחור באימוג'י זה.";
+"AvatarEditor.PremiumNeeded.Sticker" = "הירשם לPChat Premium כדי לבחור במדבקה זו.";
 
 "PremiumNeeded.Title" = "נדרש Premium";
 "PremiumNeeded.Subscribe" = "הירשם";
@@ -13849,7 +13849,7 @@ Sorry for the inconvenience.";
 "Notification.PaidMessageYouMany" = "שילמת %1$@ כדי לשלוח %2$@";
 
 "Stars.Transfer.Terms" = "בעצם הרכישה הינך מסכים ל[תנאי השימוש]().";
-"Stars.Transfer.Terms_URL" = "https://telegram.org/tos/stars";
+"Stars.Transfer.Terms_URL" = "https://p.chat/tos/stars";
 
 "StarsTransaction.Commission" = "עמלה";
 
@@ -13863,11 +13863,11 @@ Sorry for the inconvenience.";
 "Stars.Intro.Transaction.PaidMessage_1" = "עמלה עבור הודעה %@";
 "Stars.Intro.Transaction.PaidMessage_any" = "עמלה עבור %@ הודעות";
 
-"Stars.Transaction.TelegramPremium_1" = "Premium למשך חודש";
-"Stars.Transaction.TelegramPremium_any" = "Premium למשך %@ חודשים";
+"Stars.Transaction.PChatPremium_1" = "Premium למשך חודש";
+"Stars.Transaction.PChatPremium_any" = "Premium למשך %@ חודשים";
 
-"Stars.Intro.Transaction.TelegramPremium_1" = "Premium למשך חודש";
-"Stars.Intro.Transaction.TelegramPremium_any" = "Premium למשך %@ חודשים";
+"Stars.Intro.Transaction.PChatPremium_1" = "Premium למשך חודש";
+"Stars.Intro.Transaction.PChatPremium_any" = "Premium למשך %@ חודשים";
 
 "Stars.Purchase.SendMessageInfo" = "קנה כוכבים כדי לשלוח הודעות ל**%@** ולאחרים.";
 "Stars.Purchase.SendGroupMessageInfo" = "קנה כוכבים כדי לשלוח הודעה ב**%@**.";
@@ -13906,11 +13906,11 @@ Sorry for the inconvenience.";
 
 "Privacy.Messages.Stars_1" = "כוכב %@";
 "Privacy.Messages.Stars_any" = "%@ כוכבים";
-"Privacy.Messages.Unlock" = "פתח עם Telegram Premium";
+"Privacy.Messages.Unlock" = "פתח עם PChat Premium";
 
 "Premium.PaidMessages" = "הודעות בתשלום";
 "Premium.PaidMessagesInfo" = "גבה עמלה עבור שליחת הודעות אליך ממשתמשים לא שמורים או שולחים חדשים.";
-"Premium.PaidMessages.Proceed" = "אודות Telegram Premium";
+"Premium.PaidMessages.Proceed" = "אודות PChat Premium";
 
 "PeerInfo.Gifts.Reorder" = "סדר מחדש";
 "PeerInfo.Gifts.Context.Pin" = "נעץ";
@@ -13924,7 +13924,7 @@ Sorry for the inconvenience.";
 "PeerInfo.Gifts.Context.Transfer" = "העבר";
 
 "Gift.Send.Premium.Confirmation.Title" = "שלח מתנה";
-"Gift.Send.Premium.Confirmation.Text" = "להעניק **Telegram Premium** ל**%1$@** בסך **%2$@**?";
+"Gift.Send.Premium.Confirmation.Text" = "להעניק **PChat Premium** ל**%1$@** בסך **%2$@**?";
 "Gift.Send.Premium.Confirmation.Text.Stars_1" = "כוכב %@";
 "Gift.Send.Premium.Confirmation.Text.Stars_any" = "%@ כוכבים";
 "Gift.Send.Premium.Confirmation.Confirm" = "אישור";
@@ -14013,7 +14013,7 @@ Sorry for the inconvenience.";
 "Premium.MaxExpiringStoriesTextNumberFormat_any" = "**%d** סטוריז";
 "Premium.MaxExpiringStoriesTextPremiumNumberFormat_1" = "סטורי **%d**";
 "Premium.MaxExpiringStoriesTextPremiumNumberFormat_any" = "**%d** סטוריז";
-"Premium.MaxExpiringStoriesTextFormat" = "באפשרותך לפרסם %@ ב**24** שעות. הירשם ל**Telegram Premium** כדי להגדיל מגבלה זו ל**%@**.";
+"Premium.MaxExpiringStoriesTextFormat" = "באפשרותך לפרסם %@ ב**24** שעות. הירשם ל**PChat Premium** כדי להגדיל מגבלה זו ל**%@**.";
 
 "Premium.MaxExpiringStoriesNoPremiumTextNumberFormat_1" = "סטורי **%d**";
 "Premium.MaxExpiringStoriesNoPremiumTextNumberFormat_any" = "**%d** סטוריז";
@@ -14026,7 +14026,7 @@ Sorry for the inconvenience.";
 "Stars.AccountRevenue.Proceeds.Info" = "כוכבים מהיתרה הכוללת שלך ניתנים למשיכה 21 יום לאחר הרווחתם.";
 "Stars.AccountRevenue.Withdraw.Info" = "באפשרותך לאסוף תגמולים עבור כוכבים באמצעות Fragment . לא ניתן למשוך פחות מ1000 כוכבים. [למד עוד >]()";
 
-"Privacy.Gifts.PremiumToast.Text" = "הירשם ל**Telegram Premium** כדי להשתמש בהגדרה זו.";
+"Privacy.Gifts.PremiumToast.Text" = "הירשם ל**PChat Premium** כדי להשתמש בהגדרה זו.";
 "Privacy.Gifts.PremiumToast.Action" = "פתח";
 
 "Gift.Send.ErrorDisallowed" = "**%@** לא מקבל מתנות מסוג זה.";
@@ -14080,7 +14080,7 @@ Sorry for the inconvenience.";
 "FrozenAccount.Understood" = "הבנתי";
 
 "AdsInfo.Search.Respect.Text" = "מודעות כאלה לא משתמשות במידע האישי שלך והן מבוססות על שאילתת החיפוש שהכנסת.";
-"AdsInfo.Search.Ads.Text" = "באפשרותך לכבות מודעות באמצעות הרשמה לTelegram] Premium]().";
+"AdsInfo.Search.Ads.Text" = "באפשרותך לכבות מודעות באמצעות הרשמה לPChat] Premium]().";
 "AdsInfo.Search.Launch.Text" = "כולם יכולים ליצור מודעה שתוצג בתוצאות החיפוש עבור כל שאילתא. ראה את פלטפורמת המודעות של טלגרם לפרטים. [למד עוד >]()";
 
 "ChatList.FrozenAccount.Title" = "החשבון שלך הוקפא";
@@ -14098,10 +14098,10 @@ Sorry for the inconvenience.";
 "Login.Fee.SmsCost.Text" = "עקב חשבונות מזויפים ועלויות SMS גבוהות במדינה שלך, יהיה עליך לכסות את עמלת ההרשמה שלך.";
 "Login.Fee.Verification.Title" = "נדרש אימות";
 "Login.Fee.Verification.Text" = "טלגרם צריך לשלוח לך SMS עם קוד אימות כדי לאשר את מספר הטלפון שלך.";
-"Login.Fee.Support.Title" = "תמוך באמצעות [Telegram Premium >]()";
-"Login.Fee.Support.Text" = "הירשם למינוי של שבוע 1 של Telegram Premium כדי לעזור לכסות את עלויות הSMS.";
+"Login.Fee.Support.Title" = "תמוך באמצעות [PChat Premium >]()";
+"Login.Fee.Support.Text" = "הירשם למינוי של שבוע 1 של PChat Premium כדי לעזור לכסות את עלויות הSMS.";
 "Login.Fee.SignUp" = "הירשם עבור %@";
-"Login.Fee.GetPremiumForAWeek" = "קבל Telegram Premium למשך שבוע 1";
+"Login.Fee.GetPremiumForAWeek" = "קבל PChat Premium למשך שבוע 1";
 
 "StoryFeed.AddStory" = "הוסף סטורי";
 
@@ -14296,7 +14296,7 @@ Sorry for the inconvenience.";
 "Premium.CreateMultipleStories" = "צור מספר סטוריז";
 
 "FrozenAccount.Violation.TextNew" = "החשבון שלך הוקפא בעקבות הפרה של [תנאי השימוש]() של טלגרם.";
-"FrozenAccount.Violation.TextNew_URL" = "https://telegram.org/tos";
+"FrozenAccount.Violation.TextNew_URL" = "https://p.chat/tos";
 
 "Stars.Purchase.BuyStarGiftInfo" = "קנה כוכבים כדי לרכוש פריט אספנות ייחודי.";
 
@@ -14492,7 +14492,7 @@ Sorry for the inconvenience.";
 "Chat.Todo.ContextMenu.SectionList" = "רשימה";
 "Chat.Todo.ContextMenu.SectionsInfo" = "הינך צופה בפעולות עבור משימה אחת.\nבאפשרותך לעבור לפעולות עבור הרשימה.";
 
-"Chat.Todo.PremiumRequired" = "רק מנויי [Telegram Premium]() יכולים לסמן שמשימות הושלמו.";
+"Chat.Todo.PremiumRequired" = "רק מנויי [PChat Premium]() יכולים לסמן שמשימות הושלמו.";
 "Chat.Todo.CompletionLimited" = "%@ הגביל/ה אחרים מלערוך רשימת משימות זו.";
 "Chat.Todo.CompletionLimitedForward" = "לא ניתן לערוך רשימת משימות שהועברה.";
 
@@ -14650,7 +14650,7 @@ Sorry for the inconvenience.";
 "Stars.SellGiftMinAmountToast.Text" = "לא ניתן למכור מתנות בפחות מ%@";
 
 "Premium.Week.SignUp" = "הירשם ב%@";
-"Premium.Week.SignUpInfo" = "קבל Telegram Premium למשך שבוע 1";
+"Premium.Week.SignUpInfo" = "קבל PChat Premium למשך שבוע 1";
 
 "Settings.MyTon" = "הTON שלי";
 
@@ -14768,7 +14768,7 @@ Sorry for the inconvenience.";
 "Gift.Buy.PayInTon.Tooltip" = "שלם עם TON כדי לדלג על המתנת 21 ימים לפני העברת המתנה שוב.";
 
 "Premium.PremiumGift.Title" = "מתנת Prsmium";
-"Premium.PremiumGift.Description" = "הירשם ל**Telegram Premium** כדי לשלוח עד **5** מהמתנות האלה ולפתוח תכונות עוצמתיות.";
+"Premium.PremiumGift.Description" = "הירשם ל**PChat Premium** כדי לשלוח עד **5** מהמתנות האלה ולפתוח תכונות עוצמתיות.";
 
 "Stars.SellGift.TonAmountTitle" = "מחיר בTON";
 "Stars.SellGift.OnlyTon" = "קבל רק TON";
@@ -14956,7 +14956,7 @@ Sorry for the inconvenience.";
 
 "Ton.WithdrawViaFragment" = "משוך דרך Fragment";
 "Ton.WithdrawViaFragment.Info" = "אסוף את הTON שלך באמצעות Fragment. [Learn More >]()";
-"Ton.WithdrawViaFragment.Info_URL" = "https://telegram.org/tos/bot-developers#6-2-2-tpa-balance";
+"Ton.WithdrawViaFragment.Info_URL" = "https://p.chat/tos/bot-developers#6-2-2-tpa-balance";
 
 "MESSAGE_GIFT_THEME" = "%1$@ שינה/תה את ערכת הנושא ל%2$@";
 
@@ -14965,7 +14965,7 @@ Sorry for the inconvenience.";
 
 "Gift.Value.DescriptionAveragePrice" = "המחיר הממוצע של המתנות של **%@** בטלגרם ובFragment בחודש האחרון.";
 "Gift.Value.DescriptionLastPriceFragment" = "זהו המחיר האחרון בו **%@** נמכר בFragment.";
-"Gift.Value.DescriptionLastPriceTelegram" = "זהו המחיר האחרון בו **%@** נמכר בטלגרם.";
+"Gift.Value.DescriptionLastPricePChat" = "זהו המחיר האחרון בו **%@** נמכר בטלגרם.";
 
 "Gift.Value.LastPriceInfo" = "**%1$@** הוא המחיר האחרון עבור מתנות %2$@ שנמצאות בטלגרם ובFragment.";
 "Gift.Value.MinimumPriceInfo" = "**%1$@** הוא המחיר המינימלי עבור המתנות של **%2$@** בטלגרם ובFragment.";
@@ -14977,7 +14977,7 @@ Sorry for the inconvenience.";
 "Gift.Value.LastPrice" = "מחיר אחרון";
 "Gift.Value.MinimumPrice" = "מחיר מינימום";
 "Gift.Value.AveragePrice" = "מחיר ממוצע";
-"Gift.Value.ForSaleOnTelegram" = "למכירה בטלגרם";
+"Gift.Value.ForSaleOnPChat" = "למכירה בטלגרם";
 "Gift.Value.ForSaleOnFragment" = "למכירה בFragment";
 
 "Gift.View.Context.SetAsTheme" = "הגדר בתור ערכת הנושא ב...";
@@ -15107,7 +15107,7 @@ Error: %8$@";
 "Gift.UnavailableAction.Text" = "העבר מתנה זו לחשבון הטלגרם שלך בFragment כדי לםתוח פעולה זו.";
 "Gift.UnavailableAction.OpenFragment" = "פתח את Fragment";
 
-"Gift.Unique.Telegram" = "טלגרם";
+"Gift.Unique.PChat" = "טלגרם";
 
 "VoiceChat.ContextEnableMessages" = "הפעל הודעות";
 "VoiceChat.ContextDisableMessages" = "השבת הודעות";
@@ -15198,7 +15198,7 @@ Error: %8$@";
 "Gift.Auction.TimeLeftMinutes" = "נותרו {m}:{s}";
 "Gift.Auction.ItemsBought_1" = "הפריט נקנה";
 "Gift.Auction.ItemsBought_any" = "הפריטים נקנו";
-"Gift.Auction.ForSaleOnTelegram" = "למכירה בטלגרם";
+"Gift.Auction.ForSaleOnPChat" = "למכירה בטלגרם";
 "Gift.Auction.ForSaleOnFragment" = "למכירה בFragment";
 "Gift.Auction.AveragePriceInfo" = "**%1$@** הוא המחיר הממוצע עבור המתנות של %2$@.";
 "Gift.Auction.Stars_1" = "כוכב %@";
@@ -15357,7 +15357,7 @@ Error: %8$@";
 "ScheduleMessage.RepeatPeriod.Yearly" = "שנתי";
 
 "ScheduleMessage.PremiumRequired.Title" = "נדרש פרימיום";
-"ScheduleMessage.PremiumRequired.Text" = "הירשם ל**Telegram Premium** כדי לתזמן הודעה חוזרת.";
+"ScheduleMessage.PremiumRequired.Text" = "הירשם ל**PChat Premium** כדי לתזמן הודעה חוזרת.";
 "ScheduleMessage.PremiumRequired.Add" = "הוסף";
 
 "Stars.Transaction.GiftAuctionBid" = "הצעת מחיר למתנה במכירה פומבית";
@@ -15643,7 +15643,7 @@ Error: %8$@";
 "CocoonInfo.Efficient.Text" = "Cocoon איפשר לטלגרם לצמצם בעלויות תרגום פי 6.";
 "CocoonInfo.ForEveryone.Title" = "לכולם";
 "CocoonInfo.ForEveryone.Text" = "כל המפתחים יכולים להשתמש ב[Cocoon](telegram) לתכונות AI. קראו עוד ב[cocoon.org](web).";
-"CocoonInfo.IntergrateInfo" = "רוצה להתממשק עם Cocoon בפרוייקטים שלך?\nגש אל [t.me/cocoon?direct]()";
+"CocoonInfo.IntergrateInfo" = "רוצה להתממשק עם Cocoon בפרוייקטים שלך?\nגש אל [p.chat/cocoon?direct]()";
 "CocoonInfo.Understood" = "הבנתי";
 
 "Conversation.Translation.CocoonInfo" = "התרגומים מופעלים על ידי **#Cocoon**. [איך זה פועל?]()";
@@ -15657,7 +15657,7 @@ Error: %8$@";
 "Conversation.Dice.Change" = "שנה";
 
 "EmojiStake.Title" = "הימורי אימוג'י";
-"EmojiStake.Description" = "תכונה נסיונית עבור מנויי Telegram Premium.";
+"EmojiStake.Description" = "תכונה נסיונית עבור מנויי PChat Premium.";
 "EmojiStake.ResultsTitle" = "תוצאות והחזרים";
 "EmojiStake.StreakInfo" = "הרצף מתאפס אחרי 3 # או שינוי ההימור.";
 "EmojiStake.StakeTitle" = "הימור";
@@ -15668,7 +15668,7 @@ Error: %8$@";
 "Conversation.Summary.Text" = "לחץ כדי להציג את הטקסט המקורי";
 
 "Conversation.Summary.Limit.Title" = "תקציר AI";
-"Conversation.Summary.Limit.Text" = "תקצר הודעות ארוכות עם AI - ללא הגבלה עם Telegram Premium.";
+"Conversation.Summary.Limit.Text" = "תקצר הודעות ארוכות עם AI - ללא הגבלה עם PChat Premium.";
 
 "Appearance.SendWithCmdEnter" = "שלח הודעות עם ⌘+Enter";
 
@@ -15975,7 +15975,7 @@ Error: %8$@";
 "Month.NomDecember" = "דצמבר";
 
 
-/* new from translations.telegram.org */
+/* new from translations.p.chat */
 
 "AUTH_REGION" = "התחברות ממכשיר חדש %1$@, מיקום: %2$@";
 "AUTH_REGION_SEPARATED" = "חיבור חדש|ממכשיר לא מזוהה %1$@, מיקום: %2$@";
@@ -16077,10 +16077,10 @@ Error: %8$@";
 "BoostGift.AdditionalPrizesInfoForMonths_many" = "למשל **%@** חודשים";
 "BoostGift.AdditionalPrizesInfoStars_2" = "**%@** כוכבים";
 "BoostGift.AdditionalPrizesInfoStars_many" = "**%@** כוכבים";
-"BoostGift.AdditionalPrizesInfoSubscriptions_2" = "%@ מינויי Telegram Premium";
-"BoostGift.AdditionalPrizesInfoSubscriptions_many" = "%@ מינויי Telegram Premium";
-"BoostGift.AdditionalPrizesInfoWithSubscriptions_2" = "עם %@ מינויי Telegram Premium";
-"BoostGift.AdditionalPrizesInfoWithSubscriptions_many" = "עם %@ מינויי Telegram Premium";
+"BoostGift.AdditionalPrizesInfoSubscriptions_2" = "%@ מינויי PChat Premium";
+"BoostGift.AdditionalPrizesInfoSubscriptions_many" = "%@ מינויי PChat Premium";
+"BoostGift.AdditionalPrizesInfoWithSubscriptions_2" = "עם %@ מינויי PChat Premium";
+"BoostGift.AdditionalPrizesInfoWithSubscriptions_many" = "עם %@ מינויי PChat Premium";
 "BoostGift.ChannelsBoosts_2" = "ערוץ זה יקבל %@ בוסט";
 "BoostGift.ChannelsBoosts_many" = "ערוץ זה יקבל %@ בוסט";
 "BoostGift.DateInfoSubscribers_2" = "%@ מנויים";
@@ -16095,10 +16095,10 @@ Error: %8$@";
 "BoostGift.PrepaidGiveaway.StarsCount_many" = "%@ כוכבים";
 "BoostGift.PrepaidGiveaway.StarsWinners_2" = "ל%@ זוכים";
 "BoostGift.PrepaidGiveaway.StarsWinners_many" = "ל%@ זוכים";
-"BoostGift.PrepaidGiveawayCount_2" = "%@ Telegram Premium";
-"BoostGift.PrepaidGiveawayCount_many" = "%@ Telegram Premium";
-"BoostGift.PrepaidGiveawayStarsCount_2" = "%@ Telegram Premium";
-"BoostGift.PrepaidGiveawayStarsCount_many" = "%@ Telegram Premium";
+"BoostGift.PrepaidGiveawayCount_2" = "%@ PChat Premium";
+"BoostGift.PrepaidGiveawayCount_many" = "%@ PChat Premium";
+"BoostGift.PrepaidGiveawayStarsCount_2" = "%@ PChat Premium";
+"BoostGift.PrepaidGiveawayStarsCount_many" = "%@ PChat Premium";
 "BoostGift.QuantityBoosts_2" = "%@ בוסט";
 "BoostGift.QuantityBoosts_many" = "%@ בוסט";
 "BoostGift.Stars.Boosts_2" = "%@ בוסט";
@@ -16304,8 +16304,8 @@ Error: %8$@";
 "Chat.Giveaway.Info.RandomUsers_many" = "**%@** משתמשים אקראיים";
 "Chat.Giveaway.Info.Stars.Stars_2" = "**%@ כוכבים**";
 "Chat.Giveaway.Info.Stars.Stars_many" = "**%@ כוכבים**";
-"Chat.Giveaway.Info.Subscriptions_2" = "**%@** מינויי **Telegram Premium**";
-"Chat.Giveaway.Info.Subscriptions_many" = "**%@** מינויי **Telegram Premium**";
+"Chat.Giveaway.Info.Subscriptions_2" = "**%@** מינויי **PChat Premium**";
+"Chat.Giveaway.Info.Subscriptions_many" = "**%@** מינויי **PChat Premium**";
 "Chat.Giveaway.Message.CustomPrizeQuantity_2" = "%@";
 "Chat.Giveaway.Message.CustomPrizeQuantity_many" = "%@";
 "Chat.Giveaway.Message.Months_2" = "חודשיים";
@@ -16314,16 +16314,16 @@ Error: %8$@";
 "Chat.Giveaway.Message.Stars.Stars_many" = "**%@** כוכבים";
 "Chat.Giveaway.Message.Stars.Winners_2" = "בין **%@** זוכים";
 "Chat.Giveaway.Message.Stars.Winners_many" = "בין **%@** זוכים";
-"Chat.Giveaway.Message.Subscriptions_2" = "%@ מינויי **Telegram Premium**";
-"Chat.Giveaway.Message.Subscriptions_many" = "%@ מינויי **Telegram Premium**";
+"Chat.Giveaway.Message.Subscriptions_2" = "%@ מינויי **PChat Premium**";
+"Chat.Giveaway.Message.Subscriptions_many" = "%@ מינויי **PChat Premium**";
 "Chat.Giveaway.Message.WinnersInfo.Stars_2" = "**%@ כוכבים**";
 "Chat.Giveaway.Message.WinnersInfo.Stars_many" = "**%@ כוכבים**";
 "Chat.Giveaway.Message.WinnersMore_2" = "ו%@ נוספים!";
 "Chat.Giveaway.Message.WinnersMore_many" = "ו%@נוספים!";
 "Chat.Giveaway.Message.WinnersSelectedText_2" = "**%@** זוכים ב[הגרלה]() נבחרו אקראית על ידי טלגרם";
 "Chat.Giveaway.Message.WinnersSelectedText_many" = "**%@** זוכים ב[הגרלה]() נבחרו אקראית על ידי טלגרם";
-"Chat.Giveaway.Message.WithSubscriptions_2" = "**%@** מינויי Telegram Premium";
-"Chat.Giveaway.Message.WithSubscriptions_many" = "**%@** מינויי Telegram Premium";
+"Chat.Giveaway.Message.WithSubscriptions_2" = "**%@** מינויי PChat Premium";
+"Chat.Giveaway.Message.WithSubscriptions_many" = "**%@** מינויי PChat Premium";
 "Chat.MessageRangeDeleted.ForBothSides_2" = "הודעות של יומיים ימחקו עבור שני הצדדים.";
 "Chat.MessageRangeDeleted.ForBothSides_many" = "הודעות של %@ ימים ימחקו עבור שני הצדדים.";
 "Chat.MessageRangeDeleted.ForMe_2" = "הודעות של יומיים נמחקו";
@@ -16678,8 +16678,8 @@ Error: %8$@";
 "Gift.View.Resale.Relist.Success.Stars_many" = "%@ כוכבים";
 "Gift.View.Sale.Stars_2" = "%@ כוכבים";
 "Gift.View.Sale.Stars_many" = "%@ כוכבים";
-"GiftLink.TelegramPremium_2" = "Telegram Premium למשך חודשיים";
-"GiftLink.TelegramPremium_many" = "Telegram Premium למשך %@ חודשים";
+"GiftLink.PChatPremium_2" = "PChat Premium למשך חודשיים";
+"GiftLink.PChatPremium_many" = "PChat Premium למשך %@ חודשים";
 "GlobalAutodeleteSettings.ApplyChatsSubject_2" = "%@ צ'אטים";
 "GlobalAutodeleteSettings.ApplyChatsSubject_many" = "%@ צ'אטים";
 "Group.Appearance.EmojiPackUpdated" = "ערכת אימוג'י הקבוצה עודכנה.";
@@ -16716,7 +16716,7 @@ Error: %8$@";
 "LiveStreamSettings.PricePerComment.Stars_2" = "%@ כוכבים";
 "LiveStreamSettings.PricePerComment.Stars_many" = "%@ כוכבים";
 "Login.CallRequestState1" = "טלגרם יתקשר אליך בעוד %d:%.2d";
-"Login.PRIVACY_URL" = "https://telegram.org/privacy";
+"Login.PRIVACY_URL" = "https://p.chat/privacy";
 "Login.SmsRequestState1" = "טלגרם ישלח לך SMS בעוד %d:%.2d";
 "MESSAGES" = "%1$@ שלח/ה לך %2$@ הודעות";
 "MESSAGES_SEPARATED" = "%1$@|שלח/ה לך %2$@ הודעות";
@@ -17089,10 +17089,10 @@ Error: %8$@";
 "PUSH_MESSAGE_VIDEOS_TEXT_many" = "שלח/ה לך %d סרטונים";
 "PUSH_REACT_STORY_NAME" = "%1$@|%3$@ %2$@ לסטורי שלך";
 "Passport.Scans" = "סריקות";
-"PassportKit.Button.GetTelegramAlertInstall" = "התקן";
-"PassportKit.Button.GetTelegramAlertMessage" = "יישום טלגרם צריך להיות מותקן בכדי שיהיה ניתן להשתמש בדרכון טלגרם";
-"PassportKit.Button.GetTelegramAlertNotNow" = "לא עכשיו";
-"PassportKit.Button.GetTelegramAlertTitle" = "התקן את אפליקציית טלגרם";
+"PassportKit.Button.GetPChatAlertInstall" = "התקן";
+"PassportKit.Button.GetPChatAlertMessage" = "יישום טלגרם צריך להיות מותקן בכדי שיהיה ניתן להשתמש בדרכון טלגרם";
+"PassportKit.Button.GetPChatAlertNotNow" = "לא עכשיו";
+"PassportKit.Button.GetPChatAlertTitle" = "התקן את אפליקציית טלגרם";
 "PassportKit.Button.Title" = "התחבר באמצעות טלגרם";
 "Peer.DeletedUser" = "חשבון מחוק";
 "PeerInfo.AllowedReactions.MaxCountValue_2" = "%d רגשונים";
@@ -17139,7 +17139,7 @@ Error: %8$@";
 "Premium.MaxExpiringStoriesNoPremiumText" = "הגעת למגבלה של**%@** סטוריז ב**24** שעות.";
 "Premium.MaxExpiringStoriesNoPremiumTextNumberFormat_2" = "**%d** סטוריז";
 "Premium.MaxExpiringStoriesNoPremiumTextNumberFormat_many" = "**%d** סטוריז";
-"Premium.MaxExpiringStoriesText" = "באפשרותך לפרסם **%@** סטוריז תוך **24** שעות. הירשם ל**Telegram Premium** כדי להגדיל את המגבלה ל**%@**.";
+"Premium.MaxExpiringStoriesText" = "באפשרותך לפרסם **%@** סטוריז תוך **24** שעות. הירשם ל**PChat Premium** כדי להגדיל את המגבלה ל**%@**.";
 "Premium.MaxExpiringStoriesTextNumberFormat_2" = "**%d** סטוריז";
 "Premium.MaxExpiringStoriesTextNumberFormat_many" = "**%d** סטוריז";
 "Premium.MaxExpiringStoriesTextPremiumNumberFormat_2" = "**%d** סטוריז";
@@ -17236,8 +17236,8 @@ Error: %8$@";
 "ShortTime.MinutesAgo_2" = "%@ דק'";
 "ShortTime.MinutesAgo_many" = "%@ דק'";
 "SocksProxySetup.UseSocks5" = "השתמש בפרוקסי SOCKS5 ";
-"SponsoredMessageInfo.ActionUrl" = "https://ads.telegram.org";
-"SponsoredMessageInfo.Text" = "ראה https://telegram.org";
+"SponsoredMessageInfo.ActionUrl" = "https://ads.p.chat";
+"SponsoredMessageInfo.Text" = "ראה https://p.chat";
 "SponsoredMessageInfoScreen.Text" = "בניגוד לאפליקציות אחרות, טלגרם לעולם לא משתמש בנתונים הפרטיים שלך כדי להתאים פרסומות. פרטי המשתמש אינם נכרים או מנותחים כדי להציג פרסומות, וכל המשתמשים שצופים בערוץ בטלגרם רואים את אותה ההודעה הממומנת.\n\nבניגוד לאפליקציות אחרות, טלגרם לא עוקבת האם לחצת על הודעה ממומנת, ואינה מכוונת אותן אליך בהתאם לפעילות שלך. אנו חוסמים קישורים חיצוניים בהודעות ממומנות כדי לוודא שגופים צד שלישי לא יוכלו לרגל אחרי המשתמשים שלנו. אאנחנו מאמינים שלכולם יש את הזכות לפרטיות, ופלטפורמות טכנולוגיות צריכות לכבד זאת.\n\nטלגרם מספקת שירות חינמי ובלתי מוגבל למאות מליוני משתמשים, הכולל עלויות שרתים ותעבורה משמעותיות. כדי להישאר עצמאיים ונאמנים לערכים שלנו, טלגרם פיתחה כלי כדי לקדם הודעות שמתחשבות בפרטיות המשתמש. אנו מזמינים מפרסמים אחראיים כאן:\n[url]\nהודעות ממומנות נמצאות כרגע במצב בדיקה. ברגע שהן יושרו במלואן ויאפשרו לטלגרם לכסות את העלויות הבסיסיות שלה, נתחיל לחלוק את ההכנסה מהפרסומות עם בעלי הערוצים בהן הן מוצגות.\n\nמודעות באינטרנט לא צריכות להיות שם נרדף להפרת פרטיות המשתמש. הבה נגדיר כיצד חברה טכנולוגית צריכה לפעול – ביחד.";
 "Stars.Intro.PurchasedText.Stars_2" = "%@ כוכבים";
 "Stars.Intro.PurchasedText.Stars_many" = "%@ כוכבים";
@@ -17247,10 +17247,10 @@ Error: %8$@";
 "Stars.Intro.Transaction.LiveStreamPaidMessage_many" = "עמלה ל%@ הודעות שידור סטורי";
 "Stars.Intro.Transaction.PaidMessage_2" = "עמלה עבור %@ הודעות";
 "Stars.Intro.Transaction.PaidMessage_many" = "עמלה עבור %@ הודעות";
-"Stars.Intro.Transaction.TelegramBotApi.Messages_2" = "%@ הודעות";
-"Stars.Intro.Transaction.TelegramBotApi.Messages_many" = "%@ הודעות";
-"Stars.Intro.Transaction.TelegramPremium_2" = "Premium למשך חודשיים";
-"Stars.Intro.Transaction.TelegramPremium_many" = "Premium למשך %@ חודשים";
+"Stars.Intro.Transaction.PChatBotApi.Messages_2" = "%@ הודעות";
+"Stars.Intro.Transaction.PChatBotApi.Messages_many" = "%@ הודעות";
+"Stars.Intro.Transaction.PChatPremium_2" = "Premium למשך חודשיים";
+"Stars.Intro.Transaction.PChatPremium_many" = "Premium למשך %@ חודשים";
 "Stars.Purchase.Stars_2" = "%@ כוכבים";
 "Stars.Purchase.Stars_many" = "%@ כוכבים";
 "Stars.Purchase.StarsNeeded_2" = "דרושים %@ כוכבים";
@@ -17274,10 +17274,10 @@ Error: %8$@";
 "Stars.Transaction.PaidMessage_many" = "עמלה עבור %@ הודעות";
 "Stars.Transaction.Photos_2" = "%@ תמונות";
 "Stars.Transaction.Photos_many" = "%@ תמונות";
-"Stars.Transaction.TelegramBotApi.Messages_2" = "%@ הודעות";
-"Stars.Transaction.TelegramBotApi.Messages_many" = "%@ הודעות";
-"Stars.Transaction.TelegramPremium_2" = "Premium למשך חודשיים";
-"Stars.Transaction.TelegramPremium_many" = "Premium למשך %@ חודשים";
+"Stars.Transaction.PChatBotApi.Messages_2" = "%@ הודעות";
+"Stars.Transaction.PChatBotApi.Messages_many" = "%@ הודעות";
+"Stars.Transaction.PChatPremium_2" = "Premium למשך חודשיים";
+"Stars.Transaction.PChatPremium_many" = "Premium למשך %@ חודשים";
 "Stars.Transaction.Videos_2" = "%@ סרטונים";
 "Stars.Transaction.Videos_many" = "%@ סרטונים";
 "Stars.Transfer.BotSubscribeInfo.Stars_2" = "%@ כוכבים";
@@ -17296,8 +17296,8 @@ Error: %8$@";
 "Stats.Boosts.Boosters_many" = "%@ בוסט";
 "Stats.Boosts.Boosts_2" = "%@ בוסט";
 "Stats.Boosts.Boosts_many" = "%@ בוסט";
-"Stats.Boosts.PrepaidGiveawayCount_2" = "%@ Telegram Premium";
-"Stats.Boosts.PrepaidGiveawayCount_many" = "%@ Telegram Premium";
+"Stats.Boosts.PrepaidGiveawayCount_2" = "%@ PChat Premium";
+"Stats.Boosts.PrepaidGiveawayCount_many" = "%@ PChat Premium";
 "Stats.Boosts.ShowMoreBoosts_2" = "הצג %@ בוסט נוספים";
 "Stats.Boosts.ShowMoreBoosts_many" = "הצג %@ בוסט נוספים";
 "Stats.Boosts.Stars_2" = "%@ כוכבים";

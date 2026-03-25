@@ -50,7 +50,7 @@
 "PUSH_MESSAGE_STICKER" = "%1$@|%2$@ 贴纸";
 "PUSH_CHAT_MESSAGE_STICKER" = "%2$@|%1$@：%3$@ 贴纸";
 
-"PUSH_CONTACT_JOINED" = "%1$@|已加入 Telegram ！";
+"PUSH_CONTACT_JOINED" = "%1$@|已加入 PChat ！";
 
 "PUSH_CHANNEL_MESSAGE_TEXT" = "%1$@|%2$@";
 "PUSH_CHANNEL_MESSAGE_NOTEXT" = "%1$@|新消息";
@@ -205,7 +205,7 @@
 "PUSH_PINNED_GIF" = "%1$@|📌 已置顶一张 GIF 动态图";
 "PUSH_PINNED_PAID_MEDIA" = "%1$@|已置顶一条价格为%2$@ 的付费帖子";
 
-"PUSH_CONTACT_JOINED" = "%1$@|已加入 Telegram ！";
+"PUSH_CONTACT_JOINED" = "%1$@|已加入 PChat ！";
 
 "PUSH_AUTH_UNKNOWN" = "新登录|来自无法识别的设备 %1$@";
 "PUSH_AUTH_REGION" = "新登录|设备： %1$@，位置： %2$@";
@@ -401,38 +401,38 @@
 "Date.ChatDateHeaderYear" = "%3$@年%1$@%2$@日";
 
 // Tour
-"Tour.Title1" = "Telegram";
+"Tour.Title1" = "PChat";
 "Tour.Text1" = "世界上**最快的**聊天工具\n**免费**又**安全**";
 
 "Tour.Title2" = "快速";
-"Tour.Text2" = "**Telegram** 收发信息\n比任何应用都快";
+"Tour.Text2" = "**PChat** 收发信息\n比任何应用都快";
 
 "Tour.Title3" = "强大";
-"Tour.Text3" = "**Telegram** 不论消息或是媒体文件\n都无大小限制";
+"Tour.Text3" = "**PChat** 不论消息或是媒体文件\n都无大小限制";
 
 "Tour.Title4" = "安全";
-"Tour.Text4" = "**Telegram** 保障您的消息安全\n免受黑客攻击";
+"Tour.Text4" = "**PChat** 保障您的消息安全\n免受黑客攻击";
 
 "Tour.Title5" = "云端";
-"Tour.Text5" = "**Telegram** 让您能从\n多个设备收发消息。";
+"Tour.Text5" = "**PChat** 让您能从\n多个设备收发消息。";
 
 "Tour.Title6" = "免费";
-"Tour.Text6" = "**Telegram** 提供免费无限制的聊天与媒体的云端存储。";
+"Tour.Text6" = "**PChat** 提供免费无限制的聊天与媒体的云端存储。";
 
 "Tour.StartButton" = "开始聊天";
 
 // Login
 "Login.PhoneAndCountryHelp" = "请确认您的国际电话区号并输入您的手机号码。";
-"Login.CodeSentInternal" = "我们已向您其它设备上的 **Telegram** 应用发送了一条带有验证码的消息";
+"Login.CodeSentInternal" = "我们已向您其它设备上的 **PChat** 应用发送了一条带有验证码的消息";
 "Login.HaveNotReceivedCodeInternal" = "未收到验证码？";
 "Login.CodeSentSms" = "我们通过短信向您发送了验证码";
 "Login.Code" = "验证码";
-"Login.WillCallYou" = "Telegram 会在 %@ 后使用电话语音播放验证码";
-"Login.CallRequestState2" = "正在请求 Telegram 呼叫…";
-"Login.CallRequestState3" = "Telegram 已拨打您的电话\n[仍未收到验证码？]";
+"Login.WillCallYou" = "PChat 会在 %@ 后使用电话语音播放验证码";
+"Login.CallRequestState2" = "正在请求 PChat 呼叫…";
+"Login.CallRequestState3" = "PChat 已拨打您的电话\n[仍未收到验证码？]";
 "Login.EmailNotConfiguredError" = "需要设置电子邮箱才能向我们发送详细错误信息。\n\n请前往设备的设置 > 邮件， 然后点击帐号 > 添加帐号并设置电子邮箱。";
 "Login.EmailCodeSubject" = "%@, no code";
-"Login.EmailCodeBody" = "My phone number is:\n%@\nI can't get an activation code for Telegram.";
+"Login.EmailCodeBody" = "My phone number is:\n%@\nI can't get an activation code for PChat.";
 "Login.UnknownError" = "发生错误，请稍后再试。";
 "Login.InvalidCodeError" = "验证码无效，请重试。";
 "Login.NetworkError" = "请检查您的网络连接后重试。";
@@ -443,13 +443,13 @@
 "Login.InvalidLastNameError" = "抱歉，此姓氏不可用。";
 
 "Login.InvalidPhoneEmailSubject" = "Invalid phone number: %@";
-"Login.InvalidPhoneEmailBody" = "I'm trying to use my mobile phone number: %1$@\nBut Telegram says it's invalid. Please help.\n\nApp version: %2$@\nOS version: %3$@\nLocale: %4$@\nMNC: %5$@";
+"Login.InvalidPhoneEmailBody" = "I'm trying to use my mobile phone number: %1$@\nBut PChat says it's invalid. Please help.\n\nApp version: %2$@\nOS version: %3$@\nLocale: %4$@\nMNC: %5$@";
 
 "Login.PhoneBannedEmailSubject" = "被封禁的手机号码: %@";
-"Login.PhoneBannedEmailBody" = "I'm trying to use my mobile phone number: %1$@\nBut Telegram says it's banned. Please help.\n\nApp version: %2$@\nOS version: %3$@\nLocale: %4$@\nMNC: %5$@";
+"Login.PhoneBannedEmailBody" = "I'm trying to use my mobile phone number: %1$@\nBut PChat says it's banned. Please help.\n\nApp version: %2$@\nOS version: %3$@\nLocale: %4$@\nMNC: %5$@";
 
-"Login.PhoneGenericEmailSubject" = "Telegram iOS 错误： %@";
-"Login.PhoneGenericEmailBody" = "I'm trying to use my mobile phone number: %1$@\nBut Telegram shows an error. Please help.\n\nError: %2$@\nApp version: %3$@\nOS version: %4$@\nLocale: %5$@\nMNC: %6$@";
+"Login.PhoneGenericEmailSubject" = "PChat iOS 错误： %@";
+"Login.PhoneGenericEmailBody" = "I'm trying to use my mobile phone number: %1$@\nBut PChat shows an error. Please help.\n\nError: %2$@\nApp version: %3$@\nOS version: %4$@\nLocale: %5$@\nMNC: %6$@";
 
 "Login.PhonePaidEmailSubject" = "付款问题";
 
@@ -492,11 +492,11 @@
 "Contacts.TabTitle" = "联系人";
 "Contacts.Title" = "联系人";
 "Contacts.FailedToSendInvitesMessage" = "发生错误。";
-"Contacts.AccessDeniedError" = "Telegram 无法访问您的通讯录";
-"Contacts.AccessDeniedHelpLandscape" = "请前往您 %@ 的「系统设置 - 隐私 - 通讯录」，\n然后开启 Telegram 的权限即可。";
-"Contacts.AccessDeniedHelpPortrait" = "请在您的 %@ 上打开“设置” > “隐私” > “通讯录”，然后将 Telegram 的权限打开。";
+"Contacts.AccessDeniedError" = "PChat 无法访问您的通讯录";
+"Contacts.AccessDeniedHelpLandscape" = "请前往您 %@ 的「系统设置 - 隐私 - 通讯录」，\n然后开启 PChat 的权限即可。";
+"Contacts.AccessDeniedHelpPortrait" = "请在您的 %@ 上打开“设置” > “隐私” > “通讯录”，然后将 PChat 的权限打开。";
 "Contacts.AccessDeniedHelpON" = "开启";
-"Contacts.InviteToTelegram" = "邀请使用 Telegram";
+"Contacts.InviteToPChat" = "邀请使用 PChat";
 "Contacts.InviteFriends" = "邀请朋友";
 "Contacts.SelectAll" = "全选";
 
@@ -532,7 +532,7 @@
 "Conversation.Contact" = "联系人信息";
 "Conversation.BlockUser" = "屏蔽此用户";
 "Conversation.UnblockUser" = "将此用户移出黑名单";
-"Conversation.UnsupportedMedia" = "您当前的 Telegram 版本无法查看此消息。请前往这里下载新版：https://telegram.org/update";
+"Conversation.UnsupportedMedia" = "您当前的 PChat 版本无法查看此消息。请前往这里下载新版：https://p.chat/update";
 "Conversation.EncryptionWaiting" = "等待 %@ 上线…";
 "Conversation.EncryptionProcessing" = "交换加密密钥中…";
 "Conversation.EmptyPlaceholder" = "暂无消息…";
@@ -580,9 +580,9 @@
 "Notification.CreatedChannel" = "频道已创建";
 "Notification.CreatedGroup" = "群组已创建";
 "Notification.CreatedChatWithTitle" = "%@ 已创建群组 “%@”";
-"Notification.Joined" = "%@ 已加入 Telegram";
+"Notification.Joined" = "%@ 已加入 PChat";
 "Notification.ChangedGroupName" = "%@ 已将群组名称更改为 “%@”";
-"Notification.NewAuthDetected" = "%1$@，\n我们发现您的帐号在 %3$@%2$@ %4$@ 从新的设备登录\n\n设备：%5$@\n位置：%6$@\n\n如果这不是您本人，您可以前往「Telegram 设置 > 隐私和安全 > 活动会话」中将该对话进行注销。\n\n如果您认为其他人在您不知情的情况下登录了您的账号，您可以在「Telegram 设置 > 隐私和安全」中开启「两步验证」。\n\n此致，\nTelegram 团队";
+"Notification.NewAuthDetected" = "%1$@，\n我们发现您的帐号在 %3$@%2$@ %4$@ 从新的设备登录\n\n设备：%5$@\n位置：%6$@\n\n如果这不是您本人，您可以前往「PChat 设置 > 隐私和安全 > 活动会话」中将该对话进行注销。\n\n如果您认为其他人在您不知情的情况下登录了您的账号，您可以在「PChat 设置 > 隐私和安全」中开启「两步验证」。\n\n此致，\nPChat 团队";
 "Notification.MessageLifetimeChanged" = "%1$@ 已将阅后即焚计时器设定为 %2$@";
 "Notification.MessageLifetimeChangedOutgoing" = "您已将阅后即焚计时器设定为 %1$@";
 "Notification.MessageLifetimeRemoved" = "%1$@ 已停用阅后即焚计时器";
@@ -679,7 +679,7 @@
 "UserInfo.NotificationsDisabled" = "已停用";
 "UserInfo.NotificationsEnable" = "启用";
 "UserInfo.NotificationsDisable" = "停用";
-"UserInfo.Invite" = "邀请使用 Telegram";
+"UserInfo.Invite" = "邀请使用 PChat";
 
 // New Contact
 "NewContact.Title" = "新建联系人";
@@ -717,7 +717,7 @@
 
 // Encryption Key
 "EncryptionKey.Title" = "加密密钥";
-"EncryptionKey.Description" = "这是您与“%1$@”私密对话加密密钥的可视化图片。\n\n如果这张图片看起来和“%2$@”设备上的图片完全一致，端到端加密则是安全的。\n\n了解详情请前往 telegram.org 的 FAQ";
+"EncryptionKey.Description" = "这是您与“%1$@”私密对话加密密钥的可视化图片。\n\n如果这张图片看起来和“%2$@”设备上的图片完全一致，端到端加密则是安全的。\n\n了解详情请前往 p.chat 的 FAQ";
 
 // Conversation media
 "ConversationMedia.Title" = "媒体";
@@ -753,9 +753,9 @@
 "Settings.BlockedUsers" = "已屏蔽的用户";
 "Settings.ChatBackground" = "聊天壁纸";
 "Settings.Support" = "向我们提问";
-"Settings.FAQ" = "Telegram 常见问题";
-"Settings.FAQ_URL" = "https://telegram.org/faq#general-questions";
-"Settings.FAQ_Intro" = "请注意：Telegram 的技术支持由志愿者提供。我们会尽快回复，但仍可能需要等待一段时间。\n\n请前往“常见问题”看看：那里有各种常见问题和故障排除指南。";
+"Settings.FAQ" = "PChat 常见问题";
+"Settings.FAQ_URL" = "https://p.chat/faq#general-questions";
+"Settings.FAQ_Intro" = "请注意：PChat 的技术支持由志愿者提供。我们会尽快回复，但仍可能需要等待一段时间。\n\n请前往“常见问题”看看：那里有各种常见问题和故障排除指南。";
 "Settings.FAQ_Button" = "常见问题";
 "Settings.SaveIncomingPhotos" = "自动保存图片";
 
@@ -812,7 +812,7 @@
 "Cache.Title" = "存储使用情况";
 "Cache.ClearCache" = "清空缓存";
 "Cache.KeepMedia" = "媒体文件保留时间";
-"Cache.Help" = "为节省磁盘空间，此期限内云端聊天中**未访问过**的图片、视频和其他文件将会被移除。\n\n所有媒体文件都会保留在 Telegram 云端，若您需要可再次下载。";
+"Cache.Help" = "为节省磁盘空间，此期限内云端聊天中**未访问过**的图片、视频和其他文件将会被移除。\n\n所有媒体文件都会保留在 PChat 云端，若您需要可再次下载。";
 
 // Blocked Users
 "BlockedUsers.Title" = "已屏蔽";
@@ -836,9 +836,9 @@
 
 
 "Settings.LogoutConfirmationTitle" = "您确定要登出吗？";
-"Settings.LogoutConfirmationText" = "此操作将取消您的所有私密聊天。\n\n您可以同时在所有设备上使用 Telegram，并在同一个应用中使用多个帐号。";
+"Settings.LogoutConfirmationText" = "此操作将取消您的所有私密聊天。\n\n您可以同时在所有设备上使用 PChat，并在同一个应用中使用多个帐号。";
 
-"Login.PadPhoneHelp" = "您可以使用主要手机号码在所有设备上登录到 Telegram。\n请不要使用您 iPad SIM 卡的号码 — 我们需要给您发送短信。\n\n此号码是否正确？\n{number}";
+"Login.PadPhoneHelp" = "您可以使用主要手机号码在所有设备上登录到 PChat。\n请不要使用您 iPad SIM 卡的号码 — 我们需要给您发送短信。\n\n此号码是否正确？\n{number}";
 "Login.PadPhoneHelpTitle" = "您的手机号码";
 
 "MessageTimer.Custom" = "自定义";
@@ -935,7 +935,7 @@
 
 "Username.Title" = "用户名";
 "Username.Placeholder" = "您的用户名";
-"Username.Help" = "您可以在 **Telegram** 上设置一个用户名。设置后，别人可以通过此用户名找到您并与您联系，而不需要您的手机号码。\n\n您可以使用 **a-z**、**0-9** 和下划线。最小长度为 **5** 个字符。";
+"Username.Help" = "您可以在 **PChat** 上设置一个用户名。设置后，别人可以通过此用户名找到您并与您联系，而不需要您的手机号码。\n\n您可以使用 **a-z**、**0-9** 和下划线。最小长度为 **5** 个字符。";
 "Username.InvalidTooShort" = "用户名必须包含至少 5 个字符。";
 "Username.InvalidStartsWithNumber" = "用户名不能以数字开头。";
 "Username.InvalidCharacters" = "您只能使用 a-z、0-9 和下划线。";
@@ -1040,7 +1040,7 @@
 
 "Settings.PhoneNumber" = "手机号码";
 
-"PhoneNumberHelp.Help" = "您可以在此更换当前绑定到 Telegram 的手机号码。您的帐号和所有云端数据（消息、媒体文件、联系人等）都会迁移到新号码下。";
+"PhoneNumberHelp.Help" = "您可以在此更换当前绑定到 PChat 的手机号码。您的帐号和所有云端数据（消息、媒体文件、联系人等）都会迁移到新号码下。";
 "PhoneNumberHelp.Alert" = "如果其他用户在其通讯录中存有您的新号码，或者您的隐私设置允许其查看您的号码，该用户将会看到您的新号码。您可以在“设置” > “隐私与安全” > “手机号码”中更改此设置。";
 "PhoneNumberHelp.ChangeNumber" = "更换手机号码";
 
@@ -1052,9 +1052,9 @@
 "ChangePhoneNumberCode.Code" = "您的验证码";
 "ChangePhoneNumberCode.CodePlaceholder" = "验证码";
 "ChangePhoneNumberCode.Help" = "我们已向此号码发送短信验证码";
-"ChangePhoneNumberCode.CallTimer" = "Telegram 会在 %@ 后使用电话语音播放验证码";
+"ChangePhoneNumberCode.CallTimer" = "PChat 会在 %@ 后使用电话语音播放验证码";
 "ChangePhoneNumberCode.RequestingACall" = "发送呼叫请求中…";
-"ChangePhoneNumberCode.Called" = "Telegram 已拨打您的电话";
+"ChangePhoneNumberCode.Called" = "PChat 已拨打您的电话";
 
 "LoginPassword.Title" = "您的密码";
 "LoginPassword.PasswordPlaceholder" = "密码";
@@ -1206,7 +1206,7 @@
 "SharedMedia.EmptyFilesText" = "您可以发送或收取最大为1.5G的任意格式的文件，\n并在所有设备上查看。";
 
 "ShareFileTip.Title" = "分享文件";
-"ShareFileTip.Text" = "您可以在此处从您的相机胶卷中分享 **无损的** 媒体文件。\n\n如要分享其它类型的文件，请在 %@（例如浏览器）中打开它们，点击 **通过其它应用打开** 或者点击分享按钮并选择「Telegram」。";
+"ShareFileTip.Text" = "您可以在此处从您的相机胶卷中分享 **无损的** 媒体文件。\n\n如要分享其它类型的文件，请在 %@（例如浏览器）中打开它们，点击 **通过其它应用打开** 或者点击分享按钮并选择「PChat」。";
 "ShareFileTip.CloseTip" = "关闭提示";
 
 "DialogList.SearchSectionDialogs" = "聊天和联系人";
@@ -1214,7 +1214,7 @@
 "DialogList.SearchSectionGlobal" = "全局搜索";
 "DialogList.SearchSectionMessages" = "消息";
 
-"Username.LinkHint" = "通过此链接可以与您聊天：[\nhttps://t.me/%@]";
+"Username.LinkHint" = "通过此链接可以与您聊天：[\nhttps://p.chat/%@]";
 "Username.LinkCopied" = "链接已复制到剪贴板。";
 
 
@@ -1229,23 +1229,23 @@
 "PasscodeSettings.TurnPasscodeOn" = "开启密码锁";
 "PasscodeSettings.TurnPasscodeOff" = "关闭锁定码";
 "PasscodeSettings.ChangePasscode" = "修改锁定码";
-"PasscodeSettings.Help" = "当您设置好锁定码后，聊天页面会出现一个锁形图标。点击它来锁定 Telegram 应用。\n\n注意：如果您忘记了锁定码，您将需要重新安装应用。所有的私密聊天将会丢失。";
+"PasscodeSettings.Help" = "当您设置好锁定码后，聊天页面会出现一个锁形图标。点击它来锁定 PChat 应用。\n\n注意：如果您忘记了锁定码，您将需要重新安装应用。所有的私密聊天将会丢失。";
 "PasscodeSettings.UnlockWithTouchId" = "使用 Touch ID 解锁";
 "PasscodeSettings.SimplePasscode" = "简易锁定码";
 "PasscodeSettings.SimplePasscodeHelp" = "简易锁定码由四位数字组成。";
 "PasscodeSettings.EncryptData" = "加密本地数据库";
-"PasscodeSettings.EncryptDataHelp" = "这是一个试验性功能，请谨慎使用。它通过锁定码生成密钥，来加密本地储存的 Telegram 数据。";
+"PasscodeSettings.EncryptDataHelp" = "这是一个试验性功能，请谨慎使用。它通过锁定码生成密钥，来加密本地储存的 PChat 数据。";
 
-"EnterPasscode.EnterTitle" = "请输入 Telegram 锁定码";
+"EnterPasscode.EnterTitle" = "请输入 PChat 锁定码";
 "EnterPasscode.ChangeTitle" = "修改锁定码";
-"EnterPasscode.EnterPasscode" = "请输入 Telegram 锁定码";
+"EnterPasscode.EnterPasscode" = "请输入 PChat 锁定码";
 "EnterPasscode.EnterNewPasscodeNew" = "请输入一个锁定码";
 "EnterPasscode.EnterNewPasscodeChange" = "请输入新的锁定码";
 "EnterPasscode.RepeatNewPasscode" = "请再次输入新的锁定码";
 "EnterPasscode.EnterCurrentPasscode" = "请输入当前的锁定码";
-"EnterPasscode.TouchId" = "解锁 Telegram";
+"EnterPasscode.TouchId" = "解锁 PChat";
 
-"DialogList.PasscodeLockHelp" = "点击以锁定 Telegram";
+"DialogList.PasscodeLockHelp" = "点击以锁定 PChat";
 
 "PasscodeSettings.AutoLock" = "自动锁定";
 "PasscodeSettings.AutoLock.Disabled" = "停用";
@@ -1264,32 +1264,32 @@
 
 "AccessDenied.Title" = "请授权访问";
 
-"AccessDenied.Contacts" = "Telegram 基于您已有的联系人列表与他人通讯。\n\n请在您的设备上打开“设置” > “隐私” > “通讯录”，然后将 Telegram 的权限打开。";
+"AccessDenied.Contacts" = "PChat 基于您已有的联系人列表与他人通讯。\n\n请在您的设备上打开“设置” > “隐私” > “通讯录”，然后将 PChat 的权限打开。";
 
-"AccessDenied.VoiceMicrophone" = "Telegram 需要访问您的麦克风，以便您发送语音消息。\n\n请在您的设备上打开“设置” > “隐私” > “麦克风”，然后将 Telegram 的权限打开。";
+"AccessDenied.VoiceMicrophone" = "PChat 需要访问您的麦克风，以便您发送语音消息。\n\n请在您的设备上打开“设置” > “隐私” > “麦克风”，然后将 PChat 的权限打开。";
 
-"AccessDenied.VideoMicrophone" = "Telegram 需要访问您的麦克风，以便您在视频中录制声音。\n\n请在您的设备上打开“设置” > “隐私” > “麦克风”，然后将 Telegram 的权限打开。";
+"AccessDenied.VideoMicrophone" = "PChat 需要访问您的麦克风，以便您在视频中录制声音。\n\n请在您的设备上打开“设置” > “隐私” > “麦克风”，然后将 PChat 的权限打开。";
 
-"AccessDenied.MicrophoneRestricted" = "Telegram 无法访问麦克风。\n\n请在您的设备上打开“设置” > “通用” > “访问限制” > “麦克风”，然后将 Telegram 的权限打开。";
+"AccessDenied.MicrophoneRestricted" = "PChat 无法访问麦克风。\n\n请在您的设备上打开“设置” > “通用” > “访问限制” > “麦克风”，然后将 PChat 的权限打开。";
 
 
-"AccessDenied.Camera" = "Telegram 需要访问您的相机，以便您拍照或录像。\n\n请在您的设备上打开“设置” > “隐私” > “相机”，然后将 Telegram 的权限打开。";
+"AccessDenied.Camera" = "PChat 需要访问您的相机，以便您拍照或录像。\n\n请在您的设备上打开“设置” > “隐私” > “相机”，然后将 PChat 的权限打开。";
 
-"AccessDenied.CameraRestricted" = "Telegram 无法访问相机。\n\n请在您的设备上打开“设置” > “通用” > “访问限制” > “相机”，然后将 Telegram 的权限打开。";
+"AccessDenied.CameraRestricted" = "PChat 无法访问相机。\n\n请在您的设备上打开“设置” > “通用” > “访问限制” > “相机”，然后将 PChat 的权限打开。";
 
 "AccessDenied.CameraDisabled" = "此设备已被禁止使用相机。\n\n请前往「设置 - 通用 - 访问限制」中打开「相机」的开关。";
 
-"AccessDenied.PhotosAndVideos" = "Telegram 需要访问您的相册，以便您发送图片或视频。\n\n请在您的设备上打开“设置” > “隐私” > “照片”，然后将 Telegram 的权限打开。";
+"AccessDenied.PhotosAndVideos" = "PChat 需要访问您的相册，以便您发送图片或视频。\n\n请在您的设备上打开“设置” > “隐私” > “照片”，然后将 PChat 的权限打开。";
 
-"AccessDenied.SaveMedia" = "Telegram 需要访问您的相册，以便您保存图片或视频。\n\n请在您的设备上打开“设置” > “隐私” > “照片”，然后将 Telegram 的权限打开。";
+"AccessDenied.SaveMedia" = "PChat 需要访问您的相册，以便您保存图片或视频。\n\n请在您的设备上打开“设置” > “隐私” > “照片”，然后将 PChat 的权限打开。";
 
-"AccessDenied.PhotosRestricted" = "Telegram 无法访问照片。\n\n请前往「设置 - 隐私 - 照片」中开启 Telegram 权限。";
+"AccessDenied.PhotosRestricted" = "PChat 无法访问照片。\n\n请前往「设置 - 隐私 - 照片」中开启 PChat 权限。";
 
-"AccessDenied.LocationDenied" = "Telegram 需要访问您的位置信息，以便您将其分享给联系人。\n\n请在您的设备上打开“设置” > “隐私” > “定位服务”，然后将 Telegram 的权限打开。";
+"AccessDenied.LocationDenied" = "PChat 需要访问您的位置信息，以便您将其分享给联系人。\n\n请在您的设备上打开“设置” > “隐私” > “定位服务”，然后将 PChat 的权限打开。";
 
-"AccessDenied.LocationDisabled" = "Telegram 需要访问您的位置信息，以便您将其分享给联系人。\n\n请在您的设备上打开“设置” > “隐私” > “定位服务”，然后将 Telegram 的权限打开。";
+"AccessDenied.LocationDisabled" = "PChat 需要访问您的位置信息，以便您将其分享给联系人。\n\n请在您的设备上打开“设置” > “隐私” > “定位服务”，然后将 PChat 的权限打开。";
 
-"AccessDenied.LocationTracking" = "Telegram 需要访问您的位置信息，以便您与朋友分享位置。\n\n请在您的设备上打开“设置” > “隐私” > “定位服务”，然后将 Telegram 的权限打开。";
+"AccessDenied.LocationTracking" = "PChat 需要访问您的位置信息，以便您与朋友分享位置。\n\n请在您的设备上打开“设置” > “隐私” > “定位服务”，然后将 PChat 的权限打开。";
 
 "AccessDenied.Settings" = "设置";
 
@@ -1378,7 +1378,7 @@
 "TwoStepAuth.SetupEmail" = "设置恢复电子邮箱";
 "TwoStepAuth.ChangeEmail" = "更改密码恢复电子邮箱";
 "TwoStepAuth.PendingEmailHelp" = "您的密码恢复电子邮箱 %@ 正在等待验证，在完成验证之前它将不会启用。";
-"TwoStepAuth.GenericHelp" = "您已启用两步验证。\n您将需要此处设置的密码以登录到您的 Telegram 帐号。";
+"TwoStepAuth.GenericHelp" = "您已启用两步验证。\n您将需要此处设置的密码以登录到您的 PChat 帐号。";
 
 "TwoStepAuth.ConfirmationTitle" = "两步验证";
 "TwoStepAuth.ConfirmationText" = "请检查你的电子邮箱，并点击验证链接来完成两步验证的设置。请务必也检查垃圾邮件文件夹。";
@@ -1398,7 +1398,7 @@
 
 "TwoStepAuth.EmailTitle" = "密码恢复电子邮箱";
 "TwoStepAuth.EmailSkip" = "跳过";
-"TwoStepAuth.EmailSkipAlert" = "您确定不设置密码恢复邮箱吗？\n\n一旦您忘记了密码，您将无法再访问您的 Telegram 帐号，并且再也没有办法恢复帐号数据。";
+"TwoStepAuth.EmailSkipAlert" = "您确定不设置密码恢复邮箱吗？\n\n一旦您忘记了密码，您将无法再访问您的 PChat 帐号，并且再也没有办法恢复帐号数据。";
 "TwoStepAuth.Email" = "电子邮箱";
 "TwoStepAuth.EmailPlaceholder" = "您的电子邮箱";
 "TwoStepAuth.EmailHelp" = "请添加您的有效电子邮箱。这是忘记密码时唯一的恢复方法。";
@@ -1410,7 +1410,7 @@
 
 "TwoStepAuth.RecoveryUnavailable" = "因为您在设置密码时没有同时提供密码恢复电子邮箱，您剩下的选择就只有回忆起您的密码或重置您的帐号。";
 "TwoStepAuth.RecoveryFailed" = "您剩下的选择只有回忆起您的密码或重置您的帐号。";
-"TwoStepAuth.ResetAccountHelp" = "如果您确认重置帐号，您将丢失 Telegram 中所有的聊天、消息、媒体和文件。";
+"TwoStepAuth.ResetAccountHelp" = "如果您确认重置帐号，您将丢失 PChat 中所有的聊天、消息、媒体和文件。";
 "TwoStepAuth.ResetAccountConfirmation" = "如果您重置了帐号，将会丢失所有的聊天、消息、媒体和文件。";
 
 "TwoStepAuth.RecoveryTitle" = "电子邮箱验证码";
@@ -1427,7 +1427,7 @@
 "Conversation.FileDropbox" = "Dropbox";
 
 "Conversation.FileOpenIn" = "使用其它应用打开…";
-"Conversation.FileHowToText" = "如需分享其它类型的文件，在您的 %@（例如浏览器）中打开它们，点击 **通过其它应用打开** 或在分享按钮中选择使用 Telegram 打开。";
+"Conversation.FileHowToText" = "如需分享其它类型的文件，在您的 %@（例如浏览器）中打开它们，点击 **通过其它应用打开** 或在分享按钮中选择使用 PChat 打开。";
 
 "Map.LocationTitle" = "位置";
 "Map.OpenInMaps" = "在地图中显示";
@@ -1461,9 +1461,9 @@
 "Map.ETAHours_any" = "%@ 小时";
 
 
-"ChangePhone.ErrorOccupied" = "手机号码 %@ 已经和一个 Telegram 帐号绑定。请先删除该帐号再迁移到此新号码。";
+"ChangePhone.ErrorOccupied" = "手机号码 %@ 已经和一个 PChat 帐号绑定。请先删除该帐号再迁移到此新号码。";
 
-"AccessDenied.LocationTracking" = "Telegram 需要访问您的位置信息，以便您与朋友分享位置。\n\n请在您的设备上打开“设置” > “隐私” > “定位服务”，然后将 Telegram 的权限打开。";
+"AccessDenied.LocationTracking" = "PChat 需要访问您的位置信息，以便您与朋友分享位置。\n\n请在您的设备上打开“设置” > “隐私” > “定位服务”，然后将 PChat 的权限打开。";
 
 "PrivacySettings.AuthSessions" = "活跃会话";
 "AuthSessions.Title" = "活跃会话";
@@ -1473,7 +1473,7 @@
 "AuthSessions.TerminateSession" = "注销会话";
 "AuthSessions.OtherSessions" = "活跃会话";
 "AuthSessions.EmptyTitle" = "没有其它的会话";
-"AuthSessions.EmptyText" = "您可以从其它的手机、平板和桌面设备用同样的手机号码登录到 Telegram。所有数据将被实时同步。";
+"AuthSessions.EmptyText" = "您可以从其它的手机、平板和桌面设备用同样的手机号码登录到 PChat。所有数据将被实时同步。";
 "AuthSessions.AppUnofficial" = "（ID: %@）";
 
 "WebPreview.GettingLinkInfo" = "正在获取链接信息…";
@@ -1486,7 +1486,7 @@
 
 "GroupInfo.InviteLink.Title" = "邀请链接";
 "GroupInfo.InviteLink.LinkSection" = "链接";
-"GroupInfo.InviteLink.Help" = "任何已安装 Telegram 的用户都将可以通过此链接加入您的群组。";
+"GroupInfo.InviteLink.Help" = "任何已安装 PChat 的用户都将可以通过此链接加入您的群组。";
 "GroupInfo.InviteLink.CopyLink" = "拷贝链接";
 "GroupInfo.InviteLink.RevokeLink" = "撤销链接";
 "GroupInfo.InviteLink.ShareLink" = "分享链接";
@@ -1573,7 +1573,7 @@
 
 "Login.PhoneNumberHelp" = "帮助";
 "Login.EmailPhoneSubject" = "无效号码 %@";
-"Login.EmailPhoneBody" = "I'm trying to use my mobile phone number: %@\nBut Telegram says it's invalid. Please help.\nAdditional Info: %@, %@.";
+"Login.EmailPhoneBody" = "I'm trying to use my mobile phone number: %@\nBut PChat says it's invalid. Please help.\nAdditional Info: %@, %@.";
 
 
 "SharedMedia.EmptyLinksText" = "此聊天中分享的所有链接都会显示在这里";
@@ -1600,8 +1600,8 @@
 "Channel.Edit.LinkItem" = "链接";
 
 "Channel.Username.Title" = "链接";
-"Channel.Username.Help" = "您可以在 **Telegram** 上为频道设置一个名称。设置后，别人将能够通过此名称找到您的频道。\n\n您可以使用 **a-z**、**0-9** 和下划线。最小长度为 **5** 个字符。";
-"Channel.Username.LinkHint" = "通过这个链接可以打开您的频道：[\nhttps://t.me/%@]";
+"Channel.Username.Help" = "您可以在 **PChat** 上为频道设置一个名称。设置后，别人将能够通过此名称找到您的频道。\n\n您可以使用 **a-z**、**0-9** 和下划线。最小长度为 **5** 个字符。";
+"Channel.Username.LinkHint" = "通过这个链接可以打开您的频道：[\nhttps://p.chat/%@]";
 "Channel.Username.InvalidTooShort" = "公开链接必须包含至少 5 个字符。";
 "Channel.Username.InvalidStartsWithNumber" = "公开链接不能以数字开头。";
 "Channel.Username.InvalidCharacters" = "抱歉，此用户名不符合规范。";
@@ -1772,7 +1772,7 @@
 
 "Group.Management.AddModeratorHelp" = "您可以添加管理员帮助您管理群组。";
 
-"Watch.AppName" = "Telegram";
+"Watch.AppName" = "PChat";
 "Watch.Compose.AddContact" = "选择联系人";
 "Watch.Compose.CreateMessage" = "创建消息";
 "Watch.Compose.CurrentLocation" = "当前位置";
@@ -1807,7 +1807,7 @@
 
 "Watch.Message.ForwardedFrom" = "转发自";
 
-"Watch.Notification.Joined" = "已加入 Telegram";
+"Watch.Notification.Joined" = "已加入 PChat";
 
 "Watch.MessageView.Title" = "消息";
 "Watch.MessageView.Forward" = "转发";
@@ -1821,9 +1821,9 @@
 "Watch.Stickers.StickerPacks" = "贴纸包";
 
 "Watch.Location.Current" = "当前位置信息";
-"Watch.Location.Access" = "允许 Telegram 获取您的位置";
+"Watch.Location.Access" = "允许 PChat 获取您的位置";
 
-"Watch.AuthRequired" = "若要开始，请先在手机上登录到 Telegram";
+"Watch.AuthRequired" = "若要开始，请先在手机上登录到 PChat";
 
 "Watch.NoConnection" = "无连接";
 "Watch.ConnectionDescription" = "您的手表需要在连接后才能运行应用";
@@ -1870,7 +1870,7 @@
 "Cache.ClearProgress" = "请稍候…";
 "Cache.ClearEmpty" = "无";
 "Cache.ByPeerHeader" = "聊天";
-"Cache.Indexing" = "Telegram 正在计算当前缓存占用空间。\n这可能需要几分钟。";
+"Cache.Indexing" = "PChat 正在计算当前缓存占用空间。\n这可能需要几分钟。";
 
 "ExplicitContent.AlertTitle" = "抱歉";
 "ExplicitContent.AlertChannel" = "您无法访问这个频道，因为它违反了 App Store 的规定。";
@@ -1951,7 +1951,7 @@
 "PrivacyLastSeenSettings.GroupsAndChannelsHelp" = "上面的选项可以决定谁能将您添加到群组/频道。";
 "MusicPlayer.VoiceNote" = "语音消息";
 
-"Watch.Microphone.Access" = "允许 Telegram 获取您手机上的麦克风权限";
+"Watch.Microphone.Access" = "允许 PChat 获取您手机上的麦克风权限";
 
 "Settings.AppleWatch" = "Apple Watch";
 "AppleWatch.Title" = "Apple Watch";
@@ -1970,7 +1970,7 @@
 "KeyCommand.SendMessage" = "发送消息";
 "KeyCommand.ChatInfo" = "聊天信息";
 
-"Conversation.SecretLinkPreviewAlert" = "您要启用私密聊天中的链接预览功能吗？注意，链接预览将在 Telegram 的服务器上生成。";
+"Conversation.SecretLinkPreviewAlert" = "您要启用私密聊天中的链接预览功能吗？注意，链接预览将在 PChat 的服务器上生成。";
 "Conversation.SecretChatContextBotAlert" = "请注意：消息框内机器人是由第三方开发者提供的。为了使机器人工作，您在 @ 这些机器人（后需接空格）之后输入的消息将会传送给相关的开发者。";
 
 "Map.OpenInWaze" = "在 Waze 中显示";
@@ -2044,7 +2044,7 @@
 "Group.Setup.TypePublicHelp" = "任何人都可以搜索、加入公开群组，并查看历史聊天记录。";
 "Group.Setup.TypePrivateHelp" = "私密群组只能通过他人的邀请或邀请链接加入。";
 
-"Group.Username.CreatePublicLinkHelp" = "所有人都可以与其他人分享此链接，并使用 Telegram 的搜索功能找到您的群组。";
+"Group.Username.CreatePublicLinkHelp" = "所有人都可以与其他人分享此链接，并使用 PChat 的搜索功能找到您的群组。";
 "Group.Username.CreatePrivateLinkHelp" = "任何人都可以通过此链接加入您的群组。您可以随时撤销此链接。";
 
 "Conversation.PinMessageAlertGroup" = "是否置顶此消息并通知所有群组成员？";
@@ -2146,12 +2146,12 @@
 
 "Login.CodeSentCall" = "我们正在呼叫您的手机以播放验证码。";
 
-"Login.WillSendSms" = "Telegram 将在 %@ 后给您发送短信";
-"Login.SmsRequestState2" = "正在请求 Telegram 发送短信…";
-"Login.SmsRequestState3" = "Telegram 已向您发送短信\n[仍未收到验证码？]";
+"Login.WillSendSms" = "PChat 将在 %@ 后给您发送短信";
+"Login.SmsRequestState2" = "正在请求 PChat 发送短信…";
+"Login.SmsRequestState3" = "PChat 已向您发送短信\n[仍未收到验证码？]";
 
 "CancelResetAccount.Title" = "撤销账号重置";
-"CancelResetAccount.TextSMS" = "某个人通过您的手机号码（%@）发送了删除您的 Telegram 账号并重置您的两步验证密码的请求。\n\n如果那并非您本人，请输入我们刚刚通过短信给您的手机号码发送的验证码。";
+"CancelResetAccount.TextSMS" = "某个人通过您的手机号码（%@）发送了删除您的 PChat 账号并重置您的两步验证密码的请求。\n\n如果那并非您本人，请输入我们刚刚通过短信给您的手机号码发送的验证码。";
 
 "CancelResetAccount.Success" = "删除帐号（%@）的请求已被取消 。";
 
@@ -2250,7 +2250,7 @@
 
 
 
-"Conversation.BotInteractiveUrlAlert" = "是否允许 %@ 传送您的 Telegram 昵称及 ID（不是您的手机号码）到通过机器人打开的网页中呢？";
+"Conversation.BotInteractiveUrlAlert" = "是否允许 %@ 传送您的 PChat 昵称及 ID（不是您的手机号码）到通过机器人打开的网页中呢？";
 "StickerPacksSettings.ArchivedMasks" = "已归档装饰";
 "StickerSettings.MaskContextInfo" = "如果您归档了一套装饰包，您可以从「已归档装饰包」选项中快速将其恢复。";
 "StickerPacksSettings.ArchivedMasks.Info" = "You can have up to 200 sets of masks.
@@ -2258,7 +2258,7 @@ Unused sets are archived when you add more.";
 
 "CloudStorage.Title" = "云存储";
 
-"Widget.AuthRequired" = "登录到 Telegram";
+"Widget.AuthRequired" = "登录到 PChat";
 "Widget.NoUsers" = "发送消息后，就能在这里看到您的朋友";
 
 
@@ -2285,11 +2285,11 @@ Unused sets are archived when you add more.";
 "Conversation.JumpToDate" = "跳转到此日期";
 "Conversation.AddToReadingList" = "添加到阅读列表";
 
-"AccessDenied.CallMicrophone" = "Telegram 需要访问您的麦克风，以便您进行语音通话。\n\n请在您的设备上打开“设置” > “隐私” > “麦克风”，然后将 Telegram 的权限打开。";
+"AccessDenied.CallMicrophone" = "PChat 需要访问您的麦克风，以便您进行语音通话。\n\n请在您的设备上打开“设置” > “隐私” > “麦克风”，然后将 PChat 的权限打开。";
 
 "Call.EncryptionKey.Title" = "加密密钥";
 
-"Application.Name" = "Telegram";
+"Application.Name" = "PChat";
 "DialogList.Pin" = "置顶";
 "DialogList.Unpin" = "取消置顶";
 "DialogList.PinLimitError" = "抱歉，您最多只能置顶 %@ 个聊天。";
@@ -2339,7 +2339,7 @@ Unused sets are archived when you add more.";
 "Calls.AddTab" = "添加此标签页";
 "Calls.NewCall" = "新建通话";
 
-"Calls.RatingTitle" = "请对您这次 Telegram 通话的质量\n作出评价";
+"Calls.RatingTitle" = "请对您这次 PChat 通话的质量\n作出评价";
 "Calls.SubmitRating" = "提交";
 
 
@@ -2422,7 +2422,7 @@ Unused sets are archived when you add more.";
 "Checkout.NewCard.PaymentCard" = "付款卡";
 "Checkout.NewCard.SaveInfo" = "保存付款信息";
 "Checkout.NewCard.SaveInfoEnableHelp" = "您可以保存您的付款信息以便在未来使用。\n请先[开启两步验证]后再启用此功能。";
-"Checkout.NewCard.SaveInfoHelp" = "您可以保存付款信息以便在未来使用。将会直接由支付服务提供商保存。Telegram 无法获取您的信用卡数据。";
+"Checkout.NewCard.SaveInfoHelp" = "您可以保存付款信息以便在未来使用。将会直接由支付服务提供商保存。PChat 无法获取您的信用卡数据。";
 "Checkout.NewCard.CardholderNameTitle" = "持卡人";
 "Checkout.NewCard.CardholderNamePlaceholder" = "持卡人姓名";
 "Checkout.NewCard.PostcodeTitle" = "账单地址";
@@ -2526,14 +2526,14 @@ Unused sets are archived when you add more.";
 
 "Calls.RatingFeedback" = "添加评价…";
 
-"Call.StatusIncoming" = "Telegram 语音通话…";
+"Call.StatusIncoming" = "PChat 语音通话…";
 "Call.IncomingVoiceCall" = "视频来电";
 "Call.IncomingVideoCall" = "视频来电";
 "Call.StatusRequesting" = "连接中…";
 "Call.StatusWaiting" = "等待中…";
 "Call.StatusRinging" = "拨号中…";
 "Call.StatusConnecting" = "连接中…";
-"Call.StatusOngoing" = "Telegram 语音通话 %@";
+"Call.StatusOngoing" = "PChat 语音通话 %@";
 "Call.StatusEnded" = "通话结束";
 "Call.StatusFailed" = "通话失败";
 "Call.StatusBusy" = "线路正忙";
@@ -2598,7 +2598,7 @@ Unused sets are archived when you add more.";
 "Call.AudioRouteHeadphones" = "耳机";
 "Call.AudioRouteHide" = "隐藏";
 
-"Call.PhoneCallInProgressMessage" = "如果您正在进行电话通话，将无法拨打 Telegram 电话。";
+"Call.PhoneCallInProgressMessage" = "如果您正在进行电话通话，将无法拨打 PChat 电话。";
 "Call.RecordingDisabledMessage" = "请在录制语音消息前结束通话。";
 
 "Call.EmojiDescription" = "如果 %@ 屏幕上的表情和此处一致，那么本次通话就是 100%% 安全的。";
@@ -2608,8 +2608,8 @@ Unused sets are archived when you add more.";
 "Conversation.HoldForAudio" = "长按以录制语音消息，点按切换为视频消息。";
 "Conversation.HoldForVideo" = "长按以录制视频消息，点按切换为语音消息。";
 
-"UserInfo.TelegramCall" = "Telegram 通话";
-"UserInfo.TelegramVideoCall" = "Telegram 视频通话";
+"UserInfo.PChatCall" = "PChat 通话";
+"UserInfo.PChatVideoCall" = "PChat 视频通话";
 "UserInfo.PhoneCall" = "电话呼叫";
 
 "SharedMedia.CategoryMedia" = "媒体";
@@ -2617,8 +2617,8 @@ Unused sets are archived when you add more.";
 "SharedMedia.CategoryLinks" = "链接";
 "SharedMedia.CategoryOther" = "音乐";
 
-"AccessDenied.VideoMessageCamera" = "Telegram 需要访问您的相机，以便您录制视频信息。\n\n请在您的设备上打开“设置” > “隐私” > “相机”，然后将 Telegram 的权限打开。";
-"AccessDenied.VideoMessageMicrophone" = "Telegram 需要访问您的麦克风，以便您发送视频消息。\n\n请在您的设备上打开“设置” > “隐私” > “麦克风”，然后将 Telegram 的权限打开。";
+"AccessDenied.VideoMessageCamera" = "PChat 需要访问您的相机，以便您录制视频信息。\n\n请在您的设备上打开“设置” > “隐私” > “相机”，然后将 PChat 的权限打开。";
+"AccessDenied.VideoMessageMicrophone" = "PChat 需要访问您的麦克风，以便您发送视频消息。\n\n请在您的设备上打开“设置” > “隐私” > “麦克风”，然后将 PChat 的权限打开。";
 
 "ChatSettings.AutomaticVideoMessageDownload" = "自动下载视频消息";
 
@@ -2644,7 +2644,7 @@ Unused sets are archived when you add more.";
 
 "Privacy.PaymentsTitle" = "付款";
 "Privacy.PaymentsClearInfo" = "清除付款和配送信息";
-"Privacy.PaymentsClearInfoHelp" = "您可以删除您的配送信息并通知所有的支付服务提供商清除您已保存的信用卡信息。请注意：Telegram 从来不会存储您的信用卡数据。";
+"Privacy.PaymentsClearInfoHelp" = "您可以删除您的配送信息并通知所有的支付服务提供商清除您已保存的信用卡信息。请注意：PChat 从来不会存储您的信用卡数据。";
 "Privacy.PaymentsClear.PaymentInfo" = "付款信息";
 "Privacy.PaymentsClear.ShippingInfo" = "配送信息";
 
@@ -2796,7 +2796,7 @@ Unused sets are archived when you add more.";
 
 "Contacts.PhoneNumber" = "手机号码";
 "Contacts.AddPhoneNumber" = "添加 %@";
-"Contacts.ShareTelegram" = "分享 Telegram";
+"Contacts.SharePChat" = "分享 PChat";
 
 "Conversation.ViewChannel" = "查看频道";
 "Conversation.ViewGroup" = "查看群组";
@@ -2860,10 +2860,10 @@ Unused sets are archived when you add more.";
 "Group.Members.AddMemberBotErrorNotAllowed" = "抱歉，您没有向此群组添加机器人的权限。";
 
 "Privacy.Calls.P2P" = "端对端连接";
-"Privacy.Calls.P2PHelp" = "停用端对端连接后，所有通话流量将使用 Telegram 服务器中转以避免泄露您的 IP 地址，但可能会降低音质及画质。";
+"Privacy.Calls.P2PHelp" = "停用端对端连接后，所有通话流量将使用 PChat 服务器中转以避免泄露您的 IP 地址，但可能会降低音质及画质。";
 
 "Privacy.Calls.Integration" = "iOS 通话集成";
-"Privacy.Calls.IntegrationHelp" = "iOS 通话集成能在锁屏界面上和系统的通话记录里显示 Telegram 通话的提示/信息。如果启用了 iCloud 同步，您的通话记录将被共享给 Apple。";
+"Privacy.Calls.IntegrationHelp" = "iOS 通话集成能在锁屏界面上和系统的通话记录里显示 PChat 通话的提示/信息。如果启用了 iCloud 同步，您的通话记录将被共享给 Apple。";
 
 "Call.ReportPlaceholder" = "出了什么问题？";
 "Call.ReportIncludeLog" = "发送技术信息";
@@ -2886,7 +2886,7 @@ Unused sets are archived when you add more.";
 
 
 
-"Contacts.ImportersCount_any" = "%@ 位 Telegram 用户有此联系人信息";
+"Contacts.ImportersCount_any" = "%@ 位 PChat 用户有此联系人信息";
 
 
 
@@ -2895,12 +2895,12 @@ Unused sets are archived when you add more.";
 "SocksProxySetup.UseForCalls" = "对通话启用代理";
 "SocksProxySetup.UseForCallsHelp" = "使用代理服务器可能降低通话质量。";
 
-"InviteText.URL" = "https://telegram.org/dl";
-"InviteText.SingleContact" = "嗨，我在使用 Telegram 聊天。加入我们吧！从这里下载：%@";
+"InviteText.URL" = "https://p.chat/dl";
+"InviteText.SingleContact" = "嗨，我在使用 PChat 聊天。加入我们吧！从这里下载：%@";
 
 
 
-"InviteText.ContactsCountText_any" = "嗨，我在和另外 %@ 位联系人使用 Telegram 聊天。加入我们吧！从这里下载：{url}";
+"InviteText.ContactsCountText_any" = "嗨，我在和另外 %@ 位联系人使用 PChat 聊天。加入我们吧！从这里下载：{url}";
 
 
 
@@ -3058,12 +3058,12 @@ Unused sets are archived when you add more.";
 
 "NotificationSettings.ContactJoined" = "新联系人";
 
-"AccessDenied.LocationAlwaysDenied" = "如果您想要和朋友共享实时位置信息，只有授予 Telegram 定位服务权限才能在应用处于后台时依旧能保持共享。\n\n请前往「设置 - 隐私 - 定位服务」中将 Telegram 设置为“总是”。";
+"AccessDenied.LocationAlwaysDenied" = "如果您想要和朋友共享实时位置信息，只有授予 PChat 定位服务权限才能在应用处于后台时依旧能保持共享。\n\n请前往「设置 - 隐私 - 定位服务」中将 PChat 设置为“总是”。";
 
 "UserInfo.UnblockConfirmation" = "要将“%@”移出黑名单吗？";
 
 "Login.BannedPhoneSubject" = "Banned phone number: %@";
-"Login.BannedPhoneBody" = "我正在尝试使用我的手机号码：%@\n但 Telegram 称该号码已被封禁，请帮助我。";
+"Login.BannedPhoneBody" = "我正在尝试使用我的手机号码：%@\n但 PChat 称该号码已被封禁，请帮助我。";
 
 "Conversation.StopLiveLocation" = "停止共享";
 
@@ -3127,14 +3127,14 @@ Unused sets are archived when you add more.";
 
 "TwoStepAuth.AdditionalPassword" = "两步验证密码";
 
-"PasscodeSettings.HelpTop" = "设置锁定码后，一个“锁”的图标将会出现在聊天列表顶部，点击该图标以锁定 Telegram 应用。";
-"PasscodeSettings.HelpBottom" = "如果您忘记了锁定码，您将只能退出登录或重新安装 Telegram 应用。而所有私密聊天将会丢失。";
+"PasscodeSettings.HelpTop" = "设置锁定码后，一个“锁”的图标将会出现在聊天列表顶部，点击该图标以锁定 PChat 应用。";
+"PasscodeSettings.HelpBottom" = "如果您忘记了锁定码，您将只能退出登录或重新安装 PChat 应用。而所有私密聊天将会丢失。";
 
 "Channel.Setup.TypePublicHelp" = "公开频道可以通过搜索找到，任何人都可以加入。";
 "Channel.Setup.TypePrivateHelp" = "私密频道只能通过邀请链接加入。";
 "Group.Username.InvalidTooShort" = "群组名称必须至少包含 5 个字符。";
 "Group.Username.InvalidStartsWithNumber" = "公开链接不能以数字开头。";
-"Group.Username.CreatePublicLinkHelp" = "所有人都可以与其他人分享此链接，并使用 Telegram 的搜索功能找到您的群组。";
+"Group.Username.CreatePublicLinkHelp" = "所有人都可以与其他人分享此链接，并使用 PChat 的搜索功能找到您的群组。";
 "Channel.TypeSetup.Title" = "频道类型";
 
 "Group.Setup.TypePrivate" = "私密";
@@ -3146,16 +3146,16 @@ Unused sets are archived when you add more.";
 
 "Privacy.PaymentsClearInfoDoneHelp" = "已清除付款信息";
 
-"InfoPlist.NSContactsUsageDescription" = "为了让您在任何设备上联系朋友，Telegram 会将您的联系人信息即时同步到高度加密的 Telegram 云服务器。";
-"InfoPlist.NSLocationWhenInUseUsageDescription" = "Telegram 需要此权限以便在您需要时向您的朋友发送位置信息。";
+"InfoPlist.NSContactsUsageDescription" = "为了让您在任何设备上联系朋友，PChat 会将您的联系人信息即时同步到高度加密的 PChat 云服务器。";
+"InfoPlist.NSLocationWhenInUseUsageDescription" = "PChat 需要此权限以便在您需要时向您的朋友发送位置信息。";
 "InfoPlist.NSCameraUsageDescription" = "我们需要此权限来拍摄和分享照片和视频，以及进行视频通话。";
 "InfoPlist.NSPhotoLibraryUsageDescription" = "需要此权限才能分享照片和视频或将新内容保存到您的设备。";
 "InfoPlist.NSPhotoLibraryAddUsageDescription" = "需要此权限才能分享照片和视频或将新内容保存到您的设备。";
 "InfoPlist.NSMicrophoneUsageDescription" = "我们需要此权限来录制语音消息/有声视频，并分享给他人。";
 "InfoPlist.NSSiriUsageDescription" = "您可以使用 Siri 发送消息。";
-"InfoPlist.NSLocationAlwaysAndWhenInUseUsageDescription" = "当您选择在一个聊天中实时共享您的实时位置时，Telegram 需要后台应用刷新权限以在实时共享期间即时更新位置信息。";
-"InfoPlist.NSLocationAlwaysUsageDescription" = "当您选择在一个聊天中实时共享您的实时位置时，Telegram 需要后台应用刷新权限以在实时共享期间即时更新位置信息。您也需要此权限来从 Apple Watch 发送位置信息。";
-"InfoPlist.NSLocationWhenInUseUsageDescription" = "Telegram 需要此权限以便在您需要时向您的朋友发送位置信息。";
+"InfoPlist.NSLocationAlwaysAndWhenInUseUsageDescription" = "当您选择在一个聊天中实时共享您的实时位置时，PChat 需要后台应用刷新权限以在实时共享期间即时更新位置信息。";
+"InfoPlist.NSLocationAlwaysUsageDescription" = "当您选择在一个聊天中实时共享您的实时位置时，PChat 需要后台应用刷新权限以在实时共享期间即时更新位置信息。您也需要此权限来从 Apple Watch 发送位置信息。";
+"InfoPlist.NSLocationWhenInUseUsageDescription" = "PChat 需要此权限以便在您需要时向您的朋友发送位置信息。";
 "InfoPlist.NSFaceIDUsageDescription" = "您可以使用 Face ID 解锁应用。";
 
 "Privacy.Calls.P2PNever" = "从不";
@@ -3199,10 +3199,10 @@ Unused sets are archived when you add more.";
 "Channel.AdminLogFilter.EventsNewSubscribers" = "新的订阅者";
 "Channel.AdminLogFilter.EventsLeavingSubscribers" = "被移除的订阅者";
 
-"Conversation.ClearPrivateHistory" = "此操作将会从您的 Telegram 云端中删除此聊天中的所有消息和媒体，且不会从对方的记录中删除。";
-"Conversation.ClearGroupHistory" = "此操作将会从您的 Telegram 云端中删除此聊天中的所有消息和媒体，且不会从其他群成员的记录中删除。";
+"Conversation.ClearPrivateHistory" = "此操作将会从您的 PChat 云端中删除此聊天中的所有消息和媒体，且不会从对方的记录中删除。";
+"Conversation.ClearGroupHistory" = "此操作将会从您的 PChat 云端中删除此聊天中的所有消息和媒体，且不会从其他群成员的记录中删除。";
 "Conversation.ClearSecretHistory" = "此操作将会从对话双方的记录里，删除此对话中的所有消息和媒体。";
-"Conversation.ClearSelfHistory" = "此操作将从您的 Telegram 云端中，删除此聊天中的所有的消息和媒体。";
+"Conversation.ClearSelfHistory" = "此操作将从您的 PChat 云端中，删除此聊天中的所有的消息和媒体。";
 
 "MediaPicker.LivePhotoDescription" = "Live Photo 将会自动播放，并像 GIF 动态图一样循环播放。";
 
@@ -3246,8 +3246,8 @@ Unused sets are archived when you add more.";
 "AuthSessions.Sessions" = "会话";
 "AuthSessions.LoggedIn" = "网站";
 "AuthSessions.LogOutApplications" = "取消所有网站的授权";
-"AuthSessions.LogOutApplicationsHelp" = "您可以在支持的网站上使用 Telegram 登录。";
-"AuthSessions.LoggedInWithTelegram" = "使用 Telegram 账号登录的网站";
+"AuthSessions.LogOutApplicationsHelp" = "您可以在支持的网站上使用 PChat 登录。";
+"AuthSessions.LoggedInWithPChat" = "使用 PChat 账号登录的网站";
 "AuthSessions.LogOut" = "登出";
 "AuthSessions.Message" = "您已允许此机器人在您登录 %@ 时向您发送消息。";
 
@@ -3283,7 +3283,7 @@ Unused sets are archived when you add more.";
 
 "SocksProxySetup.ProxyType" = "类型";
 "SocksProxySetup.ProxySocks5" = "SOCKS5";
-"SocksProxySetup.ProxyTelegram" = "MTProto";
+"SocksProxySetup.ProxyPChat" = "MTProto";
 "SocksProxySetup.HostnamePlaceholder" = "服务器";
 "SocksProxySetup.PortPlaceholder" = "端口";
 "SocksProxySetup.UsernamePlaceholder" = "用户名";
@@ -3298,27 +3298,27 @@ Unused sets are archived when you add more.";
 "SocksProxySetup.ProxyEnabled" = "代理\n已启用";
 
 "DialogList.AdLabel" = "代理赞助商";
-"DialogList.AdNoticeAlert" = "此频道是由您的代理服务器所展示的。若要从您的对话列表中移除此频道，在 Telegram 设置 > 数据和存储中停用代理即可。";
-"SocksProxySetup.AdNoticeHelp" = "此代理可能会在您的聊天列表中显示其赞助频道。这不会泄露您的 Telegram 流量。";
+"DialogList.AdNoticeAlert" = "此频道是由您的代理服务器所展示的。若要从您的对话列表中移除此频道，在 PChat 设置 > 数据和存储中停用代理即可。";
+"SocksProxySetup.AdNoticeHelp" = "此代理可能会在您的聊天列表中显示其赞助频道。这不会泄露您的 PChat 流量。";
 
 "SocksProxySetup.ShareProxyList" = "分享代理列表";
 
 "Privacy.SecretChatsTitle" = "私密聊天";
 "Privacy.SecretChatsLinkPreviews" = "链接预览";
-"Privacy.SecretChatsLinkPreviewsHelp" = "链接预览将在 Telegram 服务器上生成，我们不会储存与您所发送的链接有关的任何数据。";
+"Privacy.SecretChatsLinkPreviewsHelp" = "链接预览将在 PChat 服务器上生成，我们不会储存与您所发送的链接有关的任何数据。";
 
 "Privacy.ContactsTitle" = "联系人";
 "Privacy.ContactsSync" = "同步通讯录";
 "Privacy.ContactsSyncHelp" = "开启以持续将此设备上的联系人同步到您的账号。";
 "Privacy.ContactsReset" = "删除已同步的联系人";
-"Privacy.ContactsResetConfirmation" = "这将把您的联系人信息从 Telegram 服务端删除。\n如果“同步联系人”选项处于启用状态，联系人信息将被重新同步。";
+"Privacy.ContactsResetConfirmation" = "这将把您的联系人信息从 PChat 服务端删除。\n如果“同步联系人”选项处于启用状态，联系人信息将被重新同步。";
 
 "Login.TermsOfServiceDecline" = "拒绝";
 "Login.TermsOfServiceAgree" = "同意并继续";
 
 "Login.TermsOfService.ProceedBot" = "同意以继续使用 %@。";
 
-"Login.TermsOfServiceSignupDecline" = "很遗憾，这意味着您无法注册 Telegram。\n\n与其它应用不同，Telegram 不会利用您的个人数据进行广告定位或其它商业目的。Telegram 储存的所有信息都是为了给您创造一个功能丰富的云服务体验。 您可以在「隐私和安全」 里调整我们使用您数据的方式（例如：删除已同步的联系人）。\n\n但若您无法接受 Telegram 的数据收集政策，我们将无法为您提供此服务。";
+"Login.TermsOfServiceSignupDecline" = "很遗憾，这意味着您无法注册 PChat。\n\n与其它应用不同，PChat 不会利用您的个人数据进行广告定位或其它商业目的。PChat 储存的所有信息都是为了给您创造一个功能丰富的云服务体验。 您可以在「隐私和安全」 里调整我们使用您数据的方式（例如：删除已同步的联系人）。\n\n但若您无法接受 PChat 的数据收集政策，我们将无法为您提供此服务。";
 
 "UserInfo.BotPrivacy" = "隐私政策\n";
 
@@ -3331,22 +3331,22 @@ Unused sets are archived when you add more.";
 "PrivacyPolicy.AgeVerificationAgree" = "同意";
 
 "PrivacyPolicy.DeclineTitle" = "拒绝";
-"PrivacyPolicy.DeclineMessage" = "很遗憾，目前没有其他的选择。与其它应用不同，我们不会利用您的个人数据来进行广告定位或其它商业目的。Telegram 储存的所有信息都是为了给您创造一个功能丰富的云服务体验。您可以在「隐私和安全」设置里调整我们使用您数据的方式（例如：删除已同步的联系人）。\n\n如果您不满意 Telegram 的数据收集政策，我们将无法向您提供该服务。";
+"PrivacyPolicy.DeclineMessage" = "很遗憾，目前没有其他的选择。与其它应用不同，我们不会利用您的个人数据来进行广告定位或其它商业目的。PChat 储存的所有信息都是为了给您创造一个功能丰富的云服务体验。您可以在「隐私和安全」设置里调整我们使用您数据的方式（例如：删除已同步的联系人）。\n\n如果您不满意 PChat 的数据收集政策，我们将无法向您提供该服务。";
 "PrivacyPolicy.DeclineDeclineAndDelete" = "拒绝并删除帐号";
 
-"PrivacyPolicy.DeclineLastWarning" = "警告，这将不可逆转地删除您的 Telegram 帐号以及所有储存在 Telegram 云服务器中的数据。\n\n注意：为保留个人数据，您可以先行取消，在导出数据并保存后，再删除您的帐号。（若要导出个人数据，请打开 Telegram 最新桌面版，并进入设置 > 高级 > 导出 Telegram 数据 。）";
+"PrivacyPolicy.DeclineLastWarning" = "警告，这将不可逆转地删除您的 PChat 帐号以及所有储存在 PChat 云服务器中的数据。\n\n注意：为保留个人数据，您可以先行取消，在导出数据并保存后，再删除您的帐号。（若要导出个人数据，请打开 PChat 最新桌面版，并进入设置 > 高级 > 导出 PChat 数据 。）";
 "PrivacyPolicy.DeclineDeleteNow" = "立即删除";
 
-"Settings.Passport" = "Telegram 通行证";
+"Settings.Passport" = "PChat 通行证";
 
 "Passport.Title" = "通行证";
 
 "Passport.RequestHeader" = "%@ 请求访问您的个人数据以便为您提供服务。";
 
-"Passport.InfoTitle" = "Telegram 通行证是什么？";
-"Passport.InfoText" = "有了 Telegram 通行证，您可以轻易地注册需要身份验证的网站和服务。\n\n您的信息、个人数据和证件都将受到端到端加密保护。未经您的允许，任何人（包括 Telegram）都无法读取它们。";
+"Passport.InfoTitle" = "PChat 通行证是什么？";
+"Passport.InfoText" = "有了 PChat 通行证，您可以轻易地注册需要身份验证的网站和服务。\n\n您的信息、个人数据和证件都将受到端到端加密保护。未经您的允许，任何人（包括 PChat）都无法读取它们。";
 "Passport.InfoLearnMore" = "了解更多";
-"Passport.InfoFAQ_URL" = "https://telegram.org/faq#passport";
+"Passport.InfoFAQ_URL" = "https://p.chat/faq#passport";
 
 "Passport.PassportInformation" = "通行证信息";
 "Passport.RequestedInformation" = "所需信息";
@@ -3365,19 +3365,19 @@ Unused sets are archived when you add more.";
 "Passport.AcceptHelp" = "您的文件将被直接发送给 %1$@。同时，也将允许 %2$@ 给您发送信息。";
 "Passport.Authorize" = "授权";
 
-"Passport.DeletePassport" = "删除 Telegram 通行证";
-"Passport.DeletePassportConfirmation" = "您确定想要删除您的 Telegram 通行证吗？所有信息都将丢失。";
+"Passport.DeletePassport" = "删除 PChat 通行证";
+"Passport.DeletePassportConfirmation" = "您确定想要删除您的 PChat 通行证吗？所有信息都将丢失。";
 
-"Passport.PasswordHelp" = "请输入 Telegram 密码\n以解密您的数据";
+"Passport.PasswordHelp" = "请输入 PChat 密码\n以解密您的数据";
 "Passport.PasswordPlaceholder" = "请输入密码";
 "Passport.InvalidPasswordError" = "密码错误，请重试。";
 "Passport.FloodError" = "尝试次数过多。请稍后再试。";
-"Passport.UpdateRequiredError" = "抱歉，您的 Telegram 版本太低，无法处理此请求。 请升级 Telegram。";
+"Passport.UpdateRequiredError" = "抱歉，您的 PChat 版本太低，无法处理此请求。 请升级 PChat。";
 
 "Passport.ForgottenPassword" = "密码遗失";
-"Passport.PasswordReset" = "所有上传到您 Telegram 通行证的证件都将丢失。之后，您将能够上传新的证件。";
+"Passport.PasswordReset" = "所有上传到您 PChat 通行证的证件都将丢失。之后，您将能够上传新的证件。";
 
-"Passport.PasswordDescription" = "请创建一个密码使用端到端加密保护个人数据。\n\n每次您在新的设备登录到 Telegram 时也将需要输入这个密码。";
+"Passport.PasswordDescription" = "请创建一个密码使用端到端加密保护个人数据。\n\n每次您在新的设备登录到 PChat 时也将需要输入这个密码。";
 "Passport.PasswordCreate" = "创建密码";
 "Passport.PasswordCompleteSetup" = "完成密码设置";
 "Passport.PasswordNext" = "下一步";
@@ -3496,15 +3496,15 @@ Unused sets are archived when you add more.";
 "Passport.Address.ScansHelp" = "该证件必须包含您的姓名、住址、一份邮票/条形码/二维码/商标，发件日期不能在 3 个月之前。";
 
 "Passport.Phone.Title" = "手机号码";
-"Passport.Phone.UseTelegramNumber" = "使用 %@";
-"Passport.Phone.UseTelegramNumberHelp" = "使用当前 Telegram 帐号绑定的手机号码。";
+"Passport.Phone.UsePChatNumber" = "使用 %@";
+"Passport.Phone.UsePChatNumberHelp" = "使用当前 PChat 帐号绑定的手机号码。";
 "Passport.Phone.EnterOtherNumber" = "或输入新的手机号码";
 "Passport.Phone.Help" = "注意：您将在您提供的手机号码上收到一份验证码。";
 "Passport.Phone.Delete" = "删除手机号码";
 
 "Passport.Email.Title" = "电子邮箱";
-"Passport.Email.UseTelegramEmail" = "使用 %@";
-"Passport.Email.UseTelegramEmailHelp" = "使用当前 Telegram 帐号中设定的电子邮箱。";
+"Passport.Email.UsePChatEmail" = "使用 %@";
+"Passport.Email.UsePChatEmailHelp" = "使用当前 PChat 帐号中设定的电子邮箱。";
 "Passport.Email.EnterOtherEmail" = "或输入一个新的电子邮箱地址";
 "Passport.Email.EmailPlaceholder" = "输入您的电子邮箱地址";
 "Passport.Email.Help" = "您所提供的电子邮箱将会收到一份验证码。";
@@ -3530,7 +3530,7 @@ Unused sets are archived when you add more.";
 "Passport.ScanPassport" = "扫描您的护照";
 "Passport.ScanPassportHelp" = "扫描您护照或身份证的机读区以自动填写个人信息。";
 
-"TwoStepAuth.PasswordRemovePassportConfirmation" = "您确定要停用密码吗？\n\n所有存储在 Telegram 通行证里的数据都将丢失。";
+"TwoStepAuth.PasswordRemovePassportConfirmation" = "您确定要停用密码吗？\n\n所有存储在 PChat 通行证里的数据都将丢失。";
 
 "Application.Update" = "升级";
 
@@ -3575,17 +3575,17 @@ Unused sets are archived when you add more.";
 
 "Passport.CorrectErrors" = "点击以纠正错误";
 
-"Passport.NotLoggedInMessage" = "请登录到您的账号以使用 Telegram 通行证。";
+"Passport.NotLoggedInMessage" = "请登录到您的账号以使用 PChat 通行证。";
 
-"Update.Title" = "Telegram 更新";
-"Update.AppVersion" = "Telegram %@";
-"Update.UpdateApp" = "升级 Telegram";
+"Update.Title" = "PChat 更新";
+"Update.AppVersion" = "PChat %@";
+"Update.UpdateApp" = "升级 PChat";
 "Update.Skip" = "跳过";
 
 "ReportPeer.ReasonCopyright" = "版权";
 
 "PrivacySettings.DataSettings" = "数据设置";
-"PrivacySettings.DataSettingsHelp" = "控制您存储在 Telegram 云端的数据，这些数据能让 Telegram 提供更好的服务。";
+"PrivacySettings.DataSettingsHelp" = "控制您存储在 PChat 云端的数据，这些数据能让 PChat 提供更好的服务。";
 
 "PrivateDataSettings.Title" = "数据设置";
 "Privacy.ChatsTitle" = "聊天";
@@ -3770,8 +3770,8 @@ Unused sets are archived when you add more.";
 
 "SocksProxySetup.PasteFromClipboard" = "粘贴自剪贴板";
 
-"Share.AuthTitle" = "登录到 Telegram";
-"Share.AuthDescription" = "打开并登录到 Telegram 以分享。";
+"Share.AuthTitle" = "登录到 PChat";
+"Share.AuthDescription" = "打开并登录到 PChat 以分享。";
 
 "Notifications.DisplayNamesOnLockScreen" = "在锁定屏幕上的名称";
 "Notifications.DisplayNamesOnLockScreenInfoWithLink" = "在设备锁定时在通知中显示名称。如要停用，请确保同时在 [iOS 设置> 通知] 中将“消息预览”设置为“解锁时”或“从不”。";
@@ -3817,7 +3817,7 @@ Unused sets are archived when you add more.";
 "ApplyLanguage.ChangeLanguageAction" = "更改";
 "ApplyLanguage.ApplyLanguageAction" = "应用语言";
 "ApplyLanguage.UnsufficientDataTitle" = "数据不足";
-"ApplyLanguage.UnsufficientDataText" = "很遗憾，这个自定义语言包 (%1$@) 不包含 Telegram iOS 的数据。你可以使用以下方法为此语言包做出贡献 [翻译平台]()。";
+"ApplyLanguage.UnsufficientDataText" = "很遗憾，这个自定义语言包 (%1$@) 不包含 PChat iOS 的数据。你可以使用以下方法为此语言包做出贡献 [翻译平台]()。";
 "ApplyLanguage.LanguageNotSupportedError" = "抱歉，这种语言似乎并不存在。";
 "ApplyLanguage.ApplySuccess" = "语言已更改";
 
@@ -3858,8 +3858,8 @@ Unused sets are archived when you add more.";
 "InstantPage.TapToOpenLink" = "点击以打开链接：";
 "InstantPage.RelatedArticleAuthorAndDateTitle" = "%1$@ • %2$@";
 
-"AuthCode.Alert" = "您的登录验证码是 %@。在您尝试登录 Telegram 时输入它。\n\n不要将此验证码透露给任何人。";
-"Login.CheckOtherSessionMessages" = "查看您的 Telegram 消息";
+"AuthCode.Alert" = "您的登录验证码是 %@。在您尝试登录 PChat 时输入它。\n\n不要将此验证码透露给任何人。";
+"Login.CheckOtherSessionMessages" = "查看您的 PChat 消息";
 "Login.SendCodeViaSms" = "点击此处通过短信收取验证码";
 "Login.SendCodeViaCall" = "在此手机上获取验证码";
 "Login.SendCodeViaFlashCall" = "通过电话获取验证码";
@@ -3869,7 +3869,7 @@ Unused sets are archived when you add more.";
 "Login.CodeExpired" = "验证码已过期，请重新登录。";
 "Login.CancelSignUpConfirmation" = "您想终止注册吗？";
 
-"Passcode.AppLockedAlert" = "Telegram\n已被锁定";
+"Passcode.AppLockedAlert" = "PChat\n已被锁定";
 
 "ChatList.ReadAll" = "全部已读";
 "ChatList.Read" = "已读";
@@ -3889,7 +3889,7 @@ Unused sets are archived when you add more.";
 "Permissions.Skip" = "跳过";
 
 "Permissions.ContactsTitle.v0" = "同步您的通讯录";
-"Permissions.ContactsText.v0" = "查看您在 Telegram 上的朋友并无缝切换，无需手动添加。";
+"Permissions.ContactsText.v0" = "查看您在 PChat 上的朋友并无缝切换，无需手动添加。";
 "Permissions.ContactsAllow.v0" = "允许访问";
 "Permissions.ContactsAllowInSettings.v0" = "在设置中允许";
 
@@ -3900,7 +3900,7 @@ Unused sets are archived when you add more.";
 "Permissions.NotificationsAllowInSettings.v0" = "在“设置”中开启";
 
 "Permissions.CellularDataTitle.v0" = "打开蜂窝数据";
-"Permissions.CellularDataText.v0" = "不用担心，Telegram将网络使用率降至最低。 您可以在“设置”>“数据和存储”中进一步控制它。";
+"Permissions.CellularDataText.v0" = "不用担心，PChat将网络使用率降至最低。 您可以在“设置”>“数据和存储”中进一步控制它。";
 "Permissions.CellularDataAllowInSettings.v0" = "在\"设置\"中开启";
 
 "Permissions.SiriTitle.v0" = "开启 Siri";
@@ -3911,11 +3911,11 @@ Unused sets are archived when you add more.";
 "Permissions.PrivacyPolicy" = "隐私政策";
 
 "Contacts.PermissionsTitle" = "访问通讯录";
-"Contacts.PermissionsText" = "请允许 Telegram 访问您的通讯录，以便查找您的朋友。";
+"Contacts.PermissionsText" = "请允许 PChat 访问您的通讯录，以便查找您的朋友。";
 "Contacts.PermissionsAllow" = "允许访问";
 "Contacts.PermissionsAllowInSettings" = "在设置中允许";
 "Contacts.PermissionsSuppressWarningTitle" = "是否保持通讯录停用？";
-"Contacts.PermissionsSuppressWarningText" = "您将不会知道您的朋友何时加入Telegram 。 我们建议在“设置”中启用通讯录访问。";
+"Contacts.PermissionsSuppressWarningText" = "您将不会知道您的朋友何时加入PChat 。 我们建议在“设置”中启用通讯录访问。";
 "Contacts.PermissionsKeepDisabled" = "保持停用";
 "Contacts.PermissionsEnable" = "开启";
 
@@ -3927,7 +3927,7 @@ Unused sets are archived when you add more.";
 "Notifications.PermissionsAllowInSettings" = "在\"设置\"中开启";
 "Notifications.PermissionsOpenSettings" = "打开设置";
 "Notifications.PermissionsSuppressWarningTitle" = "确定不开启消息通知吗？";
-"Notifications.PermissionsSuppressWarningText" = "您的当前设置可能会错过 Telegram 内的重要信息。\n\n您可以启用提醒或横幅功能，并设置仅将特定的聊天或聊天类型静音，以享有更好的体验。";
+"Notifications.PermissionsSuppressWarningText" = "您的当前设置可能会错过 PChat 内的重要信息。\n\n您可以启用提醒或横幅功能，并设置仅将特定的聊天或聊天类型静音，以享有更好的体验。";
 "Notifications.PermissionsKeepDisabled" = "保持停用";
 "Notifications.PermissionsEnable" = "启用";
 
@@ -3984,8 +3984,8 @@ Unused sets are archived when you add more.";
 
 "AttachmentMenu.WebSearch" = "网络搜索";
 
-"Conversation.UnsupportedMediaPlaceholder" = "此消息不支持当前版本的 Telegram。请更新至最新版本。";
-"Conversation.UpdateTelegram" = "更新 Telegram";
+"Conversation.UnsupportedMediaPlaceholder" = "此消息不支持当前版本的 PChat。请更新至最新版本。";
+"Conversation.UpdatePChat" = "更新 PChat";
 
 "Cache.LowDiskSpaceText" = "你的手机可用空间不足。 请释放一些空间来下载或上传媒体文件。";
 
@@ -3995,7 +3995,7 @@ Unused sets are archived when you add more.";
 "Contacts.SortedByName" = "按姓名排序";
 "Contacts.SortedByPresence" = "按最后上线时间排序";
 
-"NotificationSettings.ContactJoinedInfo" = "当您的电话联系人加入 Telegram 时接受推送通知。";
+"NotificationSettings.ContactJoinedInfo" = "当您的电话联系人加入 PChat 时接受推送通知。";
 
 "GroupInfo.Permissions" = "权限";
 "GroupInfo.Permissions.Title" = "权限";
@@ -4050,7 +4050,7 @@ Unused sets are archived when you add more.";
 "EmptyGroupInfo.Subtitle" = "群组可以拥有：";
 "EmptyGroupInfo.Line1" = "成员上限为 20 万人";
 "EmptyGroupInfo.Line2" = "永久聊天记录";
-"EmptyGroupInfo.Line3" = "公开链接，例如：t.me/title";
+"EmptyGroupInfo.Line3" = "公开链接，例如：p.chat/title";
 "EmptyGroupInfo.Line4" = "具备不同权限的管理员";
 
 "WallpaperPreview.Title" = "壁纸预览";
@@ -4122,7 +4122,7 @@ Unused sets are archived when you add more.";
 "Undo.DeletedChannel" = "频道已删除。";
 "Undo.DeletedGroup" = "群组已删除。";
 
-"AccessDenied.Wallpapers" = "Telegram 需要访问您的相册，以便您可以设置自定义壁纸。\n\n请在您的设备上打开“设置” > “隐私” > “照片”，然后将 Telegram 的权限打开。";
+"AccessDenied.Wallpapers" = "PChat 需要访问您的相册，以便您可以设置自定义壁纸。\n\n请在您的设备上打开“设置” > “隐私” > “照片”，然后将 PChat 的权限打开。";
 
 "Conversation.ChatBackground" = "聊天壁纸";
 "Conversation.ViewBackground" = "查看壁纸";
@@ -4218,7 +4218,7 @@ Unused sets are archived when you add more.";
 "LogoutOptions.Title" = "登出";
 "LogoutOptions.AlternativeOptionsSection" = "其它选项";
 "LogoutOptions.AddAccountTitle" = "添加其他帐号";
-"LogoutOptions.AddAccountText" = "连接其他 Telegram 帐号并轻松切换。";
+"LogoutOptions.AddAccountText" = "连接其他 PChat 帐号并轻松切换。";
 "LogoutOptions.SetPasscodeTitle" = "设置锁定码";
 "LogoutOptions.SetPasscodeText" = "使用锁定码锁定应用程序以禁止他人打开。";
 "LogoutOptions.ClearCacheTitle" = "清空缓存";
@@ -4421,14 +4421,14 @@ Unused sets are archived when you add more.";
 "ChatList.ClearChatConfirmation" = "您确定要删除\n与 %@ 聊天的所有消息记录吗？";
 
 "Settings.CheckPhoneNumberTitle" = "您的手机号码仍是%@吗？";
-"Settings.CheckPhoneNumberText" = "让你的电话号码保持最新，来确保你可以随时登录Telegram。 [了解更多]()";
+"Settings.CheckPhoneNumberText" = "让你的电话号码保持最新，来确保你可以随时登录PChat。 [了解更多]()";
 "Settings.KeepPhoneNumber" = "继续使用 %@";
 "Settings.ChangePhoneNumber" = "修改号码";
 "Settings.CheckPhoneNumberFAQAnchor" = "查看更多";
 
 "Undo.ChatDeletedForBothSides" = "已为双方删除聊天内容。";
 
-"AppUpgrade.Running" = "Optimizing Telegram...
+"AppUpgrade.Running" = "Optimizing PChat...
 This may take a while, depending on the size of the database. Please keep the app open until the process is finished.
 
 Sorry for the inconvenience.";
@@ -4492,7 +4492,7 @@ Sorry for the inconvenience.";
 
 "Privacy.AddNewPeer" = "添加用户或群组";
 "PrivacyPhoneNumberSettings.WhoCanSeeMyPhoneNumber" = "谁可以看到我的手机号码";
-"PrivacyPhoneNumberSettings.CustomHelp" = "已将您的手机号码保存到联系人的用户也将在 Telegram 上看到它。";
+"PrivacyPhoneNumberSettings.CustomHelp" = "已将您的手机号码保存到联系人的用户也将在 PChat 上看到它。";
 "PrivacyPhoneNumberSettings.CustomDisabledHelp" = "对于将您的号码加入联系人列表的用户，只有当您将其添加为联系人后，对方才会看到您的号码。";
 
 "PrivacyPhoneNumberSettings.DiscoveryHeader" = "谁可以通过手机号码找到我";
@@ -4504,7 +4504,7 @@ Sorry for the inconvenience.";
 "PrivacySettings.PasscodeOff" = "关闭";
 "PrivacySettings.PasscodeOn" = "开启";
 
-"UserInfo.BlockConfirmationTitle" = "您想要阻止 %@ 在 Telegram 上给您发消息及打电话吗？";
+"UserInfo.BlockConfirmationTitle" = "您想要阻止 %@ 在 PChat 上给您发消息及打电话吗？";
 "UserInfo.BlockActionTitle" = "屏蔽%@";
 "ReportSpam.DeleteThisChat" = "删除该次聊天";
 
@@ -4655,7 +4655,7 @@ Sorry for the inconvenience.";
 
 "Conversation.ReportGroupLocation" = "群组与位置不相关？";
 "ReportGroupLocation.Title" = "举报与位置无关的群组";
-"ReportGroupLocation.Text" = "如果该群组与位置无关请向 Telegram 官方报告。";
+"ReportGroupLocation.Text" = "如果该群组与位置无关请向 PChat 官方报告。";
 "ReportGroupLocation.Report" = "举报";
 
 "LocalGroup.Title" = "创建本地群组";
@@ -4669,7 +4669,7 @@ Sorry for the inconvenience.";
 
 "Group.PublicLink.Title" = "公开链接";
 "Group.PublicLink.Placeholder" = "链接";
-"Group.PublicLink.Info" = "用户可以与其他人分享此链接，并使用 Telegram 搜索找到您的群组。\n\n您可以使用字母 **a-z**，数字 **0-9** 以及下划线，最小长度为 **5** 个字符。";
+"Group.PublicLink.Info" = "用户可以与其他人分享此链接，并使用 PChat 搜索找到您的群组。\n\n您可以使用字母 **a-z**，数字 **0-9** 以及下划线，最小长度为 **5** 个字符。";
 
 "CreateGroup.ErrorLocatedGroupsTooMuch" = "抱歉，您已经有过多基于位置的群组，请先删除其中一个。";
 
@@ -5009,12 +5009,12 @@ Sorry for the inconvenience.";
 "TwoFactorSetup.Password.Action" = "创建密码";
 
 "TwoFactorSetup.Email.Title" = "恢复邮箱";
-"TwoFactorSetup.Email.Text" = "您可以设置恢复邮箱，以便能够重置密码并恢复对 Telegram 帐号的访问。";
+"TwoFactorSetup.Email.Text" = "您可以设置恢复邮箱，以便能够重置密码并恢复对 PChat 帐号的访问。";
 "TwoFactorSetup.Email.Placeholder" = "您的邮件地址";
 "TwoFactorSetup.Email.Action" = "继续";
 "TwoFactorSetup.Email.SkipAction" = "跳过设置邮箱";
 "TwoFactorSetup.Email.SkipConfirmationTitle" = "不，我是认真的。";
-"TwoFactorSetup.Email.SkipConfirmationText" = "如果您忘记密码，则将无法访问Telegram帐户。无法恢复。";
+"TwoFactorSetup.Email.SkipConfirmationText" = "如果您忘记密码，则将无法访问PChat帐户。无法恢复。";
 "TwoFactorSetup.Email.SkipConfirmationSkip" = "跳过";
 
 "TwoFactorSetup.EmailVerification.Title" = "恢复邮箱";
@@ -5048,11 +5048,11 @@ Sorry for the inconvenience.";
 "Group.ErrorSupergroupConversionNotPossible" = "抱歉，您加入的群组和频道过多，请在创建新的之前退出一些。";
 
 "ClearCache.StorageTitle" = "%@ 储存";
-"ClearCache.StorageCache" = "Telegram 缓存";
-"ClearCache.StorageServiceFiles" = "Telegram 服务文件";
+"ClearCache.StorageCache" = "PChat 缓存";
+"ClearCache.StorageServiceFiles" = "PChat 服务文件";
 "ClearCache.StorageOtherApps" = "其他 App";
 "ClearCache.StorageFree" = "释放";
-"ClearCache.ClearCache" = "清除Telegram缓存";
+"ClearCache.ClearCache" = "清除PChat缓存";
 "ClearCache.Clear" = "清除";
 "ClearCache.Forever" = "永久";
 
@@ -5116,8 +5116,8 @@ Sorry for the inconvenience.";
 "AuthSessions.AddDevice.ScanTitle" = "通过二维码登录";
 "AuthSessions.AddDevice.InvalidQRCode" = "无效的二维码";
 "AuthSessions.AddDeviceIntro.Title" = "扫描二维码登录";
-"AuthSessions.AddDeviceIntro.Text1" = "从 [desktop.telegram.org]() 下载 Telegram 电脑版";
-"AuthSessions.AddDeviceIntro.Text2" = "启动 Telegram 电脑版获取二维码";
+"AuthSessions.AddDeviceIntro.Text1" = "从 [desktop.p.chat]() 下载 PChat 电脑版";
+"AuthSessions.AddDeviceIntro.Text2" = "启动 PChat 电脑版获取二维码";
 "AuthSessions.AddDeviceIntro.Text3" = "扫描二维码以便登录您的帐号";
 "AuthSessions.AddDeviceIntro.Action" = "扫描二维码";
 "AuthSessions.AddedDeviceTitle" = "登录成功";
@@ -5130,13 +5130,13 @@ Sorry for the inconvenience.";
 "Map.Home" = "家庭";
 "Map.Work" = "工作";
 "Map.HomeAndWorkTitle" = "家庭和工作地址";
-"Map.HomeAndWorkInfo" = "Telegram会使用您的联系卡中的家庭住址和工作地址。\n\n保持您的联系卡为最新状态，以快速访问发送家庭和工作地址。";
+"Map.HomeAndWorkInfo" = "PChat会使用您的联系卡中的家庭住址和工作地址。\n\n保持您的联系卡为最新状态，以快速访问发送家庭和工作地址。";
 "Map.SearchNoResultsDescription" = "没有找到“%@”的相关结果。\n请重新搜索。";
 
 "ChatList.Search.ShowMore" = "显示更多";
 "ChatList.Search.ShowLess" = "显示更少";
 
-"AuthSessions.OtherDevices" = "Telegram 官方应用可用于 iPhone、iPad、Android、macOS、Windows 和 Linux。[了解更多]()";
+"AuthSessions.OtherDevices" = "PChat 官方应用可用于 iPhone、iPad、Android、macOS、Windows 和 Linux。[了解更多]()";
 
 "MediaPlayer.UnknownArtist" = "未知艺术家";
 "MediaPlayer.UnknownTrack" = "未知音乐";
@@ -5154,7 +5154,7 @@ Sorry for the inconvenience.";
 
 "Theme.Colors.Proceed" = "下一步";
 
-"AuthSessions.AddDevice.UrlLoginHint" = "此二维码可用于登录您的 Telegram 账号。\n\n若要确认登录 Telegram，请转到「设置 > 设备 > 扫码登录」，然后选择“扫描二维码”。";
+"AuthSessions.AddDevice.UrlLoginHint" = "此二维码可用于登录您的 PChat 账号。\n\n若要确认登录 PChat，请转到「设置 > 设备 > 扫码登录」，然后选择“扫描二维码”。";
 
 "Appearance.RemoveThemeColor" = "移除";
 "Appearance.RemoveThemeColorConfirmation" = "移除颜色";
@@ -5432,11 +5432,11 @@ Sorry for the inconvenience.";
 "FeaturedStickers.OtherSection" = "其他贴纸";
 
 "ChatList.GenericPsaAlert" = "在聊天列表中提供公共服务通知。";
-"ChatList.PsaAlert.covid" = "此信息为您提供正在发生的新冠肺炎疫情相关公共服务公告。了解有关此计划的更多咨询：https://telegram.org/blog/coronavirus";
+"ChatList.PsaAlert.covid" = "此信息为您提供正在发生的新冠肺炎疫情相关公共服务公告。了解有关此计划的更多咨询：https://p.chat/blog/coronavirus";
 "ChatList.GenericPsaLabel" = "公共服务通告";
 "ChatList.PsaLabel.covid" = "新冠病毒肺炎";
 "Chat.GenericPsaTooltip" = "这是一则公共服务通告";
-"Chat.PsaTooltip.covid" = "此信息为您提供正在发生的新冠肺炎疫情相关公共服务公告。了解有关此计划的更多咨询：https://telegram.org/blog/coronavirus";
+"Chat.PsaTooltip.covid" = "此信息为您提供正在发生的新冠肺炎疫情相关公共服务公告。了解有关此计划的更多咨询：https://p.chat/blog/coronavirus";
 
 "Message.GenericForwardedPsa" = "公共服务通告\n来自： %@";
 "Message.ForwardedPsa.covid" = "新冠病毒肺炎通知\n来自：%@";
@@ -5652,7 +5652,7 @@ Sorry for the inconvenience.";
 
 "Cache.MaximumCacheSize" = "缓存大小限制";
 "Cache.NoLimit" = "无限";
-"Cache.MaximumCacheSizeHelp" = "如果您的缓存大小超过此限制，最旧的媒体将从设备中删除。\n所有媒体将保留在 Telegram 云端，如果需要可以重新下载。";
+"Cache.MaximumCacheSizeHelp" = "如果您的缓存大小超过此限制，最旧的媒体将从设备中删除。\n所有媒体将保留在 PChat 云端，如果需要可以重新下载。";
 
 "Stats.MessageTitle" = "消息数据分析";
 "Stats.MessageOverview" = "概况";
@@ -5673,7 +5673,7 @@ Sorry for the inconvenience.";
 "Call.Audio" = "语音通话";
 "Call.AudioRouteMute" = "将自己静音";
 
-"AccessDenied.VideoCallCamera" = "Telegram 需要访问您的相机，以便您进行视频通话。\n\n请在您的设备上打开“设置” > “隐私” > “相机”，然后将 Telegram 的权限打开。";
+"AccessDenied.VideoCallCamera" = "PChat 需要访问您的相机，以便您进行视频通话。\n\n请在您的设备上打开“设置” > “隐私” > “相机”，然后将 PChat 的权限打开。";
 
 
 
@@ -5827,7 +5827,7 @@ Sorry for the inconvenience.";
 "Conversation.EditingPhotoPanelTitle" = "编辑照片";
 
 "Media.LimitedAccessTitle" = "访问相册受限";
-"Media.LimitedAccessText" = "您没有允许 Telegram 访问全部照片。";
+"Media.LimitedAccessText" = "您没有允许 PChat 访问全部照片。";
 "Media.LimitedAccessManage" = "管理";
 "Media.LimitedAccessSelectMore" = "选择更多照片……";
 "Media.LimitedAccessChangeSettings" = "修改设置";
@@ -6027,8 +6027,8 @@ Sorry for the inconvenience.";
 
 
 "InviteLink.PeopleJoined_any" = "%@ 人已加入";
-"InviteLink.CreatePrivateLinkHelp" = "Telegram上的任何人可以通过此链接加入您的群组。";
-"InviteLink.CreatePrivateLinkHelpChannel" = "任何已安装 Telegram 的用户都将可以通过此链接加入您的频道。";
+"InviteLink.CreatePrivateLinkHelp" = "PChat上的任何人可以通过此链接加入您的群组。";
+"InviteLink.CreatePrivateLinkHelpChannel" = "任何已安装 PChat 的用户都将可以通过此链接加入您的频道。";
 "InviteLink.Manage" = "管理邀请链接";
 
 "InviteLink.PeopleJoinedShortNoneExpired" = "无人加入";
@@ -6088,8 +6088,8 @@ Sorry for the inconvenience.";
 "InviteLink.Create.Revoke" = "撤销链接";
 
 "InviteLink.QRCode.Title" = "通过二维码邀请";
-"InviteLink.QRCode.Info" = "Telegram 上的每个人都可以扫描此二维码以加入您的群组。";
-"InviteLink.QRCode.InfoChannel" = "通过扫描此二维码，Telegram 上的任何用户都可以加入您的频道。";
+"InviteLink.QRCode.Info" = "PChat 上的每个人都可以扫描此二维码以加入您的群组。";
+"InviteLink.QRCode.InfoChannel" = "通过扫描此二维码，PChat 上的任何用户都可以加入您的频道。";
 "InviteLink.QRCode.Share" = "分享二维码";
 
 "InviteLink.InviteLink" = "邀请链接";
@@ -6171,7 +6171,7 @@ Sorry for the inconvenience.";
 "Message.ImportedDateFormat" = "%1$@, %2$@ 导入 %3$@";
 
 "ChatImportActivity.Title" = "导入聊天";
-"ChatImportActivity.OpenApp" = "打开 Telegram";
+"ChatImportActivity.OpenApp" = "打开 PChat";
 "ChatImportActivity.Retry" = "重试";
 "ChatImportActivity.InProgress" = "请保持此窗口开启\n直到导入完成。";
 "ChatImportActivity.ErrorNotAdmin" = "您必须是群组管理员才能导入消息。";
@@ -6233,7 +6233,7 @@ Sorry for the inconvenience.";
 "Report.AdditionalDetailsText" = "请输入与您的举报有关的任何其他细节。";
 "Report.AdditionalDetailsPlaceholder" = "更多细节……";
 "Report.Report" = "举报";
-"Report.Succeed" = "Telegram 管理员将复核您的举报。谢谢！";
+"Report.Succeed" = "PChat 管理员将复核您的举报。谢谢！";
 
 "Conversation.AutoremoveRemainingTime" = "在 %@ 之后自动删除";
 
@@ -6323,7 +6323,7 @@ Sorry for the inconvenience.";
 "Widget.UpdatedAt" = "已更新 {}";
 
 "Intents.ErrorLockedTitle" = "已锁定";
-"Intents.ErrorLockedText" = "打开 Telegram 并输入密码来编辑小组件。";
+"Intents.ErrorLockedText" = "打开 PChat 并输入密码来编辑小组件。";
 
 "Conversation.GigagroupDescription" = "只有管理员才能在此群组中发送消息。";
 
@@ -6629,7 +6629,7 @@ Sorry for the inconvenience.";
 "ScheduledIn.Years_any" = "%@ 年";
 
 
-"Checkout.PaymentLiabilityAlert" = "无论是Telegram，还是 {target} ，都无法获得你的信用卡信息。信用卡信息将只由支付系统 {payment_system} 处理。\n\n付款将直接转给 {target} 的开发者。Telegram不能提供任何保证，所以请自行承担风险。如果出现问题，请联系 {target} 的开发者或你的银行。";
+"Checkout.PaymentLiabilityAlert" = "无论是PChat，还是 {target} ，都无法获得你的信用卡信息。信用卡信息将只由支付系统 {payment_system} 处理。\n\n付款将直接转给 {target} 的开发者。PChat不能提供任何保证，所以请自行承担风险。如果出现问题，请联系 {target} 的开发者或你的银行。";
 
 "Checkout.OptionalTipItem" = "小费（可选）";
 "Checkout.TipItem" = "小费";
@@ -6647,8 +6647,8 @@ Sorry for the inconvenience.";
 "Privacy.PaymentsClear.ShippingInfoCleared" = "配送信息已清空。";
 "Privacy.PaymentsClear.AllInfoCleared" = "支付与配送信息已清空。";
 
-"Settings.Tips" = "Telegram 功能";
-"Settings.TipsUsername" = "TelegramTips";
+"Settings.Tips" = "PChat 功能";
+"Settings.TipsUsername" = "PChatTips";
 
 "Calls.NoVoiceAndVideoCallsPlaceholder" = "最近的语音和视频通话记录将在此处显示。";
 "Calls.StartNewCall" = "创建新的语音通话";
@@ -6684,7 +6684,7 @@ Sorry for the inconvenience.";
 
 "VoiceChat.Unpin" = "取消置顶";
 
-"VoiceChat.VideoParticipantsLimitExceeded" = "请将 Telegram 更新至最新版本\n以观看视频直播。";
+"VoiceChat.VideoParticipantsLimitExceeded" = "请将 PChat 更新至最新版本\n以观看视频直播。";
 
 
 
@@ -6930,9 +6930,9 @@ Sorry for the inconvenience.";
 
 "SponsoredMessageMenu.Info" = "什么是赞助消息？";
 "SponsoredMessageInfoScreen.Title" = "什么是赞助消息？";
-"SponsoredMessageInfoScreen.MarkdownText" = "与其他应用不同，Telegram 不会将您的隐私数据用于投放定向广告。[查看隐私政策了解更多](https://telegram.org/privacy#5-6-no-ads-based-on-user-data)\n您之所以看到这条消息，仅是因为有人选择使用此公开的一对多频道推广其信息。这意味着 Telegram 不会通过挖掘和分析用户画像来投放广告，查看频道的所有用户都会看到同样的赞助商消息。\n\n与其他应用不同，Telegram 不会追踪您是否点击赞助商消息，也不会基于您的活跃数据生成用户画像。为了避免来自第三方的窥探，我们还禁止在赞助商消息中插入外部链接。我们相信每个人都有保护隐私的权利，而线上平台应该尊重这一点。\n\nTelegram 向数亿用户提供免费和无限制的服务，这意味着服务器和流量的巨大开销。为了保持独立且始终如一地秉持理念，Telegram 已开发一种付费工具以推广信息，同时保证用户的隐私。我们欢迎负责任的广告商访问：[url]\n\n广告不应再是滥用用户隐私的代名词。让我们共同携手，重新定义科技公司的运营模式。";
+"SponsoredMessageInfoScreen.MarkdownText" = "与其他应用不同，PChat 不会将您的隐私数据用于投放定向广告。[查看隐私政策了解更多](https://p.chat/privacy#5-6-no-ads-based-on-user-data)\n您之所以看到这条消息，仅是因为有人选择使用此公开的一对多频道推广其信息。这意味着 PChat 不会通过挖掘和分析用户画像来投放广告，查看频道的所有用户都会看到同样的赞助商消息。\n\n与其他应用不同，PChat 不会追踪您是否点击赞助商消息，也不会基于您的活跃数据生成用户画像。为了避免来自第三方的窥探，我们还禁止在赞助商消息中插入外部链接。我们相信每个人都有保护隐私的权利，而线上平台应该尊重这一点。\n\nPChat 向数亿用户提供免费和无限制的服务，这意味着服务器和流量的巨大开销。为了保持独立且始终如一地秉持理念，PChat 已开发一种付费工具以推广信息，同时保证用户的隐私。我们欢迎负责任的广告商访问：[url]\n\n广告不应再是滥用用户隐私的代名词。让我们共同携手，重新定义科技公司的运营模式。";
 "SponsoredMessageInfo.Action" = "了解更多";
-"SponsoredMessageInfo.Url" = "https://promote.telegram.org";
+"SponsoredMessageInfo.Url" = "https://promote.p.chat";
 
 "Chat.NavigationNoChannels" = "暂无未读频道";
 
@@ -7223,9 +7223,9 @@ Sorry for the inconvenience.";
 "Conversation.InviteRequestInfo" = "您收到这条消息是因为您曾在 %2$@ 申请加入 %1$@。";
 "Conversation.InviteRequestInfoConfirm" = "我已知晓";
 
-"AuthSessions.HeaderInfo" = "扫描二维码以连接 [Telegram Desktop](desktop) 或 [Telegram Web](web)。";
+"AuthSessions.HeaderInfo" = "扫描二维码以连接 [PChat Desktop](desktop) 或 [PChat Web](web)。";
 "AuthSessions.LinkDesktopDevice" = "关联桌面设备";
-"AuthSessions.AddDevice.ScanInstallInfo" = "前往 [getdesktop.telegram.org](desktop) 或 [web.telegram.org](web) 获取二维码";
+"AuthSessions.AddDevice.ScanInstallInfo" = "前往 [getdesktop.p.chat](desktop) 或 [web.p.chat](web) 获取二维码";
 
 "Channel.AdminLog.MessageSent" = "%@ 发送了这条消息：";
 
@@ -7274,7 +7274,7 @@ Sorry for the inconvenience.";
 
 "Conversation.ContextMenuTranslate" = "翻译";
 
-"ClearCache.ClearDescription" = "所有的媒体都将存于 Telegram 云端服务器上。若你需要，可以重新下载。";
+"ClearCache.ClearDescription" = "所有的媒体都将存于 PChat 云端服务器上。若你需要，可以重新下载。";
 
 "ChatSettings.StickersAndReactions" = "贴纸与表情";
 
@@ -7296,8 +7296,8 @@ Sorry for the inconvenience.";
 
 
 
-"AccessDenied.QrCode" = "Telegram 需要访问您的相册，以便您扫描二维码。\n请在您的设备上打开“设置” > “隐私” > “照片”，然后将 Telegram 的权限打开。";
-"AccessDenied.QrCamera" = "Telegram 需要摄像头权限以扫描二维码。\n\n请前往设备设置 > 隐私 > 相机，将 Telegram 权限设为开启。";
+"AccessDenied.QrCode" = "PChat 需要访问您的相册，以便您扫描二维码。\n请在您的设备上打开“设置” > “隐私” > “照片”，然后将 PChat 的权限打开。";
+"AccessDenied.QrCamera" = "PChat 需要摄像头权限以扫描二维码。\n\n请前往设备设置 > 隐私 > 相机，将 PChat 权限设为开启。";
 
 "Share.ShareToInstagramStories" = "分享至 Instagram Stories";
 
@@ -7340,7 +7340,7 @@ Sorry for the inconvenience.";
 
 "ClearCache.Progress" = "清除缓存数据中 • %d%";
 "ClearCache.NoProgress" = "缓存清除中";
-"ClearCache.KeepOpenedDescription" = "请保持此窗口为打开状态，直到 Telegram 清理完您的缓存。";
+"ClearCache.KeepOpenedDescription" = "请保持此窗口为打开状态，直到 PChat 清理完您的缓存。";
 
 "Share.ShareAsLink" = "以链接分享";
 "Share.ShareAsImage" = "以图片分享";
@@ -7410,8 +7410,8 @@ Sorry for the inconvenience.";
 "Attachment.MediaAccessText" = "分享无限数目的照片和视频 \n每个高达2 GB。";
 "Attachment.MediaAccessStoryText" = "分享无限数量的图片和视频，每个文件大小限制为 2 GB。";
 
-"Attachment.LimitedMediaAccessText" = "您已限制 Telegram 访问照片。";
-"Attachment.CameraAccessText" = "Telegram 需要访问相机以拍照和录像。";
+"Attachment.LimitedMediaAccessText" = "您已限制 PChat 访问照片。";
+"Attachment.CameraAccessText" = "PChat 需要访问相机以拍照和录像。";
 "Attachment.Manage" = "管理";
 
 "Attachment.OpenSettings" = "跳转到设置";
@@ -7426,7 +7426,7 @@ Sorry for the inconvenience.";
 
 "Attachment.DeselectedItems_any" = "已取消选择 %@ 个项目。";
 
-"PrivacyPhoneNumberSettings.CustomPublicLink" = "将您的手机号码保存为联系人的用户也将在 Telegram 上看到您的手机号码。\n\n 此公开链接将打开与您的聊天：\n [https://t.me/%@]()";
+"PrivacyPhoneNumberSettings.CustomPublicLink" = "将您的手机号码保存为联系人的用户也将在 PChat 上看到您的手机号码。\n\n 此公开链接将打开与您的聊天：\n [https://p.chat/%@]()";
 
 "DownloadList.DownloadingHeader" = "正在下载";
 "DownloadList.DownloadedHeader" = "最近下载";
@@ -7446,7 +7446,7 @@ Sorry for the inconvenience.";
 "DownloadList.RemoveFileAlertRemove" = "移除";
 
 "DownloadList.ClearAlertTitle" = "已下载的文件";
-"DownloadList.ClearAlertText" = "Telegram 允许您将发送和接收的所有文档存储在云端，以在设备上节省存储空间。";
+"DownloadList.ClearAlertText" = "PChat 允许您将发送和接收的所有文档存储在云端，以在设备上节省存储空间。";
 
 "ChatList.Search.FilterDownloads" = "下载";
 
@@ -7455,8 +7455,8 @@ Sorry for the inconvenience.";
 "LiveStream.ViewerCount_any" = "%@ 位访客";
 "LiveStream.Watching" = "正在观看";
 
-"LiveStream.NoSignalAdminText" = "**糟糕！** Telegram 没有接收到来自您的直播程序的推流。\n\n请确保您在直播程序中输入了正确的服务器 URL 和串流码。";
-"LiveStream.NoSignalUserText" = "%@ 目前没有向 Telegram 推流直播数据。";
+"LiveStream.NoSignalAdminText" = "**糟糕！** PChat 没有接收到来自您的直播程序的推流。\n\n请确保您在直播程序中输入了正确的服务器 URL 和串流码。";
+"LiveStream.NoSignalUserText" = "%@ 目前没有向 PChat 推流直播数据。";
 
 "LiveStream.ViewCredentials" = "查看串流密钥";
 
@@ -7533,7 +7533,7 @@ Sorry for the inconvenience.";
 "WebApp.RemoveConfirmationText" = "要从附件菜单中删除 **%@** 吗？";
 
 "Notifications.SystemTones" = "系统提示音";
-"Notifications.TelegramTones" = "TELEGRAM 提示音";
+"Notifications.PChatTones" = "TELEGRAM 提示音";
 
 "Notifications.UploadSound" = "上传音频";
 "Notifications.MessageSoundInfo" = "在任意聊天中按住简短语音消息图标或 MP3 文件，然后选择 “保存为通知铃声” 后，就会出现在这里。";
@@ -7626,31 +7626,31 @@ Sorry for the inconvenience.";
 "Channel.AddUserKickedError" = "抱歉，由于该用户在被移除用户名单上，您无法将其加入频道或解除其封禁。";
 "Channel.AddAdminKickedError" = "抱歉，由于该用户在被移除的用户列表中，您不能将其添加为管理员或解除其封禁。";
 
-"Premium.Stickers.Description" = "订阅 Telegram 高级版即可解锁这个和更多贴纸。";
+"Premium.Stickers.Description" = "订阅 PChat 高级版即可解锁这个和更多贴纸。";
 "Premium.Stickers.Proceed" = "解锁高级贴纸";
 
 "Premium.Reactions.Proceed" = "解锁高级回应";
 "Premium.AppIcons.Proceed" = "解锁高级会员图标";
-"Premium.NoAds.Proceed" = "关于 Telegram 高级版";
+"Premium.NoAds.Proceed" = "关于 PChat 高级版";
 
-"AccessDenied.LocationPreciseDenied" = "要在此聊天中分享您的具体位置，请在设置 > 隐私 > 定位服务 > Telegram 中开启精确位置。";
+"AccessDenied.LocationPreciseDenied" = "要在此聊天中分享您的具体位置，请在设置 > 隐私 > 定位服务 > PChat 中开启精确位置。";
 
 "Chat.MultipleTypingPair" = "%@ 和 %@";
 "Chat.MultipleTypingMore" = "%@ 以及 %@ 位用户";
 
-"Group.Username.RemoveExistingUsernamesOrExtendInfo" = "您保留了太多公开链接。您可以撤消其中一个较旧群组或频道的链接，或者订阅 **Telegram 高级版**，将此上限翻倍至 **%@** 个公开链接。";
+"Group.Username.RemoveExistingUsernamesOrExtendInfo" = "您保留了太多公开链接。您可以撤消其中一个较旧群组或频道的链接，或者订阅 **PChat 高级版**，将此上限翻倍至 **%@** 个公开链接。";
 "Group.Username.RemoveExistingUsernamesNoPremiumInfo" = "您保留了太多公开链接。您可以撤消其中一个较旧群组或频道的链接。我们正在努力能让您在未来提高此上限。";
 "Group.Username.RemoveExistingUsernamesFinalInfo" = "您保留了太多公共用户名。您可以撤消其中一个较旧群组或频道的链接，也可以创建一个私人链接。";
 
-"OldChannels.TooManyCommunitiesText" = "您已加入 **%@** 个群组或频道。请在加入新的之前先退出一些——或者订阅 **Telegram 高级版**，将此上限翻倍至 **%@** 个群组或频道。";
+"OldChannels.TooManyCommunitiesText" = "您已加入 **%@** 个群组或频道。请在加入新的之前先退出一些——或者订阅 **PChat 高级版**，将此上限翻倍至 **%@** 个群组或频道。";
 "OldChannels.TooManyCommunitiesNoPremiumText" = "您已加入 **%@** 个群组或频道。请在加入新的之前先退出一些。我们正在努力能让你在未来提高此上限。";
 "OldChannels.TooManyCommunitiesFinalText" = "您已经成为 %@ 个群组和频道的成员了，请在加入新的之前退出一些群组或频道。";
 
-"OldChannels.TooManyCommunitiesCreateText" = "您已加入 **%@** 个群组或频道。请在加入新的之前先退出一些——或者订阅 **Telegram 高级版**，将此上限翻倍至 **%@** 个群组或频道。";
+"OldChannels.TooManyCommunitiesCreateText" = "您已加入 **%@** 个群组或频道。请在加入新的之前先退出一些——或者订阅 **PChat 高级版**，将此上限翻倍至 **%@** 个群组或频道。";
 "OldChannels.TooManyCommunitiesCreateNoPremiumText" = "您目前已是 %@ 个群组和频道的成员，请在创建新群组或频道之前先退出一些。我们正在努力让您在未来可以增加此限制。";
 "OldChannels.TooManyCommunitiesCreateFinalText" = "您已经成为 **%@** 个群组和频道的成员了，请在创建新的之前退出一些群组或频道。";
 
-"OldChannels.TooManyCommunitiesUpgradeText" = "您已加入 **%@** 个群组和频道。由于技术原因，请在修改群组设置之前退出一些，或者订阅 **Telegram 高级版**，将此上限翻倍至 **%@** 个群组或频道。";
+"OldChannels.TooManyCommunitiesUpgradeText" = "您已加入 **%@** 个群组和频道。由于技术原因，请在修改群组设置之前退出一些，或者订阅 **PChat 高级版**，将此上限翻倍至 **%@** 个群组或频道。";
 "OldChannels.TooManyCommunitiesUpgradeNoPremiumText" = "您已加入 **%@** 个群组和频道。由于技术原因，请在修改群组设置之前退出一些。我们正在努力让您在未来提高此上限。";
 "OldChannels.TooManyCommunitiesUpgradeFinalText" = "您已加入** %@ 个**群组和频道。由于技术原因，请在修改群组设置之前退出一些。";
 
@@ -7661,19 +7661,19 @@ Sorry for the inconvenience.";
 "Premium.LimitReached" = "达到上限";
 "Premium.IncreaseLimit" = "提升上限";
 
-"Premium.MaxFoldersCountText" = "您已达到 **%1$@** 个文件夹的限额。 您可以订阅 **Telegram 高级版**，将此上限翻倍至 **%2$@** 个文件夹。";
+"Premium.MaxFoldersCountText" = "您已达到 **%1$@** 个文件夹的限额。 您可以订阅 **PChat 高级版**，将此上限翻倍至 **%2$@** 个文件夹。";
 "Premium.MaxFoldersCountNoPremiumText" = "你已达到 ** %1$@** 文件夹的上限。我们正在努力让你在未来提高此上限。";
 "Premium.MaxFoldersCountFinalText" = "抱歉，您不能创建多于 **%1$@** 个文件夹。";
 
-"Premium.MaxChatsInFolderText" = "抱歉，您无法在单个文件夹中添加超过 **%1$@** 个聊天。订阅 **Telegram 高级版** 后可将此上限提高至 **%2$@** 个聊天。";
+"Premium.MaxChatsInFolderText" = "抱歉，您无法在单个文件夹中添加超过 **%1$@** 个聊天。订阅 **PChat 高级版** 后可将此上限提高至 **%2$@** 个聊天。";
 "Premium.MaxChatsInFolderNoPremiumText" = "抱歉，您无法在此文件夹中添加超过 **%1$@** 个聊天。请再创建一个新的文件夹。我们在以后将尽力为您提高该限制。";
 "Premium.MaxChatsInFolderFinalText" = "抱歉，您不能向文件夹中添加多于 **%@** 个聊天。";
 
-"Premium.MaxFileSizeText" = "您可以订阅 **Telegram 高级版**，将此上限翻倍至每个文件 %@。";
+"Premium.MaxFileSizeText" = "您可以订阅 **PChat 高级版**，将此上限翻倍至每个文件 %@。";
 "Premium.MaxFileSizeNoPremiumText" = "由于大小超过了 **%@**，文档无法发送。我们正在努力能让您在未来提高此上限。";
 "Premium.MaxFileSizeFinalText" = "由于大小超过了 **%@**，无法发送此文档。";
 
-"Premium.MaxPinsText" = "您无法置顶超过 **%1$@** 个聊天。请取消一些置顶的聊天，或者订阅 **Telegram 高级版**，将此上限翻倍至 **%2$@** 个聊天。";
+"Premium.MaxPinsText" = "您无法置顶超过 **%1$@** 个聊天。请取消一些置顶的聊天，或者订阅 **PChat 高级版**，将此上限翻倍至 **%2$@** 个聊天。";
 "Premium.MaxPinsNoPremiumText" = "抱歉，您最多只能置顶 **%@** 个聊天。请先取消置顶一些当前已置顶的聊天。";
 "Premium.MaxPinsFinalText" = "抱歉，您最多只能置顶 **%@** 个聊天。请先取消置顶一些当前已置顶的聊天。";
 
@@ -7685,21 +7685,21 @@ Sorry for the inconvenience.";
 "Premium.MaxSavedGifsText" = "一张旧的 GIF 动态图已被这张图替换。您可以 [提升上限]() 至 %@ 张 GIF 动态图。";
 "Premium.MaxSavedGifsFinalText" = "一张旧的 GIF 动态图已被这张图替换。";
 
-"Premium.MaxAccountsText" = "您已达到 **%@** 个关联帐号的限制。 您可以通过订阅 **Telegram 高级版** 添加更多。";
+"Premium.MaxAccountsText" = "您已达到 **%@** 个关联帐号的限制。 您可以通过订阅 **PChat 高级版** 添加更多。";
 "Premium.MaxAccountsNoPremiumText" = "您已达到 **%@** 个关联帐户的限制。";
 "Premium.MaxAccountsFinalText" = "你已经达到 **%@** 个关联账号的上限。";
 
 "Premium.Free" = "免费";
 "Premium.Premium" = "高级版";
 
-"Premium.Title" = "Telegram 高级版";
-"Premium.Description" = "订阅 **Telegram Premium** 后，您能 **超越限制** 并 **解锁数十项专属** 功能。";
+"Premium.Title" = "PChat 高级版";
+"Premium.Description" = "订阅 **PChat Premium** 后，您能 **超越限制** 并 **解锁数十项专属** 功能。";
 
-"Premium.PersonalTitle" = "[%@]() 是 Telegram 高级版的订阅者";
-"Premium.PersonalDescription" = "拥有 **Telegram 高级版** 帐号即可专享多项附加功能。";
+"Premium.PersonalTitle" = "[%@]() 是 PChat 高级版的订阅者";
+"Premium.PersonalDescription" = "拥有 **PChat 高级版** 帐号即可专享多项附加功能。";
 
 "Premium.SubscribedTitle" = "一切都已就绪！";
-"Premium.SubscribedDescription" = "欢迎订阅 **Telegram Premium**。你已成功解锁以下特权。";
+"Premium.SubscribedDescription" = "欢迎订阅 **PChat Premium**。你已成功解锁以下特权。";
 
 "Premium.DoubledLimits" = "上限加倍";
 "Premium.DoubledLimitsInfo" = "多达 1000 个频道、30 个文件夹、10 个置顶、20 个公开链接、4 个帐号等等。";
@@ -7709,54 +7709,54 @@ Sorry for the inconvenience.";
 
 "Premium.FasterSpeed" = "更快的下载速度";
 "Premium.FasterSpeedInfo" = "下载媒体文件和文档时不再受到速度限制。";
-"Premium.FasterSpeedStandaloneInfo" = "订阅 **Telegram 高级版** 以最快的速度下载媒体和文件。";
+"Premium.FasterSpeedStandaloneInfo" = "订阅 **PChat 高级版** 以最快的速度下载媒体和文件。";
 
 "Premium.VoiceToText" = "语音转文字";
 "Premium.VoiceToTextInfo" = "能够将收到的语音消息转换成文字以方便阅读。";
-"Premium.VoiceToTextStandaloneInfo" = "订阅 **Telegram 高级版** 以将语音或视频消息转换为文字。 ";
+"Premium.VoiceToTextStandaloneInfo" = "订阅 **PChat 高级版** 以将语音或视频消息转换为文字。 ";
 
 "Premium.NoAds" = "无广告";
-"Premium.NoAdsInfo" = "Telegram 公开频道中不再有不定期展示的广告。";
-"Premium.NoAdsStandaloneInfo" = "通过订阅 **Telegram 高级版** 来移除像这样的广告。";
+"Premium.NoAdsInfo" = "PChat 公开频道中不再有不定期展示的广告。";
+"Premium.NoAdsStandaloneInfo" = "通过订阅 **PChat 高级版** 来移除像这样的广告。";
 
 "Premium.Reactions" = "专属表情回应";
 "Premium.ReactionsInfo" = "使用更多动画表情回应消息，仅高级版订阅者可用。";
 
 "Premium.ReactionsStandalone" = "其他回应";
-"Premium.ReactionsStandaloneInfo" = "订阅 **Telegram 高级版**以解锁更多表情回应。";
+"Premium.ReactionsStandaloneInfo" = "订阅 **PChat 高级版**以解锁更多表情回应。";
 
 "Premium.Stickers" = "高级版贴纸";
 "Premium.StickersInfo" = "具有额外特效的专属放大贴纸，定期更新。";
 
 "Premium.ChatManagement" = "高级聊天管理";
 "Premium.ChatManagementInfo" = "可设定默认文件夹、自动归档以及隐藏来自非联系人的新聊天。";
-"Premium.ChatManagementStandaloneInfo" = "**Telegram 高级版**的订阅者可以设置默认进入的文件夹、自动归档以及隐藏非联系人的新聊天。";
+"Premium.ChatManagementStandaloneInfo" = "**PChat 高级版**的订阅者可以设置默认进入的文件夹、自动归档以及隐藏非联系人的新聊天。";
 
 "Premium.Badge" = "形象勋章";
-"Premium.BadgeInfo" = "在您的名字后方显示专属徽章，以表示您已订阅 Telegram 高级版。";
+"Premium.BadgeInfo" = "在您的名字后方显示专属徽章，以表示您已订阅 PChat 高级版。";
 
 "Premium.Avatar" = "动态头像";
 "Premium.AvatarInfo" = "视频头像会在聊天列表和聊天中动起来，为您提供更多自我表达空间。";
 
-"Premium.AppIcon" = "Telegram 应用图标";
-"Premium.AppIconInfo" = "从一系列图标中选择你的 Telegram 应用程序的桌面图标。";
+"Premium.AppIcon" = "PChat 应用图标";
+"Premium.AppIconInfo" = "从一系列图标中选择你的 PChat 应用程序的桌面图标。";
 
 "Premium.AppIconStandalone" = "高级应用图标";
-"Premium.AppIconStandaloneInfo" = "通过订阅 **Telegram 高级版** 来解锁更加广泛的应用图标选择。";
+"Premium.AppIconStandaloneInfo" = "通过订阅 **PChat 高级版** 来解锁更加广泛的应用图标选择。";
 
 "Premium.SubscribeFor" = "以每月 %@ 的价格订阅";
 "Premium.SubscribeForAnnual" = "以每年 %@ 的价格订阅";
 
-"Premium.AboutTitle" = "关于Telegram 高级版";
-"Premium.AboutText" = "虽然免费版本的 Telegram 已经为用户提供了比其他任何即时通讯应用程序更多的功能，但 **Telegram Premium** 进一步推动了它。\n\n**Telegram Premium** 是付费选项，因为大多数高级功能需要 Telegram 向第三方（如数据中心提供商和服务器制造商）支付额外费用。 **Telegram Premium** 用户的贡献使我们能够支付此类费用，并帮助 Telegram 保持为所有人免费提供。";
+"Premium.AboutTitle" = "关于PChat 高级版";
+"Premium.AboutText" = "虽然免费版本的 PChat 已经为用户提供了比其他任何即时通讯应用程序更多的功能，但 **PChat Premium** 进一步推动了它。\n\n**PChat Premium** 是付费选项，因为大多数高级功能需要 PChat 向第三方（如数据中心提供商和服务器制造商）支付额外费用。 **PChat Premium** 用户的贡献使我们能够支付此类费用，并帮助 PChat 保持为所有人免费提供。";
 
-"Premium.Terms" = "购买高级版订阅，即表示你同意 Telegram 的 [服务条款](terms) 和 [隐私政策](privacy)。";
+"Premium.Terms" = "购买高级版订阅，即表示你同意 PChat 的 [服务条款](terms) 和 [隐私政策](privacy)。";
 
 "Conversation.CopyProtectionSavingDisabledSecret" = "不可保存消息";
 "Conversation.CopyProtectionForwardingDisabledSecret" = "不可转发消息";
 
-"Settings.Terms_URL" = "https://telegram.org/tos";
-"Settings.PrivacyPolicy_URL" = "https://telegram.org/privacy";
+"Settings.Terms_URL" = "https://p.chat/tos";
+"Settings.PrivacyPolicy_URL" = "https://p.chat/privacy";
 
 "Stickers.PremiumPackInfoText" = "该贴纸包包含高级版贴纸，譬如该贴纸。";
 "Stickers.PremiumPackView" = "查看";
@@ -7781,7 +7781,7 @@ Sorry for the inconvenience.";
 
 "Premium.Limits.GroupsAndChannelsInfo" = "加入多达 1000 个频道和大型群组";
 "Premium.Limits.PinnedChatsInfo" = "在主聊天列表中置顶高达10个聊天";
-"Premium.Limits.PublicLinksInfo" = "保留高达 20 个 [t.me/username]() 链接";
+"Premium.Limits.PublicLinksInfo" = "保留高达 20 个 [p.chat/username]() 链接";
 "Premium.Limits.SavedGifsInfo" = "在 GIF 动态图收藏中存储高达 400 张 GIF 动态图";
 "Premium.Limits.FavedStickersInfo" = "在贴纸收藏中存储高达10张贴纸";
 "Premium.Limits.BioInfo" = "在个人简介中添加更多文字并使用链接";
@@ -7811,7 +7811,7 @@ Sorry for the inconvenience.";
 "Premium.Restore.Success" = "完成";
 "Premium.Restore.ErrorUnknown" = "出错了，请重试。";
 
-"Settings.Premium" = "Telegram 高级版";
+"Settings.Premium" = "PChat 高级版";
 
 "Settings.AddAnotherAccount.PremiumHelp" = "您最多可以添加四个具有不同手机号码的帐号。";
 
@@ -7871,7 +7871,7 @@ Sorry for the inconvenience.";
 "DeleteAccount.MessageHistoryTitle" = "您的消息历史记录";
 "DeleteAccount.MessageHistoryText" = "您的聊天对象将会保留与您的历史消息记录，包括您在私密聊天中分享的消息。\n\n您可以在任何时候为双方删除任何消息，但如果您删除了帐号，这将无法实现。";
 
-"DeleteAccount.DeleteMessagesURL" = "https://telegram.org/faq#q-can-i-delete-my-messages";
+"DeleteAccount.DeleteMessagesURL" = "https://p.chat/faq#q-can-i-delete-my-messages";
 
 "DeleteAccount.EnterPhoneNumber" = "请输入您的手机号码";
 "DeleteAccount.InvalidPhoneNumberError" = "手机号码格式不正确，请重新输入。";
@@ -7887,9 +7887,9 @@ Sorry for the inconvenience.";
 
 "PeerInfo.GiftPremium" = "赠予高级版订阅";
 
-"Premium.Gift.Title" = "赠予 Telegram 高级版订阅";
-"Premium.Gift.Description" = "将 **Telegram 高级版** 的专属功能赠予 **%@**。";
-"Premium.Gift.Info" = "您可以在 [这里]() 查看 Telegram 高级版的功能列表和更多详情。";
+"Premium.Gift.Title" = "赠予 PChat 高级版订阅";
+"Premium.Gift.Description" = "将 **PChat 高级版** 的专属功能赠予 **%@**。";
+"Premium.Gift.Info" = "您可以在 [这里]() 查看 PChat 高级版的功能列表和更多详情。";
 "Premium.Gift.GiftSubscription" = "花费 %@ 赠予订阅";
 
 
@@ -7898,16 +7898,16 @@ Sorry for the inconvenience.";
 
 "Premium.Gift.Years_any" = "%@ 年";
 
-"Premium.GiftedTitle" = "Telegram 高级版";
+"Premium.GiftedTitle" = "PChat 高级版";
 
-"Premium.GiftedTitle.3Month" = "[%@]() 已赠予您 3 个月的 Telegram 高级版订阅";
-"Premium.GiftedTitle.6Month" = "[%@]() 已赠予您 6 个月的 Telegram 高级版订阅";
-"Premium.GiftedTitle.12Month" = "[%@]() 已赠予您 12 个月的 Telegram 高级版订阅";
+"Premium.GiftedTitle.3Month" = "[%@]() 已赠予您 3 个月的 PChat 高级版订阅";
+"Premium.GiftedTitle.6Month" = "[%@]() 已赠予您 6 个月的 PChat 高级版订阅";
+"Premium.GiftedTitle.12Month" = "[%@]() 已赠予您 12 个月的 PChat 高级版订阅";
 "Premium.GiftedDescription" = "您现在可以使用额外的功能了。";
 
-"Premium.GiftedTitleYou.3Month" = "您已赠予 [%@]() 3 个月的 Telegram 高级版订阅。";
-"Premium.GiftedTitleYou.6Month" = "您已赠予 [%@]() 6 个月的 Telegram 高级版订阅。";
-"Premium.GiftedTitleYou.12Month" = "您已赠予 [%@]() 12 个月的 Telegram 高级版订阅。";
+"Premium.GiftedTitleYou.3Month" = "您已赠予 [%@]() 3 个月的 PChat 高级版订阅。";
+"Premium.GiftedTitleYou.6Month" = "您已赠予 [%@]() 6 个月的 PChat 高级版订阅。";
+"Premium.GiftedTitleYou.12Month" = "您已赠予 [%@]() 12 个月的 PChat 高级版订阅。";
 "Premium.GiftedDescriptionYou" = "对方现在可以使用额外的功能了。";
 
 "SettingsSearch.DeleteAccount.DeleteMyAccount" = "\"删除帐号\" \"删除账号\" \"删除帐户\"";
@@ -7918,7 +7918,7 @@ Sorry for the inconvenience.";
 
 "Notification.PremiumGift.Months_any" = "%@ 个月";
 
-"Notification.PremiumGift.Title" = "Telegram 高级版";
+"Notification.PremiumGift.Title" = "PChat 高级版";
 "Notification.PremiumGift.Subtitle" = "%@";
 "Notification.PremiumGift.View" = "查看";
 "Notification.PremiumGift.UseGift" = "使用礼物";
@@ -7943,7 +7943,7 @@ Sorry for the inconvenience.";
 
 "Privacy.VoiceMessages" = "语音消息";
 
-"Privacy.VoiceMessages.Tooltip" = "只有 [Telegram 高级版]() 订阅者才可以限制接受语音消息。";
+"Privacy.VoiceMessages.Tooltip" = "只有 [PChat 高级版]() 订阅者才可以限制接受语音消息。";
 
 "Privacy.VoiceMessages.WhoCanSend" = "谁可以给我发送语音或视频消息？";
 "Privacy.VoiceMessages.CustomHelp" = "您可以精确地控制谁可以向您发送语音或视频消息。";
@@ -8025,7 +8025,7 @@ Sorry for the inconvenience.";
 "EmojiInput.SectionTitleFavoriteStickers" = "贴纸收藏";
 "EmojiInput.SectionTitlePremiumStickers" = "高级版贴纸";
 
-"EmojiInput.PremiumEmojiToast.Text" = "订阅 Telegram 高级版解锁高级表情。";
+"EmojiInput.PremiumEmojiToast.Text" = "订阅 PChat 高级版解锁高级表情。";
 "EmojiInput.PremiumEmojiToast.Action" = "更多";
 
 "EmojiInput.PremiumEmojiToast.TryText" = "尝试在 **我的收藏** 中免费发送这些表情来体验。";
@@ -8056,13 +8056,13 @@ Sorry for the inconvenience.";
 "Login.Edit" = "编辑";
 "Login.Yes" = "是";
 
-"Checkout.PaymentLiabilityBothAlert" = "Telegram 无法获取您的信用卡信息。信用卡详细信息仅由支付系统 {target} 处理。\n\n款项将直接发送给 {target} 的开发者。Telegram 无法提供任何形式的担保，故您将自行承担风险。 如有问题，请联系 {target} 的开发者或您的银行。";
+"Checkout.PaymentLiabilityBothAlert" = "PChat 无法获取您的信用卡信息。信用卡详细信息仅由支付系统 {target} 处理。\n\n款项将直接发送给 {target} 的开发者。PChat 无法提供任何形式的担保，故您将自行承担风险。 如有问题，请联系 {target} 的开发者或您的银行。";
 
 "Settings.ChangeProfilePhoto" = "更改头像";
 
 "Premium.EmojiStatusShortTitle" = "这是 %1$@ 的当前状态。";
 "Premium.EmojiStatusTitle" = "这是 %1$@ 的当前状态，该表情来自#[%2$@]()。";
-"Premium.EmojiStatusText" = "表情状态是一项高级功能。**Telegram 高级版** 包含的其它功能：";
+"Premium.EmojiStatusText" = "表情状态是一项高级功能。**PChat 高级版** 包含的其它功能：";
 
 "Login.SelectCountry" = "国家";
 
@@ -8074,10 +8074,10 @@ Sorry for the inconvenience.";
 "Login.EnterCodeSMSTitle" = "输入验证码";
 "Login.EnterCodeSMSText" = "我们已经向你的手机号码 %@ 已发送验证码短信。";
 "Login.SendCodeAsSMS" = "短信发送验证码";
-"Login.EnterCodeTelegramTitle" = "输入密码";
-"Login.EnterCodeTelegramText" = "我们已经将验证码发送到该帐号（%@）其他设备上的 **Telegram应用**。";
+"Login.EnterCodePChatTitle" = "输入密码";
+"Login.EnterCodePChatText" = "我们已经将验证码发送到该帐号（%@）其他设备上的 **PChat应用**。";
 "Login.AddEmailTitle" = "选择登录邮箱";
-"Login.AddEmailText" = "您将通过电子邮箱而非短信收取 Telegram 登录码。请输入您可以访问的电子邮箱地址。";
+"Login.AddEmailText" = "您将通过电子邮箱而非短信收取 PChat 登录码。请输入您可以访问的电子邮箱地址。";
 "Login.AddEmailPlaceholder" = "输入你的邮箱";
 "Login.EnterCodeEmailTitle" = "检查您的电子邮箱";
 "Login.EnterCodeEmailText" = "请输入我们向你的邮箱 %@ 中发送的验证码。";
@@ -8087,9 +8087,9 @@ Sorry for the inconvenience.";
 "Login.WrongCodeError" = "验证码错误，请重试。";
 
 "PrivacySettings.LoginEmail" = "邮箱登录";
-"PrivacySettings.LoginEmailInfo" = "为获取 Telegram 登录验证码，请修改你的邮箱地址。";
+"PrivacySettings.LoginEmailInfo" = "为获取 PChat 登录验证码，请修改你的邮箱地址。";
 "Login.EmailChanged" = "您的电子邮箱地址已变更。";
-"PrivacySettings.LoginEmailAlertText" = "你每次从新的设备登入Telegram 时都会使用该电子邮箱。";
+"PrivacySettings.LoginEmailAlertText" = "你每次从新的设备登入PChat 时都会使用该电子邮箱。";
 "PrivacySettings.LoginEmailAlertChange" = "更改邮箱";
 
 "Login.InvalidEmailAddressError" = "发生错误。请重试。";
@@ -8104,7 +8104,7 @@ Sorry for the inconvenience.";
 "Premium.PricePerMonth" = "%@/月";
 "Premium.PricePerYear" = "%@/年";
 
-"Conversation.SendMesageAsPremiumInfo" = "订阅** Telegram 高级版**后可以在任何群聊中代表您的频道发布评论。";
+"Conversation.SendMesageAsPremiumInfo" = "订阅** PChat 高级版**后可以在任何群聊中代表您的频道发布评论。";
 
 
 "SetTimeoutFor.Minutes_any" = "设置为 %@ 分钟";
@@ -8122,7 +8122,7 @@ Sorry for the inconvenience.";
 "PeerStatusExpiration.TomorrowAt" = "你的状态将于明日 %@ 过期";
 "PeerStatusExpiration.AtDate" = "你的状态将于 %@ 过期";
 
-"Chat.PanelCustomStatusInfo" = "此帐号在其名称旁边使用了自定义状态 %@。所有订阅 Telegram 高级版的用户都可以使用这样的表情状态。";
+"Chat.PanelCustomStatusInfo" = "此帐号在其名称旁边使用了自定义状态 %@。所有订阅 PChat 高级版的用户都可以使用这样的表情状态。";
 
 "Login.CancelEmailVerification" = "是否要停止邮箱验证过程？";
 "Login.CancelEmailVerificationStop" = "停";
@@ -8135,7 +8135,7 @@ Sorry for the inconvenience.";
 "Premium.EmojiStatusInfo" = "从数千个表情中选择一个展示当前的活动，显示在您的名字旁边。";
 
 "PeerStatusSetup.NoTimerTitle" = "长按以设置定时器";
-"Chat.PremiumReactionToastTitle" = "订阅 **Telegram 高级版** 以解锁此表情回应。";
+"Chat.PremiumReactionToastTitle" = "订阅 **PChat 高级版** 以解锁此表情回应。";
 "Chat.PremiumReactionToastAction" = "更多";
 
 "Chat.ClearReactionsAlertText" = "您确定要从建议中清空最近使用的表情回应吗？";
@@ -8216,7 +8216,7 @@ Sorry for the inconvenience.";
 "ChatList.Search.FilterTopics" = "话题";
 "DialogList.SearchSectionTopics" = "话题";
 
-"ChatListFolderSettings.SubscribeToMoveAll" = "订阅 **Telegram 高级版** 以移动 \"所有聊天\" 文件夹。";
+"ChatListFolderSettings.SubscribeToMoveAll" = "订阅 **PChat 高级版** 以移动 \"所有聊天\" 文件夹。";
 "ChatListFolderSettings.SubscribeToMoveAllAction" = "更多";
 
 "Channel.AdminLog.MessageChangedGroupUsernames" = "%@ 已更改群组链接：";
@@ -8234,7 +8234,7 @@ Sorry for the inconvenience.";
 "ChatList.EmptyTopicsCreate" = "创建新话题";
 "ChatList.EmptyTopicsShowAsMessages" = "以消息模式查看";
 
-"Message.AudioTranscription.SubscribeToPremium" = "订阅 **Telegram 高级版** 以将语音消息转换为文字。 ";
+"Message.AudioTranscription.SubscribeToPremium" = "订阅 **PChat 高级版** 以将语音消息转换为文字。 ";
 "Message.AudioTranscription.SubscribeToPremiumAction" = "更多";
 
 "PeerInfo.PrivateShareLinkInfo" = "此链接仅对群组成员有效。";
@@ -8326,8 +8326,8 @@ Sorry for the inconvenience.";
 "DownloadList.IncreaseSpeed" = "提升速度";
 "Conversation.IncreaseSpeed" = "增加速度";
 
-"Premium.ChatManagement.Proceed" = "关于 Telegram 高级版";
-"Premium.FasterSpeed.Proceed" = "关于 Telegram 高级版";
+"Premium.ChatManagement.Proceed" = "关于 PChat 高级版";
+"Premium.FasterSpeed.Proceed" = "关于 PChat 高级版";
 
 "OwnershipTransfer.EnterPassword" = "输入密码";
 "OwnershipTransfer.EnterPasswordText" = "请输入您的两步验证密码以确认操作。";
@@ -8335,10 +8335,10 @@ Sorry for the inconvenience.";
 "Navigation.AllChats" = "所有聊天";
 
 "Group.Management.AntiSpam" = "积极的反垃圾信息策略";
-"Group.Management.AntiSpamInfo" = "Telegram 会过滤更多的垃圾信息，但偶尔可能会影响普通消息。您可以在最近的操作中申诉误报。";
+"Group.Management.AntiSpamInfo" = "PChat 会过滤更多的垃圾信息，但偶尔可能会影响普通消息。您可以在最近的操作中申诉误报。";
 
 "Group.Management.AntiSpamMagic" = "魔法";
-"Group.AdminLog.AntiSpamTitle" = "Telegram 反垃圾";
+"Group.AdminLog.AntiSpamTitle" = "PChat 反垃圾";
 "Group.AdminLog.AntiSpamText" = "您可以在群组信息 > [管理员]() 中管理反垃圾设置。";
 
 "ChatList.ThreadHideAction" = "隐藏";
@@ -8362,7 +8362,7 @@ Sorry for the inconvenience.";
 "DialogList.SearchSectionMessagesIn" = "%@ 中的消息";
 
 "Conversation.ContextMenuReportFalsePositive" = "申诉误报";
-"Group.AdminLog.AntiSpamFalsePositiveReportedText" = "Telegram 管理员会检查你的报告，感谢！";
+"Group.AdminLog.AntiSpamFalsePositiveReportedText" = "PChat 管理员会检查你的报告，感谢！";
 
 "ChatList.EmptyTopicsDescription" = "来自该群组的较早消息已移至“通用”话题。";
 
@@ -8524,16 +8524,16 @@ Sorry for the inconvenience.";
 "UserInfo.ResetToOriginalAlertReset" = "重置";
 
 "Conversation.SuggestedPhotoTitle" = "已建议的图片";
-"Conversation.SuggestedPhotoText" = "**%@** 建议将此图片用做您的 Telegram 头像。";
-"Conversation.SuggestedPhotoTextExpanded" = "%@ 推荐将此图片用做您的 Telegram 头像。";
+"Conversation.SuggestedPhotoText" = "**%@** 建议将此图片用做您的 PChat 头像。";
+"Conversation.SuggestedPhotoTextExpanded" = "%@ 推荐将此图片用做您的 PChat 头像。";
 "Conversation.SuggestedPhotoTextYou" = "您已向 **%@** 推荐这张图片作为头像。";
 "Conversation.SuggestedPhotoView" = "查看图片";
 "Conversation.SuggestedPhotoSuccess" = "头像已更新";
 "Conversation.SuggestedPhotoSuccessText" = "您可以在 [设置]() 中更改。";
 
 "Conversation.SuggestedVideoTitle" = "已推荐的图片";
-"Conversation.SuggestedVideoText" = "**%@** 已向您推荐该图片作为您的 Telegram 头像。";
-"Conversation.SuggestedVideoTextExpanded" = "%@ 推荐将此图片用做您的 Telegram 头像。";
+"Conversation.SuggestedVideoText" = "**%@** 已向您推荐该图片作为您的 PChat 头像。";
+"Conversation.SuggestedVideoTextExpanded" = "%@ 推荐将此图片用做您的 PChat 头像。";
 "Conversation.SuggestedVideoTextYou" = "您已向 **%@** 推荐此图片作为头像。";
 "Conversation.SuggestedVideoView" = "查看图片";
 "Conversation.SuggestedVideoSuccess" = "头像已更新";
@@ -8614,9 +8614,9 @@ Sorry for the inconvenience.";
 "StorageManagement.Title" = "存储使用";
 "StorageManagement.TitleCleared" = "存储已清除";
 
-"StorageManagement.DescriptionCleared" = "所有媒体都可在你再次需要时重新从 Telegram 云端下載。";
-"StorageManagement.DescriptionChatUsage" = "此聊天使用 Telegram 缓存的 %1$@%。";
-"StorageManagement.DescriptionAppUsage" = "Telegram 占用了你 %1$@% 的可用设备储存空间。";
+"StorageManagement.DescriptionCleared" = "所有媒体都可在你再次需要时重新从 PChat 云端下載。";
+"StorageManagement.DescriptionChatUsage" = "此聊天使用 PChat 缓存的 %1$@%。";
+"StorageManagement.DescriptionAppUsage" = "PChat 占用了你 %1$@% 的可用设备储存空间。";
 
 "StorageManagement.ClearAll" = "清除缓存";
 "StorageManagement.ClearSelected" = "清除所选";
@@ -8630,7 +8630,7 @@ Sorry for the inconvenience.";
 "StorageManagement.SectionAvatars" = "头像";
 "StorageManagement.SectionMiscellaneous" = "杂项";
 
-"StorageManagement.SectionsDescription" = "所有媒体文件将保留在 Telegram 云端，需要时可以重新下载。";
+"StorageManagement.SectionsDescription" = "所有媒体文件将保留在 PChat 云端，需要时可以重新下载。";
 
 "StorageManagement.AutoremoveHeader" = "自动删除已缓存媒体";
 "StorageManagement.AutoremoveDescription" = "在此期间你**未曾访问过的**云端聊天中的照片、视频和其他文件将从此设备中删除，以节省磁盘空间。";
@@ -8682,8 +8682,8 @@ Sorry for the inconvenience.";
 "RequestPeer.ChannelsEmpty" = "您没有满足以下要求的频道：";
 "RequestPeer.ChannelsAllEmpty" = "您还没有频道。";
 
-"RequestPeer.Requirement.UserPremiumOff" = "用户不能拥有 Telegram 高级版订阅。";
-"RequestPeer.Requirement.UserPremiumOn" = "用户必须拥有 Telegram 高级版订阅。";
+"RequestPeer.Requirement.UserPremiumOff" = "用户不能拥有 PChat 高级版订阅。";
+"RequestPeer.Requirement.UserPremiumOn" = "用户必须拥有 PChat 高级版订阅。";
 
 "RequestPeer.Requirement.Group.HasUsernameOff" = "必须是私密群组。";
 "RequestPeer.Requirement.Group.HasUsernameOn" = "该群组必须是公开的。";
@@ -8767,25 +8767,25 @@ Sorry for the inconvenience.";
 "AvatarEditor.Set" = "设置";
 "AvatarEditor.Suggest" = "建议";
 
-"Premium.UpgradeDescription" = "您可以使用**优惠价格**升级当前的 **Telegram 高级版**订阅计划。";
+"Premium.UpgradeDescription" = "您可以使用**优惠价格**升级当前的 **PChat 高级版**订阅计划。";
 "Premium.CurrentPlan" = "您的当前计划";
 "Premium.UpgradeFor" = "支付每月 %@ 并升级";
 "Premium.UpgradeForAnnual" = "支付每年 %@ 并升级";
 
-"ChatList.PremiumAnnualDiscountTitle" = "享受 %@ 折扣优惠订阅 Telegram 高级版";
-"ChatList.PremiumAnnualDiscountText" = "以年付计划订阅 Telegram 高级版来获得此折扣。";
+"ChatList.PremiumAnnualDiscountTitle" = "享受 %@ 折扣优惠订阅 PChat 高级版";
+"ChatList.PremiumAnnualDiscountText" = "以年付计划订阅 PChat 高级版来获得此折扣。";
 "ChatList.PremiumAnnualUpgradeTitle" = "您的订阅可享受最多 %@ 的优惠";
-"ChatList.PremiumAnnualUpgradeText" = "升级为 Telegram 高级版的年付计划即可享受优惠。";
+"ChatList.PremiumAnnualUpgradeText" = "升级为 PChat 高级版的年付计划即可享受优惠。";
 
-"Premium.Emoji.Description" = "订阅 **Telegram 高级版**解锁该表情及更多其他表情。";
+"Premium.Emoji.Description" = "订阅 **PChat 高级版**解锁该表情及更多其他表情。";
 "Premium.Emoji.Proceed" = "解锁高级表情";
 
 "Localization.TranslateEntireChat" = "翻译全部聊天记录";
 
 "Premium.Translation" = "即时翻译";
 "Premium.TranslationInfo" = "将频道和聊天内容即时翻译成其他语言。";
-"Premium.TranslationStandaloneInfo" = "订阅 **Telegram 高级版**即可一次性翻译聊天中的所有消息。";
-"Premium.Translation.Proceed" = "关于 Telegram 高级版";
+"Premium.TranslationStandaloneInfo" = "订阅 **PChat 高级版**即可一次性翻译聊天中的所有消息。";
+"Premium.Translation.Proceed" = "关于 PChat 高级版";
 
 "Settings.PauseMusicOnRecording" = "录音时暂停音乐";
 
@@ -8933,7 +8933,7 @@ Sorry for the inconvenience.";
 
 "Login.CodeSentCallText" = "正在呼叫您的手机（**%@**）以播放验证码。";
 
-"Premium.Purchase.OnlyOneSubscriptionAllowed" = "您已经为另一个帐户购买了 Telegram 高级版。一个 Apple ID 只能订阅一个Telegram 高级版。";
+"Premium.Purchase.OnlyOneSubscriptionAllowed" = "您已经为另一个帐户购买了 PChat 高级版。一个 Apple ID 只能订阅一个PChat 高级版。";
 
 "Call.VoiceOver.Minimize" = "通话最小化";
 
@@ -9022,7 +9022,7 @@ Sorry for the inconvenience.";
 "PowerSavingScreen.OptionAutoplayEmojiText" = "在消息、表情回应和状态中循环播放动画表情。";
 
 "PowerSavingScreen.OptionAutoplayEffectsTitle" = "界面效果";
-"PowerSavingScreen.OptionAutoplayEffectsText" = "使 Telegram 看起来超棒的各种特效和动画。";
+"PowerSavingScreen.OptionAutoplayEffectsText" = "使 PChat 看起来超棒的各种特效和动画。";
 
 "PowerSavingScreen.OptionBackgroundTitle" = "后台更新";
 "PowerSavingScreen.OptionBackgroundText" = "在应用程序之间切换时更快地更新聊天。";
@@ -9081,18 +9081,18 @@ Sorry for the inconvenience.";
 
 "Attachment.Gift" = "赠礼";
 
-"Premium.Gift.TitleShort" = "Telegram 高级版";
+"Premium.Gift.TitleShort" = "PChat 高级版";
 
-"VoiceOver.GiftPremium" = "赠送 Telegram 高级版";
+"VoiceOver.GiftPremium" = "赠送 PChat 高级版";
 
 "Login.Email.CantAccess" = "不能访问这个邮箱？";
 "Login.Email.ResetTitle" = "重置邮箱";
-"Login.Email.ResetText" = "如果您已在其他设备上登录 Telegram，则可以更改登录所使用的电子邮箱。如果您无法访问电子邮箱 %1$@，可以在 **%2$@**后使用**短信**登录码重置此电子邮箱。";
+"Login.Email.ResetText" = "如果您已在其他设备上登录 PChat，则可以更改登录所使用的电子邮箱。如果您无法访问电子邮箱 %1$@，可以在 **%2$@**后使用**短信**登录码重置此电子邮箱。";
 "Login.Email.Reset" = "重置";
 "Login.Email.ResetNowViaSMS" = "现在通过短信重置";
 "Login.Email.WillBeResetIn" = "邮箱地址将在 %@ 后重置";
-"Login.Email.PremiumRequiredTitle" = "需要 Telegram 高级版";
-"Login.Email.PremiumRequiredText" = "由于您所在国家的短信费用很高，您需要拥有 **Telegram 高级版**帐号才能通过短信登录码重置此电子邮箱。\n\n您可以请朋友给您的帐号赠送高级版订阅\n**%@**";
+"Login.Email.PremiumRequiredTitle" = "需要 PChat 高级版";
+"Login.Email.PremiumRequiredText" = "由于您所在国家的短信费用很高，您需要拥有 **PChat 高级版**帐号才能通过短信登录码重置此电子邮箱。\n\n您可以请朋友给您的帐号赠送高级版订阅\n**%@**";
 "Login.Email.ElapsedTime" = "于 %@";
 "Login.Email.ResetingNow" = "请稍候...";
 
@@ -9142,11 +9142,11 @@ Sorry for the inconvenience.";
 "Wallpaper.ApplyForAll" = "应用于所有聊天";
 "Wallpaper.ApplyForChat" = "应用于此聊天";
 
-"Premium.MaxSharedFolderMembershipText" = "你只能拥有 **%1$@** 个可分享文件夹。\n升级至 **Telegram 高级版**并将上限提升至 **%2$@ 个**。";
+"Premium.MaxSharedFolderMembershipText" = "你只能拥有 **%1$@** 个可分享文件夹。\n升级至 **PChat 高级版**并将上限提升至 **%2$@ 个**。";
 "Premium.MaxSharedFolderMembershipNoPremiumText" = "您只能添加 **%1$@ ** 个可共享的文件夹，此上限可能会在将来提高。";
 "Premium.MaxSharedFolderMembershipFinalText" = "抱歉，您只能添加 **%1$@** 个可共享的文件夹。";
 
-"Premium.MaxSharedFolderLinksText" = "您只能创建 **%1$@** 个邀请链接。升级至 **Telegram 高级版**即可创建最多 **%2$@ 个**。";
+"Premium.MaxSharedFolderLinksText" = "您只能创建 **%1$@** 个邀请链接。升级至 **PChat 高级版**即可创建最多 **%2$@ 个**。";
 "Premium.MaxSharedFolderLinksNoPremiumText" = "您只能创建 %1$@ 个邀请链接，此上限可能会在未来提高。";
 "Premium.MaxSharedFolderLinksFinalText" = "抱歉，你只能创建 **%1$@** 个邀请链接";
 
@@ -9164,7 +9164,7 @@ Sorry for the inconvenience.";
 
 "Conversation.OpenChatFolder" = "查看聊天列表";
 
-"Premium.MaxChannelsText" = "您只能加入 **%1$@** 个群组和频道。升级到 **Telegram 高级版** 以将链接上限提高到 **%2$@ 个**。";
+"Premium.MaxChannelsText" = "您只能加入 **%1$@** 个群组和频道。升级到 **PChat 高级版** 以将链接上限提高到 **%2$@ 个**。";
 "Premium.MaxChannelsNoPremiumText" = "您只能加入 **%1$@** 个群组和频道，此上限可能会在将来提高。";
 "Premium.MaxChannelsFinalText" = "抱歉，您只能加入 **%1$@** 个群组和频道。";
 
@@ -9199,7 +9199,7 @@ Sorry for the inconvenience.";
 "WebApp.LaunchMoreInfo" = "本机器人的更多信息";
 "WebApp.LaunchConfirmation" = "您将连接到该机器人的网站以启动其 Web 应用。";
 "WebApp.LaunchTermsConfirmation" = "此迷你应用即表示您同意[迷你应用服务条款]()。";
-"WebApp.LaunchTermsConfirmation_URL" = "https://telegram.org/tos/mini-apps";
+"WebApp.LaunchTermsConfirmation_URL" = "https://p.chat/tos/mini-apps";
 "WebApp.LaunchOpenApp" = "打开应用";
 
 "WallpaperPreview.PreviewInNightMode" = "在深色模式下预览此壁纸。";
@@ -9296,7 +9296,7 @@ Sorry for the inconvenience.";
 "ChatListFilter.LinkActionDelete" = "删除";
 
 "InviteLink.QRCodeFolder.Title" = "通过二维码邀请";
-"InviteLink.QRCodeFolder.Text" = "Telegram 上的所有人都可以扫描此二维码以添加此文件夹，并加入此邀请链接中包含的所有聊天。";
+"InviteLink.QRCodeFolder.Text" = "PChat 上的所有人都可以扫描此二维码以添加此文件夹，并加入此邀请链接中包含的所有聊天。";
 
 "FolderLinkPreview.IconTabLeft" = "所有聊天";
 "FolderLinkPreview.IconTabRight" = "个人";
@@ -9363,7 +9363,7 @@ Sorry for the inconvenience.";
 "Conversation.Theme.PreviewDarkShort" = "点击以在深色模式下查看该主题。";
 "Conversation.Theme.PreviewLightShort" = "点击以在浅色模式下查看该主题。";
 
-"ChatList.EmptyListContactsHeader" = "您在 Telegram 上的联系人";
+"ChatList.EmptyListContactsHeader" = "您在 PChat 上的联系人";
 "ChatList.EmptyListContactsHeaderHide" = "隐藏";
 "ChatList.EmptyListTooltip" = "发送消息或\n\n在此创建一个群组。";
 
@@ -9374,16 +9374,16 @@ Sorry for the inconvenience.";
 "UserInfo.BotNamePlaceholder" = "机器人名称";
 
 "ChatList.PremiumRestoreDiscountTitle" = "以最高 %@ 的折扣续费高级版";
-"ChatList.PremiumRestoreDiscountText" = "您的 Telegram 高级版最近已过期，点击此处以续费。";
+"ChatList.PremiumRestoreDiscountText" = "您的 PChat 高级版最近已过期，点击此处以续费。";
 
 "Notification.LockScreenReactionPlaceholder" = "表情回应";
 
 "UserInfo.BotNamePlaceholder" = "机器人名称";
 
 "ChatList.PremiumRestoreDiscountTitle" = "以最高 %@ 的折扣续费高级版";
-"ChatList.PremiumRestoreDiscountText" = "您的 Telegram 高级版最近已过期，点击此处以续费。";
+"ChatList.PremiumRestoreDiscountText" = "您的 PChat 高级版最近已过期，点击此处以续费。";
 
-"Login.ErrorAppOutdated" = "请将 Telegram 更新到最新版本以登录。";
+"Login.ErrorAppOutdated" = "请将 PChat 更新到最新版本以登录。";
 
 "Login.GetCodeViaFragment" = "通过 Fragment 获取代码";
 
@@ -9434,8 +9434,8 @@ Sorry for the inconvenience.";
 "ChatList.Archive.ContextInfo" = "这是如何运作的？";
 "ChatList.ContextSelectChats" = "选择聊天";
 
-"StoryFeed.TooltipPremiumPosting" = "目前只有 [Telegram 高级版]() 的订阅用户可以发布动态。";
-"StoryFeed.TooltipPremiumPostingLimited" = "目前，只有 [Telegram 高级版]() 的订阅用户可以发布动态。";
+"StoryFeed.TooltipPremiumPosting" = "目前只有 [PChat 高级版]() 的订阅用户可以发布动态。";
+"StoryFeed.TooltipPremiumPostingLimited" = "目前，只有 [PChat 高级版]() 的订阅用户可以发布动态。";
 
 "StoryFeed.TooltipStoryLimitValue_any" = "%d 条动态";
 "StoryFeed.TooltipStoryLimit" = "您无法在 **24 小时内**发送超过 **%@ 条动态**。";
@@ -9473,7 +9473,7 @@ Sorry for the inconvenience.";
 
 "ArchiveSettings.KeepArchived" = "始终保留在归档中";
 "ArchiveSettings.AutomaticallyArchive" = "自动归档";
-"ArchiveSettings.TooltipPremiumRequired" = "此设置仅向 [Telegram 高级版]()的订阅者开放。";
+"ArchiveSettings.TooltipPremiumRequired" = "此设置仅向 [PChat 高级版]()的订阅者开放。";
 
 "NotificationSettings.Stories.ShowAll" = "显示所有通知";
 "NotificationSettings.Stories.ShowImportant" = "显示重要通知";
@@ -9552,8 +9552,8 @@ Sorry for the inconvenience.";
 "Story.HeaderEdited" = "已编辑";
 "Story.CaptionShowMore" = "显示更多";
 
-"Story.UnsupportedText" = "您当前版本的 Telegram\n不支持该动态。";
-"Story.UnsupportedAction" = "更新 Telegram";
+"Story.UnsupportedText" = "您当前版本的 PChat\n不支持该动态。";
+"Story.UnsupportedAction" = "更新 PChat";
 
 "Story.ScreenshotBlockedTitle" = "已阻止截图";
 "Story.ScreenshotBlockedText" = "您想要截图的动态\n受到其作者的保护\n不允许复制。";
@@ -9628,7 +9628,7 @@ Sorry for the inconvenience.";
 "Story.Camera.SwipeLeftRelease" = "松开以锁定";
 "Story.Camera.SwipeRightToFlip" = "向右滑动以翻转";
 
-"Story.Camera.AccessPlaceholderTitle" = "允许 Telegram 访问您的摄像头和麦克风";
+"Story.Camera.AccessPlaceholderTitle" = "允许 PChat 访问您的摄像头和麦克风";
 "Story.Camera.AccessPlaceholderText" = "这能让您分享照片并录制视频。";
 "Story.Camera.AccessOpenSettings" = "打开设置";
 
@@ -9646,7 +9646,7 @@ Sorry for the inconvenience.";
 
 "Story.Editor.ExpirationValue_any" = "%d 小时";
 
-"Story.Editor.TooltipPremiumExpiration" = "订阅 [Telegram 高级版]() 后，可以让您的动态在 6、12 或 48 小时后消失。";
+"Story.Editor.TooltipPremiumExpiration" = "订阅 [PChat 高级版]() 后，可以让您的动态在 6、12 或 48 小时后消失。";
 
 "Story.Editor.InputPlaceholderAddCaption" = "添加说明文字…";
 
@@ -9746,11 +9746,11 @@ Sorry for the inconvenience.";
 "Chat.OpenStory" = "查看动态";
 
 "Story.Editor.TooltipPremiumCaptionLimitTitle" = "已达最大长度上限";
-"Story.Editor.TooltipPremiumCaptionLimitText" = "订阅 [Telegram 高级版]() 后可将此上限提高 10 倍至 2048 个字符。";
+"Story.Editor.TooltipPremiumCaptionLimitText" = "订阅 [PChat 高级版]() 后可将此上限提高 10 倍至 2048 个字符。";
 
-"Story.Editor.TooltipPremiumCaptionEntities" = "订阅 [Telegram 高级版]() 后可以在动态说明文字中添加链接和格式。";
+"Story.Editor.TooltipPremiumCaptionEntities" = "订阅 [PChat 高级版]() 后可以在动态说明文字中添加链接和格式。";
 
-"Story.Context.TooltipPremiumSaveStories" = "订阅 [Telegram 高级版]() 后可以保存其他用户未开启保护的动态。";
+"Story.Context.TooltipPremiumSaveStories" = "订阅 [PChat 高级版]() 后可以保存其他用户未开启保护的动态。";
 
 "Story.Privacy.GroupTooLarge" = "群组过大";
 "Story.Privacy.GroupParticipantsLimit" = "您可以选择最多有 200 名成员的群组。";
@@ -9811,11 +9811,11 @@ Sorry for the inconvenience.";
 "Premium.Stories.Format.Title" = "链接和格式";
 "Premium.Stories.Format.Text" = "在动态说明文字中添加链接和格式。";
 
-"Premium.MaxStoriesWeeklyText" = "您每周最多可以发送 **%@ 条** 动态。\n订阅 **Telegram 高级版** 后可将此上限提升至 **%@ 条**。";
+"Premium.MaxStoriesWeeklyText" = "您每周最多可以发送 **%@ 条** 动态。\n订阅 **PChat 高级版** 后可将此上限提升至 **%@ 条**。";
 "Premium.MaxStoriesWeeklyNoPremiumText" = "您发布的动态数量已达到每周上限 **%@** 条。";
 "Premium.MaxStoriesWeeklyFinalText" = "您发布的动态数量已达到每周上限 **%@** 条。";
 
-"Premium.MaxStoriesMonthlyText" = "您每月最多可以发送 **%@ 条** 动态。\n订阅 **Telegram 高级版** 后可将此上限提升至 **%@ 条**。";
+"Premium.MaxStoriesMonthlyText" = "您每月最多可以发送 **%@ 条** 动态。\n订阅 **PChat 高级版** 后可将此上限提升至 **%@ 条**。";
 "Premium.MaxStoriesMonthlyNoPremiumText" = "您发布的动态数量已达到每月上限 **%@** 条。";
 "Premium.MaxStoriesMonthlyFinalText" = "您发布的动态数量已达到每月上限 **%@** 条。";
 
@@ -9831,7 +9831,7 @@ Sorry for the inconvenience.";
 "Story.ContextDeleteContact" = "删除联系人";
 "Story.ToastDeletedContact" = "**%@** 已从您的联系人中移除。";
 "Story.ToastUserBlocked" = "**%@** 已被屏蔽。";
-"Story.ToastPremiumSaveToGallery" = "订阅 [Telegram 高级版]() 后可以保存其他用户未开启保护的动态。";
+"Story.ToastPremiumSaveToGallery" = "订阅 [PChat 高级版]() 后可以保存其他用户未开启保护的动态。";
 "Story.PremiumUpgradeStoriesButton" = "升级动态";
 "Story.ContextStealthMode" = "隐藏我的浏览记录";
 "Story.AlertStealthModeActiveTitle" = "您已开启隐身模式";
@@ -9842,9 +9842,9 @@ Sorry for the inconvenience.";
 "Story.ToastStealthModeActivatedTitle" = "隐身模式已开启";
 "Story.ToastStealthModeActivatedText" = "对于您在过去 **%1$@** 内或在接下来 **%2$@** 内查看的动态，其作者不会在访客列表中看到您。";
 
-"Story.ViewList.PremiumUpgradeText" = "动态过期后，访客列表将在 24 小时后消失。\n\n如要解锁已过期和已发布动态的访客列表，请订阅 [Telegram 高级版]()。";
+"Story.ViewList.PremiumUpgradeText" = "动态过期后，访客列表将在 24 小时后消失。\n\n如要解锁已过期和已发布动态的访客列表，请订阅 [PChat 高级版]()。";
 "Story.ViewList.PremiumUpgradeAction" = "了解更多";
-"Story.ViewList.PremiumUpgradeInlineText" = "如要解锁已过期和已发布动态的访客列表，请订阅 [Telegram 高级版]()。";
+"Story.ViewList.PremiumUpgradeInlineText" = "如要解锁已过期和已发布动态的访客列表，请订阅 [PChat 高级版]()。";
 "Story.ViewList.NotFullyRecorded" = "未记录其他访客的信息。";
 "Story.ViewList.EmptyTextSearch" = "未找到浏览记录";
 "Story.ViewList.EmptyTextContacts" = "您的联系人中无人查看过此动态。";
@@ -9860,7 +9860,7 @@ Sorry for the inconvenience.";
 "Story.Footer.ViewCount_any" = "|%d| 次浏览";
 "Story.StealthMode.Title" = "隐身模式";
 "Story.StealthMode.ControlText" = "开启隐身模式浏览动态后，将不会出现在访客列表中。";
-"Story.StealthMode.UpgradeText" = "订阅 Telegram 高级版，浏览动态后，将不会出现在访客列表中。";
+"Story.StealthMode.UpgradeText" = "订阅 PChat 高级版，浏览动态后，将不会出现在访客列表中。";
 "Story.StealthMode.RecentTitle" = "隐藏最近的浏览记录";
 "Story.StealthMode.RecentText" = "隐藏我在过去 **%@** 内的浏览记录。";
 "Story.StealthMode.NextTitle" = "隐藏之后的浏览记录";
@@ -9888,7 +9888,7 @@ Sorry for the inconvenience.";
 "Story.Privacy.KeepOnChannelPage" = "在频道资料页上发布";
 "Story.Privacy.KeepOnChannelPageInfo" = "即使该动态在 %@ 小时后过期，仍将其保留在频道资料页上。";
 
-"Story.Editor.TooltipPremiumReaction" = "订阅 [Telegram 高级版]() 即可使用此表情回应。";
+"Story.Editor.TooltipPremiumReaction" = "订阅 [PChat 高级版]() 即可使用此表情回应。";
 
 "Story.Privacy.TooltipStoryArchivedChannel" = "即使动态过期，用户仍然可以在频道资料页上看到这个动态。";
 
@@ -9913,7 +9913,7 @@ Sorry for the inconvenience.";
 "MediaPicker.Timer.Video.KeepTooltip" = "视频将被保留在聊天中。";
 
 "WebApp.AllowWriteTitle" = "允许发送消息？";
-"WebApp.AllowWriteConfirmation" = "这将允许机器人 **%@** 在 Telegram 上给您发送消息。";
+"WebApp.AllowWriteConfirmation" = "这将允许机器人 **%@** 在 PChat 上给您发送消息。";
 
 "WebApp.SharePhoneTitle" = "分享手机号码？";
 "WebApp.SharePhoneConfirmation" = "**%@** 将会获取您的手机号码。这可能对机器人与其它服务的集成有用。";
@@ -9923,7 +9923,7 @@ Sorry for the inconvenience.";
 "Story.Editor.TooltipPremiumReactionLimitValue_any" = "**%@** 个回应贴纸";
 
 "Story.Editor.TooltipPremiumReactionLimitTitle" = "提高上限";
-"Story.Editor.TooltipPremiumReactionLimitText" = "订阅 **Telegram 高级版** 既可为一条动态添加多达 %@ 个回应贴纸。";
+"Story.Editor.TooltipPremiumReactionLimitText" = "订阅 **PChat 高级版** 既可为一条动态添加多达 %@ 个回应贴纸。";
 
 "Story.Editor.TooltipReachedReactionLimitTitle" = "已达上限";
 "Story.Editor.TooltipReachedReactionLimitText" = "您不能为一条动态添加超过 %@。";
@@ -9932,16 +9932,16 @@ Sorry for the inconvenience.";
 "Gallery.ViewOnceVideoTooltip" = "该视频只能观看一次。";
 
 "WebApp.DisclaimerTitle" = "使用条款";
-"WebApp.DisclaimerText" = "您即将使用一个 **不属于 Telegram** 的独立第三方小程序。您必须同意小程序使用条款后才能继续。";
+"WebApp.DisclaimerText" = "您即将使用一个 **不属于 PChat** 的独立第三方小程序。您必须同意小程序使用条款后才能继续。";
 "WebApp.DisclaimerAgree" = "我同意 [使用条款]()";
 "WebApp.DisclaimerContinue" = "继续";
-"WebApp.Disclaimer_URL" = "https://telegram.org/tos/mini-apps";
+"WebApp.Disclaimer_URL" = "https://p.chat/tos/mini-apps";
 
 "WebApp.ShortcutsAdded" = "**%@** 快捷方式已添加到附件菜单中。";
 "WebApp.ShortcutsSettingsAdded" = "**%@** 快捷方式已添加至附件菜单和设置中。";
 
 "WebApp.AllowWriteTitle" = "允许发送消息？";
-"WebApp.AllowWriteConfirmation" = "这将允许机器人 **%@** 在 Telegram 上给您发送消息。";
+"WebApp.AllowWriteConfirmation" = "这将允许机器人 **%@** 在 PChat 上给您发送消息。";
 
 "AuthSessions.MessageApp" = "您允许此机器人在您打开 %@ 时向您发送消息。";
 
@@ -9980,7 +9980,7 @@ Sorry for the inconvenience.";
 "ChatList.SessionReview.PanelConfirm" = "是的，这是我";
 "ChatList.SessionReview.PanelReject" = "不，这不是我！";
 
-"SessionReview.NoticeText" = "切勿将您的登录代码发送给任何人，否则您可能会失去您的 Telegram 账号！";
+"SessionReview.NoticeText" = "切勿将您的登录代码发送给任何人，否则您可能会失去您的 PChat 账号！";
 "SessionReview.Title" = "新登录已被阻止";
 "SessionReview.Text" = "我们已终止来自 **%2$@**，**%1$@** 的登录尝试。";
 "SessionReview.OkAction" = "明白了";
@@ -9993,7 +9993,7 @@ Sorry for the inconvenience.";
 "ChannelBoost.EnableStoriesText" = "您的频道还需要 %1$@ 才能发布动态。\n\n请 **Premium 高级版** 订阅者通过此链接来助推您的频道：";
 
 "ChannelBoost.IncreaseLimit" = "增加动态上限";
-"ChannelBoost.IncreaseLimitText" = "您的频道需要 %1$@ 才能每天发布 %2$@。\n\n请 **Telegram 高级版** 订阅者通过此链接来助推您的频道：";
+"ChannelBoost.IncreaseLimitText" = "您的频道需要 %1$@ 才能每天发布 %2$@。\n\n请 **PChat 高级版** 订阅者通过此链接来助推您的频道：";
 
 "ChannelBoost.EnableStoriesForChannel" = "为此频道启用动态";
 "ChannelBoost.EnableStoriesForOtherChannel" = "为此频道启用动态";
@@ -10086,15 +10086,15 @@ Sorry for the inconvenience.";
 
 "ChannelBoost.Error.BoostTooOftenTitle" = "不能频繁助推！";
 "ChannelBoost.Error.BoostTooOftenText" = "您每天只能更改一次助推的频道。 您可以在 **%@** 后再次助推。";
-"ChannelBoost.Error.PremiumNeededTitle" = "需要订阅 Telegram 高级版";
-"ChannelBoost.Error.PremiumNeededText" = "只有 **Telegram 高级版** 订阅者可以助推频道。您是否要订阅 **Telegram 高级版**？";
-"ChannelBoost.Error.GiftedPremiumNotAllowedTitle" = "无法使用受赠的 Telegram 高级版助推！";
-"ChannelBoost.Error.GiftedPremiumNotAllowedText" = "由于您的 **Telegram 高级版** 是通过赠送获得的，所以您无法用其助推频道。";
+"ChannelBoost.Error.PremiumNeededTitle" = "需要订阅 PChat 高级版";
+"ChannelBoost.Error.PremiumNeededText" = "只有 **PChat 高级版** 订阅者可以助推频道。您是否要订阅 **PChat 高级版**？";
+"ChannelBoost.Error.GiftedPremiumNotAllowedTitle" = "无法使用受赠的 PChat 高级版助推！";
+"ChannelBoost.Error.GiftedPremiumNotAllowedText" = "由于您的 **PChat 高级版** 是通过赠送获得的，所以您无法用其助推频道。";
 
 "Chat.ErrorFolderLinkExpired" = "文件夹链接已失效。";
 
 "Stats.Boosts.Level" = "等级";
-"Stats.Boosts.PremiumSubscribers" = "Telegram 高级版订阅者";
+"Stats.Boosts.PremiumSubscribers" = "PChat 高级版订阅者";
 "Stats.Boosts.ExistingBoosts" = "活跃助推";
 "Stats.Boosts.BoostsToLevelUp" = "助推以提升等级";
 
@@ -10123,15 +10123,15 @@ Sorry for the inconvenience.";
 
 "Notification.GiftLink" = "您已收到礼物";
 
-"MESSAGE_GIFTCODE" = "%1$@ 已向您发送 %2$@ 个月 Telegram 高级版的礼品码";
-"MESSAGE_GIVEAWAY" = "%1$@ 已发送给您一场抽奖活动，奖品为 %2$@ 份 %3$@ 个月的 Telegram 高级版订阅";
+"MESSAGE_GIFTCODE" = "%1$@ 已向您发送 %2$@ 个月 PChat 高级版的礼品码";
+"MESSAGE_GIVEAWAY" = "%1$@ 已发送给您一场抽奖活动，奖品为 %2$@ 份 %3$@ 个月的 PChat 高级版订阅";
 "CHANNEL_MESSAGE_GIVEAWAY" = "%1$@ 发布了一场抽奖活动，奖品为 %2$@ 份 %3$@ 个月的高级版订阅";
 "CHAT_MESSAGE_GIVEAWAY" = "%1$@ 已在 %2$@ 群组中发送了一场抽奖活动，奖品为 %3$@ 份 %4$@ 个月的高级版订阅";
 "PINNED_GIVEAWAY" = "%1$@ 已将抽奖活动置顶";
 "REACT_GIVEAWAY" = "%1$@ 已对您的抽奖活动作出 %2$@ 回应";
 "CHAT_REACT_GIVEAWAY" = "%2$@ 群组中的 %1$@ 已对您的抽奖活动做出了 %3$@ 回应";
 
-"Notification.GiveawayStarted" = "%1$@ 刚刚发起一场抽奖活动，向其订阅者赠送 Telegram 高级版订阅。";
+"Notification.GiveawayStarted" = "%1$@ 刚刚发起一场抽奖活动，向其订阅者赠送 PChat 高级版订阅。";
 
 "Appearance.NameColor" = "您名称颜色";
 
@@ -10143,7 +10143,7 @@ Sorry for the inconvenience.";
 "NameColor.ChatPreview.ReplyText.Channel" = "回复您频道消息";
 "NameColor.ChatPreview.MessageText.Account" = "你的名称与回复将以所选的颜色显示。";
 "NameColor.ChatPreview.MessageText.Channel" = "频道名称及回复消息将以所选的颜色显示。";
-"NameColor.ChatPreview.LinkSite" = "Telegram";
+"NameColor.ChatPreview.LinkSite" = "PChat";
 "NameColor.ChatPreview.LinkTitle" = "链接预览";
 "NameColor.ChatPreview.LinkText" = "该颜色也会套用于您发送的链接预览。";
 "NameColor.ChatPreview.Description.Account" = "您可以选择一种颜色为自己的名字、发送的链接和收到的回复着色。";
@@ -10152,7 +10152,7 @@ Sorry for the inconvenience.";
 "NameColor.ApplyColor" = "应用颜色";
 "NameColor.ApplyColorAndBackgroundEmoji" = "应用颜色与图标";
 
-"NameColor.TooltipPremium.Account" = "订阅 [Telegram 高级版]() 并为您的名字选择自定义颜色。";
+"NameColor.TooltipPremium.Account" = "订阅 [PChat 高级版]() 并为您的名字选择自定义颜色。";
 
 "NameColor.BackgroundEmoji.Title" = "为回复添加图标";
 "NameColor.BackgroundEmoji.Remove" = "移除图标";
@@ -10170,7 +10170,7 @@ Sorry for the inconvenience.";
 "Chat.ErrorQuoteOutdatedActionEdit" = "编辑";
 
 
-"Premium.BoostByGiftDescription2" = "通过向订阅者赠送 Telegram 高级版来助推您的频道。 [获得助推 >]()";
+"Premium.BoostByGiftDescription2" = "通过向订阅者赠送 PChat 高级版来助推您的频道。 [获得助推 >]()";
 
 "ChatContextMenu.QuoteSelectionTip" = "长按文字，然后移动光标来选择更多|文字以进行引文。";
 
@@ -10221,11 +10221,11 @@ Sorry for the inconvenience.";
 "Stats.Boosts.ShowMoreBoosts_any" = "显示 %@ 个其他助推";
 
 "ReassignBoost.Title" = "重新分配助推";
-"ReassignBoost.Description" = "要助推 **%1$@**，请重新分配之前助推或将 **Telegram 高级版** 赠予給朋友，以获得 **%2$@** 次额外的助推。";
+"ReassignBoost.Description" = "要助推 **%1$@**，请重新分配之前助推或将 **PChat 高级版** 赠予給朋友，以获得 **%2$@** 次额外的助推。";
 "ReassignBoost.ReassignBoosts" = "重新分配助推";
 "ReassignBoost.AvailableIn" = "将于 %@ 可用";
 "ReassignBoost.ExpiresOn" = "助推将于 %@ 到期";
-"ReassignBoost.WaitForCooldown" = "等待助推可用，或通过赠送 **Telegram 高级版** 订阅来获得 **%1$@** 次额外的助推。";
+"ReassignBoost.WaitForCooldown" = "等待助推可用，或通过赠送 **PChat 高级版** 订阅来获得 **%1$@** 次额外的助推。";
 
 "ReassignBoost.Success" = "来自 %2$@ 的 %1$@ 次助推";
 
@@ -10238,14 +10238,14 @@ Sorry for the inconvenience.";
 "ReassignBoost.OtherGroupsAndChannels_any" = "其它 %@ 个群聊和频道";
 
 "ChannelBoost.MoreBoosts.Title" = "需要更多助推";
-"ChannelBoost.MoreBoosts.Text" = "要再次助推 **%1$@**，请将 **Telegram 高级版** 赠予朋友即可获得 **%2$@** 次额外助推。";
-"ChannelBoost.MoreBoosts.Gift" = "赠品 Telegram 高级版订阅";
+"ChannelBoost.MoreBoosts.Text" = "要再次助推 **%1$@**，请将 **PChat 高级版** 赠予朋友即可获得 **%2$@** 次额外助推。";
+"ChannelBoost.MoreBoosts.Gift" = "赠品 PChat 高级版订阅";
 
 "BoostGift.Title" = "通过赠品助推";
-"BoostGift.Description" = "通过向您的订阅者赠予 Telegram 高级版来为您的频道获取更多助推。";
+"BoostGift.Description" = "通过向您的订阅者赠予 PChat 高级版来为您的频道获取更多助推。";
 "BoostGift.PrepaidGiveawayTitle" = "预付抽奖活动";
 
-"BoostGift.PrepaidGiveawayCount_any" = "%@ 个 Telegram 高级版订阅";
+"BoostGift.PrepaidGiveawayCount_any" = "%@ 个 PChat 高级版订阅";
 "BoostGift.PrepaidGiveawayMonths" = "%@ 个月的订阅";
 "BoostGift.CreateGiveaway" = "创建抽奖活动";
 "BoostGift.CreateGiveawayInfo" = "将随机选出获奖者";
@@ -10254,7 +10254,7 @@ Sorry for the inconvenience.";
 "BoostGift.QuantityTitle" = "奖品的数量";
 
 "BoostGift.QuantityBoosts_any" = "%@ 次助推";
-"BoostGift.QuantityInfo" = "选择要赠送的 Telegram 高级版订阅数量以及接收的助推数量。";
+"BoostGift.QuantityInfo" = "选择要赠送的 PChat 高级版订阅数量以及接收的助推数量。";
 "BoostGift.ChannelsTitle" = "抽奖活动中包括的频道";
 "BoostGift.AddChannel" = "添加频道";
 
@@ -10271,11 +10271,11 @@ Sorry for the inconvenience.";
 "BoostGift.LimitSubscribersInfo" = "选择是否要将抽奖活动仅限于活动发起之后加入频道的用户，或来自特定国家/地区的用户。";
 "BoostGift.DateTitle" = "抽奖活动结束日期";
 "BoostGift.DateEnds" = "结束时间";
-"BoostGift.DateInfo" = "选择何时在您的频道中随机选择 %1$@ 名订阅者获得 Telegram 高级版。";
+"BoostGift.DateInfo" = "选择何时在您的频道中随机选择 %1$@ 名订阅者获得 PChat 高级版。";
 
 "BoostGift.DateInfoSubscribers_any" = "%@ 位订阅者";
-"BoostGift.DurationTitle" = "Telegram 高级版订阅的时长";
-"BoostGift.PremiumInfo" = "您可以在 [这里]() 查看 Telegram 高级版的功能列表和更多详情。";
+"BoostGift.DurationTitle" = "PChat 高级版订阅的时长";
+"BoostGift.PremiumInfo" = "您可以在 [这里]() 查看 PChat 高级版的功能列表和更多详情。";
 "BoostGift.GiftPremium" = "赠送高级版订阅";
 "BoostGift.StartGiveaway" = "开始抽奖活动";
 "BoostGift.ReduceQuantity.Title" = "减少数量";
@@ -10283,13 +10283,13 @@ Sorry for the inconvenience.";
 "BoostGift.ReduceQuantity.Reduce" = "减少";
 "BoostGift.GiveawayCreated.Title" = "抽奖活动已创建";
 "BoostGift.GiveawayCreated.Text" = "在频道的 [统计信息]() 页面查看您的频道通过此次抽奖活动获得了多少助推。";
-"BoostGift.PremiumGifted.Title" = "已赠送 Telegram 高级版订阅";
+"BoostGift.PremiumGifted.Title" = "已赠送 PChat 高级版订阅";
 "BoostGift.PremiumGifted.Text" = "检查您频道的**统计信息**，了解礼物将如何助推您的频道。";
 "BoostGift.StarsGiveawayCreated.Title" = "已创建星星抽奖活动";
 "BoostGift.StarsGiveawayCreated.Text" = "查看频道的 [统计数据]() 以了解此抽奖活动能够如何助推您的频道。";
 "BoostGift.Group.StarsGiveawayCreated.Text" = "查看群组的 [助推]() 以了解此抽奖活动能够如何助推您的群组。";
 
-"BoostGift.Subscribers.Title" = "赠送 Telegram 高级版订阅";
+"BoostGift.Subscribers.Title" = "赠送 PChat 高级版订阅";
 "BoostGift.Subscribers.Subtitle" = "最多可以选择 %@ 位订阅者";
 "BoostGift.Subscribers.SectionTitle" = "订阅者";
 "BoostGift.Subscribers.Joined" = "在 %@ 加入";
@@ -10309,7 +10309,7 @@ Sorry for the inconvenience.";
 
 "Stats.Boosts.PrepaidGiveawaysTitle" = "预付抽奖活动";
 
-"Stats.Boosts.PrepaidGiveawayCount_any" = "%@ 个 Telegram 高级版订阅";
+"Stats.Boosts.PrepaidGiveawayCount_any" = "%@ 个 PChat 高级版订阅";
 "Stats.Boosts.PrepaidGiveawayMonths" = "%@ 个月的订阅";
 "Stats.Boosts.PrepaidGiveawaysInfo" = "请选择您已支付的赠品活动以进行设定。";
 "Stats.Boosts.ShortMonth" = "%@ 个月";
@@ -10322,13 +10322,13 @@ Sorry for the inconvenience.";
 "Stats.Boosts.ToBeDistributed" = "待分发";
 "Stats.Boosts.Unclaimed" = "尚未领取";
 "Stats.Boosts.GetBoosts" = "通过赠品助推";
-"Stats.Boosts.GetBoostsInfo" = "通过向您的订阅者赠予 Telegram 高级版来为您的频道获取更多助推。";
+"Stats.Boosts.GetBoostsInfo" = "通过向您的订阅者赠予 PChat 高级版来为您的频道获取更多助推。";
 "Stats.Boosts.TooltipToBeDistributed" = "抽奖活动结束后将选择接收者。";
 
 "Notification.PremiumPrize.Title" = "恭喜!";
-"Notification.PremiumPrize.UnclaimedText" = "您从 **%1$@** 已获得一份尚未领取的奖品。\n\n此奖品是 %2$@ 的 **Telegram 高级版** 订阅。";
-"Notification.PremiumPrize.GiveawayText" = "您在 **%1$@** 发起的抽奖活动中赢得了奖品。\n您的奖品是 %2$@ 的 Telegram 高级版订阅。";
-"Notification.PremiumPrize.GiftText" = "您已收到来自 %1$@ 的礼物。\n您的奖品是 %2$@ 的 **Telegram 高级版** 订阅。";
+"Notification.PremiumPrize.UnclaimedText" = "您从 **%1$@** 已获得一份尚未领取的奖品。\n\n此奖品是 %2$@ 的 **PChat 高级版** 订阅。";
+"Notification.PremiumPrize.GiveawayText" = "您在 **%1$@** 发起的抽奖活动中赢得了奖品。\n您的奖品是 %2$@ 的 PChat 高级版订阅。";
+"Notification.PremiumPrize.GiftText" = "您已收到来自 %1$@ 的礼物。\n您的奖品是 %2$@ 的 **PChat 高级版** 订阅。";
 
 "Notification.PremiumPrize.Months_any" = "**%@** 个月";
 "Notification.PremiumPrize.View" = "公开礼物链接";
@@ -10350,16 +10350,16 @@ Sorry for the inconvenience.";
 "Chat.Giveaway.Info.Title" = "关于此抽奖活动";
 "Chat.Giveaway.Info.EndedTitle" = "抽奖活动已结束";
 "Chat.Giveaway.Info.AlmostOver" = "抽奖活动即将结束。";
-"Chat.Giveaway.Info.OngoingIntro" = "此抽奖活动由 **%1$@** 的管理员赞助，他们为其订阅者以 %3$@ 的价格购买了 **%2$@ 个 Telegram 高级版** 订阅。";
-"Chat.Giveaway.Info.OngoingNewMany" = "Telegram 将于 **%1$@** 自动挑选 **%2$@** 位在 **%5$@** 之后加入 **%3$@** 和 **%4$@** 个其他列出频道的随机用户。";
-"Chat.Giveaway.Info.OngoingNew" = "在 **%1$@**，Telegram 将会自动选择在 **%4$@** 之后加入 **%3$@** 的 **%2$@** 位随机用户。";
-"Chat.Giveaway.Info.OngoingMany" = "在 **%1$@**，Telegram 将会自动选择 **%3$@** 以及 %4$@ 的 %2$@。";
-"Chat.Giveaway.Info.Ongoing" = "在 **%1$@**，Telegram 将会自动选择 **%3$@** 的 %2$@。";
+"Chat.Giveaway.Info.OngoingIntro" = "此抽奖活动由 **%1$@** 的管理员赞助，他们为其订阅者以 %3$@ 的价格购买了 **%2$@ 个 PChat 高级版** 订阅。";
+"Chat.Giveaway.Info.OngoingNewMany" = "PChat 将于 **%1$@** 自动挑选 **%2$@** 位在 **%5$@** 之后加入 **%3$@** 和 **%4$@** 个其他列出频道的随机用户。";
+"Chat.Giveaway.Info.OngoingNew" = "在 **%1$@**，PChat 将会自动选择在 **%4$@** 之后加入 **%3$@** 的 **%2$@** 位随机用户。";
+"Chat.Giveaway.Info.OngoingMany" = "在 **%1$@**，PChat 将会自动选择 **%3$@** 以及 %4$@ 的 %2$@。";
+"Chat.Giveaway.Info.Ongoing" = "在 **%1$@**，PChat 将会自动选择 **%3$@** 的 %2$@。";
 "Chat.Giveaway.Info.EndedIntro" = "此抽奖活动由 **%1$@** 的管理员赞助，并为其订阅者购买了时长为 %3$@ 的 %2$@。";
-"Chat.Giveaway.Info.EndedNewMany" = "在 **%1$@**，Telegram 自动选择了在 **%4$@** 之后加入 **%3$@** 以及其他列出频道的 %2$@。";
-"Chat.Giveaway.Info.EndedNew" = "在 **%1$@**，Telegram 已自动选择了在 **%4$@** 之后加入 **%3$@** 的 **%2$@**。";
-"Chat.Giveaway.Info.EndedMany" = "在 **%1$@**，Telegram 已自动选择加入了 **%3$@** 和其他列出社群的 **%2$@** 位随机用户。";
-"Chat.Giveaway.Info.Ended" = "在 **%1$@**，Telegram 已自动选出 **%3$@** 中的 %2$@。";
+"Chat.Giveaway.Info.EndedNewMany" = "在 **%1$@**，PChat 自动选择了在 **%4$@** 之后加入 **%3$@** 以及其他列出频道的 %2$@。";
+"Chat.Giveaway.Info.EndedNew" = "在 **%1$@**，PChat 已自动选择了在 **%4$@** 之后加入 **%3$@** 的 **%2$@**。";
+"Chat.Giveaway.Info.EndedMany" = "在 **%1$@**，PChat 已自动选择加入了 **%3$@** 和其他列出社群的 **%2$@** 位随机用户。";
+"Chat.Giveaway.Info.Ended" = "在 **%1$@**，PChat 已自动选出 **%3$@** 中的 %2$@。";
 "Chat.Giveaway.Info.NotAllowedJoinedEarly" = "您没有资格参加此抽奖活动，因为您是在 **%@** 即活动开始之前加入此频道的。";
 "Chat.Giveaway.Info.NotAllowedAdmin" = "您没有资格参与此赠品活动，因为您是参与频道的管理员 (**%@**)。";
 "Chat.Giveaway.Info.NotAllowedCountry" = "您没有资格参加此赠品活动，因为您所在的国家未包含在赠品活动条款中。";
@@ -10370,7 +10370,7 @@ Sorry for the inconvenience.";
 
 "Chat.Giveaway.Info.OtherChannels_any" = "和 **%@** 个其他列出的频道";
 
-"Chat.Giveaway.Info.Subscriptions_any" = "**%@ Telegram 高级版** 订阅";
+"Chat.Giveaway.Info.Subscriptions_any" = "**%@ PChat 高级版** 订阅";
 
 "Chat.Giveaway.Info.RandomUsers_any" = "**%@** 位随机用户";
 
@@ -10397,9 +10397,9 @@ Sorry for the inconvenience.";
 "Chat.Giveaway.Message.PrizeTitle" = "抽奖奖品";
 "Chat.Giveaway.Message.PrizeText" = "%1$@ 时长为 %2$@。";
 
-"Chat.Giveaway.Message.Subscriptions_any" = "**%@** 个 Telegram 高级版订阅";
+"Chat.Giveaway.Message.Subscriptions_any" = "**%@** 个 PChat 高级版订阅";
 
-"Chat.Giveaway.Message.WithSubscriptions_any" = "**%@** 个 Telegram 高级版订阅";
+"Chat.Giveaway.Message.WithSubscriptions_any" = "**%@** 个 PChat 高级版订阅";
 
 "Chat.Giveaway.Message.Months_any" = "**%@** 个月";
 "Chat.Giveaway.Message.ParticipantsTitle" = "参与者";
@@ -10418,11 +10418,11 @@ Sorry for the inconvenience.";
 
 "GiftLink.Title" = "礼物链接";
 "GiftLink.UsedTitle" = "使用过的礼物链接";
-"GiftLink.Description" = "此链接允许您启用 **Telegram 高级版** 订阅。";
-"GiftLink.UsedDescription" = "此链接用于启用 **Telegram 高级版** 订阅。";
-"GiftLink.PersonalDescription" = "此链接允许 **%@** 启用 **Telegram 高级版** 订阅。";
-"GiftLink.PersonalUsedDescription" = "此链接允许 **%@** 启用 **Telegram 高级版** 订阅。";
-"GiftLink.UnclaimedDescription" = "此链接允许任何人启用 **Telegram 高级版** 订阅。";
+"GiftLink.Description" = "此链接允许您启用 **PChat 高级版** 订阅。";
+"GiftLink.UsedDescription" = "此链接用于启用 **PChat 高级版** 订阅。";
+"GiftLink.PersonalDescription" = "此链接允许 **%@** 启用 **PChat 高级版** 订阅。";
+"GiftLink.PersonalUsedDescription" = "此链接允许 **%@** 启用 **PChat 高级版** 订阅。";
+"GiftLink.UnclaimedDescription" = "此链接允许任何人启用 **PChat 高级版** 订阅。";
 "GiftLink.Footer" = "您也可以 [发送此链接]() 给好友作为礼物。";
 "GiftLink.UsedFooter" = "此链接已于 %@ 使用。";
 "GiftLink.NotUsedFooter" = "此链接尚未启用。";
@@ -10437,12 +10437,12 @@ Sorry for the inconvenience.";
 "GiftLink.Date" = "日期";
 "GiftLink.NoRecipient" = "无接收者";
 
-"GiftLink.TelegramPremium_any" = "%@ 个月的 Telegram 高级版";
+"GiftLink.PChatPremium_any" = "%@ 个月的 PChat 高级版";
 "GiftLink.LinkHidden" = "只有收件人可以看到链接。";
 
 "ChannelBoost.EnableColors" = "启用颜色";
-"ChannelBoost.EnableColorsText" = "您的频道需要达到 **等级 5 ** 才能更改频道颜色。\n\n请 **Telegram 高级版** 订阅者通过此链接来助推您的频道：";
-"ChannelBoost.EnableColorsLevelText" = "您的频道需要 **等级 %1$@** 才能更改频道颜色。 \n\n请您的 **Telegram 高级版** 订阅者通过此链接助推您的频道：";
+"ChannelBoost.EnableColorsText" = "您的频道需要达到 **等级 5 ** 才能更改频道颜色。\n\n请 **PChat 高级版** 订阅者通过此链接来助推您的频道：";
+"ChannelBoost.EnableColorsLevelText" = "您的频道需要 **等级 %1$@** 才能更改频道颜色。 \n\n请您的 **PChat 高级版** 订阅者通过此链接助推您的频道：";
 "ChannelBoost.BoostAgain" = "再次助推";
 
 "Settings.New" = "全新";
@@ -10496,18 +10496,18 @@ Sorry for the inconvenience.";
 
 
 "Conversation.FreeTranscriptionCooldownTooltip_any" = "您本周的 **%@** 次免费语音转录额度已用尽。";
-"Conversation.FreeTranscriptionWaitOrSubscribe" = "请等待至 %@ 或者现在订阅 [Telegram 高级版]()。";
+"Conversation.FreeTranscriptionWaitOrSubscribe" = "请等待至 %@ 或者现在订阅 [PChat 高级版]()。";
 
 
-"Notification.GiveawayResults_any" = "Telegram 已随机抽取 **%@** 位获奖者，并已通过私信发送奖品链接。";
+"Notification.GiveawayResults_any" = "PChat 已随机抽取 **%@** 位获奖者，并已通过私信发送奖品链接。";
 
 
-"Notification.GiveawayResultsNoWinners_any" = "由于抽奖条款，Telegram 无法选出获奖者，所有 **%@** 个奖品链接已转发给频道管理员。";
+"Notification.GiveawayResultsNoWinners_any" = "由于抽奖条款，PChat 无法选出获奖者，所有 **%@** 个奖品链接已转发给频道管理员。";
 
-"Notification.GiveawayResultsNoWinners.Group_any" = "由于赠品活动条款，Telegram 未能选出任何获奖者，所有 %@ 个赠品链接已转发给群组管理员。";
+"Notification.GiveawayResultsNoWinners.Group_any" = "由于赠品活动条款，PChat 未能选出任何获奖者，所有 %@ 个赠品链接已转发给群组管理员。";
 
 
-"Notification.GiveawayResultsMixedWinners_any" = "Telegram 随机选出了 **%@** 位赠品得奖者，他们将在私密消息中收到赠品链接。";
+"Notification.GiveawayResultsMixedWinners_any" = "PChat 随机选出了 **%@** 位赠品得奖者，他们将在私密消息中收到赠品链接。";
 
 "Notification.GiveawayResultsMixedUnclaimed_any" = "已将 **%@** 个未分发的链接兑换码转发给频道管理员。";
 
@@ -10524,9 +10524,9 @@ Sorry for the inconvenience.";
 "Wallpaper.ApplyForMe" = "为自己应用";
 "Wallpaper.ApplyForBoth" = "为自己和 %@ 应用";
 
-"Premium.VoiceToText.Proceed" = "关于 Telegram 高级版";
-"Premium.Wallpaper.Proceed" = "关于 Telegram 高级版";
-"Premium.Colors.Proceed" = "关于 Telegram 高级版";
+"Premium.VoiceToText.Proceed" = "关于 PChat 高级版";
+"Premium.Wallpaper.Proceed" = "关于 PChat 高级版";
+"Premium.Colors.Proceed" = "关于 PChat 高级版";
 
 "Notification.YouChangedWallpaperBoth" = "您已为自己和 %@ 设置新壁纸";
 
@@ -10571,7 +10571,7 @@ Sorry for the inconvenience.";
 "Stats.ReactionsPerStory" = "每条动态的表情回应";
 
 "Channel.SimilarChannels.ShowMore" = "显示更多频道";
-"Channel.SimilarChannels.ShowMoreInfo" = "订阅 [Telegram 高级版]()\n以解锁最多 **100** 个相似频道。";
+"Channel.SimilarChannels.ShowMoreInfo" = "订阅 [PChat 高级版]()\n以解锁最多 **100** 个相似频道。";
 
 "Premium.Colors" = "名字和个人资料页颜色";
 "Premium.ColorsInfo" = "为您的个人资料页以及收到回复的消息设置颜色和图标。";
@@ -10582,7 +10582,7 @@ Sorry for the inconvenience.";
 "MediaEditor.VideoRemovalConfirmation" = "确定删除视频消息吗？";
 "MediaEditor.HoldToRecordVideo" = "按住以录制视频";
 
-"Chat.ChannelRecommendation.PremiumTooltip" = "订阅 [Telegram 高级版]() 以解锁最多 **100** 个相似频道。";
+"Chat.ChannelRecommendation.PremiumTooltip" = "订阅 [PChat 高级版]() 以解锁最多 **100** 个相似频道。";
 
 "Story.ForwardAuthorHiddenTooltip" = "该帐号已被用户隐藏";
 
@@ -10627,7 +10627,7 @@ Sorry for the inconvenience.";
 "Chat.InputPlaceholderReplyInTopic" = "在 %1$@ 回复";
 "Chat.InputPlaceholderMessageInTopic" = "%1$@ 中的消息";
 
-"Chat.Reactions.MultiplePremiumTooltip" = "订阅 [Telegram 高级版]() 后，您可以发送多个表情回应。";
+"Chat.Reactions.MultiplePremiumTooltip" = "订阅 [PChat 高级版]() 后，您可以发送多个表情回应。";
 
 "Notification.Wallpaper.Remove" = "移除";
 "Chat.RemoveWallpaper.Title" = "删除壁纸";
@@ -10644,14 +10644,14 @@ Sorry for the inconvenience.";
 
 "BoostGift.AdditionalPrizes" = "额外奖品";
 "BoostGift.AdditionalPrizesPlaceholder" = "输入您的奖品";
-"BoostGift.AdditionalPrizesInfoOff" = "如果您除了 Telegram 高级版订阅之外还想给获奖者赠送您自己的奖品，请打开此选项。";
+"BoostGift.AdditionalPrizesInfoOff" = "如果您除了 PChat 高级版订阅之外还想给获奖者赠送您自己的奖品，请打开此选项。";
 "BoostGift.AdditionalPrizesInfoOn" = "所有奖品：**%1$@** %3$@ %2$@。";
 
 
-"BoostGift.AdditionalPrizesInfoSubscriptions_any" = "%@ 个 Telegram 高级版订阅";
+"BoostGift.AdditionalPrizesInfoSubscriptions_any" = "%@ 个 PChat 高级版订阅";
 
 
-"BoostGift.AdditionalPrizesInfoWithSubscriptions_any" = "及 %@ 个 Telegram 高级版订阅";
+"BoostGift.AdditionalPrizesInfoWithSubscriptions_any" = "及 %@ 个 PChat 高级版订阅";
 
 
 "BoostGift.AdditionalPrizesInfoForMonths_any" = "为期 **%@** 个月";
@@ -10664,7 +10664,7 @@ Sorry for the inconvenience.";
 "Chat.Giveaway.Message.WinnersSelectedTitle.One" = "获奖者已选出!";
 "Chat.Giveaway.Message.WinnersSelectedTitle.Many" = "获奖者已选出!";
 
-"Chat.Giveaway.Message.WinnersSelectedText_any" = "Telegram 已随机选出 **%@** 位[赠品活动]()获奖者。";
+"Chat.Giveaway.Message.WinnersSelectedText_any" = "PChat 已随机选出 **%@** 位[赠品活动]()获奖者。";
 
 "Chat.Giveaway.Message.WinnersTitle.One" = "获奖者";
 "Chat.Giveaway.Message.WinnersTitle.Many" = "获奖者";
@@ -10675,11 +10675,11 @@ Sorry for the inconvenience.";
 "Chat.Giveaway.Message.WinnersInfo.One" = "获胜者已在私密消息中收到他们的礼物链接。";
 "Chat.Giveaway.Message.WinnersInfo.Many" = "所有获奖者都已在私密消息中收到礼物链接。";
 
-"Settings.PremiumGift" = "赠送 Telegram 高级版";
+"Settings.PremiumGift" = "赠送 PChat 高级版";
 
 "Story.ViewList.ContextSortChannelInfo" = "选择表情符号回应列表的顺序。";
 
-"Premium.Gift.MultipleDescription" = "将 **Telegram 高级版** 的专属功能赠予 %1$@ 和 %2$@。";
+"Premium.Gift.MultipleDescription" = "将 **PChat 高级版** 的专属功能赠予 %1$@ 和 %2$@。";
 
 
 "Premium.Gift.NamesAndMore_any" = " 等 %@ 更多";
@@ -10687,7 +10687,7 @@ Sorry for the inconvenience.";
 
 "Premium.Gift.YouWillReceiveBoosts_any" = "您将获得  []() **%@** 次助推。";
 
-"Premium.Gift.ContactSelection.Title" = "赠送 Telegram 高级版";
+"Premium.Gift.ContactSelection.Title" = "赠送 PChat 高级版";
 "Premium.Gift.ContactSelection.Placeholder" = "搜索要赠予高级版的对象...";
 "Premium.Gift.ContactSelection.Proceed" = "继续";
 "Premium.Gift.ContactSelection.FrequentContacts" = "常用联系人";
@@ -10700,15 +10700,15 @@ Sorry for the inconvenience.";
 
 "Premium.Gift.GiftMultipleSubscriptionsFormat" = "%2$@ 的 %1$@";
 
-"Premium.Gift.GiftMultipleSubscriptions_any" = "赠送 %@ 个 Telegram 高级版订阅";
+"Premium.Gift.GiftMultipleSubscriptions_any" = "赠送 %@ 个 PChat 高级版订阅";
 
 
-"Message.GiveawayEndedWinners_any" = "Telegram 已随机选出 %@ 位 **抽奖活动** 中奖者。";
-"Message.GiveawayEndedNoWinners" = "由于赠品活动条款，Telegram 无法选出获奖者";
+"Message.GiveawayEndedWinners_any" = "PChat 已随机选出 %@ 位 **抽奖活动** 中奖者。";
+"Message.GiveawayEndedNoWinners" = "由于赠品活动条款，PChat 无法选出获奖者";
 
 "Story.ViewMessage" = "查看消息";
 
-"Premium.Gift.Terms" = "赠予 Telegram 高级版即表示您同意 Telegram [服务条款](terms) 和 [隐私政策](privacy)。";
+"Premium.Gift.Terms" = "赠予 PChat 高级版即表示您同意 PChat [服务条款](terms) 和 [隐私政策](privacy)。";
 "Premium.Gift.Sent.One.Title" = "礼物已赠送！";
 "Premium.Gift.Sent.One.Text" = "%@ 已收到有关您购买的礼物的通知。\n\n他们现在可以访问其他功能。";
 "Premium.Gift.Sent.Multiple.Title" = "礼物已赠送!";
@@ -10717,11 +10717,11 @@ Sorry for the inconvenience.";
 "Premium.Gift.Sent.Close" = "关闭";
 
 "Premium.Gift.ApplyLink" = "免费应用";
-"Premium.Gift.ApplyLink.AlreadyHasPremium.Title" = "您已经拥有 Telegram 高级版";
+"Premium.Gift.ApplyLink.AlreadyHasPremium.Title" = "您已经拥有 PChat 高级版";
 "Premium.Gift.ApplyLink.AlreadyHasPremium.Text" = "您可以在 %@ 之后激活此礼品码，或者 [发送链接]() 给朋友。";
 
-"Premium.Gift.Link.Text" = "此链接允许您或 [您选择的任何人]（）激活 **Telegram 高级版** 订阅。";
-"Premium.Gift.UsedLink.Text" = "此链接用于启用 **Telegram 高级版** 订阅。";
+"Premium.Gift.Link.Text" = "此链接允许您或 [您选择的任何人]（）激活 **PChat 高级版** 订阅。";
+"Premium.Gift.UsedLink.Text" = "此链接用于启用 **PChat 高级版** 订阅。";
 
 "Premium.WhatsIncluded" = "包含了什么";
 
@@ -10796,7 +10796,7 @@ Sorry for the inconvenience.";
 "ChatList.PremiumXmasGiftTitle" = "👑 史努比狗狗礼物放送 🎁";
 "ChatList.PremiumXmasGiftText" = "赠送限定版典藏品给朋友！";
 
-"ReassignBoost.DescriptionWithLink" = "要助推 **%1$@**，请将先前的助推或[赠送 Telegram 高级版]()给朋友以获得 **%2$@** 次额外助推。";
+"ReassignBoost.DescriptionWithLink" = "要助推 **%1$@**，请将先前的助推或[赠送 PChat 高级版]()给朋友以获得 **%2$@** 次额外助推。";
 
 "Channel.AdminLog.ChannelChangedNameColorAndIcon" = "%1$@ 已将名称、颜色和链接图标更改为 %2$@ %3$@";
 "Channel.AdminLog.ChannelChangedNameColor" = "%1$@ 已将频道名称的颜色更改为  %2$@";
@@ -10825,7 +10825,7 @@ Sorry for the inconvenience.";
 
 "Channel.Appearance.ExampleReplyText" = "回复您的频道";
 "Channel.Appearance.ExampleText" = "您选择的颜色将用于频道名称";
-"Channel.Appearance.ExampleLinkWebsite" = "Telegram";
+"Channel.Appearance.ExampleLinkWebsite" = "PChat";
 "Channel.Appearance.ExampleLinkTitle" = "链接预览";
 "Channel.Appearance.ExampleLinkText" = "此预览也将会著色。";
 
@@ -10884,7 +10884,7 @@ Sorry for the inconvenience.";
 "Chat.ConfirmationDeleteFromSavedMessages" = "从“我的收藏”中删除";
 "Chat.ConfirmationRemoveFromSavedMessages" = "从我的收藏中删除";
 
-"Premium.MaxSavedPinsText" = "抱歉，你不能置顶超过 **%1$@** 个聊天到顶部。取消置顶一些当前置顶聊天的或订阅 **Telegram 高级版**，将上限增加至 **%2$@** 个聊天。";
+"Premium.MaxSavedPinsText" = "抱歉，你不能置顶超过 **%1$@** 个聊天到顶部。取消置顶一些当前置顶聊天的或订阅 **PChat 高级版**，将上限增加至 **%2$@** 个聊天。";
 "Premium.MaxSavedPinsNoPremiumText" = "抱歉，您不能将超过 **%@** 个聊天置顶到顶部。取消置顶当前置顶的一些内容。";
 "Premium.MaxSavedPinsFinalText" = "抱歉，您不能将超过 **%@** 个聊天置顶到顶部。取消置顶当前置顶的一些内容。";
 
@@ -10930,9 +10930,9 @@ Sorry for the inconvenience.";
 "Privacy.Messages.ValueEveryone" = "所有人";
 "Privacy.Messages.ValueContactsAndPremium" = "我的联系人与高级版订阅用户";
 "Privacy.Messages.SectionFooter" = "您可以限制非联系人且您未主动联系的用户给您发送消息。";
-"Privacy.Messages.PremiumInfoFooter" = "[什么是 Telegram 高级版？]()";
-"Privacy.Messages.PremiumToast.Title" = "需订阅 Telegram 高级版";
-"Privacy.Messages.PremiumToast.Text" = "订阅 **Telegram 高级版** 以启用此选项";
+"Privacy.Messages.PremiumInfoFooter" = "[什么是 PChat 高级版？]()";
+"Privacy.Messages.PremiumToast.Title" = "需订阅 PChat 高级版";
+"Privacy.Messages.PremiumToast.Text" = "订阅 **PChat 高级版** 以启用此选项";
 "Privacy.Messages.PremiumToast.Action" = "订阅";
 
 "Settings.Privacy.Messages" = "消息";
@@ -10945,8 +10945,8 @@ Sorry for the inconvenience.";
 "Settings.Privacy.LastSeenRevealedToast" = "您最后上线的时间已设为可见。";
 "Settings.Privacy.MessageReadTimeRevealedToast" = "您的已读时间已设为可见。";
 
-"Settings.Privacy.ReadTimePremium" = "订阅 Telegram 高级版";
-"Settings.Privacy.ReadTimePremiumFooter" = "如果您订阅了 Telegram 高级版，您可以看到其他用户的最后上线时间及已读时间，即使您对其隐藏了自己的最后上线时间及已读时间（除非对方明确限制）。";
+"Settings.Privacy.ReadTimePremium" = "订阅 PChat 高级版";
+"Settings.Privacy.ReadTimePremiumFooter" = "如果您订阅了 PChat 高级版，您可以看到其他用户的最后上线时间及已读时间，即使您对其隐藏了自己的最后上线时间及已读时间（除非对方明确限制）。";
 
 "Chat.ToastMessagingRestrictedToPremium.Text" = "**%@** 仅接受来自联系人和 **高级版** 订阅用户的消息。";
 "Chat.ToastMessagingRestrictedToPremium.Action" = "查看";
@@ -10960,7 +10960,7 @@ Sorry for the inconvenience.";
 "Chat.ReactionContextMenu.RemoveTag" = "移除标签";
 
 "Chat.EmptyStateMessagingRestrictedToPremium.Text" = "订阅 **高级版**\n即可向 **%@** 发送消息。";
-"Chat.EmptyStateMessagingRestrictedToPremiumDisabled.Text" = "订阅 **Telegram 高级版** 以发送信息 **%@**。";
+"Chat.EmptyStateMessagingRestrictedToPremiumDisabled.Text" = "订阅 **PChat 高级版** 以发送信息 **%@**。";
 "Chat.EmptyStateMessagingRestrictedToPremium.Action" = "获取高级版";
 
 "Chat.ContextMenuReadDate.ReadAvailablePrefix" = "已读";
@@ -10973,7 +10973,7 @@ Sorry for the inconvenience.";
 "Chat.SearchTagsPlaceholder" = "搜索消息或标签";
 
 "PrivacyInfo.UpgradeToPremium.Title" = "升级为高级版";
-"PrivacyInfo.UpgradeToPremium.ButtonTitle" = "订阅 Telegram 高级版";
+"PrivacyInfo.UpgradeToPremium.ButtonTitle" = "订阅 PChat 高级版";
 
 "PrivacyInfo.ShowLastSeen.Title" = "显示您的最后上线时间";
 "PrivacyInfo.ShowLastSeen.Text" = "若要查看 **%@** 的最后上线时间，您需显示您自己的最后上线时间...";
@@ -10994,10 +10994,10 @@ Sorry for the inconvenience.";
 "Chat.PrivateMessageSeenTimestamp.TodayAt" = "今天 %@ 已读";
 "Chat.PrivateMessageSeenTimestamp.YesterdayAt" = "昨天 %@ 已读";
 
-"Settings.Privacy.ReadTimePremiumActive" = "订阅 Telegram 高级版";
-"Settings.Privacy.ReadTimePremiumActiveFooter" = "因为您是 Telegram 高级版订阅者，所以您将看到启用分享的所有用户的最后上线和已读时间 - 即使您已隐藏自己的。";
+"Settings.Privacy.ReadTimePremiumActive" = "订阅 PChat 高级版";
+"Settings.Privacy.ReadTimePremiumActiveFooter" = "因为您是 PChat 高级版订阅者，所以您将看到启用分享的所有用户的最后上线和已读时间 - 即使您已隐藏自己的。";
 
-"Privacy.VoiceMessages.NonPremiumHelp" = "订阅 Telegram 高级版以限制向您可以发送语音或视频消息的用户。\n\n[Telegram 高级版是什么？]()";
+"Privacy.VoiceMessages.NonPremiumHelp" = "订阅 PChat 高级版以限制向您可以发送语音或视频消息的用户。\n\n[PChat 高级版是什么？]()";
 
 "ChatList.DeleteSavedPeerMyNotesConfirmation" = "您确定要删除所有来自 %@ 的消息吗？";
 "ChatList.DeleteSavedPeerMyNotesConfirmationTitle" = "我的笔记";
@@ -11026,7 +11026,7 @@ Sorry for the inconvenience.";
 
 "Conversation.ForwardOptions.SenderNamesRemoved" = "已移除发送者名称";
 
-"Login.Announce.Info" = "通知 Telegram 上知道我电话号码的用户我已注册。";
+"Login.Announce.Info" = "通知 PChat 上知道我电话号码的用户我已注册。";
 "Login.Announce.Notify" = "通知";
 "Login.Announce.DontNotify" = "不要通知";
 
@@ -11044,7 +11044,7 @@ Sorry for the inconvenience.";
 "BoostGift.Group.OnlyNewMembers" = "仅限新成员";
 
 "BoostGift.Group.LimitMembersInfo" = "选择是否要将抽奖活动仅限于活动开始后加入群组的用户。";
-"BoostGift.Group.DateInfo" = "选择何时从您的群组中随机选出 %1$@ 名成员接收 Telegram 高级版。";
+"BoostGift.Group.DateInfo" = "选择何时从您的群组中随机选出 %1$@ 名成员接收 PChat 高级版。";
 
 "BoostGift.Group.DateInfoMembers_any" = "%@ 个成员";
 
@@ -11066,7 +11066,7 @@ Sorry for the inconvenience.";
 "ChannelBoost.Table.Group.Wallpaper_any" = "%@ 个群组背景";
 "ChannelBoost.Table.Group.CustomWallpaper" = "自定义群组背景";
 
-"Premium.Group.BoostByGiftDescription" = "通过向成员赠送 Telegram 高级版来助推您的群组。 [获得助推>]()";
+"Premium.Group.BoostByGiftDescription" = "通过向成员赠送 PChat 高级版来助推您的群组。 [获得助推>]()";
 
 "Conversation.BoostGroup" = "助推";
 
@@ -11075,7 +11075,7 @@ Sorry for the inconvenience.";
 
 "Premium.MessageTags" = "消息标签";
 "Premium.MessageTagsInfo" = "使用标签整理收藏的消息，以便快速访问。";
-"Premium.MessageTags.Proceed" = "关于 Telegram 高级版";
+"Premium.MessageTags.Proceed" = "关于 PChat 高级版";
 
 "Chat.SavedMessagesTabInfoText" = "您发送至“我的收藏”的消息";
 
@@ -11131,7 +11131,7 @@ Sorry for the inconvenience.";
 
 "Conversation.SendMessageErrorNonPremiumForbidden" = "%@ 只允许高级版用户发送消息。";
 
-"Notification.GiveawayStartedGroup" = "%1$@ 刚开始为其会员赠送 Telegram 高级版订阅的抽奖活动。";
+"Notification.GiveawayStartedGroup" = "%1$@ 刚开始为其会员赠送 PChat 高级版订阅的抽奖活动。";
 
 
 "Chat.Giveaway.Info.Group.RandomMembers_any" = "**%@** 个随机抽取的成员";
@@ -11141,11 +11141,11 @@ Sorry for the inconvenience.";
 
 "Premium.LastSeen" = "最近上线时间";
 "Premium.LastSeenInfo" = "即使您已将其隐藏，也可查看其它用户的最后上线及已读时间。";
-"Premium.LastSeen.Proceed" = "关于 Telegram 高级版";
+"Premium.LastSeen.Proceed" = "关于 PChat 高级版";
 
 "Premium.MessagePrivacy" = "消息隐私";
 "Premium.MessagePrivacyInfo" = "限制来自陌生人的消息或对收到的消息收费。";
-"Premium.MessagePrivacy.Proceed" = "关于 Telegram 高级版";
+"Premium.MessagePrivacy.Proceed" = "关于 PChat 高级版";
 
 "BoostGift.GroupsAndChannelsTitle" = "包含的群组和频道";
 "BoostGift.GroupsAndChannelsInfo" = "选择用户参与抽奖活动前额外需要加入的群组或频道。";
@@ -11214,7 +11214,7 @@ Sorry for the inconvenience.";
 "BoostGift.GroupsOrChannels.Save" = "保存群组和频道";
 
 "Group.Emoji.Title" = "群组表情包";
-"Group.Emoji.Info" = "所有成员都可以在群组中使用这些表情，即使没有订阅 Telegram 高级版。";
+"Group.Emoji.Info" = "所有成员都可以在群组中使用这些表情，即使没有订阅 PChat 高级版。";
 "Group.Emoji.YourEmoji" = "选择表情包";
 "Group.Emoji.Placeholder" = "emojiset";
 
@@ -11261,12 +11261,12 @@ Sorry for the inconvenience.";
 
 "Stats.Boosts.Group.LinkInfo" = "与您的成员分享此链接以获得更多助推。";
 
-"Stats.Boosts.Group.GetBoostsInfo" = "通过向您的成员赠送 Telegram 高级版来为您的群组获得更多助推。";
+"Stats.Boosts.Group.GetBoostsInfo" = "通过向您的成员赠送 PChat 高级版来为您的群组获得更多助推。";
 
 "Message.GiveawayStartedGroup" = "群组已开始抽奖活动";
 
 "GroupBoost.Error.BoostTooOftenText" = "你每天只能改变一次助推的群，下次您可以在 **%@** 后重试。";
-"GroupBoost.Error.PremiumNeededText" = "只有 **Telegram 高级版** 订阅者可以助推群组。您想订阅 **Telegram 高级版** 吗？";
+"GroupBoost.Error.PremiumNeededText" = "只有 **PChat 高级版** 订阅者可以助推群组。您想订阅 **PChat 高级版** 吗？";
 
 "Notification.GroupChangedWallpaper" = "群组已设置新壁纸";
 "Notification.YouChangedGroupWallpaper" = "您已为此群组设置新壁纸";
@@ -11351,11 +11351,11 @@ Sorry for the inconvenience.";
 "ChannelBoost.Header.Features" = "功能";
 
 "Premium.FolderTags" = "文件夹标签";
-"Premium.FolderTagsInfo" = "使用 Telegram 高级版为聊天添加彩色标签，以便更快访问。";
-"Premium.FolderTagsStandaloneInfo" = "使用 Telegram 高级版为聊天添加彩色标签，以便更快访问。";
-"Premium.FolderTags.Proceed" = "关于 Telegram 高级版 ";
+"Premium.FolderTagsInfo" = "使用 PChat 高级版为聊天添加彩色标签，以便更快访问。";
+"Premium.FolderTagsStandaloneInfo" = "使用 PChat 高级版为聊天添加彩色标签，以便更快访问。";
+"Premium.FolderTags.Proceed" = "关于 PChat 高级版 ";
 
-"Premium.Business" = "Telegram 商业版";
+"Premium.Business" = "PChat 商业版";
 "Premium.BusinessInfo" = "升级您的账户后可使用企业功能，如位置信息、营业时间和快速回复。";
 
 "Premium.Business.Location.Title" = "位置";
@@ -11382,9 +11382,9 @@ Sorry for the inconvenience.";
 "Premium.Business.Chatbots.Title" = "聊天机器人";
 "Premium.Business.Chatbots.Text" = "添加任何将帮助您处理与客户互动的第三方聊天机器人。";
 
-"Business.Title" = "Telegram 企业版";
-"Business.Description" = "通过订阅 **Telegram 高级版**，将您的帐号转变为 **企业页面**，并使用以下额外功能。";
-"Business.SubscribedDescription" = "您现在已经解锁 Telegram 企业功能。这些功能 **暂时包含** 在您的高级版订阅中。";
+"Business.Title" = "PChat 企业版";
+"Business.Description" = "通过订阅 **PChat 高级版**，将您的帐号转变为 **企业页面**，并使用以下额外功能。";
+"Business.SubscribedDescription" = "您现在已经解锁 PChat 企业功能。这些功能 **暂时包含** 在您的高级版订阅中。";
 
 "Business.Location" = "位置";
 "Business.OpeningHours" = "营业时间";
@@ -11425,7 +11425,7 @@ Sorry for the inconvenience.";
 
 "Conversation.BoostToUnrestrictText" = "助推此群组以发送消息";
 
-"Settings.Business" = "Telegram 企业版";
+"Settings.Business" = "PChat 企业版";
 
 "Story.Editor.DiscardText" = "如果您现在返回，您将丢失所做的所有更改。";
 
@@ -11444,7 +11444,7 @@ Sorry for the inconvenience.";
 "ChatListFilter.TagLabelPremiumExpired" = "高级版已过期";
 "ChatListFilter.TagSectionTitle" = "文件夹颜色";
 "ChatListFilter.TagSectionFooter" = "此颜色会被用作消息列表中此文件夹的标签。";
-"ChatListFilter.TagPremiumRequiredTooltipText" = "订阅 **Telegram 高级版** 以选择文件夹颜色。";
+"ChatListFilter.TagPremiumRequiredTooltipText" = "订阅 **PChat 高级版** 以选择文件夹颜色。";
 "ChatListFilterList.ShowTags" = "显示文件夹标签";
 "ChatListFilterList.ShowTagsFooter" = "显示聊天列表中每个聊天的文件夹名称。";
 
@@ -11609,10 +11609,10 @@ Sorry for the inconvenience.";
 
 "ChatbotSetup.TitleItem" = "聊天机器人";
 "ChatbotSetup.Text" = "为您的帐号添加机器人，帮助您自动处理和回复收到的消息。[了解更多 >]()";
-"ChatbotSetup.TextLink" = "https://telegram.org/blog/telegram-business#chatbots-for-business";
+"ChatbotSetup.TextLink" = "https://p.chat/blog/telegram-business#chatbots-for-business";
 
 "ChatbotSetup.BotSearchPlaceholder" = "机器人用户名";
-"ChatbotSetup.BotSectionFooter" = "输入您希望自动处理聊天的 Telegram 机器人链接。";
+"ChatbotSetup.BotSectionFooter" = "输入您希望自动处理聊天的 PChat 机器人链接。";
 
 "ChatbotSetup.RecipientsSectionHeader" = "机器人可访问的聊天";
 
@@ -11650,7 +11650,7 @@ Sorry for the inconvenience.";
 "ChannelBoost.EnableNoAdsLevelText" = "您的频道需要达到 **等级 %1$@** 才能关闭广告。";
 
 "WebApp.TermsOfUse" = "使用条款";
-"WebApp.TermsOfUse_URL" = "https://telegram.org/tos/mini-apps";
+"WebApp.TermsOfUse_URL" = "https://p.chat/tos/mini-apps";
 
 "Privacy.Birthday" = "出生日期";
 "Privacy.Birthday.WhoCanSeeMyBio" = "谁能看到我的生日";
@@ -11703,7 +11703,7 @@ Sorry for the inconvenience.";
 
 "Stats.Monetization" = "营利";
 
-"Monetization.Header" = "Telegram 会将您频道中显示的广告收入的 50% 分享给您作为奖励 。[了解更多 >]()";
+"Monetization.Header" = "PChat 会将您频道中显示的广告收入的 50% 分享给您作为奖励 。[了解更多 >]()";
 "Monetization.ImpressionsTitle" = "广告显示次数（按小时）";
 "Monetization.AdRevenueTitle" = "广告收益";
 "Monetization.OverviewTitle" = "收益总览";
@@ -11712,7 +11712,7 @@ Sorry for the inconvenience.";
 "Monetization.Balance.AvailableInfo" = "您可以使用 Fragment 领取奖励，Fragment 是广告商用来支付广告费用的第三方平台。 [条款与细则 >]()";
 "Monetization.Balance.ComingLaterInfo" = "在接下来的几周中，你将能够使用 Fragment 获取奖励，Fragment 是广告商用于支付广告费的第三方平台。 [了解更多 >]()";
 
-"Monetization.BalanceInfo_URL" = "https://telegram.org/blog/monetization-for-channels";
+"Monetization.BalanceInfo_URL" = "https://p.chat/blog/monetization-for-channels";
 "Monetization.BalanceWithdraw" = "通过 Fragment 领取";
 "Monetization.TransactionsTitle" = "交易历史";
 
@@ -11750,9 +11750,9 @@ Sorry for the inconvenience.";
 "Monetization.Intro.Title" = "从你的频道中赚取收益";
 "Monetization.Intro.Bot.Title" = "通过你的机器人赚取收益";
 
-"Monetization.Intro.Ads.Title" = "Telegram 广告";
-"Monetization.Intro.Ads.Text" = "Telegram 能够在你的频道中展示广告。";
-"Monetization.Intro.Bot.Ads.Text" = "Telegram 可以在你的机器人中显示广告。";
+"Monetization.Intro.Ads.Title" = "PChat 广告";
+"Monetization.Intro.Ads.Text" = "PChat 能够在你的频道中展示广告。";
+"Monetization.Intro.Bot.Ads.Text" = "PChat 可以在你的机器人中显示广告。";
 
 "Monetization.Intro.Split.Title" = "50:50 收入分成";
 "Monetization.Intro.Split.Text" = "您将以 TON 收到 50% 的广告收入分成。";
@@ -11761,34 +11761,34 @@ Sorry for the inconvenience.";
 "Monetization.Intro.Withdrawal.Text" = "您可以随时领取您的 TON。";
 
 "Monetization.Intro.Info.Title" = "什么是 #TON？";
-"Monetization.Intro.Info.Text" = "TON 是一个区块链平台和加密货币，因其高性能和低佣金而被 Telegram 采用。[了解更多 >]()";
-"Monetization.Intro.Info.Text_URL" = "https://telegram.org/blog/monetization-for-channels";
+"Monetization.Intro.Info.Text" = "TON 是一个区块链平台和加密货币，因其高性能和低佣金而被 PChat 采用。[了解更多 >]()";
+"Monetization.Intro.Info.Text_URL" = "https://p.chat/blog/monetization-for-channels";
 
 "Monetization.Intro.Understood" = "已知悉";
 
 "ReportAd.Title" = "举报广告";
 "ReportAd.Help" = "详细了解我们的 [广告政策和指南]()。";
-"ReportAd.Help_URL" = "https://ads.telegram.org/guidelines";
+"ReportAd.Help_URL" = "https://ads.p.chat/guidelines";
 "ReportAd.Reported" = "我们将审核此广告，以保证其符合 [广告政策与准则]()。";
 "ReportAd.Hidden" = "广告已隐藏。";
 
 "AdsInfo.Title" = "关于这些广告";
-"AdsInfo.Info" = "Telegram 广告与其他平台上的广告大有不同。这类广告：";
+"AdsInfo.Info" = "PChat 广告与其他平台上的广告大有不同。这类广告：";
 "AdsInfo.Respect.Title" = "尊重您的隐私";
-"AdsInfo.Respect.Text" = "Telegram 上的广告不会使用您的个人信息，而是基于您所在的频道来展示的。";
-"AdsInfo.Bot.Respect.Text" = "Telegram 上的广告不会使用您的个人资料，而是仅基于您看到广告的迷你应用内容。";
+"AdsInfo.Respect.Text" = "PChat 上的广告不会使用您的个人信息，而是基于您所在的频道来展示的。";
+"AdsInfo.Bot.Respect.Text" = "PChat 上的广告不会使用您的个人资料，而是仅基于您看到广告的迷你应用内容。";
 "AdsInfo.Split.Title" = "帮助频道创作者";
-"AdsInfo.Split.Text" = "Telegram 广告收入的 50% 将归广告频道的所有者所有。";
+"AdsInfo.Split.Text" = "PChat 广告收入的 50% 将归广告频道的所有者所有。";
 "AdsInfo.Bot.Split.Title" = "帮助机器人开发者";
 "AdsInfo.Bot.Split.Text" = " 广告收入的 50% 将归广告机器人的所有者所有。";
 "AdsInfo.Ads.Title" = "可以移除";
-"AdsInfo.Ads.Text" = "您可以通过订阅 [Telegram 高级版]()关闭广告，而等级为 %@ 的频道可以为其订阅者移除这些广告。";
-"AdsInfo.Bot.Ads.Text" = "您可以通过订阅 [Telegram 高级版]() 关闭广告。";
+"AdsInfo.Ads.Text" = "您可以通过订阅 [PChat 高级版]()关闭广告，而等级为 %@ 的频道可以为其订阅者移除这些广告。";
+"AdsInfo.Bot.Ads.Text" = "您可以通过订阅 [PChat 高级版]() 关闭广告。";
 
 "AdsInfo.Launch.Title" = "我可以投放广告吗？";
-"AdsInfo.Launch.Text" = "任何人都可以用极低的预算在这个频道投放广告。详情请查看 Telegram 广告平台。 [了解更多 >]()";
-"AdsInfo.Bot.Launch.Text" = "任何人都可以创建广告并在此机器人中显示—只需最少的预算。请查看 Telegram 广告平台了解详情。[了解更多 >]()";
-"AdsInfo.Launch.Text_URL" = "https://ads.telegram.org";
+"AdsInfo.Launch.Text" = "任何人都可以用极低的预算在这个频道投放广告。详情请查看 PChat 广告平台。 [了解更多 >]()";
+"AdsInfo.Bot.Launch.Text" = "任何人都可以创建广告并在此机器人中显示—只需最少的预算。请查看 PChat 广告平台了解详情。[了解更多 >]()";
+"AdsInfo.Launch.Text_URL" = "https://ads.p.chat";
 
 "AdsInfo.Understood" = "已知悉";
 
@@ -11840,7 +11840,7 @@ Sorry for the inconvenience.";
 
 "SendInviteLink.ChannelTextContactsAndPremiumMultipleUsers_any" = "{user_list}，及更多 **%d** 个人只接受联系人和 **Premium** 用户的频道邀请。";
 
-"SendInviteLink.SubscribeToPremiumButton" = "订阅 Telegram 高级版";
+"SendInviteLink.SubscribeToPremiumButton" = "订阅 PChat 高级版";
 "SendInviteLink.PremiumOrSendSectionSeparator" = "或者";
 
 "SendInviteLink.TextSendInviteLink" = "你也可以尝试发送邀请链接。";
@@ -11860,9 +11860,9 @@ Sorry for the inconvenience.";
 "Business.Links.CreateAction" = "创建聊天链接";
 "Business.Links.LinksSectionHeader" = "已创建的链接";
 
-"Business.Links.SimpleLinkInfoUsernamePhone" = "您也可以使用一个简单的链接来开始与您聊天 —  [t.me/%1$@](username) 或 [t.me/⁠+⁠%2$@](phone)。";
-"Business.Links.SimpleLinkInfoUsername" = "您也可以使用短链接来与你发起聊天 — [t.me/%@](username).";
-"Business.Links.SimpleLinkInfoPhone" = "您也可以使用短链接向你发起聊天 — [t.me/⁠+⁠%@](phone).";
+"Business.Links.SimpleLinkInfoUsernamePhone" = "您也可以使用一个简单的链接来开始与您聊天 —  [p.chat/%1$@](username) 或 [p.chat/⁠+⁠%2$@](phone)。";
+"Business.Links.SimpleLinkInfoUsername" = "您也可以使用短链接来与你发起聊天 — [p.chat/%@](username).";
+"Business.Links.SimpleLinkInfoPhone" = "您也可以使用短链接向你发起聊天 — [p.chat/⁠+⁠%@](phone).";
 
 "Business.Links.LinkNameTitle" = "链接名称";
 "Business.Links.LinkNameText" = "为此链接添加一个只有您才能看到的名称。";
@@ -11888,7 +11888,7 @@ Sorry for the inconvenience.";
 "ChatbotSetup.Recipients.ExcludedListTitle" = "排除的聊天";
 "ChatbotSetup.Recipients.IncludedListTitle" = "包含的聊天";
 
-"ChatbotSetup.ErrorBotNotBusinessCapable" = "此机器人暂不支持 Telegram 企业版。";
+"ChatbotSetup.ErrorBotNotBusinessCapable" = "此机器人暂不支持 PChat 企业版。";
 
 "ChatbotSetup.RecipientSummary.ValueEmpty" = "新增";
 
@@ -11900,10 +11900,10 @@ Sorry for the inconvenience.";
 "Chat.ToastPhoneNumberCopied" = "手机号码已复制到剪贴板。";
 
 "Chat.SpeedLimitAlert.Download.Title" = "下载速度受限";
-"Chat.SpeedLimitAlert.Download.Text" = "订阅 [Telegram 高级版]() 以将下载速度提高 %@ 倍。";
+"Chat.SpeedLimitAlert.Download.Text" = "订阅 [PChat 高级版]() 以将下载速度提高 %@ 倍。";
 
 "Chat.SpeedLimitAlert.Upload.Title" = "上传速度受限";
-"Chat.SpeedLimitAlert.Upload.Text" = "订阅 [Telegram 高级版]() 可将上传速度提升 %@ 倍。";
+"Chat.SpeedLimitAlert.Upload.Text" = "订阅 [PChat 高级版]() 可将上传速度提升 %@ 倍。";
 
 "Chat.BusinessBotMessageTooltip" = "只有您可以看到\n此消息是由机器人发送的。";
 
@@ -11927,10 +11927,10 @@ Sorry for the inconvenience.";
 
 "Business.AdsTitle" = "频道中的广告";
 "Business.DontHideAds" = "不要隐藏广告";
-"Business.AdsInfo" = "作为高级版订阅用户，您在 Telegram 上不会看到任何广告，但您可以选择开启它们，例如查看您自己在 [Telegram 广告平台 >]() 上发布的广告。";
-"Business.AdsInfo_URL" = "https://ads.telegram.org";
+"Business.AdsInfo" = "作为高级版订阅用户，您在 PChat 上不会看到任何广告，但您可以选择开启它们，例如查看您自己在 [PChat 广告平台 >]() 上发布的广告。";
+"Business.AdsInfo_URL" = "https://ads.p.chat";
 
-"ChatList.PremiumGraceTitle" = "⚠️ 不要失去 Telegram 高级版的访问权限！";
+"ChatList.PremiumGraceTitle" = "⚠️ 不要失去 PChat 高级版的访问权限！";
 "ChatList.PremiumGraceText" = "您的专属福利即将到期。";
 
 "Stickers.RemoveFromRecent" = "从最近使用过的清单中移除";
@@ -12231,19 +12231,19 @@ Sorry for the inconvenience.";
 "Chat.Context.Phone.CreateNewContact" = "新建联系人";
 "Chat.Context.Phone.AddToExistingContact" = "添加至现有的联系人";
 "Chat.Context.Phone.SendMessage" = "发送消息";
-"Chat.Context.Phone.TelegramVoiceCall" = "Telegram 语音通话";
-"Chat.Context.Phone.TelegramVideoCall" = "Telegram 视频通话";
-"Chat.Context.Phone.InviteToTelegram" = "邀请使用 Telegram";
+"Chat.Context.Phone.PChatVoiceCall" = "PChat 语音通话";
+"Chat.Context.Phone.PChatVideoCall" = "PChat 视频通话";
+"Chat.Context.Phone.InviteToPChat" = "邀请使用 PChat";
 "Chat.Context.Phone.CallViaCarrier" = "通过运营商呼叫";
 "Chat.Context.Phone.CopyNumber" = "拷贝号码";
-"Chat.Context.Phone.NotOnTelegram" = "此号码未加入 Telegram。";
+"Chat.Context.Phone.NotOnPChat" = "此号码未加入 PChat。";
 "Chat.Context.Phone.ViewProfile" = "查看个人资料";
 
 "Chat.Context.Username.SendMessage" = "发送消息";
 "Chat.Context.Username.OpenGroup" = "打开群组";
 "Chat.Context.Username.OpenChannel" = "打开频道";
 "Chat.Context.Username.Copy" = "复制用户名";
-"Chat.Context.Username.NotOnTelegram" = "该用户在 Telegram 上不存在 。";
+"Chat.Context.Username.NotOnPChat" = "该用户在 PChat 上不存在 。";
 
 "Chat.Context.Hashtag.Search" = "搜索";
 "Chat.Context.Hashtag.Copy" = "复制标签";
@@ -12257,8 +12257,8 @@ Sorry for the inconvenience.";
 "Message.FactCheck" = "事实核查";
 "Message.FactCheck.WhatIsThis" = "这是什么？";
 
-"Conversation.FactCheck.InnerDescription" = "此澄清是由 Telegram 提供的。";
-"Conversation.FactCheck.Description" = "此澄清是由 Telegram 提供的。";
+"Conversation.FactCheck.InnerDescription" = "此澄清是由 PChat 提供的。";
+"Conversation.FactCheck.Description" = "此澄清是由 PChat 提供的。";
 
 "FactCheck.Title" = "事实核查";
 "FactCheck.Placeholder" = "添加事实核查";
@@ -12267,8 +12267,8 @@ Sorry for the inconvenience.";
 "Conversation.ContextMenuAddFactCheck" = "添加事实核查";
 "Conversation.ContextMenuEditFactCheck" = "编辑事实查核";
 
-"Stars.Intro.Title" = "Telegram 星星";
-"Stars.Intro.Description" = "购买星星，解锁 Telegram 小程序中的内容和服务。";
+"Stars.Intro.Title" = "PChat 星星";
+"Stars.Intro.Description" = "购买星星，解锁 PChat 小程序中的内容和服务。";
 "Stars.Intro.Balance" = "余额";
 "Stars.Intro.YourBalance" = "您的余额";
 "Stars.Intro.Buy" = "购买更多星星";
@@ -12283,13 +12283,13 @@ Sorry for the inconvenience.";
 "Stars.Intro.Transaction.GoogleTopUp.Title" = "星星充值";
 "Stars.Intro.Transaction.GoogleTopUp.Subtitle" = "通过 Play 商店";
 "Stars.Intro.Transaction.PremiumBotTopUp.Title" = "星星充值";
-"Stars.Intro.Transaction.PremiumBotTopUp.Subtitle" = "通过 Telegram 高级版机器人";
+"Stars.Intro.Transaction.PremiumBotTopUp.Subtitle" = "通过 PChat 高级版机器人";
 "Stars.Intro.Transaction.FragmentTopUp.Title" = "星星充值";
 "Stars.Intro.Transaction.FragmentTopUp.Subtitle" = "通过 Fragment";
 "Stars.Intro.Transaction.FragmentWithdrawal.Title" = "提现";
 "Stars.Intro.Transaction.FragmentWithdrawal.Subtitle" = "通过 Fragment";
-"Stars.Intro.Transaction.TelegramAds.Title" = "提取";
-"Stars.Intro.Transaction.TelegramAds.Subtitle" = "通过 Telegram 广告";
+"Stars.Intro.Transaction.PChatAds.Title" = "提取";
+"Stars.Intro.Transaction.PChatAds.Subtitle" = "通过 PChat 广告";
 "Stars.Intro.Transaction.Gift" = "礼物";
 "Stars.Intro.Transaction.ConvertedGift" = "已转换的礼物";
 "Stars.Intro.Transaction.Unsupported.Title" = "不支持";
@@ -12315,7 +12315,7 @@ Sorry for the inconvenience.";
 "Stars.Purchase.Stars_any" = "%@ 颗星星";
 "Stars.Purchase.ShowMore" = "显示更多选项";
 "Stars.Purchase.Info" = "购买星星即表示您同意 [条款和条件]()。";
-"Stars.Purchase.Terms_URL" = "https://telegram.org/tos/stars";
+"Stars.Purchase.Terms_URL" = "https://p.chat/tos/stars";
 
 "Stars.Transaction.Via" = "通过";
 "Stars.Transaction.To" = "至";
@@ -12324,7 +12324,7 @@ Sorry for the inconvenience.";
 "Stars.Transaction.Id" = "交易号";
 "Stars.Transaction.Date" = "日期";
 "Stars.Transaction.Terms" = "查看星星的 [服务条款]()。";
-"Stars.Transaction.Terms_URL" = "https://telegram.org/tos/stars";
+"Stars.Transaction.Terms_URL" = "https://p.chat/tos/stars";
 "Stars.Transaction.CopiedId" = "已将交易号拷贝到剪贴板";
 
 "Stars.Transaction.MediaPurchase" = "媒体购买";
@@ -12338,8 +12338,8 @@ Sorry for the inconvenience.";
 "Stars.Transaction.FragmentTopUp.Subtitle" = "Fragment";
 "Stars.Transaction.FragmentWithdrawal.Title" = "提现星星";
 "Stars.Transaction.FragmentWithdrawal.Subtitle" = "Fragment";
-"Stars.Transaction.TelegramAds.Title" = "提取星星";
-"Stars.Transaction.TelegramAds.Subtitle" = "Telegram 广告";
+"Stars.Transaction.PChatAds.Title" = "提取星星";
+"Stars.Transaction.PChatAds.Subtitle" = "PChat 广告";
 "Stars.Transaction.Unsupported.Title" = "不支持";
 "Stars.Transaction.Refund" = "退款";
 
@@ -12382,7 +12382,7 @@ Sorry for the inconvenience.";
 "Chat.MessageEffectMenu.SectionMessageEffects" = "消息特效";
 "Chat.SendMessageMenu.MoveCaptionUp" = "将说明文字上移";
 "Chat.SendMessageMenu.MoveCaptionDown" = "将说明文字下移";
-"Chat.SendMessageMenu.ToastPremiumRequired.Text" = "订阅 [Telegram 高级版]() 添加此动画特效。";
+"Chat.SendMessageMenu.ToastPremiumRequired.Text" = "订阅 [PChat 高级版]() 添加此动画特效。";
 
 "BusinessLink.AlertTextLimitText" = "消息文本限制为 4096 个字符";
 
@@ -12422,7 +12422,7 @@ Sorry for the inconvenience.";
 "Stars.BotRevenue.Withdraw.WithdrawShort" = "提现";
 "Stars.BotRevenue.Withdraw.BuyAds" = "购买广告";
 "Stars.BotRevenue.Withdraw.Info" = "您可以使用 Fragment 领取星星奖励，或使用星星来宣传您的机器人，每次提取金额不得少于 1000 颗星星。[了解更多 >]()";
-"Stars.BotRevenue.Withdraw.Info_URL" = "https://telegram.org/tos/bot-developers#6-2-2-tpa-balance";
+"Stars.BotRevenue.Withdraw.Info_URL" = "https://p.chat/tos/bot-developers#6-2-2-tpa-balance";
 
 "Stars.BotRevenue.Transactions.Title" = "交易历史";
 
@@ -12441,7 +12441,7 @@ Sorry for the inconvenience.";
 "Stars.PaidContent.AmountTitle" = "输入解锁价格";
 "Stars.PaidContent.AmountPlaceholder" = "解锁所需星星数量";
 "Stars.PaidContent.AmountInfo" = "用户需将此数量的星星转账至您的频道才能查看此媒体。[关于星星的更多信息 >]()";
-"Stars.PaidContent.AmountInfo_URL" = "https://telegram.org/tos/stars";
+"Stars.PaidContent.AmountInfo_URL" = "https://p.chat/tos/stars";
 "Stars.PaidContent.Create" = "设为付费媒体";
 
 "MediaEditor.AddLink" = "链接";
@@ -12453,7 +12453,7 @@ Sorry for the inconvenience.";
 "MediaEditor.Link.LinkName.Title" = "链接名称 (可选)";
 "MediaEditor.Link.LinkName.Placeholder" = "输入名称";
 
-"Story.Editor.TooltipLinkPremium" = "订阅 [Telegram 高级版]() 后可在动态中添加链接。";
+"Story.Editor.TooltipLinkPremium" = "订阅 [PChat 高级版]() 后可在动态中添加链接。";
 
 
 "Story.Editor.TooltipLinkLimitValue_any" = "**%@** 个链接";
@@ -12480,7 +12480,7 @@ Sorry for the inconvenience.";
 "Monetization.BalanceStarsWithdrawShort" = "提取";
 "Monetization.BalanceStarsBuyAds" = "购买广告";
 "Monetization.Balance.StarsInfo" = "您可以使用 Fragment 收集星星奖励，或使用星星宣传您的频道。星星数量低于1000颗时无法提取。[了解更多 >]()";
-"Monetization.Balance.StarsInfo_URL" = "https://telegram.org/tos/stars";
+"Monetization.Balance.StarsInfo_URL" = "https://p.chat/tos/stars";
 
 "Monetization.StarsProceeds.Title" = "奖励总览";
 "Monetization.StarsProceeds.Available" = "可用余额";
@@ -12522,7 +12522,7 @@ Sorry for the inconvenience.";
 "WebApp.Share" = "分享";
 
 "Stars.Purchase.GiftStars" = "赠送星星";
-"Stars.Purchase.GiftInfo" = "有了星星，**%1$@** 就可以解锁 Telegram 上的内容和服务。[查看示例 >]()";
+"Stars.Purchase.GiftInfo" = "有了星星，**%1$@** 就可以解锁 PChat 上的内容和服务。[查看示例 >]()";
 
 "Stars.Purchase.SubscriptionInfo" = "购买星星以订阅 **%@**.";
 "Stars.Purchase.SubscriptionRenewInfo" = "购买星星以保持您对 **%@** 频道的订阅。";
@@ -12543,8 +12543,8 @@ Sorry for the inconvenience.";
 
 
 "Notification.StarsGift.Title_any" = "%@ 颗星星";
-"Notification.StarsGift.Subtitle" = "使用星星解锁 Telegram 上的內容和服务。";
-"Notification.StarsGift.SubtitleYou" = "有了星星，%@ 就可以解锁 Telegram 上的内容和服务。";
+"Notification.StarsGift.Subtitle" = "使用星星解锁 PChat 上的內容和服务。";
+"Notification.StarsGift.SubtitleYou" = "有了星星，%@ 就可以解锁 PChat 上的内容和服务。";
 "Notification.StarsGift.UnknownUser" = "未知用户";
 
 "Bot.Settings" = "机器人设置";
@@ -12557,7 +12557,7 @@ Sorry for the inconvenience.";
 "Browser.ContextMenu.CopyLink" = "拷贝链接";
 "Browser.ContextMenu.Share" = "分享";
 
-"WebBrowser.Telegram" = "Telegram";
+"WebBrowser.PChat" = "PChat";
 
 "Monetization.Proceeds.Ton.Info" = "总余额中的 TON 可在获得 3 天后用于广告消费和奖励，每次提取金额不得少于 10 TON。";
 "Monetization.Proceeds.Stars.Info" = "总余额中的星星可以在获得 21 天后用于购买广告或作为奖励提取。";
@@ -12584,10 +12584,10 @@ Sorry for the inconvenience.";
 "Stars.Intro.StarsSent.ViewChat" = "查看聊天";
 
 "Stars.Gift.Received.Title" = "收到礼物";
-"Stars.Gift.Received.Text" = "使用星星解锁 Telegram 上的内容和服务。[查看示例 >]()";
+"Stars.Gift.Received.Text" = "使用星星解锁 PChat 上的内容和服务。[查看示例 >]()";
 
 "Stars.Gift.Sent.Title" = "发送礼物";
-"Stars.Gift.Sent.Text" = "有了星星，%@ 就可以解锁 Telegram 上的内容和服务。[查看示例 >]()";
+"Stars.Gift.Sent.Text" = "有了星星，%@ 就可以解锁 PChat 上的内容和服务。[查看示例 >]()";
 
 "WebBrowser.Reload" = "刷新";
 "WebBrowser.Share" = "分享";
@@ -12602,11 +12602,11 @@ Sorry for the inconvenience.";
 "WebBrowser.AddressBar.ShowMore" = "显示更多";
 
 "WebBrowser.OpenLinksIn.Title" = "打开链接于";
-"WebBrowser.AutoLogin" = "通过 Telegram 自动登录";
-"WebBrowser.AutoLogin.Info" = "使用您的 Telegram 账号自动登录应用内浏览器中打开的网站。";
+"WebBrowser.AutoLogin" = "通过 PChat 自动登录";
+"WebBrowser.AutoLogin.Info" = "使用您的 PChat 账号自动登录应用内浏览器中打开的网站。";
 
 "WebBrowser.ClearCookies" = "清除 Cookies";
-"WebBrowser.ClearCookies.Info" = "删除 Telegram 应用内浏览器和小程序中的所有 cookies。此操作将使您登出大多数网站。";
+"WebBrowser.ClearCookies.Info" = "删除 PChat 应用内浏览器和小程序中的所有 cookies。此操作将使您登出大多数网站。";
 "WebBrowser.ClearCookies.Succeed" = "已清除 Cookies。";
 
 "WebBrowser.Exceptions.Title" = "从不在应用内浏览器中打开";
@@ -12632,7 +12632,7 @@ Sorry for the inconvenience.";
 
 "WebBrowser.Done" = "完成";
 
-"AccessDenied.LocationWeather" = "Telegram 需要访问您的位置，以便您可以将天气微件添加到动态中。\n\n请前往“设置” > “隐私” > “定位服务”，并将 Telegram 设定为开启。";
+"AccessDenied.LocationWeather" = "PChat 需要访问您的位置，以便您可以将天气微件添加到动态中。\n\n请前往“设置” > “隐私” > “定位服务”，并将 PChat 设定为开启。";
 
 "Story.Editor.TooltipWeatherLimitText" = "一条动态中不能添加多个天气贴纸。";
 
@@ -12658,8 +12658,8 @@ Sorry for the inconvenience.";
 
 "PeerInfo.PaneBotPreviews" = "预览";
 "PeerInfo.OpenAppButton" = "打开应用";
-"PeerInfo.AppFooterAdmin" = "发布此小程序即表示您同意 [Telegram 开发人员服务条款](https://telegram.org/tos/bot-developers)。";
-"PeerInfo.AppFooter" = "启动此小程序即表示您同意 [小程序服务条款](https://telegram.org/tos/mini-apps)。";
+"PeerInfo.AppFooterAdmin" = "发布此小程序即表示您同意 [PChat 开发人员服务条款](https://p.chat/tos/bot-developers)。";
+"PeerInfo.AppFooter" = "启动此小程序即表示您同意 [小程序服务条款](https://p.chat/tos/mini-apps)。";
 "BotPreviews.MenuAddPreview" = "添加预览";
 "BotPreviews.MenuReorder" = "重新排序";
 "BotPreviews.MenuDeleteLanguage" = "删除 %@";
@@ -12719,7 +12719,7 @@ Sorry for the inconvenience.";
 "InviteLink.ShareShort" = "分享";
 
 "Stars.Subscription.Terms" = "订阅即表示您同意 [服务条款]()。";
-"Stars.Subscription.Terms_URL" = "https://telegram.org/tos/stars";
+"Stars.Subscription.Terms_URL" = "https://p.chat/tos/stars";
 
 "Stars.Transaction.Reaction.Title" = "星星回应";
 "Stars.Transaction.Reaction.Post" = "贴文";
@@ -12762,7 +12762,7 @@ Sorry for the inconvenience.";
 "Stars.Intro.Transaction.SubscriptionFee.Title" = "订阅月费";
 "Stars.Intro.Transaction.Reaction.Title" = "星星回应";
 
-"Stars.Purchase.GenericPurchasePurpose" = "购买星星以解锁 Telegram 上的内容和服务。";
+"Stars.Purchase.GenericPurchasePurpose" = "购买星星以解锁 PChat 上的内容和服务。";
 "Stars.Purchase.PurchasePurpose.subs" = "购买星星以保持您所有订阅。";
 
 "Stars.Transfer.Subscribe.Channel.Title" = "订阅";
@@ -12804,7 +12804,7 @@ Sorry for the inconvenience.";
 "InviteLink.Create.FeeEditInfo" = "如需更改订阅费用，请创建具有不同价格的新邀请链接。";
 "InviteLink.Create.RequestApprovalFeeUnavailable" = "您无法对需要按月付费的链接启用管理员批准。";
 
-"WebApp.PrivacyPolicy_URL" = "https://telegram.org/privacy-tpa";
+"WebApp.PrivacyPolicy_URL" = "https://p.chat/privacy-tpa";
 
 
 "ChatList.SubscriptionsLowBalance.Stars_any" = "需要 %@ 颗星星";
@@ -12830,10 +12830,10 @@ Sorry for the inconvenience.";
 "SendStarReactions.SectionTop" = "星星打赏榜";
 "SendStarReactions.ShowMyselfInTop" = "在星星打赏榜上显示我";
 "SendStarReactions.SendButtonTitle" = "发送 # %@";
-"SendStarReactions.TermsOfServiceFooter" = "发送星星即表示您同意 [服务条款](https://telegram.org/tos/stars)";
+"SendStarReactions.TermsOfServiceFooter" = "发送星星即表示您同意 [服务条款](https://p.chat/tos/stars)";
 
 "PeerInfo.AllowedReactions.StarReactions" = "启用付费回应";
-"PeerInfo.AllowedReactions.StarReactionsFooter" = "打开此选项，让您的订阅者可以用 Telegram 星星对贴文作出付费回应，您之后可以以 TON 的形式提取。[了解更多 >](https://telegram.org/tos/content-creator-rewards#2-3-subscriber-donations)";
+"PeerInfo.AllowedReactions.StarReactionsFooter" = "打开此选项，让您的订阅者可以用 PChat 星星对贴文作出付费回应，您之后可以以 TON 的形式提取。[了解更多 >](https://p.chat/tos/content-creator-rewards#2-3-subscriber-donations)";
 
 
 "Chat.ToastStarsSent.Title_any" = "已发送星星！";
@@ -12856,13 +12856,13 @@ Sorry for the inconvenience.";
 
 "Notification.StarsPrize" = "你已收到礼物";
 
-"Notification.GiveawayStartedStars" = "%1$@ 刚刚为其关注者发起了一次抽奖活动，奖品为 %2$@ 颗 Telegram 星星。";
-"Notification.GiveawayStartedStarsGroup" = "%1$@ 刚刚为其成员发起了一次抽奖活动，奖品为 %2$@ 颗 Telegram 星星。";
+"Notification.GiveawayStartedStars" = "%1$@ 刚刚为其关注者发起了一次抽奖活动，奖品为 %2$@ 颗 PChat 星星。";
+"Notification.GiveawayStartedStarsGroup" = "%1$@ 刚刚为其成员发起了一次抽奖活动，奖品为 %2$@ 颗 PChat 星星。";
 
 "Notification.StarsGiveawayStarted" = "%1$@ 刚刚为其订阅者发起了一次抽奖活动，奖品为 %2$@。";
 "Notification.StarsGiveawayStartedGroup" = "%1$@ 刚刚为其成员发起了一次抽奖活动，奖品为 %2$@。";
 
-"Notification.StarsGiveawayStarted.Stars_any" = "%@ 颗 Telegram 星星";
+"Notification.StarsGiveawayStarted.Stars_any" = "%@ 颗 PChat 星星";
 
 "Chat.Giveaway.Message.Stars.PrizeText" = "%1$@ 将会分发 %2$@。";
 
@@ -12891,8 +12891,8 @@ Sorry for the inconvenience.";
 "BoostGift.NewDescriptionGroup" = "通过赠送奖品来为您的群组\n获得更多助推和成员。";
 "BoostGift.NewDescription" = "通过赠送奖品来为您的频道\n获得更多助推和订阅者。";
 "BoostGift.Prize" = "奖品";
-"BoostGift.Prize.Premium" = "Telegram 高级版";
-"BoostGift.Prize.Stars" = "Telegram 星星";
+"BoostGift.Prize.Premium" = "PChat 高级版";
+"BoostGift.Prize.Stars" = "PChat 星星";
 "BoostGift.Stars.Title" = "可分发的星星";
 
 "BoostGift.Stars.Boosts_any" = "%@ 次助推";
@@ -12915,7 +12915,7 @@ Sorry for the inconvenience.";
 "BoostGift.StarsDateInfo" = "选择何时从您的频道中随机选出 %@ 名订阅者以接收星星。";
 
 
-"BoostGift.PrepaidGiveawayStarsCount_any" = "%@ 个 Telegram 高级版";
+"BoostGift.PrepaidGiveawayStarsCount_any" = "%@ 个 PChat 高级版";
 "BoostGift.PrepaidGiveawayStarsMonths" = "%@月的订阅";
 
 "WebBrowser.ShowInstantView" = "显示即时预览";
@@ -12950,15 +12950,15 @@ Sorry for the inconvenience.";
 "Premium.BoostByGiveawayDescription" = "通过赠送奖品来为您的频道获得更多的助推和订阅者。 [获取助推 >]()";
 "Premium.Group.BoostByGiveawayDescription" = "通过赠送奖品来获得更多的助推和群组成员。 [获取助推 >]()";
 
-"Notification.StarsGiveawayResultsNoWinners" = "由于赠品活动条款，Telegram 未能选出任何获奖者，所有星星已发放给频道管理员。";
-"Notification.StarsGiveawayResultsNoWinners.Group" = "由于抽奖活动条款，Telegram 未能选出任何获奖者，所有星星已发放给群组管理员。";
+"Notification.StarsGiveawayResultsNoWinners" = "由于赠品活动条款，PChat 未能选出任何获奖者，所有星星已发放给频道管理员。";
+"Notification.StarsGiveawayResultsNoWinners.Group" = "由于抽奖活动条款，PChat 未能选出任何获奖者，所有星星已发放给群组管理员。";
 
 "Notification.StarsGiveaway.Title" = "恭喜！";
 "Notification.StarsGiveaway.Subtitle" = "您在 **%1$@** 组织的抽奖活动中赢得了奖品。\n\n您的奖品是 **%2$@**。";
 
 "Notification.StarsGiveaway.Subtitle.Stars_any" = "%@ 颗星星";
 
-"VerificationCodes.DescriptionText" = "第三方服务（如网站和商店）可通过 Telegram 向您的手机号码发送验证码，无需使用短信。这些验证码将显示在此聊天中。\n\n如果您没有请求任何验证码 — 无需担心！可能是有人在输入号码时出错了。";
+"VerificationCodes.DescriptionText" = "第三方服务（如网站和商店）可通过 PChat 向您的手机号码发送验证码，无需使用短信。这些验证码将显示在此聊天中。\n\n如果您没有请求任何验证码 — 无需担心！可能是有人在输入号码时出错了。";
 
 "Conversation.CodeCopied" = "代码已拷贝到剪贴板";
 
@@ -12968,13 +12968,13 @@ Sorry for the inconvenience.";
 "SharedMedia.GiftCount_any" = "%@ 份礼物";
 
 "Stars.Info.Title" = "什么是星星？";
-"Stars.Info.Description" = "Telegram 星星允许用户:";
+"Stars.Info.Description" = "PChat 星星允许用户:";
 "Stars.Info.Gift.Title" = "为好友送礼";
 "Stars.Info.Gift.Text" = "为您的朋友赠送礼物，这些礼物可以添加至他们的个人资料页或转换为星星。";
 "Stars.Info.Miniapp.Title" = "在迷你应用中使用星星";
-"Stars.Info.Miniapp.Text" = "在 Telegram 迷你应用中购买额外的內容和服务。 [请查看示例 >]()";
+"Stars.Info.Miniapp.Text" = "在 PChat 迷你应用中购买额外的內容和服务。 [请查看示例 >]()";
 "Stars.Info.Media.Title" = "解锁频道中的内容";
-"Stars.Info.Media.Text" = "可以访问 Telegram 频道中的付费內容和服务。";
+"Stars.Info.Media.Text" = "可以访问 PChat 频道中的付费內容和服务。";
 "Stars.Info.Reaction.Title" = "发出星星回应";
 "Stars.Info.Reaction.Text" = "通过向您所喜欢的频道的贴文作出星星回应来支持它们。";
 "Stars.Info.Done" = "了解";
@@ -13037,8 +13037,8 @@ Sorry for the inconvenience.";
 
 "Gift.Convert.Success.Text.Stars_any" = "%@ 颗星星";
 
-"Gift.Options.Premium.Title" = "赠送 Telegram 高级版订阅";
-"Gift.Options.Premium.Text" = "让 **%@** 享有 Telegram 高级版专属功能。 [查看新功能 >]()";
+"Gift.Options.Premium.Title" = "赠送 PChat 高级版订阅";
+"Gift.Options.Premium.Text" = "让 **%@** 享有 PChat 高级版专属功能。 [查看新功能 >]()";
 
 "Gift.Options.Premium.Months_any" = "%@ 个月";
 
@@ -13119,7 +13119,7 @@ Sorry for the inconvenience.";
 "Notification.PremiumGift.YearsTitle_any" = "%@ 年高级版订阅";
 "Notification.PremiumGift.More" = "更多";
 
-"Notification.PremiumGift.SubscriptionDescription" = "订阅 Telegram 专属功能。";
+"Notification.PremiumGift.SubscriptionDescription" = "订阅 PChat 专属功能。";
 
 
 "Notification.StarsGift.Stars_any" = "%@ 颗星星";
@@ -13149,18 +13149,18 @@ Sorry for the inconvenience.";
 "ChatList.Search.TopAppsInfo" = "这里包括哪些应用？  [了解 >]()";
 
 "TopApps.Info.Title" = "热门小程序";
-"TopApps.Info.Text" = "此目录根据小程序的每日收入（以星星数量衡量）进行排名。若想要列入清单，开发人员必须在 [@botfather]() 中设定主要小程序（如 [此处](https://core.telegram.org/bots/webapps#launching-the-main-mini-app) 所述） ，该小程序应拥有超过 **1000** 名每日用户，且每日收入超过 **1000** 颗星星（基于每周平均值）。";
+"TopApps.Info.Text" = "此目录根据小程序的每日收入（以星星数量衡量）进行排名。若想要列入清单，开发人员必须在 [@botfather]() 中设定主要小程序（如 [此处](https://core.p.chat/bots/webapps#launching-the-main-mini-app) 所述） ，该小程序应拥有超过 **1000** 名每日用户，且每日收入超过 **1000** 颗星星（基于每周平均值）。";
 "TopApps.Info.Done" = "已知悉";
 
-"Stars.Intro.Transaction.TelegramBotApi.Title" = "付费广播消息";
+"Stars.Intro.Transaction.PChatBotApi.Title" = "付费广播消息";
 
-"Stars.Intro.Transaction.TelegramBotApi.Messages_any" = "%@ 条短信";
+"Stars.Intro.Transaction.PChatBotApi.Messages_any" = "%@ 条短信";
 
-"Stars.Transaction.TelegramBotApi.Title" = "付费广播消息";
+"Stars.Transaction.PChatBotApi.Title" = "付费广播消息";
 
-"Stars.Transaction.TelegramBotApi.Messages_any" = "%@ 条短信";
+"Stars.Transaction.PChatBotApi.Messages_any" = "%@ 条短信";
 
-"Monetization.Bot.Header" = "Telegram 将分享您的机器人中显示的广告所带来收入的 50% 作为奖励。[了解更多 >]()";
+"Monetization.Bot.Header" = "PChat 将分享您的机器人中显示的广告所带来收入的 50% 作为奖励。[了解更多 >]()";
 "Monetization.Bot.BalanceTitle" = "可用余额";
 
 "Resolve.ChannelErrorNotFound" = "抱歉，此聊天似乎不存在。";
@@ -13350,7 +13350,7 @@ Sorry for the inconvenience.";
 "AffiliateSetup.StartTitle" = "启动联盟计划";
 "AffiliateSetup.UpdateTitle" = "更新联盟计划";
 
-"AffiliateSetup.TermsFooter" = "创建联盟计划即表示您同意联盟计划的 [条款和条件] (https://telegram.org/terms)。";
+"AffiliateSetup.TermsFooter" = "创建联盟计划即表示您同意联盟计划的 [条款和条件] (https://p.chat/terms)。";
 
 "AffiliateSetup.ProgramMenu.OpenBot" = "打开机器人";
 "AffiliateSetup.ProgramMenu.OpenApp" = "打开应用";
@@ -13370,7 +13370,7 @@ Sorry for the inconvenience.";
 "AffiliateSetup.IntroNew.Title1" = "与合作者分享收入";
 "AffiliateSetup.IntroNew.Text1" = "设置由您推荐的用户产生的收入佣金。";
 "AffiliateSetup.IntroNew.Title2" = "启动你的联盟计划";
-"AffiliateSetup.IntroNew.Text2" = "Telegram 将为数百万潜在合作者展示您的计划。";
+"AffiliateSetup.IntroNew.Text2" = "PChat 将为数百万潜在合作者展示您的计划。";
 "AffiliateSetup.IntroNew.Title3" = "通过联盟计划推广你";
 "AffiliateSetup.IntroNew.Text3" = "合作者将与他们的订阅者分享您的推荐链接。";
 
@@ -13403,7 +13403,7 @@ Sorry for the inconvenience.";
 "AffiliateProgram.PeerTypeSelf" = "个人账号";
 
 "AffiliateProgram.JoinTitle" = "联盟计划";
-"AffiliateProgram.JoinTerms" = "加入此计划即表示您同意联盟计划的 [条款和条件](https://telegram.org/tos/affiliate-program)。";
+"AffiliateProgram.JoinTerms" = "加入此计划即表示您同意联盟计划的 [条款和条件](https://p.chat/tos/affiliate-program)。";
 "AffiliateProgram.DailyRevenueText" = "应用的每用户日均收入：#**%@**";
 
 "AffiliateProgram.LinkTitle" = "推荐链接";
@@ -13485,8 +13485,8 @@ Sorry for the inconvenience.";
 "Gift.Upgrade.Unique.Description" = "为您的礼物取得专属编号、模型、背景和符号。";
 "Gift.Upgrade.Unique.IncludeDescription" = "收礼者将获得礼物的独家编号、模型、背景和符号。";
 "Gift.Upgrade.Transferable.Title" = "可转让";
-"Gift.Upgrade.Transferable.Description" = "将升级后的礼物赠送给 Telegram 上的任何朋友。";
-"Gift.Upgrade.Transferable.IncludeDescription" = "收件人能够将礼物发送给 Telegram 上的任何人。";
+"Gift.Upgrade.Transferable.Description" = "将升级后的礼物赠送给 PChat 上的任何朋友。";
+"Gift.Upgrade.Transferable.IncludeDescription" = "收件人能够将礼物发送给 PChat 上的任何人。";
 "Gift.Upgrade.Tradable.Title" = "可交易";
 "Gift.Upgrade.Tradable.Description" = "在第三方 NFT 市场上出售或拍卖你的礼物。";
 "Gift.Upgrade.Tradable.IncludeDescription" = "收件人将能够在第三方 NFT 市场上拍卖礼物。";
@@ -13522,12 +13522,12 @@ Sorry for the inconvenience.";
 "Gift.Transfer.SendUnlocks.Days_any" = "%@ 天";
 
 "Gift.Transfer.UnlockPending.Title" = "正在解锁中";
-"Gift.Transfer.UnlockPending.Text" = "%@ 天后，您能够将此典藏品发送到 Telegram 以外的任何 TON 区块链地址进行销售或拍卖。";
+"Gift.Transfer.UnlockPending.Text" = "%@ 天后，您能够将此典藏品发送到 PChat 以外的任何 TON 区块链地址进行销售或拍卖。";
 
 "Gift.Transfer.UnlockPending.Text.Days_any" = "%@ 天";
 
 "Gift.Transfer.UpdateRequired.Title" = "需要更新";
-"Gift.Transfer.UpdateRequired.Text" = "Telegram 支持将礼物转账至区块链的版本目前正在 Play 商店审核中，请耐心等待几天。";
+"Gift.Transfer.UpdateRequired.Text" = "PChat 支持将礼物转账至区块链的版本目前正在 Play 商店审核中，请耐心等待几天。";
 
 "Gift.Transfer.Confirmation.Title" = "确认转移";
 "Gift.Transfer.Confirmation.TextFree" = "您想要将 **%1$@** 的所有权转让给 **%2$@** 吗？";
@@ -13675,7 +13675,7 @@ Sorry for the inconvenience.";
 "Gift.View.PutOn" = "您已佩戴 %@";
 "Gift.View.TookOff" = "您已取下 %@";
 
-"Gift.View.TooltipPremiumWearing" = "订阅 [Telegram 高级版]() 以佩戴典藏品。";
+"Gift.View.TooltipPremiumWearing" = "订阅 [PChat 高级版]() 以佩戴典藏品。";
 
 "Conversation.AddToContactsLong" = "添加联系人";
 
@@ -13692,7 +13692,7 @@ Sorry for the inconvenience.";
 "SharedMedia.SimilarBot.Users_any" = "%@ 名月活跃用户";
 
 "PeerInfo.SimilarBots.ShowMore" = "显示更多机器人";
-"PeerInfo.SimilarBots.ShowMoreInfo" = "订阅 **Telegram 高级版** \n解锁最多 100 个相似机器人。";
+"PeerInfo.SimilarBots.ShowMoreInfo" = "订阅 **PChat 高级版** \n解锁最多 100 个相似机器人。";
 
 "PeerInfo.VerifyAccounts" = "验证账号";
 
@@ -13701,7 +13701,7 @@ Sorry for the inconvenience.";
 "Gift.View.Context.Transfer" = "转让";
 
 "Gift.Withdraw.Title" = "通过 Fragment 管理";
-"Gift.Withdraw.Text" = "你可以使用第三方服务 Fragment 将 **%@** 转移到 TON 区块链。之后你可以用任何 TON 钱包应用将其作为 NFT 管理。\n\n你也可以通过 Fragment 将此类 NFT 转回到你的 Telegram 账号。";
+"Gift.Withdraw.Text" = "你可以使用第三方服务 Fragment 将 **%@** 转移到 TON 区块链。之后你可以用任何 TON 钱包应用将其作为 NFT 管理。\n\n你也可以通过 Fragment 将此类 NFT 转回到你的 PChat 账号。";
 "Gift.Withdraw.Proceed" = "打开 Fragment";
 
 "ChatListFilter.NameEnableAnimations" = "启用动画";
@@ -13716,7 +13716,7 @@ Sorry for the inconvenience.";
 
 "PeerInfo.Gifts.SendGift" = "发送礼物";
 "PeerInfo.Gifts.ChannelNotify" = "关于新礼物的通知";
-"PeerInfo.Gifts.ChannelNotifyTooltip" = "当你的频道收到礼物时，Telegram 将给你发送消息。";
+"PeerInfo.Gifts.ChannelNotifyTooltip" = "当你的频道收到礼物时，PChat 将给你发送消息。";
 "PeerInfo.Gifts.ChannelNotifyDisabledTooltip" = "当你的频道收到礼物时，你不会收到通知。";
 
 "Notification.StarsGift.Channel.Sent" = "%1$@ 赠送了价值 %3$@ 的礼物给 %2$@";
@@ -13803,11 +13803,11 @@ Sorry for the inconvenience.";
 "Gift.Convert.Success.ChannelText.Stars_any" = "已发送 **%@ 颗星星**";
 
 "Stars.Transfer.Terms" = "购买即表示您同意 [服务条款]()。";
-"Stars.Transfer.Terms_URL" = "https://telegram.org/tos/stars";
+"Stars.Transfer.Terms_URL" = "https://p.chat/tos/stars";
 
-"AvatarEditor.PremiumNeeded.Background" = "订阅 Telegram 高级版以使用此背景。";
-"AvatarEditor.PremiumNeeded.Emoji" = "订阅 Telegram 高级版以选择此表情符号。";
-"AvatarEditor.PremiumNeeded.Sticker" = "订阅 Telegram 高级版以选择此贴纸。";
+"AvatarEditor.PremiumNeeded.Background" = "订阅 PChat 高级版以使用此背景。";
+"AvatarEditor.PremiumNeeded.Emoji" = "订阅 PChat 高级版以选择此表情符号。";
+"AvatarEditor.PremiumNeeded.Sticker" = "订阅 PChat 高级版以选择此贴纸。";
 
 "PremiumNeeded.Title" = "需要高级版订阅";
 "PremiumNeeded.Subscribe" = "订阅";
@@ -13849,7 +13849,7 @@ Sorry for the inconvenience.";
 "Notification.PaidMessageYouMany" = "你已支付 %1$@ 以发送 %2$@";
 
 "Stars.Transfer.Terms" = "购买即表示您同意 [服务条款]()。";
-"Stars.Transfer.Terms_URL" = "https://telegram.org/tos/stars";
+"Stars.Transfer.Terms_URL" = "https://p.chat/tos/stars";
 
 "StarsTransaction.Commission" = "佣金";
 
@@ -13864,10 +13864,10 @@ Sorry for the inconvenience.";
 "Stars.Intro.Transaction.PaidMessage_any" = "%@ 条消息的费用";
 
 
-"Stars.Transaction.TelegramPremium_any" = " %@ 个月的高级版订阅";
+"Stars.Transaction.PChatPremium_any" = " %@ 个月的高级版订阅";
 
 
-"Stars.Intro.Transaction.TelegramPremium_any" = "%@ 个月的 Telegram 高级版订阅";
+"Stars.Intro.Transaction.PChatPremium_any" = "%@ 个月的 PChat 高级版订阅";
 
 "Stars.Purchase.SendMessageInfo" = "购买星星以给 **%@** 赠送礼物。";
 "Stars.Purchase.SendGroupMessageInfo" = "购买星星以在 **%@** 中发送消息。";
@@ -13906,11 +13906,11 @@ Sorry for the inconvenience.";
 
 
 "Privacy.Messages.Stars_any" = "%@ 颗星星";
-"Privacy.Messages.Unlock" = "通过 Telegram 高级版解锁";
+"Privacy.Messages.Unlock" = "通过 PChat 高级版解锁";
 
 "Premium.PaidMessages" = "付费消息";
 "Premium.PaidMessagesInfo" = "对非联系人或新寄信者的消息收取费用。";
-"Premium.PaidMessages.Proceed" = "关于 Telegram 高级版";
+"Premium.PaidMessages.Proceed" = "关于 PChat 高级版";
 
 "PeerInfo.Gifts.Reorder" = "重新排序";
 "PeerInfo.Gifts.Context.Pin" = "置顶";
@@ -13924,7 +13924,7 @@ Sorry for the inconvenience.";
 "PeerInfo.Gifts.Context.Transfer" = "转让";
 
 "Gift.Send.Premium.Confirmation.Title" = "赠送礼物";
-"Gift.Send.Premium.Confirmation.Text" = "你确定要花费 **%2$@** 将 **Telegram 高级版** 赠送给 **%1$@** 吗？";
+"Gift.Send.Premium.Confirmation.Text" = "你确定要花费 **%2$@** 将 **PChat 高级版** 赠送给 **%1$@** 吗？";
 
 "Gift.Send.Premium.Confirmation.Text.Stars_any" = "%@ 颗星星";
 "Gift.Send.Premium.Confirmation.Confirm" = "确认";
@@ -14013,7 +14013,7 @@ Sorry for the inconvenience.";
 "Premium.MaxExpiringStoriesTextNumberFormat_any" = "**%d** 个动态";
 
 "Premium.MaxExpiringStoriesTextPremiumNumberFormat_any" = "**%d** 个动态";
-"Premium.MaxExpiringStoriesTextFormat" = "您可以在 **24** 小时后发布 %@。订阅 **Telegram 高级版** 可以将此限制提高到 **%@**。";
+"Premium.MaxExpiringStoriesTextFormat" = "您可以在 **24** 小时后发布 %@。订阅 **PChat 高级版** 可以将此限制提高到 **%@**。";
 
 
 "Premium.MaxExpiringStoriesNoPremiumTextNumberFormat_any" = "**%d** 个动态";
@@ -14026,7 +14026,7 @@ Sorry for the inconvenience.";
 "Stars.AccountRevenue.Proceeds.Info" = "您总余额中的星星可以在赚取后的21天后作为奖励提取。";
 "Stars.AccountRevenue.Withdraw.Info" = "您可以使用 Fragment 收集星星的奖励。每次提取的星星不得少于1000个。 [了解更多 >]()";
 
-"Privacy.Gifts.PremiumToast.Text" = "订阅 **Telegram 高级版** 以使用此设置。";
+"Privacy.Gifts.PremiumToast.Text" = "订阅 **PChat 高级版** 以使用此设置。";
 "Privacy.Gifts.PremiumToast.Action" = "打开";
 
 "Gift.Send.ErrorDisallowed" = "**%@** 不接受此型礼物。";
@@ -14071,7 +14071,7 @@ Sorry for the inconvenience.";
 
 "FrozenAccount.Title" = "您的账号已被冻结";
 "FrozenAccount.Violation.Title" = "违反条款";
-"FrozenAccount.Violation.Text" = "​您的账号因违反 Telegram 的服务条款而被冻结。";
+"FrozenAccount.Violation.Text" = "​您的账号因违反 PChat 的服务条款而被冻结。";
 "FrozenAccount.ReadOnly.Title" = "只读模式";
 "FrozenAccount.ReadOnly.Text" = "您可以访问您的账号，但不能发送消息或执行操作。";
 "FrozenAccount.Appeal.Title" = "停用前申诉";
@@ -14080,8 +14080,8 @@ Sorry for the inconvenience.";
 "FrozenAccount.Understood" = "了解";
 
 "AdsInfo.Search.Respect.Text" = "此类广告不会使用您的个人信息，仅基于您输入的搜索关键词显示。";
-"AdsInfo.Search.Ads.Text" = "您可以通过订阅 [Telegram 高级版]() 来关闭广告。";
-"AdsInfo.Search.Launch.Text" = "任何人都可以创建广告并在任何搜索查询的结果中显示，查看 Telegram 广告平台了解详情。 [了解更多 >]()";
+"AdsInfo.Search.Ads.Text" = "您可以通过订阅 [PChat 高级版]() 来关闭广告。";
+"AdsInfo.Search.Launch.Text" = "任何人都可以创建广告并在任何搜索查询的结果中显示，查看 PChat 广告平台了解详情。 [了解更多 >]()";
 
 "ChatList.FrozenAccount.Title" = "您的账号已被冻结";
 "ChatList.FrozenAccount.Text" = "点击查看详细信息并提交申诉。";
@@ -14097,16 +14097,16 @@ Sorry for the inconvenience.";
 "Login.Fee.SmsCost.Title" = "短信费高昂";
 "Login.Fee.SmsCost.Text" = "由于您所在国家/地区存在虚假账户问题且短信费用较高，您需要支付注册费用。";
 "Login.Fee.Verification.Title" = "需验证";
-"Login.Fee.Verification.Text" = "Telegram 需向您发送一条包含验证码的短信来确认您的号码。";
-"Login.Fee.Support.Title" = "通过订阅 [Telegram 高级版 >]() 支持";
-"Login.Fee.Support.Text" = "注册一周的 Telegram 高级版订阅以帮助支付短信费用。";
+"Login.Fee.Verification.Text" = "PChat 需向您发送一条包含验证码的短信来确认您的号码。";
+"Login.Fee.Support.Title" = "通过订阅 [PChat 高级版 >]() 支持";
+"Login.Fee.Support.Text" = "注册一周的 PChat 高级版订阅以帮助支付短信费用。";
 "Login.Fee.SignUp" = "注册 %@";
-"Login.Fee.GetPremiumForAWeek" = "获取一周 Telegram 高级版订阅";
+"Login.Fee.GetPremiumForAWeek" = "获取一周 PChat 高级版订阅";
 
 "StoryFeed.AddStory" = "添加动态";
 
 "WebApp.ImportData.Title" = "导入数据";
-"WebApp.ImportData.Description" = "**%@** 正在请求导入此设备上先前使用的Telegram账号数据的权限。";
+"WebApp.ImportData.Description" = "**%@** 正在请求导入此设备上先前使用的PChat账号数据的权限。";
 "WebApp.ImportData.AccountHeader" = "导入数据的账户";
 "WebApp.ImportData.CreatedOn" = "创建于 %@";
 "WebApp.ImportData.Import" = "导入";
@@ -14120,10 +14120,10 @@ Sorry for the inconvenience.";
 
 "VideoChat.RevokeLink" = "撒销链接";
 
-"InviteLink.GroupCallLinkHelp" = "Telegram 上的任何人都可以通过以下链接加入您的通话。";
+"InviteLink.GroupCallLinkHelp" = "PChat 上的任何人都可以通过以下链接加入您的通话。";
 "InviteLink.CallLinkTitle" = "通话链接";
 "InviteLink.CreatedGroupCallFooter" = "率先加入通话并在通话中添加其他人。 [打开通话 >](open_call)";
-"InviteLink.QRCode.InfoGroupCall" = "所有 Telegram 用户都可以扫描此二维码加入您的群组通话。";
+"InviteLink.QRCode.InfoGroupCall" = "所有 PChat 用户都可以扫描此二维码加入您的群组通话。";
 
 "Call.GenericGroupCallTitle" = "群组通话";
 
@@ -14295,8 +14295,8 @@ Sorry for the inconvenience.";
 
 "Premium.CreateMultipleStories" = "创建多条动态";
 
-"FrozenAccount.Violation.TextNew" = "您的账号因违反 Telegram 的[使用条款]()而被冻结。";
-"FrozenAccount.Violation.TextNew_URL" = "https://telegram.org/tos";
+"FrozenAccount.Violation.TextNew" = "您的账号因违反 PChat 的[使用条款]()而被冻结。";
+"FrozenAccount.Violation.TextNew_URL" = "https://p.chat/tos";
 
 "Stars.Purchase.BuyStarGiftInfo" = "购买星星以获得独家收藏品。";
 
@@ -14339,7 +14339,7 @@ Sorry for the inconvenience.";
 "Chat.TrimVoiceMessageToResume.Text" = "该范围以外的音频将会被丢弃，录制也会随即开始。";
 "Chat.TrimVoiceMessageToResume.Proceed" = "继续";
 
-"Contacts.LimitedAccess.Text" = "您已限制 Telegram 访问全部通讯录。";
+"Contacts.LimitedAccess.Text" = "您已限制 PChat 访问全部通讯录。";
 "Contacts.LimitedAccess.Manage" = "管理";
 
 "Media.PhotoHdOn" = "该照片会以高分辨率发送。";
@@ -14492,7 +14492,7 @@ Sorry for the inconvenience.";
 "Chat.Todo.ContextMenu.SectionList" = "清单";
 "Chat.Todo.ContextMenu.SectionsInfo" = "您正在查看特定任务的操作选单。 \n您可以切換到清单的操作选单。";
 
-"Chat.Todo.PremiumRequired" = "只有 **Telegram 高级版** 订阅者可以将任务标记为已完成。";
+"Chat.Todo.PremiumRequired" = "只有 **PChat 高级版** 订阅者可以将任务标记为已完成。";
 "Chat.Todo.CompletionLimited" = "**%@** 已限制其他人编辑此核对清单。";
 "Chat.Todo.CompletionLimitedForward" = "您无法编辑已转发的核对清单。";
 
@@ -14650,7 +14650,7 @@ Sorry for the inconvenience.";
 "Stars.SellGiftMinAmountToast.Text" = "礼物售价不能低于 %@";
 
 "Premium.Week.SignUp" = "注册 %@";
-"Premium.Week.SignUpInfo" = "获取 1 周 Telegram 高级版订阅";
+"Premium.Week.SignUpInfo" = "获取 1 周 PChat 高级版订阅";
 
 "Settings.MyTon" = "我的 TON";
 
@@ -14684,7 +14684,7 @@ Sorry for the inconvenience.";
 
 "Chat.SensitiveContentShort" = "18+";
 
-"AccessDenied.AgeVerificationCamera" = "Telegram 需要访问您的相机以进行年龄验证。 \n\n打开您设备的设置> 隐私权 > 相机，并将 Telegram 设置为开启。";
+"AccessDenied.AgeVerificationCamera" = "PChat 需要访问您的相机以进行年龄验证。 \n\n打开您设备的设置> 隐私权 > 相机，并将 PChat 设置为开启。";
 
 "PeerInfo.Gifts.Collections.All" = "所有礼物";
 "PeerInfo.Gifts.Collections.Add" = "添加收藏集";
@@ -14731,8 +14731,8 @@ Sorry for the inconvenience.";
 "Gift.Options.Gift.BuyLimitReached_any" = "您已经发送了 **%@** 份同类礼物，已达上限。";
 
 "AgeVerification.Title" = "年龄验证";
-"AgeVerification.Text" = "要访问此类内容，您必须确认您已年满**18**岁。 \n\n这是通过使用手机相机的一次性操作。Telegram 不会储存您的自拍照。";
-"AgeVerification.Text.GB" = "要访问此类内容，您必须根据英国法律确认您已年满 **18** 岁。 \n\n这是通过使用手机相机的一次性操作。Telegram 不会储存您的自拍照。";
+"AgeVerification.Text" = "要访问此类内容，您必须确认您已年满**18**岁。 \n\n这是通过使用手机相机的一次性操作。PChat 不会储存您的自拍照。";
+"AgeVerification.Text.GB" = "要访问此类内容，您必须根据英国法律确认您已年满 **18** 岁。 \n\n这是通过使用手机相机的一次性操作。PChat 不会储存您的自拍照。";
 "AgeVerification.Verify" = "验证我的年龄";
 
 "AgeVerification.Unavailable.Title" = "18+";
@@ -14768,7 +14768,7 @@ Sorry for the inconvenience.";
 "Gift.Buy.PayInTon.Tooltip" = "使用 TON 付款可以避免再次转让礼物的21天等待期。";
 
 "Premium.PremiumGift.Title" = "高级版礼物";
-"Premium.PremiumGift.Description" = "订阅 **Telegram 高级版** 即可赠送最多 **5** 份此类礼物，并解锁强大功能。";
+"Premium.PremiumGift.Description" = "订阅 **PChat 高级版** 即可赠送最多 **5** 份此类礼物，并解锁强大功能。";
 
 "Stars.SellGift.TonAmountTitle" = "以 TON 报价";
 "Stars.SellGift.OnlyTon" = "只接受以 TON 付款";
@@ -14792,7 +14792,7 @@ Sorry for the inconvenience.";
 
 "ChatList.GlobalSearch.LimitPlaceholder.Text_any" = "您每天只可以进行 %@ 次搜索。";
 "ChatList.GlobalSearch.SearchButton" = "搜索";
-"ChatList.GlobalSearch.SearchButtonPremium" = "订阅 Telegram 高级版";
+"ChatList.GlobalSearch.SearchButtonPremium" = "订阅 PChat 高级版";
 "ChatList.GlobalSearch.SearchButtonQuery" = "搜索 {}";
 "ChatList.GlobalSearch.SearchButtonPaidTitle" = "花费 ⭐️%@ 搜索";
 "ChatList.GlobalSearch.SearchButtonPaidSubtitle" = "%@ 后解锁免费搜索";
@@ -14824,7 +14824,7 @@ Sorry for the inconvenience.";
 "Stories.DeleteAlbum.Confirmation" = "是否删除 %@?";
 
 "ProfileLevelInfo.Title" = "评级";
-"ProfileLevelInfo.MyText" = "此评级反映了您在 Telegram 上的活跃度。\n评级基于以下因素：";
+"ProfileLevelInfo.MyText" = "此评级反映了您在 PChat 上的活跃度。\n评级基于以下因素：";
 "ProfileLevelInfo.MyDescriptionToday_1" = "The rating updates today.\n\%@ point is pending.";
 "ProfileLevelInfo.MyDescriptionToday_any" = "The rating updates today.\n\%@ points are pending.";
 
@@ -14841,13 +14841,13 @@ Sorry for the inconvenience.";
 
 "ProfileLevelInfo.MyDescriptionInPreviewToday_any" = "添加 %@ 后，\n这是您今天的评级。[返回 >]()";
 
-"ProfileLevelInfo.OtherDescription" = "此评级反映了 **%@** 在 Telegram 上的活跃度。\n评级基于以下因素：";
+"ProfileLevelInfo.OtherDescription" = "此评级反映了 **%@** 在 PChat 上的活跃度。\n评级基于以下因素：";
 
 "ProfileLevelInfo.LevelIndex_any" = "等级 %@";
 "ProfileLevelInfo.CloseButton" = "了解";
 
-"ProfileLevelInfo.Item0.Title" = "来自 Telegram 的礼物";
-"ProfileLevelInfo.Item0.Text" = "100% 的星星用于从 Telegram 购买礼物。";
+"ProfileLevelInfo.Item0.Title" = "来自 PChat 的礼物";
+"ProfileLevelInfo.Item0.Text" = "100% 的星星用于从 PChat 购买礼物。";
 "ProfileLevelInfo.Item0.Badge" = "已享有";
 "ProfileLevelInfo.Item1.Title" = "来自用户的礼物和帖子";
 "ProfileLevelInfo.Item1.Text" = "20% 的星星用于转售礼物、付费消息和频道帖子。";
@@ -14881,7 +14881,7 @@ Sorry for the inconvenience.";
 "Gift.Upgrade.GiftTitle" = "独家定制";
 "Gift.Upgrade.GiftDescription" = "让 %@ 将这份礼物变成一件独特的收藏品。";
 "Gift.Upgrade.Unique.GiftDescription" = "%@ 将获得专属编号、款式、背景和图标的礼物。";
-"Gift.Upgrade.Transferable.GiftDescription" = "%@ 可以将此礼物发送给 Telegram 上的任何人。";
+"Gift.Upgrade.Transferable.GiftDescription" = "%@ 可以将此礼物发送给 PChat 上的任何人。";
 "Gift.Upgrade.Tradable.GiftDescription" = "%@ 将能够在第三方 NFT 市场上拍卖该礼物。";
 
 "Notification.StarGift.Subtitle.Upgrade.Prepaid" = "%@ 现在可以将此礼物转换为独家典藏品。";
@@ -14956,20 +14956,20 @@ Sorry for the inconvenience.";
 
 "Ton.WithdrawViaFragment" = "通过 Fragment 提取";
 "Ton.WithdrawViaFragment.Info" = "通过 Fragment 领取您的 TON。 [了解更多 >]()";
-"Ton.WithdrawViaFragment.Info_URL" = "https://telegram.org/tos/bot-developers#6-2-2-tpa-balance";
+"Ton.WithdrawViaFragment.Info_URL" = "https://p.chat/tos/bot-developers#6-2-2-tpa-balance";
 
 "MESSAGE_GIFT_THEME" = "%1$@ 已将主题更换为 %2$@";
 
 "Gift.Upgrade.Skip" = "跳过";
 "Gift.Upgrade.UpgradeNext" = "升级下一个礼物";
 
-"Gift.Value.DescriptionAveragePrice" = "过去一个月内 **%@** 礼物在 Telegram 和 Fragment 上的平均售价。";
+"Gift.Value.DescriptionAveragePrice" = "过去一个月内 **%@** 礼物在 PChat 和 Fragment 上的平均售价。";
 "Gift.Value.DescriptionLastPriceFragment" = "这是 **%@** 在 Fragment 上的最新成交价。";
-"Gift.Value.DescriptionLastPriceTelegram" = "这是 **%@** 在 Telegram 上的最新成交价。";
+"Gift.Value.DescriptionLastPricePChat" = "这是 **%@** 在 PChat 上的最新成交价。";
 
-"Gift.Value.LastPriceInfo" = "**%1$@** 是 %2$@ 礼物在 Telegram 和 Fragment 上的最新价格。";
-"Gift.Value.MinimumPriceInfo" = "**%1$@** 是在 Telegram 和 Fragment 上架的 %2$@ 礼物的最低价。";
-"Gift.Value.AveragePriceInfo" = "**%1$@** 是过去一个月内在 Telegram 和 Fragment 上架的 %2$@ 礼物的平均售价。";
+"Gift.Value.LastPriceInfo" = "**%1$@** 是 %2$@ 礼物在 PChat 和 Fragment 上的最新价格。";
+"Gift.Value.MinimumPriceInfo" = "**%1$@** 是在 PChat 和 Fragment 上架的 %2$@ 礼物的最低价。";
+"Gift.Value.AveragePriceInfo" = "**%1$@** 是过去一个月内在 PChat 和 Fragment 上架的 %2$@ 礼物的平均售价。";
 
 "Gift.Value.InitialSale" = "首次发售";
 "Gift.Value.InitialPrice" = "初始价格";
@@ -14977,7 +14977,7 @@ Sorry for the inconvenience.";
 "Gift.Value.LastPrice" = "最新价格";
 "Gift.Value.MinimumPrice" = "最低价格";
 "Gift.Value.AveragePrice" = "平均价格";
-"Gift.Value.ForSaleOnTelegram" = "在 Telegram 上出售";
+"Gift.Value.ForSaleOnPChat" = "在 PChat 上出售";
 "Gift.Value.ForSaleOnFragment" = "在 Fragment 上出售";
 
 "Gift.View.Context.SetAsTheme" = "应用主题到...";
@@ -15104,10 +15104,10 @@ Error: %8$@";
 "MESSAGE_SUGGEST_BIRTHDAY" = "已建议您添加生日";
 
 "Gift.UnavailableAction.Title" = "操作已锁定";
-"Gift.UnavailableAction.Text" = "将此礼物转让到 Fragment 上的 Telegram 账号以解锁此操作。";
+"Gift.UnavailableAction.Text" = "将此礼物转让到 Fragment 上的 PChat 账号以解锁此操作。";
 "Gift.UnavailableAction.OpenFragment" = "打开 Fragment";
 
-"Gift.Unique.Telegram" = "Telegram";
+"Gift.Unique.PChat" = "PChat";
 
 "VoiceChat.ContextEnableMessages" = "启用消息";
 "VoiceChat.ContextDisableMessages" = "停用消息";
@@ -15171,10 +15171,10 @@ Error: %8$@";
 
 "Gift.Setup.AuctionInfo.Bidders_any" = "%@ 名出价者";
 
-"PrivacySettings.LoginEmailSetupInfo" = "设置您的电子邮件地址以接收 Telegram 登录验证码。";
+"PrivacySettings.LoginEmailSetupInfo" = "设置您的电子邮件地址以接收 PChat 登录验证码。";
 
 "LoginEmail.Title" = "添加电子邮箱地址";
-"LoginEmail.Description" = "您将通过电子邮件而非短信接收 Telegram 登录验证码，请输入您可以访问的电子邮件地址。";
+"LoginEmail.Description" = "您将通过电子邮件而非短信接收 PChat 登录验证码，请输入您可以访问的电子邮件地址。";
 
 "LoginEmail.Success.Title" = "已添加电子邮箱地址";
 "LoginEmail.Success.Text" = "您的账号已受到保护！";
@@ -15198,7 +15198,7 @@ Error: %8$@";
 "Gift.Auction.TimeLeftMinutes" = "剩余 {m}:{s} ";
 
 "Gift.Auction.ItemsBought_any" = "已购买礼物";
-"Gift.Auction.ForSaleOnTelegram" = "在 Telegram 上出售";
+"Gift.Auction.ForSaleOnPChat" = "在 PChat 上出售";
 "Gift.Auction.ForSaleOnFragment" = "在 Fragment 上出售";
 "Gift.Auction.AveragePriceInfo" = "**%1$@** 颗星星是 %2$@ 份礼物的平均成交价。";
 
@@ -15339,8 +15339,8 @@ Error: %8$@";
 
 "AddContact.Title" = "新联系人";
 "AddContact.PhoneNumber.IsContact" = "此电话号码已保存在您的联系人中。 [查看 >]()";
-"AddContact.PhoneNumber.Registered" = "此号码在 Telegram 上。";
-"AddContact.PhoneNumber.NotRegistered" = "此号码不在 Telegram 上。[邀请 >]()";
+"AddContact.PhoneNumber.Registered" = "此号码在 PChat 上。";
+"AddContact.PhoneNumber.NotRegistered" = "此号码不在 PChat 上。[邀请 >]()";
 "AddContact.SyncToPhone" = "将联系人同步到手机";
 "AddContact.NotePlaceholder" = "添加仅您可见的注解";
 "AddContact.AddQR" = "通过二维码添加";
@@ -15357,7 +15357,7 @@ Error: %8$@";
 "ScheduleMessage.RepeatPeriod.Yearly" = "每年";
 
 "ScheduleMessage.PremiumRequired.Title" = "需要订阅 Premium";
-"ScheduleMessage.PremiumRequired.Text" = "订阅 **Telegram 高级版** 以设置定时发送消息。";
+"ScheduleMessage.PremiumRequired.Text" = "订阅 **PChat 高级版** 以设置定时发送消息。";
 "ScheduleMessage.PremiumRequired.Add" = "添加";
 
 "Stars.Transaction.GiftAuctionBid" = "礼物拍卖出价";
@@ -15541,12 +15541,12 @@ Error: %8$@";
 "Passkeys.AddPasskey" = "添加通行密钥";
 "Passkeys.ListFooter" = "您的通行密钥已安全存储在密码管理器中。";
 
-"Gift.Demo.Title" = "Telegram 礼物";
+"Gift.Demo.Title" = "PChat 礼物";
 "Gift.Demo.Description" = "礼物是可以交易或在个人资料页上展示的典藏品。";
 "Gift.Demo.Unique.Title" = "独特";
 "Gift.Demo.Unique.Text" = "升级您的礼物以获得独特的编号、模型、背景和符号。";
 "Gift.Demo.Tradable.Title" = "可交易";
-"Gift.Demo.Tradable.Text" = "在 Telegram 或第三方 NFT 市场上出售您的礼物。";
+"Gift.Demo.Tradable.Text" = "在 PChat 或第三方 NFT 市场上出售您的礼物。";
 "Gift.Demo.Wearable.Title" = "可佩戴";
 "Gift.Demo.Wearable.Text" = "在您的个人资料页上展示礼物并将其设置为封面或状态。";
 "Gift.Demo.Understood" = "知道了";
@@ -15571,7 +15571,7 @@ Error: %8$@";
 
 "Gift.Auction.GiftAuction" = "礼物拍卖";
 "Gift.Auction.UpcomingAuction" = "即将开始的拍卖";
-"Gift.Auction.LearnMore" = "了解更多关于 Telegram 礼物 >";
+"Gift.Auction.LearnMore" = "了解更多关于 PChat 礼物 >";
 
 "Gift.AuctionBid.UpcomingTitle" = "预先出价";
 
@@ -15596,7 +15596,7 @@ Error: %8$@";
 "Gift.WearPreview.Limited" = "限量";
 "Gift.WearPreview.Upgraded" = "升级后";
 "Gift.WearPreview.FreeUpgrade" = "免费\n升级";
-"Gift.WearPreview.LearnMore" = "了解更多佩戴 Telegram 礼物的信息 >";
+"Gift.WearPreview.LearnMore" = "了解更多佩戴 PChat 礼物的信息 >";
 
 "Notification.StarGift.Sold" = "已出售";
 "Notification.StarGiftOffer.Offer" = "用户出价 **%2$@** 购买您的 **%3$@** 礼物。";
@@ -15640,10 +15640,10 @@ Error: %8$@";
 "CocoonInfo.Private.Title" = "隐私";
 "CocoonInfo.Private.Text" = "任何第三方都无法访问 **@cocoon** 内的任何数据，包括翻译。";
 "CocoonInfo.Efficient.Title" = "高效";
-"CocoonInfo.Efficient.Text" = "Cocoon 帮助 Telegram 将翻译成本降低了 5/6。";
+"CocoonInfo.Efficient.Text" = "Cocoon 帮助 PChat 将翻译成本降低了 5/6。";
 "CocoonInfo.ForEveryone.Title" = "人人都可以用";
 "CocoonInfo.ForEveryone.Text" = "任何开发者都能使用 Cocoon 实现 AI 功能。了解更多，请访问 **cocoon.org**。";
-"CocoonInfo.IntergrateInfo" = "想在您的项目中集成 Cocoon 吗？\n请通过 **t.me/cocoon?direct** 联系我们。";
+"CocoonInfo.IntergrateInfo" = "想在您的项目中集成 Cocoon 吗？\n请通过 **p.chat/cocoon?direct** 联系我们。";
 "CocoonInfo.Understood" = "知道了";
 
 "Conversation.Translation.CocoonInfo" = "翻译由 **#Cocoon** 提供技术支持。[它是如何运作的？]()";
@@ -15657,7 +15657,7 @@ Error: %8$@";
 "Conversation.Dice.Change" = "更改";
 
 "EmojiStake.Title" = "表情符号投注";
-"EmojiStake.Description" = "面向 Telegram 高级版用户的实验性功能。";
+"EmojiStake.Description" = "面向 PChat 高级版用户的实验性功能。";
 "EmojiStake.ResultsTitle" = "结果与收益";
 "EmojiStake.StreakInfo" = "连续记录将在 3 次 # 后或更改投注时重置。";
 "EmojiStake.StakeTitle" = "投注";
@@ -15668,7 +15668,7 @@ Error: %8$@";
 "Conversation.Summary.Text" = "点击查看原文";
 
 "Conversation.Summary.Limit.Title" = "AI 摘要";
-"Conversation.Summary.Limit.Text" = "使用 AI 概括长消息－Telegram 高级版五限量使用。";
+"Conversation.Summary.Limit.Text" = "使用 AI 概括长消息－PChat 高级版五限量使用。";
 
 "Appearance.SendWithCmdEnter" = "通过 ⌘+Enter 发送消息";
 
@@ -15845,8 +15845,8 @@ Error: %8$@";
 "Gift.Craft.UnavailableBlockchain.Text" = "此礼物已记录在区块链上，无法作为制作的第一件礼物使用。";
 
 "AuthConfirmation.Emoji.Title" = "点击登录界面上\n显示的表情符号";
-"AuthConfirmation.Emoji.Description" = "Telegram 想确认这确实是您本人操作。";
-"AuthConfirmation.Emoji.DescriptionFirst" = "Telegram 想确认是您本人尝试登录 **%@**。";
+"AuthConfirmation.Emoji.Description" = "PChat 想确认这确实是您本人操作。";
+"AuthConfirmation.Emoji.DescriptionFirst" = "PChat 想确认是您本人尝试登录 **%@**。";
 
 "Chat.TagPlaceholder" = "标签";
 
@@ -15975,7 +15975,7 @@ Error: %8$@";
 "Month.NomDecember" = "十二月";
 
 
-/* new from translations.telegram.org */
+/* new from translations.p.chat */
 
 "AUTH_REGION" = "从新的设备登录 %1$@，位置：%2$@";
 "AUTH_REGION_SEPARATED" = "新登录|来自未知设备 %1$@，位置： %2$@";
@@ -16137,8 +16137,8 @@ Error: %8$@";
 "CHAT_VOICECHAT_INVITE" = "%1$@ 已邀请 %3$@ 加入视频聊天";
 "CHAT_VOICECHAT_INVITE_YOU" = "%1$@ 已邀请您加入视频聊天";
 "CHAT_VOICECHAT_START" = "%1$@ 已发起视频聊天";
-"CONTACT_JOINED" = "%1$@ 已加入 Telegram";
-"CONTACT_JOINED_SEPARATED" = "%1$@ 加入了 Telegram！";
+"CONTACT_JOINED" = "%1$@ 已加入 PChat";
+"CONTACT_JOINED_SEPARATED" = "%1$@ 加入了 PChat！";
 "Calendar.ShortFriday" = "五";
 "Calendar.ShortMonday" = "一";
 "Calendar.ShortSaturday" = "六";
@@ -16157,16 +16157,16 @@ Error: %8$@";
 "ChannelMessages.PriceSectionFooter" = "每收到一条消息，您的频道将获取设置费用的 85%。";
 "ChannelReactions.ToastLevelBoostRequired" = "您的频道需要达到 **等级 %1$@** 才能添加 **%2$@** 个自定义表情回应。";
 "Chat.AttachmentLimitExceeded" = "抱歉，您不能一次选中多个项目。";
-"Chat.PsaTooltip.psa" = "这是 Telegram 首席执行官对于目前冲突的正式声明。";
+"Chat.PsaTooltip.psa" = "这是 PChat 首席执行官对于目前冲突的正式声明。";
 "Chat.TagSearchHideMessages" = "隐藏其他消息";
 "Chat.TagSearchShowMessages" = "显示其他消息";
 "ChatList.EmptyChatFilterList" = "这个文件夹是空的。";
-"ChatList.PsaAlert.psa" = "这是 Telegram 首席执行官对于目前冲突的正式声明。";
+"ChatList.PsaAlert.psa" = "这是 PChat 首席执行官对于目前冲突的正式声明。";
 "ChatList.PsaLabel.psa" = "公告";
 "ChatList.StoryFeedTooltip" = "点击上面查看\n%@ 的动态";
 "ChatbotSetup.Title" = "即将推出";
-"Checkout.LiabilityAlert" = "无论是 Telegram 还是 %1$@ 都无法获取您的信用卡信息。信用卡信息将仅由支付平台 %2$@ 处理。\n\n款项将会直接发送给 %1$@ 的开发者。Telegram 无法提供任何形式的担保，继续付款所带来的风险将由您自己承担。如果遇到问题，请联系 %1$@ 的开发者或者您的银行。";
-"Conversation.Dice" = "发送 🎲 表情至任意聊天，Telegram 将为您随机生成点数。";
+"Checkout.LiabilityAlert" = "无论是 PChat 还是 %1$@ 都无法获取您的信用卡信息。信用卡信息将仅由支付平台 %2$@ 处理。\n\n款项将会直接发送给 %1$@ 的开发者。PChat 无法提供任何形式的担保，继续付款所带来的风险将由您自己承担。如果遇到问题，请联系 %1$@ 的开发者或者您的银行。";
+"Conversation.Dice" = "发送 🎲 表情至任意聊天，PChat 将为您随机生成点数。";
 "Conversation.Dice." = "在任何聊天中发送骰子表情即可掷骰子。";
 "Conversation.JoinVoiceChat" = "加入视频聊天";
 "Conversation.SelectedMessages_any" = "已选中 %@ 条消息";
@@ -16184,10 +16184,10 @@ Error: %8$@";
 "Gift.Craft.SuccessChanceSuffix" = "% 成功率";
 "Group.Appearance.EmojiPackUpdated" = "群组表情包已升级。";
 "Invitation.JoinVoiceChat" = "加入视频聊天";
-"InviteText.ContactsCount_any" = "嗨，我在和另外 %@ 位联系人使用 Telegram 聊天。加入我们吧！从这里下载：%@";
+"InviteText.ContactsCount_any" = "嗨，我在和另外 %@ 位联系人使用 PChat 聊天。加入我们吧！从这里下载：%@";
 "LOCKED_MESSAGE" = "您有一条新消息 %1$@";
-"Login.CallRequestState1" = "Telegram 会在 %d:%.2d 后使用电话呼叫您播放验证码";
-"Login.PRIVACY_URL" = "https://telegram.org/privacy";
+"Login.CallRequestState1" = "PChat 会在 %d:%.2d 后使用电话呼叫您播放验证码";
+"Login.PRIVACY_URL" = "https://p.chat/privacy";
 "Login.SmsRequestState1" = "我们会在 %d:%.2d 后给您发送短信";
 "MESSAGES" = "%1$@ 给您发送了 %2$@ 条消息";
 "MESSAGES_SEPARATED" = "%1$@|给您发送了 %2$@ 条消息";
@@ -16254,7 +16254,7 @@ Error: %8$@";
 "Notification.TopicRenamedAuthor" = "%1$@ 将话题名称更改为 %2$@";
 "Notification.TopicReopened" = "话题已解锁";
 "Notification.TopicReopenedAuthor" = "%1$@ 已重新打开话题";
-"Notifications.DisplayNamesOnLockScreenInfo" = "在设备锁定时在通知中显示名称。如要停用，打开 iOS 设置 > Telegram > 通知，并将“消息预览”设置为“解锁时”或“从不”。";
+"Notifications.DisplayNamesOnLockScreenInfo" = "在设备锁定时在通知中显示名称。如要停用，打开 iOS 设置 > PChat > 通知，并将“消息预览”设置为“解锁时”或“从不”。";
 "PHONE_CALL_MISSED" = "您错过了来自 %1$@ 的呼叫";
 "PHONE_CALL_MISSED_SEPARATED" = "%1$@|您有未接来电";
 "PHONE_CALL_REQUEST" = "%1$@ 正在呼叫您…";
@@ -16312,26 +16312,26 @@ Error: %8$@";
 "PUSH_MESSAGE_VIDEOS_any" = "%1$@|📹 %2$d 段视频";
 "PUSH_REACT_STORY_NAME" = "您的动态有 %1$@|%3$@ %2$@";
 "Passport.Scans" = "扫描件";
-"PassportKit.Button.GetTelegramAlertInstall" = "安装";
-"PassportKit.Button.GetTelegramAlertMessage" = "您需要安装 Telegram 来使用 Telegram 通行证";
-"PassportKit.Button.GetTelegramAlertNotNow" = "稍后";
-"PassportKit.Button.GetTelegramAlertTitle" = "下载 Telegram";
-"PassportKit.Button.Title" = "通过 Telegram 登录";
+"PassportKit.Button.GetPChatAlertInstall" = "安装";
+"PassportKit.Button.GetPChatAlertMessage" = "您需要安装 PChat 来使用 PChat 通行证";
+"PassportKit.Button.GetPChatAlertNotNow" = "稍后";
+"PassportKit.Button.GetPChatAlertTitle" = "下载 PChat";
+"PassportKit.Button.Title" = "通过 PChat 登录";
 "Peer.DeletedUser" = "已注销用户";
 "PeerInfo.PaneVoice" = "语音消息";
 "Premium.Gift.PricePerMonth" = "%@ / 月";
 "Premium.MaxExpiringStoriesFinalText" = "您在 **24** 小时内发布的动态数量已达到上限 **%@** 条。";
 "Premium.MaxExpiringStoriesNoPremiumText" = "您在 **24** 小时内发布的动态数量已达到上限 **%@** 条。";
-"Premium.MaxExpiringStoriesText" = "每 **24** 小时您可以发送最多 **%@ 条**动态。\n订阅 **Telegram 高级版**后可将此上限提升至 **%@ 条**。";
+"Premium.MaxExpiringStoriesText" = "每 **24** 小时您可以发送最多 **%@ 条**动态。\n订阅 **PChat 高级版**后可将此上限提升至 **%@ 条**。";
 "ProfileLevelInfo.MyDescriptionPreview" = "评级将在 %@ 后更新。\n%@ 待定。[预览 >]()";
 "ProfileLevelInfo.MyDescriptionToday_any" = "评级将在今天更新。\n%@ 分待定。";
 "ScheduleVoiceChat.ChannelText" = "频道订阅者将收到通知，直播将在 %@ 后开始。";
 "ScheduleVoiceChatChannel.Title" = "预约视频聊天";
 "Settings.EditProfileMedia" = "编辑";
 "SocksProxySetup.UseSocks5" = "使用 SOCKS5 代理";
-"SponsoredMessageInfo.ActionUrl" = "https://telegram.org";
-"SponsoredMessageInfo.Text" = "查看 https://telegram.org";
-"SponsoredMessageInfoScreen.Text" = "与其他应用不同，Telegram 不会将您的隐私数据用于投放定向广告。赞助商消息的投放完全基于公开频道内所发布的内容。这意味着 Telegram 不会通过挖掘和分析用户画像来投放广告，查看频道的所有用户都会看到同样的赞助商消息。\n\n与其他应用不同，Telegram 不会追踪您是否点击赞助商消息，也不会基于您的活跃数据生成用户画像。为了避免来自第三方的窥探，我们还禁止在赞助商消息中插入外部链接。我们相信每个人都有保护隐私的权利，而科技平台应该尊重用户的隐私权。\n\nTelegram 向数以亿计的用户提供免费服务的同时，也需要承担由此产生的高昂运营成本，包括服务器和流量开销。为了保持独立并延续其价值观，Telegram 将用户隐私权谨记于心，开发了这套付费工具。欢迎有责任的广告商与我们取得联系:\n[url]\n赞助商消息目前仍然处于测试阶段。全面启动赞助商消息系统，并且 Telegram 能够平衡运营成本之后，我们将与显示赞助商消息的频道所有者共同分享广告收入。\n\n线上广告不应再是滥用用户隐私的代名词。让我们共同携手，重新定义科技公司的运营模式。";
+"SponsoredMessageInfo.ActionUrl" = "https://p.chat";
+"SponsoredMessageInfo.Text" = "查看 https://p.chat";
+"SponsoredMessageInfoScreen.Text" = "与其他应用不同，PChat 不会将您的隐私数据用于投放定向广告。赞助商消息的投放完全基于公开频道内所发布的内容。这意味着 PChat 不会通过挖掘和分析用户画像来投放广告，查看频道的所有用户都会看到同样的赞助商消息。\n\n与其他应用不同，PChat 不会追踪您是否点击赞助商消息，也不会基于您的活跃数据生成用户画像。为了避免来自第三方的窥探，我们还禁止在赞助商消息中插入外部链接。我们相信每个人都有保护隐私的权利，而科技平台应该尊重用户的隐私权。\n\nPChat 向数以亿计的用户提供免费服务的同时，也需要承担由此产生的高昂运营成本，包括服务器和流量开销。为了保持独立并延续其价值观，PChat 将用户隐私权谨记于心，开发了这套付费工具。欢迎有责任的广告商与我们取得联系:\n[url]\n赞助商消息目前仍然处于测试阶段。全面启动赞助商消息系统，并且 PChat 能够平衡运营成本之后，我们将与显示赞助商消息的频道所有者共同分享广告收入。\n\n线上广告不应再是滥用用户隐私的代名词。让我们共同携手，重新定义科技公司的运营模式。";
 "Stars.SendMessage.AdjustmentSectionFooterEmpty" = "你将获得 **80%**。";
 "StickerPacksSettings.ArchivedMasks.Info" = "您最多能够添加 200 套装饰包。\n未被使用的装饰包将在您添加新装饰包时被归档。";
 "Story.Editor.TooltipPremiumMore" = "更多";

@@ -496,7 +496,7 @@
 "Contacts.AccessDeniedHelpLandscape" = "الرجاء الذهاب إلى إعدادات الـ %@ > الخصوصية > جهات الاتصال.\nثم قم بتفعيل تيليجرام.";
 "Contacts.AccessDeniedHelpPortrait" = "يرجى الذهاب إلى إعدادات %@ > الخصوصية > جهات الاتصال وقم بتفعيل تيليجرام.";
 "Contacts.AccessDeniedHelpON" = "مفعَّل";
-"Contacts.InviteToTelegram" = "دعوة إلى تيليجرام";
+"Contacts.InviteToPChat" = "دعوة إلى تيليجرام";
 "Contacts.InviteFriends" = "دعوة الأصدقاء";
 "Contacts.SelectAll" = "تحديد الكل";
 
@@ -532,7 +532,7 @@
 "Conversation.Contact" = "جهة اتصال";
 "Conversation.BlockUser" = "حظر المستخدم";
 "Conversation.UnblockUser" = "إلغاء حظر المستخدم";
-"Conversation.UnsupportedMedia" = "نسخة تيليجرام التي لديك لاتدعم هذه الرسالة. حدّث التطبيق لعرضها: https://telegram.org/update ";
+"Conversation.UnsupportedMedia" = "نسخة تيليجرام التي لديك لاتدعم هذه الرسالة. حدّث التطبيق لعرضها: https://p.chat/update ";
 "Conversation.EncryptionWaiting" = "في انتظار اتصال %@ بالإنترنت...";
 "Conversation.EncryptionProcessing" = "تتم مبادلة مفاتيح التشفير...";
 "Conversation.EmptyPlaceholder" = "لا توجد رسائل هنا بعد...";
@@ -717,7 +717,7 @@
 
 // Encryption Key
 "EncryptionKey.Title" = "مفتاح التشفير";
-"EncryptionKey.Description" = "تم اشتقاق الصورة والنص من مفتاح تشفير هذه المحادثة السرية مع %1$@.\n\nإن كانت مطابقة لما يظهر على جهاز %2$@؛ فالتشفير من الطرف للطرف مضمون.\n\nللاستزادة اطلع على telegram.org";
+"EncryptionKey.Description" = "تم اشتقاق الصورة والنص من مفتاح تشفير هذه المحادثة السرية مع %1$@.\n\nإن كانت مطابقة لما يظهر على جهاز %2$@؛ فالتشفير من الطرف للطرف مضمون.\n\nللاستزادة اطلع على p.chat";
 
 // Conversation media
 "ConversationMedia.Title" = "الوسائط";
@@ -754,7 +754,7 @@
 "Settings.ChatBackground" = "خلفية المحادثة";
 "Settings.Support" = "اسأل سؤالًا";
 "Settings.FAQ" = "الأسئلة الشائعة";
-"Settings.FAQ_URL" = "https://telegram.org/faq/ar#a";
+"Settings.FAQ_URL" = "https://p.chat/faq/ar#a";
 "Settings.FAQ_Intro" = "الدعم الفني في تيليجرام يقوم به متطوعون يحاولون الرد سريعًا قدر الإمكان، لكن ذلك قد يستغرق بعض الوقت.\n\nيرجى الاطلاع على الأسئلة الشائعة عن تيليجرام؛ فهي تحوي حلولًا للمشاكل وإجاباتٍ لمعظم الأسئلة.";
 "Settings.FAQ_Button" = "الأسئلة الشائعة";
 "Settings.SaveIncomingPhotos" = "حفظ الصور الواردة";
@@ -1214,7 +1214,7 @@
 "DialogList.SearchSectionGlobal" = "البحث العام";
 "DialogList.SearchSectionMessages" = "الرسائل";
 
-"Username.LinkHint" = "هذا الرابط يفتح محادثة معك:[\nhttps://t.me/%@]";
+"Username.LinkHint" = "هذا الرابط يفتح محادثة معك:[\nhttps://p.chat/%@]";
 "Username.LinkCopied" = "تم نسخ الرابط إلى الحافظة.";
 
 "SharedMedia.DeleteItemsConfirmation_1" = "حذف ملف الوسائط؟";
@@ -2608,8 +2608,8 @@ Unused sets are archived when you add more.";
 "Conversation.HoldForAudio" = "اضغط مطولًا لتسجيل الصوت، انقر للتحويل للمرئي.";
 "Conversation.HoldForVideo" = "اضغط مطولًا لتسجيل مرئي، انقر للتحويل للصوتي.";
 
-"UserInfo.TelegramCall" = "مكالمة تيليجرام";
-"UserInfo.TelegramVideoCall" = "مكالمة تيليجرام مرئية";
+"UserInfo.PChatCall" = "مكالمة تيليجرام";
+"UserInfo.PChatVideoCall" = "مكالمة تيليجرام مرئية";
 "UserInfo.PhoneCall" = "مكالمة هاتفية";
 
 "SharedMedia.CategoryMedia" = "الوسائط";
@@ -2796,7 +2796,7 @@ Unused sets are archived when you add more.";
 
 "Contacts.PhoneNumber" = "رقم الهاتف";
 "Contacts.AddPhoneNumber" = "إضافة %@";
-"Contacts.ShareTelegram" = "مشاركة تيليجرام";
+"Contacts.SharePChat" = "مشاركة تيليجرام";
 
 "Conversation.ViewChannel" = "فتح القناة";
 "Conversation.ViewGroup" = "فتح المجموعة";
@@ -2895,7 +2895,7 @@ Unused sets are archived when you add more.";
 "SocksProxySetup.UseForCalls" = "استخدامه للمكالمات";
 "SocksProxySetup.UseForCallsHelp" = "قد تقلل الخوادم الوسيطة من جودة مكالماتك.";
 
-"InviteText.URL" = "https://telegram.org/dl";
+"InviteText.URL" = "https://p.chat/dl";
 "InviteText.SingleContact" = "مرحبا، أنا أستخدم تيليجرام للمحادثة، انضم إلي! قم بتنزيله من هنا: %@";
 "InviteText.ContactsCountText_1" = "مرحبا، أنا أستخدم تيليجرام للمحادثة وكذلك %@ من جهات اتصالي، انضم إلينا! قم بتنزيله من هنا: {url}";
 "InviteText.ContactsCountText_2" = "مرحبا، أنا أستخدم تيليجرام للمحادثة وكذلك %@ من جهات اتصالي، انضم إلينا! قم بتنزيله من هنا: {url}";
@@ -3247,7 +3247,7 @@ Unused sets are archived when you add more.";
 "AuthSessions.LoggedIn" = "المواقع";
 "AuthSessions.LogOutApplications" = "فك الارتباط مع كل المواقع";
 "AuthSessions.LogOutApplicationsHelp" = "يمكنك تسجيل الدخول عبر تيليجرام إلى المواقع التي تدعم ذلك.";
-"AuthSessions.LoggedInWithTelegram" = "تم تسجيل الدخول إليها عبر تيليجرام";
+"AuthSessions.LoggedInWithPChat" = "تم تسجيل الدخول إليها عبر تيليجرام";
 "AuthSessions.LogOut" = "تسجيل الخروج ";
 "AuthSessions.Message" = "لقد سمحت لهذا البوت بمراسلتك عندما سجّلت دخولك إلى %@";
 
@@ -3283,7 +3283,7 @@ Unused sets are archived when you add more.";
 
 "SocksProxySetup.ProxyType" = "النوع";
 "SocksProxySetup.ProxySocks5" = "SOCKS5";
-"SocksProxySetup.ProxyTelegram" = "MTProto";
+"SocksProxySetup.ProxyPChat" = "MTProto";
 "SocksProxySetup.HostnamePlaceholder" = "الخادم";
 "SocksProxySetup.PortPlaceholder" = "المنفذ";
 "SocksProxySetup.UsernamePlaceholder" = "اسم المستخدم";
@@ -3346,7 +3346,7 @@ Unused sets are archived when you add more.";
 "Passport.InfoTitle" = "ماهو جواز تيليجرام؟";
 "Passport.InfoText" = "مع **جواز تيليجرام** يمكنك التسجيل في المواقع والخدمات التي تتطلب توثيق الهوية الشخصية بسهولة.\n\nمعلوماتك، بياناتك الشخصية ومستنداتك محمية ومشفرة من الطرف إلى الطرف. لا يمكن لأحد _حتى تيليجرام_ الوصول إليها دون إذنك. ";
 "Passport.InfoLearnMore" = "المزيد";
-"Passport.InfoFAQ_URL" = "https://telegram.org/faq/ar#g9";
+"Passport.InfoFAQ_URL" = "https://p.chat/faq/ar#g9";
 
 "Passport.PassportInformation" = "معلومات الجواز";
 "Passport.RequestedInformation" = "المعلومات المطلوبة";
@@ -3496,15 +3496,15 @@ Unused sets are archived when you add more.";
 "Passport.Address.ScansHelp" = "يجب أن يحتوي المستند على اسمك الكامل، عنوانك السكني، ختم/باركود/رمز QR/ شعار وتاريخ إصدار لا يتجاوز ثلاثة أشهر.";
 
 "Passport.Phone.Title" = "رقم الهاتف";
-"Passport.Phone.UseTelegramNumber" = "استخدام %@";
-"Passport.Phone.UseTelegramNumberHelp" = "استخدام نفس الرقم المُستخدم في تيليجرام.";
+"Passport.Phone.UsePChatNumber" = "استخدام %@";
+"Passport.Phone.UsePChatNumberHelp" = "استخدام نفس الرقم المُستخدم في تيليجرام.";
 "Passport.Phone.EnterOtherNumber" = "أو إدخال رقم هاتف جديد";
 "Passport.Phone.Help" = "تنويه: سيصلك رمز التأكيد عبر رقم الهاتف المختارِ أعلاه.";
 "Passport.Phone.Delete" = "حذف رقم الهاتف";
 
 "Passport.Email.Title" = "البريد";
-"Passport.Email.UseTelegramEmail" = "استخدام %@";
-"Passport.Email.UseTelegramEmailHelp" = "استخدام البريد المُستخدم في تيليجرام.";
+"Passport.Email.UsePChatEmail" = "استخدام %@";
+"Passport.Email.UsePChatEmailHelp" = "استخدام البريد المُستخدم في تيليجرام.";
 "Passport.Email.EnterOtherEmail" = "أو إدخال بريد جديد";
 "Passport.Email.EmailPlaceholder" = "يرجى إدخال بريدك الإلكتروني";
 "Passport.Email.Help" = "سيتم إرسال رمز التأكيد إلى البريد الإلكتروني الذي قمت بإضافته. ";
@@ -3985,7 +3985,7 @@ Unused sets are archived when you add more.";
 "AttachmentMenu.WebSearch" = "البحث في الويب";
 
 "Conversation.UnsupportedMediaPlaceholder" = "نسختك الحالية من تيليجرام لا تدعم هذه الرسالة. يرجى تحديث التطبيق إلى أحدث نسخة.";
-"Conversation.UpdateTelegram" = "تحديث تيليجرام";
+"Conversation.UpdatePChat" = "تحديث تيليجرام";
 
 "Cache.LowDiskSpaceText" = "لا توجد مساحة كافية للتخزين على هاتفك. يرجى تحرير بعض المساحة لرفع أو تنزيل الوسائط.";
 
@@ -4050,7 +4050,7 @@ Unused sets are archived when you add more.";
 "EmptyGroupInfo.Subtitle" = "يمكن للمجموعات أن:";
 "EmptyGroupInfo.Line1" = "ما يصل إلى ٢٠٠,٠٠٠ عضو";
 "EmptyGroupInfo.Line2" = "تمتلكَ سجل محادثة موحدًا";
-"EmptyGroupInfo.Line3" = "تمتلك روابط عامة مثل t.me/title";
+"EmptyGroupInfo.Line3" = "تمتلك روابط عامة مثل p.chat/title";
 "EmptyGroupInfo.Line4" = "يديرَها مشرفون بصلاحيات مختلفة";
 
 "WallpaperPreview.Title" = "معاينة الخلفية";
@@ -4424,11 +4424,11 @@ Unused sets are archived when you add more.";
 "Settings.CheckPhoneNumberText" = "يرجى إبقاء رقم هاتفك محدّثًا؛ لضمان قدرتك على تسجيل الدخول إلى تيليجرام. [معرفة المزيد]()";
 "Settings.KeepPhoneNumber" = "إبقاء %@";
 "Settings.ChangePhoneNumber" = "تغيير الرقم";
-"Settings.CheckPhoneNumberFAQAnchor" = "https://telegram.org/faq/ar#g2";
+"Settings.CheckPhoneNumberFAQAnchor" = "https://p.chat/faq/ar#g2";
 
 "Undo.ChatDeletedForBothSides" = "تم حذف المحادثة من الطرفين.";
 
-"AppUpgrade.Running" = "Optimizing Telegram...
+"AppUpgrade.Running" = "Optimizing PChat...
 This may take a while, depending on the size of the database. Please keep the app open until the process is finished.
 
 Sorry for the inconvenience.";
@@ -5116,7 +5116,7 @@ Sorry for the inconvenience.";
 "AuthSessions.AddDevice.ScanTitle" = "مسح رمز QR";
 "AuthSessions.AddDevice.InvalidQRCode" = "رمز الـ QR غير صالح";
 "AuthSessions.AddDeviceIntro.Title" = "تسجيل الدخول عبر رمز QR";
-"AuthSessions.AddDeviceIntro.Text1" = "قم بتنزيل تيليجرام على حاسوبك من [desktop.telegram.org]()";
+"AuthSessions.AddDeviceIntro.Text1" = "قم بتنزيل تيليجرام على حاسوبك من [desktop.p.chat]()";
 "AuthSessions.AddDeviceIntro.Text2" = "يرجى فتح تيليجرام على حاسوبك للحصول على رمز QR";
 "AuthSessions.AddDeviceIntro.Text3" = "امسح رمز الـ QR لربط حسابك";
 "AuthSessions.AddDeviceIntro.Action" = "مسح رمز QR";
@@ -5432,11 +5432,11 @@ Sorry for the inconvenience.";
 "FeaturedStickers.OtherSection" = "الملصقات الأخرى";
 
 "ChatList.GenericPsaAlert" = "يوفر هذا التنبيه إعلانات لخدمة عامة في قائمة محادثاتك.";
-"ChatList.PsaAlert.covid" = "تزودك هذه الرسالة بإعلان عام لمبادرة تتعلق بالجائحة الحالية كوفيد-19. تعرف على المزيد حول هذه المبادرة على https://telegram.org/blog/coronavirus";
+"ChatList.PsaAlert.covid" = "تزودك هذه الرسالة بإعلان عام لمبادرة تتعلق بالجائحة الحالية كوفيد-19. تعرف على المزيد حول هذه المبادرة على https://p.chat/blog/coronavirus";
 "ChatList.GenericPsaLabel" = "PSA";
 "ChatList.PsaLabel.covid" = "كوفيد-19";
 "Chat.GenericPsaTooltip" = "هذا إعلان لخدمة عامة";
-"Chat.PsaTooltip.covid" = "تزودك هذه الرسالة بإعلان عام لمبادرة تتعلق بالجائحة الحالية كوفيد-19. تعرف على المزيد حول هذه المبادرة على https://telegram.org/blog/coronavirus";
+"Chat.PsaTooltip.covid" = "تزودك هذه الرسالة بإعلان عام لمبادرة تتعلق بالجائحة الحالية كوفيد-19. تعرف على المزيد حول هذه المبادرة على https://p.chat/blog/coronavirus";
 
 "Message.GenericForwardedPsa" = "إعلان لخدمة عامة\nمن: %@";
 "Message.ForwardedPsa.covid" = "إشعار كوفيد-19\nمن: %@";
@@ -6648,7 +6648,7 @@ Sorry for the inconvenience.";
 "Privacy.PaymentsClear.AllInfoCleared" = "تم مسح معلومات الدفع والشحن.";
 
 "Settings.Tips" = "ميزات تيليجرام";
-"Settings.TipsUsername" = "TelegramTipsAR";
+"Settings.TipsUsername" = "PChatTipsAR";
 
 "Calls.NoVoiceAndVideoCallsPlaceholder" = "مكالماتك الصوتية والمرئية الحديثة ستظهر هنا.";
 "Calls.StartNewCall" = "بدء مكالمة جديدة";
@@ -6930,9 +6930,9 @@ Sorry for the inconvenience.";
 
 "SponsoredMessageMenu.Info" = "ماهي الرسائل الإعلانية؟";
 "SponsoredMessageInfoScreen.Title" = "ماهي الرسائل الإعلانية؟";
-"SponsoredMessageInfoScreen.MarkdownText" = "على خلاف التطبيقات الأخرى؛ لا تستخدم تيليجرام أبدًا بياناتك الخاصة لاستهدافك بالإعلانات  [يمكنك معرفة المزيد في سياسة الخصوصية](https://telegram.org/privacy#5-6-no-ads-based-on-user-data).\nأنت ترى هذه الرسالة فقط لأن شخصًا ما اختار هذه القناة العامة كمساحة للإعلان. يعني هذا أنه لا يتم استخراج بيانات المستخدمين أو تحليلها لعرض الإعلانات، وأن أي مستخدم يستعرض قناة على تيليجرام سيرى نفس الرسالة الإعلانية.\n\nعلى خلاف التطبيقات الأخرى؛ لا تراقب تيليجرام ما إذا كنت قد ضغطت على رسالة إعلانية أم لا، ولا تنشئ ملفًا بناءً على نشاطك. لقد حظرنا أيضًا استخدام الروابط الخارجية في الرسائل الإعلانية؛ لمنع الأطراف الثالثة من التجسس على مستخدمينا. نؤمن أن لكل شخص الحق في الخصوصية، ويجب أن تحترم المنصات التقنية ذلك.\n\nتقدم تيليجرام خدمة مجانية غير محدودة لمئات الملايين من المستخدمين وهي تتطلب تكاليف كبيرة للخوادم والاتصالات. من أجل إبقاء تيليجرام مستقلة والحفاظ على التزامها بقيمها؛ طورت تيليجرام أداة مدفوعة للرسائل الإعلانية مع مراعاة خصوصية المستخدم. نرحب بالإعلانات على:\n[url]\nلا ينبغي أن تكون الإعلانات على الإنترنت تعني الإساءة إلى خصوصية المستخدم. دعونا نعيد معًا تعريف الكيفية التي يجب أن تعمل بها أي شركة تقنية.";
+"SponsoredMessageInfoScreen.MarkdownText" = "على خلاف التطبيقات الأخرى؛ لا تستخدم تيليجرام أبدًا بياناتك الخاصة لاستهدافك بالإعلانات  [يمكنك معرفة المزيد في سياسة الخصوصية](https://p.chat/privacy#5-6-no-ads-based-on-user-data).\nأنت ترى هذه الرسالة فقط لأن شخصًا ما اختار هذه القناة العامة كمساحة للإعلان. يعني هذا أنه لا يتم استخراج بيانات المستخدمين أو تحليلها لعرض الإعلانات، وأن أي مستخدم يستعرض قناة على تيليجرام سيرى نفس الرسالة الإعلانية.\n\nعلى خلاف التطبيقات الأخرى؛ لا تراقب تيليجرام ما إذا كنت قد ضغطت على رسالة إعلانية أم لا، ولا تنشئ ملفًا بناءً على نشاطك. لقد حظرنا أيضًا استخدام الروابط الخارجية في الرسائل الإعلانية؛ لمنع الأطراف الثالثة من التجسس على مستخدمينا. نؤمن أن لكل شخص الحق في الخصوصية، ويجب أن تحترم المنصات التقنية ذلك.\n\nتقدم تيليجرام خدمة مجانية غير محدودة لمئات الملايين من المستخدمين وهي تتطلب تكاليف كبيرة للخوادم والاتصالات. من أجل إبقاء تيليجرام مستقلة والحفاظ على التزامها بقيمها؛ طورت تيليجرام أداة مدفوعة للرسائل الإعلانية مع مراعاة خصوصية المستخدم. نرحب بالإعلانات على:\n[url]\nلا ينبغي أن تكون الإعلانات على الإنترنت تعني الإساءة إلى خصوصية المستخدم. دعونا نعيد معًا تعريف الكيفية التي يجب أن تعمل بها أي شركة تقنية.";
 "SponsoredMessageInfo.Action" = "معرفة المزيد";
-"SponsoredMessageInfo.Url" = "https://ads.telegram.org";
+"SponsoredMessageInfo.Url" = "https://ads.p.chat";
 
 "Chat.NavigationNoChannels" = "ليس لديك قنوات غير مقروءة";
 
@@ -7225,7 +7225,7 @@ Sorry for the inconvenience.";
 
 "AuthSessions.HeaderInfo" = "ربط [تيليجرام سطح المكتب](desktop) أو [تيليجرام ويب](web) عبر مسح رمز QR.";
 "AuthSessions.LinkDesktopDevice" = "ربط جهاز الحاسب";
-"AuthSessions.AddDevice.ScanInstallInfo" = "يرجى الذهاب إلى [getdesktop.telegram.org](desktop) or [web.telegram.org](web) للحصول على رمز QR";
+"AuthSessions.AddDevice.ScanInstallInfo" = "يرجى الذهاب إلى [getdesktop.p.chat](desktop) or [web.p.chat](web) للحصول على رمز QR";
 
 "Channel.AdminLog.MessageSent" = "أرسل %@ الرسالة:";
 
@@ -7426,7 +7426,7 @@ Sorry for the inconvenience.";
 "Attachment.DeselectedItems_1" = "عنصر واحد محدد.";
 "Attachment.DeselectedItems_any" = "%@ عنصر محدد.";
 
-"PrivacyPhoneNumberSettings.CustomPublicLink" = "المستخدمون الذين لديهم رقمك محفوظًا في جهات اتصالهم سيظهر لهم أيضًا على تيليجرام.\n\nهذا الرابط العام يفتح محادثة معك:\n[https://t.me/%@]()";
+"PrivacyPhoneNumberSettings.CustomPublicLink" = "المستخدمون الذين لديهم رقمك محفوظًا في جهات اتصالهم سيظهر لهم أيضًا على تيليجرام.\n\nهذا الرابط العام يفتح محادثة معك:\n[https://p.chat/%@]()";
 
 "DownloadList.DownloadingHeader" = "يتم التنزيل";
 "DownloadList.DownloadedHeader" = "التنزيلات الحديثة";
@@ -7533,7 +7533,7 @@ Sorry for the inconvenience.";
 "WebApp.RemoveConfirmationText" = "إزالة **%@** من قائمة المرفقات؟";
 
 "Notifications.SystemTones" = "نغمات النظام";
-"Notifications.TelegramTones" = "نغمات تيليجرام";
+"Notifications.PChatTones" = "نغمات تيليجرام";
 
 "Notifications.UploadSound" = "إضافة صوت";
 "Notifications.MessageSoundInfo" = "ضغطة مطوّلة على أي رسالة صوتية قصيرة أو ملف mp3 في أي محادثة ثم اختيار «حفظه للإشعارات» ليظهر هنا.";
@@ -7755,8 +7755,8 @@ Sorry for the inconvenience.";
 "Conversation.CopyProtectionSavingDisabledSecret" = "الحفظ مقيد";
 "Conversation.CopyProtectionForwardingDisabledSecret" = "التحويل ممنوع";
 
-"Settings.Terms_URL" = "https://telegram.org/tos";
-"Settings.PrivacyPolicy_URL" = "https://telegram.org/privacy";
+"Settings.Terms_URL" = "https://p.chat/tos";
+"Settings.PrivacyPolicy_URL" = "https://p.chat/privacy";
 
 "Stickers.PremiumPackInfoText" = "تحتوي هذه الحزمة على ملصقات مميزة مثل هذه.";
 "Stickers.PremiumPackView" = "عرض";
@@ -7781,7 +7781,7 @@ Sorry for the inconvenience.";
 
 "Premium.Limits.GroupsAndChannelsInfo" = "الانضمام إلى ما يصل إلى ١٠٠٠ قناة ومجموعة";
 "Premium.Limits.PinnedChatsInfo" = "تثبيت ما يصل إلى ١٠ محادثات في قائمة محادثاتك الرئيسية";
-"Premium.Limits.PublicLinksInfo" = "حجز ما يصل إلى 20 رابط [t.me/username]()";
+"Premium.Limits.PublicLinksInfo" = "حجز ما يصل إلى 20 رابط [p.chat/username]()";
 "Premium.Limits.SavedGifsInfo" = "حفظ ما يصل إلى ٤٠٠ صورة GIF في مفضلتك";
 "Premium.Limits.FavedStickersInfo" = "حفظ ما يصل إلى ١٠ ملصقات في ملصقاتك المفضلة";
 "Premium.Limits.BioInfo" = "إضافة المزيد من الرموز واستخدام الروابط في النبذة";
@@ -7871,7 +7871,7 @@ Sorry for the inconvenience.";
 "DeleteAccount.MessageHistoryTitle" = "سجل رسائلك";
 "DeleteAccount.MessageHistoryText" = "سيحتفظ شركاء المحادثة بسجل رسائلهم معك بما في ذلك الرسائل التي شاركتها في المحادثات السرية.\n\nيمكنك إزالة أي رسائل من كلا الطرفين في أي وقت، ولكن هذا لن يكون متاحًا إذا حذفت حسابك.";
 
-"DeleteAccount.DeleteMessagesURL" = "https://telegram.org/faq/ar#b9";
+"DeleteAccount.DeleteMessagesURL" = "https://p.chat/faq/ar#b9";
 
 "DeleteAccount.EnterPhoneNumber" = "يرجى إدخال رقم هاتفك";
 "DeleteAccount.InvalidPhoneNumberError" = "رقم الهاتف غير صالح. ترجى إعادة المحاولة.";
@@ -8074,8 +8074,8 @@ Sorry for the inconvenience.";
 "Login.EnterCodeSMSTitle" = "يُرجى إدخال الرمز";
 "Login.EnterCodeSMSText" = "لقد أرسلنا رسالة SMS نصية تحتوي رمز التفعيل إلى هاتفك **%@**.";
 "Login.SendCodeAsSMS" = "إرسال الرمز برسالة نصية";
-"Login.EnterCodeTelegramTitle" = "إدخال الرمز";
-"Login.EnterCodeTelegramText" = "لقد أرسلنا الرمز إلى تطبيق **تيليجرام** للرقم %@ على جهازك الآخر.";
+"Login.EnterCodePChatTitle" = "إدخال الرمز";
+"Login.EnterCodePChatText" = "لقد أرسلنا الرمز إلى تطبيق **تيليجرام** للرقم %@ على جهازك الآخر.";
 "Login.AddEmailTitle" = "اختيار البريد الإلكتروني لتسجيل الدخول";
 "Login.AddEmailText" = "سيكون استلامك لرموز تسجيل الدخول عبر البريد الإلكتروني وليس عبر الرسائل النصية SMS. يُرجى إدخال بريد إلكتروني يمكنك الوصول إليه.";
 "Login.AddEmailPlaceholder" = "يرجى إدخال عنوان بريدك";
@@ -9199,7 +9199,7 @@ Sorry for the inconvenience.";
 "WebApp.LaunchMoreInfo" = "المزيد حول هذا البوت";
 "WebApp.LaunchConfirmation" = "لتشغيل تطبيق الويب هذا؛ سيتم توصيلك بموقع الويب التابع له.";
 "WebApp.LaunchTermsConfirmation" = "تشغيلك لهذا التطبيق المصغّر؛ يعني موافقتك على [شروط الخدمة للتطبيقات المصغّرة]().";
-"WebApp.LaunchTermsConfirmation_URL" = "https://telegram.org/tos/mini-apps";
+"WebApp.LaunchTermsConfirmation_URL" = "https://p.chat/tos/mini-apps";
 "WebApp.LaunchOpenApp" = "تشغيل";
 
 "WallpaperPreview.PreviewInNightMode" = "معاينة هذه الخلفية في الوضع الليلي.";
@@ -9935,7 +9935,7 @@ Sorry for the inconvenience.";
 "WebApp.DisclaimerText" = "أنت على وشك استخدام تطبيق مصغّر يديره طرف مستقل **لا ينتمي لتيليجرام**. للمتابعة؛ تجب عليك الموافقة على شروط استخدام التطبيقات المُصغّرة.";
 "WebApp.DisclaimerAgree" = "أوافق على [شروط الاستخدام]()";
 "WebApp.DisclaimerContinue" = "استمرار";
-"WebApp.Disclaimer_URL" = "https://telegram.org/tos/mini-apps";
+"WebApp.Disclaimer_URL" = "https://p.chat/tos/mini-apps";
 
 "WebApp.ShortcutsAdded" = "تمت إضافة الاختصار **%@** لقائمة الإرفاق.";
 "WebApp.ShortcutsSettingsAdded" = "تمت إضافة اختصارات **%@** في قائمة المرفقات والإعدادات.";
@@ -10436,8 +10436,8 @@ Sorry for the inconvenience.";
 "GiftLink.Reason.Unclaimed" = "سحب غير مكتمل";
 "GiftLink.Date" = "التاريخ";
 "GiftLink.NoRecipient" = "لا يوجد مستلم";
-"GiftLink.TelegramPremium_1" = "تيليجرام المميز لمدة شهر واحد";
-"GiftLink.TelegramPremium_any" = "تيليجرام المميز لمدة %@ شهر";
+"GiftLink.PChatPremium_1" = "تيليجرام المميز لمدة شهر واحد";
+"GiftLink.PChatPremium_any" = "تيليجرام المميز لمدة %@ شهر";
 "GiftLink.LinkHidden" = "يمكن للمستلم فقط رؤية الرابط.";
 
 "ChannelBoost.EnableColors" = "تمكين الألوان";
@@ -11609,7 +11609,7 @@ Sorry for the inconvenience.";
 
 "ChatbotSetup.TitleItem" = "بوتات المحادثة";
 "ChatbotSetup.Text" = "إضافة بوت إلى حسابك لمساعدتك في التعامل مع الرسائل المستلمة والرد عليها تلقائيًا. [> معرفة المزيد]()";
-"ChatbotSetup.TextLink" = "https://telegram.org/blog/telegram-business#chatbots-for-business";
+"ChatbotSetup.TextLink" = "https://p.chat/blog/telegram-business#chatbots-for-business";
 
 "ChatbotSetup.BotSearchPlaceholder" = "مُعرّف البوت";
 "ChatbotSetup.BotSectionFooter" = "إدخال رابط بوت تيليجرام الذي أردت أن يقوم بمعالجة محادثاتك تلقائيًا.";
@@ -11650,7 +11650,7 @@ Sorry for the inconvenience.";
 "ChannelBoost.EnableNoAdsLevelText" = "تحتاج قناتك الوصول إلى **المستوى %1$@** لإيقاف تشغيل الإعلانات.";
 
 "WebApp.TermsOfUse" = "شروط الاستخدام";
-"WebApp.TermsOfUse_URL" = "https://telegram.org/tos/mini-apps";
+"WebApp.TermsOfUse_URL" = "https://p.chat/tos/mini-apps";
 
 "Privacy.Birthday" = "يوم الميلاد";
 "Privacy.Birthday.WhoCanSeeMyBio" = "من يمكنهم رؤية يوم ميلادي";
@@ -11712,7 +11712,7 @@ Sorry for the inconvenience.";
 "Monetization.Balance.AvailableInfo" = "سيكون بإمكانك جمع مكافآتك باستخدام Fragment، وهي منصة تابعة لجهة خارجية يستخدمها المعلنون لدفع قيمة الإعلانات. [< الشروط والأحكام]()";
 "Monetization.Balance.ComingLaterInfo" = "في الأسابيع المقبلة، ستتمكن من جمع مكافأتك باستخدام Fragment، وهي منصة تابعة لجهة خارجية يستخدمها المعلنون لدفع الإعلانات. [معرفة المزيد >]()";
 
-"Monetization.BalanceInfo_URL" = "https://telegram.org/tos/content-creator-rewards";
+"Monetization.BalanceInfo_URL" = "https://p.chat/tos/content-creator-rewards";
 "Monetization.BalanceWithdraw" = "السحب عبر Fragment";
 "Monetization.TransactionsTitle" = "سجل العمليات";
 
@@ -11762,13 +11762,13 @@ Sorry for the inconvenience.";
 
 "Monetization.Intro.Info.Title" = "ماهي عملة #TON؟";
 "Monetization.Intro.Info.Text" = "‏**TON** عبارة عن منصة blockchain وعملة مشفرة تستخدمها تيليجرام لسرعتها العالية وعمولاتها المنخفضة على التعاملات. [< معرفة المزيد]()";
-"Monetization.Intro.Info.Text_URL" = "https://telegram.org/blog/monetization-for-channels";
+"Monetization.Intro.Info.Text_URL" = "https://p.chat/blog/monetization-for-channels";
 
 "Monetization.Intro.Understood" = "فهمت";
 
 "ReportAd.Title" = "الإبلاغ عن الإعلان";
 "ReportAd.Help" = "معرفة المزيد حول [سياسات وإرشادات الإعلانات]().";
-"ReportAd.Help_URL" = "https://ads.telegram.org/guidelines";
+"ReportAd.Help_URL" = "https://ads.p.chat/guidelines";
 "ReportAd.Reported" = "سنراجع هذا الإعلان للتأكد من أنه يتوافق مع [سياسة وإرشادات الإعلانات]().";
 "ReportAd.Hidden" = "لن تظهر لك بعد الآن إعلانات من تيليجرام.";
 
@@ -11788,7 +11788,7 @@ Sorry for the inconvenience.";
 "AdsInfo.Launch.Title" = "هل يمكنني نشر إعلان؟";
 "AdsInfo.Launch.Text" = "يمكن لأي شخص إنشاء إعلان لعرضه في هذه القناة بأقل ميزانية. الرجاء مراجعة منصة إعلانات تيليجرام لمعرفة التفاصيل. [< معرفة المزيد]()";
 "AdsInfo.Bot.Launch.Text" = "يمكن لأي شخص إنشاء إعلانات لعرضها في هذا الروبوت بميزانيات ضئيلة. تحقق من منصة إعلانات تيليجرام للحصول على التفاصيل. [معرفة المزيد >]()";
-"AdsInfo.Launch.Text_URL" = "https://ads.telegram.org";
+"AdsInfo.Launch.Text_URL" = "https://ads.p.chat";
 
 "AdsInfo.Understood" = "فهمت";
 
@@ -11860,9 +11860,9 @@ Sorry for the inconvenience.";
 "Business.Links.CreateAction" = "إنشاء رابط للمحادثة";
 "Business.Links.LinksSectionHeader" = "روابط للمحادثة";
 
-"Business.Links.SimpleLinkInfoUsernamePhone" = "يمكنك أيضًا استخدام رابط بسيط للمحادثة معك:\n[t.me/%1$@](username) أو [t.me/⁠+⁠%2$@](phone).";
-"Business.Links.SimpleLinkInfoUsername" = "يمكنك أيضًا استخدام رابط بسيط للمحادثة معك: [t.me/%@](username).";
-"Business.Links.SimpleLinkInfoPhone" = "يمكنك أيضًا استخدام رابط بسيط للمحادثة معك: [t.me/⁠+⁠%@](phone).";
+"Business.Links.SimpleLinkInfoUsernamePhone" = "يمكنك أيضًا استخدام رابط بسيط للمحادثة معك:\n[p.chat/%1$@](username) أو [p.chat/⁠+⁠%2$@](phone).";
+"Business.Links.SimpleLinkInfoUsername" = "يمكنك أيضًا استخدام رابط بسيط للمحادثة معك: [p.chat/%@](username).";
+"Business.Links.SimpleLinkInfoPhone" = "يمكنك أيضًا استخدام رابط بسيط للمحادثة معك: [p.chat/⁠+⁠%@](phone).";
 
 "Business.Links.LinkNameTitle" = "اسم الرابط";
 "Business.Links.LinkNameText" = "إضافة اسم لهذا الرابط يظهر لك أنت فقط.";
@@ -11928,7 +11928,7 @@ Sorry for the inconvenience.";
 "Business.AdsTitle" = "الإعلانات في القنوات";
 "Business.DontHideAds" = "عدم إخفاء الإعلانات";
 "Business.AdsInfo" = "لأنك من مشتركي المميز؛ لن تظهر أي إعلانات على تيليجرام، ولكن يمكنك تشغيلها -على سبيل المثال- لمشاهدة إعلاناتك التي أطلقتها على [< منصة إعلانات تيليجرام]()";
-"Business.AdsInfo_URL" = "https://ads.telegram.org";
+"Business.AdsInfo_URL" = "https://ads.p.chat";
 
 "ChatList.PremiumGraceTitle" = "⚠️ لا يفوتك الوصول إلى الميزات الحصرية.";
 "ChatList.PremiumGraceText" = "المزايا الحصرية لديك على وشك الانتهاء.";
@@ -12231,19 +12231,19 @@ Sorry for the inconvenience.";
 "Chat.Context.Phone.CreateNewContact" = "إنشاء جهة اتصال جديدة";
 "Chat.Context.Phone.AddToExistingContact" = "الإضافة لجهة اتصال موجودة";
 "Chat.Context.Phone.SendMessage" = "مراسلة";
-"Chat.Context.Phone.TelegramVoiceCall" = "مكالمة صوتية عبر تيليجرام";
-"Chat.Context.Phone.TelegramVideoCall" = "مكالمة مرئية عبر تيليجرام";
-"Chat.Context.Phone.InviteToTelegram" = "دعوة إلى تيليجرام";
+"Chat.Context.Phone.PChatVoiceCall" = "مكالمة صوتية عبر تيليجرام";
+"Chat.Context.Phone.PChatVideoCall" = "مكالمة مرئية عبر تيليجرام";
+"Chat.Context.Phone.InviteToPChat" = "دعوة إلى تيليجرام";
 "Chat.Context.Phone.CallViaCarrier" = "مكالمة عبر الهاتف";
 "Chat.Context.Phone.CopyNumber" = "نسخ الرقم";
-"Chat.Context.Phone.NotOnTelegram" = "هذا الرقم غير موجود على تيليجرام";
+"Chat.Context.Phone.NotOnPChat" = "هذا الرقم غير موجود على تيليجرام";
 "Chat.Context.Phone.ViewProfile" = "عرض الملف الشخصي";
 
 "Chat.Context.Username.SendMessage" = "مراسلة";
 "Chat.Context.Username.OpenGroup" = "فتح المجموعة";
 "Chat.Context.Username.OpenChannel" = "فتح القناة";
 "Chat.Context.Username.Copy" = "نسخ اسم المستخدم";
-"Chat.Context.Username.NotOnTelegram" = "هذا المستخدم غير موجود على تيليجرام";
+"Chat.Context.Username.NotOnPChat" = "هذا المستخدم غير موجود على تيليجرام";
 
 "Chat.Context.Hashtag.Search" = "بحث";
 "Chat.Context.Hashtag.Copy" = "نسخ الوسم";
@@ -12288,8 +12288,8 @@ Sorry for the inconvenience.";
 "Stars.Intro.Transaction.FragmentTopUp.Subtitle" = "عبر Fragment";
 "Stars.Intro.Transaction.FragmentWithdrawal.Title" = "السحب";
 "Stars.Intro.Transaction.FragmentWithdrawal.Subtitle" = "عبر Fragment";
-"Stars.Intro.Transaction.TelegramAds.Title" = "سحب الأموال";
-"Stars.Intro.Transaction.TelegramAds.Subtitle" = "عبر إعلانات تيليجرام";
+"Stars.Intro.Transaction.PChatAds.Title" = "سحب الأموال";
+"Stars.Intro.Transaction.PChatAds.Subtitle" = "عبر إعلانات تيليجرام";
 "Stars.Intro.Transaction.Gift" = "هدية";
 "Stars.Intro.Transaction.ConvertedGift" = "هدية محوّلة";
 "Stars.Intro.Transaction.Unsupported.Title" = "غير مدعومة";
@@ -12315,7 +12315,7 @@ Sorry for the inconvenience.";
 "Stars.Purchase.Stars_any" = "%@ نجمة";
 "Stars.Purchase.ShowMore" = "عرض المزيد من الخيارات";
 "Stars.Purchase.Info" = " شراؤك للنجوم يعني موافقتك على [الشروط والأحكام]().";
-"Stars.Purchase.Terms_URL" = "https://telegram.org/tos/stars";
+"Stars.Purchase.Terms_URL" = "https://p.chat/tos/stars";
 
 "Stars.Transaction.Via" = "عبر";
 "Stars.Transaction.To" = "إلى";
@@ -12324,7 +12324,7 @@ Sorry for the inconvenience.";
 "Stars.Transaction.Id" = "رقم العملية";
 "Stars.Transaction.Date" = "التاريخ";
 "Stars.Transaction.Terms" = "مراجعة [شروط الخدمة]() لنجوم تيليجرام.";
-"Stars.Transaction.Terms_URL" = "https://telegram.org/tos/stars";
+"Stars.Transaction.Terms_URL" = "https://p.chat/tos/stars";
 "Stars.Transaction.CopiedId" = "تم نسخ رقم العملية إلى الحافظة.";
 
 "Stars.Transaction.MediaPurchase" = "شراء الوسائط";
@@ -12338,8 +12338,8 @@ Sorry for the inconvenience.";
 "Stars.Transaction.FragmentTopUp.Subtitle" = "Fragment";
 "Stars.Transaction.FragmentWithdrawal.Title" = "سحب النجوم";
 "Stars.Transaction.FragmentWithdrawal.Subtitle" = "Fragment";
-"Stars.Transaction.TelegramAds.Title" = "سحب النجوم";
-"Stars.Transaction.TelegramAds.Subtitle" = "إعلانات تيليجرام";
+"Stars.Transaction.PChatAds.Title" = "سحب النجوم";
+"Stars.Transaction.PChatAds.Subtitle" = "إعلانات تيليجرام";
 "Stars.Transaction.Unsupported.Title" = "غير مدعومة";
 "Stars.Transaction.Refund" = "استرداد المال";
 
@@ -12422,7 +12422,7 @@ Sorry for the inconvenience.";
 "Stars.BotRevenue.Withdraw.WithdrawShort" = "سحب";
 "Stars.BotRevenue.Withdraw.BuyAds" = "شراء الإعلانات";
 "Stars.BotRevenue.Withdraw.Info" = "يمكنك جمع مكافآت النجوم عبر Fragment، أو استخدام النجوم للإعلان عن البوت الخاص بك. لا يمكنك سحب أقل من ١٠٠٠ نجمة. [معرفة المزيد >]()";
-"Stars.BotRevenue.Withdraw.Info_URL" = "https://telegram.org/tos/bot-developers#6-2-2-tpa-balance";
+"Stars.BotRevenue.Withdraw.Info_URL" = "https://p.chat/tos/bot-developers#6-2-2-tpa-balance";
 
 "Stars.BotRevenue.Transactions.Title" = "سجل العمليات";
 
@@ -12441,7 +12441,7 @@ Sorry for the inconvenience.";
 "Stars.PaidContent.AmountTitle" = "إدخال مبلغ فتح المحتوى";
 "Stars.PaidContent.AmountPlaceholder" = "النجوم المطلوبة للفتح";
 "Stars.PaidContent.AmountInfo" = "سيتعين على المستخدمين تحويل هذا المبلغ من النجوم إلى قناتك من أجل عرض هذه الوسائط.\n[معرفة المزيد حول النجوم]()";
-"Stars.PaidContent.AmountInfo_URL" = "https://telegram.org/tos/stars";
+"Stars.PaidContent.AmountInfo_URL" = "https://p.chat/tos/stars";
 "Stars.PaidContent.Create" = "جعل هذه الوسائط مدفوعة";
 
 "MediaEditor.AddLink" = "رابط";
@@ -12480,7 +12480,7 @@ Sorry for the inconvenience.";
 "Monetization.BalanceStarsWithdrawShort" = "سحب";
 "Monetization.BalanceStarsBuyAds" = "شراء الإعلانات";
 "Monetization.Balance.StarsInfo" = "يمكنك سحب مكافآت النجوم عبر Fragment، أو استخدام النجوم للإعلان عن قناتك. لا يمكنك سحب أقل من ١٠٠٠ نجمة. [معرفة المزيد >]()";
-"Monetization.Balance.StarsInfo_URL" = "https://telegram.org/tos/stars";
+"Monetization.Balance.StarsInfo_URL" = "https://p.chat/tos/stars";
 
 "Monetization.StarsProceeds.Title" = "نظرة عامة على المكافآت";
 "Monetization.StarsProceeds.Available" = "الرصيد المتاح";
@@ -12557,7 +12557,7 @@ Sorry for the inconvenience.";
 "Browser.ContextMenu.CopyLink" = "نسخ الرابط";
 "Browser.ContextMenu.Share" = "مشاركة";
 
-"WebBrowser.Telegram" = "تيليجرام";
+"WebBrowser.PChat" = "تيليجرام";
 
 "Monetization.Proceeds.Ton.Info" = "يمكن استخدام TON من إجمالي رصيدك في الإعلانات أو سحبها كمكافآت بعد ٣ أيام من اكتسابها. لا يمكنك سحب أقل من ١٠ TON.";
 "Monetization.Proceeds.Stars.Info" = "يمكنك استخدام النجوم من إجمالي رصيدك للإعلانات أو سحبها كمكافآت بعد ٢١ يومًا من حصولك عليها.";
@@ -12658,8 +12658,8 @@ Sorry for the inconvenience.";
 
 "PeerInfo.PaneBotPreviews" = "معاينة";
 "PeerInfo.OpenAppButton" = "فتح التطبيق";
-"PeerInfo.AppFooterAdmin" = "نشرك لهذا التطبيق المصغّر يعني موافقتك على [شروط خدمة تيليجرام للمطورين](https://telegram.org/tos/bot-developers).";
-"PeerInfo.AppFooter" = "تشغيلك لهذا التطبيق المصغر، يعني موافقتك على [شروط الخدمة للتطبيقات المصغرة](https://telegram.org/tos/mini-apps).";
+"PeerInfo.AppFooterAdmin" = "نشرك لهذا التطبيق المصغّر يعني موافقتك على [شروط خدمة تيليجرام للمطورين](https://p.chat/tos/bot-developers).";
+"PeerInfo.AppFooter" = "تشغيلك لهذا التطبيق المصغر، يعني موافقتك على [شروط الخدمة للتطبيقات المصغرة](https://p.chat/tos/mini-apps).";
 "BotPreviews.MenuAddPreview" = "إضافة معاينة";
 "BotPreviews.MenuReorder" = "إعادة الترتيب";
 "BotPreviews.MenuDeleteLanguage" = "حذف %@";
@@ -12719,7 +12719,7 @@ Sorry for the inconvenience.";
 "InviteLink.ShareShort" = "مشاركة";
 
 "Stars.Subscription.Terms" = "اشتراكك يعني موافقتك على [شروط الخدمة]().";
-"Stars.Subscription.Terms_URL" = "https://telegram.org/tos/stars";
+"Stars.Subscription.Terms_URL" = "https://p.chat/tos/stars";
 
 "Stars.Transaction.Reaction.Title" = "تفاعل النجوم";
 "Stars.Transaction.Reaction.Post" = "المنشور";
@@ -12804,7 +12804,7 @@ Sorry for the inconvenience.";
 "InviteLink.Create.FeeEditInfo" = "لتغيير رسوم الاشتراك؛ عليك إنشاء رابط دعوة جديد بسعر مختلف.";
 "InviteLink.Create.RequestApprovalFeeUnavailable" = "لا يمكنك تفعيل «موافقة المشرفين» للروابط التي تتطلب رسومًا شهرية.";
 
-"WebApp.PrivacyPolicy_URL" = "https://telegram.org/privacy-tpa";
+"WebApp.PrivacyPolicy_URL" = "https://p.chat/privacy-tpa";
 
 "ChatList.SubscriptionsLowBalance.Stars_1" = "مطلوب نجمة واحدة";
 "ChatList.SubscriptionsLowBalance.Stars_any" = "مطلوب %@ نجمة";
@@ -12830,10 +12830,10 @@ Sorry for the inconvenience.";
 "SendStarReactions.SectionTop" = "أشهر الداعمين";
 "SendStarReactions.ShowMyselfInTop" = "إظهاري في «أبرز الداعمين»";
 "SendStarReactions.SendButtonTitle" = "إرسال # %@";
-"SendStarReactions.TermsOfServiceFooter" = "إرسالك للنجوم يعني موافقتك على [شروط الخدمة](https://telegram.org/tos/stars).";
+"SendStarReactions.TermsOfServiceFooter" = "إرسالك للنجوم يعني موافقتك على [شروط الخدمة](https://p.chat/tos/stars).";
 
 "PeerInfo.AllowedReactions.StarReactions" = "تمكين التفاعلات المدفوعة";
-"PeerInfo.AllowedReactions.StarReactionsFooter" = "يمكنك تشغيل هذه الخاصية للسماح لمشتركي القناة بالتفاعل مع منشوراتك بنجوم تيليجرام، والتي يمكنك سحبها لاحقًا على هيئة TON.[معرفة المزيد >](https://telegram.org/tos/content-creator-rewards#2-3-subscriber-donations)";
+"PeerInfo.AllowedReactions.StarReactionsFooter" = "يمكنك تشغيل هذه الخاصية للسماح لمشتركي القناة بالتفاعل مع منشوراتك بنجوم تيليجرام، والتي يمكنك سحبها لاحقًا على هيئة TON.[معرفة المزيد >](https://p.chat/tos/content-creator-rewards#2-3-subscriber-donations)";
 
 "Chat.ToastStarsSent.Title_1" = "تم إرسال نجمة واحدة!";
 "Chat.ToastStarsSent.Title_any" = "تم إرسال النجوم!";
@@ -13149,16 +13149,16 @@ Sorry for the inconvenience.";
 "ChatList.Search.TopAppsInfo" = "ما التطبيقات المضمنة هنا؟ [معرفة >]()";
 
 "TopApps.Info.Title" = "أشهر التطبيقات المصغرة";
-"TopApps.Info.Text" = "يصنّف هذا الدليل التطبيقات المصغرة بناءً على إيراداتها اليومية، والتي يتم قياسها بالنجوم. لكي يتم إدراجها في القائمة، يجب على المطورين تعيين تطبيقاتهم المصغرة الرئيسية في @botfather (كما هو موضح [هنا](https://core.telegram.org/bots/webapps#launching-the-main-mini-app))، ويجب أن يكون لديها أكثر من **١٠٠٠** مستخدم يوميًا، وأن تحقق إيرادات يومية تزيد عن **١٠٠٠** نجمة، بناءً على المتوسط ​​الأسبوعي.";
+"TopApps.Info.Text" = "يصنّف هذا الدليل التطبيقات المصغرة بناءً على إيراداتها اليومية، والتي يتم قياسها بالنجوم. لكي يتم إدراجها في القائمة، يجب على المطورين تعيين تطبيقاتهم المصغرة الرئيسية في @botfather (كما هو موضح [هنا](https://core.p.chat/bots/webapps#launching-the-main-mini-app))، ويجب أن يكون لديها أكثر من **١٠٠٠** مستخدم يوميًا، وأن تحقق إيرادات يومية تزيد عن **١٠٠٠** نجمة، بناءً على المتوسط ​​الأسبوعي.";
 "TopApps.Info.Done" = "فهمت";
 
-"Stars.Intro.Transaction.TelegramBotApi.Title" = "البث المدفوع";
-"Stars.Intro.Transaction.TelegramBotApi.Messages_1" = "%@ رسالة";
-"Stars.Intro.Transaction.TelegramBotApi.Messages_any" = "%@ رسالة";
+"Stars.Intro.Transaction.PChatBotApi.Title" = "البث المدفوع";
+"Stars.Intro.Transaction.PChatBotApi.Messages_1" = "%@ رسالة";
+"Stars.Intro.Transaction.PChatBotApi.Messages_any" = "%@ رسالة";
 
-"Stars.Transaction.TelegramBotApi.Title" = "البث المدفوع";
-"Stars.Transaction.TelegramBotApi.Messages_1" = "\nرسالة واحدة";
-"Stars.Transaction.TelegramBotApi.Messages_any" = "%@ رسالة";
+"Stars.Transaction.PChatBotApi.Title" = "البث المدفوع";
+"Stars.Transaction.PChatBotApi.Messages_1" = "\nرسالة واحدة";
+"Stars.Transaction.PChatBotApi.Messages_any" = "%@ رسالة";
 
 "Monetization.Bot.Header" = "يقوم تيليجرام بمشاركة 50% من العائدات من الإعلانات المعروضة في البوت الخاص بك كمكافآت. [معرفة المزيد >]()";
 "Monetization.Bot.BalanceTitle" = "الرصيد المتاح";
@@ -13350,7 +13350,7 @@ Sorry for the inconvenience.";
 "AffiliateSetup.StartTitle" = "بدء برنامج الجهات المروّجة";
 "AffiliateSetup.UpdateTitle" = "تحديث برنامج الجهات المروّجة";
 
-"AffiliateSetup.TermsFooter" = "من خلال إنشاء برنامج الجهات المروّجة، فإنك توافق على [الشروط والأحكام](https://telegram.org/terms) الخاصة بالبرنامج.";
+"AffiliateSetup.TermsFooter" = "من خلال إنشاء برنامج الجهات المروّجة، فإنك توافق على [الشروط والأحكام](https://p.chat/terms) الخاصة بالبرنامج.";
 
 "AffiliateSetup.ProgramMenu.OpenBot" = "فتح البوت";
 "AffiliateSetup.ProgramMenu.OpenApp" = "فتح التطبيق";
@@ -13803,7 +13803,7 @@ Sorry for the inconvenience.";
 "Gift.Convert.Success.ChannelText.Stars_any" = "تم إرسال %@ نجمة";
 
 "Stars.Transfer.Terms" = "شراؤك يعني موافقتك على [شروط الخدمة]().";
-"Stars.Transfer.Terms_URL" = "https://telegram.org/tos/stars";
+"Stars.Transfer.Terms_URL" = "https://p.chat/tos/stars";
 
 "AvatarEditor.PremiumNeeded.Background" = "الرجاء الاشتراك في تيليجرام المميز لاستعمال هذه الخلفية.";
 "AvatarEditor.PremiumNeeded.Emoji" = "اشترك في تيليجرام المميز لاختيار هذا الرمز التعبيري.";
@@ -13849,7 +13849,7 @@ Sorry for the inconvenience.";
 "Notification.PaidMessageYouMany" = "قمت بدفع %1$@ نجمة لإرسال %2$@";
 
 "Stars.Transfer.Terms" = "شراؤك يعني موافقتك على [شروط الخدمة]().";
-"Stars.Transfer.Terms_URL" = "https://telegram.org/tos/stars";
+"Stars.Transfer.Terms_URL" = "https://p.chat/tos/stars";
 
 "StarsTransaction.Commission" = "العمولة";
 
@@ -13863,11 +13863,11 @@ Sorry for the inconvenience.";
 "Stars.Intro.Transaction.PaidMessage_1" = "رسوم رسالة واحدة";
 "Stars.Intro.Transaction.PaidMessage_any" = "رسوم %@ رسالة";
 
-"Stars.Transaction.TelegramPremium_1" = "المميز لمدة شهر واحد";
-"Stars.Transaction.TelegramPremium_any" = "المميز لمدة %@ شهر";
+"Stars.Transaction.PChatPremium_1" = "المميز لمدة شهر واحد";
+"Stars.Transaction.PChatPremium_any" = "المميز لمدة %@ شهر";
 
-"Stars.Intro.Transaction.TelegramPremium_1" = "المميز لمدة شهر واحد";
-"Stars.Intro.Transaction.TelegramPremium_any" = "المميز لمدة %@ شهر";
+"Stars.Intro.Transaction.PChatPremium_1" = "المميز لمدة شهر واحد";
+"Stars.Intro.Transaction.PChatPremium_any" = "المميز لمدة %@ شهر";
 
 "Stars.Purchase.SendMessageInfo" = "شراء النجوم لإرسال الرسائل الى **%@** .";
 "Stars.Purchase.SendGroupMessageInfo" = "شراء النجوم لإرسال الرسائل في **%@** .";
@@ -14296,7 +14296,7 @@ Sorry for the inconvenience.";
 "Premium.CreateMultipleStories" = "إنشاء قصص متعددة";
 
 "FrozenAccount.Violation.TextNew" = "تم تجميد حسابك لانتهاك [شروط خدمة تيليجرام]().";
-"FrozenAccount.Violation.TextNew_URL" = "https://telegram.org/tos";
+"FrozenAccount.Violation.TextNew_URL" = "https://p.chat/tos";
 
 "Stars.Purchase.BuyStarGiftInfo" = "اشتر النجوم للحصول على المقتنى الفريد.";
 
@@ -14956,7 +14956,7 @@ Sorry for the inconvenience.";
 
 "Ton.WithdrawViaFragment" = "السحب عبر Fragment";
 "Ton.WithdrawViaFragment.Info" = "تحصيل TON الخاص بك باستخدام Fragment. [تعرف على المزيد >]()";
-"Ton.WithdrawViaFragment.Info_URL" = "https://telegram.org/tos/bot-developers#6-2-2-tpa-balance";
+"Ton.WithdrawViaFragment.Info_URL" = "https://p.chat/tos/bot-developers#6-2-2-tpa-balance";
 
 "MESSAGE_GIFT_THEME" = "غيّر %1$@ المظهر إلى %2$@";
 
@@ -14965,7 +14965,7 @@ Sorry for the inconvenience.";
 
 "Gift.Value.DescriptionAveragePrice" = "متوسط سعر بيع هدايا **%@** على تيليجرام و Fragment خلال الشهر الماضي.";
 "Gift.Value.DescriptionLastPriceFragment" = "هذا هو السعر الأخير الذي تم به بيع **%@** آخر مرة على Fragment.";
-"Gift.Value.DescriptionLastPriceTelegram" = "هذا هو السعر الذي بيعت به **%@** آخر مرة على تيليجرام.";
+"Gift.Value.DescriptionLastPricePChat" = "هذا هو السعر الذي بيعت به **%@** آخر مرة على تيليجرام.";
 
 "Gift.Value.LastPriceInfo" = "**%1$@** هو آخر سعر لهدايا %2$@ المدرجة على تيليجرام و Fragment.";
 "Gift.Value.MinimumPriceInfo" = "**%1$@** هو السعر الأدنى لهدايا %2$@ المدرجة على تيليجرام و Fragment.";
@@ -14977,7 +14977,7 @@ Sorry for the inconvenience.";
 "Gift.Value.LastPrice" = "السعر الأخير";
 "Gift.Value.MinimumPrice" = "الحد الأدنى للسعر";
 "Gift.Value.AveragePrice" = "متوسط السعر";
-"Gift.Value.ForSaleOnTelegram" = "للبيع على تيليجرام";
+"Gift.Value.ForSaleOnPChat" = "للبيع على تيليجرام";
 "Gift.Value.ForSaleOnFragment" = "للبيع على Fragment";
 
 "Gift.View.Context.SetAsTheme" = "تم تعيينه كمظهر في...";
@@ -15107,7 +15107,7 @@ Error: %8$@";
 "Gift.UnavailableAction.Text" = "لفتح هذا الإجراء؛ انقل هذه الهدية إلى حسابك في تيليجرام من منصة «Fragment».";
 "Gift.UnavailableAction.OpenFragment" = "فتح Fragment";
 
-"Gift.Unique.Telegram" = "تيليجرام";
+"Gift.Unique.PChat" = "تيليجرام";
 
 "VoiceChat.ContextEnableMessages" = "السماح بالرسائل";
 "VoiceChat.ContextDisableMessages" = "تعطيل الرسائل";
@@ -15198,7 +15198,7 @@ Error: %8$@";
 "Gift.Auction.TimeLeftMinutes" = "{m}:{s} متبقية";
 "Gift.Auction.ItemsBought_1" = "عنصر تم شراؤه";
 "Gift.Auction.ItemsBought_any" = "عناصر تم شراؤها";
-"Gift.Auction.ForSaleOnTelegram" = "للبيع على تيليجرام";
+"Gift.Auction.ForSaleOnPChat" = "للبيع على تيليجرام";
 "Gift.Auction.ForSaleOnFragment" = "للبيع على Fragment";
 "Gift.Auction.AveragePriceInfo" = "**%1$@** هو متوسط سعر البيع للهدايا **%2$@**.";
 "Gift.Auction.Stars_1" = "نجمة واحدة";
@@ -15340,7 +15340,7 @@ Error: %8$@";
 "AddContact.Title" = "جهة اتصال جديدة";
 "AddContact.PhoneNumber.IsContact" = "رقم الهاتف هذا موجود بالفعل في جهات الاتصال الخاصة بك. [عرض >]()";
 "AddContact.PhoneNumber.Registered" = "رقم الهاتف هذا موجود على التليجرام.";
-"AddContact.PhoneNumber.NotRegistered" = "رقم الهاتف هذا غير موجود على Telegram. [دعوة >]()";
+"AddContact.PhoneNumber.NotRegistered" = "رقم الهاتف هذا غير موجود على PChat. [دعوة >]()";
 "AddContact.SyncToPhone" = "مزامنة جهة الاتصال مع الهاتف";
 "AddContact.NotePlaceholder" = "إضافة ملاحظات مرئية لك فقط";
 "AddContact.AddQR" = "إضافة عبر رمز QR";
@@ -15643,7 +15643,7 @@ Error: %8$@";
 "CocoonInfo.Efficient.Text" = "لقد مكّنت تقنية \"كوكون\" من خفض تكلفة الترجمة بمقدار ٦ أضعاف.";
 "CocoonInfo.ForEveryone.Title" = "للجميع";
 "CocoonInfo.ForEveryone.Text" = "يمكن لأي مطور استخدام [كوكون](telegram) لميزات الذكاء الاصطناعي. اعرف المزيد على [cocoon.org](web).";
-"CocoonInfo.IntergrateInfo" = "هل ترغب في دمج \"كوكون\" في مشاريعك؟\nتواصل معنا على [t.me/cocoon?direct]()";
+"CocoonInfo.IntergrateInfo" = "هل ترغب في دمج \"كوكون\" في مشاريعك؟\nتواصل معنا على [p.chat/cocoon?direct]()";
 "CocoonInfo.Understood" = "مفهوم";
 
 "Conversation.Translation.CocoonInfo" = "الترجمات مقدمة من قبل\n**# كوكون**. [كيف تعمل؟]()";
@@ -15975,7 +15975,7 @@ Error: %8$@";
 "Month.NomDecember" = "ديسمبر";
 
 
-/* new from translations.telegram.org */
+/* new from translations.p.chat */
 
 "AUTH_REGION" = "تم تسجيل الدخول لحسابك من جهاز جديد %1$@، الموقع: %2$@";
 "AUTH_REGION_SEPARATED" = "عملية تسجيل دخول جديدة|من جهاز غيرِ معروف %1$@، الموقع: %2$@";
@@ -17137,10 +17137,10 @@ Error: %8$@";
 "Gift.View.Sale.Stars_2" = "نجمتين";
 "Gift.View.Sale.Stars_3_10" = "%@ نجوم";
 "Gift.View.Sale.Stars_many" = "%@ نجمة";
-"GiftLink.TelegramPremium_0" = "";
-"GiftLink.TelegramPremium_2" = "تيليجرام المميز لمدة شهرين";
-"GiftLink.TelegramPremium_3_10" = "تيليجرام المميز لمدة %@ أشهر";
-"GiftLink.TelegramPremium_many" = "تيليجرام المميز لمدة %@ شهراً";
+"GiftLink.PChatPremium_0" = "";
+"GiftLink.PChatPremium_2" = "تيليجرام المميز لمدة شهرين";
+"GiftLink.PChatPremium_3_10" = "تيليجرام المميز لمدة %@ أشهر";
+"GiftLink.PChatPremium_many" = "تيليجرام المميز لمدة %@ شهراً";
 "GlobalAutodeleteSettings.ApplyChatsSubject_0" = "%@ محادثة";
 "GlobalAutodeleteSettings.ApplyChatsSubject_2" = "محادثتان";
 "GlobalAutodeleteSettings.ApplyChatsSubject_3_10" = "%@ محادثات";
@@ -17211,7 +17211,7 @@ Error: %8$@";
 "LiveStreamSettings.PricePerComment.Stars_3_10" = "%@ نجوم";
 "LiveStreamSettings.PricePerComment.Stars_many" = "%@ نجمة";
 "Login.CallRequestState1" = "سيتصل بك تيليجرام بعد %.2d:%d";
-"Login.PRIVACY_URL" = "https://telegram.org/privacy";
+"Login.PRIVACY_URL" = "https://p.chat/privacy";
 "Login.SmsRequestState1" = "سنرسل لك رسالة نصية SMS بعد %.2d:%d";
 "MESSAGES" = "أرسل لك %1$@ %2$@ رسالة";
 "MESSAGES_SEPARATED" = "%1$@|أرسل لك %2$@ رسالة";
@@ -17810,10 +17810,10 @@ Error: %8$@";
 "PUSH_MESSAGE_VIDEOS_TEXT_many" = "أرسل لك %d مقطعًا مرئيًا";
 "PUSH_REACT_STORY_NAME" = "%1$@|%3$@ %2$@ على قصتك";
 "Passport.Scans" = "النسخ";
-"PassportKit.Button.GetTelegramAlertInstall" = "تنزيل";
-"PassportKit.Button.GetTelegramAlertMessage" = "تحتاج إلى تطبيق تيليجرام لاستخدام جواز تيليجرام";
-"PassportKit.Button.GetTelegramAlertNotNow" = "ليس الآن";
-"PassportKit.Button.GetTelegramAlertTitle" = "احصل على تيليجرام";
+"PassportKit.Button.GetPChatAlertInstall" = "تنزيل";
+"PassportKit.Button.GetPChatAlertMessage" = "تحتاج إلى تطبيق تيليجرام لاستخدام جواز تيليجرام";
+"PassportKit.Button.GetPChatAlertNotNow" = "ليس الآن";
+"PassportKit.Button.GetPChatAlertTitle" = "احصل على تيليجرام";
 "PassportKit.Button.Title" = "تسجيل الدخول عبر تيليجرام";
 "Peer.DeletedUser" = "مستخدم محذوف ";
 "PeerInfo.AllowedReactions.MaxCountValue_0" = "";
@@ -18086,8 +18086,8 @@ Error: %8$@";
 "ShortTime.MinutesAgo_3_10" = "%@د";
 "ShortTime.MinutesAgo_many" = "%@د";
 "SocksProxySetup.UseSocks5" = "استخدام الخادم الوسيط SOCKS5";
-"SponsoredMessageInfo.ActionUrl" = "https://ads.telegram.org";
-"SponsoredMessageInfo.Text" = "فتح https://telegram.org";
+"SponsoredMessageInfo.ActionUrl" = "https://ads.p.chat";
+"SponsoredMessageInfo.Text" = "فتح https://p.chat";
 "SponsoredMessageInfoScreen.Text" = "على خلاف التطبيقات الأخرى؛ لا تستخدم تيليجرام أبدًا بياناتك الخاصة لاستهدافك بالإعلانات. تعتمد الرسائل الإعلانية في تيليجرام بشكل أساسي على مواضيع القنوات العامة التي تُعرض فيها. يعني هذا أنه لا يتم استخراج بيانات المستخدمين أو تحليلها لعرض الإعلانات، وأن أي مستخدم يستعرض قناة على تيليجرام سيرى نفس الرسالة الإعلانية.\n\nعلى خلاف التطبيقات الأخرى؛ لا تراقب تيليجرام ما إذا كنت قد ضغطت على رسالة إعلانية أم لا، ولا تنشئ ملفًا بناءً على نشاطك. لقد حظرنا أيضًا استخدام الروابط الخارجية في الرسائل الإعلانية؛ لمنع الأطراف الثالثة من التجسس على مستخدمينا. نؤمن أن لكل شخص الحق في الخصوصية، ويجب أن تحترم المنصات التقنية ذلك.\n\nتقدم تيليجرام خدمة مجانية غير محدودة لمئات الملايين من المستخدمين وهي تتطلب تكاليف كبيرة للخوادم والاتصالات. من أجل إبقاء تيليجرام مستقلة والحفاظ على التزامها بقيمها؛ طورت تيليجرام أداة مدفوعة للرسائل الإعلانية مع مراعاة خصوصية المستخدم. نرحب بالإعلانات على:\n[url]\nالرسائل الإعلانية في وضع الاختبار حاليًا. بمجرد إطلاقها بالكامل والسماح لتيليجرام بتغطية تكاليفها الأساسية؛ سنبدأ في مشاركة عائدات الإعلانات مع مالكي القنوات العامة التي تم عرض الرسائل الإعلانية عليها.\n\nلا ينبغي أن تكون الإعلانات على الإنترنت تعني الإساءة إلى خصوصية المستخدم. دعونا نعيد معًا تعريف الكيفية التي يجب أن تعمل بها أي شركة تقنية.";
 "Stars.Intro.PurchasedText.Stars_0" = "";
 "Stars.Intro.PurchasedText.Stars_2" = "نجمتين";
@@ -18105,14 +18105,14 @@ Error: %8$@";
 "Stars.Intro.Transaction.PaidMessage_2" = "رسوم رسالتين";
 "Stars.Intro.Transaction.PaidMessage_3_10" = "رسوم %@ رسائل";
 "Stars.Intro.Transaction.PaidMessage_many" = "رسوم %@ رسالة";
-"Stars.Intro.Transaction.TelegramBotApi.Messages_0" = "";
-"Stars.Intro.Transaction.TelegramBotApi.Messages_2" = "%@ رسائل";
-"Stars.Intro.Transaction.TelegramBotApi.Messages_3_10" = "%@ رسائل";
-"Stars.Intro.Transaction.TelegramBotApi.Messages_many" = "%@ رسالة ";
-"Stars.Intro.Transaction.TelegramPremium_0" = "";
-"Stars.Intro.Transaction.TelegramPremium_2" = "المميز لمدة شهرين";
-"Stars.Intro.Transaction.TelegramPremium_3_10" = "المميز لمدة %@ أشهر";
-"Stars.Intro.Transaction.TelegramPremium_many" = "المميز لمدة %@ شهرا";
+"Stars.Intro.Transaction.PChatBotApi.Messages_0" = "";
+"Stars.Intro.Transaction.PChatBotApi.Messages_2" = "%@ رسائل";
+"Stars.Intro.Transaction.PChatBotApi.Messages_3_10" = "%@ رسائل";
+"Stars.Intro.Transaction.PChatBotApi.Messages_many" = "%@ رسالة ";
+"Stars.Intro.Transaction.PChatPremium_0" = "";
+"Stars.Intro.Transaction.PChatPremium_2" = "المميز لمدة شهرين";
+"Stars.Intro.Transaction.PChatPremium_3_10" = "المميز لمدة %@ أشهر";
+"Stars.Intro.Transaction.PChatPremium_many" = "المميز لمدة %@ شهرا";
 "Stars.Purchase.Stars_0" = "";
 "Stars.Purchase.Stars_2" = "نجمتان";
 "Stars.Purchase.Stars_3_10" = "%@ نجوم";
@@ -18158,14 +18158,14 @@ Error: %8$@";
 "Stars.Transaction.Photos_2" = "صورتان";
 "Stars.Transaction.Photos_3_10" = "%@ صور";
 "Stars.Transaction.Photos_many" = "%@ صورة";
-"Stars.Transaction.TelegramBotApi.Messages_0" = "";
-"Stars.Transaction.TelegramBotApi.Messages_2" = "رسالتين";
-"Stars.Transaction.TelegramBotApi.Messages_3_10" = "%@ رسائل";
-"Stars.Transaction.TelegramBotApi.Messages_many" = "%@ رسالة";
-"Stars.Transaction.TelegramPremium_0" = "";
-"Stars.Transaction.TelegramPremium_2" = "المميز لمدة شهرين";
-"Stars.Transaction.TelegramPremium_3_10" = "المميز لمدة %@ أشهر";
-"Stars.Transaction.TelegramPremium_many" = "المميز لمدة %@ شهرا";
+"Stars.Transaction.PChatBotApi.Messages_0" = "";
+"Stars.Transaction.PChatBotApi.Messages_2" = "رسالتين";
+"Stars.Transaction.PChatBotApi.Messages_3_10" = "%@ رسائل";
+"Stars.Transaction.PChatBotApi.Messages_many" = "%@ رسالة";
+"Stars.Transaction.PChatPremium_0" = "";
+"Stars.Transaction.PChatPremium_2" = "المميز لمدة شهرين";
+"Stars.Transaction.PChatPremium_3_10" = "المميز لمدة %@ أشهر";
+"Stars.Transaction.PChatPremium_many" = "المميز لمدة %@ شهرا";
 "Stars.Transaction.Videos_0" = "";
 "Stars.Transaction.Videos_2" = "مقطعان مرئيان";
 "Stars.Transaction.Videos_3_10" = "%@ مقاطع مرئية";
