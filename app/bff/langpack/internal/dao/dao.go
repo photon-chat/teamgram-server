@@ -25,12 +25,21 @@ type LangPackEntry struct {
 // Dao is the data access object for langpack.
 type Dao struct {
 	mu       sync.RWMutex
-	cache    map[string]*LangPackEntry // key: "platform/langCode" e.g. "ios/en"
+	cache    map[string]*LangPackEntry // key: langCode e.g. "en"
 	cacheDir string
 }
 
 func New(_ interface{}) *Dao {
+	// Resolve data directory relative to the executable so it works
+	// regardless of the working directory (e.g. teamgramd/bin/).
 	cacheDir := "data/langpack"
+	if exe, err := os.Executable(); err == nil {
+		root := filepath.Join(filepath.Dir(exe), "../..")
+		candidate := filepath.Join(root, "data/langpack")
+		if info, err2 := os.Stat(candidate); err2 == nil && info.IsDir() {
+			cacheDir = candidate
+		}
+	}
 	os.MkdirAll(cacheDir, 0755)
 
 	return &Dao{
@@ -55,8 +64,8 @@ func (d *Dao) GetLanguage(langCode string) (*mtproto.LangPackLanguage, error) {
 }
 
 // GetLangPack returns the full language pack from local files.
-func (d *Dao) GetLangPack(ctx context.Context, platform, langCode string) (*LangPackEntry, error) {
-	cacheKey := platform + "/" + langCode
+func (d *Dao) GetLangPack(ctx context.Context, _, langCode string) (*LangPackEntry, error) {
+	cacheKey := langCode
 
 	// Check memory cache first
 	d.mu.RLock()
@@ -67,9 +76,9 @@ func (d *Dao) GetLangPack(ctx context.Context, platform, langCode string) (*Lang
 	}
 
 	// Load from local file
-	entry, err := d.loadFromFile(langCode, platform)
+	entry, err := d.loadFromFile(langCode)
 	if err != nil {
-		return nil, fmt.Errorf("langpack file not found for %s/%s: %w", platform, langCode, err)
+		return nil, fmt.Errorf("langpack file not found for %s: %w", langCode, err)
 	}
 
 	d.mu.Lock()
@@ -105,8 +114,8 @@ func (d *Dao) GetStrings(ctx context.Context, platform, langCode string, keys []
 }
 
 // loadFromFile loads a .strings file from disk.
-func (d *Dao) loadFromFile(langCode, platform string) (*LangPackEntry, error) {
-	filePath := d.filePath(langCode, platform)
+func (d *Dao) loadFromFile(langCode string) (*LangPackEntry, error) {
+	filePath := d.filePath(langCode)
 	data, err := os.ReadFile(filePath)
 	if err != nil {
 		return nil, err
@@ -123,8 +132,8 @@ func (d *Dao) loadFromFile(langCode, platform string) (*LangPackEntry, error) {
 	}, nil
 }
 
-func (d *Dao) filePath(langCode, platform string) string {
-	return filepath.Join(d.cacheDir, platform, langCode+".strings")
+func (d *Dao) filePath(langCode string) string {
+	return filepath.Join(d.cacheDir, langCode+".strings")
 }
 
 // parseAppleStrings parses Apple .strings format: "key" = "value";

@@ -6,7 +6,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
-OUTPUT_DIR="$ROOT_DIR/data/langpack/ios"
+OUTPUT_DIR="$ROOT_DIR/data/langpack"
 CUSTOM_STRINGS="$ROOT_DIR/app/bff/langpack/internal/dao/custom_strings.json"
 
 LANGS=(
