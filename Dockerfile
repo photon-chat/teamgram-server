@@ -6,6 +6,7 @@ RUN ./build.sh
 FROM ubuntu:latest
 WORKDIR /app
 COPY --from=builder /app/teamgramd/ /app/
+COPY --from=builder /app/data/langpack/ /app/data/langpack/
 RUN apt update -y && apt install -y ffmpeg curl && chmod +x /app/docker/entrypoint.sh \
     && curl -fSL -o /app/bin/GeoLite2-City.mmdb \
        https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-City.mmdb

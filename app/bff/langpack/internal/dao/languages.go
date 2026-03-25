@@ -39,6 +39,7 @@ var defaultLanguages = []*mtproto.LangPackLanguage{
 	makeLang("Spanish", "Español", "es", "", "es", 11302, 11302, true, false, false),
 	makeLang("Swedish", "Svenska", "sv", "", "sv", 11302, 11302, true, false, false),
 	makeLang("Turkish", "Türkçe", "tr", "", "tr", 11302, 11302, true, false, false),
+	makeLang("Thai", "ภาษาไทย", "th", "", "th", 11302, 11302, true, false, false),
 	makeLang("Ukrainian", "Українська", "uk", "", "uk", 11302, 11302, true, false, false),
 	makeLang("Uzbek", "Oʻzbek", "uz", "", "uz", 11302, 10061, true, false, false),
 	makeLang("Vietnamese", "Tiếng Việt", "vi", "", "vi", 11302, 11022, true, false, false),

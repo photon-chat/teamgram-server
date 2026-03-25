@@ -4,28 +4,22 @@ import (
 	"bufio"
 	"context"
 	"fmt"
-	"io"
-	"net/http"
 	"os"
 	"path/filepath"
 	"strings"
 	"sync"
-	"time"
 
 	"github.com/teamgram/proto/mtproto"
-
-	"github.com/zeromicro/go-zero/core/logx"
 )
 
-// langPackVersion is bumped when the server restarts or cache is refreshed.
-// Not a real incremental version - clients will re-fetch on version mismatch.
-var langPackVersion = int32(3)
+// langPackVersion is bumped when language packs are updated.
+// Clients will re-fetch on version mismatch.
+var langPackVersion = int32(4)
 
 // LangPackEntry stores a parsed language pack.
 type LangPackEntry struct {
-	Strings  []*mtproto.LangPackString
-	Version  int32
-	LoadedAt time.Time
+	Strings []*mtproto.LangPackString
+	Version int32
 }
 
 // Dao is the data access object for langpack.
@@ -33,20 +27,15 @@ type Dao struct {
 	mu       sync.RWMutex
 	cache    map[string]*LangPackEntry // key: "platform/langCode" e.g. "ios/en"
 	cacheDir string
-	client   *http.Client
 }
 
 func New(_ interface{}) *Dao {
-	// Store cached .strings files under the working directory
 	cacheDir := "data/langpack"
 	os.MkdirAll(cacheDir, 0755)
 
 	return &Dao{
 		cache:    make(map[string]*LangPackEntry),
 		cacheDir: cacheDir,
-		client: &http.Client{
-			Timeout: 60 * time.Second,
-		},
 	}
 }
 
@@ -65,7 +54,7 @@ func (d *Dao) GetLanguage(langCode string) (*mtproto.LangPackLanguage, error) {
 	return nil, fmt.Errorf("language not found: %s", langCode)
 }
 
-// GetLangPack returns the full language pack. If not cached, fetches from Telegram.
+// GetLangPack returns the full language pack from local files.
 func (d *Dao) GetLangPack(ctx context.Context, platform, langCode string) (*LangPackEntry, error) {
 	cacheKey := platform + "/" + langCode
 
@@ -77,23 +66,15 @@ func (d *Dao) GetLangPack(ctx context.Context, platform, langCode string) (*Lang
 		return entry, nil
 	}
 
-	// Check local file cache
+	// Load from local file
 	entry, err := d.loadFromFile(langCode, platform)
-	if err == nil && entry != nil {
-		// Merge custom strings before caching
-		entry.Strings = append(entry.Strings, GetCustomStrings(langCode)...)
-		d.mu.Lock()
-		d.cache[cacheKey] = entry
-		d.mu.Unlock()
-		return entry, nil
-	}
-
-	// Fetch from Telegram translations
-	entry, err = d.fetchAndCache(ctx, langCode, platform)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("langpack file not found for %s/%s: %w", platform, langCode, err)
 	}
 
+	d.mu.Lock()
+	d.cache[cacheKey] = entry
+	d.mu.Unlock()
 	return entry, nil
 }
 
@@ -123,70 +104,7 @@ func (d *Dao) GetStrings(ctx context.Context, platform, langCode string, keys []
 	return result, nil
 }
 
-// fetchAndCache fetches the language pack from Telegram export URL, saves to file, and caches in memory.
-func (d *Dao) fetchAndCache(ctx context.Context, langCode, platform string) (*LangPackEntry, error) {
-	log := logx.WithContext(ctx)
-
-	// Map platform to Telegram export path
-	telegramPlatform := mapPlatform(platform)
-
-	// https://translations.telegram.org/{langCode}/{platform}/export
-	exportURL := fmt.Sprintf("https://translations.telegram.org/%s/%s/export", langCode, telegramPlatform)
-	log.Infof("fetchAndCache - fetching langpack from %s", exportURL)
-
-	req, err := http.NewRequestWithContext(ctx, http.MethodGet, exportURL, nil)
-	if err != nil {
-		return nil, fmt.Errorf("create request: %w", err)
-	}
-	req.Header.Set("User-Agent", "Teamgram-Server/1.0")
-
-	resp, err := d.client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("fetch langpack: %w", err)
-	}
-	defer resp.Body.Close()
-
-	if resp.StatusCode != http.StatusOK {
-		return nil, fmt.Errorf("fetch langpack: status %d", resp.StatusCode)
-	}
-
-	body, err := io.ReadAll(resp.Body)
-	if err != nil {
-		return nil, fmt.Errorf("read response body: %w", err)
-	}
-
-	// Save to local file
-	filePath := d.filePath(langCode, platform)
-	os.MkdirAll(filepath.Dir(filePath), 0755)
-	if err := os.WriteFile(filePath, body, 0644); err != nil {
-		log.Errorf("fetchAndCache - failed to save file %s: %v", filePath, err)
-		// Continue even if save fails
-	} else {
-		log.Infof("fetchAndCache - saved langpack to %s (%d bytes)", filePath, len(body))
-	}
-
-	// Parse the .strings content
-	strings, err := parseAppleStrings(string(body))
-	if err != nil {
-		return nil, fmt.Errorf("parse strings file: %w", err)
-	}
-
-	entry := &LangPackEntry{
-		Strings:  append(strings, GetCustomStrings(langCode)...),
-		Version:  langPackVersion,
-		LoadedAt: time.Now(),
-	}
-
-	cacheKey := platform + "/" + langCode
-	d.mu.Lock()
-	d.cache[cacheKey] = entry
-	d.mu.Unlock()
-
-	log.Infof("fetchAndCache - loaded %d strings for %s/%s", len(strings), platform, langCode)
-	return entry, nil
-}
-
-// loadFromFile loads a cached .strings file from disk.
+// loadFromFile loads a .strings file from disk.
 func (d *Dao) loadFromFile(langCode, platform string) (*LangPackEntry, error) {
 	filePath := d.filePath(langCode, platform)
 	data, err := os.ReadFile(filePath)
@@ -200,28 +118,13 @@ func (d *Dao) loadFromFile(langCode, platform string) (*LangPackEntry, error) {
 	}
 
 	return &LangPackEntry{
-		Strings:  strings,
-		Version:  langPackVersion,
-		LoadedAt: time.Now(),
+		Strings: strings,
+		Version: langPackVersion,
 	}, nil
 }
 
 func (d *Dao) filePath(langCode, platform string) string {
 	return filepath.Join(d.cacheDir, platform, langCode+".strings")
-}
-
-// mapPlatform maps client lang_pack values to Telegram translation platform names.
-func mapPlatform(platform string) string {
-	switch strings.ToLower(platform) {
-	case "ios", "macos":
-		return "ios"
-	case "android", "android_x":
-		return "android"
-	case "tdesktop", "desktop":
-		return "tdesktop"
-	default:
-		return "ios"
-	}
 }
 
 // parseAppleStrings parses Apple .strings format: "key" = "value";

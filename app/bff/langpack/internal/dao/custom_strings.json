@@ -823,5 +823,30 @@
     "CustomAuth.Error.Generic": "Xác thực thất bại, vui lòng thử lại",
     "CustomAuth.SwitchToAccount": "Đăng nhập tài khoản",
     "CustomAuth.SwitchToPhone": "Đăng nhập điện thoại"
+  },
+  "th": {
+    "CustomAuth.Login": "เข้าสู่ระบบ",
+    "CustomAuth.Register": "ลงทะเบียน",
+    "CustomAuth.Username": "ชื่อผู้ใช้",
+    "CustomAuth.Password": "รหัสผ่าน",
+    "CustomAuth.Nickname": "ชื่อเล่น",
+    "CustomAuth.LoginSubtitle.Phone": "เข้าสู่ระบบด้วยหมายเลขโทรศัพท์และรหัสผ่าน",
+    "CustomAuth.LoginSubtitle.Username": "เข้าสู่ระบบด้วยชื่อผู้ใช้และรหัสผ่าน",
+    "CustomAuth.RegisterSubtitle.Phone": "สร้างบัญชีด้วยหมายเลขโทรศัพท์และรหัสผ่าน",
+    "CustomAuth.RegisterSubtitle.Username": "สร้างบัญชีด้วยชื่อผู้ใช้และรหัสผ่าน",
+    "CustomAuth.SwitchToRegister": "ยังไม่มีบัญชี? ลงทะเบียน",
+    "CustomAuth.SwitchToLogin": "มีบัญชีแล้ว? เข้าสู่ระบบ",
+    "CustomAuth.Error.EnterPhone": "กรุณากรอกหมายเลขโทรศัพท์",
+    "CustomAuth.Error.EnterUsername": "กรุณากรอกชื่อผู้ใช้",
+    "CustomAuth.Error.PasswordMin": "รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร",
+    "CustomAuth.Error.EnterNickname": "กรุณากรอกชื่อเล่น",
+    "CustomAuth.Error.InvalidCredentials": "ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง",
+    "CustomAuth.Error.UsernameOccupied": "ชื่อผู้ใช้นี้ถูกใช้แล้ว",
+    "CustomAuth.Error.UsernameInvalid": "ชื่อผู้ใช้ไม่ถูกต้อง",
+    "CustomAuth.Error.PhoneInvalid": "หมายเลขโทรศัพท์ไม่ถูกต้อง",
+    "CustomAuth.Error.PhoneOccupied": "หมายเลขโทรศัพท์นี้ลงทะเบียนแล้ว",
+    "CustomAuth.Error.Generic": "การยืนยันตัวตนล้มเหลว กรุณาลองอีกครั้ง",
+    "CustomAuth.SwitchToAccount": "เข้าสู่ระบบด้วยบัญชี",
+    "CustomAuth.SwitchToPhone": "เข้าสู่ระบบด้วยโทรศัพท์"
   }
 }
