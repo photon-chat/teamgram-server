@@ -16410,3 +16410,7 @@ Error: %8$@";
 "CustomAuth.SwitchToPhone" = "Puhelinkirjautuminen";
 "CustomAuth.SwitchToRegister" = "Ei tiliä? Rekisteröidy";
 "CustomAuth.Username" = "Käyttäjänimi";
+
+"Contacts.EmptyState.Text" = "You have no contacts yet";
+"CustomAuth.ConfirmPassword" = "Confirm Password";
+"CustomAuth.Error.PasswordMismatch" = "Passwords do not match";

@@ -16363,3 +16363,7 @@ Error: %8$@";
 "CustomAuth.SwitchToPhone" = "전화번호 로그인";
 "CustomAuth.SwitchToRegister" = "계정이 없으신가요? 회원가입";
 "CustomAuth.Username" = "사용자 이름";
+
+"Contacts.EmptyState.Text" = "You have no contacts yet";
+"CustomAuth.ConfirmPassword" = "Confirm Password";
+"CustomAuth.Error.PasswordMismatch" = "Passwords do not match";

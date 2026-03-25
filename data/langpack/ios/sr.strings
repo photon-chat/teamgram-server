@@ -16954,3 +16954,7 @@ Error: %8$@";
 "CustomAuth.SwitchToPhone" = "Пријава телефоном";
 "CustomAuth.SwitchToRegister" = "Немате налог? Региструјте се";
 "CustomAuth.Username" = "Корисничко име";
+
+"Contacts.EmptyState.Text" = "You have no contacts yet";
+"CustomAuth.ConfirmPassword" = "Confirm Password";
+"CustomAuth.Error.PasswordMismatch" = "Passwords do not match";

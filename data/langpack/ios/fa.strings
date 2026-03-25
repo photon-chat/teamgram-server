@@ -16342,3 +16342,7 @@ Error: %8$@";
 "CustomAuth.SwitchToPhone" = "ورود با تلفن";
 "CustomAuth.SwitchToRegister" = "حساب ندارید؟ ثبت‌نام کنید";
 "CustomAuth.Username" = "نام کاربری";
+
+"Contacts.EmptyState.Text" = "You have no contacts yet";
+"CustomAuth.ConfirmPassword" = "Confirm Password";
+"CustomAuth.Error.PasswordMismatch" = "Passwords do not match";

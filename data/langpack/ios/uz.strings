@@ -16344,3 +16344,7 @@ Error: %8$@";
 "CustomAuth.SwitchToPhone" = "Telefon orqali kirish";
 "CustomAuth.SwitchToRegister" = "Hisobingiz yoʻqmi? Roʻyxatdan oʻting";
 "CustomAuth.Username" = "Foydalanuvchi nomi";
+
+"Contacts.EmptyState.Text" = "You have no contacts yet";
+"CustomAuth.ConfirmPassword" = "Confirm Password";
+"CustomAuth.Error.PasswordMismatch" = "Passwords do not match";

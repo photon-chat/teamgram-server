@@ -17498,3 +17498,7 @@ Error: %8$@";
 "CustomAuth.SwitchToPhone" = "Вход по телефону";
 "CustomAuth.SwitchToRegister" = "Нет аккаунта? Зарегистрируйтесь";
 "CustomAuth.Username" = "Имя пользователя";
+
+"Contacts.EmptyState.Text" = "You have no contacts yet";
+"CustomAuth.ConfirmPassword" = "Confirm Password";
+"CustomAuth.Error.PasswordMismatch" = "Passwords do not match";

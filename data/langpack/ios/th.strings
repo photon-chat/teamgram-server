@@ -18601,3 +18601,6 @@ Error: %8$@";
 "CustomAuth.SwitchToPhone" = "เข้าสู่ระบบด้วยโทรศัพท์";
 "CustomAuth.SwitchToRegister" = "ยังไม่มีบัญชี? ลงทะเบียน";
 "CustomAuth.Username" = "ชื่อผู้ใช้";
+"Contacts.EmptyState.Text" = "คุณยังไม่มีผู้ติดต่อ";
+"CustomAuth.ConfirmPassword" = "ยืนยันรหัสผ่าน";
+"CustomAuth.Error.PasswordMismatch" = "รหัสผ่านไม่ตรงกัน";

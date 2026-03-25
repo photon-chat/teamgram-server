@@ -17024,3 +17024,7 @@ Error: %8$@";
 "CustomAuth.SwitchToPhone" = "Уваход з тэлефонам";
 "CustomAuth.SwitchToRegister" = "Няма акаўнта? Зарэгістравацца";
 "CustomAuth.Username" = "Імя карыстальніка";
+
+"Contacts.EmptyState.Text" = "You have no contacts yet";
+"CustomAuth.ConfirmPassword" = "Confirm Password";
+"CustomAuth.Error.PasswordMismatch" = "Passwords do not match";

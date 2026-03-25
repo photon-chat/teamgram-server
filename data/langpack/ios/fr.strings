@@ -16410,3 +16410,7 @@ Error: %8$@";
 "CustomAuth.SwitchToPhone" = "Connexion par téléphone";
 "CustomAuth.SwitchToRegister" = "Pas de compte ? S'inscrire";
 "CustomAuth.Username" = "Nom d'utilisateur";
+
+"Contacts.EmptyState.Text" = "You have no contacts yet";
+"CustomAuth.ConfirmPassword" = "Confirm Password";
+"CustomAuth.Error.PasswordMismatch" = "Passwords do not match";

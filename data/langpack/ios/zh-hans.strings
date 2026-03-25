@@ -16375,3 +16375,7 @@ Error: %8$@";
 "CustomAuth.SwitchToPhone" = "手机号登录";
 "CustomAuth.SwitchToRegister" = "没有账号？去注册";
 "CustomAuth.Username" = "用户名";
+
+"Contacts.EmptyState.Text" = "你还没有联系人";
+"CustomAuth.ConfirmPassword" = "请确认密码";
+"CustomAuth.Error.PasswordMismatch" = "密码不一致";

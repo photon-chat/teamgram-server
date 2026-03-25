@@ -16954,3 +16954,7 @@ Error: %8$@";
 "CustomAuth.SwitchToPhone" = "Autentificare cu telefon";
 "CustomAuth.SwitchToRegister" = "Nu ai cont? Înregistrează-te";
 "CustomAuth.Username" = "Nume de utilizator";
+
+"Contacts.EmptyState.Text" = "You have no contacts yet";
+"CustomAuth.ConfirmPassword" = "Confirm Password";
+"CustomAuth.Error.PasswordMismatch" = "Passwords do not match";

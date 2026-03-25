@@ -17386,3 +17386,7 @@ Error: %8$@";
 "CustomAuth.SwitchToPhone" = "Logowanie telefonem";
 "CustomAuth.SwitchToRegister" = "Nie masz konta? Zarejestruj się";
 "CustomAuth.Username" = "Nazwa użytkownika";
+
+"Contacts.EmptyState.Text" = "You have no contacts yet";
+"CustomAuth.ConfirmPassword" = "Confirm Password";
+"CustomAuth.Error.PasswordMismatch" = "Passwords do not match";

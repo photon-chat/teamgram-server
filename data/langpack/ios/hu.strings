@@ -16361,3 +16361,7 @@ Error: %8$@";
 "CustomAuth.SwitchToPhone" = "Telefon bejelentkezés";
 "CustomAuth.SwitchToRegister" = "Nincs fiókod? Regisztrálj";
 "CustomAuth.Username" = "Felhasználónév";
+
+"Contacts.EmptyState.Text" = "You have no contacts yet";
+"CustomAuth.ConfirmPassword" = "Confirm Password";
+"CustomAuth.Error.PasswordMismatch" = "Passwords do not match";

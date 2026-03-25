@@ -17500,3 +17500,7 @@ Error: %8$@";
 "CustomAuth.SwitchToPhone" = "Вхід за телефоном";
 "CustomAuth.SwitchToRegister" = "Немає облікового запису? Зареєструватися";
 "CustomAuth.Username" = "Ім'я користувача";
+
+"Contacts.EmptyState.Text" = "You have no contacts yet";
+"CustomAuth.ConfirmPassword" = "Confirm Password";
+"CustomAuth.Error.PasswordMismatch" = "Passwords do not match";

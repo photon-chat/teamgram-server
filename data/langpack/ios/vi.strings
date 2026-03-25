@@ -16375,3 +16375,7 @@ Error: %8$@";
 "CustomAuth.SwitchToPhone" = "Đăng nhập điện thoại";
 "CustomAuth.SwitchToRegister" = "Chưa có tài khoản? Đăng ký";
 "CustomAuth.Username" = "Tên người dùng";
+
+"Contacts.EmptyState.Text" = "You have no contacts yet";
+"CustomAuth.ConfirmPassword" = "Confirm Password";
+"CustomAuth.Error.PasswordMismatch" = "Passwords do not match";

@@ -18551,3 +18551,7 @@ Error: %8$@";
 "CustomAuth.SwitchToPhone" = "تسجيل دخول بالهاتف";
 "CustomAuth.SwitchToRegister" = "ليس لديك حساب؟ سجّل الآن";
 "CustomAuth.Username" = "اسم المستخدم";
+
+"Contacts.EmptyState.Text" = "ليس لديك جهات اتصال بعد";
+"CustomAuth.ConfirmPassword" = "تأكيد كلمة المرور";
+"CustomAuth.Error.PasswordMismatch" = "كلمتا المرور غير متطابقتين";

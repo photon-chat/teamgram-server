@@ -17256,3 +17256,7 @@ Error: %8$@";
 "CustomAuth.SwitchToPhone" = "Prihlásenie telefónom";
 "CustomAuth.SwitchToRegister" = "Nemáte účet? Zaregistrujte sa";
 "CustomAuth.Username" = "Meno používateľa";
+
+"Contacts.EmptyState.Text" = "You have no contacts yet";
+"CustomAuth.ConfirmPassword" = "Confirm Password";
+"CustomAuth.Error.PasswordMismatch" = "Passwords do not match";

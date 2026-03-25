@@ -17493,3 +17493,7 @@ Error: %8$@";
 "CustomAuth.SwitchToPhone" = "התחברות עם טלפון";
 "CustomAuth.SwitchToRegister" = "אין לך חשבון? הירשם";
 "CustomAuth.Username" = "שם משתמש";
+
+"Contacts.EmptyState.Text" = "You have no contacts yet";
+"CustomAuth.ConfirmPassword" = "Confirm Password";
+"CustomAuth.Error.PasswordMismatch" = "Passwords do not match";

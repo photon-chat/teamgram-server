@@ -18599,3 +18599,7 @@ Error: %8$@";
 "CustomAuth.SwitchToPhone" = "Phone Login";
 "CustomAuth.SwitchToRegister" = "No account? Register";
 "CustomAuth.Username" = "Username";
+
+"Contacts.EmptyState.Text" = "You have no contacts yet";
+"CustomAuth.ConfirmPassword" = "Confirm Password";
+"CustomAuth.Error.PasswordMismatch" = "Passwords do not match";
