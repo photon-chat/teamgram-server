@@ -217,8 +217,10 @@ func defaultAppearanceThemes() []*mtproto.Theme {
 			tintedAccent: 0xfa5e16, tintedMsg: []int32{0xfa5e16},
 		}),
 		makeAppearanceTheme(30004, "yellow", "Yellow", accentColorDef{
-			dayAccent: 0xffc402, dayMsg: []int32{0xffc402},
-			classicAccent: 0xffc402, classicMsg: []int32{0xffc402},
+			// Day/Classic: darker amber-gold for visibility on white background (~4.7:1 contrast)
+			dayAccent: 0xa06800, dayMsg: []int32{0xa06800},
+			classicAccent: 0xa06800, classicMsg: []int32{0xa06800},
+			// Night/Tinted: bright yellow works well on dark backgrounds
 			nightAccent: 0xffc402, nightMsg: []int32{0xffc402},
 			tintedAccent: 0xffc402, tintedMsg: []int32{0xffc402},
 		}),
@@ -229,8 +231,10 @@ func defaultAppearanceThemes() []*mtproto.Theme {
 			tintedAccent: 0x3dbd4d, tintedMsg: []int32{0x3dbd4d},
 		}),
 		makeAppearanceTheme(30006, "cyan", "Cyan", accentColorDef{
-			dayAccent: 0x29b6f6, dayMsg: []int32{0x29b6f6},
-			classicAccent: 0x29b6f6, classicMsg: []int32{0x29b6f6},
+			// Day/Classic: darker cyan-blue for visibility on white background (~4.8:1 contrast)
+			dayAccent: 0x007aad, dayMsg: []int32{0x007aad},
+			classicAccent: 0x007aad, classicMsg: []int32{0x007aad},
+			// Night/Tinted: bright cyan works well on dark backgrounds
 			nightAccent: 0x29b6f6, nightMsg: []int32{0x29b6f6},
 			tintedAccent: 0x29b6f6, tintedMsg: []int32{0x29b6f6},
 		}),
