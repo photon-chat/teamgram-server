@@ -42,6 +42,7 @@ import (
 	photos_helper "github.com/teamgram/teamgram-server/app/bff/photos"
 	premium_helper "github.com/teamgram/teamgram-server/app/bff/premium"
 	qrcode_helper "github.com/teamgram/teamgram-server/app/bff/qrcode"
+	reports_helper "github.com/teamgram/teamgram-server/app/bff/reports"
 	sponsoredmessages_helper "github.com/teamgram/teamgram-server/app/bff/sponsoredmessages"
 	stickers_helper "github.com/teamgram/teamgram-server/app/bff/stickers"
 	themes_helper "github.com/teamgram/teamgram-server/app/bff/themes"
@@ -80,6 +81,13 @@ func (s *Server) Initialize() error {
 		mtproto.RegisterRPCTosServer(
 			grpcServer,
 			tos_helper.New(tos_helper.Config{
+				RpcServerConf: c.RpcServerConf,
+			}))
+
+		// reports_helper
+		mtproto.RegisterRPCReportsServer(
+			grpcServer,
+			reports_helper.New(reports_helper.Config{
 				RpcServerConf: c.RpcServerConf,
 			}))
 

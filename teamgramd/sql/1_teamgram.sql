@@ -1423,3 +1423,25 @@ CREATE TABLE IF NOT EXISTS `sticker_set_documents` (
   UNIQUE KEY `idx_document_id` (`document_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `reports`
+--
+
+CREATE TABLE `reports` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `user_id` bigint(20) NOT NULL COMMENT '举报人user_id',
+  `report_type` tinyint(4) NOT NULL DEFAULT '0' COMMENT '0-peer,1-profile_photo,2-message,3-spam,4-encrypted_spam,5-channel_spam',
+  `peer_type` int(11) NOT NULL DEFAULT '0',
+  `peer_id` bigint(20) NOT NULL DEFAULT '0',
+  `reason` varchar(64) NOT NULL DEFAULT '' COMMENT 'report reason predicate name',
+  `message` varchar(512) NOT NULL DEFAULT '' COMMENT '举报附加消息',
+  `message_ids` varchar(1024) NOT NULL DEFAULT '' COMMENT '被举报的消息id列表,逗号分隔',
+  `photo_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '被举报的头像id',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `idx_user_id` (`user_id`),
+  KEY `idx_peer` (`peer_type`, `peer_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
