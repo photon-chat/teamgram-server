@@ -3,16 +3,13 @@ package core
 import (
 	"github.com/teamgram/proto/mtproto"
 	"github.com/teamgram/teamgram-server/app/bff/cityactivity/internal/dao"
+	media "github.com/teamgram/teamgram-server/app/service/media/media"
 )
 
 func (c *CityActivityCore) CityActivityGetActivities(in *mtproto.TLCityActivityGetActivities) (*mtproto.CityActivity_Activities, error) {
+	// 客户端传的城市直接用于过滤，空城市 = 查询全部活动
+	// IP检测城市只在创建活动时使用，不在列表查询时使用
 	city := in.GetCity()
-
-	// If client didn't specify a city, detect from IP
-	if city == "" && c.MD != nil && c.MD.ClientAddr != "" {
-		city = c.svcCtx.Dao.GetCityByIp(c.MD.ClientAddr)
-		c.Logger.Infof("cityActivity.getActivities - detected city: %q from IP: %s", city, c.MD.ClientAddr)
-	}
 
 	offset := in.GetOffset()
 	limit := in.GetLimit()
@@ -31,6 +28,24 @@ func (c *CityActivityCore) CityActivityGetActivities(in *mtproto.TLCityActivityG
 		userId = c.MD.UserId
 	}
 
+	// Batch get first photo for each activity
+	activityIds := make([]int64, 0, len(activities))
+	for _, a := range activities {
+		activityIds = append(activityIds, a.Id)
+	}
+	firstPhotoIds, _ := c.svcCtx.Dao.GetActivitiesFirstPhotoIds(c.ctx, activityIds)
+
+	// Resolve photos via MediaClient
+	photoCache := make(map[int64]*mtproto.Photo)
+	for _, pid := range firstPhotoIds {
+		if _, ok := photoCache[pid]; !ok {
+			photo, err2 := c.svcCtx.Dao.MediaGetPhoto(c.ctx, &media.TLMediaGetPhoto{PhotoId: pid})
+			if err2 == nil && photo != nil {
+				photoCache[pid] = photo
+			}
+		}
+	}
+
 	result := mtproto.MakeTLCityActivityActivities(&mtproto.CityActivity_Activities{
 		Count:      count,
 		Activities: make([]*mtproto.CityActivity, 0, len(activities)),
@@ -41,7 +56,14 @@ func (c *CityActivityCore) CityActivityGetActivities(in *mtproto.TLCityActivityG
 		if userId > 0 {
 			isJoined = c.svcCtx.Dao.IsUserJoined(c.ctx, a.Id, userId)
 		}
-		result.Data2.Activities = append(result.Data2.Activities, activityToProto(a, isJoined))
+		proto := activityToProto(a, isJoined)
+		// Attach first photo if available
+		if pid, ok := firstPhotoIds[a.Id]; ok {
+			if photo, ok2 := photoCache[pid]; ok2 {
+				proto.Photos = []*mtproto.Photo{photo}
+			}
+		}
+		result.Data2.Activities = append(result.Data2.Activities, proto)
 	}
 
 	return result.To_CityActivity_Activities(), nil

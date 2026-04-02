@@ -8,8 +8,10 @@ import (
 	"time"
 
 	"github.com/oschwald/geoip2-golang"
+	"github.com/teamgram/marmota/pkg/net/rpcx"
 	"github.com/teamgram/marmota/pkg/stores/sqlx"
 	"github.com/teamgram/teamgram-server/app/bff/cityactivity/internal/config"
+	media_client "github.com/teamgram/teamgram-server/app/service/media/client"
 	"github.com/zeromicro/go-zero/core/logx"
 )
 
@@ -50,12 +52,14 @@ type Dao struct {
 	db           *sqlx.DB
 	MMDB         *geoip2.Reader
 	TestCityName string
+	media_client.MediaClient
 }
 
 func New(c config.Config) *Dao {
 	d := &Dao{
-		db:           sqlx.NewMySQL(c.Mysql),
+		db:          sqlx.NewMySQL(c.Mysql),
 		TestCityName: c.TestCityName,
+		MediaClient: media_client.NewMediaClient(rpcx.GetCachedRpcClient(c.MediaClient)),
 	}
 
 	MMDB, err := geoip2.Open(mmdb2)
@@ -230,4 +234,50 @@ func (d *Dao) getParticipantCount(ctx context.Context, activityId int64) int32 {
 	query := "SELECT COUNT(*) FROM activity_participants WHERE activity_id = ?"
 	_ = d.db.QueryRow(ctx, &count, query, activityId)
 	return count
+}
+
+func (d *Dao) SaveActivityMedia(ctx context.Context, activityId int64, photoIds []int64) error {
+	now := time.Now().Unix()
+	for i, photoId := range photoIds {
+		query := "INSERT IGNORE INTO activity_media (activity_id, photo_id, sort_order, created_at) VALUES (?, ?, ?, ?)"
+		_, err := d.db.Exec(ctx, query, activityId, photoId, i, now)
+		if err != nil {
+			return err
+		}
+	}
+	return nil
+}
+
+func (d *Dao) GetActivityPhotoIds(ctx context.Context, activityId int64) ([]int64, error) {
+	var photoIds []int64
+	query := "SELECT photo_id FROM activity_media WHERE activity_id = ? ORDER BY sort_order ASC"
+	err := d.db.QueryRowsPartial(ctx, &photoIds, query, activityId)
+	if err != nil {
+		return nil, err
+	}
+	return photoIds, nil
+}
+
+func (d *Dao) GetActivitiesFirstPhotoIds(ctx context.Context, activityIds []int64) (map[int64]int64, error) {
+	result := make(map[int64]int64)
+	if len(activityIds) == 0 {
+		return result, nil
+	}
+	type row struct {
+		ActivityId int64 `db:"activity_id"`
+		PhotoId    int64 `db:"photo_id"`
+	}
+	var rows []row
+	// sqlx doesn't support IN() directly, query one by one
+	for _, aid := range activityIds {
+		var r row
+		err := d.db.QueryRowPartial(ctx, &r, "SELECT activity_id, photo_id FROM activity_media WHERE activity_id = ? ORDER BY sort_order ASC LIMIT 1", aid)
+		if err == nil {
+			rows = append(rows, r)
+		}
+	}
+	for _, r := range rows {
+		result[r.ActivityId] = r.PhotoId
+	}
+	return result, nil
 }

@@ -3,6 +3,7 @@ package core
 import (
 	"github.com/teamgram/proto/mtproto"
 	"github.com/teamgram/teamgram-server/app/bff/cityactivity/internal/dao"
+	media "github.com/teamgram/teamgram-server/app/service/media/media"
 )
 
 func (c *CityActivityCore) CityActivityCreateActivity(in *mtproto.TLCityActivityCreateActivity) (*mtproto.CityActivity, error) {
@@ -32,5 +33,27 @@ func (c *CityActivityCore) CityActivityCreateActivity(in *mtproto.TLCityActivity
 	}
 	a.Id = id
 
-	return activityToProto(a, false), nil
+	// Save activity media (photo_ids)
+	photoIds := in.GetPhotoIds()
+	if len(photoIds) > 5 {
+		photoIds = photoIds[:5]
+	}
+	if len(photoIds) > 0 {
+		if err2 := c.svcCtx.Dao.SaveActivityMedia(c.ctx, id, photoIds); err2 != nil {
+			c.Logger.Errorf("cityActivity.createActivity - save media error: %v", err2)
+		}
+	}
+
+	// Resolve photos for response
+	var photos []*mtproto.Photo
+	for _, pid := range photoIds {
+		photo, err3 := c.svcCtx.Dao.MediaGetPhoto(c.ctx, &media.TLMediaGetPhoto{PhotoId: pid})
+		if err3 == nil && photo != nil {
+			photos = append(photos, photo)
+		}
+	}
+
+	result := activityToProto(a, false)
+	result.Photos = photos
+	return result, nil
 }

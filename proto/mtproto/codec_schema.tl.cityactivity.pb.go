@@ -65,6 +65,12 @@ func (m *CityActivity) Encode(x *EncodeBuf, layer int32) error {
 		m.GetIsJoined().Encode(x, layer)
 		x.String(m.GetCreatorName())
 		x.Long(m.GetCreatedAt())
+		// photos vector
+		x.Int(int32(CRC32_vector))
+		x.Int(int32(len(m.GetPhotos())))
+		for _, photo := range m.GetPhotos() {
+			photo.Encode(x, layer)
+		}
 	default:
 		return fmt.Errorf("CityActivity: invalid predicate: %s", m.PredicateName)
 	}
@@ -100,6 +106,20 @@ func (m *CityActivity) Decode(dBuf *DecodeBuf) error {
 
 	m.CreatorName = dBuf.String()
 	m.CreatedAt = dBuf.Long()
+
+	// photos vector
+	c18 := dBuf.Int()
+	if c18 != int32(CRC32_vector) {
+		// err = fmt.Errorf("expected vector for photos, got: %d", c18)
+		// backward compat: older data without photos field
+	} else {
+		l18 := dBuf.Int()
+		m.Photos = make([]*Photo, l18)
+		for i := int32(0); i < l18; i++ {
+			m.Photos[i] = &Photo{}
+			m.Photos[i].Decode(dBuf)
+		}
+	}
 
 	return dBuf.GetError()
 }
@@ -299,6 +319,12 @@ func (m *TLCityActivityCreateActivity) Encode(x *EncodeBuf, layer int32) error {
 		x.Long(m.GetStartTime())
 		x.Long(m.GetEndTime())
 		x.Int(m.GetMaxParticipants())
+		// photo_ids vector
+		x.Int(int32(CRC32_vector))
+		x.Int(int32(len(m.GetPhotoIds())))
+		for _, id := range m.GetPhotoIds() {
+			x.Long(id)
+		}
 	}
 	return nil
 }
@@ -317,6 +343,15 @@ func (m *TLCityActivityCreateActivity) Decode(dBuf *DecodeBuf) error {
 		m.StartTime = dBuf.Long()
 		m.EndTime = dBuf.Long()
 		m.MaxParticipants = dBuf.Int()
+		// photo_ids vector
+		c10 := dBuf.Int()
+		if c10 == int32(CRC32_vector) {
+			l10 := dBuf.Int()
+			m.PhotoIds = make([]int64, l10)
+			for i := int32(0); i < l10; i++ {
+				m.PhotoIds[i] = dBuf.Long()
+			}
+		}
 		return dBuf.GetError()
 	}
 	return dBuf.GetError()

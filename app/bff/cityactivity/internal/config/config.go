@@ -8,5 +8,6 @@ import (
 type Config struct {
 	zrpc.RpcServerConf
 	Mysql        *sqlx.Config `json:",optional"`
-	TestCityName string       `json:",optional"`
+	MediaClient  zrpc.RpcClientConf
+	TestCityName string `json:",optional"`
 }

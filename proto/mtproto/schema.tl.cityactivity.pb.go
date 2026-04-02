@@ -6,11 +6,12 @@ package mtproto
 import (
 	context "context"
 	fmt "fmt"
+	math "math"
+
 	proto "github.com/gogo/protobuf/proto"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
-	math "math"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -45,6 +46,7 @@ type CityActivity struct {
 	IsJoined             *Bool         `protobuf:"bytes,15,opt,name=is_joined,json=isJoined,proto3" json:"is_joined,omitempty"`
 	CreatorName          string        `protobuf:"bytes,16,opt,name=creator_name,json=creatorName,proto3" json:"creator_name,omitempty"`
 	CreatedAt            int64         `protobuf:"varint,17,opt,name=created_at,json=createdAt,proto3" json:"created_at,omitempty"`
+	Photos               []*Photo      `protobuf:"bytes,18,rep,name=photos,proto3" json:"photos,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}      `json:"-"`
 	XXX_unrecognized     []byte        `json:"-"`
 	XXX_sizecache        int32         `json:"-"`
@@ -191,6 +193,13 @@ func (m *CityActivity) GetCreatedAt() int64 {
 		return m.CreatedAt
 	}
 	return 0
+}
+
+func (m *CityActivity) GetPhotos() []*Photo {
+	if m != nil {
+		return m.Photos
+	}
+	return nil
 }
 
 // TL_cityActivity
@@ -455,6 +464,7 @@ type TLCityActivityCreateActivity struct {
 	StartTime            int64         `protobuf:"varint,7,opt,name=start_time,json=startTime,proto3" json:"start_time,omitempty"`
 	EndTime              int64         `protobuf:"varint,8,opt,name=end_time,json=endTime,proto3" json:"end_time,omitempty"`
 	MaxParticipants      int32         `protobuf:"varint,9,opt,name=max_participants,json=maxParticipants,proto3" json:"max_participants,omitempty"`
+	PhotoIds             []int64       `protobuf:"varint,10,rep,packed,name=photo_ids,json=photoIds,proto3" json:"photo_ids,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}      `json:"-"`
 	XXX_unrecognized     []byte        `json:"-"`
 	XXX_sizecache        int32         `json:"-"`
@@ -538,6 +548,13 @@ func (m *TLCityActivityCreateActivity) GetMaxParticipants() int32 {
 		return m.MaxParticipants
 	}
 	return 0
+}
+
+func (m *TLCityActivityCreateActivity) GetPhotoIds() []int64 {
+	if m != nil {
+		return m.PhotoIds
+	}
+	return nil
 }
 
 type TLCityActivityEditActivity struct {

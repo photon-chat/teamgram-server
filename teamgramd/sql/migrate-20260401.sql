@@ -33,6 +33,9 @@ CREATE TABLE IF NOT EXISTS `activity_participants` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Seed default global activities
+-- NOTE: When importing via docker exec, always use: mysql --default-character-set=utf8mb4
+SET NAMES utf8mb4;
+DELETE FROM `activities` WHERE `user_id` = 0 AND `is_global` = 1;
 INSERT INTO `activities` (`user_id`, `title`, `description`, `city`, `start_time`, `end_time`, `status`, `is_global`, `created_at`, `updated_at`) VALUES
 (0, '王者荣耀开黑', '找队友一起上分，不论段位，快乐游戏最重要！', '', 0, 0, 1, 1, UNIX_TIMESTAMP(), UNIX_TIMESTAMP()),
 (0, '周末户外徒步', '一起去户外走走，呼吸新鲜空气，锻炼身体交朋友', '', 0, 0, 1, 1, UNIX_TIMESTAMP(), UNIX_TIMESTAMP());
