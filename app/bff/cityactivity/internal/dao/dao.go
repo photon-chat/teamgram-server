@@ -11,6 +11,7 @@ import (
 	"github.com/teamgram/marmota/pkg/net/rpcx"
 	"github.com/teamgram/marmota/pkg/stores/sqlx"
 	"github.com/teamgram/teamgram-server/app/bff/cityactivity/internal/config"
+	chat_client "github.com/teamgram/teamgram-server/app/service/biz/chat/client"
 	media_client "github.com/teamgram/teamgram-server/app/service/media/client"
 	"github.com/zeromicro/go-zero/core/logx"
 )
@@ -33,6 +34,7 @@ type Activity struct {
 	MaxParticipants  int32  `db:"max_participants"`
 	Status           int32  `db:"status"`
 	IsGlobal         int32  `db:"is_global"`
+	ChatId           int64  `db:"chat_id"`
 	CreatedAt        int64  `db:"created_at"`
 	UpdatedAt        int64  `db:"updated_at"`
 	ParticipantCount int32  `db:"-"`
@@ -53,6 +55,7 @@ type Dao struct {
 	MMDB         *geoip2.Reader
 	TestCityName string
 	media_client.MediaClient
+	chat_client.ChatClient
 }
 
 func New(c config.Config) *Dao {
@@ -60,6 +63,7 @@ func New(c config.Config) *Dao {
 		db:          sqlx.NewMySQL(c.Mysql),
 		TestCityName: c.TestCityName,
 		MediaClient: media_client.NewMediaClient(rpcx.GetCachedRpcClient(c.MediaClient)),
+		ChatClient:  chat_client.NewChatClient(rpcx.GetCachedRpcClient(c.ChatClient)),
 	}
 
 	MMDB, err := geoip2.Open(mmdb2)
@@ -171,8 +175,8 @@ func (d *Dao) CreateActivity(ctx context.Context, a *Activity) (int64, error) {
 	a.UpdatedAt = now
 	a.Status = 1
 
-	query := "INSERT INTO activities (user_id, title, description, photo_id, city, start_time, end_time, max_participants, status, is_global, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 0, ?, ?)"
-	result, err := d.db.Exec(ctx, query, a.UserId, a.Title, a.Description, a.PhotoId, a.City, a.StartTime, a.EndTime, a.MaxParticipants, a.Status, a.CreatedAt, a.UpdatedAt)
+	query := "INSERT INTO activities (user_id, title, description, photo_id, city, start_time, end_time, max_participants, status, is_global, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+	result, err := d.db.Exec(ctx, query, a.UserId, a.Title, a.Description, a.PhotoId, a.City, a.StartTime, a.EndTime, a.MaxParticipants, a.Status, a.IsGlobal, a.CreatedAt, a.UpdatedAt)
 	if err != nil {
 		return 0, err
 	}
@@ -216,6 +220,11 @@ func (d *Dao) JoinActivity(ctx context.Context, activityId, userId int64, city s
 func (d *Dao) LeaveActivity(ctx context.Context, activityId, userId int64) error {
 	query := "DELETE FROM activity_participants WHERE activity_id = ? AND user_id = ?"
 	_, err := d.db.Exec(ctx, query, activityId, userId)
+	return err
+}
+
+func (d *Dao) UpdateActivityChatId(ctx context.Context, activityId, chatId int64) error {
+	_, err := d.db.Exec(ctx, "UPDATE activities SET chat_id = ? WHERE id = ?", chatId, activityId)
 	return err
 }
 

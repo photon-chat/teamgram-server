@@ -1,5 +1,7 @@
 -- City Activity tables for city-based event app
--- 2026-04-01
+-- Consolidated migration (2026-04-01)
+
+SET NAMES utf8mb4;
 
 CREATE TABLE IF NOT EXISTS `activities` (
   `id` BIGINT NOT NULL AUTO_INCREMENT,
@@ -13,6 +15,7 @@ CREATE TABLE IF NOT EXISTS `activities` (
   `max_participants` INT NOT NULL DEFAULT 0,
   `status` TINYINT NOT NULL DEFAULT 1 COMMENT '1=active 2=cancelled 3=finished',
   `is_global` TINYINT NOT NULL DEFAULT 0,
+  `chat_id` BIGINT NOT NULL DEFAULT 0,
   `created_at` BIGINT NOT NULL DEFAULT 0,
   `updated_at` BIGINT NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
@@ -32,9 +35,18 @@ CREATE TABLE IF NOT EXISTS `activity_participants` (
   INDEX `idx_user_id` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+CREATE TABLE IF NOT EXISTS `activity_media` (
+  `id` BIGINT NOT NULL AUTO_INCREMENT,
+  `activity_id` BIGINT NOT NULL,
+  `photo_id` BIGINT NOT NULL,
+  `sort_order` INT NOT NULL DEFAULT 0,
+  `created_at` BIGINT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX idx_activity_id (`activity_id`),
+  UNIQUE INDEX idx_activity_photo (`activity_id`, `photo_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 -- Seed default global activities
--- NOTE: When importing via docker exec, always use: mysql --default-character-set=utf8mb4
-SET NAMES utf8mb4;
 DELETE FROM `activities` WHERE `user_id` = 0 AND `is_global` = 1;
 INSERT INTO `activities` (`user_id`, `title`, `description`, `city`, `start_time`, `end_time`, `status`, `is_global`, `created_at`, `updated_at`) VALUES
 (0, '王者荣耀开黑', '找队友一起上分，不论段位，快乐游戏最重要！', '', 0, 0, 1, 1, UNIX_TIMESTAMP(), UNIX_TIMESTAMP()),

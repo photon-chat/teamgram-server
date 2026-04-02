@@ -385,6 +385,7 @@ func (s *Server) Initialize() error {
 				RpcServerConf: c.RpcServerConf,
 				Mysql:         c.CityActivityMySQL,
 				MediaClient:   c.MediaClient,
+				ChatClient:    c.BizServiceClient,
 				TestCityName:  c.TestCityName,
 			}))
 	})

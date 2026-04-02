@@ -3,6 +3,7 @@ package core
 import (
 	"github.com/teamgram/proto/mtproto"
 	"github.com/teamgram/teamgram-server/app/bff/cityactivity/internal/dao"
+	chatpb "github.com/teamgram/teamgram-server/app/service/biz/chat/chat"
 	media "github.com/teamgram/teamgram-server/app/service/media/media"
 )
 
@@ -15,6 +16,11 @@ func (c *CityActivityCore) CityActivityCreateActivity(in *mtproto.TLCityActivity
 		city = c.svcCtx.Dao.GetCityByIp(c.MD.ClientAddr)
 	}
 
+	isGlobal := int32(0)
+	if in.GetIsGlobal() != nil && mtproto.FromBool(in.GetIsGlobal()) {
+		isGlobal = 1
+	}
+
 	a := &dao.Activity{
 		UserId:          c.MD.UserId,
 		Title:           in.GetTitle(),
@@ -24,6 +30,7 @@ func (c *CityActivityCore) CityActivityCreateActivity(in *mtproto.TLCityActivity
 		StartTime:       in.GetStartTime(),
 		EndTime:         in.GetEndTime(),
 		MaxParticipants: in.GetMaxParticipants(),
+		IsGlobal:        isGlobal,
 	}
 
 	id, err := c.svcCtx.Dao.CreateActivity(c.ctx, a)
@@ -44,6 +51,27 @@ func (c *CityActivityCore) CityActivityCreateActivity(in *mtproto.TLCityActivity
 		}
 	}
 
+	// Auto-create group chat
+	chat, err := c.svcCtx.Dao.ChatCreateChat2(c.ctx, &chatpb.TLChatCreateChat2{
+		CreatorId:  c.MD.UserId,
+		UserIdList: []int64{},
+		Title:      in.GetTitle(),
+	})
+	if err != nil {
+		c.Logger.Errorf("cityActivity.createActivity - create chat error: %v", err)
+	} else if chat != nil && chat.Chat != nil {
+		a.ChatId = chat.Chat.Id
+		if err2 := c.svcCtx.Dao.UpdateActivityChatId(c.ctx, id, chat.Chat.Id); err2 != nil {
+			c.Logger.Errorf("cityActivity.createActivity - update chat_id error: %v", err2)
+		}
+	}
+
+	// Creator auto-join activity
+	if err2 := c.svcCtx.Dao.JoinActivity(c.ctx, id, c.MD.UserId, city); err2 != nil {
+		c.Logger.Errorf("cityActivity.createActivity - creator join error: %v", err2)
+	}
+	a.ParticipantCount = 1
+
 	// Resolve photos for response
 	var photos []*mtproto.Photo
 	for _, pid := range photoIds {
@@ -53,7 +81,7 @@ func (c *CityActivityCore) CityActivityCreateActivity(in *mtproto.TLCityActivity
 		}
 	}
 
-	result := activityToProto(a, false)
+	result := activityToProto(a, true)
 	result.Photos = photos
 	return result, nil
 }

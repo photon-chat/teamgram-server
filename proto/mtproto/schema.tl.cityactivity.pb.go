@@ -47,6 +47,7 @@ type CityActivity struct {
 	CreatorName          string        `protobuf:"bytes,16,opt,name=creator_name,json=creatorName,proto3" json:"creator_name,omitempty"`
 	CreatedAt            int64         `protobuf:"varint,17,opt,name=created_at,json=createdAt,proto3" json:"created_at,omitempty"`
 	Photos               []*Photo      `protobuf:"bytes,18,rep,name=photos,proto3" json:"photos,omitempty"`
+	ChatId               int64         `protobuf:"varint,19,opt,name=chat_id,json=chatId,proto3" json:"chat_id,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}      `json:"-"`
 	XXX_unrecognized     []byte        `json:"-"`
 	XXX_sizecache        int32         `json:"-"`
@@ -200,6 +201,13 @@ func (m *CityActivity) GetPhotos() []*Photo {
 		return m.Photos
 	}
 	return nil
+}
+
+func (m *CityActivity) GetChatId() int64 {
+	if m != nil {
+		return m.ChatId
+	}
+	return 0
 }
 
 // TL_cityActivity
@@ -465,6 +473,7 @@ type TLCityActivityCreateActivity struct {
 	EndTime              int64         `protobuf:"varint,8,opt,name=end_time,json=endTime,proto3" json:"end_time,omitempty"`
 	MaxParticipants      int32         `protobuf:"varint,9,opt,name=max_participants,json=maxParticipants,proto3" json:"max_participants,omitempty"`
 	PhotoIds             []int64       `protobuf:"varint,10,rep,packed,name=photo_ids,json=photoIds,proto3" json:"photo_ids,omitempty"`
+	IsGlobal             *Bool         `protobuf:"bytes,11,opt,name=is_global,json=isGlobal,proto3" json:"is_global,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}      `json:"-"`
 	XXX_unrecognized     []byte        `json:"-"`
 	XXX_sizecache        int32         `json:"-"`
@@ -553,6 +562,13 @@ func (m *TLCityActivityCreateActivity) GetMaxParticipants() int32 {
 func (m *TLCityActivityCreateActivity) GetPhotoIds() []int64 {
 	if m != nil {
 		return m.PhotoIds
+	}
+	return nil
+}
+
+func (m *TLCityActivityCreateActivity) GetIsGlobal() *Bool {
+	if m != nil {
+		return m.IsGlobal
 	}
 	return nil
 }

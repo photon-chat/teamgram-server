@@ -71,6 +71,7 @@ func (m *CityActivity) Encode(x *EncodeBuf, layer int32) error {
 		for _, photo := range m.GetPhotos() {
 			photo.Encode(x, layer)
 		}
+		x.Long(m.GetChatId())
 	default:
 		return fmt.Errorf("CityActivity: invalid predicate: %s", m.PredicateName)
 	}
@@ -118,6 +119,10 @@ func (m *CityActivity) Decode(dBuf *DecodeBuf) error {
 		for i := int32(0); i < l18; i++ {
 			m.Photos[i] = &Photo{}
 			m.Photos[i].Decode(dBuf)
+		}
+		// chat_id (appended after photos)
+		if dBuf.GetError() == nil {
+			m.ChatId = dBuf.Long()
 		}
 	}
 
@@ -325,6 +330,7 @@ func (m *TLCityActivityCreateActivity) Encode(x *EncodeBuf, layer int32) error {
 		for _, id := range m.GetPhotoIds() {
 			x.Long(id)
 		}
+		m.GetIsGlobal().Encode(x, layer)
 	}
 	return nil
 }
@@ -352,6 +358,10 @@ func (m *TLCityActivityCreateActivity) Decode(dBuf *DecodeBuf) error {
 				m.PhotoIds[i] = dBuf.Long()
 			}
 		}
+		// is_global
+		m11 := &Bool{}
+		m11.Decode(dBuf)
+		m.IsGlobal = m11
 		return dBuf.GetError()
 	}
 	return dBuf.GetError()

@@ -86,5 +86,6 @@ func activityToProto(a *dao.Activity, isJoined bool) *mtproto.CityActivity {
 		IsJoined:         mtproto.ToBool(isJoined),
 		CreatorName:      a.CreatorName,
 		CreatedAt:        a.CreatedAt,
+		ChatId:           a.ChatId,
 	}).To_CityActivity()
 }
