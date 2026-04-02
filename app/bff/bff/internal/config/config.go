@@ -57,4 +57,5 @@ type Config struct {
 	TestCityName              string                     `json:",optional"`
 	TestCityLocale            string                     `json:",optional"`
 	DevicesMySQL              *sqlx.Config               `json:",optional"`
+	CityActivityMySQL        *sqlx.Config               `json:",optional"`
 }

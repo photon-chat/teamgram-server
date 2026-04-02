@@ -28,6 +28,7 @@ import (
 	"github.com/teamgram/teamgram-server/app/bff/bff/internal/config"
 	chatinvites_helper "github.com/teamgram/teamgram-server/app/bff/chatinvites"
 	chats_helper "github.com/teamgram/teamgram-server/app/bff/chats"
+	cityactivity_helper "github.com/teamgram/teamgram-server/app/bff/cityactivity"
 	configuration_helper "github.com/teamgram/teamgram-server/app/bff/configuration"
 	contacts_helper "github.com/teamgram/teamgram-server/app/bff/contacts"
 	dialogs_helper "github.com/teamgram/teamgram-server/app/bff/dialogs"
@@ -375,6 +376,14 @@ func (s *Server) Initialize() error {
 			grpcServer,
 			wallpapers_helper.New(wallpapers_helper.Config{
 				RpcServerConf: c.RpcServerConf,
+			}))
+
+		// cityactivity_helper
+		mtproto.RegisterRPCCityActivityServer(
+			grpcServer,
+			cityactivity_helper.New(cityactivity_helper.Config{
+				RpcServerConf: c.RpcServerConf,
+				Mysql:         c.CityActivityMySQL,
 			}))
 	})
 
