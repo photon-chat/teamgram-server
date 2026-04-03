@@ -49,7 +49,7 @@ func (m *TLCityActivity) To_CityActivity() *CityActivity {
 func (m *CityActivity) Encode(x *EncodeBuf, layer int32) error {
 	switch m.PredicateName {
 	case Predicate_cityActivity:
-		x.UInt(0x7a1b2c01)
+		x.UInt(0x7a160c01)
 		x.Long(m.GetId())
 		x.Long(m.GetUserId())
 		x.String(m.GetTitle())
@@ -182,7 +182,7 @@ func (m *TLCityActivityActivities) To_CityActivity_Activities() *CityActivity_Ac
 func (m *CityActivity_Activities) Encode(x *EncodeBuf, layer int32) error {
 	switch m.PredicateName {
 	case Predicate_cityActivity_activities:
-		x.UInt(0x7a1b2c02)
+		x.UInt(0x7a160c02)
 		x.Int(int32(CRC32_vector))
 		x.Int(int32(len(m.GetActivities())))
 		for _, v := range m.GetActivities() {
@@ -252,8 +252,8 @@ func (m *TLCityActivityActivities) DebugString() string {
 // TLCityActivityGetActivities
 func (m *TLCityActivityGetActivities) Encode(x *EncodeBuf, layer int32) error {
 	switch uint32(m.Constructor) {
-	case 0x7a1b2c03:
-		x.UInt(0x7a1b2c03)
+	case 0x7a160c03:
+		x.UInt(0x7a160c03)
 		x.String(m.GetCity())
 		x.Int(m.GetOffset())
 		x.Int(m.GetLimit())
@@ -267,7 +267,7 @@ func (m *TLCityActivityGetActivities) CalcByteSize(layer int32) int {
 
 func (m *TLCityActivityGetActivities) Decode(dBuf *DecodeBuf) error {
 	switch uint32(m.Constructor) {
-	case 0x7a1b2c03:
+	case 0x7a160c03:
 		m.City = dBuf.String()
 		m.Offset = dBuf.Int()
 		m.Limit = dBuf.Int()
@@ -285,8 +285,8 @@ func (m *TLCityActivityGetActivities) DebugString() string {
 // TLCityActivityGetActivity
 func (m *TLCityActivityGetActivity) Encode(x *EncodeBuf, layer int32) error {
 	switch uint32(m.Constructor) {
-	case 0x7a1b2c04:
-		x.UInt(0x7a1b2c04)
+	case 0x7a160c04:
+		x.UInt(0x7a160c04)
 		x.Long(m.GetId())
 	}
 	return nil
@@ -298,7 +298,7 @@ func (m *TLCityActivityGetActivity) CalcByteSize(layer int32) int {
 
 func (m *TLCityActivityGetActivity) Decode(dBuf *DecodeBuf) error {
 	switch uint32(m.Constructor) {
-	case 0x7a1b2c04:
+	case 0x7a160c04:
 		m.Id = dBuf.Long()
 		return dBuf.GetError()
 	}
@@ -314,8 +314,8 @@ func (m *TLCityActivityGetActivity) DebugString() string {
 // TLCityActivityCreateActivity
 func (m *TLCityActivityCreateActivity) Encode(x *EncodeBuf, layer int32) error {
 	switch uint32(m.Constructor) {
-	case 0x7a1b2c05:
-		x.UInt(0x7a1b2c05)
+	case 0x7a160c05:
+		x.UInt(0x7a160c05)
 		x.String(m.GetTitle())
 		x.String(m.GetDescription())
 		x.Long(m.GetPhotoId())
@@ -340,7 +340,7 @@ func (m *TLCityActivityCreateActivity) CalcByteSize(layer int32) int {
 
 func (m *TLCityActivityCreateActivity) Decode(dBuf *DecodeBuf) error {
 	switch uint32(m.Constructor) {
-	case 0x7a1b2c05:
+	case 0x7a160c05:
 		m.Title = dBuf.String()
 		m.Description = dBuf.String()
 		m.PhotoId = dBuf.Long()
@@ -350,11 +350,14 @@ func (m *TLCityActivityCreateActivity) Decode(dBuf *DecodeBuf) error {
 		m.MaxParticipants = dBuf.Int()
 		// photo_ids vector
 		c10 := dBuf.Int()
+		fmt.Printf("[DECODE] createActivity: c10=%d, expect=%d, match=%v, title=%s\n", c10, int32(CRC32_vector), c10 == int32(CRC32_vector), m.Title)
 		if c10 == int32(CRC32_vector) {
 			l10 := dBuf.Int()
+			fmt.Printf("[DECODE] createActivity: photoIds count=%d\n", l10)
 			m.PhotoIds = make([]int64, l10)
 			for i := int32(0); i < l10; i++ {
 				m.PhotoIds[i] = dBuf.Long()
+				fmt.Printf("[DECODE] createActivity: photoIds[%d]=%d\n", i, m.PhotoIds[i])
 			}
 		}
 		// is_global
@@ -375,8 +378,8 @@ func (m *TLCityActivityCreateActivity) DebugString() string {
 // TLCityActivityEditActivity
 func (m *TLCityActivityEditActivity) Encode(x *EncodeBuf, layer int32) error {
 	switch uint32(m.Constructor) {
-	case 0x7a1b2c06:
-		x.UInt(0x7a1b2c06)
+	case 0x7a160c06:
+		x.UInt(0x7a160c06)
 		x.Long(m.GetId())
 		x.String(m.GetTitle())
 		x.String(m.GetDescription())
@@ -394,7 +397,7 @@ func (m *TLCityActivityEditActivity) CalcByteSize(layer int32) int {
 
 func (m *TLCityActivityEditActivity) Decode(dBuf *DecodeBuf) error {
 	switch uint32(m.Constructor) {
-	case 0x7a1b2c06:
+	case 0x7a160c06:
 		m.Id = dBuf.Long()
 		m.Title = dBuf.String()
 		m.Description = dBuf.String()
@@ -416,8 +419,8 @@ func (m *TLCityActivityEditActivity) DebugString() string {
 // TLCityActivityDeleteActivity
 func (m *TLCityActivityDeleteActivity) Encode(x *EncodeBuf, layer int32) error {
 	switch uint32(m.Constructor) {
-	case 0x7a1b2c07:
-		x.UInt(0x7a1b2c07)
+	case 0x7a160c07:
+		x.UInt(0x7a160c07)
 		x.Long(m.GetId())
 	}
 	return nil
@@ -429,7 +432,7 @@ func (m *TLCityActivityDeleteActivity) CalcByteSize(layer int32) int {
 
 func (m *TLCityActivityDeleteActivity) Decode(dBuf *DecodeBuf) error {
 	switch uint32(m.Constructor) {
-	case 0x7a1b2c07:
+	case 0x7a160c07:
 		m.Id = dBuf.Long()
 		return dBuf.GetError()
 	}
@@ -445,8 +448,8 @@ func (m *TLCityActivityDeleteActivity) DebugString() string {
 // TLCityActivityJoinActivity
 func (m *TLCityActivityJoinActivity) Encode(x *EncodeBuf, layer int32) error {
 	switch uint32(m.Constructor) {
-	case 0x7a1b2c08:
-		x.UInt(0x7a1b2c08)
+	case 0x7a160c08:
+		x.UInt(0x7a160c08)
 		x.Long(m.GetId())
 		x.String(m.GetCity())
 	}
@@ -459,7 +462,7 @@ func (m *TLCityActivityJoinActivity) CalcByteSize(layer int32) int {
 
 func (m *TLCityActivityJoinActivity) Decode(dBuf *DecodeBuf) error {
 	switch uint32(m.Constructor) {
-	case 0x7a1b2c08:
+	case 0x7a160c08:
 		m.Id = dBuf.Long()
 		m.City = dBuf.String()
 		return dBuf.GetError()
@@ -476,8 +479,8 @@ func (m *TLCityActivityJoinActivity) DebugString() string {
 // TLCityActivityLeaveActivity
 func (m *TLCityActivityLeaveActivity) Encode(x *EncodeBuf, layer int32) error {
 	switch uint32(m.Constructor) {
-	case 0x7a1b2c09:
-		x.UInt(0x7a1b2c09)
+	case 0x7a160c09:
+		x.UInt(0x7a160c09)
 		x.Long(m.GetId())
 	}
 	return nil
@@ -489,7 +492,7 @@ func (m *TLCityActivityLeaveActivity) CalcByteSize(layer int32) int {
 
 func (m *TLCityActivityLeaveActivity) Decode(dBuf *DecodeBuf) error {
 	switch uint32(m.Constructor) {
-	case 0x7a1b2c09:
+	case 0x7a160c09:
 		m.Id = dBuf.Long()
 		return dBuf.GetError()
 	}
