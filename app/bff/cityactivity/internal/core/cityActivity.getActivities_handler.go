@@ -18,7 +18,10 @@ func (c *CityActivityCore) CityActivityGetActivities(in *mtproto.TLCityActivityG
 		limit = 20
 	}
 
-	activities, count, err := c.svcCtx.Dao.GetActivitiesByCity(c.ctx, city, offset, limit, in.GetFilter())
+	filter := in.GetFilter()
+	c.Logger.Infof("cityActivity.getActivities - city: %s, offset: %d, limit: %d, filter: %d", city, offset, limit, filter)
+
+	activities, count, err := c.svcCtx.Dao.GetActivitiesByCity(c.ctx, city, offset, limit, filter)
 	if err != nil {
 		c.Logger.Errorf("cityActivity.getActivities - error: %v", err)
 		return nil, err
