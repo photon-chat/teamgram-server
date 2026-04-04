@@ -19,7 +19,7 @@ func (c *CityActivityCore) CityActivityGetActivities(in *mtproto.TLCityActivityG
 	}
 
 	filter := in.GetFilter()
-	c.Logger.Infof("cityActivity.getActivities - city: %s, offset: %d, limit: %d, filter: %d", city, offset, limit, filter)
+	c.Logger.Infof("cityActivity.getActivities - city: %s, offset: %d, limit: %d, filter: %d, constructor: %d, full: %+v", city, offset, limit, filter, in.GetConstructor(), in)
 
 	activities, count, err := c.svcCtx.Dao.GetActivitiesByCity(c.ctx, city, offset, limit, filter)
 	if err != nil {
