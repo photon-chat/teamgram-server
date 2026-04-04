@@ -585,15 +585,15 @@ func (m *TLCityActivityGetActivities) Unmarshal(dAtA []byte) error {
 }
 
 func encodeVarintSchemaTlCityactivity(dAtA []byte, offset int, v uint64) int {
-	offset--
-	dAtA[offset] = uint8(v)
+	offset -= sovSchemaTlCityactivity(v)
+	base := offset
 	for v >= 1<<7 {
 		dAtA[offset] = uint8(v&0x7f | 0x80)
 		v >>= 7
-		offset--
+		offset++
 	}
 	dAtA[offset] = uint8(v)
-	return offset
+	return base
 }
 
 func sovSchemaTlCityactivity(x uint64) (n int) {
