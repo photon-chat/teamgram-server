@@ -251,14 +251,11 @@ func (m *TLCityActivityActivities) DebugString() string {
 
 // TLCityActivityGetActivities
 func (m *TLCityActivityGetActivities) Encode(x *EncodeBuf, layer int32) error {
-	switch uint32(m.Constructor) {
-	case 0x7a160c03:
-		x.UInt(0x7a160c03)
-		x.String(m.GetCity())
-		x.Int(m.GetOffset())
-		x.Int(m.GetLimit())
-		x.Int(m.GetFilter())
-	}
+	x.UInt(uint32(m.Constructor))
+	x.String(m.GetCity())
+	x.Int(m.GetOffset())
+	x.Int(m.GetLimit())
+	x.Int(m.GetFilter())
 	return nil
 }
 
@@ -267,17 +264,10 @@ func (m *TLCityActivityGetActivities) CalcByteSize(layer int32) int {
 }
 
 func (m *TLCityActivityGetActivities) Decode(dBuf *DecodeBuf) error {
-	switch uint32(m.Constructor) {
-	case 0x7a160c03:
-		m.City = dBuf.String()
-		m.Offset = dBuf.Int()
-		m.Limit = dBuf.Int()
-		// filter (backward compatible - only read if data available)
-		if dBuf.GetError() == nil {
-			m.Filter = dBuf.Int()
-		}
-		return dBuf.GetError()
-	}
+	m.City = dBuf.String()
+	m.Offset = dBuf.Int()
+	m.Limit = dBuf.Int()
+	m.Filter = dBuf.Int()
 	return dBuf.GetError()
 }
 
@@ -289,11 +279,8 @@ func (m *TLCityActivityGetActivities) DebugString() string {
 
 // TLCityActivityGetActivity
 func (m *TLCityActivityGetActivity) Encode(x *EncodeBuf, layer int32) error {
-	switch uint32(m.Constructor) {
-	case 0x7a160c04:
-		x.UInt(0x7a160c04)
-		x.Long(m.GetId())
-	}
+	x.UInt(uint32(m.Constructor))
+	x.Long(m.GetId())
 	return nil
 }
 
@@ -302,11 +289,7 @@ func (m *TLCityActivityGetActivity) CalcByteSize(layer int32) int {
 }
 
 func (m *TLCityActivityGetActivity) Decode(dBuf *DecodeBuf) error {
-	switch uint32(m.Constructor) {
-	case 0x7a160c04:
-		m.Id = dBuf.Long()
-		return dBuf.GetError()
-	}
+	m.Id = dBuf.Long()
 	return dBuf.GetError()
 }
 
@@ -318,12 +301,9 @@ func (m *TLCityActivityGetActivity) DebugString() string {
 
 // TLCityActivityGetMyActivities
 func (m *TLCityActivityGetMyActivities) Encode(x *EncodeBuf, layer int32) error {
-	switch uint32(m.Constructor) {
-	case 0x7a160c0a:
-		x.UInt(0x7a160c0a)
-		x.Int(m.GetOffset())
-		x.Int(m.GetLimit())
-	}
+	x.UInt(uint32(m.Constructor))
+	x.Int(m.GetOffset())
+	x.Int(m.GetLimit())
 	return nil
 }
 
@@ -332,12 +312,8 @@ func (m *TLCityActivityGetMyActivities) CalcByteSize(layer int32) int {
 }
 
 func (m *TLCityActivityGetMyActivities) Decode(dBuf *DecodeBuf) error {
-	switch uint32(m.Constructor) {
-	case 0x7a160c0a:
-		m.Offset = dBuf.Int()
-		m.Limit = dBuf.Int()
-		return dBuf.GetError()
-	}
+	m.Offset = dBuf.Int()
+	m.Limit = dBuf.Int()
 	return dBuf.GetError()
 }
 
@@ -349,24 +325,21 @@ func (m *TLCityActivityGetMyActivities) DebugString() string {
 
 // TLCityActivityCreateActivity
 func (m *TLCityActivityCreateActivity) Encode(x *EncodeBuf, layer int32) error {
-	switch uint32(m.Constructor) {
-	case 0x7a160c05:
-		x.UInt(0x7a160c05)
-		x.String(m.GetTitle())
-		x.String(m.GetDescription())
-		x.Long(m.GetPhotoId())
-		x.String(m.GetCity())
-		x.Long(m.GetStartTime())
-		x.Long(m.GetEndTime())
-		x.Int(m.GetMaxParticipants())
-		// photo_ids vector
-		x.Int(int32(CRC32_vector))
-		x.Int(int32(len(m.GetPhotoIds())))
-		for _, id := range m.GetPhotoIds() {
-			x.Long(id)
-		}
-		m.GetIsGlobal().Encode(x, layer)
+	x.UInt(uint32(m.Constructor))
+	x.String(m.GetTitle())
+	x.String(m.GetDescription())
+	x.Long(m.GetPhotoId())
+	x.String(m.GetCity())
+	x.Long(m.GetStartTime())
+	x.Long(m.GetEndTime())
+	x.Int(m.GetMaxParticipants())
+	// photo_ids vector
+	x.Int(int32(CRC32_vector))
+	x.Int(int32(len(m.GetPhotoIds())))
+	for _, id := range m.GetPhotoIds() {
+		x.Long(id)
 	}
+	m.GetIsGlobal().Encode(x, layer)
 	return nil
 }
 
@@ -375,30 +348,26 @@ func (m *TLCityActivityCreateActivity) CalcByteSize(layer int32) int {
 }
 
 func (m *TLCityActivityCreateActivity) Decode(dBuf *DecodeBuf) error {
-	switch uint32(m.Constructor) {
-	case 0x7a160c05:
-		m.Title = dBuf.String()
-		m.Description = dBuf.String()
-		m.PhotoId = dBuf.Long()
-		m.City = dBuf.String()
-		m.StartTime = dBuf.Long()
-		m.EndTime = dBuf.Long()
-		m.MaxParticipants = dBuf.Int()
-		// photo_ids vector
-		c10 := dBuf.Int()
-		if c10 == int32(CRC32_vector) {
-			l10 := dBuf.Int()
-			m.PhotoIds = make([]int64, l10)
-			for i := int32(0); i < l10; i++ {
-				m.PhotoIds[i] = dBuf.Long()
-			}
+	m.Title = dBuf.String()
+	m.Description = dBuf.String()
+	m.PhotoId = dBuf.Long()
+	m.City = dBuf.String()
+	m.StartTime = dBuf.Long()
+	m.EndTime = dBuf.Long()
+	m.MaxParticipants = dBuf.Int()
+	// photo_ids vector
+	c10 := dBuf.Int()
+	if c10 == int32(CRC32_vector) {
+		l10 := dBuf.Int()
+		m.PhotoIds = make([]int64, l10)
+		for i := int32(0); i < l10; i++ {
+			m.PhotoIds[i] = dBuf.Long()
 		}
-		// is_global
-		m11 := &Bool{}
-		m11.Decode(dBuf)
-		m.IsGlobal = m11
-		return dBuf.GetError()
 	}
+	// is_global
+	m11 := &Bool{}
+	m11.Decode(dBuf)
+	m.IsGlobal = m11
 	return dBuf.GetError()
 }
 
@@ -410,17 +379,14 @@ func (m *TLCityActivityCreateActivity) DebugString() string {
 
 // TLCityActivityEditActivity
 func (m *TLCityActivityEditActivity) Encode(x *EncodeBuf, layer int32) error {
-	switch uint32(m.Constructor) {
-	case 0x7a160c06:
-		x.UInt(0x7a160c06)
-		x.Long(m.GetId())
-		x.String(m.GetTitle())
-		x.String(m.GetDescription())
-		x.Long(m.GetPhotoId())
-		x.Long(m.GetStartTime())
-		x.Long(m.GetEndTime())
-		x.Int(m.GetStatus())
-	}
+	x.UInt(uint32(m.Constructor))
+	x.Long(m.GetId())
+	x.String(m.GetTitle())
+	x.String(m.GetDescription())
+	x.Long(m.GetPhotoId())
+	x.Long(m.GetStartTime())
+	x.Long(m.GetEndTime())
+	x.Int(m.GetStatus())
 	return nil
 }
 
@@ -429,17 +395,13 @@ func (m *TLCityActivityEditActivity) CalcByteSize(layer int32) int {
 }
 
 func (m *TLCityActivityEditActivity) Decode(dBuf *DecodeBuf) error {
-	switch uint32(m.Constructor) {
-	case 0x7a160c06:
-		m.Id = dBuf.Long()
-		m.Title = dBuf.String()
-		m.Description = dBuf.String()
-		m.PhotoId = dBuf.Long()
-		m.StartTime = dBuf.Long()
-		m.EndTime = dBuf.Long()
-		m.Status = dBuf.Int()
-		return dBuf.GetError()
-	}
+	m.Id = dBuf.Long()
+	m.Title = dBuf.String()
+	m.Description = dBuf.String()
+	m.PhotoId = dBuf.Long()
+	m.StartTime = dBuf.Long()
+	m.EndTime = dBuf.Long()
+	m.Status = dBuf.Int()
 	return dBuf.GetError()
 }
 
@@ -451,11 +413,8 @@ func (m *TLCityActivityEditActivity) DebugString() string {
 
 // TLCityActivityDeleteActivity
 func (m *TLCityActivityDeleteActivity) Encode(x *EncodeBuf, layer int32) error {
-	switch uint32(m.Constructor) {
-	case 0x7a160c07:
-		x.UInt(0x7a160c07)
-		x.Long(m.GetId())
-	}
+	x.UInt(uint32(m.Constructor))
+	x.Long(m.GetId())
 	return nil
 }
 
@@ -464,11 +423,7 @@ func (m *TLCityActivityDeleteActivity) CalcByteSize(layer int32) int {
 }
 
 func (m *TLCityActivityDeleteActivity) Decode(dBuf *DecodeBuf) error {
-	switch uint32(m.Constructor) {
-	case 0x7a160c07:
-		m.Id = dBuf.Long()
-		return dBuf.GetError()
-	}
+	m.Id = dBuf.Long()
 	return dBuf.GetError()
 }
 
@@ -480,12 +435,9 @@ func (m *TLCityActivityDeleteActivity) DebugString() string {
 
 // TLCityActivityJoinActivity
 func (m *TLCityActivityJoinActivity) Encode(x *EncodeBuf, layer int32) error {
-	switch uint32(m.Constructor) {
-	case 0x7a160c08:
-		x.UInt(0x7a160c08)
-		x.Long(m.GetId())
-		x.String(m.GetCity())
-	}
+	x.UInt(uint32(m.Constructor))
+	x.Long(m.GetId())
+	x.String(m.GetCity())
 	return nil
 }
 
@@ -494,12 +446,8 @@ func (m *TLCityActivityJoinActivity) CalcByteSize(layer int32) int {
 }
 
 func (m *TLCityActivityJoinActivity) Decode(dBuf *DecodeBuf) error {
-	switch uint32(m.Constructor) {
-	case 0x7a160c08:
-		m.Id = dBuf.Long()
-		m.City = dBuf.String()
-		return dBuf.GetError()
-	}
+	m.Id = dBuf.Long()
+	m.City = dBuf.String()
 	return dBuf.GetError()
 }
 
@@ -511,11 +459,8 @@ func (m *TLCityActivityJoinActivity) DebugString() string {
 
 // TLCityActivityLeaveActivity
 func (m *TLCityActivityLeaveActivity) Encode(x *EncodeBuf, layer int32) error {
-	switch uint32(m.Constructor) {
-	case 0x7a160c09:
-		x.UInt(0x7a160c09)
-		x.Long(m.GetId())
-	}
+	x.UInt(uint32(m.Constructor))
+	x.Long(m.GetId())
 	return nil
 }
 
@@ -524,11 +469,7 @@ func (m *TLCityActivityLeaveActivity) CalcByteSize(layer int32) int {
 }
 
 func (m *TLCityActivityLeaveActivity) Decode(dBuf *DecodeBuf) error {
-	switch uint32(m.Constructor) {
-	case 0x7a160c09:
-		m.Id = dBuf.Long()
-		return dBuf.GetError()
-	}
+	m.Id = dBuf.Long()
 	return dBuf.GetError()
 }
 
