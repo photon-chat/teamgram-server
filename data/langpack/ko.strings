@@ -747,7 +747,7 @@
 // Settings
 "Settings.SetProfilePhoto" = "프로필 사진 설정";
 "Settings.Logout" = "로그아웃";
-"Settings.Title" = "설정";
+"Settings.Title" = "프로필";
 "Settings.NotificationsAndSounds" = "알림 및 소리";
 "Settings.ChatSettings" = "데이터 및 저장 공간";
 "Settings.BlockedUsers" = "차단된 사용자";
@@ -2054,7 +2054,7 @@
 "Conversation.UnpinMessageAlert" = "메시지를 고정 해제하시겠습니까?";
 
 "Settings.About.Title" = "자기소개";
-"Settings.About.Help" = "나이와 직업, 도시 따위를 자유롭게 소개하세요.\n보기: 서울에 사는 23살 디자이너입니다.";
+"Settings.About.Help" = "나이와 직업, 도시 따위를 자유롭게 소개하세요.\n보기: 서울에 사는 32살 변호사입니다.";
 
 "Profile.About" = "자기소개 ";
 
@@ -5611,7 +5611,7 @@ Sorry for the inconvenience.";
 "Stats.GroupShowMoreTopInviters_any" = "%@명 더 보기";
 
 "Settings.AddAnotherAccount" = "다른 계정 추가";
-"Settings.AddAnotherAccount.Help" = "여러 계정들을 서로 다른 전화번호에 연결하실 수 있습니다.";
+"Settings.AddAnotherAccount.Help" = "여러 계정들을 연결하실 수 있습니다.";
 
 "ProfilePhoto.OpenGallery" = "사진첩 열기";
 "ProfilePhoto.SearchWeb" = "웹 검색";
@@ -16390,7 +16390,7 @@ Error: %8$@";
 "CityActivity.EnterChat" = "Enter Chat";
 "CityActivity.LeaveActivity" = "Leave Activity";
 "CityActivity.JoinActivity" = "Join Activity";
-"CityActivity.MyActivities" = "My Activities";
+"CityActivity.MyActivities" = "내 활동";
 "CityActivity.Unpublish" = "Unpublish";
 "CityActivity.Publish" = "Publish";
 "CityActivity.Delete" = "Delete";

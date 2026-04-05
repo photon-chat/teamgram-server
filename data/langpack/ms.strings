@@ -747,7 +747,7 @@
 // Settings
 "Settings.SetProfilePhoto" = "Set Foto Profil";
 "Settings.Logout" = "Log Keluar";
-"Settings.Title" = "Tetapan";
+"Settings.Title" = "Profil";
 "Settings.NotificationsAndSounds" = "Notifikasi dan Bunyi";
 "Settings.ChatSettings" = "Data dan Storan";
 "Settings.BlockedUsers" = "Pengguna Disekat";
@@ -2054,7 +2054,7 @@
 "Conversation.UnpinMessageAlert" = "Hendak turunkan mesej ini?";
 
 "Settings.About.Title" = "Bio";
-"Settings.About.Help" = "Butiran seperti umur, pekerjaan atau bandar.\nContoh: 23 tahun jurutera dari Seberang Tayor.";
+"Settings.About.Help" = "Butiran seperti umur, pekerjaan atau bandar.\nContoh: 32 tahun peguam dari Kuala Lumpur.";
 
 "Profile.About" = "Bio";
 
@@ -5611,7 +5611,7 @@ Sorry for the inconvenience.";
 "Stats.GroupShowMoreTopInviters_any" = "Tunjuk %@ Lagi";
 
 "Settings.AddAnotherAccount" = "Tambah Satu Lagi Akaun";
-"Settings.AddAnotherAccount.Help" = "Anda boleh sambungi beberapa akaun dengan nombor fon berlainan.";
+"Settings.AddAnotherAccount.Help" = "Anda boleh sambungi beberapa akaun.";
 
 "ProfilePhoto.OpenGallery" = "Buka Galeri";
 "ProfilePhoto.SearchWeb" = "Cari Web";
@@ -16402,7 +16402,7 @@ Error: %8$@";
 "CityActivity.EnterChat" = "Enter Chat";
 "CityActivity.LeaveActivity" = "Leave Activity";
 "CityActivity.JoinActivity" = "Join Activity";
-"CityActivity.MyActivities" = "My Activities";
+"CityActivity.MyActivities" = "Aktiviti Saya";
 "CityActivity.Unpublish" = "Unpublish";
 "CityActivity.Publish" = "Publish";
 "CityActivity.Delete" = "Delete";

@@ -2054,7 +2054,7 @@
 "Conversation.UnpinMessageAlert" = "Бажаєте відкріпити це повідомлення?";
 
 "Settings.About.Title" = "Про себе";
-"Settings.About.Help" = "Будь-які деталі, такі як вік, професія чи місто.\nНаприклад: 23 роки, дизайнер із Харкова.";
+"Settings.About.Help" = "Будь-які деталі, такі як вік, професія чи місто.\nНаприклад: 32 роки, адвокат із Києва.";
 
 "Profile.About" = "про себе";
 
@@ -5611,7 +5611,7 @@ Sorry for the inconvenience.";
 "Stats.GroupShowMoreTopInviters_any" = "Показати ще %@";
 
 "Settings.AddAnotherAccount" = "Додати інший акаунт";
-"Settings.AddAnotherAccount.Help" = "Ви можете додати декілька акаунтів із різними номерами телефонів.";
+"Settings.AddAnotherAccount.Help" = "Ви можете додати декілька акаунтів.";
 
 "ProfilePhoto.OpenGallery" = "Галерея";
 "ProfilePhoto.SearchWeb" = "Пошук в інтернеті";
@@ -17527,7 +17527,7 @@ Error: %8$@";
 "CityActivity.EnterChat" = "Enter Chat";
 "CityActivity.LeaveActivity" = "Leave Activity";
 "CityActivity.JoinActivity" = "Join Activity";
-"CityActivity.MyActivities" = "My Activities";
+"CityActivity.MyActivities" = "Мої активності";
 "CityActivity.Unpublish" = "Unpublish";
 "CityActivity.Publish" = "Publish";
 "CityActivity.Delete" = "Delete";

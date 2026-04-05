@@ -747,7 +747,7 @@
 // Settings
 "Settings.SetProfilePhoto" = "Aseta profiilikuva";
 "Settings.Logout" = "Kirjaudu ulos";
-"Settings.Title" = "Asetukset";
+"Settings.Title" = "Profiili";
 "Settings.NotificationsAndSounds" = "Ilmoitukset ja äänet";
 "Settings.ChatSettings" = "Tiedot ja tallennustila";
 "Settings.BlockedUsers" = "Estetyt käyttäjät";
@@ -2054,7 +2054,7 @@
 "Conversation.UnpinMessageAlert" = "Irrotetaanko viesti?";
 
 "Settings.About.Title" = "Kuvaus";
-"Settings.About.Help" = "Kerro itsestäsi - vaikka ikä, ammatti tai paikkakunta.\nEsim. 23-v. muotoilija Helsingistä.";
+"Settings.About.Help" = "Kerro itsestäsi - vaikka ikä, ammatti tai paikkakunta.\nEsim. 32-v. asianajaja Helsingistä.";
 
 "Profile.About" = "kuvaus";
 
@@ -5611,7 +5611,7 @@ Sorry for the inconvenience.";
 "Stats.GroupShowMoreTopInviters_any" = "Näytä %@ lisää";
 
 "Settings.AddAnotherAccount" = "Lisää toinen tili";
-"Settings.AddAnotherAccount.Help" = "Voit lisätä monta tiliä eri puhelinnumeroilla.";
+"Settings.AddAnotherAccount.Help" = "Voit lisätä monta tiliä.";
 
 "ProfilePhoto.OpenGallery" = "Avaa galleria";
 "ProfilePhoto.SearchWeb" = "Hae verkosta";
@@ -16437,7 +16437,7 @@ Error: %8$@";
 "CityActivity.EnterChat" = "Enter Chat";
 "CityActivity.LeaveActivity" = "Leave Activity";
 "CityActivity.JoinActivity" = "Join Activity";
-"CityActivity.MyActivities" = "My Activities";
+"CityActivity.MyActivities" = "Omat aktiviteetit";
 "CityActivity.Unpublish" = "Unpublish";
 "CityActivity.Publish" = "Publish";
 "CityActivity.Delete" = "Delete";

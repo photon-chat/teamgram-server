@@ -747,7 +747,7 @@
 // Settings
 "Settings.SetProfilePhoto" = "Задаць аватар профілю";
 "Settings.Logout" = "Выйсці";
-"Settings.Title" = "Налады";
+"Settings.Title" = "Профіль";
 "Settings.NotificationsAndSounds" = "Апавяшчэнні і гукі";
 "Settings.ChatSettings" = "Даныя і сховішча";
 "Settings.BlockedUsers" = "Заблакіраваныя карыстальнікі";
@@ -2054,7 +2054,7 @@
 "Conversation.UnpinMessageAlert" = "Вы хочаце адмацаваць гэта паведамленне?";
 
 "Settings.About.Title" = "Пра сябе";
-"Settings.About.Help" = "Любыя звесткі накшталт узросту, месца жыхарства або адукацыі. Напрыклад: 18 гадоў, студэнт БДУ";
+"Settings.About.Help" = "Любыя звесткі накшталт узросту, месца жыхарства або адукацыі. Напрыклад: 32 гады, адвокат, Мінськ";
 
 "Profile.About" = "пра сябе";
 
@@ -5611,7 +5611,7 @@ Sorry for the inconvenience.";
 "Stats.GroupShowMoreTopInviters_any" = "Паказаць яшчэ %@";
 
 "Settings.AddAnotherAccount" = "Дадаць іншы ўліковы запіс";
-"Settings.AddAnotherAccount.Help" = "Вы можаце падлучыць некалькі ўліковых запісаў з рознымі нумарамі тэлефона.";
+"Settings.AddAnotherAccount.Help" = "Вы можаце падлучыць некалькі ўліковых запісаў.";
 
 "ProfilePhoto.OpenGallery" = "Адкрыць галерэю";
 "ProfilePhoto.SearchWeb" = "Шукаць у інтэрнэце";
@@ -17051,7 +17051,7 @@ Error: %8$@";
 "CityActivity.EnterChat" = "Enter Chat";
 "CityActivity.LeaveActivity" = "Leave Activity";
 "CityActivity.JoinActivity" = "Join Activity";
-"CityActivity.MyActivities" = "My Activities";
+"CityActivity.MyActivities" = "Мая дзейальнасць";
 "CityActivity.Unpublish" = "Unpublish";
 "CityActivity.Publish" = "Publish";
 "CityActivity.Delete" = "Delete";

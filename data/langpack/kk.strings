@@ -747,7 +747,7 @@
 // Settings
 "Settings.SetProfilePhoto" = "Бейін суретін қою";
 "Settings.Logout" = "Шығу";
-"Settings.Title" = "Баптау";
+"Settings.Title" = "Профиль";
 "Settings.NotificationsAndSounds" = "Мәлімдеме мен дыбыс";
 "Settings.ChatSettings" = "Дерек пен жад";
 "Settings.BlockedUsers" = "Бұғатталған";
@@ -2054,7 +2054,7 @@
 "Conversation.UnpinMessageAlert" = "Хатты ажыратасыз ба?";
 
 "Settings.About.Title" = "Өзім жайлы";
-"Settings.About.Help" = "Жасыңыз, жұмысыңыз не қалаңыз сияқты кез келген нәрсе. Мысалы: 23 жастамын, ақын, Семейден.";
+"Settings.About.Help" = "Жасыңыз, жұмысыңыз не қалаңыз сияқты кез келген нәрсе. Мысалы: 32 жастамын, заңгер, Алматыдан.";
 
 "Profile.About" = "өзі жайлы";
 
@@ -5611,7 +5611,7 @@ Sorry for the inconvenience.";
 "Stats.GroupShowMoreTopInviters_any" = "Тағы %@ көрсету";
 
 "Settings.AddAnotherAccount" = "Басқа тіркелгі қосу";
-"Settings.AddAnotherAccount.Help" = "Басқа телефон нөміріне тіркелген бірнеше тіркелгі қоса аласыз.";
+"Settings.AddAnotherAccount.Help" = "Бірнеше тіркелгі қоса аласыз.";
 
 "ProfilePhoto.OpenGallery" = "Галерея ашу";
 "ProfilePhoto.SearchWeb" = "Желіден іздеу";
@@ -16437,7 +16437,7 @@ Error: %8$@";
 "CityActivity.EnterChat" = "Enter Chat";
 "CityActivity.LeaveActivity" = "Leave Activity";
 "CityActivity.JoinActivity" = "Join Activity";
-"CityActivity.MyActivities" = "My Activities";
+"CityActivity.MyActivities" = "Менің әрекеттеримі";
 "CityActivity.Unpublish" = "Unpublish";
 "CityActivity.Publish" = "Publish";
 "CityActivity.Delete" = "Delete";

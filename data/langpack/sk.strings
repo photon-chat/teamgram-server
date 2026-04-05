@@ -747,7 +747,7 @@
 // Settings
 "Settings.SetProfilePhoto" = "Nastaviť profilovú fotku";
 "Settings.Logout" = "Odhlásiť sa";
-"Settings.Title" = "Nastavenia";
+"Settings.Title" = "Profil";
 "Settings.NotificationsAndSounds" = "Hlásenia a zvuky";
 "Settings.ChatSettings" = "Dáta a úložisko";
 "Settings.BlockedUsers" = "Blokovaní používatelia";
@@ -2054,7 +2054,7 @@
 "Conversation.UnpinMessageAlert" = "Chcete odopnúť túto správu?";
 
 "Settings.About.Title" = "O mne";
-"Settings.About.Help" = "Detaily o Vás. Ako, vek, kde bývate, stav.\nNapríklad: Mám 23, bývam v Trenčíne a som slobodný/á.";
+"Settings.About.Help" = "Detaily o Vás. Ako, vek, kde bývate, stav.\nNapríklad: Mám 32 rokov, som právnik z Bratislavy.";
 
 "Profile.About" = "o mne";
 
@@ -5611,7 +5611,7 @@ Sorry for the inconvenience.";
 "Stats.GroupShowMoreTopInviters_any" = "Zobraziť %@ ďalších";
 
 "Settings.AddAnotherAccount" = "Pridať ďalší účet";
-"Settings.AddAnotherAccount.Help" = "Môžete pripojiť viacero účtov s rôznymi telefónnymi číslami.";
+"Settings.AddAnotherAccount.Help" = "Môžete pripojiť viacero účtov.";
 
 "ProfilePhoto.OpenGallery" = "Otvoriť galériu";
 "ProfilePhoto.SearchWeb" = "Vyhľadať na webe";
@@ -17283,7 +17283,7 @@ Error: %8$@";
 "CityActivity.EnterChat" = "Enter Chat";
 "CityActivity.LeaveActivity" = "Leave Activity";
 "CityActivity.JoinActivity" = "Join Activity";
-"CityActivity.MyActivities" = "My Activities";
+"CityActivity.MyActivities" = "Moje aktivity";
 "CityActivity.Unpublish" = "Unpublish";
 "CityActivity.Publish" = "Publish";
 "CityActivity.Delete" = "Delete";

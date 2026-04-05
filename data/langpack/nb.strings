@@ -747,7 +747,7 @@
 // Settings
 "Settings.SetProfilePhoto" = "Angi profilbilde";
 "Settings.Logout" = "Logg ut";
-"Settings.Title" = "Innstillinger";
+"Settings.Title" = "Profil";
 "Settings.NotificationsAndSounds" = "Varsler og lyder";
 "Settings.ChatSettings" = "Data og lagring";
 "Settings.BlockedUsers" = "Blokkerte brukere";
@@ -2054,7 +2054,7 @@
 "Conversation.UnpinMessageAlert" = "Vil du løsne denne meldingen?";
 
 "Settings.About.Title" = "Beskrivelse";
-"Settings.About.Help" = "Skriv noe om deg selv, som alder, yrke eller by.\nEksempel: 23 år gammel designer fra Skien.";
+"Settings.About.Help" = "Skriv noe om deg selv, som alder, yrke eller by.\nEksempel: 32 år gammel advokat fra Oslo.";
 
 "Profile.About" = "beskrivelse";
 
@@ -5611,7 +5611,7 @@ Sorry for the inconvenience.";
 "Stats.GroupShowMoreTopInviters_any" = "Vis %@ flere";
 
 "Settings.AddAnotherAccount" = "Legg til en annen konto";
-"Settings.AddAnotherAccount.Help" = "Du kan koble til inntil tre forskjellige kontoer med forskjellige telefonnumre.";
+"Settings.AddAnotherAccount.Help" = "Du kan koble til flere kontoer.";
 
 "ProfilePhoto.OpenGallery" = "Åpne galleri";
 "ProfilePhoto.SearchWeb" = "Søk på nett";
@@ -16437,7 +16437,7 @@ Error: %8$@";
 "CityActivity.EnterChat" = "Enter Chat";
 "CityActivity.LeaveActivity" = "Leave Activity";
 "CityActivity.JoinActivity" = "Join Activity";
-"CityActivity.MyActivities" = "My Activities";
+"CityActivity.MyActivities" = "Mine aktiviteter";
 "CityActivity.Unpublish" = "Unpublish";
 "CityActivity.Publish" = "Publish";
 "CityActivity.Delete" = "Delete";

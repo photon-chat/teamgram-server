@@ -747,7 +747,7 @@
 // Settings
 "Settings.SetProfilePhoto" = "Profil Fotoğrafı Ayarla";
 "Settings.Logout" = "Oturumu Kapat";
-"Settings.Title" = "Ayarlar";
+"Settings.Title" = "Profil";
 "Settings.NotificationsAndSounds" = "Bildirimler ve Sesler";
 "Settings.ChatSettings" = "Veri ve Depolama";
 "Settings.BlockedUsers" = "Engellenen Kullanıcılar";
@@ -2054,7 +2054,7 @@
 "Conversation.UnpinMessageAlert" = "Bu mesajın sabitlemesini kaldırmak ister misiniz?";
 
 "Settings.About.Title" = "Hakkında";
-"Settings.About.Help" = "Yaş, meslek ya da şehir gibi herhangi bir detay.\nÖrnek: 28 yaşında. İstanbul'da tasarımcı.";
+"Settings.About.Help" = "Yaş, meslek ya da şehir gibi herhangi bir detay.\nÖrnek: 32 yaşında avukat, İstanbul.";
 
 "Profile.About" = "hakkında";
 
@@ -5611,7 +5611,7 @@ Sorry for the inconvenience.";
 "Stats.GroupShowMoreTopInviters_any" = "%@ Tane Daha Göster";
 
 "Settings.AddAnotherAccount" = "Başka Hesap Ekle";
-"Settings.AddAnotherAccount.Help" = "Farklı telefon numaralarına sahip birden fazla hesabı bağlayabilirsiniz.";
+"Settings.AddAnotherAccount.Help" = "Farklı hesapları bağlayabilirsiniz.";
 
 "ProfilePhoto.OpenGallery" = "Galeriyi Aç";
 "ProfilePhoto.SearchWeb" = "Web'de Ara";
@@ -16437,7 +16437,7 @@ Error: %8$@";
 "CityActivity.EnterChat" = "Enter Chat";
 "CityActivity.LeaveActivity" = "Leave Activity";
 "CityActivity.JoinActivity" = "Join Activity";
-"CityActivity.MyActivities" = "My Activities";
+"CityActivity.MyActivities" = "Aktivitelerim";
 "CityActivity.Unpublish" = "Unpublish";
 "CityActivity.Publish" = "Publish";
 "CityActivity.Delete" = "Delete";

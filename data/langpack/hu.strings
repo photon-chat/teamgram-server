@@ -747,7 +747,7 @@
 // Settings
 "Settings.SetProfilePhoto" = "Profilkép beállítása";
 "Settings.Logout" = "Kijelentkezés";
-"Settings.Title" = "Beállítások";
+"Settings.Title" = "Profil";
 "Settings.NotificationsAndSounds" = "Értesítések és hangok";
 "Settings.ChatSettings" = "Adatok és tárhely";
 "Settings.BlockedUsers" = "Tiltott felhasználók";
@@ -2054,7 +2054,7 @@
 "Conversation.UnpinMessageAlert" = "Szeretnéd feloldani a rögzítést?";
 
 "Settings.About.Title" = "Bemutatkozás";
-"Settings.About.Help" = "Minden olyan részlet mint az életkor, a foglalkozás vagy a város.\nPéldául: 23 éves taxisofőr Budapestről.";
+"Settings.About.Help" = "Minden olyan részlet mint az életkor, a foglalkozás vagy a város.\nPéldául: 32 éves ügyvéd Budapestről.";
 
 "Profile.About" = "bemutatkozás";
 
@@ -5611,7 +5611,7 @@ Sorry for the inconvenience.";
 "Stats.GroupShowMoreTopInviters_any" = "Mutass ennyivel (%@) többet";
 
 "Settings.AddAnotherAccount" = "Egy másik profil hozzáadása";
-"Settings.AddAnotherAccount.Help" = "Több fiókot is hozzáadhatsz különböző telefonszámokkal.";
+"Settings.AddAnotherAccount.Help" = "Több fiókot is hozzáadhatsz.";
 
 "ProfilePhoto.OpenGallery" = "Galéria megnyitása";
 "ProfilePhoto.SearchWeb" = "Keresés Interneten";
@@ -16388,7 +16388,7 @@ Error: %8$@";
 "CityActivity.EnterChat" = "Enter Chat";
 "CityActivity.LeaveActivity" = "Leave Activity";
 "CityActivity.JoinActivity" = "Join Activity";
-"CityActivity.MyActivities" = "My Activities";
+"CityActivity.MyActivities" = "Én tevékenységeim";
 "CityActivity.Unpublish" = "Unpublish";
 "CityActivity.Publish" = "Publish";
 "CityActivity.Delete" = "Delete";

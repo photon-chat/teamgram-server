@@ -747,7 +747,7 @@
 // Settings
 "Settings.SetProfilePhoto" = "Setează poză de profil";
 "Settings.Logout" = "Deconectare";
-"Settings.Title" = "Configurări";
+"Settings.Title" = "Profil";
 "Settings.NotificationsAndSounds" = "Notificări și sunete";
 "Settings.ChatSettings" = "Date și memorie";
 "Settings.BlockedUsers" = "Utilizatori blocați";
@@ -2054,7 +2054,7 @@
 "Conversation.UnpinMessageAlert" = "Vrei să detașezi aces mesaj?";
 
 "Settings.About.Title" = "Biografie";
-"Settings.About.Help" = "Orice detalii ca vârsta, ocupația sau orașul.\nExemplu: designer de 23 de ani din San Francisco.";
+"Settings.About.Help" = "Orice detalii ca vârsta, ocupația sau orașul.\nExemplu: avocat de 32 de ani din București.";
 
 "Profile.About" = "biografie";
 
@@ -5611,7 +5611,7 @@ Sorry for the inconvenience.";
 "Stats.GroupShowMoreTopInviters_any" = "Arată încă %@";
 
 "Settings.AddAnotherAccount" = "Adaugă un alt cont";
-"Settings.AddAnotherAccount.Help" = "Poți conecta mai multe conturi cu numere de telefon diferite.";
+"Settings.AddAnotherAccount.Help" = "Poți conecta mai multe conturi.";
 
 "ProfilePhoto.OpenGallery" = "Deschide galeria";
 "ProfilePhoto.SearchWeb" = "Caută pe web";
@@ -16981,7 +16981,7 @@ Error: %8$@";
 "CityActivity.EnterChat" = "Enter Chat";
 "CityActivity.LeaveActivity" = "Leave Activity";
 "CityActivity.JoinActivity" = "Join Activity";
-"CityActivity.MyActivities" = "My Activities";
+"CityActivity.MyActivities" = "Activitățile mele";
 "CityActivity.Unpublish" = "Unpublish";
 "CityActivity.Publish" = "Publish";
 "CityActivity.Delete" = "Delete";

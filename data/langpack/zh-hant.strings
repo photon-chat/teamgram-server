@@ -747,7 +747,7 @@
 // Settings
 "Settings.SetProfilePhoto" = "設定大頭貼";
 "Settings.Logout" = "登出";
-"Settings.Title" = "設定";
+"Settings.Title" = "我的";
 "Settings.NotificationsAndSounds" = "通知和聲音";
 "Settings.ChatSettings" = "數據和儲存";
 "Settings.BlockedUsers" = "封鎖名單";
@@ -2054,7 +2054,7 @@
 "Conversation.UnpinMessageAlert" = "您想要取消置頂這則訊息嗎？";
 
 "Settings.About.Title" = "個人簡介";
-"Settings.About.Help" = "您可以加入幾行關於您自己的描述。\n任何開啟您個人資訊頁的人會看到這段文字。";
+"Settings.About.Help" = "分享一些有趣的個人信息，例如年齡、職業或城市。\n示例：律師，32歲，台北。";
 
 "Profile.About" = "個人簡介";
 
@@ -5611,7 +5611,7 @@ Sorry for the inconvenience.";
 "Stats.GroupShowMoreTopInviters_any" = "顯示另外 %@ 人";
 
 "Settings.AddAnotherAccount" = "新增其他帳號";
-"Settings.AddAnotherAccount.Help" = "您可以登入多個使用不同電話號碼的帳號。";
+"Settings.AddAnotherAccount.Help" = "您可以連接多個帳號。";
 
 "ProfilePhoto.OpenGallery" = "開啟相簿";
 "ProfilePhoto.SearchWeb" = "搜尋網頁";

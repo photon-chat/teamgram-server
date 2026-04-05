@@ -747,7 +747,7 @@
 // Settings
 "Settings.SetProfilePhoto" = "Подеси слику профила";
 "Settings.Logout" = "Одјави ме";
-"Settings.Title" = "Подешавања";
+"Settings.Title" = "Профил";
 "Settings.NotificationsAndSounds" = "Обавештења и звуци";
 "Settings.ChatSettings" = "Подаци и складиште";
 "Settings.BlockedUsers" = "Блокирани корисници";
@@ -2054,7 +2054,7 @@
 "Conversation.UnpinMessageAlert" = "Желите ли да откачите ову поруку?";
 
 "Settings.About.Title" = "Опис профила";
-"Settings.About.Help" = "Било који детаљи као што су старост, занимање или град.\nПример: Дизајнер из Београда, 23 године.";
+"Settings.About.Help" = "Било који детаљи као што су старост, занимање или град.\nПример: Адвокат из Београда, 32 године.";
 
 "Profile.About" = "опис профила";
 
@@ -5611,7 +5611,7 @@ Sorry for the inconvenience.";
 "Stats.GroupShowMoreTopInviters_any" = "Прикажи још %@";
 
 "Settings.AddAnotherAccount" = "Додај други налог";
-"Settings.AddAnotherAccount.Help" = "Можете повезати више налога с различитим бројевима телефона.";
+"Settings.AddAnotherAccount.Help" = "Можете повезати више налога.";
 
 "ProfilePhoto.OpenGallery" = "Отвори галерију";
 "ProfilePhoto.SearchWeb" = "Претражи интернет";
@@ -16981,7 +16981,7 @@ Error: %8$@";
 "CityActivity.EnterChat" = "Enter Chat";
 "CityActivity.LeaveActivity" = "Leave Activity";
 "CityActivity.JoinActivity" = "Join Activity";
-"CityActivity.MyActivities" = "My Activities";
+"CityActivity.MyActivities" = "Моје активности";
 "CityActivity.Unpublish" = "Unpublish";
 "CityActivity.Publish" = "Publish";
 "CityActivity.Delete" = "Delete";

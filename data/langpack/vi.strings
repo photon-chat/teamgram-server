@@ -747,7 +747,7 @@
 // Settings
 "Settings.SetProfilePhoto" = "Đặt ảnh đại diện";
 "Settings.Logout" = "Đăng xuất";
-"Settings.Title" = "Cài đặt";
+"Settings.Title" = "Hồ sơ";
 "Settings.NotificationsAndSounds" = "Thông báo và Âm báo";
 "Settings.ChatSettings" = "Dữ liệu và Bộ nhớ";
 "Settings.BlockedUsers" = "Người bị chặn";
@@ -2054,7 +2054,7 @@
 "Conversation.UnpinMessageAlert" = "Bạn có muốn bỏ ghim tin nhắn này?";
 
 "Settings.About.Title" = "Giới thiệu";
-"Settings.About.Help" = "Bất kỳ điều gì, như là tuổi, nghề, thành phố.\nVí dụ: 23 tuổi, làm thiết kế, San Francisco.";
+"Settings.About.Help" = "Bất kỳ điều gì, như là tuổi, nghề, thành phố.\nVí dụ: 32 tuổi, luật sư, Hà Nội.";
 
 "Profile.About" = "giới thiệu";
 
@@ -5611,7 +5611,7 @@ Sorry for the inconvenience.";
 "Stats.GroupShowMoreTopInviters_any" = "Xem thêm %@";
 
 "Settings.AddAnotherAccount" = "Thêm tài khoản khác";
-"Settings.AddAnotherAccount.Help" = "Bạn có thể kết nối nhiều tài khoản với số điện thoại khác nhau.";
+"Settings.AddAnotherAccount.Help" = "Bạn có thể kết nối nhiều tài khoản.";
 
 "ProfilePhoto.OpenGallery" = "Mở Bộ sưu tập";
 "ProfilePhoto.SearchWeb" = "Tìm trên web";
@@ -16402,7 +16402,7 @@ Error: %8$@";
 "CityActivity.EnterChat" = "Enter Chat";
 "CityActivity.LeaveActivity" = "Leave Activity";
 "CityActivity.JoinActivity" = "Join Activity";
-"CityActivity.MyActivities" = "My Activities";
+"CityActivity.MyActivities" = "Hoạt động của tôi";
 "CityActivity.Unpublish" = "Unpublish";
 "CityActivity.Publish" = "Publish";
 "CityActivity.Delete" = "Delete";

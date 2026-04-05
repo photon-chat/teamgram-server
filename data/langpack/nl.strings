@@ -747,7 +747,7 @@
 // Settings
 "Settings.SetProfilePhoto" = "Profielfoto instellen";
 "Settings.Logout" = "Uitloggen";
-"Settings.Title" = "Instellingen";
+"Settings.Title" = "Profiel";
 "Settings.NotificationsAndSounds" = "Berichtgeving en geluiden";
 "Settings.ChatSettings" = "Data en opslag";
 "Settings.BlockedUsers" = "Geblokkeerd";
@@ -2054,7 +2054,7 @@
 "Conversation.UnpinMessageAlert" = "Wil je dit bericht losmaken?";
 
 "Settings.About.Title" = "Bio";
-"Settings.About.Help" = "Je kunt hier wat over jezelf vertellen.\nVoorbeeld: Postbode uit Nieuwendijk.";
+"Settings.About.Help" = "Je kunt hier wat over jezelf vertellen.\nVoorbeeld: Advocaat uit Amsterdam, 32 jaar.";
 
 "Profile.About" = "bio";
 
@@ -5611,7 +5611,7 @@ Sorry for the inconvenience.";
 "Stats.GroupShowMoreTopInviters_any" = "Nog %@ weergeven";
 
 "Settings.AddAnotherAccount" = "Voeg account toe";
-"Settings.AddAnotherAccount.Help" = "Je kunt meerdere accounts met verschillende telefoonnummers verbinden.";
+"Settings.AddAnotherAccount.Help" = "Je kunt meerdere accounts verbinden.";
 
 "ProfilePhoto.OpenGallery" = "Galerij openen";
 "ProfilePhoto.SearchWeb" = "Online zoeken";
@@ -16437,7 +16437,7 @@ Error: %8$@";
 "CityActivity.EnterChat" = "Enter Chat";
 "CityActivity.LeaveActivity" = "Leave Activity";
 "CityActivity.JoinActivity" = "Join Activity";
-"CityActivity.MyActivities" = "My Activities";
+"CityActivity.MyActivities" = "Mijn activiteiten";
 "CityActivity.Unpublish" = "Unpublish";
 "CityActivity.Publish" = "Publish";
 "CityActivity.Delete" = "Delete";

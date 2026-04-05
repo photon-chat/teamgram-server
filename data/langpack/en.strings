@@ -747,7 +747,7 @@
 // Settings
 "Settings.SetProfilePhoto" = "Set Profile Photo";
 "Settings.Logout" = "Log Out";
-"Settings.Title" = "Settings";
+"Settings.Title" = "Profile";
 "Settings.NotificationsAndSounds" = "Notifications and Sounds";
 "Settings.ChatSettings" = "Data and Storage";
 "Settings.BlockedUsers" = "Blocked Users";
@@ -2054,7 +2054,7 @@
 "Conversation.UnpinMessageAlert" = "Would you like to unpin this message?";
 
 "Settings.About.Title" = "Bio";
-"Settings.About.Help" = "Any details such as age, occupation or city.\nExample: 23 y.o. designer from San Francisco.";
+"Settings.About.Help" = "Share some interesting details about yourself, such as age, occupation, or city.\nExample: Lawyer, 32 y.o., Shenzhen";
 
 "Profile.About" = "bio";
 
@@ -5611,7 +5611,7 @@ Sorry for the inconvenience.";
 "Stats.GroupShowMoreTopInviters_any" = "Show %@ More";
 
 "Settings.AddAnotherAccount" = "Add Another Account";
-"Settings.AddAnotherAccount.Help" = "You can connect multiple accounts with different phone numbers.";
+"Settings.AddAnotherAccount.Help" = "You can connect multiple accounts.";
 
 "ProfilePhoto.OpenGallery" = "Open Gallery";
 "ProfilePhoto.SearchWeb" = "Search Web";

@@ -747,7 +747,7 @@
 // Settings
 "Settings.SetProfilePhoto" = "Définir la photo de profil";
 "Settings.Logout" = "Déconnexion";
-"Settings.Title" = "Paramètres";
+"Settings.Title" = "Profil";
 "Settings.NotificationsAndSounds" = "Notifications et sons";
 "Settings.ChatSettings" = "Données et stockage";
 "Settings.BlockedUsers" = "Utilisateurs bloqués";
@@ -2054,7 +2054,7 @@
 "Conversation.UnpinMessageAlert" = "Souhaitez-vous détacher ce message ?";
 
 "Settings.About.Title" = "Bio";
-"Settings.About.Help" = "Des informations comme l'âge, la profession ou la ville.\nExemple : Artiste de 23 ans à Lyon.";
+"Settings.About.Help" = "Des informations comme l'âge, la profession ou la ville.\nExemple : Avocat, 32 ans, Paris.";
 
 "Profile.About" = "bio";
 
@@ -5611,7 +5611,7 @@ Sorry for the inconvenience.";
 "Stats.GroupShowMoreTopInviters_any" = "Afficher %@ de plus";
 
 "Settings.AddAnotherAccount" = "Ajouter un autre compte";
-"Settings.AddAnotherAccount.Help" = "Vous pouvez connecter plusieurs comptes avec des numéros de téléphone différents.";
+"Settings.AddAnotherAccount.Help" = "Vous pouvez connecter plusieurs comptes.";
 
 "ProfilePhoto.OpenGallery" = "Ouvrir la photothèque";
 "ProfilePhoto.SearchWeb" = "Rechercher sur le web";
@@ -16437,7 +16437,7 @@ Error: %8$@";
 "CityActivity.EnterChat" = "Enter Chat";
 "CityActivity.LeaveActivity" = "Leave Activity";
 "CityActivity.JoinActivity" = "Join Activity";
-"CityActivity.MyActivities" = "My Activities";
+"CityActivity.MyActivities" = "Mes activités";
 "CityActivity.Unpublish" = "Unpublish";
 "CityActivity.Publish" = "Publish";
 "CityActivity.Delete" = "Delete";

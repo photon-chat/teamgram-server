@@ -747,7 +747,7 @@
 // Settings
 "Settings.SetProfilePhoto" = "Nastavit profilovou fotku";
 "Settings.Logout" = "Odhlásit";
-"Settings.Title" = "Nastavení";
+"Settings.Title" = "Profil";
 "Settings.NotificationsAndSounds" = "Oznámení a zvuky";
 "Settings.ChatSettings" = "Data a úložiště";
 "Settings.BlockedUsers" = "Blokovaní uživatelé";
@@ -2054,7 +2054,7 @@
 "Conversation.UnpinMessageAlert" = "Chcete odepnout tuto zprávu?";
 
 "Settings.About.Title" = "O mně";
-"Settings.About.Help" = "Jakékoli informace o vás, jako jsou věk, povolání nebo město.\nNapř.: 24letý student z Prahy";
+"Settings.About.Help" = "Jakékoli informace o vás, jako jsou věk, povolání nebo město.\nNapř.: 32 let, právník, Praha";
 
 "Profile.About" = "O mně";
 
@@ -5611,7 +5611,7 @@ Sorry for the inconvenience.";
 "Stats.GroupShowMoreTopInviters_any" = "Zobrazit %@ dalších";
 
 "Settings.AddAnotherAccount" = "Přidat další účet";
-"Settings.AddAnotherAccount.Help" = "Můžete přidat více účtů s různými telefonními čísly.";
+"Settings.AddAnotherAccount.Help" = "Můžete přidat více účtů.";
 
 "ProfilePhoto.OpenGallery" = "Otevřít galerii";
 "ProfilePhoto.SearchWeb" = "Prohledat web";
@@ -17527,7 +17527,7 @@ Error: %8$@";
 "CityActivity.EnterChat" = "Enter Chat";
 "CityActivity.LeaveActivity" = "Leave Activity";
 "CityActivity.JoinActivity" = "Join Activity";
-"CityActivity.MyActivities" = "My Activities";
+"CityActivity.MyActivities" = "Moje aktivity";
 "CityActivity.Unpublish" = "Unpublish";
 "CityActivity.Publish" = "Publish";
 "CityActivity.Delete" = "Delete";

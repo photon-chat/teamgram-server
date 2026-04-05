@@ -747,7 +747,7 @@
 // Settings
 "Settings.SetProfilePhoto" = "Defineix la foto de perfil";
 "Settings.Logout" = "Tanca la sessió";
-"Settings.Title" = "Configuració";
+"Settings.Title" = "Perfil";
 "Settings.NotificationsAndSounds" = "So i notificacions";
 "Settings.ChatSettings" = "Dades i emmagatzematge";
 "Settings.BlockedUsers" = "Usuaris blocats";
@@ -2054,7 +2054,7 @@
 "Conversation.UnpinMessageAlert" = "Voleu deixar de fixar aquest missatge?";
 
 "Settings.About.Title" = "Biografia";
-"Settings.About.Help" = "Detalls com l'edat, la professió o la ciutat.\nExemple: Tinc 23 anys, dissenyador de Menorca.";
+"Settings.About.Help" = "Detalls com l'edat, la professió o la ciutat.\nExemple: Advocat, 32 anys, Barcelona.";
 
 "Profile.About" = "biografia";
 
@@ -5611,7 +5611,7 @@ Sorry for the inconvenience.";
 "Stats.GroupShowMoreTopInviters_any" = "Mostra'n %@ més";
 
 "Settings.AddAnotherAccount" = "Afegeix un altre compte";
-"Settings.AddAnotherAccount.Help" = "Podeu connectar diversos comptes amb números de telèfon diferents.";
+"Settings.AddAnotherAccount.Help" = "Podeu connectar diversos comptes.";
 
 "ProfilePhoto.OpenGallery" = "Obre la galeria";
 "ProfilePhoto.SearchWeb" = "Cerca al web";
@@ -16437,7 +16437,7 @@ Error: %8$@";
 "CityActivity.EnterChat" = "Enter Chat";
 "CityActivity.LeaveActivity" = "Leave Activity";
 "CityActivity.JoinActivity" = "Join Activity";
-"CityActivity.MyActivities" = "My Activities";
+"CityActivity.MyActivities" = "Les meves activitats";
 "CityActivity.Unpublish" = "Unpublish";
 "CityActivity.Publish" = "Publish";
 "CityActivity.Delete" = "Delete";

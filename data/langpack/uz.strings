@@ -747,7 +747,7 @@
 // Settings
 "Settings.SetProfilePhoto" = "Profil rasmini belgilash";
 "Settings.Logout" = "Chiqish";
-"Settings.Title" = "Sozlamalar";
+"Settings.Title" = "Profil";
 "Settings.NotificationsAndSounds" = "Bildirishnomalar va ovozlar";
 "Settings.ChatSettings" = "Maʼlumotlar va xotira";
 "Settings.BlockedUsers" = "Bloklangan foydalanuvchilar";
@@ -2054,7 +2054,7 @@
 "Conversation.UnpinMessageAlert" = "Bu xabarni olib tashlashni xohlaysizmi?";
 
 "Settings.About.Title" = "Tarjimayi hol";
-"Settings.About.Help" = "Har qanday tafsilotlar, masalan, yosh, ish joyi yoki shahar.\nMasalan: 23 yosh, Dizayner, Toshkentdan";
+"Settings.About.Help" = "Har qanday tafsilotlar, masalan, yosh, ish joyi yoki shahar.\nMasalan: 32 yosh, Advokat, Tashkentdan";
 
 "Profile.About" = "tarjimayi hol";
 
@@ -5611,7 +5611,7 @@ Sorry for the inconvenience.";
 "Stats.GroupShowMoreTopInviters_any" = "Yana %@ tani chiqarish";
 
 "Settings.AddAnotherAccount" = "Boshqa hisob qoʻshish";
-"Settings.AddAnotherAccount.Help" = "Turli telefon raqamlari bilan bir nechta hisob ulashingiz mumkin.";
+"Settings.AddAnotherAccount.Help" = "Bir nechta hisobni ulashingiz mumkin.";
 
 "ProfilePhoto.OpenGallery" = "Galereyani ochish";
 "ProfilePhoto.SearchWeb" = "Internetdan qidirish";
@@ -16371,7 +16371,7 @@ Error: %8$@";
 "CityActivity.EnterChat" = "Enter Chat";
 "CityActivity.LeaveActivity" = "Leave Activity";
 "CityActivity.JoinActivity" = "Join Activity";
-"CityActivity.MyActivities" = "My Activities";
+"CityActivity.MyActivities" = "Mening faoliyatlari";
 "CityActivity.Unpublish" = "Unpublish";
 "CityActivity.Publish" = "Publish";
 "CityActivity.Delete" = "Delete";

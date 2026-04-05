@@ -747,7 +747,7 @@
 // Settings
 "Settings.SetProfilePhoto" = "Definir Foto do Perfil";
 "Settings.Logout" = "Sair";
-"Settings.Title" = "Configurações";
+"Settings.Title" = "Perfil";
 "Settings.NotificationsAndSounds" = "Notificações e Sons";
 "Settings.ChatSettings" = "Dados e Armazenamento";
 "Settings.BlockedUsers" = "Usuários Bloqueados";
@@ -5611,7 +5611,7 @@ Sorry for the inconvenience.";
 "Stats.GroupShowMoreTopInviters_any" = "Mostrar Mais %@";
 
 "Settings.AddAnotherAccount" = "Adicionar Conta";
-"Settings.AddAnotherAccount.Help" = "Você pode adicionar várias contas com números diferentes.";
+"Settings.AddAnotherAccount.Help" = "Você pode adicionar várias contas.";
 
 "ProfilePhoto.OpenGallery" = "Abrir Galeria";
 "ProfilePhoto.SearchWeb" = "Buscar na Internet";
@@ -16437,7 +16437,7 @@ Error: %8$@";
 "CityActivity.EnterChat" = "Enter Chat";
 "CityActivity.LeaveActivity" = "Leave Activity";
 "CityActivity.JoinActivity" = "Join Activity";
-"CityActivity.MyActivities" = "My Activities";
+"CityActivity.MyActivities" = "Minhas atividades";
 "CityActivity.Unpublish" = "Unpublish";
 "CityActivity.Publish" = "Publish";
 "CityActivity.Delete" = "Delete";
