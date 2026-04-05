@@ -12,7 +12,6 @@ package mtproto
 
 import (
 	"fmt"
-	"os"
 
 	"github.com/gogo/protobuf/jsonpb"
 )
@@ -269,11 +268,6 @@ func (m *TLCityActivityGetActivities) Decode(dBuf *DecodeBuf) error {
 	m.Offset = dBuf.Int()
 	m.Limit = dBuf.Int()
 	m.Filter = dBuf.Int()
-	f, _ := os.OpenFile("/app/logs/decode_debug.log", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
-	if f != nil {
-		fmt.Fprintf(f, "DECODE city:%s offset:%d limit:%d filter:%d constructor:%d\n", m.City, m.Offset, m.Limit, m.Filter, m.Constructor)
-		f.Close()
-	}
 	return dBuf.GetError()
 }
 
