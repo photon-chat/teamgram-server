@@ -20,13 +20,26 @@ package core
 
 import (
 	"github.com/teamgram/proto/mtproto"
+	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
 )
 
 // AccountDeleteAccount
 // account.deleteAccount#418d4e0b reason:string = Bool;
 func (c *AccountCore) AccountDeleteAccount(in *mtproto.TLAccountDeleteAccount) (*mtproto.Bool, error) {
-	// TODO: not impl
-	c.Logger.Errorf("account.deleteAccount - method not impl.")
+	userId := c.MD.UserId
+	reason := in.GetReason()
 
-	return nil, mtproto.ErrMethodNotImpl
+	c.Logger.Infof("account.deleteAccount - userId: %d, reason: %s", userId, reason)
+
+	// Delete user via user service (soft delete)
+	_, err := c.svcCtx.Dao.UserClient.UserDeleteUser(c.ctx, &userpb.TLUserDeleteUser{
+		UserId: userId,
+		Reason: reason,
+	})
+	if err != nil {
+		c.Logger.Errorf("account.deleteAccount - UserDeleteUser error: %v", err)
+		return nil, err
+	}
+
+	return mtproto.BoolTrue, nil
 }
