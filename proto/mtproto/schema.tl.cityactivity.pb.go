@@ -363,6 +363,7 @@ type TLCityActivityGetActivities struct {
 	Offset               int32         `protobuf:"varint,4,opt,name=offset,proto3" json:"offset,omitempty"`
 	Limit                int32         `protobuf:"varint,5,opt,name=limit,proto3" json:"limit,omitempty"`
 	Filter               int32         `protobuf:"varint,6,opt,name=filter,proto3" json:"filter,omitempty"`
+	Q                    string        `protobuf:"bytes,7,opt,name=q,proto3" json:"q,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}      `json:"-"`
 	XXX_unrecognized     []byte        `json:"-"`
 	XXX_sizecache        int32         `json:"-"`
@@ -413,6 +414,13 @@ func (m *TLCityActivityGetActivities) MarshalToSizedBuffer(dAtA []byte) (int, er
 		i -= len(m.XXX_unrecognized)
 		copy(dAtA[i:], m.XXX_unrecognized)
 	}
+	if len(m.Q) > 0 {
+		i -= len(m.Q)
+		copy(dAtA[i:], m.Q)
+		i = encodeVarintSchemaTlCityactivity(dAtA, i, uint64(len(m.Q)))
+		i--
+		dAtA[i] = 0x3a // field 7, length-delimited
+	}
 	if m.Filter != 0 {
 		i = encodeVarintSchemaTlCityactivity(dAtA, i, uint64(m.Filter))
 		i--
@@ -462,6 +470,10 @@ func (m *TLCityActivityGetActivities) Size() (n int) {
 	}
 	if m.Filter != 0 {
 		n += 1 + sovSchemaTlCityactivity(uint64(m.Filter))
+	}
+	l = len(m.Q)
+	if l > 0 {
+		n += 1 + l + sovSchemaTlCityactivity(uint64(l))
 	}
 	if m.XXX_unrecognized != nil {
 		n += len(m.XXX_unrecognized)
@@ -577,6 +589,27 @@ func (m *TLCityActivityGetActivities) Unmarshal(dAtA []byte) error {
 				}
 			}
 			m.Filter = v
+		case 7: // q
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Q", wireType)
+			}
+			var stringLen uint64
+			for shift := uint(0); ; shift += 7 {
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				stringLen |= uint64(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if int(stringLen) > l-iNdEx {
+				return io.ErrUnexpectedEOF
+			}
+			m.Q = string(dAtA[iNdEx : iNdEx+int(stringLen)])
+			iNdEx += int(stringLen)
 		default:
 			iNdEx = l
 		}
@@ -633,6 +666,13 @@ func (m *TLCityActivityGetActivities) GetFilter() int32 {
 		return m.Filter
 	}
 	return 0
+}
+
+func (m *TLCityActivityGetActivities) GetQ() string {
+	if m != nil {
+		return m.Q
+	}
+	return ""
 }
 
 type TLCityActivityGetActivity struct {

@@ -63,11 +63,11 @@ type Dao struct {
 
 func New(c config.Config) *Dao {
 	d := &Dao{
-		db:          sqlx.NewMySQL(c.Mysql),
+		db:           sqlx.NewMySQL(c.Mysql),
 		TestCityName: c.TestCityName,
-		MediaClient: media_client.NewMediaClient(rpcx.GetCachedRpcClient(c.MediaClient)),
-		ChatClient:  chat_client.NewChatClient(rpcx.GetCachedRpcClient(c.ChatClient)),
-		UserClient:  user_client.NewUserClient(rpcx.GetCachedRpcClient(c.UserClient)),
+		MediaClient:  media_client.NewMediaClient(rpcx.GetCachedRpcClient(c.MediaClient)),
+		ChatClient:   chat_client.NewChatClient(rpcx.GetCachedRpcClient(c.ChatClient)),
+		UserClient:   user_client.NewUserClient(rpcx.GetCachedRpcClient(c.UserClient)),
 	}
 
 	MMDB, err := geoip2.Open(mmdb2)
@@ -128,56 +128,74 @@ func (d *Dao) GetCityByIp(ip string) string {
 	return ""
 }
 
-func (d *Dao) GetActivitiesByCity(ctx context.Context, city string, offset, limit, filter int32) ([]*Activity, int32, error) {
+func (d *Dao) GetActivitiesByCity(ctx context.Context, city string, offset, limit, filter int32, q string) ([]*Activity, int32, error) {
 	var activities []*Activity
 	var err error
 	var count int32
+
+	// Build search condition
+	searchCond := ""
+	searchArgs := []interface{}{}
+	if q != "" {
+		searchCond = " AND (title LIKE ? OR description LIKE ?)"
+		likeQ := "%" + q + "%"
+		searchArgs = append(searchArgs, likeQ, likeQ)
+	}
 
 	// Build query based on filter: 0=all, 1=city only, 2=global only
 	switch filter {
 	case 1: // city only
 		if city == "" {
-			query := "SELECT * FROM activities WHERE status = 1 AND is_global = 0 ORDER BY created_at DESC LIMIT ?, ?"
-			err = d.db.QueryRowsPartial(ctx, &activities, query, offset, limit)
+			query := "SELECT * FROM activities WHERE status = 1 AND is_global = 0" + searchCond + " ORDER BY created_at DESC LIMIT ?, ?"
+			args := append(searchArgs, offset, limit)
+			err = d.db.QueryRowsPartial(ctx, &activities, query, args...)
 			if err != nil {
 				return nil, 0, err
 			}
-			countQuery := "SELECT COUNT(*) FROM activities WHERE status = 1 AND is_global = 0"
-			_ = d.db.QueryRow(ctx, &count, countQuery)
+			countQuery := "SELECT COUNT(*) FROM activities WHERE status = 1 AND is_global = 0" + searchCond
+			_ = d.db.QueryRow(ctx, &count, countQuery, searchArgs...)
 		} else {
-			query := "SELECT * FROM activities WHERE city = ? AND is_global = 0 AND status = 1 ORDER BY created_at DESC LIMIT ?, ?"
-			err = d.db.QueryRowsPartial(ctx, &activities, query, city, offset, limit)
+			query := "SELECT * FROM activities WHERE city = ? AND is_global = 0 AND status = 1" + searchCond + " ORDER BY created_at DESC LIMIT ?, ?"
+			args := append([]interface{}{city}, searchArgs...)
+			args = append(args, offset, limit)
+			err = d.db.QueryRowsPartial(ctx, &activities, query, args...)
 			if err != nil {
 				return nil, 0, err
 			}
-			countQuery := "SELECT COUNT(*) FROM activities WHERE city = ? AND is_global = 0 AND status = 1"
-			_ = d.db.QueryRow(ctx, &count, countQuery, city)
+			countQuery := "SELECT COUNT(*) FROM activities WHERE city = ? AND is_global = 0 AND status = 1" + searchCond
+			countArgs := append([]interface{}{city}, searchArgs...)
+			_ = d.db.QueryRow(ctx, &count, countQuery, countArgs...)
 		}
 	case 2: // global only
-		query := "SELECT * FROM activities WHERE is_global = 1 AND status = 1 ORDER BY created_at DESC LIMIT ?, ?"
-		err = d.db.QueryRowsPartial(ctx, &activities, query, offset, limit)
+		query := "SELECT * FROM activities WHERE is_global = 1 AND status = 1" + searchCond + " ORDER BY created_at DESC LIMIT ?, ?"
+		args := append(searchArgs, offset, limit)
+		err = d.db.QueryRowsPartial(ctx, &activities, query, args...)
 		if err != nil {
 			return nil, 0, err
 		}
-		countQuery := "SELECT COUNT(*) FROM activities WHERE is_global = 1 AND status = 1"
-		_ = d.db.QueryRow(ctx, &count, countQuery)
+		countQuery := "SELECT COUNT(*) FROM activities WHERE is_global = 1 AND status = 1" + searchCond
+		_ = d.db.QueryRow(ctx, &count, countQuery, searchArgs...)
 	default: // 0 = all
 		if city == "" {
-			query := "SELECT * FROM activities WHERE status = 1 ORDER BY is_global DESC, created_at DESC LIMIT ?, ?"
-			err = d.db.QueryRowsPartial(ctx, &activities, query, offset, limit)
+			query := "SELECT * FROM activities WHERE status = 1" + searchCond + " ORDER BY is_global DESC, created_at DESC LIMIT ?, ?"
+			args := append(searchArgs, offset, limit)
+			err = d.db.QueryRowsPartial(ctx, &activities, query, args...)
 			if err != nil {
 				return nil, 0, err
 			}
-			countQuery := "SELECT COUNT(*) FROM activities WHERE status = 1"
-			_ = d.db.QueryRow(ctx, &count, countQuery)
+			countQuery := "SELECT COUNT(*) FROM activities WHERE status = 1" + searchCond
+			_ = d.db.QueryRow(ctx, &count, countQuery, searchArgs...)
 		} else {
-			query := "SELECT * FROM activities WHERE (city = ? OR is_global = 1) AND status = 1 ORDER BY is_global DESC, created_at DESC LIMIT ?, ?"
-			err = d.db.QueryRowsPartial(ctx, &activities, query, city, offset, limit)
+			query := "SELECT * FROM activities WHERE (city = ? OR is_global = 1) AND status = 1" + searchCond + " ORDER BY is_global DESC, created_at DESC LIMIT ?, ?"
+			args := append([]interface{}{city}, searchArgs...)
+			args = append(args, offset, limit)
+			err = d.db.QueryRowsPartial(ctx, &activities, query, args...)
 			if err != nil {
 				return nil, 0, err
 			}
-			countQuery := "SELECT COUNT(*) FROM activities WHERE (city = ? OR is_global = 1) AND status = 1"
-			_ = d.db.QueryRow(ctx, &count, countQuery, city)
+			countQuery := "SELECT COUNT(*) FROM activities WHERE (city = ? OR is_global = 1) AND status = 1" + searchCond
+			countArgs := append([]interface{}{city}, searchArgs...)
+			_ = d.db.QueryRow(ctx, &count, countQuery, countArgs...)
 		}
 	}
 

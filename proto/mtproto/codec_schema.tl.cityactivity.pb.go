@@ -256,6 +256,7 @@ func (m *TLCityActivityGetActivities) Encode(x *EncodeBuf, layer int32) error {
 	x.Int(m.GetOffset())
 	x.Int(m.GetLimit())
 	x.Int(m.GetFilter())
+	x.String(m.GetQ())
 	return nil
 }
 
@@ -268,6 +269,7 @@ func (m *TLCityActivityGetActivities) Decode(dBuf *DecodeBuf) error {
 	m.Offset = dBuf.Int()
 	m.Limit = dBuf.Int()
 	m.Filter = dBuf.Int()
+	m.Q = dBuf.String()
 	return dBuf.GetError()
 }
 

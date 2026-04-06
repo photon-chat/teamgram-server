@@ -3,8 +3,8 @@ package core
 import (
 	"github.com/teamgram/proto/mtproto"
 	"github.com/teamgram/teamgram-server/app/bff/cityactivity/internal/dao"
-	media "github.com/teamgram/teamgram-server/app/service/media/media"
 	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
+	media "github.com/teamgram/teamgram-server/app/service/media/media"
 )
 
 func (c *CityActivityCore) CityActivityGetActivities(in *mtproto.TLCityActivityGetActivities) (*mtproto.CityActivity_Activities, error) {
@@ -19,9 +19,10 @@ func (c *CityActivityCore) CityActivityGetActivities(in *mtproto.TLCityActivityG
 	}
 
 	filter := in.GetFilter()
-	c.Logger.Infof("cityActivity.getActivities - city: %s, offset: %d, limit: %d, filter: %d, constructor: %d, full: %+v", city, offset, limit, filter, in.GetConstructor(), in)
+	q := in.GetQ()
+	c.Logger.Infof("cityActivity.getActivities - city: %s, offset: %d, limit: %d, filter: %d, q: %s, constructor: %d, full: %+v", city, offset, limit, filter, q, in.GetConstructor(), in)
 
-	activities, count, err := c.svcCtx.Dao.GetActivitiesByCity(c.ctx, city, offset, limit, filter)
+	activities, count, err := c.svcCtx.Dao.GetActivitiesByCity(c.ctx, city, offset, limit, filter, q)
 	if err != nil {
 		c.Logger.Errorf("cityActivity.getActivities - error: %v", err)
 		return nil, err
