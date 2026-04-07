@@ -305,7 +305,7 @@ func (c *session) onSessionMessageData(ctx context.Context, gatewayId, clientIp 
 	// check onNewSessionCreated
 	minMsgId := msg.MsgId
 	for _, m2 := range msgs {
-		if minMsgId < m2.MsgId {
+		if m2.MsgId < minMsgId {
 			minMsgId = m2.MsgId
 		}
 	}
