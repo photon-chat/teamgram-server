@@ -4,6 +4,9 @@ WORKDIR /app
 # ✅ 关键：先拷贝依赖文件
 COPY go.mod go.sum ./
 
+# 2️⃣ 本地 replace 依赖（关键！）
+COPY proto ./proto
+
 # ✅ 先下载依赖（缓存层）
 RUN go mod download
 
